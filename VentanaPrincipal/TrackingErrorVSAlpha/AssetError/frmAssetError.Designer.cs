@@ -32,6 +32,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAssetError = new System.Windows.Forms.DataGridView();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wgt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalRisk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateFinal = new System.Windows.Forms.DateTimePicker();
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicial = new System.Windows.Forms.Label();
@@ -41,11 +46,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnActualizarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnAgregarRegistros = new FontAwesome.Sharp.IconButton();
             this.btnConsultarRegistros = new FontAwesome.Sharp.IconButton();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wgt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalRisk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVerCalculoTE = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetError)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +88,46 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.dgvAssetError.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAssetError.Size = new System.Drawing.Size(952, 335);
             this.dgvAssetError.TabIndex = 50;
+            this.dgvAssetError.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssetError_CellContentClick);
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 62;
+            // 
+            // Fondo
+            // 
+            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Fondo.HeaderText = "Fondo";
+            this.Fondo.Name = "Fondo";
+            this.Fondo.ReadOnly = true;
+            this.Fondo.Width = 64;
+            // 
+            // Name
+            // 
+            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            this.Name.Width = 63;
+            // 
+            // wgt
+            // 
+            this.wgt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.wgt.HeaderText = "% WGT";
+            this.wgt.Name = "wgt";
+            this.wgt.ReadOnly = true;
+            this.wgt.Width = 71;
+            // 
+            // TotalRisk
+            // 
+            this.TotalRisk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TotalRisk.HeaderText = "Total Risk";
+            this.TotalRisk.Name = "TotalRisk";
+            this.TotalRisk.ReadOnly = true;
             // 
             // dateFinal
             // 
@@ -223,50 +264,33 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnConsultarRegistros.UseVisualStyleBackColor = false;
             this.btnConsultarRegistros.Click += new System.EventHandler(this.btnConsultarRegistros_Click);
             // 
-            // Fecha
+            // btnVerCalculoTE
             // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 62;
-            // 
-            // Fondo
-            // 
-            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Fondo.HeaderText = "Fondo";
-            this.Fondo.Name = "Fondo";
-            this.Fondo.ReadOnly = true;
-            this.Fondo.Width = 64;
-            // 
-            // Name
-            // 
-            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Width = 63;
-            // 
-            // wgt
-            // 
-            this.wgt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.wgt.HeaderText = "% WGT";
-            this.wgt.Name = "wgt";
-            this.wgt.ReadOnly = true;
-            this.wgt.Width = 71;
-            // 
-            // TotalRisk
-            // 
-            this.TotalRisk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TotalRisk.HeaderText = "Total Risk";
-            this.TotalRisk.Name = "TotalRisk";
-            this.TotalRisk.ReadOnly = true;
+            this.btnVerCalculoTE.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnVerCalculoTE.FlatAppearance.BorderSize = 0;
+            this.btnVerCalculoTE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerCalculoTE.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnVerCalculoTE.ForeColor = System.Drawing.Color.White;
+            this.btnVerCalculoTE.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnVerCalculoTE.IconColor = System.Drawing.Color.White;
+            this.btnVerCalculoTE.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVerCalculoTE.IconSize = 32;
+            this.btnVerCalculoTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerCalculoTE.Location = new System.Drawing.Point(12, 432);
+            this.btnVerCalculoTE.Name = "btnVerCalculoTE";
+            this.btnVerCalculoTE.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnVerCalculoTE.Size = new System.Drawing.Size(184, 38);
+            this.btnVerCalculoTE.TabIndex = 53;
+            this.btnVerCalculoTE.Text = "Ver Calculo Tracking Error";
+            this.btnVerCalculoTE.UseVisualStyleBackColor = false;
+            this.btnVerCalculoTE.Click += new System.EventHandler(this.btnVerCalculoTE_Click);
             // 
             // frmAssetError
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 478);
+            this.Controls.Add(this.btnVerCalculoTE);
             this.Controls.Add(this.btnEliminarRegistro);
             this.Controls.Add(this.btnActualizarRegistro);
             this.Controls.Add(this.dgvAssetError);
@@ -277,7 +301,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.Controls.Add(this.lblFechaInicial);
             this.Controls.Add(this.lblFechaFinal);
             this.Controls.Add(this.lblTitulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;           
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,5 +325,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn wgt;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalRisk;
+        private FontAwesome.Sharp.IconButton btnVerCalculoTE;
     }
 }

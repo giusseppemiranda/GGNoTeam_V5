@@ -133,7 +133,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
             }
 
-
+                    
         }
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)

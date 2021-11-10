@@ -32,15 +32,15 @@ namespace GGNoTeam_V5.VentanaPrincipal
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
-            this.btnCambiarEstado = new FontAwesome.Sharp.IconButton();
-            this.btnAgregarTarea = new FontAwesome.Sharp.IconButton();
-            this.txtboxTarea = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Periodicidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnModificarTarea = new FontAwesome.Sharp.IconButton();
+            this.btnAgregarTarea = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,99 +84,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvTareasPendientes.TabIndex = 25;
             this.dgvTareasPendientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTareasPendientes_CellContentClick);
             // 
-            // btnCambiarEstado
-            // 
-            this.btnCambiarEstado.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnCambiarEstado.FlatAppearance.BorderSize = 0;
-            this.btnCambiarEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarEstado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCambiarEstado.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarEstado.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
-            this.btnCambiarEstado.IconColor = System.Drawing.Color.White;
-            this.btnCambiarEstado.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCambiarEstado.IconSize = 32;
-            this.btnCambiarEstado.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCambiarEstado.Location = new System.Drawing.Point(793, 487);
-            this.btnCambiarEstado.Name = "btnCambiarEstado";
-            this.btnCambiarEstado.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnCambiarEstado.Size = new System.Drawing.Size(158, 52);
-            this.btnCambiarEstado.TabIndex = 27;
-            this.btnCambiarEstado.Text = "Cambiar estado de tarea";
-            this.btnCambiarEstado.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCambiarEstado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCambiarEstado.UseVisualStyleBackColor = false;
-            this.btnCambiarEstado.Click += new System.EventHandler(this.btnTareaCompleta_Click);
-            // 
-            // btnAgregarTarea
-            // 
-            this.btnAgregarTarea.BackColor = System.Drawing.Color.Orange;
-            this.btnAgregarTarea.FlatAppearance.BorderSize = 0;
-            this.btnAgregarTarea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarTarea.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarTarea.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarTarea.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAgregarTarea.IconColor = System.Drawing.Color.White;
-            this.btnAgregarTarea.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregarTarea.IconSize = 32;
-            this.btnAgregarTarea.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregarTarea.Location = new System.Drawing.Point(555, 487);
-            this.btnAgregarTarea.Name = "btnAgregarTarea";
-            this.btnAgregarTarea.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnAgregarTarea.Size = new System.Drawing.Size(105, 52);
-            this.btnAgregarTarea.TabIndex = 26;
-            this.btnAgregarTarea.Text = "Agregar tarea";
-            this.btnAgregarTarea.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregarTarea.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAgregarTarea.UseVisualStyleBackColor = false;
-            this.btnAgregarTarea.Click += new System.EventHandler(this.btnAgregarTarea_Click);
-            // 
-            // txtboxTarea
-            // 
-            this.txtboxTarea.BackColor = System.Drawing.SystemColors.Window;
-            this.txtboxTarea.BorderColor = System.Drawing.Color.Orange;
-            this.txtboxTarea.BorderFocusColor = System.Drawing.Color.Orange;
-            this.txtboxTarea.BorderSize = 2;
-            this.txtboxTarea.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.txtboxTarea.ForeColor = System.Drawing.Color.DimGray;
-            this.txtboxTarea.IsFocused = false;
-            this.txtboxTarea.Location = new System.Drawing.Point(34, 509);
-            this.txtboxTarea.MaxLength = 32767;
-            this.txtboxTarea.Multiline = false;
-            this.txtboxTarea.Name = "txtboxTarea";
-            this.txtboxTarea.Padding = new System.Windows.Forms.Padding(6);
-            this.txtboxTarea.PasswordChar = false;
-            this.txtboxTarea.Size = new System.Drawing.Size(515, 30);
-            this.txtboxTarea.TabIndex = 28;
-            this.txtboxTarea.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtboxTarea.Texts = "                                                    Ingrese la tarea a agregar.";
-            this.txtboxTarea.UnderlinedStyle = true;
-            this.txtboxTarea._TextChanged += new System.EventHandler(this.txtboxTarea__TextChanged);
-            this.txtboxTarea.Enter += new System.EventHandler(this.txtboxTarea_Enter);
-            this.txtboxTarea.Leave += new System.EventHandler(this.txtboxTarea_Leave);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.btnSalir.IconColor = System.Drawing.Color.White;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 32;
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(766, 12);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(185, 31);
-            this.btnSalir.TabIndex = 29;
-            this.btnSalir.Text = "Cerrar gestión de tareas";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Visible = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // ID
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -216,20 +123,113 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnEliminar.IconColor = System.Drawing.Color.White;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 32;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(571, 487);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnEliminar.Size = new System.Drawing.Size(105, 52);
+            this.btnEliminar.TabIndex = 30;
+            this.btnEliminar.Text = "Eliminar Tarea";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.btnSalir.IconColor = System.Drawing.Color.White;
+            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalir.IconSize = 32;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalir.Location = new System.Drawing.Point(766, 12);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(185, 31);
+            this.btnSalir.TabIndex = 29;
+            this.btnSalir.Text = "Cerrar gestión de tareas";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Visible = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnModificarTarea
+            // 
+            this.btnModificarTarea.BackColor = System.Drawing.Color.Orange;
+            this.btnModificarTarea.FlatAppearance.BorderSize = 0;
+            this.btnModificarTarea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarTarea.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnModificarTarea.ForeColor = System.Drawing.Color.White;
+            this.btnModificarTarea.IconChar = FontAwesome.Sharp.IconChar.ExchangeAlt;
+            this.btnModificarTarea.IconColor = System.Drawing.Color.White;
+            this.btnModificarTarea.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnModificarTarea.IconSize = 32;
+            this.btnModificarTarea.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnModificarTarea.Location = new System.Drawing.Point(682, 487);
+            this.btnModificarTarea.Name = "btnModificarTarea";
+            this.btnModificarTarea.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnModificarTarea.Size = new System.Drawing.Size(158, 52);
+            this.btnModificarTarea.TabIndex = 27;
+            this.btnModificarTarea.Text = "Modificar Tarea";
+            this.btnModificarTarea.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnModificarTarea.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnModificarTarea.UseVisualStyleBackColor = false;
+            this.btnModificarTarea.Click += new System.EventHandler(this.btnModificarTarea_Click);
+            // 
+            // btnAgregarTarea
+            // 
+            this.btnAgregarTarea.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAgregarTarea.FlatAppearance.BorderSize = 0;
+            this.btnAgregarTarea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarTarea.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarTarea.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarTarea.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAgregarTarea.IconColor = System.Drawing.Color.White;
+            this.btnAgregarTarea.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarTarea.IconSize = 32;
+            this.btnAgregarTarea.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAgregarTarea.Location = new System.Drawing.Point(846, 487);
+            this.btnAgregarTarea.Name = "btnAgregarTarea";
+            this.btnAgregarTarea.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnAgregarTarea.Size = new System.Drawing.Size(105, 52);
+            this.btnAgregarTarea.TabIndex = 26;
+            this.btnAgregarTarea.Text = "Agregar tarea";
+            this.btnAgregarTarea.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregarTarea.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAgregarTarea.UseVisualStyleBackColor = false;
+            this.btnAgregarTarea.Click += new System.EventHandler(this.btnAgregarTarea_Click);
+            // 
             // frmTareasPendientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 553);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.txtboxTarea);
-            this.Controls.Add(this.btnCambiarEstado);
+            this.Controls.Add(this.btnModificarTarea);
             this.Controls.Add(this.btnAgregarTarea);
             this.Controls.Add(this.dgvTareasPendientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTareasPendientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTareasPendientes";
+            this.Load += new System.EventHandler(this.frmTareasPendientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).EndInit();
             this.ResumeLayout(false);
 
@@ -238,14 +238,14 @@ namespace GGNoTeam_V5.VentanaPrincipal
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTareasPendientes;
-        private FontAwesome.Sharp.IconButton btnCambiarEstado;
+        private FontAwesome.Sharp.IconButton btnModificarTarea;
         private FontAwesome.Sharp.IconButton btnAgregarTarea;
-        private Recursos.UserControls.GGTextBox txtboxTarea;
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Periodicidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private FontAwesome.Sharp.IconButton btnEliminar;
     }
 }

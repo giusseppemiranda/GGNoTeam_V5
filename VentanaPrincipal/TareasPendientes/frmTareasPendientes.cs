@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas;
 
 namespace GGNoTeam_V5.VentanaPrincipal
 {
@@ -21,24 +22,24 @@ namespace GGNoTeam_V5.VentanaPrincipal
         public frmTareasPendientes(frmPrincipal ventana, LoginWS.persona persona)
         {
             InitializeComponent();
-            iniciarTema();
-            
+            cambiarTema();
+
             _daoTareasDiarias = new TareasDiariasWS.TareasDiariasWSClient();
             _daoPersona = new LoginWS.LoginWSClient();
             user = _daoPersona.listarPorCodExacto(Int32.Parse(persona.codigo))[0];
-            
+
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             Global.pintarDGV(ref dgvTareasPendientes, this.btnAgregarTarea.BackColor);
 
             if (persona.itinerario.listaTarea != null)
             {
-                colocarEnDGV(user.itinerario.listaTarea);                
+                colocarEnDGV(user.itinerario.listaTarea);
             }
             else
             {
                 dgvTareasPendientes.DataSource = null;
-            }           
+            }
         }
 
         private void colocarEnDGV(LoginWS.tarea[] lista)
@@ -61,7 +62,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         public frmTareasPendientes(LoginWS.persona persona)
         {
             InitializeComponent();
-            iniciarTema();
+            cambiarTema();
             btnSalir.Visible = true;
             colocarEnDGV(persona.itinerario.listaTarea);
             if (!Global.TemaOscuro)
@@ -74,17 +75,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             }
         }
 
-        private void iniciarTema()
-        {
-            if (Global.TemaOscuro)
-            {
-                activarTemaClaro();
-            }
-            else
-            {
-                activarTemaOscuro();
-            }
-        }
+      
 
         public void cambiarTema()
         {
@@ -101,92 +92,63 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void activarTemaOscuro()
         {
             this.BackColor = Global.FrmOscuro;
-            txtboxTarea.BackColor = Global.TxtboxOscuro_Back;
         }
 
         private void activarTemaClaro()
         {
             this.BackColor = Global.FrmClaro;
-            txtboxTarea.BackColor = Global.TxtboxClaro_Back;
         }
 
         private void dgvTareasPendientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void btnActualizarUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtboxTarea__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtboxTarea_Enter(object sender, EventArgs e)
-        {
-            txtboxTarea.Texts = "";
+            
         }
 
         private void btnAgregarTarea_Click(object sender, EventArgs e)
         {
-            string tarea = txtboxTarea.Texts;
-            TareasDiariasWS.tarea task = new TareasDiariasWS.tarea();
-
-            if (tarea != "" && tarea != "                                                    Ingrese la tarea a agregar.")
-            {
-
-                txtboxTarea.Texts = "";
-                task.descripcion = tarea;
-                task.estado = true;
-                task.fidItinerario = user.itinerario.idItineraio;
-                task.horaEst = DateTime.Now.ToString("HH:mm:ss");
-                task.plazo = 12;
-
-                dgvTareasPendientes.Rows.Add(_daoTareasDiarias.insertarTarea(task), task.descripcion, task.horaEst, task.plazo, "Incompleto");              
-            }
-
-
+            frmEditarTarea ventanaAgregar = new frmEditarTarea();
+            ventanaAgregar.ShowDialog();
         }
 
-        private void btnTareaCompleta_Click(object sender, EventArgs e)
-        {
-            TareasDiariasWS.tarea task = new TareasDiariasWS.tarea();
-            if (dgvTareasPendientes.CurrentRow != null)
-            {
-                task.idTarea = (int)dgvTareasPendientes.Rows[dgvTareasPendientes.CurrentRow.Index].Cells[0].Value;
-                task.descripcion = dgvTareasPendientes.Rows[dgvTareasPendientes.CurrentRow.Index].Cells[1].Value.ToString();
-                task.horaEst = dgvTareasPendientes.Rows[dgvTareasPendientes.CurrentRow.Index].Cells[2].Value.ToString();
-                task.plazo = (int)dgvTareasPendientes.Rows[dgvTareasPendientes.CurrentRow.Index].Cells[3].Value;                
-                if (dgvTareasPendientes.Rows[dgvTareasPendientes.CurrentRow.Index].Cells[4].Value.ToString() == "Incompleto")
-                {
-                    dgvTareasPendientes.Rows[dgvTareasPendientes.CurrentRow.Index].Cells[4].Value = "Completo";
-                    task.estado = true;
-                }
-                else
-                {
-                    dgvTareasPendientes.Rows[dgvTareasPendientes.CurrentRow.Index].Cells[4].Value = "Incompleto";
-                    task.estado = false;
-                }
-                _daoTareasDiarias.modificarTarea(task);
-            }
-        }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void txtboxTarea_Leave(object sender, EventArgs e)
+        private void frmTareasPendientes_Load(object sender, EventArgs e)
         {
-            //txtboxTarea.Texts = "                                                    Ingrese la tarea a agregar.";
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Está seguro que desea eliminar la tarea seleccionada?", "Eliminar botones", MessageBoxButtons.OKCancel);
+
+            if (r == DialogResult.OK)
+            {
+                if (dgvTareasPendientes.SelectedRows != null)
+                {
+                    int idTarea = (int)dgvTareasPendientes.Rows[dgvTareasPendientes.CurrentRow.Index].Cells[0].Value;
+                    int validez = _daoTareasDiarias.eliminarTarea(idTarea);
+                    if (validez == 1)
+                    {
+                        MessageBox.Show("La tarea ha sido eliminada con éxito");                        
+                    } else
+                    {
+                        MessageBox.Show("No se ha eliminado la tarea");
+                    }
+                }                
+            }            
+        }
+
+        private void btnModificarTarea_Click(object sender, EventArgs e)
+        {
+            if (dgvTareasPendientes.CurrentRow != null)
+            {
+                frmEditarTarea ventanaModificar = new frmEditarTarea(user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index]);
+                ventanaModificar.ShowDialog();
+            }
         }
     }
 }

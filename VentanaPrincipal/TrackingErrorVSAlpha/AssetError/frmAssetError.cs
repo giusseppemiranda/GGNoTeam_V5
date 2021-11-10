@@ -78,5 +78,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         {
 
         }
+
+        private void dgvAssetError_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnVerCalculoTE_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
