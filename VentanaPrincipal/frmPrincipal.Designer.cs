@@ -35,15 +35,15 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.btnSignOut = new FontAwesome.Sharp.IconButton();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnBandejaEntrada = new FontAwesome.Sharp.IconButton();
             this.btnOriginadorInstrumento = new FontAwesome.Sharp.IconButton();
             this.btnMonitoreoOrdenes = new FontAwesome.Sharp.IconButton();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.btnTEALPHA = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
-            this.btnSignOut = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
-            this.btnBandejaEntrada = new FontAwesome.Sharp.IconButton();
             this.panelControl.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -137,6 +137,26 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.panelCentral.Size = new System.Drawing.Size(981, 547);
             this.panelCentral.TabIndex = 4;
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnSignOut.IconColor = System.Drawing.Color.Black;
+            this.btnSignOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSignOut.IconSize = 24;
+            this.btnSignOut.Location = new System.Drawing.Point(0, 504);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(43, 43);
+            this.btnSignOut.TabIndex = 26;
+            this.btnSignOut.Tag = "Cerrar sesión          ";
+            this.btnSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            this.btnSignOut.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
+            this.btnSignOut.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
+            // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Silver;
@@ -157,6 +177,26 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.panelMenu.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.panelMenu.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             // 
+            // btnBandejaEntrada
+            // 
+            this.btnBandejaEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBandejaEntrada.FlatAppearance.BorderSize = 0;
+            this.btnBandejaEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBandejaEntrada.IconChar = FontAwesome.Sharp.IconChar.EnvelopeOpenText;
+            this.btnBandejaEntrada.IconColor = System.Drawing.Color.Black;
+            this.btnBandejaEntrada.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBandejaEntrada.IconSize = 24;
+            this.btnBandejaEntrada.Location = new System.Drawing.Point(0, 258);
+            this.btnBandejaEntrada.Name = "btnBandejaEntrada";
+            this.btnBandejaEntrada.Size = new System.Drawing.Size(43, 43);
+            this.btnBandejaEntrada.TabIndex = 32;
+            this.btnBandejaEntrada.Tag = "Bandeja de entrada";
+            this.btnBandejaEntrada.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBandejaEntrada.UseVisualStyleBackColor = true;
+            this.btnBandejaEntrada.Click += new System.EventHandler(this.btnBandejaEntrada_Click);
+            this.btnBandejaEntrada.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
+            this.btnBandejaEntrada.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
+            // 
             // btnOriginadorInstrumento
             // 
             this.btnOriginadorInstrumento.Dock = System.Windows.Forms.DockStyle.Top;
@@ -174,8 +214,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnOriginadorInstrumento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOriginadorInstrumento.UseVisualStyleBackColor = true;
             this.btnOriginadorInstrumento.Click += new System.EventHandler(this.btnOriginadorInstrumento_Click);
-            this.btnOriginadorInstrumento.Enter += new System.EventHandler(this.btnUsuarios_MouseEnter);
-            this.btnOriginadorInstrumento.Leave += new System.EventHandler(this.btnHome_MouseLeave);
+            this.btnOriginadorInstrumento.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
+            this.btnOriginadorInstrumento.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             // 
             // btnMonitoreoOrdenes
             // 
@@ -213,6 +253,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Visible = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             this.btnMenu.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.btnMenu.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             // 
@@ -256,26 +297,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnUsuarios.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.btnUsuarios.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             // 
-            // btnSignOut
-            // 
-            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSignOut.FlatAppearance.BorderSize = 0;
-            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignOut.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.btnSignOut.IconColor = System.Drawing.Color.Black;
-            this.btnSignOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSignOut.IconSize = 24;
-            this.btnSignOut.Location = new System.Drawing.Point(0, 504);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(43, 43);
-            this.btnSignOut.TabIndex = 26;
-            this.btnSignOut.Tag = "Cerrar sesión          ";
-            this.btnSignOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSignOut.UseVisualStyleBackColor = true;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
-            this.btnSignOut.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
-            this.btnSignOut.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
-            // 
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
@@ -295,23 +316,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             this.btnHome.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
-            // 
-            // btnBandejaEntrada
-            // 
-            this.btnBandejaEntrada.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBandejaEntrada.FlatAppearance.BorderSize = 0;
-            this.btnBandejaEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBandejaEntrada.IconChar = FontAwesome.Sharp.IconChar.EnvelopeOpenText;
-            this.btnBandejaEntrada.IconColor = System.Drawing.Color.Black;
-            this.btnBandejaEntrada.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBandejaEntrada.IconSize = 24;
-            this.btnBandejaEntrada.Location = new System.Drawing.Point(0, 258);
-            this.btnBandejaEntrada.Name = "btnBandejaEntrada";
-            this.btnBandejaEntrada.Size = new System.Drawing.Size(43, 43);
-            this.btnBandejaEntrada.TabIndex = 32;
-            this.btnBandejaEntrada.Tag = "Bandeja de entrada";
-            this.btnBandejaEntrada.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBandejaEntrada.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
@@ -341,14 +345,14 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private FontAwesome.Sharp.IconButton btnMinimizar;
         private FontAwesome.Sharp.IconButton btnCerrar;
         private System.Windows.Forms.Panel panelCentral;
-        private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnMenu;
         private FontAwesome.Sharp.IconButton btnSignOut;
+        private System.Windows.Forms.Panel panelMenu;
+        private FontAwesome.Sharp.IconButton btnBandejaEntrada;
+        private FontAwesome.Sharp.IconButton btnOriginadorInstrumento;
+        private FontAwesome.Sharp.IconButton btnMonitoreoOrdenes;
+        private FontAwesome.Sharp.IconButton btnMenu;
+        private FontAwesome.Sharp.IconButton btnTEALPHA;
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private FontAwesome.Sharp.IconButton btnHome;
-        private FontAwesome.Sharp.IconButton btnTEALPHA;
-        private FontAwesome.Sharp.IconButton btnMonitoreoOrdenes;
-        private FontAwesome.Sharp.IconButton btnOriginadorInstrumento;
-        private FontAwesome.Sharp.IconButton btnBandejaEntrada;
     }
 }

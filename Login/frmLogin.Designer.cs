@@ -215,7 +215,7 @@ namespace GGNoTeam_V5
             this.txtboxPassword.MaxLength = 32767;
             this.txtboxPassword.Multiline = false;
             this.txtboxPassword.Name = "txtboxPassword";
-            this.txtboxPassword.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtboxPassword.Padding = new System.Windows.Forms.Padding(6);
             this.txtboxPassword.PasswordChar = true;
             this.txtboxPassword.Size = new System.Drawing.Size(251, 30);
             this.txtboxPassword.TabIndex = 13;
@@ -239,7 +239,7 @@ namespace GGNoTeam_V5
             this.txtboxUsername.MaxLength = 32767;
             this.txtboxUsername.Multiline = false;
             this.txtboxUsername.Name = "txtboxUsername";
-            this.txtboxUsername.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtboxUsername.Padding = new System.Windows.Forms.Padding(6);
             this.txtboxUsername.PasswordChar = false;
             this.txtboxUsername.Size = new System.Drawing.Size(251, 30);
             this.txtboxUsername.TabIndex = 12;

@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.VentanaPrincipal.Bienvenida;
 using GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha;
-
+using GGNoTeam_V5.Recursos.sendMail;
+using GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada;
 
 namespace GGNoTeam_V5.VentanaPrincipal
 {
@@ -36,6 +30,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             if(usuario.tipoUsuario == 2)
             {
                 btnUsuarios.Visible = false;
+                btnBandejaEntrada.Visible = false;
             }
             ventanaPadre = ventana;
         }
@@ -74,7 +69,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.BackColor = Global.FrmOscuro;
             this.panelCentral.BackColor = Global.FrmOscuro;
             Global.pintarControlBoxOscuro(ref panelControl, ref lblTitulo, ref btnCerrar, ref btnMinimizar, ref btnTemaOscuro);
-            Global.pintarMenuNavegacionOscuro(ref panelMenu, ref btnMenu, ref btnSignOut, ref btnUsuarios, ref btnHome,ref btnTEALPHA, ref btnMonitoreoOrdenes, ref btnOriginadorInstrumento);
+            Global.pintarMenuNavegacionOscuro(ref panelMenu, ref btnMenu, ref btnSignOut, ref btnUsuarios, ref btnHome,ref btnTEALPHA, ref btnMonitoreoOrdenes, ref btnOriginadorInstrumento, ref btnBandejaEntrada);
             if (iconoActivo != null)
             {
                 iconoActivo.BackColor = this.BackColor;
@@ -86,7 +81,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.BackColor = Global.FrmClaro;
             this.panelCentral.BackColor = Global.FrmClaro;
             Global.pintarControlBoxClaro(ref panelControl, ref lblTitulo, ref btnCerrar, ref btnMinimizar, ref btnTemaOscuro);
-            Global.pintarMenuNavegacionClaro(ref panelMenu, ref btnMenu, ref btnSignOut, ref btnUsuarios, ref btnHome, ref btnTEALPHA, ref btnMonitoreoOrdenes, ref btnOriginadorInstrumento);
+            Global.pintarMenuNavegacionClaro(ref panelMenu, ref btnMenu, ref btnSignOut, ref btnUsuarios, ref btnHome, ref btnTEALPHA, ref btnMonitoreoOrdenes, ref btnOriginadorInstrumento, ref btnBandejaEntrada);
             if (iconoActivo != null)
             {
                 iconoActivo.BackColor = this.BackColor;
@@ -176,7 +171,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             iconoActivo = btnTEALPHA;
             iconoActivo.BackColor = this.BackColor;
         }
-
+        
 
         private void btnUsuarios_MouseEnter(object sender, EventArgs e)
         {
@@ -187,6 +182,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             btnSignOut.Text = btnSignOut.Tag.ToString();
             btnMonitoreoOrdenes.Text = btnMonitoreoOrdenes.Tag.ToString();
             btnOriginadorInstrumento.Text = btnOriginadorInstrumento.Tag.ToString();
+            btnBandejaEntrada.Text = btnBandejaEntrada.Tag.ToString();
         }
 
         private void btnHome_MouseLeave(object sender, EventArgs e)
@@ -198,6 +194,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             btnSignOut.Text = "";
             btnMonitoreoOrdenes.Text = "";
             btnOriginadorInstrumento.Text = "";
+            btnBandejaEntrada.Text = "";
             
         }
 
@@ -215,6 +212,21 @@ namespace GGNoTeam_V5.VentanaPrincipal
             cambiarTemaIconosMenu(ref iconoActivo);
             iconoActivo = btnOriginadorInstrumento;
             iconoActivo.BackColor = this.BackColor;
+        }
+
+        private void btnBandejaEntrada_Click(object sender, EventArgs e)
+        {
+            //Gmail.conectar();
+            //Gmail.verMensajes();
+            abrirFormulario(new frmGmail(this));
+            cambiarTemaIconosMenu(ref iconoActivo);
+            iconoActivo = btnBandejaEntrada;
+            iconoActivo.BackColor = this.BackColor;
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

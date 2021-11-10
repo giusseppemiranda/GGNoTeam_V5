@@ -194,7 +194,7 @@ namespace GGNoTeam_V5.Recursos.UserControls
             boton.ForeColor = boton.IconColor;
         }
 
-        public static void pintarMenuNavegacionOscuro(ref Panel panel, ref IconButton menu, ref IconButton signout, ref IconButton users, ref IconButton tasks, ref IconButton tealfa, ref IconButton monitor, ref IconButton originst)
+        public static void pintarMenuNavegacionOscuro(ref Panel panel, ref IconButton menu, ref IconButton signout, ref IconButton users, ref IconButton tasks, ref IconButton tealfa, ref IconButton monitor, ref IconButton originst, ref IconButton email)
         {
             panel.BackColor = PanelMenuOscuro;
             pintarBotonMenuOscuro(ref menu);
@@ -204,11 +204,11 @@ namespace GGNoTeam_V5.Recursos.UserControls
             pintarBotonMenuOscuro(ref tealfa);
             pintarBotonMenuOscuro(ref monitor);
             pintarBotonMenuOscuro(ref originst);
-
+            pintarBotonMenuOscuro(ref email);
 
         }
 
-        public static void pintarMenuNavegacionClaro(ref Panel panel, ref IconButton menu, ref IconButton signout, ref IconButton users, ref IconButton tasks, ref IconButton tealfa, ref IconButton monitor, ref IconButton originst)
+        public static void pintarMenuNavegacionClaro(ref Panel panel, ref IconButton menu, ref IconButton signout, ref IconButton users, ref IconButton tasks, ref IconButton tealfa, ref IconButton monitor, ref IconButton originst, ref IconButton email)
         {
             panel.BackColor = PanelMenuClaro;
             pintarBotonMenuClaro(ref menu);
@@ -218,6 +218,7 @@ namespace GGNoTeam_V5.Recursos.UserControls
             pintarBotonMenuClaro(ref tealfa);
             pintarBotonMenuClaro(ref monitor);
             pintarBotonMenuClaro(ref originst);
+            pintarBotonMenuClaro(ref email);
         }     
 
         public static Color aclararColor(Color color)
