@@ -32,15 +32,15 @@ namespace GGNoTeam_V5.VentanaPrincipal
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnModificarTarea = new FontAwesome.Sharp.IconButton();
+            this.btnAgregarTarea = new FontAwesome.Sharp.IconButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Periodicidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnModificarTarea = new FontAwesome.Sharp.IconButton();
-            this.btnAgregarTarea = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,45 +83,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvTareasPendientes.Size = new System.Drawing.Size(917, 432);
             this.dgvTareasPendientes.TabIndex = 25;
             this.dgvTareasPendientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTareasPendientes_CellContentClick);
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ID.HeaderText = "ID Tarea";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 76;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 95;
-            // 
-            // Hora
-            // 
-            this.Hora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Hora.HeaderText = "Hora creación";
-            this.Hora.Name = "Hora";
-            this.Hora.ReadOnly = true;
-            this.Hora.Width = 107;
-            // 
-            // Periodicidad
-            // 
-            this.Periodicidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Periodicidad.HeaderText = "periodicidad";
-            this.Periodicidad.Name = "Periodicidad";
-            this.Periodicidad.ReadOnly = true;
-            this.Periodicidad.Width = 98;
-            // 
-            // Estado
-            // 
-            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
             // 
             // btnEliminar
             // 
@@ -215,6 +176,45 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnAgregarTarea.UseVisualStyleBackColor = false;
             this.btnAgregarTarea.Click += new System.EventHandler(this.btnAgregarTarea_Click);
             // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ID.HeaderText = "ID Tarea";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 76;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 95;
+            // 
+            // Hora
+            // 
+            this.Hora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Hora.HeaderText = "Hora Creación";
+            this.Hora.Name = "Hora";
+            this.Hora.ReadOnly = true;
+            this.Hora.Width = 108;
+            // 
+            // Periodicidad
+            // 
+            this.Periodicidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Periodicidad.HeaderText = "Periodicidad";
+            this.Periodicidad.Name = "Periodicidad";
+            this.Periodicidad.ReadOnly = true;
+            this.Periodicidad.Width = 98;
+            // 
+            // Estado
+            // 
+            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // frmTareasPendientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,11 +241,11 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private FontAwesome.Sharp.IconButton btnModificarTarea;
         private FontAwesome.Sharp.IconButton btnAgregarTarea;
         private FontAwesome.Sharp.IconButton btnSalir;
+        private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Periodicidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private FontAwesome.Sharp.IconButton btnEliminar;
     }
 }

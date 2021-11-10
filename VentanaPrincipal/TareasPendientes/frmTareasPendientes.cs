@@ -30,7 +30,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
-            Global.pintarDGV(ref dgvTareasPendientes, this.btnAgregarTarea.BackColor);
+            Global.pintarDGV(ref dgvTareasPendientes, Color.DarkSalmon);
 
             if (persona.itinerario.listaTarea != null)
             {
