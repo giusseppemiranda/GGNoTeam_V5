@@ -16,15 +16,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private TareasDiariasWS.tarea tareaModificar;
         private bool casoEdicion = false;
         private TareasDiariasWS.TareasDiariasWSClient _daoTareas;
-
+        private int fidItinerario = -1;
         //Agregar tarea
-        public frmEditarTarea()
+        public frmEditarTarea(int fidItinerario)
         {
             InitializeComponent();
             cargarComboBox();
             tareaModificar = new TareasDiariasWS.tarea();
             btnSiguiente.Text = "Agregar";
             cambiarTema();
+            this.fidItinerario = fidItinerario;
         }
 
         //Modificar tarea
@@ -69,7 +70,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             Global.pintarTxtBoxOscuro(ref boxHora);
             Global.pintarTxtBoxOscuro(ref boxID);
             Global.pintarTxtBoxOscuro(ref boxPlazo);
-            
+
         }
 
         private void activarTemaClaro()
@@ -97,21 +98,25 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             int procesoValido = -1;
             cargarDatos();
             _daoTareas = new TareasDiariasWS.TareasDiariasWSClient();
-            
+
             if (casoEdicion)
             {
+                tareaModificar.idTarea = Int32.Parse(boxID.Texts);
                 procesoValido = _daoTareas.modificarTarea(tareaModificar);
-                if(procesoValido == 1)
+                if (procesoValido == 1)
                 {
                     MessageBox.Show("La tarea ha sido modificada con éxito");
-                } else
+                }
+                else
                 {
                     MessageBox.Show("La tarea no se ha modificado");
                 }
-            } else
+            }
+            else
             {
+                tareaModificar.fidItinerario = fidItinerario;
                 procesoValido = _daoTareas.insertarTarea(tareaModificar);
-                if (procesoValido == 1)
+                if (procesoValido != 0)
                 {
                     MessageBox.Show("La tarea ha sido insertada con éxito");
                 }
@@ -124,19 +129,18 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         }
 
         private void cargarDatos()
-        {
-            tareaModificar.idTarea = Int32.Parse(boxID.Texts);
+        {            
             tareaModificar.descripcion = boxDescripcion.Texts;
             tareaModificar.horaEst = DateTime.Now.ToString("HH:mm:ss");
             tareaModificar.plazo = Int32.Parse(boxPlazo.Texts);
-            if(comboBoxEstado.SelectedIndex == 0)
+            if (comboBoxEstado.SelectedIndex == 0)
             {
                 tareaModificar.estado = false;
             }
             else
             {
                 tareaModificar.estado = true;
-            }            
-        }        
+            }
+        }
     }
 }

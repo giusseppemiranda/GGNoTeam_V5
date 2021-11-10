@@ -106,7 +106,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void btnAgregarTarea_Click(object sender, EventArgs e)
         {
-            frmEditarTarea ventanaAgregar = new frmEditarTarea();
+            frmEditarTarea ventanaAgregar = new frmEditarTarea(user.itinerario.idItineraio);
             ventanaAgregar.ShowDialog();
         }
 
