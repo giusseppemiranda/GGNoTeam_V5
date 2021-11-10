@@ -1,12 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
@@ -17,8 +10,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private bool casoEdicion = false;
         private TareasDiariasWS.TareasDiariasWSClient _daoTareas;
         private int fidItinerario = -1;
+        private frmTareasPendientes ventanaTareas;
         //Agregar tarea
-        public frmEditarTarea(int fidItinerario)
+        public frmEditarTarea(frmTareasPendientes ventana, int fidItinerario)
         {
             InitializeComponent();
             cargarComboBox();
@@ -26,10 +20,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             btnSiguiente.Text = "Agregar";
             cambiarTema();
             this.fidItinerario = fidItinerario;
+            ventanaTareas = ventana;
         }
 
         //Modificar tarea
-        public frmEditarTarea(LoginWS.tarea task)
+        public frmEditarTarea(frmTareasPendientes ventana, LoginWS.tarea task)
         {
             InitializeComponent();
             cargarComboBox();
@@ -48,6 +43,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             }
             btnSiguiente.Text = "Actualizar";
             casoEdicion = true;
+            ventanaTareas = ventana;
             cambiarTema();
         }
 
@@ -106,6 +102,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                 if (procesoValido == 1)
                 {
                     MessageBox.Show("La tarea ha sido modificada con éxito");
+                    ventanaTareas.actualizarDGV();
                 }
                 else
                 {
@@ -119,6 +116,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                 if (procesoValido != 0)
                 {
                     MessageBox.Show("La tarea ha sido insertada con éxito");
+                    ventanaTareas.actualizarDGV();
                 }
                 else
                 {

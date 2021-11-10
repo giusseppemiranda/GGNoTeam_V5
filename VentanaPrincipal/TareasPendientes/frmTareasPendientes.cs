@@ -26,8 +26,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
             _daoTareasDiarias = new TareasDiariasWS.TareasDiariasWSClient();
             _daoPersona = new LoginWS.LoginWSClient();
-            user = _daoPersona.listarPorCodExacto(Int32.Parse(persona.codigo))[0];
-
+            persona = _daoPersona.listarPorCodExacto(Int32.Parse(persona.codigo))[0];
+            user = persona;
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             Global.pintarDGV(ref dgvTareasPendientes, Color.DarkSalmon);
@@ -42,29 +42,15 @@ namespace GGNoTeam_V5.VentanaPrincipal
             }
         }
 
-        private void colocarEnDGV(LoginWS.tarea[] lista)
-        {
-            for (int i = 0; i < lista.Length; i++)
-            {
-                if (lista[i].estado == true)
-                {
-                    dgvTareasPendientes.Rows.Add(lista[i].idTarea, lista[i].descripcion, lista[i].horaEst, lista[i].plazo, "Completo");
-                }
-                else
-                {
-                    dgvTareasPendientes.Rows.Add(lista[i].idTarea, lista[i].descripcion, lista[i].horaEst, lista[i].plazo, "Incompleto");
-                }
-
-
-            }
-        }
-
         public frmTareasPendientes(LoginWS.persona persona)
         {
             InitializeComponent();
             cambiarTema();
             btnSalir.Visible = true;
             colocarEnDGV(persona.itinerario.listaTarea);
+            user = persona;
+            Global.pintarDGV(ref dgvTareasPendientes, Color.DarkSalmon);
+
             if (!Global.TemaOscuro)
             {
                 this.BackColor = Global.FrmOscuro_2;
@@ -75,7 +61,30 @@ namespace GGNoTeam_V5.VentanaPrincipal
             }
         }
 
-      
+        private void colocarEnDGV(LoginWS.tarea[] lista)
+        {
+            if (lista != null)
+            {
+                for (int i = 0; i < lista.Length; i++)
+                {
+                    if (lista[i].estado == true)
+                    {
+                        dgvTareasPendientes.Rows.Add(lista[i].idTarea, lista[i].descripcion, lista[i].horaEst, lista[i].plazo, "Completo");
+                    }
+                    else
+                    {
+                        dgvTareasPendientes.Rows.Add(lista[i].idTarea, lista[i].descripcion, lista[i].horaEst, lista[i].plazo, "Incompleto");
+                    }
+                }
+            }
+        }
+
+        public void actualizarDGV()
+        {
+            user = _daoPersona.listarPorCodExacto(Int32.Parse(user.codigo))[0];
+            dgvTareasPendientes.Rows.Clear();
+            colocarEnDGV(user.itinerario.listaTarea);
+        }
 
         public void cambiarTema()
         {
@@ -101,12 +110,12 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void dgvTareasPendientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btnAgregarTarea_Click(object sender, EventArgs e)
         {
-            frmEditarTarea ventanaAgregar = new frmEditarTarea(user.itinerario.idItineraio);
+            frmEditarTarea ventanaAgregar = new frmEditarTarea(this, user.itinerario.idItineraio);
             ventanaAgregar.ShowDialog();
         }
 
@@ -123,30 +132,33 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Está seguro que desea eliminar la tarea seleccionada?", "Eliminar botones", MessageBoxButtons.OKCancel);
-
-            if (r == DialogResult.OK)
+            if (dgvTareasPendientes.CurrentRow != null)
             {
-                if (dgvTareasPendientes.SelectedRows != null)
+                DialogResult r = MessageBox.Show("Está seguro que desea eliminar la tarea seleccionada?", "Eliminar botones", MessageBoxButtons.OKCancel);
+
+                if (r == DialogResult.OK)
                 {
                     int idTarea = (int)dgvTareasPendientes.Rows[dgvTareasPendientes.CurrentRow.Index].Cells[0].Value;
                     int validez = _daoTareasDiarias.eliminarTarea(idTarea);
                     if (validez == 1)
                     {
-                        MessageBox.Show("La tarea ha sido eliminada con éxito");                        
-                    } else
+                        MessageBox.Show("La tarea ha sido eliminada con éxito");
+                        this.actualizarDGV();
+                    }
+                    else
                     {
                         MessageBox.Show("No se ha eliminado la tarea");
                     }
-                }                
-            }            
+                }
+            }
         }
+        
 
         private void btnModificarTarea_Click(object sender, EventArgs e)
         {
             if (dgvTareasPendientes.CurrentRow != null)
             {
-                frmEditarTarea ventanaModificar = new frmEditarTarea(user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index]);
+                frmEditarTarea ventanaModificar = new frmEditarTarea(this, user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index]);
                 ventanaModificar.ShowDialog();
             }
         }
