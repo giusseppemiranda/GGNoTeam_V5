@@ -30,19 +30,20 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void InitializeComponent()
         {
             this.panelControl = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
+            this.btnTemaOscuro = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.panelCentral = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnOriginadorInstrumento = new FontAwesome.Sharp.IconButton();
             this.btnMonitoreoOrdenes = new FontAwesome.Sharp.IconButton();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.btnTEALPHA = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnSignOut = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
-            this.btnMinimizar = new FontAwesome.Sharp.IconButton();
-            this.btnTemaOscuro = new FontAwesome.Sharp.IconButton();
-            this.btnCerrar = new FontAwesome.Sharp.IconButton();
-            this.btnOriginadorInstrumento = new FontAwesome.Sharp.IconButton();
+            this.btnBandejaEntrada = new FontAwesome.Sharp.IconButton();
             this.panelControl.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,40 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.panelControl.Size = new System.Drawing.Size(1024, 29);
             this.panelControl.TabIndex = 0;
             // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMinimizar.IconColor = System.Drawing.Color.MidnightBlue;
+            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimizar.IconSize = 20;
+            this.btnMinimizar.Location = new System.Drawing.Point(966, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnMinimizar.Size = new System.Drawing.Size(29, 29);
+            this.btnMinimizar.TabIndex = 3;
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnTemaOscuro
+            // 
+            this.btnTemaOscuro.FlatAppearance.BorderSize = 0;
+            this.btnTemaOscuro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTemaOscuro.IconChar = FontAwesome.Sharp.IconChar.Adjust;
+            this.btnTemaOscuro.IconColor = System.Drawing.Color.MidnightBlue;
+            this.btnTemaOscuro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTemaOscuro.IconSize = 20;
+            this.btnTemaOscuro.Location = new System.Drawing.Point(496, 0);
+            this.btnTemaOscuro.Name = "btnTemaOscuro";
+            this.btnTemaOscuro.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnTemaOscuro.Size = new System.Drawing.Size(29, 29);
+            this.btnTemaOscuro.TabIndex = 6;
+            this.btnTemaOscuro.UseVisualStyleBackColor = true;
+            this.btnTemaOscuro.Click += new System.EventHandler(this.btnTemaOscuro_Click);
+            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
@@ -70,6 +105,27 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.lblTitulo.Size = new System.Drawing.Size(229, 15);
             this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "Gestión de Riesgos y control de usuarios";
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.btnCerrar.IconColor = System.Drawing.Color.MidnightBlue;
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrar.IconSize = 20;
+            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCerrar.Location = new System.Drawing.Point(995, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(29, 29);
+            this.btnCerrar.TabIndex = 7;
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panelCentral
             // 
@@ -84,6 +140,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Silver;
+            this.panelMenu.Controls.Add(this.btnBandejaEntrada);
             this.panelMenu.Controls.Add(this.btnOriginadorInstrumento);
             this.panelMenu.Controls.Add(this.btnMonitoreoOrdenes);
             this.panelMenu.Controls.Add(this.btnMenu);
@@ -99,6 +156,26 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.panelMenu.Visible = false;
             this.panelMenu.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.panelMenu.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
+            // 
+            // btnOriginadorInstrumento
+            // 
+            this.btnOriginadorInstrumento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOriginadorInstrumento.FlatAppearance.BorderSize = 0;
+            this.btnOriginadorInstrumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOriginadorInstrumento.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.btnOriginadorInstrumento.IconColor = System.Drawing.Color.Black;
+            this.btnOriginadorInstrumento.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOriginadorInstrumento.IconSize = 30;
+            this.btnOriginadorInstrumento.Location = new System.Drawing.Point(0, 215);
+            this.btnOriginadorInstrumento.Name = "btnOriginadorInstrumento";
+            this.btnOriginadorInstrumento.Size = new System.Drawing.Size(43, 43);
+            this.btnOriginadorInstrumento.TabIndex = 31;
+            this.btnOriginadorInstrumento.Tag = "Instrumentos y Originadores";
+            this.btnOriginadorInstrumento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOriginadorInstrumento.UseVisualStyleBackColor = true;
+            this.btnOriginadorInstrumento.Click += new System.EventHandler(this.btnOriginadorInstrumento_Click);
+            this.btnOriginadorInstrumento.Enter += new System.EventHandler(this.btnUsuarios_MouseEnter);
+            this.btnOriginadorInstrumento.Leave += new System.EventHandler(this.btnHome_MouseLeave);
             // 
             // btnMonitoreoOrdenes
             // 
@@ -219,80 +296,22 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnHome.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             // 
-            // btnMinimizar
+            // btnBandejaEntrada
             // 
-            this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMinimizar.IconColor = System.Drawing.Color.MidnightBlue;
-            this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimizar.IconSize = 20;
-            this.btnMinimizar.Location = new System.Drawing.Point(966, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnMinimizar.Size = new System.Drawing.Size(29, 29);
-            this.btnMinimizar.TabIndex = 3;
-            this.btnMinimizar.UseVisualStyleBackColor = true;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnTemaOscuro
-            // 
-            this.btnTemaOscuro.FlatAppearance.BorderSize = 0;
-            this.btnTemaOscuro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTemaOscuro.IconChar = FontAwesome.Sharp.IconChar.Adjust;
-            this.btnTemaOscuro.IconColor = System.Drawing.Color.MidnightBlue;
-            this.btnTemaOscuro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTemaOscuro.IconSize = 20;
-            this.btnTemaOscuro.Location = new System.Drawing.Point(496, 0);
-            this.btnTemaOscuro.Name = "btnTemaOscuro";
-            this.btnTemaOscuro.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnTemaOscuro.Size = new System.Drawing.Size(29, 29);
-            this.btnTemaOscuro.TabIndex = 6;
-            this.btnTemaOscuro.UseVisualStyleBackColor = true;
-            this.btnTemaOscuro.Click += new System.EventHandler(this.btnTemaOscuro_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.btnCerrar.IconColor = System.Drawing.Color.MidnightBlue;
-            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrar.IconSize = 20;
-            this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCerrar.Location = new System.Drawing.Point(995, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnCerrar.Size = new System.Drawing.Size(29, 29);
-            this.btnCerrar.TabIndex = 7;
-            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnOriginadorInstrumento
-            // 
-            this.btnOriginadorInstrumento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOriginadorInstrumento.FlatAppearance.BorderSize = 0;
-            this.btnOriginadorInstrumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOriginadorInstrumento.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            this.btnOriginadorInstrumento.IconColor = System.Drawing.Color.Black;
-            this.btnOriginadorInstrumento.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOriginadorInstrumento.IconSize = 30;
-            this.btnOriginadorInstrumento.Location = new System.Drawing.Point(0, 215);
-            this.btnOriginadorInstrumento.Name = "btnOriginadorInstrumento";
-            this.btnOriginadorInstrumento.Size = new System.Drawing.Size(43, 43);
-            this.btnOriginadorInstrumento.TabIndex = 31;
-            this.btnOriginadorInstrumento.Tag = "Instrumentos y Originadores";
-            this.btnOriginadorInstrumento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOriginadorInstrumento.UseVisualStyleBackColor = true;
-            this.btnOriginadorInstrumento.Click += new System.EventHandler(this.btnOriginadorInstrumento_Click);
-            this.btnOriginadorInstrumento.Enter += new System.EventHandler(this.btnUsuarios_MouseEnter);
-            this.btnOriginadorInstrumento.Leave += new System.EventHandler(this.btnHome_MouseLeave);
+            this.btnBandejaEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBandejaEntrada.FlatAppearance.BorderSize = 0;
+            this.btnBandejaEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBandejaEntrada.IconChar = FontAwesome.Sharp.IconChar.EnvelopeOpenText;
+            this.btnBandejaEntrada.IconColor = System.Drawing.Color.Black;
+            this.btnBandejaEntrada.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBandejaEntrada.IconSize = 24;
+            this.btnBandejaEntrada.Location = new System.Drawing.Point(0, 258);
+            this.btnBandejaEntrada.Name = "btnBandejaEntrada";
+            this.btnBandejaEntrada.Size = new System.Drawing.Size(43, 43);
+            this.btnBandejaEntrada.TabIndex = 32;
+            this.btnBandejaEntrada.Tag = "Bandeja de entrada";
+            this.btnBandejaEntrada.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBandejaEntrada.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
@@ -330,5 +349,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private FontAwesome.Sharp.IconButton btnTEALPHA;
         private FontAwesome.Sharp.IconButton btnMonitoreoOrdenes;
         private FontAwesome.Sharp.IconButton btnOriginadorInstrumento;
+        private FontAwesome.Sharp.IconButton btnBandejaEntrada;
     }
 }

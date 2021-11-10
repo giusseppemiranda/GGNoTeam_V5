@@ -72,6 +72,15 @@ namespace GGNoTeam_V5.Login
             }
         }
 
+
+        /*
+                        msg.CC.Add("sebastian.portal@pucp.edu.pe");
+                        msg.CC.Add("giovanni.miranda@pucp.edu.pe");
+                        msg.CC.Add("luis.bazalar@pucp.edu.pe");
+                        msg.CC.Add("a20170080@pucp.edu.pe");
+                        msg.CC.Add("etavarad@pucp.edu.pe");
+                        msg.CC.Add("john.soto@pucp.edu.pe");
+            */
         private void enviarCorreoUsuario()
         {
             System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
@@ -83,20 +92,9 @@ namespace GGNoTeam_V5.Login
             msg.BodyEncoding = System.Text.Encoding.UTF8;
             msg.IsBodyHtml = true;
             msg.From = new System.Net.Mail.MailAddress("noreply@afpintegra.riesgoseinversion.pe");
-            
-            /*
-                        msg.CC.Add("sebastian.portal@pucp.edu.pe");
-                        msg.CC.Add("giovanni.miranda@pucp.edu.pe");
-                        msg.CC.Add("luis.bazalar@pucp.edu.pe");
-                        msg.CC.Add("a20170080@pucp.edu.pe");
-                        msg.CC.Add("etavarad@pucp.edu.pe");
-                        msg.CC.Add("john.soto@pucp.edu.pe");
-            */
-
+                        
             servidorCliente server = new servidorCliente();
             server.sendMessage(msg);
-
-
         }
 
         private bool usuarioExiste(String id)

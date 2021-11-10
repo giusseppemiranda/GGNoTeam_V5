@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GGNoTeam_V5.Recursos.sendMail;
 using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas;
 
@@ -18,7 +19,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private LoginWS.persona user;
         private LoginWS.LoginWSClient _daoPersona;
         private TareasDiariasWS.TareasDiariasWSClient _daoTareasDiarias;
-
+        private bool accionAdmin = false;
         public frmTareasPendientes(frmPrincipal ventana, LoginWS.persona persona)
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             user = persona;
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+            accionAdmin = true;
             Global.pintarDGV(ref dgvTareasPendientes, Color.DarkSalmon);
 
             if (persona.itinerario.listaTarea != null)
@@ -115,7 +117,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void btnAgregarTarea_Click(object sender, EventArgs e)
         {
-            frmEditarTarea ventanaAgregar = new frmEditarTarea(this, user.itinerario.idItineraio);
+            frmEditarTarea ventanaAgregar = new frmEditarTarea(this, user.itinerario.idItineraio,accionAdmin);
             ventanaAgregar.ShowDialog();
         }
 
@@ -158,9 +160,16 @@ namespace GGNoTeam_V5.VentanaPrincipal
         {
             if (dgvTareasPendientes.CurrentRow != null)
             {
-                frmEditarTarea ventanaModificar = new frmEditarTarea(this, user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index]);
+                frmEditarTarea ventanaModificar = new frmEditarTarea(this, user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index],accionAdmin);
                 ventanaModificar.ShowDialog();
             }
+        }
+
+        public void enviarNotificacionCorreo(System.Net.Mail.MailMessage msg)
+        {
+            msg.To.Add(user.correo);
+            servidorCliente server = new servidorCliente();
+            server.sendMessage(msg);
         }
     }
 }

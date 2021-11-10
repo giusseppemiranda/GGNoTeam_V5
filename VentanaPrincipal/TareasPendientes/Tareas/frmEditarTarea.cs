@@ -11,8 +11,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private TareasDiariasWS.TareasDiariasWSClient _daoTareas;
         private int fidItinerario = -1;
         private frmTareasPendientes ventanaTareas;
+        private bool accionComoAdministrador = false;
+
         //Agregar tarea
-        public frmEditarTarea(frmTareasPendientes ventana, int fidItinerario)
+        public frmEditarTarea(frmTareasPendientes ventana, int fidItinerario, bool accionAdmin)
         {
             InitializeComponent();
             cargarComboBox();
@@ -21,10 +23,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             cambiarTema();
             this.fidItinerario = fidItinerario;
             ventanaTareas = ventana;
+            accionComoAdministrador = accionAdmin;
         }
 
         //Modificar tarea
-        public frmEditarTarea(frmTareasPendientes ventana, LoginWS.tarea task)
+        public frmEditarTarea(frmTareasPendientes ventana, LoginWS.tarea task, bool accionAdmin)
         {
             InitializeComponent();
             cargarComboBox();
@@ -44,6 +47,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             btnSiguiente.Text = "Actualizar";
             casoEdicion = true;
             ventanaTareas = ventana;
+            accionComoAdministrador = accionAdmin;
             cambiarTema();
         }
 
@@ -102,6 +106,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                 if (procesoValido == 1)
                 {
                     MessageBox.Show("La tarea ha sido modificada con éxito");
+                    if (accionComoAdministrador)
+                        notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha modificado la tarea con ID " + tareaModificar.idTarea + " : " + tareaModificar.descripcion + " . De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
                     ventanaTareas.actualizarDGV();
                 }
                 else
@@ -116,6 +122,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                 if (procesoValido != 0)
                 {
                     MessageBox.Show("La tarea ha sido insertada con éxito");
+                    if (accionComoAdministrador)
+                        notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha agregado la tarea con ID " + tareaModificar.idTarea + " : " + tareaModificar.descripcion + " . De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
                     ventanaTareas.actualizarDGV();
                 }
                 else
@@ -127,7 +135,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         }
 
         private void cargarDatos()
-        {            
+        {
             tareaModificar.descripcion = boxDescripcion.Texts;
             tareaModificar.horaEst = DateTime.Now.ToString("HH:mm:ss");
             tareaModificar.plazo = Int32.Parse(boxPlazo.Texts);
@@ -139,6 +147,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             {
                 tareaModificar.estado = true;
             }
+        }
+
+        private void notificacion(string ASUNTO, string CUERPO)
+        {
+            System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+            msg.Subject = ASUNTO;
+            msg.SubjectEncoding = System.Text.Encoding.UTF8;
+            msg.Body = CUERPO;
+            msg.BodyEncoding = System.Text.Encoding.UTF8;
+            msg.IsBodyHtml = true;
+            ventanaTareas.enviarNotificacionCorreo(msg);
         }
     }
 }
