@@ -30,14 +30,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         private void InitializeComponent()
         {
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.ggTextBox1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxAFP = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ggTextBox3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxPatrimonio = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ggTextBox4 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxCuota = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.ggTextBox5 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxValorCuota = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
@@ -56,27 +56,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.lblCodigo.TabIndex = 28;
             this.lblCodigo.Text = "Fecha:";
             // 
-            // ggTextBox1
+            // boxAFP
             // 
-            this.ggTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ggTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox1.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox1.BorderSize = 2;
-            this.ggTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox1.IsFocused = false;
-            this.ggTextBox1.Location = new System.Drawing.Point(190, 112);
-            this.ggTextBox1.MaxLength = 32767;
-            this.ggTextBox1.Multiline = false;
-            this.ggTextBox1.Name = "ggTextBox1";
-            this.ggTextBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox1.PasswordChar = false;
-            this.ggTextBox1.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox1.TabIndex = 31;
-            this.ggTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox1.Texts = "";
-            this.ggTextBox1.UnderlinedStyle = true;
+            this.boxAFP.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.boxAFP.BackColor = System.Drawing.SystemColors.Window;
+            this.boxAFP.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxAFP.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxAFP.BorderSize = 2;
+            this.boxAFP.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxAFP.ForeColor = System.Drawing.Color.DimGray;
+            this.boxAFP.IsFocused = false;
+            this.boxAFP.Location = new System.Drawing.Point(190, 112);
+            this.boxAFP.MaxLength = 32767;
+            this.boxAFP.Multiline = false;
+            this.boxAFP.Name = "boxAFP";
+            this.boxAFP.Padding = new System.Windows.Forms.Padding(6);
+            this.boxAFP.PasswordChar = false;
+            this.boxAFP.Size = new System.Drawing.Size(214, 30);
+            this.boxAFP.TabIndex = 31;
+            this.boxAFP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxAFP.Texts = "";
+            this.boxAFP.UnderlinedStyle = true;
             // 
             // label1
             // 
@@ -100,27 +100,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.label2.TabIndex = 32;
             this.label2.Text = "Fondo:";
             // 
-            // ggTextBox3
+            // boxPatrimonio
             // 
-            this.ggTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ggTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox3.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox3.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox3.BorderSize = 2;
-            this.ggTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox3.IsFocused = false;
-            this.ggTextBox3.Location = new System.Drawing.Point(190, 231);
-            this.ggTextBox3.MaxLength = 32767;
-            this.ggTextBox3.Multiline = false;
-            this.ggTextBox3.Name = "ggTextBox3";
-            this.ggTextBox3.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox3.PasswordChar = false;
-            this.ggTextBox3.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox3.TabIndex = 35;
-            this.ggTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox3.Texts = "";
-            this.ggTextBox3.UnderlinedStyle = true;
+            this.boxPatrimonio.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.boxPatrimonio.BackColor = System.Drawing.SystemColors.Window;
+            this.boxPatrimonio.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxPatrimonio.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxPatrimonio.BorderSize = 2;
+            this.boxPatrimonio.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxPatrimonio.ForeColor = System.Drawing.Color.DimGray;
+            this.boxPatrimonio.IsFocused = false;
+            this.boxPatrimonio.Location = new System.Drawing.Point(190, 231);
+            this.boxPatrimonio.MaxLength = 32767;
+            this.boxPatrimonio.Multiline = false;
+            this.boxPatrimonio.Name = "boxPatrimonio";
+            this.boxPatrimonio.Padding = new System.Windows.Forms.Padding(6);
+            this.boxPatrimonio.PasswordChar = false;
+            this.boxPatrimonio.Size = new System.Drawing.Size(214, 30);
+            this.boxPatrimonio.TabIndex = 35;
+            this.boxPatrimonio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxPatrimonio.Texts = "";
+            this.boxPatrimonio.UnderlinedStyle = true;
             // 
             // label3
             // 
@@ -133,27 +133,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.label3.TabIndex = 34;
             this.label3.Text = "Patrimonio:";
             // 
-            // ggTextBox4
+            // boxCuota
             // 
-            this.ggTextBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ggTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox4.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox4.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox4.BorderSize = 2;
-            this.ggTextBox4.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox4.IsFocused = false;
-            this.ggTextBox4.Location = new System.Drawing.Point(190, 289);
-            this.ggTextBox4.MaxLength = 32767;
-            this.ggTextBox4.Multiline = false;
-            this.ggTextBox4.Name = "ggTextBox4";
-            this.ggTextBox4.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox4.PasswordChar = false;
-            this.ggTextBox4.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox4.TabIndex = 37;
-            this.ggTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox4.Texts = "";
-            this.ggTextBox4.UnderlinedStyle = true;
+            this.boxCuota.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.boxCuota.BackColor = System.Drawing.SystemColors.Window;
+            this.boxCuota.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxCuota.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxCuota.BorderSize = 2;
+            this.boxCuota.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxCuota.ForeColor = System.Drawing.Color.DimGray;
+            this.boxCuota.IsFocused = false;
+            this.boxCuota.Location = new System.Drawing.Point(190, 289);
+            this.boxCuota.MaxLength = 32767;
+            this.boxCuota.Multiline = false;
+            this.boxCuota.Name = "boxCuota";
+            this.boxCuota.Padding = new System.Windows.Forms.Padding(6);
+            this.boxCuota.PasswordChar = false;
+            this.boxCuota.Size = new System.Drawing.Size(214, 30);
+            this.boxCuota.TabIndex = 37;
+            this.boxCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxCuota.Texts = "";
+            this.boxCuota.UnderlinedStyle = true;
             // 
             // label4
             // 
@@ -166,27 +166,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.label4.TabIndex = 36;
             this.label4.Text = "Cuota:";
             // 
-            // ggTextBox5
+            // boxValorCuota
             // 
-            this.ggTextBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ggTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox5.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox5.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox5.BorderSize = 2;
-            this.ggTextBox5.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox5.IsFocused = false;
-            this.ggTextBox5.Location = new System.Drawing.Point(190, 348);
-            this.ggTextBox5.MaxLength = 32767;
-            this.ggTextBox5.Multiline = false;
-            this.ggTextBox5.Name = "ggTextBox5";
-            this.ggTextBox5.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox5.PasswordChar = false;
-            this.ggTextBox5.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox5.TabIndex = 39;
-            this.ggTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox5.Texts = "";
-            this.ggTextBox5.UnderlinedStyle = true;
+            this.boxValorCuota.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.boxValorCuota.BackColor = System.Drawing.SystemColors.Window;
+            this.boxValorCuota.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxValorCuota.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxValorCuota.BorderSize = 2;
+            this.boxValorCuota.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxValorCuota.ForeColor = System.Drawing.Color.DimGray;
+            this.boxValorCuota.IsFocused = false;
+            this.boxValorCuota.Location = new System.Drawing.Point(190, 348);
+            this.boxValorCuota.MaxLength = 32767;
+            this.boxValorCuota.Multiline = false;
+            this.boxValorCuota.Name = "boxValorCuota";
+            this.boxValorCuota.Padding = new System.Windows.Forms.Padding(6);
+            this.boxValorCuota.PasswordChar = false;
+            this.boxValorCuota.Size = new System.Drawing.Size(214, 30);
+            this.boxValorCuota.TabIndex = 39;
+            this.boxValorCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxValorCuota.Texts = "";
+            this.boxValorCuota.UnderlinedStyle = true;
             // 
             // label5
             // 
@@ -237,6 +237,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.btnSiguiente.Text = "Aceptar";
             this.btnSiguiente.TextColor = System.Drawing.Color.White;
             this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // dateTimePicker1
             // 
@@ -273,14 +274,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
-            this.Controls.Add(this.ggTextBox5);
+            this.Controls.Add(this.boxValorCuota);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.ggTextBox4);
+            this.Controls.Add(this.boxCuota);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ggTextBox3);
+            this.Controls.Add(this.boxPatrimonio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ggTextBox1);
+            this.Controls.Add(this.boxAFP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -294,14 +295,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
 
         #endregion
         private System.Windows.Forms.Label lblCodigo;
-        private Recursos.UserControls.GGTextBox ggTextBox1;
+        private Recursos.UserControls.GGTextBox boxAFP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Recursos.UserControls.GGTextBox ggTextBox3;
+        private Recursos.UserControls.GGTextBox boxPatrimonio;
         private System.Windows.Forms.Label label3;
-        private Recursos.UserControls.GGTextBox ggTextBox4;
+        private Recursos.UserControls.GGTextBox boxCuota;
         private System.Windows.Forms.Label label4;
-        private Recursos.UserControls.GGTextBox ggTextBox5;
+        private Recursos.UserControls.GGTextBox boxValorCuota;
         private System.Windows.Forms.Label label5;
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;

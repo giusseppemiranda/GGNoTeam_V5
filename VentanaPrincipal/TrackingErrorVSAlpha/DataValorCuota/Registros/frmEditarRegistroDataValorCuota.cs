@@ -49,5 +49,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.BackColor = Global.FrmClaro;
 
         }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            TrackingErrorWS.dataValorCuota data = new TrackingErrorWS.dataValorCuota();
+
+            data.activo = 1;
+            data.cuotas = Convert.ToDouble(boxCuota.Texts);
+            data.fecha = dateTimePicker1.Value;
+            data.patrimonio = Convert.ToDouble(boxPatrimonio.Texts);
+            data.valorCuota = Convert.ToDouble(boxValorCuota.Texts);
+            data.ytoD = 0.2;
+
+            int i = _daoTE.insertarDataValorCuota(data,1);
+            if(i == 1)
+            {
+                MessageBox.Show("TODO CORRECTO");
+            } else
+            {
+                MessageBox.Show("HAY ERROR");
+            }
+        }
     }
 }
