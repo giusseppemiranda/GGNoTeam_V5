@@ -1,5 +1,6 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
@@ -66,8 +67,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private void activarTemaOscuro()
         {
             this.BackColor = Global.FrmOscuro_2;
-            Global.pintarTxtBoxOscuro(ref boxDescripcion);
-            Global.pintarTxtBoxOscuro(ref boxHora);
+            boxID.BackColor = Color.Black;
+            boxID.BorderColor = boxID.BackColor;
+            boxHora.BackColor = boxID.BackColor;
+            boxHora.BorderColor = boxID.BackColor;
+            Global.pintarTxtBoxOscuro(ref boxDescripcion);            
             Global.pintarTxtBoxOscuro(ref boxID);
             Global.pintarTxtBoxOscuro(ref boxPlazo);
 
@@ -76,8 +80,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private void activarTemaClaro()
         {
             this.BackColor = Global.FrmClaro_2;
-            Global.pintarTxtBoxClaro(ref boxDescripcion);
-            Global.pintarTxtBoxClaro(ref boxHora);
+            boxID.BackColor = Color.DarkGray;
+            boxID.BorderColor = boxID.BackColor;
+            boxHora.BackColor = boxID.BackColor;
+            boxHora.BorderColor = boxID.BackColor;
+            Global.pintarTxtBoxClaro(ref boxDescripcion);           
             Global.pintarTxtBoxClaro(ref boxID);
             Global.pintarTxtBoxClaro(ref boxPlazo);
         }
