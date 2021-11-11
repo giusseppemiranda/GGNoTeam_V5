@@ -1,12 +1,12 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using System.Windows.Forms;
 
-namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTrackingError
+namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 {
-    public partial class frmCalculoTE : Form
+    public partial class frmDataValorCuota : Form
     {
         private frmPrincipal ventanaPadre = null;
-        public frmCalculoTE(frmPrincipal ventana)
+        public frmDataValorCuota(frmPrincipal ventana)
         {
             InitializeComponent();
             cambiarTema();

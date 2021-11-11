@@ -10,13 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
+namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTrackingError
 {
-    public partial class frmDataValorCuota : Form
+    public partial class frmCalcularTE : Form
     {
         private frmPrincipal ventanaPrincipal = null;
         private frmTEvsAlpha ventanaPadre = null;
-        public frmDataValorCuota(frmPrincipal ventana,frmTEvsAlpha ventana_2)
+        public frmCalcularTE(frmPrincipal ventana,frmTEvsAlpha ventana_2)
         {
             InitializeComponent();
             ventanaPrincipal = ventana;

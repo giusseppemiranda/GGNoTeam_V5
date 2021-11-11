@@ -1,5 +1,6 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError;
+using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTrackingError;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa;
 using System;
@@ -80,7 +81,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha
 
         private void btnDataValorCuota_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmDataValorCuota(ventanaPadre,this));
+            abrirFormulario(new frmDataValorCuota(ventanaPadre));
         }
 
         private void btnAssetError_Click(object sender, EventArgs e)

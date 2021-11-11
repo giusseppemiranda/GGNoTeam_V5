@@ -106,7 +106,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private void btnVerCalculoTE_Click(object sender, EventArgs e)
         {
-            ventanaPadre.abrirFormulario(new frmCalculoTE(ventanaPrincipal));
+            ventanaPadre.abrirFormulario(new frmCalcularTE(ventanaPrincipal,ventanaPadre));
         }
     }
 }

@@ -184,11 +184,11 @@
     <Compile Include="VentanaPrincipal\TareasPendientes\Tareas\frmEditarTarea.Designer.cs">
       <DependentUpon>frmEditarTarea.cs</DependentUpon>
     </Compile>
-    <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\frmCalculoTE.cs">
+    <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\frmDataValorCuota.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\frmCalculoTE.Designer.cs">
-      <DependentUpon>frmCalculoTE.cs</DependentUpon>
+    <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\frmDataValorCuota.Designer.cs">
+      <DependentUpon>frmDataValorCuota.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\frmAssetError.cs">
       <SubType>Form</SubType>
@@ -202,11 +202,11 @@
     <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\Registros\frmEditarRegistroAssetError.Designer.cs">
       <DependentUpon>frmEditarRegistroAssetError.cs</DependentUpon>
     </Compile>
-    <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\CalculoTrackingError\frmDataValorCuota.cs">
+    <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\CalculoTrackingError\frmCalcularTE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\CalculoTrackingError\frmDataValorCuota.Designer.cs">
-      <DependentUpon>frmDataValorCuota.cs</DependentUpon>
+    <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\CalculoTrackingError\frmCalcularTE.Designer.cs">
+      <DependentUpon>frmCalcularTE.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\Registros\frmEditarRegistroDataValorCuota.cs">
       <SubType>Form</SubType>
@@ -284,8 +284,8 @@
     <EmbeddedResource Include="VentanaPrincipal\TareasPendientes\Tareas\frmEditarTarea.resx">
       <DependentUpon>frmEditarTarea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\frmCalculoTE.resx">
-      <DependentUpon>frmCalculoTE.cs</DependentUpon>
+    <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\frmDataValorCuota.resx">
+      <DependentUpon>frmDataValorCuota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\frmAssetError.resx">
       <DependentUpon>frmAssetError.cs</DependentUpon>
@@ -293,8 +293,8 @@
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\Registros\frmEditarRegistroAssetError.resx">
       <DependentUpon>frmEditarRegistroAssetError.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\CalculoTrackingError\frmDataValorCuota.resx">
-      <DependentUpon>frmDataValorCuota.cs</DependentUpon>
+    <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\AssetError\CalculoTrackingError\frmCalcularTE.resx">
+      <DependentUpon>frmCalcularTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\Registros\frmEditarRegistroDataValorCuota.resx">
       <DependentUpon>frmEditarRegistroDataValorCuota.cs</DependentUpon>

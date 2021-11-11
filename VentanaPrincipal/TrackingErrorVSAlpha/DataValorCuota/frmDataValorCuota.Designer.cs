@@ -1,7 +1,7 @@
 ﻿
-namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTrackingError
+namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 {
-    partial class frmCalculoTE
+    partial class frmDataValorCuota
     {
         /// <summary>
         /// Required designer variable.
@@ -289,7 +289,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             this.lblTitutlo.TabIndex = 55;
             this.lblTitutlo.Text = "Data Valor Cuota";
             // 
-            // frmCalculoTE
+            // frmDataValorCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,9 +306,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             this.Controls.Add(this.lblFechaFinal);
             this.Controls.Add(this.lblTitutlo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCalculoTE";
+            this.Name = "frmDataValorCuota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCalculoTE";
+            this.Text = "frmDataValorCuota";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataValorCuota)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

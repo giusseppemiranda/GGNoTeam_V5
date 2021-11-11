@@ -1,7 +1,7 @@
 ﻿
-namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
+namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTrackingError
 {
-    partial class frmDataValorCuota
+    partial class frmCalcularTE
     {
         /// <summary>
         /// Required designer variable.
