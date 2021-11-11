@@ -67,6 +67,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ggTextBox3.Texts = "";
             this.ggTextBox3.UnderlinedStyle = false;
+            this.ggTextBox3.Visible = false;
             // 
             // ggTextBox1
             // 
@@ -77,7 +78,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox1.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox1.IsFocused = false;
-            this.ggTextBox1.Location = new System.Drawing.Point(570, 863);
+            this.ggTextBox1.Location = new System.Drawing.Point(568, 863);
             this.ggTextBox1.Margin = new System.Windows.Forms.Padding(6);
             this.ggTextBox1.MaxLength = 32767;
             this.ggTextBox1.Multiline = false;
@@ -101,6 +102,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFondo_3.Size = new System.Drawing.Size(121, 32);
             this.lblFondo_3.TabIndex = 56;
             this.lblFondo_3.Text = "FONDO 3";
+            this.lblFondo_3.Visible = false;
             // 
             // lblFondo_2
             // 
@@ -113,6 +115,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFondo_2.Size = new System.Drawing.Size(121, 32);
             this.lblFondo_2.TabIndex = 55;
             this.lblFondo_2.Text = "FONDO 2";
+            this.lblFondo_2.Visible = false;
             // 
             // lblFondo_1
             // 
@@ -125,13 +128,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFondo_1.Size = new System.Drawing.Size(121, 32);
             this.lblFondo_1.TabIndex = 54;
             this.lblFondo_1.Text = "FONDO 1";
+            this.lblFondo_1.Visible = false;
             // 
             // lblTE
             // 
             this.lblTE.AutoSize = true;
             this.lblTE.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblTE.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTE.Location = new System.Drawing.Point(72, 877);
+            this.lblTE.Location = new System.Drawing.Point(192, 881);
             this.lblTE.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTE.Name = "lblTE";
             this.lblTE.Size = new System.Drawing.Size(213, 32);
@@ -182,6 +186,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ggTextBox2.Texts = "";
             this.ggTextBox2.UnderlinedStyle = false;
+            this.ggTextBox2.Visible = false;
             // 
             // dateInicial
             // 
@@ -254,7 +259,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2017, 973);
+            this.ClientSize = new System.Drawing.Size(2017, 975);
             this.Controls.Add(this.dgvDataValorCuota);
             this.Controls.Add(this.ggTextBox3);
             this.Controls.Add(this.ggTextBox1);

@@ -74,11 +74,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             dgvDataValorCuota.Refresh();
 
         }
-
-
-        private void btnEliminarRegistro_Click(object sender, EventArgs e)
+        
+        /*
+        private void CalcularTeFondo()
         {
-
+            double f1 = 0;
+            double f2 = 0;
+            foreach (DataGridViewRow row in dgvDataValorCuota.Rows)
+            {
+                var ass = row.DataBoundItem as TrackingErrorWS.assetError;
+                //falta agregar el fidfondo a las clases en java, mysql y procedures
+                if (ass.fidFondo == 1) f1 += ass.producto;
+                if (ass.fidFondo == 2) f2 += ass.producto;
+            }
+            ggTextBox2.Texts = f2.ToString();
+            ggTextBox1.Texts = f1.ToString();
         }
+        */
     }
 }
