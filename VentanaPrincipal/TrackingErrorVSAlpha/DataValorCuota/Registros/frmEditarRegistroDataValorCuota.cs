@@ -47,8 +47,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         {
             comboFondo.Items.Add("Fondo 1");
             comboFondo.Items.Add("Fondo 2");
-            comboFondo.Items.Add("Fondo 3");
-
+            //comboFondo.Items.Add("Fondo 3");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -94,10 +93,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
                 int i = -1;
                 if (insertar)
                 {
-                    i = _daoTE.insertarDataValorCuota(dato, 1);
+                    i = _daoTE.insertarDataValorCuota(dato, comboFondo.SelectedIndex+1);
                 } else
                 {
-                    i = _daoTE.modificarDataValorCuota(dato, 1);
+                    i = _daoTE.modificarDataValorCuota(dato, comboFondo.SelectedIndex+1);
 
                 }
                 

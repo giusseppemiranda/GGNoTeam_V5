@@ -20,6 +20,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             _dao = new TrackingErrorWS.TrackingErrorWSClient();
+            cargarCombo();
         }
 
         public void cambiarTema()
@@ -50,6 +51,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         {
             frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota();
             ventanaAgregar.ShowDialog();
+            dgvDataValorCuota.Refresh();
         }
 
         private void btnActualizarRegistro_Click(object sender, System.EventArgs e)
@@ -59,22 +61,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                 frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index]);
                 ventanaAgregar.ShowDialog();
             }
+
+            dgvDataValorCuota.Refresh();
         }
 
         private void btnConsultarRegistros_Click(object sender, System.EventArgs e)
         {            
-            datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), 1);
+            datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex+1);
             if (datos != null)
             {                
                 dgvDataValorCuota.DataSource = new BindingList<TrackingErrorWS.dataValorCuota>(datos.ToList());
             }
-            
+
+            dgvDataValorCuota.Refresh();
         }
 
         private void btnEliminarRegistro_Click(object sender, System.EventArgs e)
-        {            
-            datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), 1);
-            int  i = _dao.eliminarDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index].idDataValorCuota);
+        {
+            int i = -1;
+            datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
+            if(datos!= null) i= _dao.eliminarDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index].idDataValorCuota);
             if (i == 1)
             {
                 MessageBox.Show("TODO OK");
@@ -84,11 +90,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                 MessageBox.Show("ERROR");
 
             }
-        }
 
+            dgvDataValorCuota.Refresh();
+        }
+        private void cargarCombo()
+        {
+            comboFondo.Items.Add("Fondo 1");
+            comboFondo.Items.Add("Fondo 2");
+            //comboFondo.Items.Add("Fondo 3");
+        }
         private void btnVerCalculoAlfa_Click(object sender, System.EventArgs e)
         {
 
         }
     }
 }
+
