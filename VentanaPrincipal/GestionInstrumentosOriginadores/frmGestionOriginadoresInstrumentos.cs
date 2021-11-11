@@ -49,5 +49,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             Global.pintarTxtBoxClaro(ref txtboxbusqueda);
             Global.pintarBtnClaro(ref btnBuscar);
         }
+
+        private void cargarComboBoxEleccion()
+        {
+            comboTipo.Items.Add("Emisor");
+            comboTipo.Items.Add("Instrumento");
+            comboTipo.Items.Add("Originador");
+        }
     }
 }

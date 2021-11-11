@@ -21,22 +21,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha
         public frmTEvsAlpha(frmPrincipal ventana)
         {
             InitializeComponent();
-            iniciarTema();
+            cambiarTema();
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
         }
-
-        private void iniciarTema()
-        {
-            if (Global.TemaOscuro)
-            {
-                activarTemaClaro();
-            }
-            else
-            {
-                activarTemaOscuro();
-            }
-        }
+        
 
         public void cambiarTema()
         {
@@ -68,7 +57,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha
             abrirFormulario(new frmTrackingErrorvsAlfa(ventanaPadre));
         }
 
-        private void abrirFormulario(Form formulario)
+        public void abrirFormulario(Form formulario)
         {
             if (frmActivo != null)
             {

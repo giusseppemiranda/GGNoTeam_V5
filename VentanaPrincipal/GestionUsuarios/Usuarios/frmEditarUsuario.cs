@@ -70,13 +70,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
 
             comboBoxTipoUsuario.SelectedIndex = persona.tipoUsuario - 1;
 
-            //for(int i = 0; i < ListaTiposUsuarios.Count; i++)
-            //{
-            //    if(ListaTiposUsuarios[i] == fila.Cells[6].Value.ToString())
-            //    {
-            //        comboBoxTipoUsuario.SelectedIndex = i;
-            //    }
-            //}
             boxContraseña.Texts = persona.contraseña;
             boxCodigoValidacion.Texts = persona.validacion;
             boxRol.Texts = persona.rol;

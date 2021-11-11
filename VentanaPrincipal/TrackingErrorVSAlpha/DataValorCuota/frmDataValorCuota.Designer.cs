@@ -29,13 +29,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblTitutlo = new System.Windows.Forms.Label();
-            this.dateFinal = new System.Windows.Forms.DateTimePicker();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicial = new System.Windows.Forms.Label();
-            this.lblFechaFinal = new System.Windows.Forms.Label();
             this.dgvDataValorCuota = new System.Windows.Forms.DataGridView();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AFP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,31 +41,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.Patrimonio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cuotas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminarRegistro = new FontAwesome.Sharp.IconButton();
-            this.btnActualizarRegistro = new FontAwesome.Sharp.IconButton();
-            this.btnAgregarRegistros = new FontAwesome.Sharp.IconButton();
             this.btnConsultarRegistros = new FontAwesome.Sharp.IconButton();
-            this.btnVerCalculoAlfa = new FontAwesome.Sharp.IconButton();
+            this.lblTE = new System.Windows.Forms.Label();
+            this.lblFondo_1 = new System.Windows.Forms.Label();
+            this.lblFondo_2 = new System.Windows.Forms.Label();
+            this.lblFondo_3 = new System.Windows.Forms.Label();
+            this.ggTextBox1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.ggTextBox2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.ggTextBox3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataValorCuota)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTitutlo
+            // lblTitulo
             // 
-            this.lblTitutlo.AutoSize = true;
-            this.lblTitutlo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lblTitutlo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitutlo.Location = new System.Drawing.Point(6, 5);
-            this.lblTitutlo.Name = "lblTitutlo";
-            this.lblTitutlo.Size = new System.Drawing.Size(172, 28);
-            this.lblTitutlo.TabIndex = 17;
-            this.lblTitutlo.Text = "Data Valor Cuota";
-            // 
-            // dateFinal
-            // 
-            this.dateFinal.Location = new System.Drawing.Point(276, 65);
-            this.dateFinal.Name = "dateFinal";
-            this.dateFinal.Size = new System.Drawing.Size(222, 20);
-            this.dateFinal.TabIndex = 23;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(6, 5);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(220, 28);
+            this.lblTitulo.TabIndex = 17;
+            this.lblTitulo.Text = "Calculo Tracking Error";
             // 
             // dateInicial
             // 
@@ -87,17 +81,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFechaInicial.TabIndex = 22;
             this.lblFechaInicial.Text = "Fecha Inicial:";
             // 
-            // lblFechaFinal
-            // 
-            this.lblFechaFinal.AutoSize = true;
-            this.lblFechaFinal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblFechaFinal.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaFinal.Location = new System.Drawing.Point(273, 47);
-            this.lblFechaFinal.Name = "lblFechaFinal";
-            this.lblFechaFinal.Size = new System.Drawing.Size(70, 15);
-            this.lblFechaFinal.TabIndex = 21;
-            this.lblFechaFinal.Text = "Fecha Final:";
-            // 
             // dgvDataValorCuota
             // 
             this.dgvDataValorCuota.AllowUserToAddRows = false;
@@ -108,14 +91,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.dgvDataValorCuota.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDataValorCuota.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDataValorCuota.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDataValorCuota.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataValorCuota.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDataValorCuota.ColumnHeadersHeight = 25;
             this.dgvDataValorCuota.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -130,12 +113,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.dgvDataValorCuota.Name = "dgvDataValorCuota";
             this.dgvDataValorCuota.ReadOnly = true;
             this.dgvDataValorCuota.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvDataValorCuota.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvDataValorCuota.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDataValorCuota.RowTemplate.Height = 25;
             this.dgvDataValorCuota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDataValorCuota.Size = new System.Drawing.Size(952, 335);
+            this.dgvDataValorCuota.Size = new System.Drawing.Size(952, 324);
             this.dgvDataValorCuota.TabIndex = 40;
             // 
             // Fecha
@@ -185,72 +168,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ValorCuota.Name = "ValorCuota";
             this.ValorCuota.ReadOnly = true;
             // 
-            // btnEliminarRegistro
-            // 
-            this.btnEliminarRegistro.BackColor = System.Drawing.Color.IndianRed;
-            this.btnEliminarRegistro.FlatAppearance.BorderSize = 0;
-            this.btnEliminarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEliminarRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarRegistro.IconChar = FontAwesome.Sharp.IconChar.Ban;
-            this.btnEliminarRegistro.IconColor = System.Drawing.Color.White;
-            this.btnEliminarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminarRegistro.IconSize = 32;
-            this.btnEliminarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarRegistro.Location = new System.Drawing.Point(800, 432);
-            this.btnEliminarRegistro.Name = "btnEliminarRegistro";
-            this.btnEliminarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEliminarRegistro.Size = new System.Drawing.Size(163, 38);
-            this.btnEliminarRegistro.TabIndex = 42;
-            this.btnEliminarRegistro.Text = "Eliminar registro";
-            this.btnEliminarRegistro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminarRegistro.UseVisualStyleBackColor = false;
-            this.btnEliminarRegistro.Click += new System.EventHandler(this.btnEliminarRegistro_Click);
-            // 
-            // btnActualizarRegistro
-            // 
-            this.btnActualizarRegistro.BackColor = System.Drawing.Color.Orange;
-            this.btnActualizarRegistro.FlatAppearance.BorderSize = 0;
-            this.btnActualizarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnActualizarRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarRegistro.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnActualizarRegistro.IconColor = System.Drawing.Color.White;
-            this.btnActualizarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnActualizarRegistro.IconSize = 32;
-            this.btnActualizarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarRegistro.Location = new System.Drawing.Point(631, 432);
-            this.btnActualizarRegistro.Name = "btnActualizarRegistro";
-            this.btnActualizarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnActualizarRegistro.Size = new System.Drawing.Size(163, 38);
-            this.btnActualizarRegistro.TabIndex = 41;
-            this.btnActualizarRegistro.Text = "Modificar registro";
-            this.btnActualizarRegistro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnActualizarRegistro.UseVisualStyleBackColor = false;
-            this.btnActualizarRegistro.Click += new System.EventHandler(this.btnActualizarRegistro_Click);
-            // 
-            // btnAgregarRegistros
-            // 
-            this.btnAgregarRegistros.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAgregarRegistros.FlatAppearance.BorderSize = 0;
-            this.btnAgregarRegistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarRegistros.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarRegistros.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarRegistros.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnAgregarRegistros.IconColor = System.Drawing.Color.White;
-            this.btnAgregarRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregarRegistros.IconSize = 32;
-            this.btnAgregarRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarRegistros.Location = new System.Drawing.Point(785, 47);
-            this.btnAgregarRegistros.Name = "btnAgregarRegistros";
-            this.btnAgregarRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAgregarRegistros.Size = new System.Drawing.Size(178, 38);
-            this.btnAgregarRegistros.TabIndex = 39;
-            this.btnAgregarRegistros.Text = "Agregar Registro";
-            this.btnAgregarRegistros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarRegistros.UseVisualStyleBackColor = false;
-            this.btnAgregarRegistros.Click += new System.EventHandler(this.btnAgregarRegistros_Click);
-            // 
             // btnConsultarRegistros
             // 
             this.btnConsultarRegistros.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -263,7 +180,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnConsultarRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConsultarRegistros.IconSize = 32;
             this.btnConsultarRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarRegistros.Location = new System.Drawing.Point(504, 47);
+            this.btnConsultarRegistros.Location = new System.Drawing.Point(239, 47);
             this.btnConsultarRegistros.Name = "btnConsultarRegistros";
             this.btnConsultarRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnConsultarRegistros.Size = new System.Drawing.Size(178, 38);
@@ -273,42 +190,130 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnConsultarRegistros.UseVisualStyleBackColor = false;
             this.btnConsultarRegistros.Click += new System.EventHandler(this.btnConsultarRegistros_Click);
             // 
-            // btnVerCalculoAlfa
+            // lblTE
             // 
-            this.btnVerCalculoAlfa.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnVerCalculoAlfa.FlatAppearance.BorderSize = 0;
-            this.btnVerCalculoAlfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerCalculoAlfa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnVerCalculoAlfa.ForeColor = System.Drawing.Color.White;
-            this.btnVerCalculoAlfa.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnVerCalculoAlfa.IconColor = System.Drawing.Color.White;
-            this.btnVerCalculoAlfa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVerCalculoAlfa.IconSize = 32;
-            this.btnVerCalculoAlfa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerCalculoAlfa.Location = new System.Drawing.Point(11, 432);
-            this.btnVerCalculoAlfa.Name = "btnVerCalculoAlfa";
-            this.btnVerCalculoAlfa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnVerCalculoAlfa.Size = new System.Drawing.Size(184, 38);
-            this.btnVerCalculoAlfa.TabIndex = 54;
-            this.btnVerCalculoAlfa.Text = "Ver Calculo Alpha";
-            this.btnVerCalculoAlfa.UseVisualStyleBackColor = false;
+            this.lblTE.AutoSize = true;
+            this.lblTE.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTE.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTE.Location = new System.Drawing.Point(34, 443);
+            this.lblTE.Name = "lblTE";
+            this.lblTE.Size = new System.Drawing.Size(148, 15);
+            this.lblTE.TabIndex = 41;
+            this.lblTE.Text = "Valores de Tracking Error:";
+            // 
+            // lblFondo_1
+            // 
+            this.lblFondo_1.AutoSize = true;
+            this.lblFondo_1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFondo_1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblFondo_1.Location = new System.Drawing.Point(318, 418);
+            this.lblFondo_1.Name = "lblFondo_1";
+            this.lblFondo_1.Size = new System.Drawing.Size(59, 15);
+            this.lblFondo_1.TabIndex = 42;
+            this.lblFondo_1.Text = "FONDO 1";
+            // 
+            // lblFondo_2
+            // 
+            this.lblFondo_2.AutoSize = true;
+            this.lblFondo_2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFondo_2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblFondo_2.Location = new System.Drawing.Point(511, 418);
+            this.lblFondo_2.Name = "lblFondo_2";
+            this.lblFondo_2.Size = new System.Drawing.Size(59, 15);
+            this.lblFondo_2.TabIndex = 43;
+            this.lblFondo_2.Text = "FONDO 2";
+            // 
+            // lblFondo_3
+            // 
+            this.lblFondo_3.AutoSize = true;
+            this.lblFondo_3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFondo_3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblFondo_3.Location = new System.Drawing.Point(690, 418);
+            this.lblFondo_3.Name = "lblFondo_3";
+            this.lblFondo_3.Size = new System.Drawing.Size(59, 15);
+            this.lblFondo_3.TabIndex = 44;
+            this.lblFondo_3.Text = "FONDO 3";
+            // 
+            // ggTextBox1
+            // 
+            this.ggTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.ggTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ggTextBox1.BorderFocusColor = System.Drawing.Color.DodgerBlue;
+            this.ggTextBox1.BorderSize = 2;
+            this.ggTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.ggTextBox1.ForeColor = System.Drawing.Color.DimGray;
+            this.ggTextBox1.IsFocused = false;
+            this.ggTextBox1.Location = new System.Drawing.Point(283, 436);
+            this.ggTextBox1.MaxLength = 32767;
+            this.ggTextBox1.Multiline = false;
+            this.ggTextBox1.Name = "ggTextBox1";
+            this.ggTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.ggTextBox1.PasswordChar = false;
+            this.ggTextBox1.Size = new System.Drawing.Size(125, 32);
+            this.ggTextBox1.TabIndex = 45;
+            this.ggTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ggTextBox1.Texts = "";
+            this.ggTextBox1.UnderlinedStyle = false;
+            // 
+            // ggTextBox2
+            // 
+            this.ggTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.ggTextBox2.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ggTextBox2.BorderFocusColor = System.Drawing.Color.DodgerBlue;
+            this.ggTextBox2.BorderSize = 2;
+            this.ggTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.ggTextBox2.ForeColor = System.Drawing.Color.DimGray;
+            this.ggTextBox2.IsFocused = false;
+            this.ggTextBox2.Location = new System.Drawing.Point(475, 436);
+            this.ggTextBox2.MaxLength = 32767;
+            this.ggTextBox2.Multiline = false;
+            this.ggTextBox2.Name = "ggTextBox2";
+            this.ggTextBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.ggTextBox2.PasswordChar = false;
+            this.ggTextBox2.Size = new System.Drawing.Size(125, 32);
+            this.ggTextBox2.TabIndex = 46;
+            this.ggTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ggTextBox2.Texts = "";
+            this.ggTextBox2.UnderlinedStyle = false;
+            // 
+            // ggTextBox3
+            // 
+            this.ggTextBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.ggTextBox3.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ggTextBox3.BorderFocusColor = System.Drawing.Color.DodgerBlue;
+            this.ggTextBox3.BorderSize = 2;
+            this.ggTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.ggTextBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.ggTextBox3.IsFocused = false;
+            this.ggTextBox3.Location = new System.Drawing.Point(657, 436);
+            this.ggTextBox3.MaxLength = 32767;
+            this.ggTextBox3.Multiline = false;
+            this.ggTextBox3.Name = "ggTextBox3";
+            this.ggTextBox3.Padding = new System.Windows.Forms.Padding(7);
+            this.ggTextBox3.PasswordChar = false;
+            this.ggTextBox3.Size = new System.Drawing.Size(125, 32);
+            this.ggTextBox3.TabIndex = 47;
+            this.ggTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ggTextBox3.Texts = "";
+            this.ggTextBox3.UnderlinedStyle = false;
             // 
             // frmDataValorCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 478);
-            this.Controls.Add(this.btnVerCalculoAlfa);
-            this.Controls.Add(this.btnEliminarRegistro);
-            this.Controls.Add(this.btnActualizarRegistro);
+            this.Controls.Add(this.ggTextBox3);
+            this.Controls.Add(this.ggTextBox2);
+            this.Controls.Add(this.ggTextBox1);
+            this.Controls.Add(this.lblFondo_3);
+            this.Controls.Add(this.lblFondo_2);
+            this.Controls.Add(this.lblFondo_1);
+            this.Controls.Add(this.lblTE);
             this.Controls.Add(this.dgvDataValorCuota);
-            this.Controls.Add(this.btnAgregarRegistros);
             this.Controls.Add(this.btnConsultarRegistros);
-            this.Controls.Add(this.dateFinal);
             this.Controls.Add(this.dateInicial);
             this.Controls.Add(this.lblFechaInicial);
-            this.Controls.Add(this.lblFechaFinal);
-            this.Controls.Add(this.lblTitutlo);
+            this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDataValorCuota";
             this.Text = "frmDataValorCuota";
@@ -320,13 +325,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitutlo;
-        private System.Windows.Forms.DateTimePicker dateFinal;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DateTimePicker dateInicial;
         private System.Windows.Forms.Label lblFechaInicial;
-        private System.Windows.Forms.Label lblFechaFinal;
         private FontAwesome.Sharp.IconButton btnConsultarRegistros;
-        private FontAwesome.Sharp.IconButton btnAgregarRegistros;
         private System.Windows.Forms.DataGridView dgvDataValorCuota;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn AFP;
@@ -334,8 +336,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private System.Windows.Forms.DataGridViewTextBoxColumn Patrimonio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cuotas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorCuota;
-        private FontAwesome.Sharp.IconButton btnActualizarRegistro;
-        private FontAwesome.Sharp.IconButton btnEliminarRegistro;
-        private FontAwesome.Sharp.IconButton btnVerCalculoAlfa;
+        private System.Windows.Forms.Label lblTE;
+        private System.Windows.Forms.Label lblFondo_1;
+        private System.Windows.Forms.Label lblFondo_2;
+        private System.Windows.Forms.Label lblFondo_3;
+        private Recursos.UserControls.GGTextBox ggTextBox1;
+        private Recursos.UserControls.GGTextBox ggTextBox2;
+        private Recursos.UserControls.GGTextBox ggTextBox3;
     }
 }

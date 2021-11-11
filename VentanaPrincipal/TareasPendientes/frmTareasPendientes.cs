@@ -27,13 +27,17 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
             _daoTareasDiarias = new TareasDiariasWS.TareasDiariasWSClient();
             _daoPersona = new LoginWS.LoginWSClient();
+
             persona = _daoPersona.listarPorCodExacto(Int32.Parse(persona.codigo))[0];
             user = persona;
+
             lblNombre.Text = "Gestión de tareas y pendientes de " + user.nombre;
             lblNombre.ForeColor = Color.DarkSalmon;
+            
             ventanaPadre = ventana;
-            ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+            ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);            
             accionAdmin = true;
+            
             Global.pintarDGV(ref dgvTareasPendientes, Color.DarkSalmon);
 
             if (persona.itinerario.listaTarea != null)
@@ -43,6 +47,12 @@ namespace GGNoTeam_V5.VentanaPrincipal
             else
             {
                 dgvTareasPendientes.DataSource = null;
+            }
+
+            if(user.tipoUsuario == 2)
+            {
+                btnEliminar.Visible = false;
+                btnAgregarTarea.Visible = false;
             }
         }
 

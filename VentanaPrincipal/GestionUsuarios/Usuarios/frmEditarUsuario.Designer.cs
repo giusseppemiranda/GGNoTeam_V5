@@ -180,7 +180,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxID.MaxLength = 32767;
             this.boxID.Multiline = false;
             this.boxID.Name = "boxID";
-            this.boxID.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxID.Padding = new System.Windows.Forms.Padding(6);
             this.boxID.PasswordChar = false;
             this.boxID.Size = new System.Drawing.Size(214, 30);
             this.boxID.TabIndex = 26;
@@ -204,7 +204,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxCodigo.MaxLength = 32767;
             this.boxCodigo.Multiline = false;
             this.boxCodigo.Name = "boxCodigo";
-            this.boxCodigo.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxCodigo.Padding = new System.Windows.Forms.Padding(6);
             this.boxCodigo.PasswordChar = false;
             this.boxCodigo.Size = new System.Drawing.Size(214, 30);
             this.boxCodigo.TabIndex = 27;
@@ -226,7 +226,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxNombres.MaxLength = 32767;
             this.boxNombres.Multiline = false;
             this.boxNombres.Name = "boxNombres";
-            this.boxNombres.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxNombres.Padding = new System.Windows.Forms.Padding(6);
             this.boxNombres.PasswordChar = false;
             this.boxNombres.Size = new System.Drawing.Size(214, 30);
             this.boxNombres.TabIndex = 28;
@@ -248,7 +248,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxApellidos.MaxLength = 32767;
             this.boxApellidos.Multiline = false;
             this.boxApellidos.Name = "boxApellidos";
-            this.boxApellidos.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxApellidos.Padding = new System.Windows.Forms.Padding(6);
             this.boxApellidos.PasswordChar = false;
             this.boxApellidos.Size = new System.Drawing.Size(214, 30);
             this.boxApellidos.TabIndex = 29;
@@ -270,7 +270,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxCorreo.MaxLength = 32767;
             this.boxCorreo.Multiline = false;
             this.boxCorreo.Name = "boxCorreo";
-            this.boxCorreo.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxCorreo.Padding = new System.Windows.Forms.Padding(6);
             this.boxCorreo.PasswordChar = false;
             this.boxCorreo.Size = new System.Drawing.Size(214, 30);
             this.boxCorreo.TabIndex = 30;
@@ -292,7 +292,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxItinerario.MaxLength = 32767;
             this.boxItinerario.Multiline = false;
             this.boxItinerario.Name = "boxItinerario";
-            this.boxItinerario.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxItinerario.Padding = new System.Windows.Forms.Padding(6);
             this.boxItinerario.PasswordChar = false;
             this.boxItinerario.Size = new System.Drawing.Size(214, 30);
             this.boxItinerario.TabIndex = 31;
@@ -314,7 +314,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxContraseña.MaxLength = 32767;
             this.boxContraseña.Multiline = false;
             this.boxContraseña.Name = "boxContraseña";
-            this.boxContraseña.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxContraseña.Padding = new System.Windows.Forms.Padding(6);
             this.boxContraseña.PasswordChar = false;
             this.boxContraseña.Size = new System.Drawing.Size(214, 30);
             this.boxContraseña.TabIndex = 33;
@@ -336,7 +336,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxCodigoValidacion.MaxLength = 32767;
             this.boxCodigoValidacion.Multiline = false;
             this.boxCodigoValidacion.Name = "boxCodigoValidacion";
-            this.boxCodigoValidacion.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxCodigoValidacion.Padding = new System.Windows.Forms.Padding(6);
             this.boxCodigoValidacion.PasswordChar = false;
             this.boxCodigoValidacion.Size = new System.Drawing.Size(214, 30);
             this.boxCodigoValidacion.TabIndex = 34;
@@ -358,7 +358,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxRol.MaxLength = 32767;
             this.boxRol.Multiline = false;
             this.boxRol.Name = "boxRol";
-            this.boxRol.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxRol.Padding = new System.Windows.Forms.Padding(6);
             this.boxRol.PasswordChar = false;
             this.boxRol.Size = new System.Drawing.Size(214, 30);
             this.boxRol.TabIndex = 35;
@@ -382,11 +382,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.comboBoxTipoUsuario.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxTipoUsuario.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxTipoUsuario.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxTipoUsuario.Location = new System.Drawing.Point(189, 279);
+            this.comboBoxTipoUsuario.Location = new System.Drawing.Point(189, 281);
             this.comboBoxTipoUsuario.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxTipoUsuario.Name = "comboBoxTipoUsuario";
             this.comboBoxTipoUsuario.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBoxTipoUsuario.Size = new System.Drawing.Size(214, 28);
+            this.comboBoxTipoUsuario.Size = new System.Drawing.Size(214, 31);
             this.comboBoxTipoUsuario.TabIndex = 36;
             this.comboBoxTipoUsuario.Texts = "";
             // 

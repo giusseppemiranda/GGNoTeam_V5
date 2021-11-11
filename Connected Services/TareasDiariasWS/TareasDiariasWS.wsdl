@@ -11,11 +11,11 @@
   <message name="eliminarTareaResponse">
     <part name="parameters" element="tns:eliminarTareaResponse" />
   </message>
-  <message name="listarTareas">
-    <part name="parameters" element="tns:listarTareas" />
+  <message name="insertarTarea">
+    <part name="parameters" element="tns:insertarTarea" />
   </message>
-  <message name="listarTareasResponse">
-    <part name="parameters" element="tns:listarTareasResponse" />
+  <message name="insertarTareaResponse">
+    <part name="parameters" element="tns:insertarTareaResponse" />
   </message>
   <message name="modificarTarea">
     <part name="parameters" element="tns:modificarTarea" />
@@ -23,28 +23,28 @@
   <message name="modificarTareaResponse">
     <part name="parameters" element="tns:modificarTareaResponse" />
   </message>
-  <message name="insertarTarea">
-    <part name="parameters" element="tns:insertarTarea" />
+  <message name="listarTareas">
+    <part name="parameters" element="tns:listarTareas" />
   </message>
-  <message name="insertarTareaResponse">
-    <part name="parameters" element="tns:insertarTareaResponse" />
+  <message name="listarTareasResponse">
+    <part name="parameters" element="tns:listarTareasResponse" />
   </message>
   <portType name="TareasDiariasWS">
     <operation name="eliminarTarea">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaRequest" message="tns:eliminarTarea" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaResponse" message="tns:eliminarTareaResponse" />
     </operation>
-    <operation name="listarTareas">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasRequest" message="tns:listarTareas" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasResponse" message="tns:listarTareasResponse" />
+    <operation name="insertarTarea">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaRequest" message="tns:insertarTarea" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaResponse" message="tns:insertarTareaResponse" />
     </operation>
     <operation name="modificarTarea">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/modificarTareaRequest" message="tns:modificarTarea" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/modificarTareaResponse" message="tns:modificarTareaResponse" />
     </operation>
-    <operation name="insertarTarea">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaRequest" message="tns:insertarTarea" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaResponse" message="tns:insertarTareaResponse" />
+    <operation name="listarTareas">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasRequest" message="tns:listarTareas" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasResponse" message="tns:listarTareasResponse" />
     </operation>
   </portType>
   <binding name="TareasDiariasWSPortBinding" type="tns:TareasDiariasWS">
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTareas">
+    <operation name="insertarTarea">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarTarea">
+    <operation name="listarTareas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -1,4 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTrackingError;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros;
 using System;
 using System.Collections.Generic;
@@ -91,7 +92,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private void btnVerCalculoTE_Click(object sender, EventArgs e)
         {
-
+            ventanaPadre.abrirFormulario(new frmCalculoTE(ventanaPrincipal));
         }
     }
 }

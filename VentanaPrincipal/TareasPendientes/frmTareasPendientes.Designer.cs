@@ -37,11 +37,11 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Periodicidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnModificarTarea = new FontAwesome.Sharp.IconButton();
             this.btnAgregarTarea = new FontAwesome.Sharp.IconButton();
-            this.lblNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,6 +124,17 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblNombre.Location = new System.Drawing.Point(30, 16);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(235, 20);
+            this.lblNombre.TabIndex = 31;
+            this.lblNombre.Text = "Gestión de tareas de -USUARIO-";
+            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.IndianRed;
@@ -182,7 +193,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnModificarTarea.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarTarea.IconSize = 32;
             this.btnModificarTarea.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnModificarTarea.Location = new System.Drawing.Point(682, 487);
+            this.btnModificarTarea.Location = new System.Drawing.Point(793, 487);
             this.btnModificarTarea.Name = "btnModificarTarea";
             this.btnModificarTarea.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnModificarTarea.Size = new System.Drawing.Size(158, 52);
@@ -205,7 +216,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnAgregarTarea.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarTarea.IconSize = 32;
             this.btnAgregarTarea.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregarTarea.Location = new System.Drawing.Point(846, 487);
+            this.btnAgregarTarea.Location = new System.Drawing.Point(682, 487);
             this.btnAgregarTarea.Name = "btnAgregarTarea";
             this.btnAgregarTarea.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnAgregarTarea.Size = new System.Drawing.Size(105, 52);
@@ -215,17 +226,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnAgregarTarea.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAgregarTarea.UseVisualStyleBackColor = false;
             this.btnAgregarTarea.Click += new System.EventHandler(this.btnAgregarTarea_Click);
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblNombre.Location = new System.Drawing.Point(30, 16);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(235, 20);
-            this.lblNombre.TabIndex = 31;
-            this.lblNombre.Text = "Gestión de tareas de -USUARIO-";
             // 
             // frmTareasPendientes
             // 
