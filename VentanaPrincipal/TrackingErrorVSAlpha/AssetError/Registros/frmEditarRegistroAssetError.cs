@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GGNoTeam_V5.Recursos.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,43 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
 {
     public partial class frmEditarRegistroAssetError : Form
     {
+        private TrackingErrorWS.TrackingErrorWSClient _daoTE;
         public frmEditarRegistroAssetError()
         {
             InitializeComponent();
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
+            cambiarTema();
+        }
+
+        
+
+        public void cambiarTema()
+        {
+            if (Global.TemaOscuro)
+            {
+                activarTemaClaro();
+            }
+            else
+            {
+                activarTemaOscuro();
+            }
+        }
+
+        private void activarTemaOscuro()
+        {
+            this.BackColor = Global.FrmOscuro;
+
+        }
+
+        private void activarTemaClaro()
+        {
+            this.BackColor = Global.FrmClaro;
+
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

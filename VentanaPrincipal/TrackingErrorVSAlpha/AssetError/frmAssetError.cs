@@ -29,12 +29,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             //dgvAssetError.AutoGenerateColumns = false;
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             cambiarTema();
-            listarTodo();            
+                 
         }
 
         private void listarTodo()
         {
-            listaAsset = _daoTE.listarTodasAssetError();
+            string fini = dateInicial.Value.ToString("yyyy-MM-dd");
+            string ffin = dateFinal.Value.ToString("yyyy-MM-dd");
+            listaAsset = _daoTE.listarPorFechaSinProducto(fini, ffin);
+            //listaAsset = _daoTE.listarTodasAssetError();
             colocarEnDgv();
         }
 
@@ -76,7 +79,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
-
+            listarTodo();
         }
 
         private void btnAgregarRegistros_Click(object sender, EventArgs e)
