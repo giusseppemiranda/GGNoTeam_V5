@@ -29,11 +29,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         /// </summary>
         private void InitializeComponent()
         {
-            this.boxCodigo = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.ggTextBox1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ggTextBox2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ggTextBox3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,29 +41,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.label5 = new System.Windows.Forms.Label();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.SuspendLayout();
-            // 
-            // boxCodigo
-            // 
-            this.boxCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.boxCodigo.BackColor = System.Drawing.SystemColors.Window;
-            this.boxCodigo.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxCodigo.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxCodigo.BorderSize = 2;
-            this.boxCodigo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxCodigo.ForeColor = System.Drawing.Color.DimGray;
-            this.boxCodigo.IsFocused = false;
-            this.boxCodigo.Location = new System.Drawing.Point(190, 56);
-            this.boxCodigo.MaxLength = 32767;
-            this.boxCodigo.Multiline = false;
-            this.boxCodigo.Name = "boxCodigo";
-            this.boxCodigo.Padding = new System.Windows.Forms.Padding(6);
-            this.boxCodigo.PasswordChar = false;
-            this.boxCodigo.Size = new System.Drawing.Size(214, 30);
-            this.boxCodigo.TabIndex = 29;
-            this.boxCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxCodigo.Texts = "";
-            this.boxCodigo.UnderlinedStyle = true;
             // 
             // lblCodigo
             // 
@@ -110,28 +88,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.label1.Size = new System.Drawing.Size(31, 15);
             this.label1.TabIndex = 30;
             this.label1.Text = "AFP:";
-            // 
-            // ggTextBox2
-            // 
-            this.ggTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ggTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox2.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox2.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox2.BorderSize = 2;
-            this.ggTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox2.IsFocused = false;
-            this.ggTextBox2.Location = new System.Drawing.Point(190, 173);
-            this.ggTextBox2.MaxLength = 32767;
-            this.ggTextBox2.Multiline = false;
-            this.ggTextBox2.Name = "ggTextBox2";
-            this.ggTextBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox2.PasswordChar = false;
-            this.ggTextBox2.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox2.TabIndex = 33;
-            this.ggTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox2.Texts = "";
-            this.ggTextBox2.UnderlinedStyle = true;
             // 
             // label2
             // 
@@ -282,11 +238,39 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.btnSiguiente.TextColor = System.Drawing.Color.White;
             this.btnSiguiente.UseVisualStyleBackColor = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(190, 63);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(214, 20);
+            this.dateTimePicker1.TabIndex = 42;
+            // 
+            // comboFondo
+            // 
+            this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.BorderSize = 1;
+            this.comboFondo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboFondo.ForeColor = System.Drawing.Color.DimGray;
+            this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboFondo.Location = new System.Drawing.Point(190, 170);
+            this.comboFondo.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboFondo.Name = "comboFondo";
+            this.comboFondo.Padding = new System.Windows.Forms.Padding(1);
+            this.comboFondo.Size = new System.Drawing.Size(214, 30);
+            this.comboFondo.TabIndex = 43;
+            this.comboFondo.Texts = "";
+            // 
             // frmEditarRegistroDataValorCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 506);
+            this.Controls.Add(this.comboFondo);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.ggTextBox5);
@@ -295,11 +279,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ggTextBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.ggTextBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ggTextBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.boxCodigo);
             this.Controls.Add(this.lblCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditarRegistroDataValorCuota";
@@ -311,12 +293,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         }
 
         #endregion
-
-        private Recursos.UserControls.GGTextBox boxCodigo;
         private System.Windows.Forms.Label lblCodigo;
         private Recursos.UserControls.GGTextBox ggTextBox1;
         private System.Windows.Forms.Label label1;
-        private Recursos.UserControls.GGTextBox ggTextBox2;
         private System.Windows.Forms.Label label2;
         private Recursos.UserControls.GGTextBox ggTextBox3;
         private System.Windows.Forms.Label label3;
@@ -326,5 +305,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         private System.Windows.Forms.Label label5;
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Recursos.UserControls.GGComboBox comboFondo;
     }
 }

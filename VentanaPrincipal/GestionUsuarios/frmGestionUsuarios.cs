@@ -191,7 +191,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void btnVerTareas_Click(object sender, EventArgs e)
         {
-            if (dgvPersonas.Rows != null)
+            if (dgvPersonas.CurrentRow != null)
             {
                 frmTareasPendientes tareas = new frmTareasPendientes(lista[dgvPersonas.CurrentRow.Index]);
                 tareas.ShowDialog();

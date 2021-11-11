@@ -276,7 +276,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnVerCalculoTE.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVerCalculoTE.IconSize = 32;
             this.btnVerCalculoTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerCalculoTE.Location = new System.Drawing.Point(12, 432);
+            this.btnVerCalculoTE.Location = new System.Drawing.Point(11, 432);
             this.btnVerCalculoTE.Name = "btnVerCalculoTE";
             this.btnVerCalculoTE.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnVerCalculoTE.Size = new System.Drawing.Size(184, 38);
@@ -301,7 +301,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.Controls.Add(this.lblFechaInicial);
             this.Controls.Add(this.lblFechaFinal);
             this.Controls.Add(this.lblTitulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;            
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

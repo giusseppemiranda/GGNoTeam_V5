@@ -29,6 +29,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
             _daoPersona = new LoginWS.LoginWSClient();
             persona = _daoPersona.listarPorCodExacto(Int32.Parse(persona.codigo))[0];
             user = persona;
+            lblNombre.Text = "Gestión de tareas y pendientes de " + user.nombre;
+            lblNombre.ForeColor = Color.DarkSalmon;
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             accionAdmin = true;
@@ -51,8 +53,9 @@ namespace GGNoTeam_V5.VentanaPrincipal
             btnSalir.Visible = true;
             colocarEnDGV(persona.itinerario.listaTarea);
             user = persona;
+            lblNombre.Text = "Gestión de tareas y pendientes de " + user.nombre + " " + user.apellidos;
+            lblNombre.ForeColor = Color.DarkSalmon;
             Global.pintarDGV(ref dgvTareasPendientes, Color.DarkSalmon);
-
             if (!Global.TemaOscuro)
             {
                 this.BackColor = Global.FrmOscuro_2;

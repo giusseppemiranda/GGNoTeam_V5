@@ -14,12 +14,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 {
     public partial class frmDataValorCuota : Form
     {
-        private frmPrincipal ventanaPadre = null;
-        public frmDataValorCuota(frmPrincipal ventana)
+        private frmPrincipal ventanaPrincipal = null;
+        private frmTEvsAlpha ventanaPadre = null;
+        public frmDataValorCuota(frmPrincipal ventana,frmTEvsAlpha ventana_2)
         {
             InitializeComponent();
-            ventanaPadre = ventana;
-            ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+            ventanaPrincipal = ventana;
+            ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+            ventanaPadre = ventana_2;
             iniciarTema();
         }
 

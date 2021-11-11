@@ -1,4 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +14,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 {
     public partial class frmAssetError : Form
     {
+        private frmTEvsAlpha ventanaPadre = null;
+        private frmPrincipal ventanaPrincipal = null;
 
-        private frmPrincipal ventanaPadre = null;
-        public frmAssetError(frmPrincipal ventana)
+        public frmAssetError(frmPrincipal ventana, frmTEvsAlpha ventana_2)
         {
             InitializeComponent();
-            ventanaPadre = ventana;
-            ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+            ventanaPrincipal = ventana;
+            ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+            ventanaPadre = ventana_2;
             iniciarTema();
         }
 
@@ -66,12 +69,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private void btnAgregarRegistros_Click(object sender, EventArgs e)
         {
-
+            frmEditarRegistroAssetError ventanaAgregar = new frmEditarRegistroAssetError();
+            ventanaAgregar.ShowDialog();
         }
 
         private void btnActualizarRegistro_Click(object sender, EventArgs e)
         {
-
+            frmEditarRegistroAssetError ventanaModificar = new frmEditarRegistroAssetError();
+            ventanaModificar.ShowDialog();
         }
 
         private void btnEliminarRegistro_Click(object sender, EventArgs e)
