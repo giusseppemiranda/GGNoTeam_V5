@@ -57,6 +57,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             data.activo = 1;
             data.cuotas = Convert.ToDouble(boxCuota.Texts);
             data.fecha = dateTimePicker1.Value;
+            data.fechaSpecified = true;
             data.patrimonio = Convert.ToDouble(boxPatrimonio.Texts);
             data.valorCuota = Convert.ToDouble(boxValorCuota.Texts);
             data.ytoD = 0.2;
