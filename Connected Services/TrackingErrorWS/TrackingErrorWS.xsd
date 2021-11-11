@@ -4,8 +4,14 @@
   <xs:element name="ListarIntegraPatrimonioYtoDPorFechaDataValorCuotaResponse" type="tns:ListarIntegraPatrimonioYtoDPorFechaDataValorCuotaResponse" />
   <xs:element name="ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuota" type="tns:ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuota" />
   <xs:element name="ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuotaResponse" type="tns:ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuotaResponse" />
-  <xs:element name="ListarPorFechaDataValorCuota" type="tns:ListarPorFechaDataValorCuota" />
-  <xs:element name="ListarPorFechaDataValorCuotaResponse" type="tns:ListarPorFechaDataValorCuotaResponse" />
+  <xs:element name="ListarPorFechaConYtoDDataValorCuota" type="tns:ListarPorFechaConYtoDDataValorCuota" />
+  <xs:element name="ListarPorFechaConYtoDDataValorCuotaResponse" type="tns:ListarPorFechaConYtoDDataValorCuotaResponse" />
+  <xs:element name="ListarPorFechaSinProductoFondo1" type="tns:ListarPorFechaSinProductoFondo1" />
+  <xs:element name="ListarPorFechaSinProductoFondo1Response" type="tns:ListarPorFechaSinProductoFondo1Response" />
+  <xs:element name="ListarPorFechaSinProductoFondo2" type="tns:ListarPorFechaSinProductoFondo2" />
+  <xs:element name="ListarPorFechaSinProductoFondo2Response" type="tns:ListarPorFechaSinProductoFondo2Response" />
+  <xs:element name="ListarPorFechaSinProductoFondo3" type="tns:ListarPorFechaSinProductoFondo3" />
+  <xs:element name="ListarPorFechaSinProductoFondo3Response" type="tns:ListarPorFechaSinProductoFondo3Response" />
   <xs:element name="ListarPorFechaSinYtoDDataValorCuota" type="tns:ListarPorFechaSinYtoDDataValorCuota" />
   <xs:element name="ListarPorFechaSinYtoDDataValorCuotaResponse" type="tns:ListarPorFechaSinYtoDDataValorCuotaResponse" />
   <xs:element name="ListarTodasAfp" type="tns:ListarTodasAfp" />
@@ -125,13 +131,13 @@
       <xs:element name="ytoD" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ListarPorFechaDataValorCuota">
+  <xs:complexType name="ListarPorFechaConYtoDDataValorCuota">
     <xs:sequence>
       <xs:element minOccurs="0" name="fecha" type="xs:string" />
       <xs:element name="idFondo" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ListarPorFechaDataValorCuotaResponse">
+  <xs:complexType name="ListarPorFechaConYtoDDataValorCuotaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
     </xs:sequence>
@@ -158,6 +164,16 @@
       <xs:element name="wgtP" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarPorFechaConProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorFechaConProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:assetError" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarDataValorCuota">
     <xs:sequence>
       <xs:element minOccurs="0" name="dataVC" type="tns:dataValorCuota" />
@@ -167,16 +183,6 @@
   <xs:complexType name="insertarDataValorCuotaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarPorFechaConProducto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="fecha" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarPorFechaConProductoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:assetError" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListarPorFechaSinYtoDDataValorCuota">
@@ -210,6 +216,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarAlpha">
+    <xs:sequence>
+      <xs:element name="idAlpha" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAlphaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ListarIntegraPatrimonioYtoDPorFechaDataValorCuota">
     <xs:sequence>
       <xs:element minOccurs="0" name="fecha" type="xs:string" />
@@ -219,16 +235,6 @@
   <xs:complexType name="ListarIntegraPatrimonioYtoDPorFechaDataValorCuotaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarAlpha">
-    <xs:sequence>
-      <xs:element name="idAlpha" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarAlphaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarTrackingError">
@@ -313,6 +319,17 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alpha" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ListarPorFechaSinProductoFondo1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaSinProductoFondo1Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:assetError" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarFondo">
     <xs:sequence>
       <xs:element minOccurs="0" name="fondo" type="tns:fondo" />
@@ -323,6 +340,28 @@
   <xs:complexType name="insertarFondoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaSinProductoFondo2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaSinProductoFondo2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:assetError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaSinProductoFondo3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaSinProductoFondo3Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:assetError" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListarTodasAfp">
@@ -343,6 +382,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ListarTodosTrackingError">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarTodosTrackingErrorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:trackingError" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarAssetError">
     <xs:sequence>
       <xs:element minOccurs="0" name="asset" type="tns:assetError" />
@@ -352,14 +399,6 @@
   <xs:complexType name="modificarAssetErrorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ListarTodosTrackingError">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="ListarTodosTrackingErrorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:trackingError" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarAlpha">

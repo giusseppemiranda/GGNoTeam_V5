@@ -464,7 +464,16 @@
     <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarPorFechaConProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarPorFechaDataValorCuotaResponse.datasource">
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarPorFechaConYtoDDataValorCuotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarPorFechaSinProductoFondo1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarPorFechaSinProductoFondo2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarPorFechaSinProductoFondo3Response.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarPorFechaSinProductoResponse.datasource">

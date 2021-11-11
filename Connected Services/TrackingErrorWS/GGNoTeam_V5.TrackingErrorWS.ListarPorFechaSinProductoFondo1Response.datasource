@@ -5,6 +5,6 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<GenericObjectDataSource DisplayName="ListarPorFechaDataValorCuotaResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>GGNoTeam_V5.TrackingErrorWS.ListarPorFechaDataValorCuotaResponse, Connected Services.TrackingErrorWS.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+<GenericObjectDataSource DisplayName="ListarPorFechaSinProductoFondo1Response" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>GGNoTeam_V5.TrackingErrorWS.ListarPorFechaSinProductoFondo1Response, Connected Services.TrackingErrorWS.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

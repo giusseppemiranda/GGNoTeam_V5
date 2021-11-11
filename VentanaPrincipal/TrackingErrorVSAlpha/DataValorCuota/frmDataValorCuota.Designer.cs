@@ -220,6 +220,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnAgregarRegistros.Text = "Agregar Registro";
             this.btnAgregarRegistros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarRegistros.UseVisualStyleBackColor = false;
+            this.btnAgregarRegistros.Click += new System.EventHandler(this.btnAgregarRegistros_Click);
             // 
             // btnConsultarRegistros
             // 

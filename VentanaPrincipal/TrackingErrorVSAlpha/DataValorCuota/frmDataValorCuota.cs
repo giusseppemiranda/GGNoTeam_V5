@@ -1,4 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Registros;
 using System.Windows.Forms;
 
 namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
@@ -6,12 +7,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
     public partial class frmDataValorCuota : Form
     {
         private frmPrincipal ventanaPadre = null;
+
         public frmDataValorCuota(frmPrincipal ventana)
         {
             InitializeComponent();
             cambiarTema();
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+            
         }
 
         public void cambiarTema()
@@ -36,6 +39,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         {
             this.BackColor = Global.FrmClaro;
 
+        }
+
+        private void btnAgregarRegistros_Click(object sender, System.EventArgs e)
+        {
+            frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota();
+            ventanaAgregar.ShowDialog();
         }
     }
 }

@@ -25,15 +25,6 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarEmisorResponse> modificarEmisorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarEmisorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse insertarEmisor(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse> insertarEmisorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarOriginadorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarOriginadorResponse" +
             "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -43,6 +34,15 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarOriginadorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarOriginadorResponse" +
             "")]
         System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarOriginadorResponse> insertarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarOriginadorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse insertarEmisor(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse> insertarEmisorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarEmisoresRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarEmisoresResponse")]
@@ -67,15 +67,17 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarInstrumentoXcodigoOriginadorResponse> listarInstrumentoXcodigoOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarInstrumentoXcodigoOriginadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorResponse" +
-            "")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRequest" +
+            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRespons" +
+            "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse eliminarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest request);
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse modificarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorResponse" +
-            "")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse> eliminarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRequest" +
+            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRespons" +
+            "e")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse> modificarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarTodosLosOriginadores" +
@@ -104,17 +106,17 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoResponse> buscarUnOriginadorPorCodigoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarInstrumentoRequest" +
-            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarInstrumentoRespons" +
-            "e")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoReques" +
+            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoRespon" +
+            "se")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse insertarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest request);
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse modificarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarInstrumentoRequest" +
-            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarInstrumentoRespons" +
-            "e")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse> insertarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoReques" +
+            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoRespon" +
+            "se")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse> modificarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarInstrumentoRequest" +
@@ -130,30 +132,28 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarInstrumentoResponse> eliminarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarInstrumentoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRequest" +
-            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRespons" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarInstrumentoRequest" +
+            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarInstrumentoRespons" +
             "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse modificarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest request);
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse insertarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRequest" +
-            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRespons" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarInstrumentoRequest" +
+            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarInstrumentoRespons" +
             "e")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse> modificarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse> insertarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoReques" +
-            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoRespon" +
-            "se")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorResponse" +
+            "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse modificarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest request);
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse eliminarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoReques" +
-            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoRespon" +
-            "se")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse> modificarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorResponse" +
+            "")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse> eliminarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest request);
     }
     
     /// <remarks/>
@@ -750,42 +750,6 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmisor", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarEmisorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.emisor emisor;
-        
-        public insertarEmisorRequest() {
-        }
-        
-        public insertarEmisorRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.emisor emisor) {
-            this.emisor = emisor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmisorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarEmisorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarEmisorResponse() {
-        }
-        
-        public insertarEmisorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOriginador", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
     public partial class insertarOriginadorRequest {
         
@@ -815,6 +779,42 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         }
         
         public insertarOriginadorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmisor", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarEmisorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.emisor emisor;
+        
+        public insertarEmisorRequest() {
+        }
+        
+        public insertarEmisorRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.emisor emisor) {
+            this.emisor = emisor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmisorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarEmisorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarEmisorResponse() {
+        }
+        
+        public insertarEmisorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -886,35 +886,35 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOriginador", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarOriginadorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOriginador", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarOriginadorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOriginador;
+        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador Originador;
         
-        public eliminarOriginadorRequest() {
+        public modificarOriginadorRequest() {
         }
         
-        public eliminarOriginadorRequest(int idOriginador) {
-            this.idOriginador = idOriginador;
+        public modificarOriginadorRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador Originador) {
+            this.Originador = Originador;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOriginadorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarOriginadorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOriginadorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarOriginadorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarOriginadorResponse() {
+        public modificarOriginadorResponse() {
         }
         
-        public eliminarOriginadorResponse(int @return) {
+        public modificarOriginadorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -986,8 +986,8 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstrumento", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarInstrumentoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInstrumento", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarInstrumentoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -997,10 +997,10 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int codigoOriginador;
         
-        public insertarInstrumentoRequest() {
+        public modificarInstrumentoRequest() {
         }
         
-        public insertarInstrumentoRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+        public modificarInstrumentoRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
             this.instrumento = instrumento;
             this.codigoOriginador = codigoOriginador;
         }
@@ -1009,17 +1009,17 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstrumentoResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarInstrumentoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInstrumentoResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarInstrumentoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarInstrumentoResponse() {
+        public modificarInstrumentoResponse() {
         }
         
-        public insertarInstrumentoResponse(int @return) {
+        public modificarInstrumentoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1063,44 +1063,8 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOriginador", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarOriginadorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador Originador;
-        
-        public modificarOriginadorRequest() {
-        }
-        
-        public modificarOriginadorRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador Originador) {
-            this.Originador = Originador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOriginadorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarOriginadorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarOriginadorResponse() {
-        }
-        
-        public modificarOriginadorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInstrumento", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarInstrumentoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstrumento", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarInstrumentoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -1110,10 +1074,10 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int codigoOriginador;
         
-        public modificarInstrumentoRequest() {
+        public insertarInstrumentoRequest() {
         }
         
-        public modificarInstrumentoRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+        public insertarInstrumentoRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
             this.instrumento = instrumento;
             this.codigoOriginador = codigoOriginador;
         }
@@ -1122,17 +1086,53 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInstrumentoResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarInstrumentoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstrumentoResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarInstrumentoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarInstrumentoResponse() {
+        public insertarInstrumentoResponse() {
         }
         
-        public modificarInstrumentoResponse(int @return) {
+        public insertarInstrumentoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOriginador", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarOriginadorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOriginador;
+        
+        public eliminarOriginadorRequest() {
+        }
+        
+        public eliminarOriginadorRequest(int idOriginador) {
+            this.idOriginador = idOriginador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOriginadorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarOriginadorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarOriginadorResponse() {
+        }
+        
+        public eliminarOriginadorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1188,29 +1188,6 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.insertarEmisor(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest request) {
-            return base.Channel.insertarEmisor(request);
-        }
-        
-        public int insertarEmisor(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.emisor emisor) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest();
-            inValue.emisor = emisor;
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarEmisor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.insertarEmisorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest request) {
-            return base.Channel.insertarEmisorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse> insertarEmisorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.emisor emisor) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest();
-            inValue.emisor = emisor;
-            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarEmisorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarOriginadorResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.insertarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarOriginadorRequest request) {
             return base.Channel.insertarOriginador(request);
         }
@@ -1231,6 +1208,29 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarOriginadorRequest();
             inValue.originador = originador;
             return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarOriginadorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.insertarEmisor(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest request) {
+            return base.Channel.insertarEmisor(request);
+        }
+        
+        public int insertarEmisor(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.emisor emisor) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest();
+            inValue.emisor = emisor;
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarEmisor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.insertarEmisorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest request) {
+            return base.Channel.insertarEmisorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorResponse> insertarEmisorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.emisor emisor) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarEmisorRequest();
+            inValue.emisor = emisor;
+            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarEmisorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1278,26 +1278,26 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.eliminarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest request) {
-            return base.Channel.eliminarOriginador(request);
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.modificarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest request) {
+            return base.Channel.modificarOriginador(request);
         }
         
-        public int eliminarOriginador(int idOriginador) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest();
-            inValue.idOriginador = idOriginador;
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).eliminarOriginador(inValue);
+        public int modificarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador Originador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest();
+            inValue.Originador = Originador;
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarOriginador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.eliminarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest request) {
-            return base.Channel.eliminarOriginadorAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.modificarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest request) {
+            return base.Channel.modificarOriginadorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse> eliminarOriginadorAsync(int idOriginador) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest();
-            inValue.idOriginador = idOriginador;
-            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).eliminarOriginadorAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse> modificarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador Originador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest();
+            inValue.Originador = Originador;
+            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarOriginadorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1345,28 +1345,28 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.insertarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest request) {
-            return base.Channel.insertarInstrumento(request);
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.modificarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest request) {
+            return base.Channel.modificarInstrumento(request);
         }
         
-        public int insertarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest();
+        public int modificarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest();
             inValue.instrumento = instrumento;
             inValue.codigoOriginador = codigoOriginador;
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarInstrumento(inValue);
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarInstrumento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.insertarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest request) {
-            return base.Channel.insertarInstrumentoAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.modificarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest request) {
+            return base.Channel.modificarInstrumentoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse> insertarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest();
+        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse> modificarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest();
             inValue.instrumento = instrumento;
             inValue.codigoOriginador = codigoOriginador;
-            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarInstrumentoAsync(inValue);
+            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarInstrumentoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1393,51 +1393,51 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.modificarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest request) {
-            return base.Channel.modificarOriginador(request);
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.insertarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest request) {
+            return base.Channel.insertarInstrumento(request);
         }
         
-        public int modificarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador Originador) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest();
-            inValue.Originador = Originador;
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarOriginador(inValue);
+        public int insertarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest();
+            inValue.instrumento = instrumento;
+            inValue.codigoOriginador = codigoOriginador;
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarInstrumento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.modificarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest request) {
-            return base.Channel.modificarOriginadorAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.insertarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest request) {
+            return base.Channel.insertarInstrumentoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorResponse> modificarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador Originador) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarOriginadorRequest();
-            inValue.Originador = Originador;
-            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarOriginadorAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse> insertarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest();
+            inValue.instrumento = instrumento;
+            inValue.codigoOriginador = codigoOriginador;
+            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarInstrumentoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.modificarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest request) {
-            return base.Channel.modificarInstrumento(request);
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.eliminarOriginador(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest request) {
+            return base.Channel.eliminarOriginador(request);
         }
         
-        public int modificarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest();
-            inValue.instrumento = instrumento;
-            inValue.codigoOriginador = codigoOriginador;
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarInstrumento(inValue);
+        public int eliminarOriginador(int idOriginador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest();
+            inValue.idOriginador = idOriginador;
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).eliminarOriginador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.modificarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest request) {
-            return base.Channel.modificarInstrumentoAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.eliminarOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest request) {
+            return base.Channel.eliminarOriginadorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse> modificarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
-            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest();
-            inValue.instrumento = instrumento;
-            inValue.codigoOriginador = codigoOriginador;
-            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarInstrumentoAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorResponse> eliminarOriginadorAsync(int idOriginador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.eliminarOriginadorRequest();
+            inValue.idOriginador = idOriginador;
+            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).eliminarOriginadorAsync(inValue);
         }
     }
 }

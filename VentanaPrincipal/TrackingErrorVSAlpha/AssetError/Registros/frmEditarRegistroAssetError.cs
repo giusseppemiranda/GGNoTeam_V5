@@ -49,7 +49,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            
+            this.Dispose();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
