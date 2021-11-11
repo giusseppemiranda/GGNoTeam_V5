@@ -11,6 +11,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
     {
         private frmPrincipal ventanaPadre = null;
         private TrackingErrorWS.TrackingErrorWSClient _dao;
+        private TrackingErrorWS.dataValorCuota[] datos;
 
         public frmDataValorCuota(frmPrincipal ventana)
         {
@@ -53,24 +54,25 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         private void btnActualizarRegistro_Click(object sender, System.EventArgs e)
         {
-
+            if (dgvDataValorCuota.CurrentRow != null)
+            {
+                frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index]);
+                ventanaAgregar.ShowDialog();
+            }
         }
 
         private void btnConsultarRegistros_Click(object sender, System.EventArgs e)
-        {
-            TrackingErrorWS.dataValorCuota[] datos;
+        {            
             datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), 1);
-
             if (datos != null)
-            {
+            {                
                 dgvDataValorCuota.DataSource = new BindingList<TrackingErrorWS.dataValorCuota>(datos.ToList());
             }
             
         }
 
         private void btnEliminarRegistro_Click(object sender, System.EventArgs e)
-        {
-            TrackingErrorWS.dataValorCuota[] datos;
+        {            
             datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), 1);
             int  i = _dao.eliminarDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index].idDataValorCuota);
             if (i == 1)
@@ -82,6 +84,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                 MessageBox.Show("ERROR");
 
             }
+        }
+
+        private void btnVerCalculoAlfa_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

@@ -14,11 +14,41 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
     public partial class frmEditarRegistroDataValorCuota : Form
     {
         private TrackingErrorWS.TrackingErrorWSClient _daoTE;
+        private TrackingErrorWS.dataValorCuota dato;
+        private bool insertar = false;
         public frmEditarRegistroDataValorCuota()
         {
             InitializeComponent();
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             cambiarTema();
+            cargarCombo();
+            dato = new TrackingErrorWS.dataValorCuota();
+            comboFondo.SelectedIndex = 0;
+            insertar = true;
+        }
+
+        public frmEditarRegistroDataValorCuota(TrackingErrorWS.dataValorCuota dato)
+        {
+            InitializeComponent();
+            this.dato = dato;
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
+            cambiarTema();
+            cargarCombo();
+            comboFondo.SelectedIndex = 0;
+
+            dateTimePicker1.Value = dato.fecha;
+            comboFondo.SelectedIndex = 0;
+            boxPatrimonio.Texts = dato.patrimonio.ToString();
+            boxCuota.Texts = dato.cuotas.ToString();
+            boxValorCuota.Texts = dato.valorCuota.ToString();
+        }
+
+        private void cargarCombo()
+        {
+            comboFondo.Items.Add("Fondo 1");
+            comboFondo.Items.Add("Fondo 2");
+            comboFondo.Items.Add("Fondo 3");
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -51,24 +81,39 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
-        {
-            TrackingErrorWS.dataValorCuota data = new TrackingErrorWS.dataValorCuota();
-
-            data.activo = 1;
-            data.cuotas = Convert.ToDouble(boxCuota.Texts);
-            data.fecha = dateTimePicker1.Value;
-            data.fechaSpecified = true;
-            data.patrimonio = Convert.ToDouble(boxPatrimonio.Texts);
-            data.valorCuota = Convert.ToDouble(boxValorCuota.Texts);
-            data.ytoD = 0.2;
-
-            int i = _daoTE.insertarDataValorCuota(data,1);
-            if(i == 1)
+        {            
+            try
             {
-                MessageBox.Show("TODO CORRECTO");
-            } else
+                dato.activo = 1;
+                dato.cuotas = Convert.ToDouble(boxCuota.Texts);
+                dato.fecha = dateTimePicker1.Value;
+                dato.fechaSpecified = true;
+                dato.patrimonio = Convert.ToDouble(boxPatrimonio.Texts);
+                dato.valorCuota = Convert.ToDouble(boxValorCuota.Texts);
+                dato.ytoD = 0.2;
+                int i = -1;
+                if (insertar)
+                {
+                    i = _daoTE.insertarDataValorCuota(dato, 1);
+                } else
+                {
+                    i = _daoTE.modificarDataValorCuota(dato, 1);
+
+                }
+                
+                if (i == 1)
+                {
+                    MessageBox.Show("TODO CORRECTO");
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("HAY ERROR");
+                }
+            }
+            catch 
             {
-                MessageBox.Show("HAY ERROR");
+                MessageBox.Show("Pruebe ingresando nuevamente, hay un error. Patrimonio, cuota y valor cuota deben ser números");
             }
         }
     }
