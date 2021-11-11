@@ -205,7 +205,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void txtBoxBusqueda_Leave(object sender, EventArgs e)
         {
-            txtBoxBusqueda.Texts = "Ingrese el nombre o el código del usuario:";
+            //txtBoxBusqueda.Texts = "Ingrese el nombre o el código del usuario:";
         }
     }
 }

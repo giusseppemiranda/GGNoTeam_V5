@@ -29,8 +29,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnListarAdministradores = new FontAwesome.Sharp.IconButton();
             this.btnListarUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnListarPersonas = new FontAwesome.Sharp.IconButton();
@@ -203,14 +203,14 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvPersonas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPersonas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPersonas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPersonas.ColumnHeadersHeight = 25;
             this.dgvPersonas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -229,9 +229,9 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvPersonas.Name = "dgvPersonas";
             this.dgvPersonas.ReadOnly = true;
             this.dgvPersonas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvPersonas.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvPersonas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPersonas.RowTemplate.Height = 25;
             this.dgvPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonas.Size = new System.Drawing.Size(912, 407);
@@ -326,7 +326,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.txtBoxBusqueda.Size = new System.Drawing.Size(347, 30);
             this.txtBoxBusqueda.TabIndex = 25;
             this.txtBoxBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBoxBusqueda.Texts = "Ingrese el nombre o el código del usuario:";
+            this.txtBoxBusqueda.Texts = "";
             this.txtBoxBusqueda.UnderlinedStyle = true;
             this.txtBoxBusqueda.Enter += new System.EventHandler(this.txtBoxBusqueda_Enter);
             this.txtBoxBusqueda.Leave += new System.EventHandler(this.txtBoxBusqueda_Leave);
