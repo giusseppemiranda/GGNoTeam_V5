@@ -404,7 +404,109 @@
     <None Include="Connected Services\TareasDiariasWS\TareasDiariasWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.helloResponse.datasource">
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.afp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.alpha.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.assetError.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.dataValorCuota.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.eliminarAssetErrorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.eliminarFondoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.fondo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.insertarAfpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.insertarAlphaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.insertarFondoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarIntegraPatrimonioYtoDPorFechaDataValorCuotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarPorFechaConProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarPorFechaDataValorCuotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarPorFechaSinProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarPorFechaSinYtoDDataValorCuotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarTodasAfpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarTodasAssetErrorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarTodosDataValorCuotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarTodosFondoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.modificarAfpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.trackingError.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TrackingErrorWS\TrackingErrorWS.wsdl" />

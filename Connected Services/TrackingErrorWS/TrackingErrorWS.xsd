@@ -1,15 +1,415 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://webservices.sist.afp.ggNoTeam/" targetNamespace="http://webservices.sist.afp.ggNoTeam/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="hello" type="tns:hello" />
-  <xs:element name="helloResponse" type="tns:helloResponse" />
-  <xs:complexType name="hello">
+  <xs:element name="ListarIntegraPatrimonioYtoDPorFechaDataValorCuota" type="tns:ListarIntegraPatrimonioYtoDPorFechaDataValorCuota" />
+  <xs:element name="ListarIntegraPatrimonioYtoDPorFechaDataValorCuotaResponse" type="tns:ListarIntegraPatrimonioYtoDPorFechaDataValorCuotaResponse" />
+  <xs:element name="ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuota" type="tns:ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuota" />
+  <xs:element name="ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuotaResponse" type="tns:ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuotaResponse" />
+  <xs:element name="ListarPorFechaDataValorCuota" type="tns:ListarPorFechaDataValorCuota" />
+  <xs:element name="ListarPorFechaDataValorCuotaResponse" type="tns:ListarPorFechaDataValorCuotaResponse" />
+  <xs:element name="ListarPorFechaSinYtoDDataValorCuota" type="tns:ListarPorFechaSinYtoDDataValorCuota" />
+  <xs:element name="ListarPorFechaSinYtoDDataValorCuotaResponse" type="tns:ListarPorFechaSinYtoDDataValorCuotaResponse" />
+  <xs:element name="ListarTodasAfp" type="tns:ListarTodasAfp" />
+  <xs:element name="ListarTodasAfpResponse" type="tns:ListarTodasAfpResponse" />
+  <xs:element name="ListarTodosTrackingError" type="tns:ListarTodosTrackingError" />
+  <xs:element name="ListarTodosTrackingErrorResponse" type="tns:ListarTodosTrackingErrorResponse" />
+  <xs:element name="eliminarAfp" type="tns:eliminarAfp" />
+  <xs:element name="eliminarAfpResponse" type="tns:eliminarAfpResponse" />
+  <xs:element name="eliminarAlpha" type="tns:eliminarAlpha" />
+  <xs:element name="eliminarAlphaResponse" type="tns:eliminarAlphaResponse" />
+  <xs:element name="eliminarAssetError" type="tns:eliminarAssetError" />
+  <xs:element name="eliminarAssetErrorResponse" type="tns:eliminarAssetErrorResponse" />
+  <xs:element name="eliminarDataValorCuota" type="tns:eliminarDataValorCuota" />
+  <xs:element name="eliminarDataValorCuotaResponse" type="tns:eliminarDataValorCuotaResponse" />
+  <xs:element name="eliminarFondo" type="tns:eliminarFondo" />
+  <xs:element name="eliminarFondoResponse" type="tns:eliminarFondoResponse" />
+  <xs:element name="eliminarTrackingError" type="tns:eliminarTrackingError" />
+  <xs:element name="eliminarTrackingErrorResponse" type="tns:eliminarTrackingErrorResponse" />
+  <xs:element name="insertarAfp" type="tns:insertarAfp" />
+  <xs:element name="insertarAfpResponse" type="tns:insertarAfpResponse" />
+  <xs:element name="insertarAlpha" type="tns:insertarAlpha" />
+  <xs:element name="insertarAlphaResponse" type="tns:insertarAlphaResponse" />
+  <xs:element name="insertarAssetError" type="tns:insertarAssetError" />
+  <xs:element name="insertarAssetErrorResponse" type="tns:insertarAssetErrorResponse" />
+  <xs:element name="insertarDataValorCuota" type="tns:insertarDataValorCuota" />
+  <xs:element name="insertarDataValorCuotaResponse" type="tns:insertarDataValorCuotaResponse" />
+  <xs:element name="insertarFondo" type="tns:insertarFondo" />
+  <xs:element name="insertarFondoResponse" type="tns:insertarFondoResponse" />
+  <xs:element name="insertarTrackingError" type="tns:insertarTrackingError" />
+  <xs:element name="insertarTrackingErrorResponse" type="tns:insertarTrackingErrorResponse" />
+  <xs:element name="listarPorFechaConProducto" type="tns:listarPorFechaConProducto" />
+  <xs:element name="listarPorFechaConProductoResponse" type="tns:listarPorFechaConProductoResponse" />
+  <xs:element name="listarPorFechaSinProducto" type="tns:listarPorFechaSinProducto" />
+  <xs:element name="listarPorFechaSinProductoResponse" type="tns:listarPorFechaSinProductoResponse" />
+  <xs:element name="listarTodasAlpha" type="tns:listarTodasAlpha" />
+  <xs:element name="listarTodasAlphaResponse" type="tns:listarTodasAlphaResponse" />
+  <xs:element name="listarTodasAssetError" type="tns:listarTodasAssetError" />
+  <xs:element name="listarTodasAssetErrorResponse" type="tns:listarTodasAssetErrorResponse" />
+  <xs:element name="listarTodosDataValorCuota" type="tns:listarTodosDataValorCuota" />
+  <xs:element name="listarTodosDataValorCuotaResponse" type="tns:listarTodosDataValorCuotaResponse" />
+  <xs:element name="listarTodosFondo" type="tns:listarTodosFondo" />
+  <xs:element name="listarTodosFondoResponse" type="tns:listarTodosFondoResponse" />
+  <xs:element name="modificarAfp" type="tns:modificarAfp" />
+  <xs:element name="modificarAfpResponse" type="tns:modificarAfpResponse" />
+  <xs:element name="modificarAlpha" type="tns:modificarAlpha" />
+  <xs:element name="modificarAlphaResponse" type="tns:modificarAlphaResponse" />
+  <xs:element name="modificarAssetError" type="tns:modificarAssetError" />
+  <xs:element name="modificarAssetErrorResponse" type="tns:modificarAssetErrorResponse" />
+  <xs:element name="modificarDataValorCuota" type="tns:modificarDataValorCuota" />
+  <xs:element name="modificarDataValorCuotaResponse" type="tns:modificarDataValorCuotaResponse" />
+  <xs:element name="modificarTrackingError" type="tns:modificarTrackingError" />
+  <xs:element name="modificarTrackingErrorResponse" type="tns:modificarTrackingErrorResponse" />
+  <xs:complexType name="eliminarFondo">
     <xs:sequence>
-      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element name="idFondo" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="helloResponse">
+  <xs:complexType name="eliminarFondoResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="modificarAlpha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alpha" type="tns:alpha" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alpha">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element name="alpha" type="xs:double" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="idAlpha" type="xs:int" />
+      <xs:element name="patrimonioTotal" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAlphaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosFondo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosFondoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:fondo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fondo">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element name="idFondo" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoFondo" type="tns:eTipoFondo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarNoIntegraPatrimonioYtoDPorFechaDDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dataValorCuota">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element name="cuotas" type="xs:double" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="idDataValorCuota" type="xs:int" />
+      <xs:element name="patrimonio" type="xs:double" />
+      <xs:element name="valorCuota" type="xs:double" />
+      <xs:element name="ytoD" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaDataValorCuota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorFechaSinProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorFechaSinProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:assetError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="assetError">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="idAssetError" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="producto" type="xs:double" />
+      <xs:element name="totalRiskD" type="xs:double" />
+      <xs:element name="wgtP" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDataValorCuota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dataVC" type="tns:dataValorCuota" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorFechaConProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorFechaConProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:assetError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaSinYtoDDataValorCuota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaI" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaF" type="xs:string" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaSinYtoDDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarDataValorCuota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dataVC" type="tns:dataValorCuota" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosDataValorCuota">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarIntegraPatrimonioYtoDPorFechaDataValorCuota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarIntegraPatrimonioYtoDPorFechaDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAlpha">
+    <xs:sequence>
+      <xs:element name="idAlpha" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAlphaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTrackingError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="trackingerror" type="tns:trackingError" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="trackingError">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="idTrackingError" type="xs:int" />
+      <xs:element name="trackingerror" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTrackingErrorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAfp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="afp" type="tns:afp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="afp">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element name="idAFP" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAfpResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAfp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="afp" type="tns:afp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAfpResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTrackingError">
+    <xs:sequence>
+      <xs:element name="idtrackingerror" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTrackingErrorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAfp">
+    <xs:sequence>
+      <xs:element name="idAfp" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAfpResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasAssetError">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasAssetErrorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:assetError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasAlpha">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasAlphaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alpha" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarFondo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fondo" type="tns:fondo" />
+      <xs:element name="idAfp" type="xs:int" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarFondoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarTodasAfp">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarTodasAfpResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:afp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarDataValorCuota">
+    <xs:sequence>
+      <xs:element name="idData" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAssetError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asset" type="tns:assetError" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAssetErrorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarTodosTrackingError">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarTodosTrackingErrorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:trackingError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAlpha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alpha" type="tns:alpha" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAlphaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAssetError">
+    <xs:sequence>
+      <xs:element name="idAssetError" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAssetErrorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTrackingError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="trackingerror" type="tns:trackingError" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTrackingErrorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAssetError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asset" type="tns:assetError" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAssetErrorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="eTipoFondo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fondo1" />
+      <xs:enumeration value="Fondo2" />
+      <xs:enumeration value="Fondo3" />
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>

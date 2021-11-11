@@ -29,14 +29,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAssetError = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wgt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalRisk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateFinal = new System.Windows.Forms.DateTimePicker();
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicial = new System.Windows.Forms.Label();
@@ -47,6 +42,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnAgregarRegistros = new FontAwesome.Sharp.IconButton();
             this.btnConsultarRegistros = new FontAwesome.Sharp.IconButton();
             this.btnVerCalculoTE = new FontAwesome.Sharp.IconButton();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wgt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalRisk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetError)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,17 +60,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.dgvAssetError.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAssetError.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvAssetError.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAssetError.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAssetError.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAssetError.ColumnHeadersHeight = 25;
             this.dgvAssetError.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Fecha,
+            this.fecha,
             this.Fondo,
             this.Name,
             this.wgt,
@@ -81,53 +81,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.dgvAssetError.Name = "dgvAssetError";
             this.dgvAssetError.ReadOnly = true;
             this.dgvAssetError.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvAssetError.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvAssetError.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAssetError.RowTemplate.Height = 25;
             this.dgvAssetError.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAssetError.Size = new System.Drawing.Size(952, 335);
             this.dgvAssetError.TabIndex = 50;
             this.dgvAssetError.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssetError_CellContentClick);
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 62;
-            // 
-            // Fondo
-            // 
-            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Fondo.HeaderText = "Fondo";
-            this.Fondo.Name = "Fondo";
-            this.Fondo.ReadOnly = true;
-            this.Fondo.Width = 64;
-            // 
-            // Name
-            // 
-            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Width = 63;
-            // 
-            // wgt
-            // 
-            this.wgt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.wgt.HeaderText = "% WGT";
-            this.wgt.Name = "wgt";
-            this.wgt.ReadOnly = true;
-            this.wgt.Width = 71;
-            // 
-            // TotalRisk
-            // 
-            this.TotalRisk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TotalRisk.HeaderText = "Total Risk";
-            this.TotalRisk.Name = "TotalRisk";
-            this.TotalRisk.ReadOnly = true;
             // 
             // dateFinal
             // 
@@ -285,6 +246,45 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnVerCalculoTE.UseVisualStyleBackColor = false;
             this.btnVerCalculoTE.Click += new System.EventHandler(this.btnVerCalculoTE_Click);
             // 
+            // fecha
+            // 
+            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 62;
+            // 
+            // Fondo
+            // 
+            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Fondo.HeaderText = "Fondo";
+            this.Fondo.Name = "Fondo";
+            this.Fondo.ReadOnly = true;
+            this.Fondo.Width = 64;
+            // 
+            // Name
+            // 
+            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            this.Name.Width = 63;
+            // 
+            // wgt
+            // 
+            this.wgt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.wgt.HeaderText = "% WGT";
+            this.wgt.Name = "wgt";
+            this.wgt.ReadOnly = true;
+            this.wgt.Width = 71;
+            // 
+            // TotalRisk
+            // 
+            this.TotalRisk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TotalRisk.HeaderText = "Total Risk";
+            this.TotalRisk.Name = "TotalRisk";
+            this.TotalRisk.ReadOnly = true;
+            // 
             // frmAssetError
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,7 +301,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.Controls.Add(this.lblFechaInicial);
             this.Controls.Add(this.lblFechaFinal);
             this.Controls.Add(this.lblTitulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;            
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //this.Name = "frmAssetError";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -320,11 +321,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         private System.Windows.Forms.Label lblFechaInicial;
         private System.Windows.Forms.Label lblFechaFinal;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private FontAwesome.Sharp.IconButton btnVerCalculoTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fondo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn wgt;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalRisk;
-        private FontAwesome.Sharp.IconButton btnVerCalculoTE;
     }
 }

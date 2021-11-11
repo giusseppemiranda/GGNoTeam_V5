@@ -17,6 +17,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
     {
         private frmTEvsAlpha ventanaPadre = null;
         private frmPrincipal ventanaPrincipal = null;
+        private TrackingErrorWS.TrackingErrorWSClient _daoTE;
+        private TrackingErrorWS.assetError[] listaAsset;
 
         public frmAssetError(frmPrincipal ventana, frmTEvsAlpha ventana_2)
         {
@@ -24,18 +26,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             ventanaPadre = ventana_2;
-            iniciarTema();
+            //dgvAssetError.AutoGenerateColumns = false;
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
+            cambiarTema();
+            listarTodo();            
         }
 
-        private void iniciarTema()
+        private void listarTodo()
         {
-            if (Global.TemaOscuro)
+            listaAsset = _daoTE.listarTodasAssetError();
+            colocarEnDgv();
+        }
+
+        private void colocarEnDgv()
+        {
+            if(listaAsset != null)
             {
-                activarTemaClaro();
+                dgvAssetError.DataSource = new BindingList<TrackingErrorWS.assetError>(listaAsset.ToList());
             }
             else
             {
-                activarTemaOscuro();
+                dgvAssetError.DataSource = null;
             }
         }
 
