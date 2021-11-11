@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\TrackingErrorWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmCambiarPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +341,13 @@
     <None Include="Connected Services\TareasDiariasWS\TareasDiariasWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\TrackingErrorWS.wsdl" />
+    <None Include="Connected Services\TrackingErrorWS\TrackingErrorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="packages\FontAwesome.Sharp.5.15.3\.signature.p7s" />
     <None Include="packages\FontAwesome.Sharp.5.15.3\FontAwesome.Sharp.5.15.3.nupkg" />
@@ -365,6 +377,12 @@
     </None>
     <None Include="Connected Services\LoginWS\configuration.svcinfo" />
     <None Include="Connected Services\LoginWS\configuration91.svcinfo" />
+    <None Include="Connected Services\TrackingErrorWS\configuration91.svcinfo" />
+    <None Include="Connected Services\TrackingErrorWS\configuration.svcinfo" />
+    <None Include="Connected Services\TrackingErrorWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net40\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll" />
@@ -382,6 +400,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\LoginWS\" />
     <WCFMetadataStorage Include="Connected Services\TareasDiariasWS\" />
+    <WCFMetadataStorage Include="Connected Services\TrackingErrorWS\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="VentanaPrincipal\MonitoreoOrdenes\" />

@@ -77,15 +77,5 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
         {
 
         }
-
-        private void btnVerCalculoAlpha_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVerCalculoTE_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

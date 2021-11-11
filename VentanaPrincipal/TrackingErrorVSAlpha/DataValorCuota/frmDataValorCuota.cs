@@ -73,8 +73,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private void btnActualizarRegistro_Click(object sender, EventArgs e)
         {
             //Se le debe colocar el dato a modificar
-            frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota();
-            ventanaAgregar.ShowDialog();
+            frmEditarRegistroDataValorCuota ventanaModificar = new frmEditarRegistroDataValorCuota();
+            ventanaModificar.ShowDialog();
         }
 
         private void btnEliminarRegistro_Click(object sender, EventArgs e)

@@ -29,35 +29,31 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelGraficos = new System.Windows.Forms.Panel();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTitutlo = new System.Windows.Forms.Label();
             this.lblFechaFinal = new System.Windows.Forms.Label();
             this.lblFechaInicial = new System.Windows.Forms.Label();
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.dateFinal = new System.Windows.Forms.DateTimePicker();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnExportarGraficos = new FontAwesome.Sharp.IconButton();
             this.btnFondo_2 = new FontAwesome.Sharp.IconButton();
             this.btnFondo_3 = new FontAwesome.Sharp.IconButton();
             this.btnFondo_1 = new FontAwesome.Sharp.IconButton();
-            this.btnVerCalculoTE = new FontAwesome.Sharp.IconButton();
-            this.btnVerCalculoAlpha = new FontAwesome.Sharp.IconButton();
             this.panelGraficos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelGraficos
             // 
-            this.panelGraficos.Controls.Add(this.btnVerCalculoTE);
-            this.panelGraficos.Controls.Add(this.btnVerCalculoAlpha);
             this.panelGraficos.Controls.Add(this.chart2);
             this.panelGraficos.Controls.Add(this.chart1);
             this.panelGraficos.Dock = System.Windows.Forms.DockStyle.Right;
@@ -65,6 +61,38 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             this.panelGraficos.Name = "panelGraficos";
             this.panelGraficos.Size = new System.Drawing.Size(741, 478);
             this.panelGraficos.TabIndex = 0;
+            // 
+            // chart2
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(37, 235);
+            this.chart2.Name = "chart2";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(655, 208);
+            this.chart2.TabIndex = 1;
+            this.chart2.Text = "chart2";
+            // 
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(37, 9);
+            this.chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(655, 226);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // lblTitutlo
             // 
@@ -112,38 +140,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             this.dateFinal.Name = "dateFinal";
             this.dateFinal.Size = new System.Drawing.Size(222, 20);
             this.dateFinal.TabIndex = 19;
-            // 
-            // chart1
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(37, 9);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(655, 226);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // chart2
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(37, 235);
-            this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(655, 208);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
             // 
             // btnExportarGraficos
             // 
@@ -229,46 +225,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             this.btnFondo_1.UseVisualStyleBackColor = false;
             this.btnFondo_1.Click += new System.EventHandler(this.btnFondo_1_Click);
             // 
-            // btnVerCalculoTE
-            // 
-            this.btnVerCalculoTE.BackColor = System.Drawing.Color.Teal;
-            this.btnVerCalculoTE.FlatAppearance.BorderSize = 0;
-            this.btnVerCalculoTE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerCalculoTE.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnVerCalculoTE.ForeColor = System.Drawing.Color.White;
-            this.btnVerCalculoTE.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnVerCalculoTE.IconColor = System.Drawing.Color.White;
-            this.btnVerCalculoTE.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVerCalculoTE.IconSize = 32;
-            this.btnVerCalculoTE.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerCalculoTE.Location = new System.Drawing.Point(383, 446);
-            this.btnVerCalculoTE.Name = "btnVerCalculoTE";
-            this.btnVerCalculoTE.Size = new System.Drawing.Size(222, 29);
-            this.btnVerCalculoTE.TabIndex = 44;
-            this.btnVerCalculoTE.Text = "Ver calculo Tracking Error";
-            this.btnVerCalculoTE.UseVisualStyleBackColor = false;
-            this.btnVerCalculoTE.Click += new System.EventHandler(this.btnVerCalculoTE_Click);
-            // 
-            // btnVerCalculoAlpha
-            // 
-            this.btnVerCalculoAlpha.BackColor = System.Drawing.Color.Teal;
-            this.btnVerCalculoAlpha.FlatAppearance.BorderSize = 0;
-            this.btnVerCalculoAlpha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerCalculoAlpha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnVerCalculoAlpha.ForeColor = System.Drawing.Color.White;
-            this.btnVerCalculoAlpha.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnVerCalculoAlpha.IconColor = System.Drawing.Color.White;
-            this.btnVerCalculoAlpha.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVerCalculoAlpha.IconSize = 32;
-            this.btnVerCalculoAlpha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerCalculoAlpha.Location = new System.Drawing.Point(124, 446);
-            this.btnVerCalculoAlpha.Name = "btnVerCalculoAlpha";
-            this.btnVerCalculoAlpha.Size = new System.Drawing.Size(222, 29);
-            this.btnVerCalculoAlpha.TabIndex = 43;
-            this.btnVerCalculoAlpha.Text = "Ver calculo Alpha";
-            this.btnVerCalculoAlpha.UseVisualStyleBackColor = false;
-            this.btnVerCalculoAlpha.Click += new System.EventHandler(this.btnVerCalculoAlpha_Click);
-            // 
             // frmTrackingErrorvsAlfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,8 +244,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             this.Name = "frmTrackingErrorvsAlfa";
             this.Text = "frmTrackingErrorvsAlfa";
             this.panelGraficos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,7 +265,5 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
         private FontAwesome.Sharp.IconButton btnFondo_3;
         private FontAwesome.Sharp.IconButton btnFondo_2;
         private FontAwesome.Sharp.IconButton btnExportarGraficos;
-        private FontAwesome.Sharp.IconButton btnVerCalculoTE;
-        private FontAwesome.Sharp.IconButton btnVerCalculoAlpha;
     }
 }

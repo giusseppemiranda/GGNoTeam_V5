@@ -47,6 +47,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnActualizarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnAgregarRegistros = new FontAwesome.Sharp.IconButton();
             this.btnConsultarRegistros = new FontAwesome.Sharp.IconButton();
+            this.btnVerCalculoAlfa = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataValorCuota)).BeginInit();
             this.SuspendLayout();
             // 
@@ -272,11 +273,32 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnConsultarRegistros.UseVisualStyleBackColor = false;
             this.btnConsultarRegistros.Click += new System.EventHandler(this.btnConsultarRegistros_Click);
             // 
+            // btnVerCalculoAlfa
+            // 
+            this.btnVerCalculoAlfa.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnVerCalculoAlfa.FlatAppearance.BorderSize = 0;
+            this.btnVerCalculoAlfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerCalculoAlfa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnVerCalculoAlfa.ForeColor = System.Drawing.Color.White;
+            this.btnVerCalculoAlfa.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnVerCalculoAlfa.IconColor = System.Drawing.Color.White;
+            this.btnVerCalculoAlfa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVerCalculoAlfa.IconSize = 32;
+            this.btnVerCalculoAlfa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerCalculoAlfa.Location = new System.Drawing.Point(16, 430);
+            this.btnVerCalculoAlfa.Name = "btnVerCalculoAlfa";
+            this.btnVerCalculoAlfa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnVerCalculoAlfa.Size = new System.Drawing.Size(184, 38);
+            this.btnVerCalculoAlfa.TabIndex = 54;
+            this.btnVerCalculoAlfa.Text = "Ver Calculo Alpha";
+            this.btnVerCalculoAlfa.UseVisualStyleBackColor = false;
+            // 
             // frmDataValorCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 478);
+            this.Controls.Add(this.btnVerCalculoAlfa);
             this.Controls.Add(this.btnEliminarRegistro);
             this.Controls.Add(this.btnActualizarRegistro);
             this.Controls.Add(this.dgvDataValorCuota);
@@ -314,5 +336,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorCuota;
         private FontAwesome.Sharp.IconButton btnActualizarRegistro;
         private FontAwesome.Sharp.IconButton btnEliminarRegistro;
+        private FontAwesome.Sharp.IconButton btnVerCalculoAlfa;
     }
 }
