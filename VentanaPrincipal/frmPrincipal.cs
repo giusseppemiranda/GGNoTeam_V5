@@ -31,6 +31,9 @@ namespace GGNoTeam_V5.VentanaPrincipal
             {
                 btnUsuarios.Visible = false;
                 btnBandejaEntrada.Visible = false;
+                lblUser.Text = "Usuario: " + usuario.nombre + " " + usuario.apellidos;
+            } else {
+                lblUser.Text = "Administrador: " + usuario.nombre + " " + usuario.apellidos;
             }
             ventanaPadre = ventana;
         }

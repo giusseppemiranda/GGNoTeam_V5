@@ -12,6 +12,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private frmPrincipal ventanaPadre = null;
         private TrackingErrorWS.TrackingErrorWSClient _dao;
         private TrackingErrorWS.dataValorCuota[] datos;
+        private TrackingErrorWS.afp[] listaAfps;
 
         public frmDataValorCuota(frmPrincipal ventana)
         {
@@ -21,6 +22,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             _dao = new TrackingErrorWS.TrackingErrorWSClient();
             cargarCombo();
+            listaAfps = _dao.ListarTodasAfp();            
         }
 
         public void cambiarTema()
@@ -67,10 +69,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         private void btnConsultarRegistros_Click(object sender, System.EventArgs e)
         {            
-            datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex+1);
+            datos = _dao.ListarPorFechaPorFondoDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
             if (datos != null)
-            {                
-                dgvDataValorCuota.DataSource = new BindingList<TrackingErrorWS.dataValorCuota>(datos.ToList());
+            {
+                dgvDataValorCuota.Rows.Clear();
+                for(int i = 0; i < datos.Length; i++)
+                {
+                    dgvDataValorCuota.Rows.Add(datos[i].idDataValorCuota,datos[i].fecha,listaAfps[datos[i].fidAFP-1].nombre,comboFondo.SelectedItem.ToString(),datos[i].patrimonio,datos[i].cuotas,datos[i].valorCuota);
+                }
+                
             }
 
             dgvDataValorCuota.Refresh();
@@ -79,7 +86,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private void btnEliminarRegistro_Click(object sender, System.EventArgs e)
         {
             int i = -1;
-            datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
+            //datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
             if(datos!= null) i= _dao.eliminarDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index].idDataValorCuota);
             if (i == 1)
             {
@@ -97,7 +104,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         {
             comboFondo.Items.Add("Fondo 1");
             comboFondo.Items.Add("Fondo 2");
-            //comboFondo.Items.Add("Fondo 3");
+            comboFondo.Items.Add("Fondo 3");
+            comboFondo.SelectedIndex = 0;
         }
         private void btnVerCalculoAlfa_Click(object sender, System.EventArgs e)
         {

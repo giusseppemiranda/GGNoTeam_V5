@@ -1,15 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
-using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Registros;
-
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
@@ -19,7 +9,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private frmPrincipal ventanaPrincipal = null;
         private TrackingErrorWS.TrackingErrorWSClient _dao;
         private TrackingErrorWS.dataValorCuota[] datos;
-        private TrackingErrorWS.fondo[] fondos;
+        //private TrackingErrorWS.fondo[] fondos;
         private TrackingErrorWS.afp[] afps;
         private frmTEvsAlpha ventanaPadre = null;
         public frmCalcularAlpha(frmPrincipal ventana, frmTEvsAlpha ventana_2)

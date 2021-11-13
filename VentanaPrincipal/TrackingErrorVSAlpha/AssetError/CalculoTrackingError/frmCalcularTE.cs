@@ -65,7 +65,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
-            datos = _dao.listarPorFechaConProducto(dateInicial.Value.ToString("yyyy-MM-dd"));
+            //datos = _dao.listarPorFechaConProducto(dateInicial.Value.ToString("yyyy-MM-dd"));
             if (datos != null)
             {
                 dgvDataValorCuota.DataSource = new BindingList<TrackingErrorWS.assetError>(datos.ToList());

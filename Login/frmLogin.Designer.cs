@@ -140,12 +140,12 @@ namespace GGNoTeam_V5
             this.lblCredencialesIncorrectas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCredencialesIncorrectas.ForeColor = System.Drawing.Color.IndianRed;
             this.lblCredencialesIncorrectas.Location = new System.Drawing.Point(27, 318);
-            this.lblCredencialesIncorrectas.MaximumSize = new System.Drawing.Size(251, 80);
+            this.lblCredencialesIncorrectas.MaximumSize = new System.Drawing.Size(270, 80);
             this.lblCredencialesIncorrectas.Name = "lblCredencialesIncorrectas";
-            this.lblCredencialesIncorrectas.Size = new System.Drawing.Size(243, 45);
+            this.lblCredencialesIncorrectas.Size = new System.Drawing.Size(256, 45);
             this.lblCredencialesIncorrectas.TabIndex = 18;
             this.lblCredencialesIncorrectas.Text = "No es posible ingresar con las credenciales ingresadas. Intente nuevamente o comu" +
-    "niquese con un administrador.";
+    "niquese a AFPINTEGRALP2@gmail.com.";
             // 
             // btnIniciarSesion
             // 

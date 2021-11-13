@@ -44,6 +44,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnTEALPHA = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panelControl.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +52,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             // panelControl
             // 
             this.panelControl.BackColor = System.Drawing.Color.DarkGray;
+            this.panelControl.Controls.Add(this.lblUser);
             this.panelControl.Controls.Add(this.btnMinimizar);
             this.panelControl.Controls.Add(this.btnTemaOscuro);
             this.panelControl.Controls.Add(this.lblTitulo);
@@ -317,6 +319,17 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnHome.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblUser.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblUser.Location = new System.Drawing.Point(610, 7);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(290, 15);
+            this.lblUser.TabIndex = 8;
+            this.lblUser.Text = "Codigo: Nombre_1 Nombre_2 Apellido_1 Apellido_2";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,5 +367,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private FontAwesome.Sharp.IconButton btnTEALPHA;
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private FontAwesome.Sharp.IconButton btnHome;
+        private System.Windows.Forms.Label lblUser;
     }
 }

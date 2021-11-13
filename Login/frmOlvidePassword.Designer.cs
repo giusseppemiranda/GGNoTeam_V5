@@ -142,7 +142,7 @@ namespace GGNoTeam_V5.Login
             this.lblIndicaciones.Size = new System.Drawing.Size(251, 60);
             this.lblIndicaciones.TabIndex = 16;
             this.lblIndicaciones.Text = "Para poder recuperar tu cuenta debes introducir tu correo electrónico o tu ID de " +
-    "usuario.  Si ocurre algún error comuniquese con un administrador.";
+    "usuario.  Si ocurre algún error comuniquese al AFPINTEGRALP2@gmail.com.";
             this.lblIndicaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtboxUser
@@ -230,9 +230,9 @@ namespace GGNoTeam_V5.Login
             this.lblUsuarioNoEncontrado.Location = new System.Drawing.Point(30, 367);
             this.lblUsuarioNoEncontrado.MaximumSize = new System.Drawing.Size(214, 43);
             this.lblUsuarioNoEncontrado.Name = "lblUsuarioNoEncontrado";
-            this.lblUsuarioNoEncontrado.Size = new System.Drawing.Size(203, 15);
+            this.lblUsuarioNoEncontrado.Size = new System.Drawing.Size(153, 15);
             this.lblUsuarioNoEncontrado.TabIndex = 21;
-            this.lblUsuarioNoEncontrado.Text = "El ID o correo ingresado no existen.";
+            this.lblUsuarioNoEncontrado.Text = "El ID ingresado no existen.";
             this.lblUsuarioNoEncontrado.Visible = false;
             this.lblUsuarioNoEncontrado.Click += new System.EventHandler(this.lblUsuarioNoEncontrado_Click);
             // 

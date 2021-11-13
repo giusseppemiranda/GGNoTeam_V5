@@ -13,7 +13,7 @@ namespace GGNoTeam_V5.Recursos.sendMail
 
         public static void conectar()
         {
-            IC = new ImapClient("imap.gmail.com", credenciales.AddressOUT, "glhc qmjp zhek rjsw", AuthMethods.Login, 993, true);
+            IC = new ImapClient("imap.gmail.com", credenciales.AddressOUT, credenciales.PasswordOUT, AuthMethods.Login, 993, true);
         }
 
         public static MailMessage verMensaje(int i)

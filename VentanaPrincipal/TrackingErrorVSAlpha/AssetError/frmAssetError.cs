@@ -36,7 +36,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         {
             string fini = dateInicial.Value.ToString("yyyy-MM-dd");
             string ffin = dateFinal.Value.ToString("yyyy-MM-dd");
-            listaAsset = _daoTE.listarPorFechaSinProducto(fini, ffin);
+            listaAsset = _daoTE.ListarPorFechaPorFondoAssetError(fini, ffin, 1);
+            //listaAsset = _daoTE.listarPorFechaSinProducto(fini, ffin);
             //listaAsset = _daoTE.listarTodasAssetError();
             colocarEnDgv();
         }
