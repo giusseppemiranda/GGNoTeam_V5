@@ -1,7 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Registros;
-using System.ComponentModel;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
@@ -17,12 +15,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         public frmDataValorCuota(frmPrincipal ventana)
         {
             InitializeComponent();
-            cambiarTema();
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+
             _dao = new TrackingErrorWS.TrackingErrorWSClient();
+
+            cambiarTema();
             cargarCombo();
-            listaAfps = _dao.ListarTodasAfp();            
+            cargarNombresAFP();          
+        }
+
+        private void cargarNombresAFP()
+        {
+            listaAfps = _dao.ListarTodasAfp();
         }
 
         public void cambiarTema()

@@ -96,20 +96,6 @@ namespace GGNoTeam_V5.Login
                 valido = false;
             }
 
-
-            ////////////////////////////////////////////////////////
-            // Caso ejemplo utilizado para verificar
-            //if (codigo == "1234")
-            //{
-            //    valido = true;
-            //}
-            //else
-            //{
-            //    valido = false;
-            //}
-
-            /////////////////////////////////////////////////////////
-            ///
             return valido;
         }
 

@@ -142,6 +142,7 @@ namespace GGNoTeam_V5.Login
             this.lblFirstPassword.Size = new System.Drawing.Size(232, 15);
             this.lblFirstPassword.TabIndex = 17;
             this.lblFirstPassword.Text = "Ingrese contraseña (Máx. 15 caracteres):";
+            this.lblFirstPassword.Click += new System.EventHandler(this.lblFirstPassword_Click);
             // 
             // lblSecondPassword
             // 
@@ -241,6 +242,7 @@ namespace GGNoTeam_V5.Login
             this.txtboxSegundaPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtboxSegundaPassword.Texts = "";
             this.txtboxSegundaPassword.UnderlinedStyle = true;
+            this.txtboxSegundaPassword._TextChanged += new System.EventHandler(this.txtboxSegundaPassword__TextChanged);
             // 
             // txtboxPrimeraPassword
             // 
@@ -263,6 +265,7 @@ namespace GGNoTeam_V5.Login
             this.txtboxPrimeraPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtboxPrimeraPassword.Texts = "";
             this.txtboxPrimeraPassword.UnderlinedStyle = true;
+            this.txtboxPrimeraPassword._TextChanged += new System.EventHandler(this.txtboxPrimeraPassword__TextChanged);
             // 
             // frmCambiarPassword
             // 

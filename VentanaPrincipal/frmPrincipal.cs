@@ -24,18 +24,25 @@ namespace GGNoTeam_V5.VentanaPrincipal
         public frmPrincipal(frmLogin ventana, LoginWS.persona persona)
         {
             InitializeComponent();
-            abrirFormulario(new frmBienvenida(this, persona));
-            cambiarTema();
+            abrirFormulario(new frmBienvenida(this, persona));            
             usuario = persona;            
-            if(usuario.tipoUsuario == 2)
+            ventanaPadre = ventana;
+            cargarPantallaSegunTipoUsuario();
+            cambiarTema();
+        }
+
+        private void cargarPantallaSegunTipoUsuario()
+        {
+            if (usuario.tipoUsuario == 2)
             {
                 btnUsuarios.Visible = false;
                 btnBandejaEntrada.Visible = false;
-                lblUser.Text = "Usuario: " + usuario.nombre + " " + usuario.apellidos;
-            } else {
+                lblUser.Text = "Usuario " + usuario.codigo + ":  " + usuario.nombre + " " + usuario.apellidos;
+            }
+            else
+            {
                 lblUser.Text = "Administrador: " + usuario.nombre + " " + usuario.apellidos;
             }
-            ventanaPadre = ventana;
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)

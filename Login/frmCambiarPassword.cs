@@ -106,5 +106,28 @@ namespace GGNoTeam_V5.Login
         {
 
         }
+
+        private void txtboxPrimeraPassword__TextChanged(object sender, EventArgs e)
+        {
+            string pass = txtboxPrimeraPassword.Texts;
+            if(txtboxPrimeraPassword.Texts.Length >= 15)
+            {
+                txtboxPrimeraPassword.Texts = pass;
+            }
+        }
+
+        private void lblFirstPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtboxSegundaPassword__TextChanged(object sender, EventArgs e)
+        {
+            string pass = txtboxSegundaPassword.Texts;
+            if (txtboxPrimeraPassword.Texts.Length >= 15)
+            {
+                txtboxSegundaPassword.Texts = pass;
+            }
+        }
     }
 }
