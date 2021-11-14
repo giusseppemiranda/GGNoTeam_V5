@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
+namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
 {
-    public partial class frmMonitoreoOrdenes : Form
+    public partial class frmEjecucion : Form
     {
-        public frmMonitoreoOrdenes()
+        public frmEjecucion()
         {
             InitializeComponent();
         }
-
-        
     }
 }
