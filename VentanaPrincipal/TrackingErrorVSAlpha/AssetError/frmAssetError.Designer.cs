@@ -42,9 +42,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnAgregarRegistros = new FontAwesome.Sharp.IconButton();
             this.btnConsultarRegistros = new FontAwesome.Sharp.IconButton();
             this.btnVerCalculoTE = new FontAwesome.Sharp.IconButton();
+            this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wgt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalRisk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetError)).BeginInit();
@@ -72,7 +73,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.dgvAssetError.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fecha,
             this.Fondo,
-            this.Name,
+            this.Nombre,
             this.wgt,
             this.TotalRisk});
             this.dgvAssetError.EnableHeadersVisualStyles = false;
@@ -92,7 +93,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             // 
             // dateFinal
             // 
-            this.dateFinal.Location = new System.Drawing.Point(276, 65);
+            this.dateFinal.Location = new System.Drawing.Point(216, 65);
             this.dateFinal.Name = "dateFinal";
             this.dateFinal.Size = new System.Drawing.Size(222, 20);
             this.dateFinal.TabIndex = 47;
@@ -101,7 +102,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             // 
             this.dateInicial.Location = new System.Drawing.Point(11, 65);
             this.dateInicial.Name = "dateInicial";
-            this.dateInicial.Size = new System.Drawing.Size(222, 20);
+            this.dateInicial.Size = new System.Drawing.Size(198, 20);
             this.dateInicial.TabIndex = 44;
             // 
             // lblFechaInicial
@@ -120,7 +121,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.lblFechaFinal.AutoSize = true;
             this.lblFechaFinal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFechaFinal.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaFinal.Location = new System.Drawing.Point(273, 47);
+            this.lblFechaFinal.Location = new System.Drawing.Point(212, 47);
             this.lblFechaFinal.Name = "lblFechaFinal";
             this.lblFechaFinal.Size = new System.Drawing.Size(70, 15);
             this.lblFechaFinal.TabIndex = 45;
@@ -193,10 +194,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnAgregarRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarRegistros.IconSize = 32;
             this.btnAgregarRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarRegistros.Location = new System.Drawing.Point(785, 47);
+            this.btnAgregarRegistros.Location = new System.Drawing.Point(824, 47);
             this.btnAgregarRegistros.Name = "btnAgregarRegistros";
             this.btnAgregarRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAgregarRegistros.Size = new System.Drawing.Size(178, 38);
+            this.btnAgregarRegistros.Size = new System.Drawing.Size(139, 38);
             this.btnAgregarRegistros.TabIndex = 49;
             this.btnAgregarRegistros.Text = "Agregar Registro";
             this.btnAgregarRegistros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -215,10 +216,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnConsultarRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConsultarRegistros.IconSize = 32;
             this.btnConsultarRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarRegistros.Location = new System.Drawing.Point(504, 47);
+            this.btnConsultarRegistros.Location = new System.Drawing.Point(654, 47);
             this.btnConsultarRegistros.Name = "btnConsultarRegistros";
             this.btnConsultarRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnConsultarRegistros.Size = new System.Drawing.Size(178, 38);
+            this.btnConsultarRegistros.Size = new System.Drawing.Size(159, 38);
             this.btnConsultarRegistros.TabIndex = 48;
             this.btnConsultarRegistros.Text = "Consultar Registros";
             this.btnConsultarRegistros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -246,6 +247,25 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnVerCalculoTE.UseVisualStyleBackColor = false;
             this.btnVerCalculoTE.Click += new System.EventHandler(this.btnVerCalculoTE_Click);
             // 
+            // comboFondo
+            // 
+            this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.BorderSize = 1;
+            this.comboFondo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboFondo.ForeColor = System.Drawing.Color.DimGray;
+            this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboFondo.Location = new System.Drawing.Point(448, 55);
+            this.comboFondo.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboFondo.Name = "comboFondo";
+            this.comboFondo.Padding = new System.Windows.Forms.Padding(1);
+            this.comboFondo.Size = new System.Drawing.Size(200, 30);
+            this.comboFondo.TabIndex = 67;
+            this.comboFondo.Texts = "Fondo";
+            // 
             // fecha
             // 
             this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -262,13 +282,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.Fondo.ReadOnly = true;
             this.Fondo.Width = 64;
             // 
-            // Name
+            // Nombre
             // 
-            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Width = 63;
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 76;
             // 
             // wgt
             // 
@@ -290,6 +310,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 478);
+            this.Controls.Add(this.comboFondo);
             this.Controls.Add(this.btnVerCalculoTE);
             this.Controls.Add(this.btnEliminarRegistro);
             this.Controls.Add(this.btnActualizarRegistro);
@@ -302,7 +323,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.Controls.Add(this.lblFechaFinal);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //this.Name = "frmAssetError";
+            this.Name = "frmAssetError";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -322,9 +343,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         private System.Windows.Forms.Label lblFechaFinal;
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnVerCalculoTE;
+        private Recursos.UserControls.GGComboBox comboFondo;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fondo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn wgt;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalRisk;
     }

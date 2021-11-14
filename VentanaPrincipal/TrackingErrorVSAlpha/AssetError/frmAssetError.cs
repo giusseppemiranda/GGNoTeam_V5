@@ -25,23 +25,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             InitializeComponent();
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+
             ventanaPadre = ventana_2;
-            //dgvAssetError.AutoGenerateColumns = false;
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
+
+            cargarCombo();
             cambiarTema();
-                 
+            Global.pintarDGV(ref dgvAssetError, Color.DarkSalmon);
         }
 
-        private void listarTodo()
+        private void cargarCombo()
         {
-            string fini = dateInicial.Value.ToString("yyyy-MM-dd");
-            string ffin = dateFinal.Value.ToString("yyyy-MM-dd");
-            listaAsset = _daoTE.ListarPorFechaPorFondoAssetError(fini, ffin, 1);
-            //listaAsset = _daoTE.listarPorFechaSinProducto(fini, ffin);
-            //listaAsset = _daoTE.listarTodasAssetError();
-            colocarEnDgv();
+            comboFondo.Items.Add("Fondo 1");
+            comboFondo.Items.Add("Fondo 2");
+            comboFondo.Items.Add("Fondo 3");
+            comboFondo.SelectedIndex = 0;            
         }
 
+       
         private void colocarEnDgv()
         {
             if(listaAsset != null)
@@ -80,7 +81,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
-            listarTodo();
+            listaAsset = _daoTE.ListarPorFechaPorFondoAssetError(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
+            dgvAssetError.Rows.Clear();
+            if (listaAsset != null)
+            {                
+                for(int i = 0; i < listaAsset.Length; i++)
+                {
+                    dgvAssetError.Rows.Add(listaAsset[i].fecha.ToString("dd/MM/yyyy"), comboFondo.SelectedItem.ToString(), listaAsset[i].nombre, listaAsset[i].wgtP, listaAsset[i].totalRiskD);
+                }
+            }
+            dgvAssetError.Refresh();
         }
 
         private void btnAgregarRegistros_Click(object sender, EventArgs e)
