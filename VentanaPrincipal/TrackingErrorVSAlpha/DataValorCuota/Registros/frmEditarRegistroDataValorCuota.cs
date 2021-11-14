@@ -29,7 +29,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             dato = new TrackingErrorWS.dataValorCuota();
             comboAFP.SelectedIndex = 0;
             comboFondo.SelectedIndex = 0;
-            lblCodigo.Text = "INSERTAR DATA VALOR CUOTA";
+            lblTitulo.Text = "INSERTAR DATA VALOR CUOTA";
             insertar = true;
         }
 
@@ -41,7 +41,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             cargarCombo();
             cargarComboAFP(listaAfps);
 
-            lblCodigo.Text = "EDITAR DATA VALOR CUOTA";
+            lblTitulo.Text = "EDITAR DATA VALOR CUOTA";
             this.dato = dato;
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
 

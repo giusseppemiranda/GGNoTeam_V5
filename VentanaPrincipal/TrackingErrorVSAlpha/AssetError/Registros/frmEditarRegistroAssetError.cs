@@ -14,13 +14,50 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
     public partial class frmEditarRegistroAssetError : Form
     {
         private TrackingErrorWS.TrackingErrorWSClient _daoTE;
+        private bool insertarAssetError = false;
+        private TrackingErrorWS.assetError AssetError;
+
+        //Insertar AssetError
+        public frmEditarRegistroAssetError()
+        {
+            InitializeComponent();
+            
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
+
+            insertarAssetError = true;
+            cambiarTema();
+            cargarTipoEdicion();
+            cargarComboFondo();
+        }
+
+        /*
         public frmEditarRegistroAssetError()
         {
             InitializeComponent();
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             cambiarTema();
+            cargarTipoEdicion();  
+        }
+        */
+
+        private void cargarComboFondo()
+        {
+            String[] fondos = _daoTE.ListarFondos();
+            comboFondo.DataSource = fondos;
         }
 
+        private void cargarTipoEdicion()
+        {
+            if (insertarAssetError)
+            {
+                lblTitulo.Text = "Insertar Asset Error";
+                btnSiguiente.Text = "Insertar";
+            } else
+            {
+                lblTitulo.Text = "Modificar Asset Error";
+                btnSiguiente.Text = "Actualizar";
+            }
+        }
         
 
         public void cambiarTema()
@@ -49,8 +86,88 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            if (insertarAssetError)
+            {
+                AssetError = new TrackingErrorWS.assetError();
+                if (cargarDatos())
+                {
+                    int i = _daoTE.insertarAssetError(AssetError, AssetError.fidFondo);
+                    if(i == 1)
+                    {
+                        MessageBox.Show("La inserción fue realizada con éxito.");
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al insertar.");
+                    }
+                    
+                }
+            } else
+            {
+                if (cargarDatos())
+                {
+                    this.Dispose();
+                }
+            }            
         }
+
+        private bool cargarDatos()
+        {
+            AssetError.fecha = dateTimePicker1.Value;
+            AssetError.fechaSpecified = true;
+            AssetError.fidFondo = comboFondo.SelectedIndex + 1;
+            AssetError.nombre = boxNombre.Texts;
+            
+
+            if(AssetError.nombre == "")
+            {
+                MessageBox.Show("El nombre del objeto Asset Error no puede ser vacío.");
+                return false;
+            }
+
+            if(AssetError.nombre.Length > 30)
+            {
+                MessageBox.Show("El nombre del objeto Asset Error no debe contener más de 30 caracteres");
+                return false;
+            }
+
+            if(boxWGT.Texts == "")
+            {
+                MessageBox.Show("WGT no puede tener un campo vacío");
+                return false;
+            }
+
+            if (boxTotalRisk.Texts == "")
+            {
+                MessageBox.Show("TotalRisk no puede tener un campo vacío");
+                return false;
+            } 
+
+            try
+            {
+                AssetError.wgtP = Convert.ToDouble(boxWGT.Texts);
+                AssetError.totalRiskD = Convert.ToDouble(boxTotalRisk.Texts);
+                if(AssetError.wgtP > 10)
+                {
+                    MessageBox.Show("El valor de wgtP debe encontrarse entre 0 y 10.");
+                    return false;
+                }
+                if (AssetError.totalRiskD > 10)
+                {
+                    MessageBox.Show("El valor de totalRisk debe encontrarse entre 0 y 10.");
+                    return false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Los valores ingresados en wgtP y en Total Risk deben ser números, no deben contener letras. Intente nuevamente");
+                return false;
+            }
+
+            return true;
+        }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

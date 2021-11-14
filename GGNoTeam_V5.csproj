@@ -488,6 +488,9 @@
     <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarFondosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

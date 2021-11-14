@@ -36,10 +36,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private void cargarCombo()
         {
-            comboFondo.Items.Add("Fondo 1");
-            comboFondo.Items.Add("Fondo 2");
-            comboFondo.Items.Add("Fondo 3");
-            comboFondo.SelectedIndex = 0;            
+            String[] fondos = _daoTE.ListarFondos();
+            comboFondo.DataSource = fondos;
         }
 
        
@@ -97,6 +95,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         {
             frmEditarRegistroAssetError ventanaAgregar = new frmEditarRegistroAssetError();
             ventanaAgregar.ShowDialog();
+            this.btnConsultarRegistros_Click(sender, e);
         }
 
         private void btnActualizarRegistro_Click(object sender, EventArgs e)

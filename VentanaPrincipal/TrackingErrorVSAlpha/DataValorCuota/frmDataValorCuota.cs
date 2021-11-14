@@ -1,5 +1,6 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Registros;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -113,10 +114,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         }
         private void cargarCombo()
         {
-            comboFondo.Items.Add("Fondo 1");
-            comboFondo.Items.Add("Fondo 2");
-            comboFondo.Items.Add("Fondo 3");
-            comboFondo.SelectedIndex = 0;
+            String[] fondos = _dao.ListarFondos();
+            comboFondo.DataSource = fondos;
         }
         private void btnVerCalculoAlfa_Click(object sender, System.EventArgs e)
         {

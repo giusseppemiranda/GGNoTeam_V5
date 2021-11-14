@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://webservices.sist.afp.ggNoTeam/" targetNamespace="http://webservices.sist.afp.ggNoTeam/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ListarFondos" type="tns:ListarFondos" />
+  <xs:element name="ListarFondosResponse" type="tns:ListarFondosResponse" />
   <xs:element name="ListarPorFechaPorFondoAssetError" type="tns:ListarPorFechaPorFondoAssetError" />
   <xs:element name="ListarPorFechaPorFondoAssetErrorResponse" type="tns:ListarPorFechaPorFondoAssetErrorResponse" />
   <xs:element name="ListarPorFechaPorFondoDataValorCuota" type="tns:ListarPorFechaPorFondoDataValorCuota" />
@@ -40,6 +42,14 @@
   <xs:element name="modificarDataValorCuotaResponse" type="tns:modificarDataValorCuotaResponse" />
   <xs:element name="modificarTrackingError" type="tns:modificarTrackingError" />
   <xs:element name="modificarTrackingErrorResponse" type="tns:modificarTrackingErrorResponse" />
+  <xs:complexType name="ListarFondos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarFondosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarTrackingError">
     <xs:sequence>
       <xs:element minOccurs="0" name="trackingerror" type="tns:trackingError" />
