@@ -176,11 +176,11 @@ namespace GGNoTeam_V5.VentanaPrincipal
             {
                 Global.pintarDGV(ref dgvPersonas, Color.SlateBlue);
                 dgvPersonas.Rows.Clear();
-                LoginWS.persona[] buscar = _daoListar.listarPorCodNom(txtBoxBusqueda.Texts);
-                if (buscar != null)
+                lista = _daoListar.listarPorCodNom(txtBoxBusqueda.Texts);
+                if (lista != null)
                 {
 
-                    colocarEnDGV(buscar);
+                    colocarEnDGV(lista);
                 }
                 else
                 {

@@ -43,10 +43,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
 
             lblCodigo.Text = "EDITAR DATA VALOR CUOTA";
             this.dato = dato;
-            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();            
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
+
+            cargarCamposEdicion(tipoFondo);
+        }
+
+        private void cargarCamposEdicion(int tipoFondo)
+        {
             comboFondo.SelectedIndex = tipoFondo;
             dateTimePicker1.Value = dato.fecha;
-            comboAFP.SelectedIndex = dato.fidAFP-1;
+            comboAFP.SelectedIndex = dato.fidAFP - 1;
             boxPatrimonio.Texts = dato.patrimonio.ToString();
             boxCuota.Texts = dato.cuotas.ToString();
             boxValorCuota.Texts = dato.valorCuota.ToString();
@@ -113,7 +119,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
                     i = _daoTE.insertarDataValorCuota(dato, comboFondo.SelectedIndex+1);
                     if(i == 1)
                     {
-                        MessageBox.Show("Se insertó correctamente.");
+                        //MessageBox.Show("Se insertó correctamente.");
                     } else
                     {
                         MessageBox.Show("No se han insertado los valores en la base de datos");

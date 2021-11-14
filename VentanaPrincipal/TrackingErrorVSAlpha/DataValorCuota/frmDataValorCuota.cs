@@ -12,6 +12,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private TrackingErrorWS.TrackingErrorWSClient _dao;
         private TrackingErrorWS.dataValorCuota[] datos;
         private TrackingErrorWS.afp[] listaAfps;
+        private bool activarEventoComboFondo = false; 
 
         public frmDataValorCuota(frmPrincipal ventana)
         {
@@ -24,7 +25,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             Global.pintarDGV(ref dgvDataValorCuota, Color.DarkSalmon);
             cambiarTema();
             cargarCombo();
-            cargarNombresAFP();          
+            cargarNombresAFP();
+            activarEventoComboFondo = true;
         }
 
         private void cargarNombresAFP()
@@ -60,6 +62,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         {
             frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(listaAfps);
             ventanaAgregar.ShowDialog();
+            this.btnConsultarRegistros_Click(sender, e);
             dgvDataValorCuota.Refresh();
         }
 
@@ -69,8 +72,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             {
                 frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index],listaAfps,comboFondo.SelectedIndex);
                 ventanaAgregar.ShowDialog();
+                this.btnConsultarRegistros_Click(sender, e);
             }
-
+            
             dgvDataValorCuota.Refresh();
         }
 
@@ -85,8 +89,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                     dgvDataValorCuota.Rows.Add(datos[i].idDataValorCuota,datos[i].fecha.ToString("dd/MM/yyyy"),listaAfps[datos[i].fidAFP-1].nombre,comboFondo.SelectedItem.ToString(),datos[i].patrimonio,datos[i].cuotas,datos[i].valorCuota);
                 }
                 
-            }
-
+            }            
             dgvDataValorCuota.Refresh();
         }
 
@@ -97,11 +100,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             if(datos!= null) i= _dao.eliminarDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index].idDataValorCuota);
             if (i == 1)
             {
-                MessageBox.Show("TODO OK");
+                MessageBox.Show("Se han borrado correctamente los datos seleccionados");
+                this.btnConsultarRegistros_Click(sender, e);
             }
             else
             {
-                MessageBox.Show("ERROR");
+                MessageBox.Show("Error al momento de borrar. Intente nuevamente");
 
             }
 
@@ -117,6 +121,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private void btnVerCalculoAlfa_Click(object sender, System.EventArgs e)
         {
 
+        }
+
+        private void comboFondo_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void comboFondo_OnSelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if (activarEventoComboFondo)
+            {
+                this.btnConsultarRegistros_Click(sender,e);
+            }
         }
     }
 }
