@@ -378,6 +378,12 @@
     <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.listarPorCodExactoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.listarPorCodExacto_TareasCompletasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.listarPorCodExacto_TareasInompletasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.listarPorCodNomResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -390,8 +396,8 @@
     <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.persona.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LoginWS\LoginWS.wsdl" />
-    <None Include="Connected Services\LoginWS\LoginWS.xsd">
+    <None Include="Connected Services\LoginWS\LoginWS1.wsdl" />
+    <None Include="Connected Services\LoginWS\LoginWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse.datasource">
@@ -409,8 +415,8 @@
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.tarea.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\TareasDiariasWS\TareasDiariasWS.wsdl" />
-    <None Include="Connected Services\TareasDiariasWS\TareasDiariasWS.xsd">
+    <None Include="Connected Services\TareasDiariasWS\TareasDiariasWS1.wsdl" />
+    <None Include="Connected Services\TareasDiariasWS\TareasDiariasWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.afp.datasource">
@@ -488,8 +494,8 @@
     <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.trackingError.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\TrackingErrorWS\TrackingErrorWS.wsdl" />
-    <None Include="Connected Services\TrackingErrorWS\TrackingErrorWS.xsd">
+    <None Include="Connected Services\TrackingErrorWS\TrackingErrorWS1.wsdl" />
+    <None Include="Connected Services\TrackingErrorWS\TrackingErrorWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

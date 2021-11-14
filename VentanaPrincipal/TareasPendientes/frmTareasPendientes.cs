@@ -20,40 +20,24 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private LoginWS.LoginWSClient _daoPersona;
         private TareasDiariasWS.TareasDiariasWSClient _daoTareasDiarias;
         private bool accionAdmin = false;
+        private bool listarCompletos = true;
         public frmTareasPendientes(frmPrincipal ventana, LoginWS.persona persona)
         {
             InitializeComponent();
             cambiarTema();
+            ventanaPadre = ventana;
+            ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
 
             _daoTareasDiarias = new TareasDiariasWS.TareasDiariasWSClient();
             _daoPersona = new LoginWS.LoginWSClient();
-
             persona = _daoPersona.listarPorCodExacto(Int32.Parse(persona.codigo))[0];
             user = persona;
-
-            lblNombre.Text = "Gestión de tareas y pendientes de " + user.nombre;
-            lblNombre.ForeColor = Color.DarkSalmon;
-            
-            ventanaPadre = ventana;
-            ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);            
             accionAdmin = true;
-            
-            Global.pintarDGV(ref dgvTareasPendientes, Color.DarkSalmon);
 
-            if (persona.itinerario.listaTarea != null)
-            {
-                colocarEnDGV(user.itinerario.listaTarea);
-            }
-            else
-            {
-                dgvTareasPendientes.DataSource = null;
-            }
-
-            if(user.tipoUsuario == 2)
-            {
-                btnEliminar.Visible = false;
-                btnAgregarTarea.Visible = false;
-            }
+            cargarLabelInicial();
+            cargarDatosPorTipoUsuario();
+            pintarDGVInicial();
+            colocarEnDGV(user.itinerario.listaTarea);
         }
 
         public frmTareasPendientes(LoginWS.persona persona)
@@ -61,11 +45,19 @@ namespace GGNoTeam_V5.VentanaPrincipal
             InitializeComponent();
             cambiarTema();
             btnSalir.Visible = true;
-            colocarEnDGV(persona.itinerario.listaTarea);
             user = persona;
-            lblNombre.Text = "Gestión de tareas y pendientes de " + user.nombre + " " + user.apellidos;
-            lblNombre.ForeColor = Color.DarkSalmon;
-            Global.pintarDGV(ref dgvTareasPendientes, Color.DarkSalmon);
+
+            _daoTareasDiarias = new TareasDiariasWS.TareasDiariasWSClient();
+            _daoPersona = new LoginWS.LoginWSClient();
+
+            colocarEnDGV(persona.itinerario.listaTarea);
+            cargarLabelInicial();
+            pintarDGVInicial();
+            cargarSubTema();
+        }
+
+        private void cargarSubTema()
+        {
             if (!Global.TemaOscuro)
             {
                 this.BackColor = Global.FrmOscuro_2;
@@ -76,19 +68,42 @@ namespace GGNoTeam_V5.VentanaPrincipal
             }
         }
 
+        private void cargarLabelInicial()
+        {
+            lblNombre.Text = "Gestión de tareas y pendientes de " + user.nombre.ToUpper() + " " + user.apellidos.ToUpper();
+            lblNombre.ForeColor = Color.DarkSalmon;
+        }
+
+        private void pintarDGVInicial()
+        {
+            Global.pintarDGV(ref dgvTareasPendientes, Color.DarkSalmon);
+        }
+
+        private void cargarDatosPorTipoUsuario()
+        {
+            if (user.tipoUsuario == 2)
+            {
+                btnEliminar.Visible = false;
+                btnAgregarTarea.Visible = false;
+            }
+        }
+
         private void colocarEnDGV(LoginWS.tarea[] lista)
         {
+            dgvTareasPendientes.Rows.Clear();
             if (lista != null)
             {
                 for (int i = 0; i < lista.Length; i++)
                 {
                     if (lista[i].estado == true)
                     {
-                        dgvTareasPendientes.Rows.Add(lista[i].idTarea, lista[i].descripcion, lista[i].horaEst, lista[i].plazo, "Completo");
+                        //dgvTareasPendientes.Rows.Add(lista[i].idTarea, lista[i].descripcion, lista[i].horaEst, lista[i].plazo, "Completo");
+                        dgvTareasPendientes.Rows.Add(lista[i].idTarea, "Completo", lista[i].descripcion);
                     }
                     else
                     {
-                        dgvTareasPendientes.Rows.Add(lista[i].idTarea, lista[i].descripcion, lista[i].horaEst, lista[i].plazo, "Incompleto");
+                        //dgvTareasPendientes.Rows.Add(lista[i].idTarea, lista[i].descripcion, lista[i].horaEst, lista[i].plazo, "Incompleto");
+                        dgvTareasPendientes.Rows.Add(lista[i].idTarea, "Incompleto", lista[i].descripcion);
                     }
                 }
             }
@@ -130,7 +145,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void btnAgregarTarea_Click(object sender, EventArgs e)
         {
-            frmEditarTarea ventanaAgregar = new frmEditarTarea(this, user.itinerario.idItineraio,accionAdmin);
+            frmEditarTarea ventanaAgregar = new frmEditarTarea(this, user.itinerario.idItineraio, accionAdmin);
             ventanaAgregar.ShowDialog();
         }
 
@@ -167,13 +182,13 @@ namespace GGNoTeam_V5.VentanaPrincipal
                 }
             }
         }
-        
+
 
         private void btnModificarTarea_Click(object sender, EventArgs e)
         {
             if (dgvTareasPendientes.CurrentRow != null)
             {
-                frmEditarTarea ventanaModificar = new frmEditarTarea(this, user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index],accionAdmin);
+                frmEditarTarea ventanaModificar = new frmEditarTarea(this, user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index], accionAdmin);
                 ventanaModificar.ShowDialog();
             }
         }
@@ -183,6 +198,47 @@ namespace GGNoTeam_V5.VentanaPrincipal
             msg.To.Add(user.correo);
             servidorCliente server = new servidorCliente();
             server.sendMessage(msg);
+        }
+
+        private void btnListarPorTipo_Click(object sender, EventArgs e)
+        {
+
+            dgvTareasPendientes.Rows.Clear();
+            if (listarCompletos)
+            {
+                user = _daoPersona.listarPorCodExacto_TareasCompletas(Int32.Parse(user.codigo))[0];
+                if (user.itinerario.listaTarea != null)
+                {
+                    for (int i = 0; i < user.itinerario.listaTarea.Length; i++)
+                    {
+                        dgvTareasPendientes.Rows.Add(user.itinerario.listaTarea[i].idTarea, "Completo", user.itinerario.listaTarea[i].descripcion);
+                    }                    
+                }
+                listarCompletos = false;
+                btnListarPorTipo.Text = "Listar Incompletos";
+                btnListarPorTipo.IconChar = FontAwesome.Sharp.IconChar.Times;
+            }
+            else
+            {
+                user = _daoPersona.listarPorCodExacto_TareasInompletas(Int32.Parse(user.codigo))[0];
+                if (user.itinerario.listaTarea != null)
+                {
+                    for (int i = 0; i < user.itinerario.listaTarea.Length; i++)
+                    {
+                        dgvTareasPendientes.Rows.Add(user.itinerario.listaTarea[i].idTarea, "Incompleto", user.itinerario.listaTarea[i].descripcion);
+                    }                    
+                }
+                listarCompletos = true;
+                btnListarPorTipo.Text = "Listar Completos";
+                btnListarPorTipo.IconChar = FontAwesome.Sharp.IconChar.Check;
+            }
+
+        }
+
+        private void btnListarCompletos_Click(object sender, EventArgs e)
+        {
+            user = _daoPersona.listarPorCodExacto(Int32.Parse(user.codigo))[0];
+            colocarEnDGV(user.itinerario.listaTarea);
         }
     }
 }

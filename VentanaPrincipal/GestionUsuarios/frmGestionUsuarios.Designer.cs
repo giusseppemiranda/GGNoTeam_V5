@@ -38,20 +38,18 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnActualizarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnAgregarUsuario = new FontAwesome.Sharp.IconButton();
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
+            this.txtBoxBusqueda = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.btnBuscar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
+            this.btnVerTareas = new FontAwesome.Sharp.IconButton();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Itinerario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Validacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtBoxBusqueda = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.btnBuscar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
-            this.btnVerTareas = new FontAwesome.Sharp.IconButton();
-            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -218,8 +216,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Nombre,
             this.Apellidos,
             this.Correo,
-            this.Itinerario,
-            this.TipoUsuario,
             this.Password,
             this.Validacion,
             this.Rol});
@@ -236,76 +232,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonas.Size = new System.Drawing.Size(912, 407);
             this.dgvPersonas.TabIndex = 24;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 43;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 68;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 76;
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.Name = "Apellidos";
-            this.Apellidos.ReadOnly = true;
-            this.Apellidos.Width = 80;
-            // 
-            // Correo
-            // 
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            this.Correo.Width = 68;
-            // 
-            // Itinerario
-            // 
-            this.Itinerario.HeaderText = "Itiner.";
-            this.Itinerario.Name = "Itinerario";
-            this.Itinerario.ReadOnly = true;
-            this.Itinerario.Width = 63;
-            // 
-            // TipoUsuario
-            // 
-            this.TipoUsuario.HeaderText = "Tipo";
-            this.TipoUsuario.Name = "TipoUsuario";
-            this.TipoUsuario.ReadOnly = true;
-            this.TipoUsuario.Width = 54;
-            // 
-            // Password
-            // 
-            this.Password.HeaderText = "Contraseña";
-            this.Password.Name = "Password";
-            this.Password.ReadOnly = true;
-            this.Password.Width = 92;
-            // 
-            // Validacion
-            // 
-            this.Validacion.HeaderText = "Validacion";
-            this.Validacion.Name = "Validacion";
-            this.Validacion.ReadOnly = true;
-            this.Validacion.Width = 85;
-            // 
-            // Rol
-            // 
-            this.Rol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
-            this.Rol.ReadOnly = true;
             // 
             // txtBoxBusqueda
             // 
@@ -385,6 +311,62 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.lblTitulo.TabIndex = 29;
             this.lblTitulo.Text = "Gestión de Usuarios";
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 43;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 68;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 76;
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.Name = "Apellidos";
+            this.Apellidos.ReadOnly = true;
+            this.Apellidos.Width = 80;
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Width = 68;
+            // 
+            // Password
+            // 
+            this.Password.HeaderText = "Contraseña";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            this.Password.Width = 92;
+            // 
+            // Validacion
+            // 
+            this.Validacion.HeaderText = "Validacion";
+            this.Validacion.Name = "Validacion";
+            this.Validacion.ReadOnly = true;
+            this.Validacion.Width = 85;
+            // 
+            // Rol
+            // 
+            this.Rol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Rol.HeaderText = "Rol";
+            this.Rol.Name = "Rol";
+            this.Rol.ReadOnly = true;
+            // 
             // frmGestionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,16 +404,14 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private Recursos.UserControls.GGTextBox txtBoxBusqueda;
         private Recursos.UserControls.GGButton btnBuscar;
         private FontAwesome.Sharp.IconButton btnVerTareas;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Itinerario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn Validacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
-        private System.Windows.Forms.Label lblTitulo;
     }
 }

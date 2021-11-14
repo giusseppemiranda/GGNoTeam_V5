@@ -114,7 +114,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         {
             for (int i = 0; i < lista.Length; i++)
             {
-                dgvPersonas.Rows.Add(lista[i].idPersona, lista[i].codigo, lista[i].nombre, lista[i].apellidos, lista[i].correo, lista[i].itinerario.idItineraio, lista[i].tipoUsuario, lista[i].contraseña, lista[i].validacion, lista[i].rol);
+                dgvPersonas.Rows.Add(lista[i].idPersona, lista[i].codigo, lista[i].nombre, lista[i].apellidos, lista[i].correo, lista[i].contraseña, lista[i].validacion, lista[i].rol);
             }
         }
 

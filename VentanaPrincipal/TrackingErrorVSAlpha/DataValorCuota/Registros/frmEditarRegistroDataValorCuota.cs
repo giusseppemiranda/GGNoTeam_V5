@@ -16,38 +16,55 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         private TrackingErrorWS.TrackingErrorWSClient _daoTE;
         private TrackingErrorWS.dataValorCuota dato;
         private bool insertar = false;
-        public frmEditarRegistroDataValorCuota()
+
+        //INSERTAR DATA VALOR CUOTA
+        public frmEditarRegistroDataValorCuota(TrackingErrorWS.afp[] listaAfps)
         {
             InitializeComponent();
-            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             cambiarTema();
             cargarCombo();
+            cargarComboAFP(listaAfps);
+            
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();            
             dato = new TrackingErrorWS.dataValorCuota();
+            comboAFP.SelectedIndex = 0;
             comboFondo.SelectedIndex = 0;
+            lblCodigo.Text = "INSERTAR DATA VALOR CUOTA";
             insertar = true;
         }
 
-        public frmEditarRegistroDataValorCuota(TrackingErrorWS.dataValorCuota dato)
+        //EDITAR DATA VALOR CUOTA
+        public frmEditarRegistroDataValorCuota(TrackingErrorWS.dataValorCuota dato, TrackingErrorWS.afp[] listaAfps, int tipoFondo)
         {
             InitializeComponent();
-            this.dato = dato;
-            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             cambiarTema();
             cargarCombo();
-            comboFondo.SelectedIndex = 0;
+            cargarComboAFP(listaAfps);
 
+            lblCodigo.Text = "EDITAR DATA VALOR CUOTA";
+            this.dato = dato;
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();            
+            comboFondo.SelectedIndex = tipoFondo;
             dateTimePicker1.Value = dato.fecha;
-            comboFondo.SelectedIndex = 0;
+            comboAFP.SelectedIndex = dato.fidAFP-1;
             boxPatrimonio.Texts = dato.patrimonio.ToString();
             boxCuota.Texts = dato.cuotas.ToString();
             boxValorCuota.Texts = dato.valorCuota.ToString();
+        }
+
+        private void cargarComboAFP(TrackingErrorWS.afp[] listaAfps)
+        {
+            for(int i = 0; i < listaAfps.Length; i++)
+            {
+                comboAFP.Items.Add(listaAfps[i].nombre);
+            }            
         }
 
         private void cargarCombo()
         {
             comboFondo.Items.Add("Fondo 1");
             comboFondo.Items.Add("Fondo 2");
-            //comboFondo.Items.Add("Fondo 3");
+            comboFondo.Items.Add("Fondo 3");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -94,21 +111,25 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
                 if (insertar)
                 {
                     i = _daoTE.insertarDataValorCuota(dato, comboFondo.SelectedIndex+1);
+                    if(i == 1)
+                    {
+                        MessageBox.Show("Se insertó correctamente.");
+                    } else
+                    {
+                        MessageBox.Show("No se han insertado los valores en la base de datos");
+                    }
                 } else
                 {
                     i = _daoTE.modificarDataValorCuota(dato, comboFondo.SelectedIndex+1);
-
-                }
-                
-                if (i == 1)
-                {
-                    MessageBox.Show("TODO CORRECTO");
-                    this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("HAY ERROR");
-                }
+                    if (i == 1)
+                    {
+                        MessageBox.Show("Se modificó correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se han modificado los valores en la base de datos");
+                    }
+                }                                
             }
             catch 
             {

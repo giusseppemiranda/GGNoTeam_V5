@@ -250,17 +250,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarAssetError">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="asset" type="tns:assetError" />
-      <xs:element name="idFondo" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarAssetErrorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarDataValorCuota">
     <xs:sequence>
       <xs:element minOccurs="0" name="dataVC" type="tns:dataValorCuota" />
@@ -268,6 +257,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAssetError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asset" type="tns:assetError" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAssetErrorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

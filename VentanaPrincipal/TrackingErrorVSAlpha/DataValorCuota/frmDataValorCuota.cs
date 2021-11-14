@@ -1,5 +1,6 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Registros;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
@@ -20,6 +21,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
             _dao = new TrackingErrorWS.TrackingErrorWSClient();
 
+            Global.pintarDGV(ref dgvDataValorCuota, Color.DarkSalmon);
             cambiarTema();
             cargarCombo();
             cargarNombresAFP();          
@@ -56,7 +58,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         private void btnAgregarRegistros_Click(object sender, System.EventArgs e)
         {
-            frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota();
+            frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(listaAfps);
             ventanaAgregar.ShowDialog();
             dgvDataValorCuota.Refresh();
         }
@@ -65,7 +67,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         {
             if (dgvDataValorCuota.CurrentRow != null)
             {
-                frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index]);
+                frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index],listaAfps,comboFondo.SelectedIndex);
                 ventanaAgregar.ShowDialog();
             }
 
@@ -80,7 +82,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                 dgvDataValorCuota.Rows.Clear();
                 for(int i = 0; i < datos.Length; i++)
                 {
-                    dgvDataValorCuota.Rows.Add(datos[i].idDataValorCuota,datos[i].fecha,listaAfps[datos[i].fidAFP-1].nombre,comboFondo.SelectedItem.ToString(),datos[i].patrimonio,datos[i].cuotas,datos[i].valorCuota);
+                    dgvDataValorCuota.Rows.Add(datos[i].idDataValorCuota,datos[i].fecha.ToString("dd/MM/yyyy"),listaAfps[datos[i].fidAFP-1].nombre,comboFondo.SelectedItem.ToString(),datos[i].patrimonio,datos[i].cuotas,datos[i].valorCuota);
                 }
                 
             }

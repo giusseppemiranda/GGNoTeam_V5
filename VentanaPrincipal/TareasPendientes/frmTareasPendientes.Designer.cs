@@ -31,17 +31,18 @@ namespace GGNoTeam_V5.VentanaPrincipal
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Periodicidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnModificarTarea = new FontAwesome.Sharp.IconButton();
             this.btnAgregarTarea = new FontAwesome.Sharp.IconButton();
+            this.btnListarPorTipo = new FontAwesome.Sharp.IconButton();
+            this.btnListarCompletos = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,19 +67,26 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvTareasPendientes.ColumnHeadersHeight = 25;
             this.dgvTareasPendientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Descripcion,
-            this.Hora,
-            this.Periodicidad,
-            this.Estado});
+            this.Estado,
+            this.Descripcion});
             this.dgvTareasPendientes.EnableHeadersVisualStyles = false;
             this.dgvTareasPendientes.Location = new System.Drawing.Point(34, 49);
             this.dgvTareasPendientes.MultiSelect = false;
             this.dgvTareasPendientes.Name = "dgvTareasPendientes";
             this.dgvTareasPendientes.ReadOnly = true;
             this.dgvTareasPendientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvTareasPendientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTareasPendientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvTareasPendientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTareasPendientes.RowTemplate.Height = 25;
             this.dgvTareasPendientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTareasPendientes.Size = new System.Drawing.Size(917, 432);
@@ -93,36 +101,20 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.ID.ReadOnly = true;
             this.ID.Width = 76;
             // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 95;
-            // 
-            // Hora
-            // 
-            this.Hora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Hora.HeaderText = "Hora Creación";
-            this.Hora.Name = "Hora";
-            this.Hora.ReadOnly = true;
-            this.Hora.Width = 108;
-            // 
-            // Periodicidad
-            // 
-            this.Periodicidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Periodicidad.HeaderText = "Periodicidad";
-            this.Periodicidad.Name = "Periodicidad";
-            this.Periodicidad.ReadOnly = true;
-            this.Periodicidad.Width = 98;
-            // 
             // Estado
             // 
-            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
+            this.Estado.Width = 66;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             // 
             // lblNombre
             // 
@@ -227,11 +219,59 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnAgregarTarea.UseVisualStyleBackColor = false;
             this.btnAgregarTarea.Click += new System.EventHandler(this.btnAgregarTarea_Click);
             // 
+            // btnListarPorTipo
+            // 
+            this.btnListarPorTipo.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnListarPorTipo.FlatAppearance.BorderSize = 0;
+            this.btnListarPorTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarPorTipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnListarPorTipo.ForeColor = System.Drawing.Color.White;
+            this.btnListarPorTipo.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnListarPorTipo.IconColor = System.Drawing.Color.White;
+            this.btnListarPorTipo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnListarPorTipo.IconSize = 32;
+            this.btnListarPorTipo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnListarPorTipo.Location = new System.Drawing.Point(34, 487);
+            this.btnListarPorTipo.Name = "btnListarPorTipo";
+            this.btnListarPorTipo.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnListarPorTipo.Size = new System.Drawing.Size(151, 52);
+            this.btnListarPorTipo.TabIndex = 32;
+            this.btnListarPorTipo.Text = "Listar Completos";
+            this.btnListarPorTipo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnListarPorTipo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnListarPorTipo.UseVisualStyleBackColor = false;
+            this.btnListarPorTipo.Click += new System.EventHandler(this.btnListarPorTipo_Click);
+            // 
+            // btnListarCompletos
+            // 
+            this.btnListarCompletos.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnListarCompletos.FlatAppearance.BorderSize = 0;
+            this.btnListarCompletos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarCompletos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnListarCompletos.ForeColor = System.Drawing.Color.White;
+            this.btnListarCompletos.IconChar = FontAwesome.Sharp.IconChar.CheckDouble;
+            this.btnListarCompletos.IconColor = System.Drawing.Color.White;
+            this.btnListarCompletos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnListarCompletos.IconSize = 32;
+            this.btnListarCompletos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnListarCompletos.Location = new System.Drawing.Point(191, 487);
+            this.btnListarCompletos.Name = "btnListarCompletos";
+            this.btnListarCompletos.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnListarCompletos.Size = new System.Drawing.Size(151, 52);
+            this.btnListarCompletos.TabIndex = 33;
+            this.btnListarCompletos.Text = "Listar Total Tareas";
+            this.btnListarCompletos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnListarCompletos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnListarCompletos.UseVisualStyleBackColor = false;
+            this.btnListarCompletos.Click += new System.EventHandler(this.btnListarCompletos_Click);
+            // 
             // frmTareasPendientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 553);
+            this.Controls.Add(this.btnListarCompletos);
+            this.Controls.Add(this.btnListarPorTipo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
@@ -256,11 +296,11 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private FontAwesome.Sharp.IconButton btnAgregarTarea;
         private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Periodicidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private FontAwesome.Sharp.IconButton btnListarPorTipo;
+        private FontAwesome.Sharp.IconButton btnListarCompletos;
     }
 }

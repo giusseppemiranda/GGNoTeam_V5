@@ -30,18 +30,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         private void InitializeComponent()
         {
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.boxAFP = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNombreAFP = new System.Windows.Forms.Label();
+            this.lblFondo = new System.Windows.Forms.Label();
             this.boxPatrimonio = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPatrimonio = new System.Windows.Forms.Label();
             this.boxCuota = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblCuota = new System.Windows.Forms.Label();
             this.boxValorCuota = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblValorCuota = new System.Windows.Forms.Label();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.comboAFP = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.SuspendLayout();
             // 
@@ -50,63 +51,37 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCodigo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCodigo.Location = new System.Drawing.Point(110, 131);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(55, 73);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(86, 32);
+            this.lblCodigo.Size = new System.Drawing.Size(42, 15);
             this.lblCodigo.TabIndex = 28;
             this.lblCodigo.Text = "Fecha:";
             // 
-            // boxAFP
+            // lblNombreAFP
             // 
-            this.boxAFP.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.boxAFP.BackColor = System.Drawing.SystemColors.Window;
-            this.boxAFP.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxAFP.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxAFP.BorderSize = 2;
-            this.boxAFP.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxAFP.ForeColor = System.Drawing.Color.DimGray;
-            this.boxAFP.IsFocused = false;
-            this.boxAFP.Location = new System.Drawing.Point(380, 215);
-            this.boxAFP.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.boxAFP.MaxLength = 32767;
-            this.boxAFP.Multiline = false;
-            this.boxAFP.Name = "boxAFP";
-            this.boxAFP.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.boxAFP.PasswordChar = false;
-            this.boxAFP.Size = new System.Drawing.Size(428, 61);
-            this.boxAFP.TabIndex = 31;
-            this.boxAFP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxAFP.Texts = "";
-            this.boxAFP.UnderlinedStyle = true;
+            this.lblNombreAFP.AutoSize = true;
+            this.lblNombreAFP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombreAFP.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblNombreAFP.Location = new System.Drawing.Point(55, 119);
+            this.lblNombreAFP.Name = "lblNombreAFP";
+            this.lblNombreAFP.Size = new System.Drawing.Size(31, 15);
+            this.lblNombreAFP.TabIndex = 30;
+            this.lblNombreAFP.Text = "AFP:";
             // 
-            // label1
+            // lblFondo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(110, 238);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 32);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "AFP:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(110, 356);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 32);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Fondo:";
+            this.lblFondo.AutoSize = true;
+            this.lblFondo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFondo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblFondo.Location = new System.Drawing.Point(55, 166);
+            this.lblFondo.Name = "lblFondo";
+            this.lblFondo.Size = new System.Drawing.Size(44, 15);
+            this.lblFondo.TabIndex = 32;
+            this.lblFondo.Text = "Fondo:";
             // 
             // boxPatrimonio
             // 
-            this.boxPatrimonio.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.boxPatrimonio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxPatrimonio.BackColor = System.Drawing.SystemColors.Window;
             this.boxPatrimonio.BorderColor = System.Drawing.Color.DodgerBlue;
             this.boxPatrimonio.BorderFocusColor = System.Drawing.Color.MidnightBlue;
@@ -114,34 +89,32 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxPatrimonio.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxPatrimonio.ForeColor = System.Drawing.Color.DimGray;
             this.boxPatrimonio.IsFocused = false;
-            this.boxPatrimonio.Location = new System.Drawing.Point(380, 444);
-            this.boxPatrimonio.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxPatrimonio.Location = new System.Drawing.Point(190, 198);
             this.boxPatrimonio.MaxLength = 32767;
             this.boxPatrimonio.Multiline = false;
             this.boxPatrimonio.Name = "boxPatrimonio";
-            this.boxPatrimonio.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.boxPatrimonio.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.boxPatrimonio.PasswordChar = false;
-            this.boxPatrimonio.Size = new System.Drawing.Size(428, 61);
+            this.boxPatrimonio.Size = new System.Drawing.Size(214, 30);
             this.boxPatrimonio.TabIndex = 35;
             this.boxPatrimonio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxPatrimonio.Texts = "";
             this.boxPatrimonio.UnderlinedStyle = true;
             // 
-            // label3
+            // lblPatrimonio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(110, 467);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 32);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Patrimonio:";
+            this.lblPatrimonio.AutoSize = true;
+            this.lblPatrimonio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPatrimonio.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblPatrimonio.Location = new System.Drawing.Point(55, 210);
+            this.lblPatrimonio.Name = "lblPatrimonio";
+            this.lblPatrimonio.Size = new System.Drawing.Size(71, 15);
+            this.lblPatrimonio.TabIndex = 34;
+            this.lblPatrimonio.Text = "Patrimonio:";
             // 
             // boxCuota
             // 
-            this.boxCuota.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.boxCuota.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxCuota.BackColor = System.Drawing.SystemColors.Window;
             this.boxCuota.BorderColor = System.Drawing.Color.DodgerBlue;
             this.boxCuota.BorderFocusColor = System.Drawing.Color.MidnightBlue;
@@ -149,34 +122,32 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxCuota.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxCuota.ForeColor = System.Drawing.Color.DimGray;
             this.boxCuota.IsFocused = false;
-            this.boxCuota.Location = new System.Drawing.Point(380, 556);
-            this.boxCuota.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxCuota.Location = new System.Drawing.Point(191, 243);
             this.boxCuota.MaxLength = 32767;
             this.boxCuota.Multiline = false;
             this.boxCuota.Name = "boxCuota";
-            this.boxCuota.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.boxCuota.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.boxCuota.PasswordChar = false;
-            this.boxCuota.Size = new System.Drawing.Size(428, 61);
+            this.boxCuota.Size = new System.Drawing.Size(214, 30);
             this.boxCuota.TabIndex = 37;
             this.boxCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxCuota.Texts = "";
             this.boxCuota.UnderlinedStyle = true;
             // 
-            // label4
+            // lblCuota
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(110, 579);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 32);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Cuota:";
+            this.lblCuota.AutoSize = true;
+            this.lblCuota.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCuota.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblCuota.Location = new System.Drawing.Point(56, 255);
+            this.lblCuota.Name = "lblCuota";
+            this.lblCuota.Size = new System.Drawing.Size(42, 15);
+            this.lblCuota.TabIndex = 36;
+            this.lblCuota.Text = "Cuota:";
             // 
             // boxValorCuota
             // 
-            this.boxValorCuota.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.boxValorCuota.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxValorCuota.BackColor = System.Drawing.SystemColors.Window;
             this.boxValorCuota.BorderColor = System.Drawing.Color.DodgerBlue;
             this.boxValorCuota.BorderFocusColor = System.Drawing.Color.MidnightBlue;
@@ -184,30 +155,28 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxValorCuota.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxValorCuota.ForeColor = System.Drawing.Color.DimGray;
             this.boxValorCuota.IsFocused = false;
-            this.boxValorCuota.Location = new System.Drawing.Point(380, 669);
-            this.boxValorCuota.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxValorCuota.Location = new System.Drawing.Point(191, 290);
             this.boxValorCuota.MaxLength = 32767;
             this.boxValorCuota.Multiline = false;
             this.boxValorCuota.Name = "boxValorCuota";
-            this.boxValorCuota.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.boxValorCuota.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.boxValorCuota.PasswordChar = false;
-            this.boxValorCuota.Size = new System.Drawing.Size(428, 61);
+            this.boxValorCuota.Size = new System.Drawing.Size(214, 30);
             this.boxValorCuota.TabIndex = 39;
             this.boxValorCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxValorCuota.Texts = "";
             this.boxValorCuota.UnderlinedStyle = true;
             // 
-            // label5
+            // lblValorCuota
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(110, 692);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 32);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Valor Cuota:";
+            this.lblValorCuota.AutoSize = true;
+            this.lblValorCuota.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblValorCuota.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblValorCuota.Location = new System.Drawing.Point(56, 297);
+            this.lblValorCuota.Name = "lblValorCuota";
+            this.lblValorCuota.Size = new System.Drawing.Size(73, 15);
+            this.lblValorCuota.TabIndex = 38;
+            this.lblValorCuota.Text = "Valor Cuota:";
             // 
             // btnCancelar
             // 
@@ -220,10 +189,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(454, 796);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(230, 346);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(168, 90);
+            this.btnCancelar.Size = new System.Drawing.Size(84, 47);
             this.btnCancelar.TabIndex = 41;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
@@ -241,10 +209,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(642, 796);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSiguiente.Location = new System.Drawing.Point(324, 346);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(168, 90);
+            this.btnSiguiente.Size = new System.Drawing.Size(84, 47);
             this.btnSiguiente.TabIndex = 40;
             this.btnSiguiente.Text = "Aceptar";
             this.btnSiguiente.TextColor = System.Drawing.Color.White;
@@ -253,14 +220,46 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(380, 121);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker1.Location = new System.Drawing.Point(190, 68);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(424, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(214, 20);
             this.dateTimePicker1.TabIndex = 42;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(187, 23);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(49, 15);
+            this.lblTitulo.TabIndex = 44;
+            this.lblTitulo.Text = "TITULO";
+            // 
+            // comboAFP
+            // 
+            this.comboAFP.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboAFP.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboAFP.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboAFP.BorderSize = 1;
+            this.comboAFP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboAFP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboAFP.ForeColor = System.Drawing.Color.DimGray;
+            this.comboAFP.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboAFP.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboAFP.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboAFP.Location = new System.Drawing.Point(190, 104);
+            this.comboAFP.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboAFP.Name = "comboAFP";
+            this.comboAFP.Padding = new System.Windows.Forms.Padding(1);
+            this.comboAFP.Size = new System.Drawing.Size(214, 30);
+            this.comboAFP.TabIndex = 45;
+            this.comboAFP.Texts = "";
             // 
             // comboFondo
             // 
+            this.comboFondo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.comboFondo.BorderSize = 1;
@@ -270,36 +269,35 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboFondo.Location = new System.Drawing.Point(380, 327);
-            this.comboFondo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.comboFondo.MinimumSize = new System.Drawing.Size(400, 58);
+            this.comboFondo.Location = new System.Drawing.Point(190, 151);
+            this.comboFondo.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboFondo.Name = "comboFondo";
-            this.comboFondo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboFondo.Size = new System.Drawing.Size(428, 58);
-            this.comboFondo.TabIndex = 43;
+            this.comboFondo.Padding = new System.Windows.Forms.Padding(1);
+            this.comboFondo.Size = new System.Drawing.Size(214, 30);
+            this.comboFondo.TabIndex = 46;
             this.comboFondo.Texts = "";
             // 
             // frmEditarRegistroDataValorCuota
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 973);
+            this.ClientSize = new System.Drawing.Size(453, 410);
             this.Controls.Add(this.comboFondo);
+            this.Controls.Add(this.comboAFP);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.boxValorCuota);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblValorCuota);
             this.Controls.Add(this.boxCuota);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblCuota);
             this.Controls.Add(this.boxPatrimonio);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.boxAFP);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPatrimonio);
+            this.Controls.Add(this.lblFondo);
+            this.Controls.Add(this.lblNombreAFP);
             this.Controls.Add(this.lblCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmEditarRegistroDataValorCuota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAgregarRegistroDataValorCuota";
@@ -310,18 +308,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
 
         #endregion
         private System.Windows.Forms.Label lblCodigo;
-        private Recursos.UserControls.GGTextBox boxAFP;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNombreAFP;
+        private System.Windows.Forms.Label lblFondo;
         private Recursos.UserControls.GGTextBox boxPatrimonio;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPatrimonio;
         private Recursos.UserControls.GGTextBox boxCuota;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCuota;
         private Recursos.UserControls.GGTextBox boxValorCuota;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblValorCuota;
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lblTitulo;
+        private Recursos.UserControls.GGComboBox comboAFP;
         private Recursos.UserControls.GGComboBox comboFondo;
     }
 }

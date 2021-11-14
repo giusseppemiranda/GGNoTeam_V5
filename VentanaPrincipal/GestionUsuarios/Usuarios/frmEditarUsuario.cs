@@ -19,6 +19,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
         private LoginWS.LoginWSClient _daoCliente;
         private LoginWS.persona persona;
 
+        //Modificar usuario
         public frmEditarUsuario(LoginWS.persona usuario, Color indicadorVentana, frmGestionUsuarios ventana)
         {
             InitializeComponent();
@@ -28,10 +29,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             _daoCliente = new LoginWS.LoginWSClient();    
             panelIndicadorVentana.BackColor = indicadorVentana;
             ventanaPadre = ventana;
+            lblTitulo.Text = "MODIFICAR USUARIO";
             btnSiguiente.Text = "Actualizar";
         }
 
 
+        //Agregar usuario
         public frmEditarUsuario(Color indicadorVentana, frmGestionUsuarios ventana)
         {
             InitializeComponent();
@@ -39,13 +42,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             _daoCliente = new LoginWS.LoginWSClient();
             panelIndicadorVentana.BackColor = indicadorVentana;
             ventanaPadre = ventana;
+            lblTitulo.Text = "INSERTAR USUARIO";
             btnSiguiente.Text = "Insertar";
             cargarTiposUsuarios();
+            comboBoxTipoUsuario.SelectedIndex = 2;
         }
 
-        //
-        //Modificar en base a la base de datos
-        //
+
         private void cargarTiposUsuarios()
         {
             ListaTiposUsuarios.Add("Administrador");
@@ -71,9 +74,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             comboBoxTipoUsuario.SelectedIndex = persona.tipoUsuario - 1;
 
             boxContraseña.Texts = persona.contraseña;
-            boxCodigoValidacion.Texts = persona.validacion;
-            boxRol.Texts = persona.rol;
-
+            boxCodigoValidacion.Texts = persona.validacion;            
         }
 
         public void cambiarTema()
@@ -93,16 +94,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.BackColor = Global.FrmOscuro_2;
             boxID.BackColor = Color.Black;
             boxID.BorderColor = boxID.BackColor;
-            
+            boxItinerario.BackColor = boxID.BackColor;
+            boxItinerario.BorderColor = boxID.BackColor;
             Global.pintarTxtBoxOscuro(ref boxCodigo);
             Global.pintarTxtBoxOscuro(ref boxNombres);
             Global.pintarTxtBoxOscuro(ref boxApellidos);
-            Global.pintarTxtBoxOscuro(ref boxCorreo);
-            Global.pintarTxtBoxOscuro(ref boxItinerario);
+            Global.pintarTxtBoxOscuro(ref boxCorreo);            
             Global.pintarComboBoxOscuro(ref comboBoxTipoUsuario);
             Global.pintarTxtBoxOscuro(ref boxContraseña);
-            Global.pintarTxtBoxOscuro(ref boxCodigoValidacion);
-            Global.pintarTxtBoxOscuro(ref boxRol);
+            Global.pintarTxtBoxOscuro(ref boxCodigoValidacion);            
             Global.pintarBtnOscuro(ref btnSiguiente);
         }
 
@@ -111,15 +111,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.BackColor = Global.FrmClaro_2;
             boxID.BackColor = Color.DarkGray;
             boxID.BorderColor = boxID.BackColor;
+            boxItinerario.BackColor = boxID.BackColor;
+            boxItinerario.BorderColor = boxID.BackColor;
             Global.pintarTxtBoxClaro(ref boxCodigo);
             Global.pintarTxtBoxClaro(ref boxNombres);
             Global.pintarTxtBoxClaro(ref boxApellidos);
-            Global.pintarTxtBoxClaro(ref boxCorreo);
-            Global.pintarTxtBoxClaro(ref boxItinerario);
+            Global.pintarTxtBoxClaro(ref boxCorreo);            
             Global.pintarComboBoxClaro(ref comboBoxTipoUsuario);    
             Global.pintarTxtBoxClaro(ref boxContraseña);
-            Global.pintarTxtBoxClaro(ref boxCodigoValidacion);
-            Global.pintarTxtBoxClaro(ref boxRol);
+            Global.pintarTxtBoxClaro(ref boxCodigoValidacion);            
             Global.pintarBtnClaro(ref btnSiguiente);
         }
 
@@ -146,6 +146,42 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+
+            if(boxCodigo.Texts == "")
+            {
+                MessageBox.Show("El codigo del usuario no puede ser vacío. Intente nuevamente.");
+                return;
+            }
+
+            if(boxNombres.Texts == "")
+            {
+                MessageBox.Show("El nombre del usuario no puede ser vacío. Intente nuevamente.");
+                return;
+            }
+
+            if (boxApellidos.Texts == "")
+            {
+                MessageBox.Show("El apellido del usuario no puede ser vacío. Intente nuevamente.");
+                return;
+            }
+
+            if (boxCorreo.Texts == "")
+            {
+                MessageBox.Show("El correo del usuario no puede ser vacío. Intente nuevamente.");
+                return;
+            }
+
+            if (boxContraseña.Texts.Length >= 15)
+            {
+                MessageBox.Show("La contraseña no puede tener más de 15 caractéres. Intente nuevamente.");
+                return;
+            }
+
+            if (boxCodigoValidacion.Texts.Length != 4)
+            {
+                MessageBox.Show("El código de validación de ingreso por correo es un número de 4 digitos. Intente nuevamente.");
+                return;
+            }
 
             ventanaPadre.activarBotones();
             
@@ -177,8 +213,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             persona.contraseña = boxContraseña.Texts;            
             persona.correo = boxCorreo.Texts;
             persona.validacion = boxCodigoValidacion.Texts.ToString();
-            persona.tipoUsuario = comboBoxTipoUsuario.SelectedIndex + 1;
-            persona.rol = boxRol.Texts;
+            persona.tipoUsuario = comboBoxTipoUsuario.SelectedIndex + 1;            
         }
 
         private void cargarDatos()
@@ -192,8 +227,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             persona.itinerario.idItineraio = Int32.Parse(boxItinerario.Texts);  
             persona.correo = boxCorreo.Texts;           
             persona.validacion = boxCodigoValidacion.Texts.ToString();
-            persona.tipoUsuario = comboBoxTipoUsuario.SelectedIndex + 1;
-            persona.rol = boxRol.Texts;
+            persona.tipoUsuario = comboBoxTipoUsuario.SelectedIndex + 1;            
         }
     }
 }

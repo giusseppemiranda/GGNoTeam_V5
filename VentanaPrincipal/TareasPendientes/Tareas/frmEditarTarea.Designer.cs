@@ -30,18 +30,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private void InitializeComponent()
         {
             this.lblEstado = new System.Windows.Forms.Label();
-            this.lblPlazo = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.comboBoxEstado = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.lblIndicación = new System.Windows.Forms.Label();
-            this.boxPlazo = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.boxHora = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxDescripcion = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.boxID = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.boxID = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.SuspendLayout();
             // 
             // lblEstado
@@ -49,40 +46,18 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblEstado.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblEstado.Location = new System.Drawing.Point(44, 244);
+            this.lblEstado.Location = new System.Drawing.Point(44, 187);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(46, 15);
             this.lblEstado.TabIndex = 44;
             this.lblEstado.Text = "Estado:";
-            // 
-            // lblPlazo
-            // 
-            this.lblPlazo.AutoSize = true;
-            this.lblPlazo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPlazo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblPlazo.Location = new System.Drawing.Point(43, 195);
-            this.lblPlazo.Name = "lblPlazo";
-            this.lblPlazo.Size = new System.Drawing.Size(88, 15);
-            this.lblPlazo.TabIndex = 43;
-            this.lblPlazo.Text = "Plazo (en días):";
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblHora.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblHora.Location = new System.Drawing.Point(43, 151);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(87, 15);
-            this.lblHora.TabIndex = 42;
-            this.lblHora.Text = "Hora creación:";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblDescripcion.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblDescripcion.Location = new System.Drawing.Point(44, 107);
+            this.lblDescripcion.Location = new System.Drawing.Point(44, 133);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(75, 15);
             this.lblDescripcion.TabIndex = 41;
@@ -93,7 +68,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblID.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblID.Location = new System.Drawing.Point(44, 63);
+            this.lblID.Location = new System.Drawing.Point(44, 87);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(56, 15);
             this.lblID.TabIndex = 40;
@@ -116,11 +91,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.comboBoxEstado.IconColor = System.Drawing.Color.DodgerBlue;
             this.comboBoxEstado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxEstado.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxEstado.Location = new System.Drawing.Point(158, 232);
+            this.comboBoxEstado.Location = new System.Drawing.Point(158, 167);
             this.comboBoxEstado.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBoxEstado.Size = new System.Drawing.Size(214, 28);
+            this.comboBoxEstado.Size = new System.Drawing.Size(231, 35);
             this.comboBoxEstado.TabIndex = 57;
             this.comboBoxEstado.Texts = "";
             // 
@@ -131,58 +106,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.lblIndicación.AutoSize = true;
             this.lblIndicación.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblIndicación.ForeColor = System.Drawing.Color.Tomato;
-            this.lblIndicación.Location = new System.Drawing.Point(155, 34);
+            this.lblIndicación.Location = new System.Drawing.Point(155, 58);
             this.lblIndicación.Name = "lblIndicación";
             this.lblIndicación.Size = new System.Drawing.Size(234, 15);
             this.lblIndicación.TabIndex = 56;
             this.lblIndicación.Text = "El campo ID se genera automaticamente.";
-            // 
-            // boxPlazo
-            // 
-            this.boxPlazo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxPlazo.BackColor = System.Drawing.SystemColors.Window;
-            this.boxPlazo.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxPlazo.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxPlazo.BorderSize = 2;
-            this.boxPlazo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxPlazo.ForeColor = System.Drawing.Color.DimGray;
-            this.boxPlazo.IsFocused = false;
-            this.boxPlazo.Location = new System.Drawing.Point(158, 184);
-            this.boxPlazo.MaxLength = 32767;
-            this.boxPlazo.Multiline = false;
-            this.boxPlazo.Name = "boxPlazo";
-            this.boxPlazo.Padding = new System.Windows.Forms.Padding(6);
-            this.boxPlazo.PasswordChar = false;
-            this.boxPlazo.Size = new System.Drawing.Size(214, 30);
-            this.boxPlazo.TabIndex = 55;
-            this.boxPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxPlazo.Texts = "";
-            this.boxPlazo.UnderlinedStyle = true;
-            // 
-            // boxHora
-            // 
-            this.boxHora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxHora.BackColor = System.Drawing.SystemColors.Window;
-            this.boxHora.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxHora.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxHora.BorderSize = 2;
-            this.boxHora.Enabled = false;
-            this.boxHora.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxHora.ForeColor = System.Drawing.Color.DimGray;
-            this.boxHora.IsFocused = false;
-            this.boxHora.Location = new System.Drawing.Point(158, 140);
-            this.boxHora.MaxLength = 32767;
-            this.boxHora.Multiline = false;
-            this.boxHora.Name = "boxHora";
-            this.boxHora.Padding = new System.Windows.Forms.Padding(6);
-            this.boxHora.PasswordChar = false;
-            this.boxHora.Size = new System.Drawing.Size(214, 30);
-            this.boxHora.TabIndex = 54;
-            this.boxHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxHora.Texts = "";
-            this.boxHora.UnderlinedStyle = true;
             // 
             // boxDescripcion
             // 
@@ -195,41 +123,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.boxDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxDescripcion.ForeColor = System.Drawing.Color.DimGray;
             this.boxDescripcion.IsFocused = false;
-            this.boxDescripcion.Location = new System.Drawing.Point(158, 96);
+            this.boxDescripcion.Location = new System.Drawing.Point(158, 121);
             this.boxDescripcion.MaxLength = 32767;
             this.boxDescripcion.Multiline = false;
             this.boxDescripcion.Name = "boxDescripcion";
             this.boxDescripcion.Padding = new System.Windows.Forms.Padding(6);
             this.boxDescripcion.PasswordChar = false;
-            this.boxDescripcion.Size = new System.Drawing.Size(214, 30);
+            this.boxDescripcion.Size = new System.Drawing.Size(231, 30);
             this.boxDescripcion.TabIndex = 53;
             this.boxDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxDescripcion.Texts = "";
             this.boxDescripcion.UnderlinedStyle = true;
-            // 
-            // boxID
-            // 
-            this.boxID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxID.BackColor = System.Drawing.SystemColors.Window;
-            this.boxID.BorderColor = System.Drawing.Color.Tomato;
-            this.boxID.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxID.BorderSize = 2;
-            this.boxID.Enabled = false;
-            this.boxID.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxID.ForeColor = System.Drawing.Color.DimGray;
-            this.boxID.IsFocused = false;
-            this.boxID.Location = new System.Drawing.Point(158, 52);
-            this.boxID.MaxLength = 32767;
-            this.boxID.Multiline = false;
-            this.boxID.Name = "boxID";
-            this.boxID.Padding = new System.Windows.Forms.Padding(6);
-            this.boxID.PasswordChar = false;
-            this.boxID.Size = new System.Drawing.Size(214, 30);
-            this.boxID.TabIndex = 52;
-            this.boxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxID.Texts = "";
-            this.boxID.UnderlinedStyle = false;
             // 
             // btnCancelar
             // 
@@ -242,7 +146,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(194, 291);
+            this.btnCancelar.Location = new System.Drawing.Point(196, 222);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 47);
             this.btnCancelar.TabIndex = 59;
@@ -262,7 +166,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(288, 291);
+            this.btnSiguiente.Location = new System.Drawing.Point(290, 222);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(84, 47);
             this.btnSiguiente.TabIndex = 58;
@@ -271,28 +175,62 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(154, 18);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(50, 20);
+            this.lblTitulo.TabIndex = 60;
+            this.lblTitulo.Text = "Titulo";
+            // 
+            // boxID
+            // 
+            this.boxID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.boxID.BackColor = System.Drawing.SystemColors.Window;
+            this.boxID.BorderColor = System.Drawing.Color.Tomato;
+            this.boxID.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxID.BorderSize = 2;
+            this.boxID.Enabled = false;
+            this.boxID.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxID.ForeColor = System.Drawing.Color.DimGray;
+            this.boxID.IsFocused = false;
+            this.boxID.Location = new System.Drawing.Point(158, 76);
+            this.boxID.MaxLength = 32767;
+            this.boxID.Multiline = false;
+            this.boxID.Name = "boxID";
+            this.boxID.Padding = new System.Windows.Forms.Padding(6);
+            this.boxID.PasswordChar = false;
+            this.boxID.Size = new System.Drawing.Size(231, 30);
+            this.boxID.TabIndex = 61;
+            this.boxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxID.Texts = "";
+            this.boxID.UnderlinedStyle = false;
+            // 
             // frmEditarTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 360);
+            this.ClientSize = new System.Drawing.Size(411, 290);
+            this.Controls.Add(this.boxID);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.comboBoxEstado);
             this.Controls.Add(this.lblIndicación);
-            this.Controls.Add(this.boxPlazo);
-            this.Controls.Add(this.boxHora);
             this.Controls.Add(this.boxDescripcion);
-            this.Controls.Add(this.boxID);
             this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.lblPlazo);
-            this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditarTarea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditarTarea";
+            this.Load += new System.EventHandler(this.frmEditarTarea_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,17 +238,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
 
         #endregion
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblPlazo;
-        private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblID;
         private Recursos.UserControls.GGComboBox comboBoxEstado;
         private System.Windows.Forms.Label lblIndicación;
-        private Recursos.UserControls.GGTextBox boxPlazo;
-        private Recursos.UserControls.GGTextBox boxHora;
         private Recursos.UserControls.GGTextBox boxDescripcion;
-        private Recursos.UserControls.GGTextBox boxID;
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;
+        private System.Windows.Forms.Label lblTitulo;
+        private Recursos.UserControls.GGTextBox boxID;
     }
 }

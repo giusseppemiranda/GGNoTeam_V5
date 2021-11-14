@@ -24,8 +24,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
         public frmPrincipal(frmLogin ventana, LoginWS.persona persona)
         {
             InitializeComponent();
-            abrirFormulario(new frmBienvenida(this, persona));            
-            usuario = persona;            
+            abrirFormulario(new frmBienvenida(this, persona));
+            usuario = persona;
             ventanaPadre = ventana;
             cargarPantallaSegunTipoUsuario();
             cambiarTema();
@@ -79,7 +79,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.BackColor = Global.FrmOscuro;
             this.panelCentral.BackColor = Global.FrmOscuro;
             Global.pintarControlBoxOscuro(ref panelControl, ref lblTitulo, ref btnCerrar, ref btnMinimizar, ref btnTemaOscuro);
-            Global.pintarMenuNavegacionOscuro(ref panelMenu, ref btnMenu, ref btnSignOut, ref btnUsuarios, ref btnHome,ref btnTEALPHA, ref btnMonitoreoOrdenes, ref btnOriginadorInstrumento, ref btnBandejaEntrada);
+            lblUser.ForeColor = lblTitulo.ForeColor;
+            Global.pintarMenuNavegacionOscuro(ref panelMenu, ref btnMenu, ref btnSignOut, ref btnUsuarios, ref btnHome, ref btnTEALPHA, ref btnMonitoreoOrdenes, ref btnOriginadorInstrumento, ref btnBandejaEntrada);
             if (iconoActivo != null)
             {
                 iconoActivo.BackColor = this.BackColor;
@@ -91,6 +92,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.BackColor = Global.FrmClaro;
             this.panelCentral.BackColor = Global.FrmClaro;
             Global.pintarControlBoxClaro(ref panelControl, ref lblTitulo, ref btnCerrar, ref btnMinimizar, ref btnTemaOscuro);
+            lblUser.ForeColor = lblTitulo.ForeColor;
             Global.pintarMenuNavegacionClaro(ref panelMenu, ref btnMenu, ref btnSignOut, ref btnUsuarios, ref btnHome, ref btnTEALPHA, ref btnMonitoreoOrdenes, ref btnOriginadorInstrumento, ref btnBandejaEntrada);
             if (iconoActivo != null)
             {
@@ -147,10 +149,10 @@ namespace GGNoTeam_V5.VentanaPrincipal
         }
 
         private void btnHome_Click(object sender, EventArgs e)
-        {            
+        {
             mostrarTareasPendientes();
             cambiarTemaIconosMenu(ref iconoActivo);
-            iconoActivo = btnHome;            
+            iconoActivo = btnHome;
             iconoActivo.BackColor = this.BackColor;
         }
 
@@ -181,7 +183,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             iconoActivo = btnTEALPHA;
             iconoActivo.BackColor = this.BackColor;
         }
-        
+
 
         private void btnUsuarios_MouseEnter(object sender, EventArgs e)
         {
@@ -205,12 +207,12 @@ namespace GGNoTeam_V5.VentanaPrincipal
             btnMonitoreoOrdenes.Text = "";
             btnOriginadorInstrumento.Text = "";
             btnBandejaEntrada.Text = "";
-            
+
         }
 
         private void btnMonitoreoOrdenes_Click(object sender, EventArgs e)
         {
-            
+
             cambiarTemaIconosMenu(ref iconoActivo);
             iconoActivo = btnMonitoreoOrdenes;
             iconoActivo.BackColor = this.BackColor;
@@ -226,8 +228,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void btnBandejaEntrada_Click(object sender, EventArgs e)
         {
-            //Gmail.conectar();
-            //Gmail.verMensajes();
             abrirFormulario(new frmGmail(this));
             cambiarTemaIconosMenu(ref iconoActivo);
             iconoActivo = btnBandejaEntrada;

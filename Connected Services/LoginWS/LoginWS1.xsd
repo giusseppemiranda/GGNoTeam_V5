@@ -10,6 +10,10 @@
   <xs:element name="listarNoUsuariosResponse" type="tns:listarNoUsuariosResponse" />
   <xs:element name="listarPorCodExacto" type="tns:listarPorCodExacto" />
   <xs:element name="listarPorCodExactoResponse" type="tns:listarPorCodExactoResponse" />
+  <xs:element name="listarPorCodExacto_TareasCompletas" type="tns:listarPorCodExacto_TareasCompletas" />
+  <xs:element name="listarPorCodExacto_TareasCompletasResponse" type="tns:listarPorCodExacto_TareasCompletasResponse" />
+  <xs:element name="listarPorCodExacto_TareasInompletas" type="tns:listarPorCodExacto_TareasInompletas" />
+  <xs:element name="listarPorCodExacto_TareasInompletasResponse" type="tns:listarPorCodExacto_TareasInompletasResponse" />
   <xs:element name="listarPorCodNom" type="tns:listarPorCodNom" />
   <xs:element name="listarPorCodNomResponse" type="tns:listarPorCodNomResponse" />
   <xs:element name="listarUsuarios" type="tns:listarUsuarios" />
@@ -121,6 +125,26 @@
   <xs:complexType name="insertarPersonaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorCodExacto_TareasCompletas">
+    <xs:sequence>
+      <xs:element name="codigo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorCodExacto_TareasCompletasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorCodExacto_TareasInompletas">
+    <xs:sequence>
+      <xs:element name="codigo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorCodExacto_TareasInompletasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
