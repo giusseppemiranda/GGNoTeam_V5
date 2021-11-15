@@ -262,6 +262,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
             this.Controls.Add(this.lblFecha);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditarRegistroAssetError";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditarRegistroAssetError";
             this.ResumeLayout(false);
             this.PerformLayout();

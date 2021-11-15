@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="+h6JZxucE1xN8JuPlq9f8bfCmBzO4Dk3qT06hoBAdJE=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Cv7PGMPDzUuDvbpjMB7okajNhNwBiPJ7DAtW4xwHmvY=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="TrackingErrorWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="TrackingErrorWSPort" contract="TrackingErrorWS.TrackingErrorWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServices/TrackingErrorWS" bindingConfiguration="TrackingErrorWSPortBinding">
+    <endpoint name="TrackingErrorWSPort" contract="TrackingErrorWS.TrackingErrorWS" bindingType="basicHttpBinding" address="http://192.168.0.16:8080/WebServices/TrackingErrorWS" bindingConfiguration="TrackingErrorWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/WebServices/TrackingErrorWS</serializedValue>
+          <serializedValue>http://192.168.0.16:8080/WebServices/TrackingErrorWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

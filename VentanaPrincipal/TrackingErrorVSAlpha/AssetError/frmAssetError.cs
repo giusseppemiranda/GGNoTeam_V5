@@ -40,19 +40,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             comboFondo.DataSource = fondos;
         }
 
-       
-        private void colocarEnDgv()
-        {
-            if(listaAsset != null)
-            {
-                dgvAssetError.DataSource = new BindingList<TrackingErrorWS.assetError>(listaAsset.ToList());
-            }
-            else
-            {
-                dgvAssetError.DataSource = null;
-            }
-        }
-
         public void cambiarTema()
         {
             if (Global.TemaOscuro)
@@ -82,8 +69,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             listaAsset = _daoTE.ListarPorFechaPorFondoAssetError(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
             dgvAssetError.Rows.Clear();
             if (listaAsset != null)
-            {                
-                for(int i = 0; i < listaAsset.Length; i++)
+            {
+                for (int i = 0; i < listaAsset.Length; i++)
                 {
                     dgvAssetError.Rows.Add(listaAsset[i].fecha.ToString("dd/MM/yyyy"), comboFondo.SelectedItem.ToString(), listaAsset[i].nombre, listaAsset[i].wgtP, listaAsset[i].totalRiskD);
                 }
@@ -100,13 +87,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private void btnActualizarRegistro_Click(object sender, EventArgs e)
         {
-            frmEditarRegistroAssetError ventanaModificar = new frmEditarRegistroAssetError();
-            ventanaModificar.ShowDialog();
+            if (listaAsset != null)
+            {
+                frmEditarRegistroAssetError ventanaModificar = new frmEditarRegistroAssetError(listaAsset[dgvAssetError.CurrentRow.Index]);
+                ventanaModificar.ShowDialog();
+            }
         }
 
         private void btnEliminarRegistro_Click(object sender, EventArgs e)
         {
-
+            if (listaAsset != null)
+            {
+                int procesoValido = _daoTE.eliminarAssetError(listaAsset[dgvAssetError.CurrentRow.Index].idAssetError);
+                if (procesoValido != 1)
+                {
+                    MessageBox.Show("No se ha podido eliminar el elemento seleccionado. Intente nuevamente.");
+                }
+            }
+            this.btnConsultarRegistros_Click(sender, e);
         }
 
         private void dgvAssetError_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -116,7 +114,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private void btnVerCalculoTE_Click(object sender, EventArgs e)
         {
-            ventanaPadre.abrirFormulario(new frmCalcularTE(ventanaPrincipal,ventanaPadre));
+            ventanaPadre.abrirFormulario(new frmCalcularTE(ventanaPrincipal, ventanaPadre));
+        }
+
+        private void comboFondo_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.btnConsultarRegistros_Click(sender, e);
         }
     }
 }

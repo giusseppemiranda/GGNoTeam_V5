@@ -30,6 +30,29 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
             cargarComboFondo();
         }
 
+        //Modificar AssetError
+        public frmEditarRegistroAssetError(TrackingErrorWS.assetError asset)
+        {
+            InitializeComponent();
+
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
+            
+            AssetError = asset;
+            cambiarTema();
+            cargarTipoEdicion();
+            cargarComboFondo();
+            cargarDatosAsset();
+        }
+
+        private void cargarDatosAsset()
+        {
+            dateTimePicker1.Value = AssetError.fecha;
+            comboFondo.SelectedIndex = AssetError.fidFondo - 1;
+            boxNombre.Texts = AssetError.nombre;
+            boxWGT.Texts = AssetError.wgtP.ToString();
+            boxTotalRisk.Texts = AssetError.totalRiskD.ToString();
+        }
+
         /*
         public frmEditarRegistroAssetError()
         {
@@ -107,7 +130,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
             {
                 if (cargarDatos())
                 {
-                    this.Dispose();
+                    int i = _daoTE.modificarAssetError(AssetError, AssetError.fidFondo);
+                    if(i == 1)
+                    {
+                        MessageBox.Show("Se ha realizado correctamente la modificación del Asset Error");
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al modificar.");
+                    }
+                    
                 }
             }            
         }

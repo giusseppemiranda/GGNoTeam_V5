@@ -32,6 +32,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAssetError = new System.Windows.Forms.DataGridView();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wgt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalRisk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateFinal = new System.Windows.Forms.DateTimePicker();
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicial = new System.Windows.Forms.Label();
@@ -43,11 +48,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnConsultarRegistros = new FontAwesome.Sharp.IconButton();
             this.btnVerCalculoTE = new FontAwesome.Sharp.IconButton();
             this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wgt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalRisk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetError)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,6 +90,45 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.dgvAssetError.Size = new System.Drawing.Size(952, 335);
             this.dgvAssetError.TabIndex = 50;
             this.dgvAssetError.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssetError_CellContentClick);
+            // 
+            // fecha
+            // 
+            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 62;
+            // 
+            // Fondo
+            // 
+            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Fondo.HeaderText = "Fondo";
+            this.Fondo.Name = "Fondo";
+            this.Fondo.ReadOnly = true;
+            this.Fondo.Width = 64;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 76;
+            // 
+            // wgt
+            // 
+            this.wgt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.wgt.HeaderText = "% WGT";
+            this.wgt.Name = "wgt";
+            this.wgt.ReadOnly = true;
+            this.wgt.Width = 71;
+            // 
+            // TotalRisk
+            // 
+            this.TotalRisk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TotalRisk.HeaderText = "Total Risk";
+            this.TotalRisk.Name = "TotalRisk";
+            this.TotalRisk.ReadOnly = true;
             // 
             // dateFinal
             // 
@@ -265,45 +304,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.comboFondo.Size = new System.Drawing.Size(200, 30);
             this.comboFondo.TabIndex = 67;
             this.comboFondo.Texts = "Fondo";
-            // 
-            // fecha
-            // 
-            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 62;
-            // 
-            // Fondo
-            // 
-            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Fondo.HeaderText = "Fondo";
-            this.Fondo.Name = "Fondo";
-            this.Fondo.ReadOnly = true;
-            this.Fondo.Width = 64;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 76;
-            // 
-            // wgt
-            // 
-            this.wgt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.wgt.HeaderText = "% WGT";
-            this.wgt.Name = "wgt";
-            this.wgt.ReadOnly = true;
-            this.wgt.Width = 71;
-            // 
-            // TotalRisk
-            // 
-            this.TotalRisk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TotalRisk.HeaderText = "Total Risk";
-            this.TotalRisk.Name = "TotalRisk";
-            this.TotalRisk.ReadOnly = true;
+            this.comboFondo.OnSelectedIndexChanged += new System.EventHandler(this.comboFondo_OnSelectedIndexChanged);
             // 
             // frmAssetError
             // 
