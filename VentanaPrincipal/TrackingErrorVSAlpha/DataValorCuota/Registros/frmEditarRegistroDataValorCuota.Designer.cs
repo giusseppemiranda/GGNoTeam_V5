@@ -93,7 +93,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxPatrimonio.MaxLength = 32767;
             this.boxPatrimonio.Multiline = false;
             this.boxPatrimonio.Name = "boxPatrimonio";
-            this.boxPatrimonio.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxPatrimonio.Padding = new System.Windows.Forms.Padding(6);
             this.boxPatrimonio.PasswordChar = false;
             this.boxPatrimonio.Size = new System.Drawing.Size(214, 30);
             this.boxPatrimonio.TabIndex = 35;
@@ -106,11 +106,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.lblPatrimonio.AutoSize = true;
             this.lblPatrimonio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblPatrimonio.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblPatrimonio.Location = new System.Drawing.Point(55, 210);
+            this.lblPatrimonio.Location = new System.Drawing.Point(55, 198);
+            this.lblPatrimonio.MaximumSize = new System.Drawing.Size(120, 40);
             this.lblPatrimonio.Name = "lblPatrimonio";
-            this.lblPatrimonio.Size = new System.Drawing.Size(71, 15);
+            this.lblPatrimonio.Size = new System.Drawing.Size(117, 30);
             this.lblPatrimonio.TabIndex = 34;
-            this.lblPatrimonio.Text = "Patrimonio:";
+            this.lblPatrimonio.Text = "Patrimonio (CuotaxValorCuota):";
             // 
             // boxCuota
             // 
@@ -126,13 +127,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxCuota.MaxLength = 32767;
             this.boxCuota.Multiline = false;
             this.boxCuota.Name = "boxCuota";
-            this.boxCuota.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxCuota.Padding = new System.Windows.Forms.Padding(6);
             this.boxCuota.PasswordChar = false;
             this.boxCuota.Size = new System.Drawing.Size(214, 30);
             this.boxCuota.TabIndex = 37;
             this.boxCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxCuota.Texts = "";
             this.boxCuota.UnderlinedStyle = true;
+            this.boxCuota._TextChanged += new System.EventHandler(this.boxCuota__TextChanged);
             // 
             // lblCuota
             // 
@@ -159,13 +161,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxValorCuota.MaxLength = 32767;
             this.boxValorCuota.Multiline = false;
             this.boxValorCuota.Name = "boxValorCuota";
-            this.boxValorCuota.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.boxValorCuota.Padding = new System.Windows.Forms.Padding(6);
             this.boxValorCuota.PasswordChar = false;
             this.boxValorCuota.Size = new System.Drawing.Size(214, 30);
             this.boxValorCuota.TabIndex = 39;
             this.boxValorCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxValorCuota.Texts = "";
             this.boxValorCuota.UnderlinedStyle = true;
+            this.boxValorCuota._TextChanged += new System.EventHandler(this.boxValorCuota__TextChanged);
             // 
             // lblValorCuota
             // 

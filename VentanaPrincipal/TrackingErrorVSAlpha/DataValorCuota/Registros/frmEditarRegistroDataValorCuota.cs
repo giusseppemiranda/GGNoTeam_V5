@@ -21,31 +21,35 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         public frmEditarRegistroDataValorCuota(TrackingErrorWS.afp[] listaAfps)
         {
             InitializeComponent();
+                        
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();            
+            dato = new TrackingErrorWS.dataValorCuota();
+            lblTitulo.Text = "INSERTAR DATA VALOR CUOTA";
+            insertar = true;
+
             cambiarTema();
             cargarCombo();
             cargarComboAFP(listaAfps);
-            
-            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();            
-            dato = new TrackingErrorWS.dataValorCuota();
+
             comboAFP.SelectedIndex = 0;
             comboFondo.SelectedIndex = 0;
-            lblTitulo.Text = "INSERTAR DATA VALOR CUOTA";
-            insertar = true;
+
         }
 
         //EDITAR DATA VALOR CUOTA
         public frmEditarRegistroDataValorCuota(TrackingErrorWS.dataValorCuota dato, TrackingErrorWS.afp[] listaAfps, int tipoFondo)
         {
-            InitializeComponent();
-            cambiarTema();
-            cargarCombo();
-            cargarComboAFP(listaAfps);
+            InitializeComponent();           
 
             lblTitulo.Text = "EDITAR DATA VALOR CUOTA";
             this.dato = dato;
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
 
+            cambiarTema();
+            cargarCombo();
+            cargarComboAFP(listaAfps);
             cargarCamposEdicion(tipoFondo);
+            
         }
 
         private void cargarCamposEdicion(int tipoFondo)
@@ -106,23 +110,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             {
                 dato.fecha = dateTimePicker1.Value;
                 dato.fechaSpecified = true;
-
-
+                dato.fidAFP = comboAFP.SelectedIndex+1;
                 dato.cuotas = Convert.ToDouble(boxCuota.Texts);
-                dato.valorCuota = Convert.ToDouble(boxValorCuota.Texts);
-                dato.patrimonio = Convert.ToDouble(boxPatrimonio.Texts);
+                dato.valorCuota = Convert.ToDouble(boxValorCuota.Texts);                
                 
                 if(boxValorCuota.Texts == "")
                 {
                     MessageBox.Show("Valor cuota no puede estar vacío");
                     return;
-                }
+                } 
+
 
                 if (boxCuota.Texts == "")
                 {
                     MessageBox.Show("Cuota no puede estar vacío");
                     return;
                 }
+
+                
 
                 int i = -1;
                 if (insertar)
@@ -152,6 +157,38 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             catch 
             {
                 MessageBox.Show("Pruebe ingresando nuevamente, hay un error. Cuota y valor cuota deben ser números.");
+            }
+        }
+
+        private void boxCuota__TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double cuota = Convert.ToDouble(boxCuota.Texts);
+                double valorCuota = Convert.ToDouble(boxValorCuota.Texts);
+                double patrimonio = cuota * valorCuota;
+
+                boxPatrimonio.Texts = patrimonio.ToString();
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void boxValorCuota__TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double cuota = Convert.ToDouble(boxCuota.Texts);
+                double valorCuota = Convert.ToDouble(boxValorCuota.Texts);
+                double patrimonio = cuota * valorCuota;
+
+                boxPatrimonio.Texts = patrimonio.ToString();
+            }
+            catch
+            {
+                return;
             }
         }
     }
