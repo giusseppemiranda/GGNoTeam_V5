@@ -14,11 +14,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
     public partial class frmTrackingErrorvsAlfa : Form
     {
         private frmPrincipal ventanaPadre = null;
+        private TrackingErrorWS.TrackingErrorWSClient _daoTE;
         public frmTrackingErrorvsAlfa(frmPrincipal ventana)
         {
             InitializeComponent();
             ventanaPadre = ventana;
-            ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+            ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);            
             iniciarTema();
         }
 

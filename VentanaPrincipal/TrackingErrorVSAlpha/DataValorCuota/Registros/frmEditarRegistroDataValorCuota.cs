@@ -68,9 +68,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
 
         private void cargarCombo()
         {
-            comboFondo.Items.Add("Fondo 1");
-            comboFondo.Items.Add("Fondo 2");
-            comboFondo.Items.Add("Fondo 3");
+            comboFondo.DataSource = _daoTE.ListarFondos();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -106,13 +104,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         {            
             try
             {
-                dato.activo = 1;
-                dato.cuotas = Convert.ToDouble(boxCuota.Texts);
                 dato.fecha = dateTimePicker1.Value;
                 dato.fechaSpecified = true;
-                dato.patrimonio = Convert.ToDouble(boxPatrimonio.Texts);
+
+
+                dato.cuotas = Convert.ToDouble(boxCuota.Texts);
                 dato.valorCuota = Convert.ToDouble(boxValorCuota.Texts);
-                dato.ytoD = 0.2;
+                dato.patrimonio = Convert.ToDouble(boxPatrimonio.Texts);
+                
+                if(boxValorCuota.Texts == "")
+                {
+                    MessageBox.Show("Valor cuota no puede estar vacío");
+                    return;
+                }
+
+                if (boxCuota.Texts == "")
+                {
+                    MessageBox.Show("Cuota no puede estar vacío");
+                    return;
+                }
+
                 int i = -1;
                 if (insertar)
                 {
@@ -140,7 +151,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             }
             catch 
             {
-                MessageBox.Show("Pruebe ingresando nuevamente, hay un error. Patrimonio, cuota y valor cuota deben ser números");
+                MessageBox.Show("Pruebe ingresando nuevamente, hay un error. Cuota y valor cuota deben ser números.");
             }
         }
     }
