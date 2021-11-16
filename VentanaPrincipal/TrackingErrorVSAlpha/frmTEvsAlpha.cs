@@ -1,4 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.TrackingErrorWS;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTrackingError;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota;
@@ -19,6 +20,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha
     {
         private Form frmActivo = null;
         private frmPrincipal ventanaPadre = null;
+        private static TrackingErrorWS.dataValorCuota[] datosPrin = null;
+
+        public static dataValorCuota[] DatosPrin { get => datosPrin; set => datosPrin = value; }
+
         public frmTEvsAlpha(frmPrincipal ventana)
         {
             InitializeComponent();

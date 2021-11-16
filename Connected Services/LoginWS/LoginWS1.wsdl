@@ -2,7 +2,7 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservices.sist.afp.ggNoTeam/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="LoginWS" targetNamespace="http://webservices.sist.afp.ggNoTeam/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://192.168.0.16:8080/WebServices/LoginWS?xsd=1" namespace="http://webservices.sist.afp.ggNoTeam/" />
+      <xsd:import schemaLocation="http://54.236.140.237:8080/WebServices/LoginWS?xsd=1" namespace="http://webservices.sist.afp.ggNoTeam/" />
     </xsd:schema>
   </types>
   <message name="listarPorCodNom">
@@ -11,23 +11,17 @@
   <message name="listarPorCodNomResponse">
     <part name="parameters" element="tns:listarPorCodNomResponse" />
   </message>
-  <message name="listarPorCodExacto">
-    <part name="parameters" element="tns:listarPorCodExacto" />
-  </message>
-  <message name="listarPorCodExactoResponse">
-    <part name="parameters" element="tns:listarPorCodExactoResponse" />
-  </message>
   <message name="listarAdministradores">
     <part name="parameters" element="tns:listarAdministradores" />
   </message>
   <message name="listarAdministradoresResponse">
     <part name="parameters" element="tns:listarAdministradoresResponse" />
   </message>
-  <message name="listarUsuarios">
-    <part name="parameters" element="tns:listarUsuarios" />
+  <message name="listarPorCodExacto">
+    <part name="parameters" element="tns:listarPorCodExacto" />
   </message>
-  <message name="listarUsuariosResponse">
-    <part name="parameters" element="tns:listarUsuariosResponse" />
+  <message name="listarPorCodExactoResponse">
+    <part name="parameters" element="tns:listarPorCodExactoResponse" />
   </message>
   <message name="eliminarPersona">
     <part name="parameters" element="tns:eliminarPersona" />
@@ -53,6 +47,12 @@
   <message name="insertarPersonaResponse">
     <part name="parameters" element="tns:insertarPersonaResponse" />
   </message>
+  <message name="listarUsuarios">
+    <part name="parameters" element="tns:listarUsuarios" />
+  </message>
+  <message name="listarUsuariosResponse">
+    <part name="parameters" element="tns:listarUsuariosResponse" />
+  </message>
   <message name="listarPorCodExacto_TareasCompletas">
     <part name="parameters" element="tns:listarPorCodExacto_TareasCompletas" />
   </message>
@@ -70,17 +70,13 @@
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomRequest" message="tns:listarPorCodNom" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomResponse" message="tns:listarPorCodNomResponse" />
     </operation>
-    <operation name="listarPorCodExacto">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoRequest" message="tns:listarPorCodExacto" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoResponse" message="tns:listarPorCodExactoResponse" />
-    </operation>
     <operation name="listarAdministradores">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarAdministradoresRequest" message="tns:listarAdministradores" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarAdministradoresResponse" message="tns:listarAdministradoresResponse" />
     </operation>
-    <operation name="listarUsuarios">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosRequest" message="tns:listarUsuarios" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
+    <operation name="listarPorCodExacto">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoRequest" message="tns:listarPorCodExacto" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoResponse" message="tns:listarPorCodExactoResponse" />
     </operation>
     <operation name="eliminarPersona">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/eliminarPersonaRequest" message="tns:eliminarPersona" />
@@ -97,6 +93,10 @@
     <operation name="insertarPersona">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/insertarPersonaRequest" message="tns:insertarPersona" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/insertarPersonaResponse" message="tns:insertarPersonaResponse" />
+    </operation>
+    <operation name="listarUsuarios">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosRequest" message="tns:listarUsuarios" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
     </operation>
     <operation name="listarPorCodExacto_TareasCompletas">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExacto_TareasCompletasRequest" message="tns:listarPorCodExacto_TareasCompletas" />
@@ -118,15 +118,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPorCodExacto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarAdministradores">
       <soap:operation soapAction="" />
       <input>
@@ -136,7 +127,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarUsuarios">
+    <operation name="listarPorCodExacto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -173,6 +164,15 @@
       </output>
     </operation>
     <operation name="insertarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarUsuarios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -202,7 +202,7 @@
   </binding>
   <service name="LoginWS">
     <port name="LoginWSPort" binding="tns:LoginWSPortBinding">
-      <soap:address location="http://192.168.0.16:8080/WebServices/LoginWS" />
+      <soap:address location="http://54.236.140.237:8080/WebServices/LoginWS" />
     </port>
   </service>
 </definitions>

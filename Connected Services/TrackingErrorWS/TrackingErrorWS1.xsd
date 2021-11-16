@@ -86,16 +86,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarAfp">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="afp" type="tns:afp" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarAfpResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarAlpha">
     <xs:sequence>
       <xs:element minOccurs="0" name="alpha" type="tns:alpha" />
@@ -112,6 +102,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarAlphaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAfp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="afp" type="tns:afp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAfpResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -260,6 +260,18 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ListarPorFechaPorFondoDataValorCuota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaPorFondoDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarDataValorCuota">
     <xs:sequence>
       <xs:element minOccurs="0" name="dataVC" type="tns:dataValorCuota" />
@@ -280,18 +292,6 @@
   <xs:complexType name="insertarAssetErrorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ListarPorFechaPorFondoDataValorCuota">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
-      <xs:element name="idFondo" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ListarPorFechaPorFondoDataValorCuotaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarAlpha">
