@@ -130,7 +130,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
                     if (i == 1)
                     {
                         MessageBox.Show("Se modificó correctamente.");
-
+                        this.Dispose();
                     }
                     else
                     {
