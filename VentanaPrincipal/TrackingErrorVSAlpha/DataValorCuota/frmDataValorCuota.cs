@@ -1,6 +1,7 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Registros;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -13,14 +14,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private TrackingErrorWS.TrackingErrorWSClient _dao;
         private TrackingErrorWS.dataValorCuota[] datos;
         private TrackingErrorWS.afp[] listaAfps;
-        private bool activarEventoComboFondo = false; 
+        private bool activarEventoComboFondo = false;
+        private static BindingList<string> nombreafp = new BindingList<string>();
+        private static string tipofondo;
 
         public frmDataValorCuota(frmPrincipal ventana)
         {
             InitializeComponent();
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
-
+            dgvDataValorCuota.AutoGenerateColumns = false;
+            dgvDataValorCuota.DataSource = frmTEvsAlpha.DatosPrin;
             _dao = new TrackingErrorWS.TrackingErrorWSClient();
 
             Global.pintarDGV(ref dgvDataValorCuota, Color.DarkSalmon);
@@ -80,18 +84,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         }
 
         private void btnConsultarRegistros_Click(object sender, System.EventArgs e)
-        {            
-            datos = _dao.ListarPorFechaPorFondoDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
+        {
+            frmTEvsAlpha.DatosPrin = _dao.ListarPorFechaPorFondoDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
+            datos = frmTEvsAlpha.DatosPrin;
             if (datos != null)
             {
-                dgvDataValorCuota.Rows.Clear();
-                for(int i = 0; i < datos.Length; i++)
+                for (int i = 0; i < datos.Length; i++)
                 {
-                    dgvDataValorCuota.Rows.Add(datos[i].idDataValorCuota,datos[i].fecha.ToString("dd/MM/yyyy"),listaAfps[datos[i].fidAFP-1].nombre,comboFondo.SelectedItem.ToString(),datos[i].patrimonio,datos[i].cuotas,datos[i].valorCuota);
+                    nombreafp.Add(listaAfps[datos[i].fidAFP - 1].nombre);
+                    tipofondo = comboFondo.SelectedItem.ToString();
                 }
-                
-            }            
-            dgvDataValorCuota.Refresh();
+                // dgvDataValorCuota.Rows.Clear();
+                /* 
+                     dgvDataValorCuota.Rows.Add(datos[i].idDataValorCuota,datos[i].fecha.ToString("dd/MM/yyyy"),listaAfps[datos[i].fidAFP-1].nombre,comboFondo.SelectedItem.ToString(),datos[i].patrimonio,datos[i].cuotas,datos[i].valorCuota);
+                 }*/
+
+            }
+            dgvDataValorCuota.DataSource = frmTEvsAlpha.DatosPrin;
+            //dgvDataValorCuota.Refresh();
         }
 
         private void btnEliminarRegistro_Click(object sender, System.EventArgs e)
@@ -133,6 +143,20 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             {
                 this.btnConsultarRegistros_Click(sender,e);
             }
+        }
+
+        private void dgvDataValorCuota_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            
+            
+            TrackingErrorWS.dataValorCuota dvc = (TrackingErrorWS.dataValorCuota)dgvDataValorCuota.Rows[e.RowIndex].DataBoundItem;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[0].Value = dvc.idDataValorCuota;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[1].Value = dvc.fecha.ToString("dd/MM/yyyy");
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[2].Value = nombreafp[e.RowIndex];
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[3].Value = tipofondo;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[4].Value = dvc.patrimonio;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[5].Value = dvc.cuotas;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[6].Value = dvc.valorCuota;
         }
     }
 }

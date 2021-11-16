@@ -2,9 +2,57 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservices.sist.afp.ggNoTeam/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="TrackingErrorWS" targetNamespace="http://webservices.sist.afp.ggNoTeam/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://192.168.0.16:8080/WebServices/TrackingErrorWS?xsd=1" namespace="http://webservices.sist.afp.ggNoTeam/" />
+      <xsd:import schemaLocation="http://54.236.140.237:8080/WebServices/TrackingErrorWS?xsd=1" namespace="http://webservices.sist.afp.ggNoTeam/" />
     </xsd:schema>
   </types>
+  <message name="insertarDataValorCuota">
+    <part name="parameters" element="tns:insertarDataValorCuota" />
+  </message>
+  <message name="insertarDataValorCuotaResponse">
+    <part name="parameters" element="tns:insertarDataValorCuotaResponse" />
+  </message>
+  <message name="ListarPorFechaPorFondoDataValorCuota">
+    <part name="parameters" element="tns:ListarPorFechaPorFondoDataValorCuota" />
+  </message>
+  <message name="ListarPorFechaPorFondoDataValorCuotaResponse">
+    <part name="parameters" element="tns:ListarPorFechaPorFondoDataValorCuotaResponse" />
+  </message>
+  <message name="modificarTrackingError">
+    <part name="parameters" element="tns:modificarTrackingError" />
+  </message>
+  <message name="modificarTrackingErrorResponse">
+    <part name="parameters" element="tns:modificarTrackingErrorResponse" />
+  </message>
+  <message name="modificarAssetError">
+    <part name="parameters" element="tns:modificarAssetError" />
+  </message>
+  <message name="modificarAssetErrorResponse">
+    <part name="parameters" element="tns:modificarAssetErrorResponse" />
+  </message>
+  <message name="insertarTrackingError">
+    <part name="parameters" element="tns:insertarTrackingError" />
+  </message>
+  <message name="insertarTrackingErrorResponse">
+    <part name="parameters" element="tns:insertarTrackingErrorResponse" />
+  </message>
+  <message name="eliminarTrackingError">
+    <part name="parameters" element="tns:eliminarTrackingError" />
+  </message>
+  <message name="eliminarTrackingErrorResponse">
+    <part name="parameters" element="tns:eliminarTrackingErrorResponse" />
+  </message>
+  <message name="modificarDataValorCuota">
+    <part name="parameters" element="tns:modificarDataValorCuota" />
+  </message>
+  <message name="modificarDataValorCuotaResponse">
+    <part name="parameters" element="tns:modificarDataValorCuotaResponse" />
+  </message>
+  <message name="eliminarAssetError">
+    <part name="parameters" element="tns:eliminarAssetError" />
+  </message>
+  <message name="eliminarAssetErrorResponse">
+    <part name="parameters" element="tns:eliminarAssetErrorResponse" />
+  </message>
   <message name="ListarPorFechaPorFondoAssetError">
     <part name="parameters" element="tns:ListarPorFechaPorFondoAssetError" />
   </message>
@@ -17,17 +65,11 @@
   <message name="eliminarDataValorCuotaResponse">
     <part name="parameters" element="tns:eliminarDataValorCuotaResponse" />
   </message>
-  <message name="modificarAssetError">
-    <part name="parameters" element="tns:modificarAssetError" />
+  <message name="ListarTodosTrackingError">
+    <part name="parameters" element="tns:ListarTodosTrackingError" />
   </message>
-  <message name="modificarAssetErrorResponse">
-    <part name="parameters" element="tns:modificarAssetErrorResponse" />
-  </message>
-  <message name="modificarDataValorCuota">
-    <part name="parameters" element="tns:modificarDataValorCuota" />
-  </message>
-  <message name="modificarDataValorCuotaResponse">
-    <part name="parameters" element="tns:modificarDataValorCuotaResponse" />
+  <message name="ListarTodosTrackingErrorResponse">
+    <part name="parameters" element="tns:ListarTodosTrackingErrorResponse" />
   </message>
   <message name="insertarAssetError">
     <part name="parameters" element="tns:insertarAssetError" />
@@ -35,47 +77,41 @@
   <message name="insertarAssetErrorResponse">
     <part name="parameters" element="tns:insertarAssetErrorResponse" />
   </message>
-  <message name="eliminarTrackingError">
-    <part name="parameters" element="tns:eliminarTrackingError" />
+  <message name="insertarAfp">
+    <part name="parameters" element="tns:insertarAfp" />
   </message>
-  <message name="eliminarTrackingErrorResponse">
-    <part name="parameters" element="tns:eliminarTrackingErrorResponse" />
+  <message name="insertarAfpResponse">
+    <part name="parameters" element="tns:insertarAfpResponse" />
   </message>
-  <message name="ListarPorFechaPorFondoDataValorCuota">
-    <part name="parameters" element="tns:ListarPorFechaPorFondoDataValorCuota" />
+  <message name="eliminarAlpha">
+    <part name="parameters" element="tns:eliminarAlpha" />
   </message>
-  <message name="ListarPorFechaPorFondoDataValorCuotaResponse">
-    <part name="parameters" element="tns:ListarPorFechaPorFondoDataValorCuotaResponse" />
+  <message name="eliminarAlphaResponse">
+    <part name="parameters" element="tns:eliminarAlphaResponse" />
   </message>
-  <message name="insertarTrackingError">
-    <part name="parameters" element="tns:insertarTrackingError" />
+  <message name="ListarTodasAfp">
+    <part name="parameters" element="tns:ListarTodasAfp" />
   </message>
-  <message name="insertarTrackingErrorResponse">
-    <part name="parameters" element="tns:insertarTrackingErrorResponse" />
+  <message name="ListarTodasAfpResponse">
+    <part name="parameters" element="tns:ListarTodasAfpResponse" />
   </message>
-  <message name="modificarTrackingError">
-    <part name="parameters" element="tns:modificarTrackingError" />
+  <message name="insertarAlpha">
+    <part name="parameters" element="tns:insertarAlpha" />
   </message>
-  <message name="modificarTrackingErrorResponse">
-    <part name="parameters" element="tns:modificarTrackingErrorResponse" />
+  <message name="insertarAlphaResponse">
+    <part name="parameters" element="tns:insertarAlphaResponse" />
   </message>
-  <message name="insertarDataValorCuota">
-    <part name="parameters" element="tns:insertarDataValorCuota" />
+  <message name="modificarAlpha">
+    <part name="parameters" element="tns:modificarAlpha" />
   </message>
-  <message name="insertarDataValorCuotaResponse">
-    <part name="parameters" element="tns:insertarDataValorCuotaResponse" />
+  <message name="modificarAlphaResponse">
+    <part name="parameters" element="tns:modificarAlphaResponse" />
   </message>
-  <message name="eliminarAssetError">
-    <part name="parameters" element="tns:eliminarAssetError" />
+  <message name="listarTodasAlpha">
+    <part name="parameters" element="tns:listarTodasAlpha" />
   </message>
-  <message name="eliminarAssetErrorResponse">
-    <part name="parameters" element="tns:eliminarAssetErrorResponse" />
-  </message>
-  <message name="ListarTodosTrackingError">
-    <part name="parameters" element="tns:ListarTodosTrackingError" />
-  </message>
-  <message name="ListarTodosTrackingErrorResponse">
-    <part name="parameters" element="tns:ListarTodosTrackingErrorResponse" />
+  <message name="listarTodasAlphaResponse">
+    <part name="parameters" element="tns:listarTodasAlphaResponse" />
   </message>
   <message name="eliminarAfp">
     <part name="parameters" element="tns:eliminarAfp" />
@@ -89,42 +125,6 @@
   <message name="modificarAfpResponse">
     <part name="parameters" element="tns:modificarAfpResponse" />
   </message>
-  <message name="ListarTodasAfp">
-    <part name="parameters" element="tns:ListarTodasAfp" />
-  </message>
-  <message name="ListarTodasAfpResponse">
-    <part name="parameters" element="tns:ListarTodasAfpResponse" />
-  </message>
-  <message name="insertarAfp">
-    <part name="parameters" element="tns:insertarAfp" />
-  </message>
-  <message name="insertarAfpResponse">
-    <part name="parameters" element="tns:insertarAfpResponse" />
-  </message>
-  <message name="insertarAlpha">
-    <part name="parameters" element="tns:insertarAlpha" />
-  </message>
-  <message name="insertarAlphaResponse">
-    <part name="parameters" element="tns:insertarAlphaResponse" />
-  </message>
-  <message name="eliminarAlpha">
-    <part name="parameters" element="tns:eliminarAlpha" />
-  </message>
-  <message name="eliminarAlphaResponse">
-    <part name="parameters" element="tns:eliminarAlphaResponse" />
-  </message>
-  <message name="listarTodasAlpha">
-    <part name="parameters" element="tns:listarTodasAlpha" />
-  </message>
-  <message name="listarTodasAlphaResponse">
-    <part name="parameters" element="tns:listarTodasAlphaResponse" />
-  </message>
-  <message name="modificarAlpha">
-    <part name="parameters" element="tns:modificarAlpha" />
-  </message>
-  <message name="modificarAlphaResponse">
-    <part name="parameters" element="tns:modificarAlphaResponse" />
-  </message>
   <message name="ListarFondos">
     <part name="parameters" element="tns:ListarFondos" />
   </message>
@@ -132,6 +132,38 @@
     <part name="parameters" element="tns:ListarFondosResponse" />
   </message>
   <portType name="TrackingErrorWS">
+    <operation name="insertarDataValorCuota">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarDataValorCuotaRequest" message="tns:insertarDataValorCuota" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarDataValorCuotaResponse" message="tns:insertarDataValorCuotaResponse" />
+    </operation>
+    <operation name="ListarPorFechaPorFondoDataValorCuota">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataValorCuotaRequest" message="tns:ListarPorFechaPorFondoDataValorCuota" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataValorCuotaResponse" message="tns:ListarPorFechaPorFondoDataValorCuotaResponse" />
+    </operation>
+    <operation name="modificarTrackingError">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorRequest" message="tns:modificarTrackingError" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorResponse" message="tns:modificarTrackingErrorResponse" />
+    </operation>
+    <operation name="modificarAssetError">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorRequest" message="tns:modificarAssetError" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorResponse" message="tns:modificarAssetErrorResponse" />
+    </operation>
+    <operation name="insertarTrackingError">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRequest" message="tns:insertarTrackingError" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorResponse" message="tns:insertarTrackingErrorResponse" />
+    </operation>
+    <operation name="eliminarTrackingError">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRequest" message="tns:eliminarTrackingError" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorResponse" message="tns:eliminarTrackingErrorResponse" />
+    </operation>
+    <operation name="modificarDataValorCuota">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaRequest" message="tns:modificarDataValorCuota" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaResponse" message="tns:modificarDataValorCuotaResponse" />
+    </operation>
+    <operation name="eliminarAssetError">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAssetErrorRequest" message="tns:eliminarAssetError" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAssetErrorResponse" message="tns:eliminarAssetErrorResponse" />
+    </operation>
     <operation name="ListarPorFechaPorFondoAssetError">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetErrorRequest" message="tns:ListarPorFechaPorFondoAssetError" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetErrorResponse" message="tns:ListarPorFechaPorFondoAssetErrorResponse" />
@@ -140,45 +172,37 @@
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarDataValorCuotaRequest" message="tns:eliminarDataValorCuota" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarDataValorCuotaResponse" message="tns:eliminarDataValorCuotaResponse" />
     </operation>
-    <operation name="modificarAssetError">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorRequest" message="tns:modificarAssetError" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorResponse" message="tns:modificarAssetErrorResponse" />
-    </operation>
-    <operation name="modificarDataValorCuota">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaRequest" message="tns:modificarDataValorCuota" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaResponse" message="tns:modificarDataValorCuotaResponse" />
+    <operation name="ListarTodosTrackingError">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorRequest" message="tns:ListarTodosTrackingError" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorResponse" message="tns:ListarTodosTrackingErrorResponse" />
     </operation>
     <operation name="insertarAssetError">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorRequest" message="tns:insertarAssetError" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorResponse" message="tns:insertarAssetErrorResponse" />
     </operation>
-    <operation name="eliminarTrackingError">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRequest" message="tns:eliminarTrackingError" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorResponse" message="tns:eliminarTrackingErrorResponse" />
+    <operation name="insertarAfp">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAfpRequest" message="tns:insertarAfp" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAfpResponse" message="tns:insertarAfpResponse" />
     </operation>
-    <operation name="ListarPorFechaPorFondoDataValorCuota">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataValorCuotaRequest" message="tns:ListarPorFechaPorFondoDataValorCuota" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataValorCuotaResponse" message="tns:ListarPorFechaPorFondoDataValorCuotaResponse" />
+    <operation name="eliminarAlpha">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaRequest" message="tns:eliminarAlpha" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaResponse" message="tns:eliminarAlphaResponse" />
     </operation>
-    <operation name="insertarTrackingError">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRequest" message="tns:insertarTrackingError" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorResponse" message="tns:insertarTrackingErrorResponse" />
+    <operation name="ListarTodasAfp">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodasAfpRequest" message="tns:ListarTodasAfp" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodasAfpResponse" message="tns:ListarTodasAfpResponse" />
     </operation>
-    <operation name="modificarTrackingError">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorRequest" message="tns:modificarTrackingError" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorResponse" message="tns:modificarTrackingErrorResponse" />
+    <operation name="insertarAlpha">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAlphaRequest" message="tns:insertarAlpha" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAlphaResponse" message="tns:insertarAlphaResponse" />
     </operation>
-    <operation name="insertarDataValorCuota">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarDataValorCuotaRequest" message="tns:insertarDataValorCuota" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarDataValorCuotaResponse" message="tns:insertarDataValorCuotaResponse" />
+    <operation name="modificarAlpha">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaRequest" message="tns:modificarAlpha" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaResponse" message="tns:modificarAlphaResponse" />
     </operation>
-    <operation name="eliminarAssetError">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAssetErrorRequest" message="tns:eliminarAssetError" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAssetErrorResponse" message="tns:eliminarAssetErrorResponse" />
-    </operation>
-    <operation name="ListarTodosTrackingError">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorRequest" message="tns:ListarTodosTrackingError" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorResponse" message="tns:ListarTodosTrackingErrorResponse" />
+    <operation name="listarTodasAlpha">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaRequest" message="tns:listarTodasAlpha" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaResponse" message="tns:listarTodasAlphaResponse" />
     </operation>
     <operation name="eliminarAfp">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAfpRequest" message="tns:eliminarAfp" />
@@ -188,30 +212,6 @@
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAfpRequest" message="tns:modificarAfp" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAfpResponse" message="tns:modificarAfpResponse" />
     </operation>
-    <operation name="ListarTodasAfp">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodasAfpRequest" message="tns:ListarTodasAfp" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodasAfpResponse" message="tns:ListarTodasAfpResponse" />
-    </operation>
-    <operation name="insertarAfp">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAfpRequest" message="tns:insertarAfp" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAfpResponse" message="tns:insertarAfpResponse" />
-    </operation>
-    <operation name="insertarAlpha">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAlphaRequest" message="tns:insertarAlpha" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAlphaResponse" message="tns:insertarAlphaResponse" />
-    </operation>
-    <operation name="eliminarAlpha">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaRequest" message="tns:eliminarAlpha" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaResponse" message="tns:eliminarAlphaResponse" />
-    </operation>
-    <operation name="listarTodasAlpha">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaRequest" message="tns:listarTodasAlpha" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaResponse" message="tns:listarTodasAlphaResponse" />
-    </operation>
-    <operation name="modificarAlpha">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaRequest" message="tns:modificarAlpha" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaResponse" message="tns:modificarAlphaResponse" />
-    </operation>
     <operation name="ListarFondos">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarFondosRequest" message="tns:ListarFondos" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarFondosResponse" message="tns:ListarFondosResponse" />
@@ -219,6 +219,78 @@
   </portType>
   <binding name="TrackingErrorWSPortBinding" type="tns:TrackingErrorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarDataValorCuota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarPorFechaPorFondoDataValorCuota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarTrackingError">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAssetError">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTrackingError">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTrackingError">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarDataValorCuota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAssetError">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="ListarPorFechaPorFondoAssetError">
       <soap:operation soapAction="" />
       <input>
@@ -237,16 +309,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarAssetError">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarDataValorCuota">
+    <operation name="ListarTodosTrackingError">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -264,7 +327,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarTrackingError">
+    <operation name="insertarAfp">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -273,7 +336,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListarPorFechaPorFondoDataValorCuota">
+    <operation name="eliminarAlpha">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -282,7 +345,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarTrackingError">
+    <operation name="ListarTodasAfp">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -291,7 +354,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarTrackingError">
+    <operation name="insertarAlpha">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -300,7 +363,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarDataValorCuota">
+    <operation name="modificarAlpha">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -309,16 +372,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarAssetError">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarTodosTrackingError">
+    <operation name="listarTodasAlpha">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -337,60 +391,6 @@
       </output>
     </operation>
     <operation name="modificarAfp">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarTodasAfp">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarAfp">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarAlpha">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarAlpha">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTodasAlpha">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarAlpha">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -411,7 +411,7 @@
   </binding>
   <service name="TrackingErrorWS">
     <port name="TrackingErrorWSPort" binding="tns:TrackingErrorWSPortBinding">
-      <soap:address location="http://192.168.0.16:8080/WebServices/TrackingErrorWS" />
+      <soap:address location="http://54.236.140.237:8080/WebServices/TrackingErrorWS" />
     </port>
   </service>
 </definitions>
