@@ -30,17 +30,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         private void InitializeComponent()
         {
             this.boxApellidos = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.lblApellidos = new System.Windows.Forms.Label();
+            this.lblCodigoOriginador = new System.Windows.Forms.Label();
             this.ggTextBox1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombreOriginador = new System.Windows.Forms.Label();
             this.ggTextBox2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblEmisor = new System.Windows.Forms.Label();
             this.ggTextBox3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ggTextBox4 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ggTextBox5 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblSector = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // boxApellidos
@@ -67,16 +63,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.boxApellidos.Texts = "";
             this.boxApellidos.UnderlinedStyle = true;
             // 
-            // lblApellidos
+            // lblCodigoOriginador
             // 
-            this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblApellidos.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblApellidos.Location = new System.Drawing.Point(40, 79);
-            this.lblApellidos.Name = "lblApellidos";
-            this.lblApellidos.Size = new System.Drawing.Size(60, 15);
-            this.lblApellidos.TabIndex = 30;
-            this.lblApellidos.Text = "Apellidos:";
+            this.lblCodigoOriginador.AutoSize = true;
+            this.lblCodigoOriginador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCodigoOriginador.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblCodigoOriginador.Location = new System.Drawing.Point(40, 79);
+            this.lblCodigoOriginador.Name = "lblCodigoOriginador";
+            this.lblCodigoOriginador.Size = new System.Drawing.Size(108, 15);
+            this.lblCodigoOriginador.TabIndex = 30;
+            this.lblCodigoOriginador.Text = "Codigo originador:";
             // 
             // ggTextBox1
             // 
@@ -102,16 +98,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.ggTextBox1.Texts = "";
             this.ggTextBox1.UnderlinedStyle = true;
             // 
-            // label1
+            // lblNombreOriginador
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(40, 137);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Apellidos:";
+            this.lblNombreOriginador.AutoSize = true;
+            this.lblNombreOriginador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNombreOriginador.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblNombreOriginador.Location = new System.Drawing.Point(40, 137);
+            this.lblNombreOriginador.Name = "lblNombreOriginador";
+            this.lblNombreOriginador.Size = new System.Drawing.Size(116, 15);
+            this.lblNombreOriginador.TabIndex = 32;
+            this.lblNombreOriginador.Text = "Nombre originador:";
             // 
             // ggTextBox2
             // 
@@ -137,16 +133,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.ggTextBox2.Texts = "";
             this.ggTextBox2.UnderlinedStyle = true;
             // 
-            // label2
+            // lblEmisor
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(40, 197);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Apellidos:";
+            this.lblEmisor.AutoSize = true;
+            this.lblEmisor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblEmisor.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblEmisor.Location = new System.Drawing.Point(40, 197);
+            this.lblEmisor.Name = "lblEmisor";
+            this.lblEmisor.Size = new System.Drawing.Size(47, 15);
+            this.lblEmisor.TabIndex = 34;
+            this.lblEmisor.Text = "Emisor:";
             // 
             // ggTextBox3
             // 
@@ -160,7 +156,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.ggTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox3.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox3.IsFocused = false;
-            this.ggTextBox3.Location = new System.Drawing.Point(176, 264);
+            this.ggTextBox3.Location = new System.Drawing.Point(176, 245);
             this.ggTextBox3.MaxLength = 32767;
             this.ggTextBox3.Multiline = false;
             this.ggTextBox3.Name = "ggTextBox3";
@@ -172,104 +168,30 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.ggTextBox3.Texts = "";
             this.ggTextBox3.UnderlinedStyle = true;
             // 
-            // label3
+            // lblSector
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(40, 276);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Apellidos:";
-            // 
-            // ggTextBox4
-            // 
-            this.ggTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ggTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox4.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox4.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox4.BorderSize = 2;
-            this.ggTextBox4.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox4.IsFocused = false;
-            this.ggTextBox4.Location = new System.Drawing.Point(176, 338);
-            this.ggTextBox4.MaxLength = 32767;
-            this.ggTextBox4.Multiline = false;
-            this.ggTextBox4.Name = "ggTextBox4";
-            this.ggTextBox4.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox4.PasswordChar = false;
-            this.ggTextBox4.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox4.TabIndex = 39;
-            this.ggTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox4.Texts = "";
-            this.ggTextBox4.UnderlinedStyle = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(40, 350);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 15);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "Apellidos:";
-            // 
-            // ggTextBox5
-            // 
-            this.ggTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ggTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox5.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox5.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox5.BorderSize = 2;
-            this.ggTextBox5.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox5.IsFocused = false;
-            this.ggTextBox5.Location = new System.Drawing.Point(176, 407);
-            this.ggTextBox5.MaxLength = 32767;
-            this.ggTextBox5.Multiline = false;
-            this.ggTextBox5.Name = "ggTextBox5";
-            this.ggTextBox5.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox5.PasswordChar = false;
-            this.ggTextBox5.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox5.TabIndex = 41;
-            this.ggTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox5.Texts = "";
-            this.ggTextBox5.UnderlinedStyle = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(40, 419);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 15);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Apellidos:";
+            this.lblSector.AutoSize = true;
+            this.lblSector.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblSector.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSector.Location = new System.Drawing.Point(40, 257);
+            this.lblSector.Name = "lblSector";
+            this.lblSector.Size = new System.Drawing.Size(47, 15);
+            this.lblSector.TabIndex = 36;
+            this.lblSector.Text = "Sector:";
             // 
             // frmRegistroOriginador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 527);
-            this.Controls.Add(this.ggTextBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.ggTextBox4);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.ggTextBox3);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblSector);
             this.Controls.Add(this.ggTextBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblEmisor);
             this.Controls.Add(this.ggTextBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNombreOriginador);
             this.Controls.Add(this.boxApellidos);
-            this.Controls.Add(this.lblApellidos);
+            this.Controls.Add(this.lblCodigoOriginador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistroOriginador";
             this.Text = "frmRegistroOriginador";
@@ -281,16 +203,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         #endregion
 
         private Recursos.UserControls.GGTextBox boxApellidos;
-        private System.Windows.Forms.Label lblApellidos;
+        private System.Windows.Forms.Label lblCodigoOriginador;
         private Recursos.UserControls.GGTextBox ggTextBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombreOriginador;
         private Recursos.UserControls.GGTextBox ggTextBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblEmisor;
         private Recursos.UserControls.GGTextBox ggTextBox3;
-        private System.Windows.Forms.Label label3;
-        private Recursos.UserControls.GGTextBox ggTextBox4;
-        private System.Windows.Forms.Label label4;
-        private Recursos.UserControls.GGTextBox ggTextBox5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSector;
     }
 }
