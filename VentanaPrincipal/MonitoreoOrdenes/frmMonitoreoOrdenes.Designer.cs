@@ -33,15 +33,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvOrdenes = new System.Windows.Forms.DataGridView();
-            this.dateFinal = new System.Windows.Forms.DateTimePicker();
-            this.dateInicial = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaInicial = new System.Windows.Forms.Label();
-            this.lblFechaFinal = new System.Windows.Forms.Label();
-            this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
-            this.btnModificarRegistro = new FontAwesome.Sharp.IconButton();
-            this.btnRegistrarEjecucion = new FontAwesome.Sharp.IconButton();
-            this.btnRegistrarOrden = new FontAwesome.Sharp.IconButton();
-            this.lblSubtitulo = new System.Windows.Forms.Label();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoSBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +43,18 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.AUMOrdenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Validacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comentario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateInicial = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicial = new System.Windows.Forms.Label();
+            this.lblFechaFinal = new System.Windows.Forms.Label();
+            this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
+            this.btnModificarRegistro = new FontAwesome.Sharp.IconButton();
+            this.btnGestionarEjecuciones = new FontAwesome.Sharp.IconButton();
+            this.btnGestionarOrdenes = new FontAwesome.Sharp.IconButton();
+            this.lblSubtitulo = new System.Windows.Forms.Label();
+            this.btnConsultar = new FontAwesome.Sharp.IconButton();
+            this.btnAccederOrden = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,135 +110,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.dgvOrdenes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOrdenes.RowTemplate.Height = 25;
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenes.Size = new System.Drawing.Size(924, 407);
+            this.dgvOrdenes.Size = new System.Drawing.Size(924, 391);
             this.dgvOrdenes.TabIndex = 31;
-            // 
-            // dateFinal
-            // 
-            this.dateFinal.Location = new System.Drawing.Point(241, 74);
-            this.dateFinal.Name = "dateFinal";
-            this.dateFinal.Size = new System.Drawing.Size(198, 20);
-            this.dateFinal.TabIndex = 63;
-            // 
-            // dateInicial
-            // 
-            this.dateInicial.Location = new System.Drawing.Point(36, 74);
-            this.dateInicial.Name = "dateInicial";
-            this.dateInicial.Size = new System.Drawing.Size(198, 20);
-            this.dateInicial.TabIndex = 60;
-            // 
-            // lblFechaInicial
-            // 
-            this.lblFechaInicial.AutoSize = true;
-            this.lblFechaInicial.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblFechaInicial.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaInicial.Location = new System.Drawing.Point(33, 56);
-            this.lblFechaInicial.Name = "lblFechaInicial";
-            this.lblFechaInicial.Size = new System.Drawing.Size(77, 15);
-            this.lblFechaInicial.TabIndex = 62;
-            this.lblFechaInicial.Text = "Fecha Inicial:";
-            // 
-            // lblFechaFinal
-            // 
-            this.lblFechaFinal.AutoSize = true;
-            this.lblFechaFinal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblFechaFinal.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaFinal.Location = new System.Drawing.Point(237, 56);
-            this.lblFechaFinal.Name = "lblFechaFinal";
-            this.lblFechaFinal.Size = new System.Drawing.Size(70, 15);
-            this.lblFechaFinal.TabIndex = 61;
-            this.lblFechaFinal.Text = "Fecha Final:";
-            // 
-            // EliminarRegistro
-            // 
-            this.EliminarRegistro.BackColor = System.Drawing.Color.Crimson;
-            this.EliminarRegistro.FlatAppearance.BorderSize = 0;
-            this.EliminarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EliminarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.EliminarRegistro.ForeColor = System.Drawing.Color.White;
-            this.EliminarRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.EliminarRegistro.IconColor = System.Drawing.Color.White;
-            this.EliminarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EliminarRegistro.IconSize = 32;
-            this.EliminarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarRegistro.Location = new System.Drawing.Point(809, 513);
-            this.EliminarRegistro.Name = "EliminarRegistro";
-            this.EliminarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.EliminarRegistro.Size = new System.Drawing.Size(150, 38);
-            this.EliminarRegistro.TabIndex = 69;
-            this.EliminarRegistro.Text = "Eliminar Registro";
-            this.EliminarRegistro.UseVisualStyleBackColor = false;
-            // 
-            // btnModificarRegistro
-            // 
-            this.btnModificarRegistro.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnModificarRegistro.FlatAppearance.BorderSize = 0;
-            this.btnModificarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnModificarRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnModificarRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnModificarRegistro.IconColor = System.Drawing.Color.White;
-            this.btnModificarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnModificarRegistro.IconSize = 32;
-            this.btnModificarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarRegistro.Location = new System.Drawing.Point(630, 513);
-            this.btnModificarRegistro.Name = "btnModificarRegistro";
-            this.btnModificarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnModificarRegistro.Size = new System.Drawing.Size(150, 38);
-            this.btnModificarRegistro.TabIndex = 68;
-            this.btnModificarRegistro.Text = "Modificar Registro";
-            this.btnModificarRegistro.UseVisualStyleBackColor = false;
-            // 
-            // btnRegistrarEjecucion
-            // 
-            this.btnRegistrarEjecucion.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnRegistrarEjecucion.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarEjecucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarEjecucion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnRegistrarEjecucion.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarEjecucion.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnRegistrarEjecucion.IconColor = System.Drawing.Color.White;
-            this.btnRegistrarEjecucion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRegistrarEjecucion.IconSize = 32;
-            this.btnRegistrarEjecucion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarEjecucion.Location = new System.Drawing.Point(809, 56);
-            this.btnRegistrarEjecucion.Name = "btnRegistrarEjecucion";
-            this.btnRegistrarEjecucion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRegistrarEjecucion.Size = new System.Drawing.Size(150, 38);
-            this.btnRegistrarEjecucion.TabIndex = 67;
-            this.btnRegistrarEjecucion.Text = "Registrar ejecución";
-            this.btnRegistrarEjecucion.UseVisualStyleBackColor = false;
-            // 
-            // btnRegistrarOrden
-            // 
-            this.btnRegistrarOrden.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnRegistrarOrden.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarOrden.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnRegistrarOrden.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarOrden.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnRegistrarOrden.IconColor = System.Drawing.Color.White;
-            this.btnRegistrarOrden.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRegistrarOrden.IconSize = 32;
-            this.btnRegistrarOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarOrden.Location = new System.Drawing.Point(630, 56);
-            this.btnRegistrarOrden.Name = "btnRegistrarOrden";
-            this.btnRegistrarOrden.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRegistrarOrden.Size = new System.Drawing.Size(150, 38);
-            this.btnRegistrarOrden.TabIndex = 66;
-            this.btnRegistrarOrden.Text = "Registrar órden";
-            this.btnRegistrarOrden.UseVisualStyleBackColor = false;
-            // 
-            // lblSubtitulo
-            // 
-            this.lblSubtitulo.AutoSize = true;
-            this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblSubtitulo.Location = new System.Drawing.Point(32, 29);
-            this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(95, 20);
-            this.lblSubtitulo.TabIndex = 25;
-            this.lblSubtitulo.Text = "Operaciones";
             // 
             // Fecha
             // 
@@ -306,16 +182,206 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.Comentario.ReadOnly = true;
             this.Comentario.Width = 95;
             // 
+            // dateFinal
+            // 
+            this.dateFinal.Location = new System.Drawing.Point(241, 74);
+            this.dateFinal.Name = "dateFinal";
+            this.dateFinal.Size = new System.Drawing.Size(198, 20);
+            this.dateFinal.TabIndex = 63;
+            // 
+            // dateInicial
+            // 
+            this.dateInicial.Location = new System.Drawing.Point(36, 74);
+            this.dateInicial.Name = "dateInicial";
+            this.dateInicial.Size = new System.Drawing.Size(198, 20);
+            this.dateInicial.TabIndex = 60;
+            // 
+            // lblFechaInicial
+            // 
+            this.lblFechaInicial.AutoSize = true;
+            this.lblFechaInicial.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFechaInicial.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblFechaInicial.Location = new System.Drawing.Point(33, 56);
+            this.lblFechaInicial.Name = "lblFechaInicial";
+            this.lblFechaInicial.Size = new System.Drawing.Size(77, 15);
+            this.lblFechaInicial.TabIndex = 62;
+            this.lblFechaInicial.Text = "Fecha Inicial:";
+            // 
+            // lblFechaFinal
+            // 
+            this.lblFechaFinal.AutoSize = true;
+            this.lblFechaFinal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFechaFinal.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblFechaFinal.Location = new System.Drawing.Point(237, 56);
+            this.lblFechaFinal.Name = "lblFechaFinal";
+            this.lblFechaFinal.Size = new System.Drawing.Size(70, 15);
+            this.lblFechaFinal.TabIndex = 61;
+            this.lblFechaFinal.Text = "Fecha Final:";
+            // 
+            // EliminarRegistro
+            // 
+            this.EliminarRegistro.BackColor = System.Drawing.Color.Crimson;
+            this.EliminarRegistro.FlatAppearance.BorderSize = 0;
+            this.EliminarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.EliminarRegistro.ForeColor = System.Drawing.Color.White;
+            this.EliminarRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.EliminarRegistro.IconColor = System.Drawing.Color.White;
+            this.EliminarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.EliminarRegistro.IconSize = 32;
+            this.EliminarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarRegistro.Location = new System.Drawing.Point(809, 500);
+            this.EliminarRegistro.Name = "EliminarRegistro";
+            this.EliminarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.EliminarRegistro.Size = new System.Drawing.Size(150, 38);
+            this.EliminarRegistro.TabIndex = 69;
+            this.EliminarRegistro.Text = "Eliminar Registro";
+            this.EliminarRegistro.UseVisualStyleBackColor = false;
+            // 
+            // btnModificarRegistro
+            // 
+            this.btnModificarRegistro.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnModificarRegistro.FlatAppearance.BorderSize = 0;
+            this.btnModificarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnModificarRegistro.ForeColor = System.Drawing.Color.White;
+            this.btnModificarRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnModificarRegistro.IconColor = System.Drawing.Color.White;
+            this.btnModificarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnModificarRegistro.IconSize = 32;
+            this.btnModificarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarRegistro.Location = new System.Drawing.Point(630, 500);
+            this.btnModificarRegistro.Name = "btnModificarRegistro";
+            this.btnModificarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnModificarRegistro.Size = new System.Drawing.Size(150, 38);
+            this.btnModificarRegistro.TabIndex = 68;
+            this.btnModificarRegistro.Text = "Modificar Registro";
+            this.btnModificarRegistro.UseVisualStyleBackColor = false;
+            // 
+            // btnGestionarEjecuciones
+            // 
+            this.btnGestionarEjecuciones.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnGestionarEjecuciones.FlatAppearance.BorderSize = 0;
+            this.btnGestionarEjecuciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionarEjecuciones.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnGestionarEjecuciones.ForeColor = System.Drawing.Color.White;
+            this.btnGestionarEjecuciones.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGestionarEjecuciones.IconColor = System.Drawing.Color.White;
+            this.btnGestionarEjecuciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGestionarEjecuciones.IconSize = 32;
+            this.btnGestionarEjecuciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionarEjecuciones.Location = new System.Drawing.Point(809, 56);
+            this.btnGestionarEjecuciones.Name = "btnGestionarEjecuciones";
+            this.btnGestionarEjecuciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnGestionarEjecuciones.Size = new System.Drawing.Size(150, 38);
+            this.btnGestionarEjecuciones.TabIndex = 67;
+            this.btnGestionarEjecuciones.Text = "Gestionar ejecuciones";
+            this.btnGestionarEjecuciones.UseVisualStyleBackColor = false;
+            // 
+            // btnGestionarOrdenes
+            // 
+            this.btnGestionarOrdenes.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnGestionarOrdenes.FlatAppearance.BorderSize = 0;
+            this.btnGestionarOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionarOrdenes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnGestionarOrdenes.ForeColor = System.Drawing.Color.White;
+            this.btnGestionarOrdenes.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGestionarOrdenes.IconColor = System.Drawing.Color.White;
+            this.btnGestionarOrdenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGestionarOrdenes.IconSize = 32;
+            this.btnGestionarOrdenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionarOrdenes.Location = new System.Drawing.Point(630, 56);
+            this.btnGestionarOrdenes.Name = "btnGestionarOrdenes";
+            this.btnGestionarOrdenes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnGestionarOrdenes.Size = new System.Drawing.Size(150, 38);
+            this.btnGestionarOrdenes.TabIndex = 66;
+            this.btnGestionarOrdenes.Text = "Gestionar órdenes";
+            this.btnGestionarOrdenes.UseVisualStyleBackColor = false;
+            // 
+            // lblSubtitulo
+            // 
+            this.lblSubtitulo.AutoSize = true;
+            this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtitulo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSubtitulo.Location = new System.Drawing.Point(32, 29);
+            this.lblSubtitulo.Name = "lblSubtitulo";
+            this.lblSubtitulo.Size = new System.Drawing.Size(95, 20);
+            this.lblSubtitulo.TabIndex = 25;
+            this.lblSubtitulo.Text = "Operaciones";
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnConsultar.IconColor = System.Drawing.Color.White;
+            this.btnConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConsultar.IconSize = 32;
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.Location = new System.Drawing.Point(445, 56);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnConsultar.Size = new System.Drawing.Size(150, 38);
+            this.btnConsultar.TabIndex = 70;
+            this.btnConsultar.Text = "Consultar operaciones";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            // 
+            // btnAccederOrden
+            // 
+            this.btnAccederOrden.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnAccederOrden.FlatAppearance.BorderSize = 0;
+            this.btnAccederOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccederOrden.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAccederOrden.ForeColor = System.Drawing.Color.White;
+            this.btnAccederOrden.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAccederOrden.IconColor = System.Drawing.Color.White;
+            this.btnAccederOrden.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAccederOrden.IconSize = 32;
+            this.btnAccederOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccederOrden.Location = new System.Drawing.Point(84, 500);
+            this.btnAccederOrden.Name = "btnAccederOrden";
+            this.btnAccederOrden.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAccederOrden.Size = new System.Drawing.Size(150, 38);
+            this.btnAccederOrden.TabIndex = 71;
+            this.btnAccederOrden.Text = "Acceder órden";
+            this.btnAccederOrden.UseVisualStyleBackColor = false;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.Goldenrod;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 32;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(289, 500);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton2.Size = new System.Drawing.Size(150, 38);
+            this.iconButton2.TabIndex = 72;
+            this.iconButton2.Text = "Acceder ejeción";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            // 
             // frmMonitoreoOrdenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 547);
+            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.btnAccederOrden);
+            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.lblSubtitulo);
             this.Controls.Add(this.EliminarRegistro);
             this.Controls.Add(this.btnModificarRegistro);
-            this.Controls.Add(this.btnRegistrarEjecucion);
-            this.Controls.Add(this.btnRegistrarOrden);
+            this.Controls.Add(this.btnGestionarEjecuciones);
+            this.Controls.Add(this.btnGestionarOrdenes);
             this.Controls.Add(this.dateFinal);
             this.Controls.Add(this.dateInicial);
             this.Controls.Add(this.lblFechaInicial);
@@ -339,8 +405,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         private System.Windows.Forms.DateTimePicker dateInicial;
         private System.Windows.Forms.Label lblFechaInicial;
         private System.Windows.Forms.Label lblFechaFinal;
-        private FontAwesome.Sharp.IconButton btnRegistrarOrden;
-        private FontAwesome.Sharp.IconButton btnRegistrarEjecucion;
+        private FontAwesome.Sharp.IconButton btnGestionarOrdenes;
+        private FontAwesome.Sharp.IconButton btnGestionarEjecuciones;
         private FontAwesome.Sharp.IconButton btnModificarRegistro;
         private FontAwesome.Sharp.IconButton EliminarRegistro;
         private System.Windows.Forms.Label lblSubtitulo;
@@ -354,5 +420,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         private System.Windows.Forms.DataGridViewTextBoxColumn AUMOrdenes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Validacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comentario;
+        private FontAwesome.Sharp.IconButton btnConsultar;
+        private FontAwesome.Sharp.IconButton btnAccederOrden;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

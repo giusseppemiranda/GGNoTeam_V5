@@ -154,6 +154,18 @@
     <Compile Include="VentanaPrincipal\GestionInstrumentosOriginadores\frmGestionOriginadoresInstrumentos.Designer.cs">
       <DependentUpon>frmGestionOriginadoresInstrumentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaPrincipal\GestionInstrumentosOriginadores\Instrumento\frmRegistroOriginador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\GestionInstrumentosOriginadores\Instrumento\frmRegistroOriginador.Designer.cs">
+      <DependentUpon>frmRegistroOriginador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPrincipal\GestionInstrumentosOriginadores\Originador\frmRegistroInstrumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\GestionInstrumentosOriginadores\Originador\frmRegistroInstrumento.Designer.cs">
+      <DependentUpon>frmRegistroInstrumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipal\GestionUsuarios\frmGestionUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +304,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\GestionInstrumentosOriginadores\frmGestionOriginadoresInstrumentos.resx">
       <DependentUpon>frmGestionOriginadoresInstrumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\GestionInstrumentosOriginadores\Instrumento\frmRegistroOriginador.resx">
+      <DependentUpon>frmRegistroOriginador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\GestionInstrumentosOriginadores\Originador\frmRegistroInstrumento.resx">
+      <DependentUpon>frmRegistroInstrumento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\GestionUsuarios\frmGestionUsuarios.resx">
       <DependentUpon>frmGestionUsuarios.cs</DependentUpon>
