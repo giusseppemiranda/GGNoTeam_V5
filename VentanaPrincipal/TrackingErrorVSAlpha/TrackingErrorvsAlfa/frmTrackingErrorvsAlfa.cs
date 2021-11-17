@@ -1,9 +1,12 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +18,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
     {
         private frmPrincipal ventanaPadre = null;
         private TrackingErrorWS.TrackingErrorWSClient _daoTE;
-        private TrackingErrorWS.trackingError[] listaTE;        
-
+        private TrackingErrorWS.trackingError[] listaTE;
+        private int fondoActivado = 0;
         public frmTrackingErrorvsAlfa(frmPrincipal ventana)
         {
             InitializeComponent();
@@ -73,20 +76,21 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
 
         private void btnFondo_1_Click(object sender, EventArgs e)
         {
+            
             obtenerDatosTrackingError(1);
-            generarGraficoTrackingError();
+            generarGraficoTrackingError();            
         }
 
         private void btnFondo_2_Click(object sender, EventArgs e)
         {
             obtenerDatosTrackingError(2);
-            generarGraficoTrackingError();
+            generarGraficoTrackingError();            
         }
 
         private void btnFondo_3_Click(object sender, EventArgs e)
         {
             obtenerDatosTrackingError(3);
-            generarGraficoTrackingError();
+            generarGraficoTrackingError();            
         }
         
 
@@ -103,13 +107,67 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
         private void obtenerDatosTrackingError(int fidFondo)
         {
             listaTE = _daoTE.ListarTrackingErrorPorFechaPorFondo(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), fidFondo);
+            fondoActivado = fidFondo;
         }
 
         private void btnExportarGraficos_Click(object sender, EventArgs e)
-        {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+        { 
+
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
-                graficoTE.SaveImage(saveFileDialog1.FileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+                string rutaTE = folderBrowserDialog1.SelectedPath+"\\" + DateTime.Now.ToString("dd_MM_yyyy") + "_TrackingError_FROM_"+dateInicial.Value.ToString("dd_MM_yyyy")+"_TO_"+dateFinal.Value.ToString("dd_MM_yyyy")+".png";
+                string rutaAlpha = folderBrowserDialog1.SelectedPath + "\\" + DateTime.Now.ToString("dd_MM_yyyy") + "_Alpha_FROM_" +dateInicial.Value.ToString("dd_MM_yyyy") + "_TO_" + dateFinal.Value.ToString("dd_MM_yyyy") + ".png";
+                string rutaPDF = folderBrowserDialog1.SelectedPath+"\\" + DateTime.Now.ToString("dd_MM_yyyy") + "_TrackingErrorVSAlpha_FROM_" + dateInicial.Value.ToString("dd_MM_yyyy") + "_TO_" + dateFinal.Value.ToString("dd_MM_yyyy") + ".pdf"; ;
+                
+                graficoTE.SaveImage(rutaTE, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+                graficoAlpha.SaveImage(rutaAlpha, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+                exportarPDF(rutaPDF,rutaTE, rutaAlpha);
+            };
+
+            
+                
+
+                
+                
+            
+        }
+
+        private void exportarPDF(string ruta,string rutaTE, string rutaAlpha)
+        {
+            Document doc = new Document(PageSize.A4);
+            try
+            {
+                
+                PdfWriter.GetInstance(doc, new FileStream((ruta), FileMode.Create));
+
+                doc.Open();
+                doc.SetMargins(14.1732F, 14.1732F, 14.1732F, 14.1732F);
+
+                iTextSharp.text.Image grafTE = iTextSharp.text.Image.GetInstance(rutaTE);
+                iTextSharp.text.Image grafAlpha = iTextSharp.text.Image.GetInstance(rutaAlpha);
+
+                
+
+                doc.Add(new Paragraph("                             ANÁLISIS DE TRACKING ERROR VS ALPHA          "));
+                doc.Add(new Paragraph("=========================================================================="));
+                doc.Add(new Paragraph(" TIPO FONDO: " + fondoActivado));
+                doc.Add(new Paragraph(" DESDE:      "+dateInicial.Value.ToString("dd-MM-yyyy")));
+                doc.Add(new Paragraph(" HASTA:      "+dateFinal.Value.ToString("dd-MM-yyyy")));
+
+                grafTE.ScaleAbsoluteWidth(550);
+                grafAlpha.ScaleAbsoluteWidth(550);
+
+                doc.Add(grafTE);
+                doc.Add(grafAlpha);
+
+                
+            } catch
+            {
+
+            }
+            finally
+            {
+                doc.Close();
             }
         }
 

@@ -30,11 +30,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha
         private void InitializeComponent()
         {
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.openFileDialogBuscarCSV = new System.Windows.Forms.OpenFileDialog();
             this.btnAssetError = new FontAwesome.Sharp.IconButton();
             this.btnDataValorCuota = new FontAwesome.Sharp.IconButton();
             this.btnTrackingErrorvsAlfa = new FontAwesome.Sharp.IconButton();
-            this.lblDescripcion = new System.Windows.Forms.Label();
             this.panelCentral.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +47,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha
             this.panelCentral.Size = new System.Drawing.Size(981, 478);
             this.panelCentral.TabIndex = 0;
             this.panelCentral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCentral_Paint);
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.lblDescripcion.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblDescripcion.Location = new System.Drawing.Point(313, 166);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(408, 28);
+            this.lblDescripcion.TabIndex = 44;
+            this.lblDescripcion.Text = "Seleccione una de las opciones disponible";
             // 
             // openFileDialogBuscarCSV
             // 
@@ -112,17 +123,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha
             this.btnTrackingErrorvsAlfa.Text = "Tracking Error vs Alfa";
             this.btnTrackingErrorvsAlfa.UseVisualStyleBackColor = false;
             this.btnTrackingErrorvsAlfa.Click += new System.EventHandler(this.btnGenerarInforme_Click);
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lblDescripcion.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblDescripcion.Location = new System.Drawing.Point(313, 166);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(408, 28);
-            this.lblDescripcion.TabIndex = 44;
-            this.lblDescripcion.Text = "Seleccione una de las opciones disponible";
             // 
             // frmTEvsAlpha
             // 
