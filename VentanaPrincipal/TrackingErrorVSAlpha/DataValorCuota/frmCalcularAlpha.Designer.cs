@@ -43,6 +43,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.ggTextBox1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.ggTextBox2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.btnExportar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataValorCuota)).BeginInit();
             this.SuspendLayout();
             // 
@@ -243,11 +244,33 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox2.UnderlinedStyle = false;
             this.ggTextBox2.Visible = false;
             // 
+            // btnExportar
+            // 
+            this.btnExportar.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnExportar.ForeColor = System.Drawing.Color.White;
+            this.btnExportar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnExportar.IconColor = System.Drawing.Color.White;
+            this.btnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportar.IconSize = 32;
+            this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportar.Location = new System.Drawing.Point(830, 428);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnExportar.Size = new System.Drawing.Size(134, 38);
+            this.btnExportar.TabIndex = 64;
+            this.btnExportar.Text = "Exportar a .csv";
+            this.btnExportar.UseVisualStyleBackColor = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
             // frmCalcularAlpha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 478);
+            this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.dgvDataValorCuota);
             this.Controls.Add(this.ggTextBox3);
             this.Controls.Add(this.ggTextBox1);
@@ -261,7 +284,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.Controls.Add(this.lblFechaInicial);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCalcularAlpha";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataValorCuota)).EndInit();
@@ -284,5 +307,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private System.Windows.Forms.Label lblFechaInicial;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dgvDataValorCuota;
+        private FontAwesome.Sharp.IconButton btnExportar;
     }
 }

@@ -1,5 +1,7 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using System;
+using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
@@ -116,6 +118,67 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             ggTextBox1.Texts = alpha.ToString();
             */
         }
-        
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            if (dgvDataValorCuota.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "CSV (.csv)|.csv";
+                sfd.FileName = "DataCriticaTrackingError.csv";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("No fue posible exportar los datos." + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            int columnCount = dgvDataValorCuota.Columns.Count;
+                            string columnNames = "";
+                            string[] outputCsv = new string[dgvDataValorCuota.Rows.Count + 3];
+                            for (int i = 0; i < columnCount; i++)
+                            {
+                                columnNames += dgvDataValorCuota.Columns[i].HeaderText.ToString() + ",";
+                            }
+                            outputCsv[0] += columnNames;
+
+                            for (int i = 1; (i - 1) < dgvDataValorCuota.Rows.Count - 2; i++)
+                            {
+                                for (int j = 0; j < columnCount; j++)
+                                {
+                                    outputCsv[i] += dgvDataValorCuota.Rows[i - 1].Cells[j].Value.ToString() + ",";
+                                }
+                            }
+                            outputCsv[dgvDataValorCuota.Rows.Count - 1] = "Fondo 1,Fondo 2,Fondo 3,";
+                            outputCsv[dgvDataValorCuota.Rows.Count] = ggTextBox1.Texts + "," + ggTextBox2.Texts + "," + ggTextBox3.Texts + ",";
+
+                            File.WriteAllLines(sfd.FileName, outputCsv, Encoding.UTF8);
+                            MessageBox.Show("Reporte exportado correctamente!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay datos para exportar", "Info");
+
+            }
+        }
     }
 }

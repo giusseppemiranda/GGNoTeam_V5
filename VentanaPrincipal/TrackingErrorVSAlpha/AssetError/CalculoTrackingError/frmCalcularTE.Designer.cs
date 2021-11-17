@@ -40,15 +40,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             this.lblFondo_2 = new System.Windows.Forms.Label();
             this.lblFondo_3 = new System.Windows.Forms.Label();
             this.dgvAssetError = new System.Windows.Forms.DataGridView();
-            this.boxFondo_3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.boxFondo_2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.boxFondo_1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wgt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalRisk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrackingError = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxFondo_3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxFondo_2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxFondo_1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.btnExportar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssetError)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,6 +190,53 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             this.dgvAssetError.TabIndex = 51;
             this.dgvAssetError.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAssetError_CellFormatting);
             // 
+            // fecha
+            // 
+            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 62;
+            // 
+            // Fondo
+            // 
+            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Fondo.HeaderText = "Fondo";
+            this.Fondo.Name = "Fondo";
+            this.Fondo.ReadOnly = true;
+            this.Fondo.Width = 64;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 76;
+            // 
+            // wgt
+            // 
+            this.wgt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.wgt.HeaderText = "% WGT";
+            this.wgt.Name = "wgt";
+            this.wgt.ReadOnly = true;
+            this.wgt.Width = 71;
+            // 
+            // TotalRisk
+            // 
+            this.TotalRisk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TotalRisk.HeaderText = "Total Risk";
+            this.TotalRisk.Name = "TotalRisk";
+            this.TotalRisk.ReadOnly = true;
+            this.TotalRisk.Width = 83;
+            // 
+            // TrackingError
+            // 
+            this.TrackingError.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TrackingError.HeaderText = "Tracking Error";
+            this.TrackingError.Name = "TrackingError";
+            this.TrackingError.ReadOnly = true;
+            // 
             // boxFondo_3
             // 
             this.boxFondo_3.BackColor = System.Drawing.SystemColors.Window;
@@ -256,58 +304,33 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             this.boxFondo_1.Texts = "";
             this.boxFondo_1.UnderlinedStyle = false;
             // 
-            // fecha
+            // btnExportar
             // 
-            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 62;
-            // 
-            // Fondo
-            // 
-            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Fondo.HeaderText = "Fondo";
-            this.Fondo.Name = "Fondo";
-            this.Fondo.ReadOnly = true;
-            this.Fondo.Width = 64;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 76;
-            // 
-            // wgt
-            // 
-            this.wgt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.wgt.HeaderText = "% WGT";
-            this.wgt.Name = "wgt";
-            this.wgt.ReadOnly = true;
-            this.wgt.Width = 71;
-            // 
-            // TotalRisk
-            // 
-            this.TotalRisk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TotalRisk.HeaderText = "Total Risk";
-            this.TotalRisk.Name = "TotalRisk";
-            this.TotalRisk.ReadOnly = true;
-            this.TotalRisk.Width = 83;
-            // 
-            // TrackingError
-            // 
-            this.TrackingError.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TrackingError.HeaderText = "Tracking Error";
-            this.TrackingError.Name = "TrackingError";
-            this.TrackingError.ReadOnly = true;
+            this.btnExportar.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnExportar.ForeColor = System.Drawing.Color.White;
+            this.btnExportar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnExportar.IconColor = System.Drawing.Color.White;
+            this.btnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportar.IconSize = 32;
+            this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportar.Location = new System.Drawing.Point(820, 428);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnExportar.Size = new System.Drawing.Size(134, 38);
+            this.btnExportar.TabIndex = 54;
+            this.btnExportar.Text = "Exportar a .csv";
+            this.btnExportar.UseVisualStyleBackColor = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // frmCalcularTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 478);
+            this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.dgvAssetError);
             this.Controls.Add(this.boxFondo_3);
             this.Controls.Add(this.boxFondo_2);
@@ -349,5 +372,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
         private System.Windows.Forms.DataGridViewTextBoxColumn wgt;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalRisk;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrackingError;
+        private FontAwesome.Sharp.IconButton btnExportar;
     }
 }
