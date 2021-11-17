@@ -16,6 +16,15 @@ namespace GGNoTeam_V5.TareasDiariasWS {
     public interface TareasDiariasWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TareasDiariasWS.listarTareasResponse listarTareas(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasResponse> listarTareasAsync(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,19 +50,10 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaResponse")]
         System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse> eliminarTareaAsync(GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TareasDiariasWS.listarTareasResponse listarTareas(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasResponse> listarTareasAsync(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -151,6 +151,34 @@ namespace GGNoTeam_V5.TareasDiariasWS {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTareas", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarTareasRequest {
+        
+        public listarTareasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTareasResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarTareasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TareasDiariasWS.tarea[] @return;
+        
+        public listarTareasResponse() {
+        }
+        
+        public listarTareasResponse(GGNoTeam_V5.TareasDiariasWS.tarea[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -262,34 +290,6 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTareas", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarTareasRequest {
-        
-        public listarTareasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTareasResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarTareasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TareasDiariasWS.tarea[] @return;
-        
-        public listarTareasResponse() {
-        }
-        
-        public listarTareasResponse(GGNoTeam_V5.TareasDiariasWS.tarea[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface TareasDiariasWSChannel : GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS, System.ServiceModel.IClientChannel {
     }
@@ -315,6 +315,27 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         
         public TareasDiariasWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TareasDiariasWS.listarTareasResponse GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.listarTareas(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request) {
+            return base.Channel.listarTareas(request);
+        }
+        
+        public GGNoTeam_V5.TareasDiariasWS.tarea[] listarTareas() {
+            GGNoTeam_V5.TareasDiariasWS.listarTareasRequest inValue = new GGNoTeam_V5.TareasDiariasWS.listarTareasRequest();
+            GGNoTeam_V5.TareasDiariasWS.listarTareasResponse retVal = ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).listarTareas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasResponse> GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.listarTareasAsync(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request) {
+            return base.Channel.listarTareasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasResponse> listarTareasAsync() {
+            GGNoTeam_V5.TareasDiariasWS.listarTareasRequest inValue = new GGNoTeam_V5.TareasDiariasWS.listarTareasRequest();
+            return ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).listarTareasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -384,27 +405,6 @@ namespace GGNoTeam_V5.TareasDiariasWS {
             GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest inValue = new GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest();
             inValue.idTarea = idTarea;
             return ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).eliminarTareaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TareasDiariasWS.listarTareasResponse GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.listarTareas(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request) {
-            return base.Channel.listarTareas(request);
-        }
-        
-        public GGNoTeam_V5.TareasDiariasWS.tarea[] listarTareas() {
-            GGNoTeam_V5.TareasDiariasWS.listarTareasRequest inValue = new GGNoTeam_V5.TareasDiariasWS.listarTareasRequest();
-            GGNoTeam_V5.TareasDiariasWS.listarTareasResponse retVal = ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).listarTareas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasResponse> GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.listarTareasAsync(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request) {
-            return base.Channel.listarTareasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasResponse> listarTareasAsync() {
-            GGNoTeam_V5.TareasDiariasWS.listarTareasRequest inValue = new GGNoTeam_V5.TareasDiariasWS.listarTareasRequest();
-            return ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).listarTareasAsync(inValue);
         }
     }
 }

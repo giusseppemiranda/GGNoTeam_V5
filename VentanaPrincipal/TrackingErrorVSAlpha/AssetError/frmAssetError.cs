@@ -91,6 +91,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             {
                 frmEditarRegistroAssetError ventanaModificar = new frmEditarRegistroAssetError(listaAsset[dgvAssetError.CurrentRow.Index]);
                 ventanaModificar.ShowDialog();
+                this.btnConsultarRegistros_Click(sender, e);
             }
         }
 

@@ -137,12 +137,6 @@
   <message name="ListarAssetErrorXFechaResponse">
     <part name="parameters" element="tns:ListarAssetErrorXFechaResponse" />
   </message>
-  <message name="ListarTrackingError">
-    <part name="parameters" element="tns:ListarTrackingError" />
-  </message>
-  <message name="ListarTrackingErrorResponse">
-    <part name="parameters" element="tns:ListarTrackingErrorResponse" />
-  </message>
   <portType name="TrackingErrorWS">
     <operation name="insertarAssetError">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorRequest" message="tns:insertarAssetError" />
@@ -231,10 +225,6 @@
     <operation name="ListarAssetErrorXFecha">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaRequest" message="tns:ListarAssetErrorXFecha" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaResponse" message="tns:ListarAssetErrorXFechaResponse" />
-    </operation>
-    <operation name="ListarTrackingError">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorRequest" message="tns:ListarTrackingError" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorResponse" message="tns:ListarTrackingErrorResponse" />
     </operation>
   </portType>
   <binding name="TrackingErrorWSPortBinding" type="tns:TrackingErrorWS">
@@ -429,15 +419,6 @@
       </output>
     </operation>
     <operation name="ListarAssetErrorXFecha">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarTrackingError">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -18,26 +18,30 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
         private TrackingErrorWS.TrackingErrorWSClient _dao;
         private TrackingErrorWS.assetError[] datos;
         private frmTEvsAlpha ventanaPadre = null;
-        public frmCalcularTE(frmPrincipal ventana,frmTEvsAlpha ventana_2)
+        private string[] fondos;
+
+        public frmCalcularTE(frmPrincipal ventana, frmTEvsAlpha ventana_2)
         {
             InitializeComponent();
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             ventanaPadre = ventana_2;
-            iniciarTema();
+
+            _dao = new TrackingErrorWS.TrackingErrorWSClient();
+
+            dgvAssetError.AutoGenerateColumns = false;
+
+            cambiarTema();
+            cargarFondos();
+            Global.pintarDGV(ref dgvAssetError, Color.DarkSalmon);
         }
 
-        private void iniciarTema()
+
+        private void cargarFondos()
         {
-            if (Global.TemaOscuro)
-            {
-                activarTemaClaro();
-            }
-            else
-            {
-                activarTemaOscuro();
-            }
+            fondos = _dao.ListarFondos();
         }
+
 
         public void cambiarTema()
         {
@@ -65,31 +69,71 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
-            //datos = _dao.listarPorFechaConProducto(dateInicial.Value.ToString("yyyy-MM-dd"));
+            cargarDGV();
+            cargarTrackingError();
+        }
+
+        private void cargarTrackingError()
+        {
+            TrackingErrorWS.trackingError[] te;
+
+            te = _dao.ListarTrackingError(dateInicial.Value.ToString("yyyy-MM-dd"));
+
+            if (te != null)
+            {
+                for (int i = 0; i < te.Length; i++)
+                {
+                    switch (te[i].fidFondo)
+                    {
+                        case 1:
+                            {
+                                boxFondo_1.Texts = te[i].trackingerror.ToString();
+                                break;
+                            }
+                        case 2:
+                            {
+                                boxFondo_2.Texts = te[i].trackingerror.ToString();
+                                break;
+                            }
+                        case 3:
+                            {
+                                boxFondo_3.Texts = te[i].trackingerror.ToString();
+                                break;
+                            }
+                    }
+                }
+            }
+        }
+
+        private void cargarDGV()
+        {
+            datos = _dao.ListarAssetErrorXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
             if (datos != null)
             {
-                dgvDataValorCuota.DataSource = new BindingList<TrackingErrorWS.assetError>(datos.ToList());
+                dgvAssetError.DataSource = datos;
             }
-
-            dgvDataValorCuota.Refresh();
-
         }
-        
-        /*
-        private void CalcularTeFondo()
+
+        private void dgvAssetError_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            double f1 = 0;
-            double f2 = 0;
-            foreach (DataGridViewRow row in dgvDataValorCuota.Rows)
-            {
-                var ass = row.DataBoundItem as TrackingErrorWS.assetError;
-                //falta agregar el fidfondo a las clases en java, mysql y procedures
-                if (ass.fidFondo == 1) f1 += ass.producto;
-                if (ass.fidFondo == 2) f2 += ass.producto;
-            }
-            ggTextBox2.Texts = f2.ToString();
-            ggTextBox1.Texts = f1.ToString();
+            TrackingErrorWS.assetError asset = (TrackingErrorWS.assetError)dgvAssetError.Rows[e.RowIndex].DataBoundItem;
+
+            dgvAssetError.Rows[e.RowIndex].Cells[0].Value = asset.fecha.ToString("dd/MM/yyyy");
+            dgvAssetError.Rows[e.RowIndex].Cells[1].Value = fondos[asset.fidFondo - 1];
+            dgvAssetError.Rows[e.RowIndex].Cells[2].Value = asset.nombre;
+            dgvAssetError.Rows[e.RowIndex].Cells[3].Value = asset.wgtP;
+            dgvAssetError.Rows[e.RowIndex].Cells[4].Value = asset.totalRiskD;
+            dgvAssetError.Rows[e.RowIndex].Cells[5].Value = asset.wgtP * asset.totalRiskD;
         }
-        */
+
+        private void ggTextBox3__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFondo_3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

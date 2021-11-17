@@ -12,8 +12,6 @@
   <xs:element name="ListarTodasAfpResponse" type="tns:ListarTodasAfpResponse" />
   <xs:element name="ListarTodosTrackingError" type="tns:ListarTodosTrackingError" />
   <xs:element name="ListarTodosTrackingErrorResponse" type="tns:ListarTodosTrackingErrorResponse" />
-  <xs:element name="ListarTrackingError" type="tns:ListarTrackingError" />
-  <xs:element name="ListarTrackingErrorResponse" type="tns:ListarTrackingErrorResponse" />
   <xs:element name="eliminarAfp" type="tns:eliminarAfp" />
   <xs:element name="eliminarAfpResponse" type="tns:eliminarAfpResponse" />
   <xs:element name="eliminarAlpha" type="tns:eliminarAlpha" />
@@ -64,7 +62,6 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:int" />
       <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
-      <xs:element name="fidFondo" type="xs:int" />
       <xs:element name="idTrackingError" type="xs:int" />
       <xs:element name="trackingerror" type="xs:double" />
     </xs:sequence>
@@ -307,16 +304,6 @@
   <xs:complexType name="ListarPorFechaPorFondoDataValorCuotaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:dataValorCuota" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ListarTrackingError">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ListarTrackingErrorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:trackingError" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarAlpha">

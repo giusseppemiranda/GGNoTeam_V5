@@ -131,7 +131,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
                 if (cargarDatos())
                 {
                     int i = _daoTE.modificarAssetError(AssetError, AssetError.fidFondo);
-                    if(i == 1)
+                    if(i == 0)
                     {
                         MessageBox.Show("Se ha realizado correctamente la modificación del Asset Error");
                         this.Dispose();
@@ -181,16 +181,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
             {
                 AssetError.wgtP = Convert.ToDouble(boxWGT.Texts);
                 AssetError.totalRiskD = Convert.ToDouble(boxTotalRisk.Texts);
-                if(AssetError.wgtP > 10)
-                {
-                    MessageBox.Show("El valor de wgtP debe encontrarse entre 0 y 10.");
-                    return false;
-                }
-                if (AssetError.totalRiskD > 10)
-                {
-                    MessageBox.Show("El valor de totalRisk debe encontrarse entre 0 y 10.");
-                    return false;
-                }
+                //if(AssetError.wgtP > 10)
+                //{
+                //    MessageBox.Show("El valor de wgtP debe encontrarse entre 0 y 10.");
+                //    return false;
+                //}
+                //if (AssetError.totalRiskD > 10)
+                //{
+                //    MessageBox.Show("El valor de totalRisk debe encontrarse entre 0 y 10.");
+                //    return false;
+                //}
             }
             catch
             {
