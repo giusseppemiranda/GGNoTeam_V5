@@ -72,14 +72,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             legend1.DockedToChartArea = "ChartArea1";
             legend1.Name = "Legend1";
             this.graficoAlpha.Legends.Add(legend1);
-            this.graficoAlpha.Location = new System.Drawing.Point(0, 247);
+            this.graficoAlpha.Location = new System.Drawing.Point(0, 239);
             this.graficoAlpha.Name = "graficoAlpha";
             this.graficoAlpha.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Alpha";
             this.graficoAlpha.Series.Add(series1);
-            this.graficoAlpha.Size = new System.Drawing.Size(741, 231);
+            this.graficoAlpha.Size = new System.Drawing.Size(741, 239);
             this.graficoAlpha.TabIndex = 1;
             this.graficoAlpha.Text = "chart2";
             this.graficoAlpha.Click += new System.EventHandler(this.chart2_Click);
@@ -99,7 +99,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             series2.Legend = "Legend1";
             series2.Name = "TrackingError";
             this.graficoTE.Series.Add(series2);
-            this.graficoTE.Size = new System.Drawing.Size(741, 247);
+            this.graficoTE.Size = new System.Drawing.Size(741, 239);
             this.graficoTE.TabIndex = 0;
             this.graficoTE.Text = "chart1";
             // 
