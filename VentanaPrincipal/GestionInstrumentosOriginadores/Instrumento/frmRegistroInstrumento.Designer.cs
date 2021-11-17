@@ -68,6 +68,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.dateMoody = new System.Windows.Forms.DateTimePicker();
             this.lblFechaMoody = new System.Windows.Forms.Label();
             this.dateUltimaModificacion = new System.Windows.Forms.DateTimePicker();
+            this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
+            this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
+            this.lblRegistroInstrumento = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // boxApellidos
@@ -82,7 +85,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.boxApellidos.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxApellidos.ForeColor = System.Drawing.Color.DimGray;
             this.boxApellidos.IsFocused = false;
-            this.boxApellidos.Location = new System.Drawing.Point(179, 59);
+            this.boxApellidos.Location = new System.Drawing.Point(179, 73);
             this.boxApellidos.MaxLength = 32767;
             this.boxApellidos.Multiline = false;
             this.boxApellidos.Name = "boxApellidos";
@@ -99,7 +102,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblCodSBS.AutoSize = true;
             this.lblCodSBS.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCodSBS.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCodSBS.Location = new System.Drawing.Point(43, 71);
+            this.lblCodSBS.Location = new System.Drawing.Point(43, 85);
             this.lblCodSBS.Name = "lblCodSBS";
             this.lblCodSBS.Size = new System.Drawing.Size(73, 15);
             this.lblCodSBS.TabIndex = 30;
@@ -117,7 +120,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.ggTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox1.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox1.IsFocused = false;
-            this.ggTextBox1.Location = new System.Drawing.Point(179, 102);
+            this.ggTextBox1.Location = new System.Drawing.Point(179, 116);
             this.ggTextBox1.MaxLength = 32767;
             this.ggTextBox1.Multiline = false;
             this.ggTextBox1.Name = "ggTextBox1";
@@ -134,7 +137,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblCodISIN.AutoSize = true;
             this.lblCodISIN.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCodISIN.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCodISIN.Location = new System.Drawing.Point(43, 114);
+            this.lblCodISIN.Location = new System.Drawing.Point(43, 128);
             this.lblCodISIN.Name = "lblCodISIN";
             this.lblCodISIN.Size = new System.Drawing.Size(75, 15);
             this.lblCodISIN.TabIndex = 32;
@@ -152,7 +155,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.ggTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox2.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox2.IsFocused = false;
-            this.ggTextBox2.Location = new System.Drawing.Point(179, 145);
+            this.ggTextBox2.Location = new System.Drawing.Point(179, 159);
             this.ggTextBox2.MaxLength = 32767;
             this.ggTextBox2.Multiline = false;
             this.ggTextBox2.Name = "ggTextBox2";
@@ -169,7 +172,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblID059.AutoSize = true;
             this.lblID059.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblID059.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblID059.Location = new System.Drawing.Point(43, 157);
+            this.lblID059.Location = new System.Drawing.Point(43, 171);
             this.lblID059.Name = "lblID059";
             this.lblID059.Size = new System.Drawing.Size(44, 15);
             this.lblID059.TabIndex = 34;
@@ -180,7 +183,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblFechaRegistro.AutoSize = true;
             this.lblFechaRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFechaRegistro.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaRegistro.Location = new System.Drawing.Point(43, 195);
+            this.lblFechaRegistro.Location = new System.Drawing.Point(43, 209);
             this.lblFechaRegistro.Name = "lblFechaRegistro";
             this.lblFechaRegistro.Size = new System.Drawing.Size(89, 15);
             this.lblFechaRegistro.TabIndex = 36;
@@ -191,7 +194,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblFechaVencimiento.AutoSize = true;
             this.lblFechaVencimiento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFechaVencimiento.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaVencimiento.Location = new System.Drawing.Point(43, 238);
+            this.lblFechaVencimiento.Location = new System.Drawing.Point(43, 252);
             this.lblFechaVencimiento.Name = "lblFechaVencimiento";
             this.lblFechaVencimiento.Size = new System.Drawing.Size(115, 15);
             this.lblFechaVencimiento.TabIndex = 38;
@@ -202,7 +205,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblClasificacionLocal.AutoSize = true;
             this.lblClasificacionLocal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblClasificacionLocal.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblClasificacionLocal.Location = new System.Drawing.Point(43, 282);
+            this.lblClasificacionLocal.Location = new System.Drawing.Point(43, 296);
             this.lblClasificacionLocal.Name = "lblClasificacionLocal";
             this.lblClasificacionLocal.Size = new System.Drawing.Size(105, 15);
             this.lblClasificacionLocal.TabIndex = 40;
@@ -210,14 +213,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             // 
             // dateRegistro
             // 
-            this.dateRegistro.Location = new System.Drawing.Point(179, 195);
+            this.dateRegistro.Location = new System.Drawing.Point(179, 209);
             this.dateRegistro.Name = "dateRegistro";
             this.dateRegistro.Size = new System.Drawing.Size(198, 20);
             this.dateRegistro.TabIndex = 84;
             // 
             // dateVencimiento
             // 
-            this.dateVencimiento.Location = new System.Drawing.Point(179, 233);
+            this.dateVencimiento.Location = new System.Drawing.Point(179, 247);
             this.dateVencimiento.Name = "dateVencimiento";
             this.dateVencimiento.Size = new System.Drawing.Size(198, 20);
             this.dateVencimiento.TabIndex = 85;
@@ -227,7 +230,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblLimiteAplicable.AutoSize = true;
             this.lblLimiteAplicable.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblLimiteAplicable.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblLimiteAplicable.Location = new System.Drawing.Point(43, 328);
+            this.lblLimiteAplicable.Location = new System.Drawing.Point(43, 342);
             this.lblLimiteAplicable.Name = "lblLimiteAplicable";
             this.lblLimiteAplicable.Size = new System.Drawing.Size(96, 15);
             this.lblLimiteAplicable.TabIndex = 86;
@@ -249,7 +252,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.comboBoxClasificacionLocal.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxClasificacionLocal.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxClasificacionLocal.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxClasificacionLocal.Location = new System.Drawing.Point(179, 274);
+            this.comboBoxClasificacionLocal.Location = new System.Drawing.Point(179, 288);
             this.comboBoxClasificacionLocal.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxClasificacionLocal.Name = "comboBoxClasificacionLocal";
             this.comboBoxClasificacionLocal.Padding = new System.Windows.Forms.Padding(2);
@@ -273,7 +276,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.comboBoxLimiteAplicable.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxLimiteAplicable.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxLimiteAplicable.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxLimiteAplicable.Location = new System.Drawing.Point(179, 313);
+            this.comboBoxLimiteAplicable.Location = new System.Drawing.Point(179, 327);
             this.comboBoxLimiteAplicable.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxLimiteAplicable.Name = "comboBoxLimiteAplicable";
             this.comboBoxLimiteAplicable.Padding = new System.Windows.Forms.Padding(2);
@@ -286,7 +289,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblAssetClass.AutoSize = true;
             this.lblAssetClass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblAssetClass.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblAssetClass.Location = new System.Drawing.Point(43, 368);
+            this.lblAssetClass.Location = new System.Drawing.Point(43, 382);
             this.lblAssetClass.Name = "lblAssetClass";
             this.lblAssetClass.Size = new System.Drawing.Size(68, 15);
             this.lblAssetClass.TabIndex = 90;
@@ -304,7 +307,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.ggTextBox4.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox4.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox4.IsFocused = false;
-            this.ggTextBox4.Location = new System.Drawing.Point(179, 398);
+            this.ggTextBox4.Location = new System.Drawing.Point(179, 412);
             this.ggTextBox4.MaxLength = 32767;
             this.ggTextBox4.Multiline = false;
             this.ggTextBox4.Name = "ggTextBox4";
@@ -321,7 +324,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblSector.AutoSize = true;
             this.lblSector.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblSector.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblSector.Location = new System.Drawing.Point(43, 410);
+            this.lblSector.Location = new System.Drawing.Point(43, 424);
             this.lblSector.Name = "lblSector";
             this.lblSector.Size = new System.Drawing.Size(47, 15);
             this.lblSector.TabIndex = 92;
@@ -343,7 +346,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.comboBoxAssetClass.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxAssetClass.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxAssetClass.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxAssetClass.Location = new System.Drawing.Point(179, 353);
+            this.comboBoxAssetClass.Location = new System.Drawing.Point(179, 367);
             this.comboBoxAssetClass.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxAssetClass.Name = "comboBoxAssetClass";
             this.comboBoxAssetClass.Padding = new System.Windows.Forms.Padding(2);
@@ -363,7 +366,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.ggTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox3.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox3.IsFocused = false;
-            this.ggTextBox3.Location = new System.Drawing.Point(179, 457);
+            this.ggTextBox3.Location = new System.Drawing.Point(179, 471);
             this.ggTextBox3.MaxLength = 32767;
             this.ggTextBox3.Multiline = false;
             this.ggTextBox3.Name = "ggTextBox3";
@@ -380,7 +383,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblOriginador.AutoSize = true;
             this.lblOriginador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblOriginador.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblOriginador.Location = new System.Drawing.Point(43, 463);
+            this.lblOriginador.Location = new System.Drawing.Point(43, 477);
             this.lblOriginador.Name = "lblOriginador";
             this.lblOriginador.Size = new System.Drawing.Size(122, 15);
             this.lblOriginador.TabIndex = 95;
@@ -391,7 +394,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblNombreOriginador.AutoSize = true;
             this.lblNombreOriginador.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreOriginador.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreOriginador.Location = new System.Drawing.Point(416, 490);
+            this.lblNombreOriginador.Location = new System.Drawing.Point(416, 501);
             this.lblNombreOriginador.Name = "lblNombreOriginador";
             this.lblNombreOriginador.Size = new System.Drawing.Size(113, 15);
             this.lblNombreOriginador.TabIndex = 97;
@@ -402,7 +405,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblRatingSistema.AutoSize = true;
             this.lblRatingSistema.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblRatingSistema.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRatingSistema.Location = new System.Drawing.Point(408, 71);
+            this.lblRatingSistema.Location = new System.Drawing.Point(408, 85);
             this.lblRatingSistema.Name = "lblRatingSistema";
             this.lblRatingSistema.Size = new System.Drawing.Size(91, 15);
             this.lblRatingSistema.TabIndex = 98;
@@ -413,7 +416,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblRatingEncaje.AutoSize = true;
             this.lblRatingEncaje.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblRatingEncaje.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRatingEncaje.Location = new System.Drawing.Point(408, 114);
+            this.lblRatingEncaje.Location = new System.Drawing.Point(408, 128);
             this.lblRatingEncaje.Name = "lblRatingEncaje";
             this.lblRatingEncaje.Size = new System.Drawing.Size(85, 15);
             this.lblRatingEncaje.TabIndex = 100;
@@ -424,7 +427,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblRatingEncajeDeSistema.AutoSize = true;
             this.lblRatingEncajeDeSistema.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblRatingEncajeDeSistema.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRatingEncajeDeSistema.Location = new System.Drawing.Point(408, 157);
+            this.lblRatingEncajeDeSistema.Location = new System.Drawing.Point(408, 171);
             this.lblRatingEncajeDeSistema.Name = "lblRatingEncajeDeSistema";
             this.lblRatingEncajeDeSistema.Size = new System.Drawing.Size(147, 15);
             this.lblRatingEncajeDeSistema.TabIndex = 102;
@@ -442,7 +445,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.ggTextBox9.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox9.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox9.IsFocused = false;
-            this.ggTextBox9.Location = new System.Drawing.Point(570, 274);
+            this.ggTextBox9.Location = new System.Drawing.Point(570, 288);
             this.ggTextBox9.MaxLength = 32767;
             this.ggTextBox9.Multiline = false;
             this.ggTextBox9.Name = "ggTextBox9";
@@ -460,7 +463,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblScore.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblScore.Location = new System.Drawing.Point(408, 284);
+            this.lblScore.Location = new System.Drawing.Point(408, 298);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(89, 15);
             this.lblScore.TabIndex = 106;
@@ -471,7 +474,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblFechaUltimaModificacion.AutoSize = true;
             this.lblFechaUltimaModificacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFechaUltimaModificacion.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaUltimaModificacion.Location = new System.Drawing.Point(408, 410);
+            this.lblFechaUltimaModificacion.Location = new System.Drawing.Point(408, 424);
             this.lblFechaUltimaModificacion.Name = "lblFechaUltimaModificacion";
             this.lblFechaUltimaModificacion.Size = new System.Drawing.Size(121, 15);
             this.lblFechaUltimaModificacion.TabIndex = 108;
@@ -482,7 +485,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblFactorRiesgo.AutoSize = true;
             this.lblFactorRiesgo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFactorRiesgo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFactorRiesgo.Location = new System.Drawing.Point(408, 362);
+            this.lblFactorRiesgo.Location = new System.Drawing.Point(408, 376);
             this.lblFactorRiesgo.Name = "lblFactorRiesgo";
             this.lblFactorRiesgo.Size = new System.Drawing.Size(99, 15);
             this.lblFactorRiesgo.TabIndex = 110;
@@ -500,7 +503,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.ggTextBox12.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox12.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox12.IsFocused = false;
-            this.ggTextBox12.Location = new System.Drawing.Point(634, 191);
+            this.ggTextBox12.Location = new System.Drawing.Point(634, 205);
             this.ggTextBox12.MaxLength = 32767;
             this.ggTextBox12.Multiline = false;
             this.ggTextBox12.Name = "ggTextBox12";
@@ -518,7 +521,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblMoodys.AutoSize = true;
             this.lblMoodys.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblMoodys.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblMoodys.Location = new System.Drawing.Point(408, 203);
+            this.lblMoodys.Location = new System.Drawing.Point(408, 217);
             this.lblMoodys.Name = "lblMoodys";
             this.lblMoodys.Size = new System.Drawing.Size(100, 15);
             this.lblMoodys.TabIndex = 112;
@@ -529,7 +532,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblRatingUnificado.AutoSize = true;
             this.lblRatingUnificado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblRatingUnificado.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRatingUnificado.Location = new System.Drawing.Point(408, 326);
+            this.lblRatingUnificado.Location = new System.Drawing.Point(408, 340);
             this.lblRatingUnificado.Name = "lblRatingUnificado";
             this.lblRatingUnificado.Size = new System.Drawing.Size(100, 15);
             this.lblRatingUnificado.TabIndex = 104;
@@ -551,7 +554,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.comboBoxRatingUnificado.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxRatingUnificado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxRatingUnificado.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxRatingUnificado.Location = new System.Drawing.Point(570, 314);
+            this.comboBoxRatingUnificado.Location = new System.Drawing.Point(570, 328);
             this.comboBoxRatingUnificado.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxRatingUnificado.Name = "comboBoxRatingUnificado";
             this.comboBoxRatingUnificado.Padding = new System.Windows.Forms.Padding(2);
@@ -575,7 +578,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.comboBoxRatingEncajeSistema.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxRatingEncajeSistema.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxRatingEncajeSistema.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxRatingEncajeSistema.Location = new System.Drawing.Point(570, 142);
+            this.comboBoxRatingEncajeSistema.Location = new System.Drawing.Point(570, 156);
             this.comboBoxRatingEncajeSistema.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxRatingEncajeSistema.Name = "comboBoxRatingEncajeSistema";
             this.comboBoxRatingEncajeSistema.Padding = new System.Windows.Forms.Padding(2);
@@ -599,7 +602,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.comboBoxRatingEncaje.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxRatingEncaje.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxRatingEncaje.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxRatingEncaje.Location = new System.Drawing.Point(570, 102);
+            this.comboBoxRatingEncaje.Location = new System.Drawing.Point(570, 116);
             this.comboBoxRatingEncaje.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxRatingEncaje.Name = "comboBoxRatingEncaje";
             this.comboBoxRatingEncaje.Padding = new System.Windows.Forms.Padding(2);
@@ -623,7 +626,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.comboBoxFactorRiesgo.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxFactorRiesgo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxFactorRiesgo.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxFactorRiesgo.Location = new System.Drawing.Point(570, 353);
+            this.comboBoxFactorRiesgo.Location = new System.Drawing.Point(570, 367);
             this.comboBoxFactorRiesgo.MinimumSize = new System.Drawing.Size(50, 26);
             this.comboBoxFactorRiesgo.Name = "comboBoxFactorRiesgo";
             this.comboBoxFactorRiesgo.Padding = new System.Windows.Forms.Padding(2);
@@ -647,7 +650,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.comboBoxRatingSistema.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxRatingSistema.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxRatingSistema.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxRatingSistema.Location = new System.Drawing.Point(570, 66);
+            this.comboBoxRatingSistema.Location = new System.Drawing.Point(570, 80);
             this.comboBoxRatingSistema.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxRatingSistema.Name = "comboBoxRatingSistema";
             this.comboBoxRatingSistema.Padding = new System.Windows.Forms.Padding(2);
@@ -657,7 +660,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             // 
             // dateMoody
             // 
-            this.dateMoody.Location = new System.Drawing.Point(570, 226);
+            this.dateMoody.Location = new System.Drawing.Point(570, 240);
             this.dateMoody.Name = "dateMoody";
             this.dateMoody.Size = new System.Drawing.Size(214, 20);
             this.dateMoody.TabIndex = 119;
@@ -667,7 +670,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblFechaMoody.AutoSize = true;
             this.lblFechaMoody.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaMoody.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaMoody.Location = new System.Drawing.Point(434, 226);
+            this.lblFechaMoody.Location = new System.Drawing.Point(434, 240);
             this.lblFechaMoody.Name = "lblFechaMoody";
             this.lblFechaMoody.Size = new System.Drawing.Size(75, 13);
             this.lblFechaMoody.TabIndex = 120;
@@ -675,16 +678,68 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             // 
             // dateUltimaModificacion
             // 
-            this.dateUltimaModificacion.Location = new System.Drawing.Point(570, 405);
+            this.dateUltimaModificacion.Location = new System.Drawing.Point(570, 419);
             this.dateUltimaModificacion.Name = "dateUltimaModificacion";
             this.dateUltimaModificacion.Size = new System.Drawing.Size(214, 20);
             this.dateUltimaModificacion.TabIndex = 121;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.SlateGray;
+            this.btnCancelar.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.btnCancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancelar.BorderRadius = 8;
+            this.btnCancelar.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(32, 531);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(84, 47);
+            this.btnCancelar.TabIndex = 123;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextColor = System.Drawing.Color.White;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSiguiente.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSiguiente.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSiguiente.BorderRadius = 8;
+            this.btnSiguiente.BorderSize = 0;
+            this.btnSiguiente.FlatAppearance.BorderSize = 0;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSiguiente.ForeColor = System.Drawing.Color.White;
+            this.btnSiguiente.Location = new System.Drawing.Point(411, 531);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(112, 47);
+            this.btnSiguiente.TabIndex = 124;
+            this.btnSiguiente.Text = "Aceptar";
+            this.btnSiguiente.TextColor = System.Drawing.Color.White;
+            this.btnSiguiente.UseVisualStyleBackColor = false;
+            // 
+            // lblRegistroInstrumento
+            // 
+            this.lblRegistroInstrumento.AutoSize = true;
+            this.lblRegistroInstrumento.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistroInstrumento.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblRegistroInstrumento.Location = new System.Drawing.Point(325, 24);
+            this.lblRegistroInstrumento.Name = "lblRegistroInstrumento";
+            this.lblRegistroInstrumento.Size = new System.Drawing.Size(201, 25);
+            this.lblRegistroInstrumento.TabIndex = 125;
+            this.lblRegistroInstrumento.Text = "Registro instrumento";
             // 
             // frmRegistroInstrumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 527);
+            this.ClientSize = new System.Drawing.Size(800, 591);
+            this.Controls.Add(this.lblRegistroInstrumento);
+            this.Controls.Add(this.btnSiguiente);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dateUltimaModificacion);
             this.Controls.Add(this.lblFechaMoody);
             this.Controls.Add(this.dateMoody);
@@ -773,5 +828,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         private System.Windows.Forms.DateTimePicker dateMoody;
         private System.Windows.Forms.Label lblFechaMoody;
         private System.Windows.Forms.DateTimePicker dateUltimaModificacion;
+        private Recursos.UserControls.GGButton btnCancelar;
+        private Recursos.UserControls.GGButton btnSiguiente;
+        private System.Windows.Forms.Label lblRegistroInstrumento;
     }
 }
