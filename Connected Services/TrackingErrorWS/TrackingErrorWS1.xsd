@@ -13,6 +13,8 @@
   <xs:element name="ListarTodosTrackingError" type="tns:ListarTodosTrackingError" />
   <xs:element name="ListarTodosTrackingErrorResponse" type="tns:ListarTodosTrackingErrorResponse" />
   <xs:element name="ListarTrackingError" type="tns:ListarTrackingError" />
+  <xs:element name="ListarTrackingErrorPorFechaPorFondo" type="tns:ListarTrackingErrorPorFechaPorFondo" />
+  <xs:element name="ListarTrackingErrorPorFechaPorFondoResponse" type="tns:ListarTrackingErrorPorFechaPorFondoResponse" />
   <xs:element name="ListarTrackingErrorResponse" type="tns:ListarTrackingErrorResponse" />
   <xs:element name="eliminarAfp" type="tns:eliminarAfp" />
   <xs:element name="eliminarAfpResponse" type="tns:eliminarAfpResponse" />
@@ -113,16 +115,6 @@
       <xs:element name="wgtP" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarAfp">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="afp" type="tns:afp" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarAfpResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarAlpha">
     <xs:sequence>
       <xs:element minOccurs="0" name="alpha" type="tns:alpha" />
@@ -139,6 +131,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarAlphaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAfp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="afp" type="tns:afp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAfpResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -163,6 +165,18 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ListarTrackingErrorPorFechaPorFondo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element name="arg2" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarTrackingErrorPorFechaPorFondoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:trackingError" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarTodasAlpha">
     <xs:sequence />
   </xs:complexType>
@@ -183,6 +197,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:assetError" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ListarTodasAfp">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarTodasAfpResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:afp" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarDataValorCuota">
     <xs:sequence>
       <xs:element name="idData" type="xs:int" />
@@ -191,14 +213,6 @@
   <xs:complexType name="eliminarDataValorCuotaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ListarTodasAfp">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="ListarTodasAfpResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:afp" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarAssetError">

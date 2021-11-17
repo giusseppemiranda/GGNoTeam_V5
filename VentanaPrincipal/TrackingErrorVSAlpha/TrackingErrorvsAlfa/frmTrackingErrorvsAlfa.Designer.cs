@@ -29,15 +29,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelGraficos = new System.Windows.Forms.Panel();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblTitutlo = new System.Windows.Forms.Label();
             this.lblFechaFinal = new System.Windows.Forms.Label();
             this.lblFechaInicial = new System.Windows.Forms.Label();
@@ -47,52 +45,23 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             this.btnFondo_2 = new FontAwesome.Sharp.IconButton();
             this.btnFondo_3 = new FontAwesome.Sharp.IconButton();
             this.btnFondo_1 = new FontAwesome.Sharp.IconButton();
+            this.graficoTE = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graficoAlpha = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panelGraficos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoTE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlpha)).BeginInit();
             this.SuspendLayout();
             // 
             // panelGraficos
             // 
-            this.panelGraficos.Controls.Add(this.chart2);
-            this.panelGraficos.Controls.Add(this.chart1);
+            this.panelGraficos.Controls.Add(this.graficoAlpha);
+            this.panelGraficos.Controls.Add(this.graficoTE);
             this.panelGraficos.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelGraficos.Location = new System.Drawing.Point(240, 0);
             this.panelGraficos.Name = "panelGraficos";
             this.panelGraficos.Size = new System.Drawing.Size(741, 478);
             this.panelGraficos.TabIndex = 0;
-            // 
-            // chart2
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(37, 235);
-            this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(655, 208);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
-            // 
-            // chart1
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(37, 9);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(655, 226);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
             // 
             // lblTitutlo
             // 
@@ -225,6 +194,47 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             this.btnFondo_1.UseVisualStyleBackColor = false;
             this.btnFondo_1.Click += new System.EventHandler(this.btnFondo_1_Click);
             // 
+            // graficoTE
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.graficoTE.ChartAreas.Add(chartArea5);
+            legend5.DockedToChartArea = "ChartArea1";
+            legend5.Name = "Legend1";
+            this.graficoTE.Legends.Add(legend5);
+            this.graficoTE.Location = new System.Drawing.Point(0, 0);
+            this.graficoTE.Name = "graficoTE";
+            this.graficoTE.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "TrackingError";
+            this.graficoTE.Series.Add(series5);
+            this.graficoTE.Size = new System.Drawing.Size(742, 239);
+            this.graficoTE.TabIndex = 0;
+            this.graficoTE.Text = "chart1";
+            // 
+            // graficoAlpha
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.graficoAlpha.ChartAreas.Add(chartArea6);
+            legend6.DockedToChartArea = "ChartArea1";
+            legend6.Name = "Legend1";
+            this.graficoAlpha.Legends.Add(legend6);
+            this.graficoAlpha.Location = new System.Drawing.Point(0, 248);
+            this.graficoAlpha.Name = "graficoAlpha";
+            this.graficoAlpha.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Alpha";
+            this.graficoAlpha.Series.Add(series6);
+            this.graficoAlpha.Size = new System.Drawing.Size(742, 230);
+            this.graficoAlpha.TabIndex = 1;
+            this.graficoAlpha.Text = "chart2";
+            this.graficoAlpha.Click += new System.EventHandler(this.chart2_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Archivos PNG(*.png)|*.png";
+            // 
             // frmTrackingErrorvsAlfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,8 +254,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             this.Name = "frmTrackingErrorvsAlfa";
             this.Text = "frmTrackingErrorvsAlfa";
             this.panelGraficos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoTE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlpha)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,11 +269,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
         private System.Windows.Forms.Label lblFechaInicial;
         private System.Windows.Forms.DateTimePicker dateInicial;
         private System.Windows.Forms.DateTimePicker dateFinal;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private FontAwesome.Sharp.IconButton btnFondo_1;
         private FontAwesome.Sharp.IconButton btnFondo_3;
         private FontAwesome.Sharp.IconButton btnFondo_2;
         private FontAwesome.Sharp.IconButton btnExportarGraficos;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graficoAlpha;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graficoTE;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
