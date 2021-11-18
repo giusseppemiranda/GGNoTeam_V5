@@ -14,16 +14,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
     public partial class frmRegistroInstrumento : Form
     {
         private GestionInstrumentosOriginadoresWS.originador orig;
+        private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoInst;
         public frmRegistroInstrumento(GestionInstrumentosOriginadoresWS.instrumento inst)
         {
             InitializeComponent();
             boxcodSBS.Texts = inst.codigoSBS;
             boxcodISIN.Texts = inst.codigoISIN;
+            _daoInst = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
         }
 
         public frmRegistroInstrumento()
         {
             InitializeComponent();
+            _daoInst = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
         }
         
         public void cargarOriginador(GestionInstrumentosOriginadoresWS.originador origAux)
@@ -56,6 +59,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

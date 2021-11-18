@@ -43,9 +43,10 @@
   </xs:complexType>
   <xs:complexType name="emisor">
     <xs:sequence>
-      <xs:element name="codigo" type="xs:int" />
+      <xs:element name="idEmisor" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="originadores" nillable="true" type="tns:originador" />
+      <xs:element minOccurs="0" name="codigoEmisor" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="originador">
@@ -72,16 +73,17 @@
   <xs:complexType name="instrumento">
     <xs:sequence>
       <xs:element name="activo" type="xs:int" />
-      <xs:element minOccurs="0" name="clasificacionErr" type="xs:string" />
+      <xs:element minOccurs="0" name="clasificacionErr" type="tns:eClasificacionErr" />
+      <xs:element minOccurs="0" name="codigoID059" type="xs:string" />
       <xs:element minOccurs="0" name="codigoISIN" type="xs:string" />
       <xs:element minOccurs="0" name="codigoSBS" type="xs:string" />
       <xs:element minOccurs="0" name="factorRiesgo" type="xs:string" />
       <xs:element minOccurs="0" name="fechaMoodys" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaUltimaClasificacion" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
       <xs:element name="fidOriginador" type="xs:int" />
       <xs:element name="idInstrumento" type="xs:int" />
-      <xs:element minOccurs="0" name="leyAplicable" type="tns:eLeyAplicable" />
       <xs:element minOccurs="0" name="limiteAplicable" type="tns:eLimiteAplicable" />
       <xs:element minOccurs="0" name="moodys" type="xs:string" />
       <xs:element minOccurs="0" name="ratingEncaje" type="xs:string" />
@@ -89,9 +91,6 @@
       <xs:element minOccurs="0" name="ratingUnificado" type="xs:string" />
       <xs:element minOccurs="0" name="ratingUnificadoLocal" type="xs:string" />
       <xs:element minOccurs="0" name="score" type="xs:string" />
-      <xs:element minOccurs="0" name="situacionCartera" type="tns:eSituacionCartera" />
-      <xs:element minOccurs="0" name="situacionInstrumento" type="xs:string" />
-      <xs:element minOccurs="0" name="tipoOperacion" type="tns:eTipoOperacion" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarInstrumentoResponse">
@@ -137,16 +136,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:emisor" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarOriginador">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="originador" type="tns:originador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarOriginadorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarInstrumentoXcodigo">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
@@ -155,6 +144,16 @@
   <xs:complexType name="listarInstrumentoXcodigoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:instrumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOriginador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="originador" type="tns:originador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOriginadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarOriginador">
@@ -196,30 +195,19 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:originador" />
     </xs:sequence>
   </xs:complexType>
-  <xs:simpleType name="eLeyAplicable">
+  <xs:simpleType name="eClasificacionErr">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="Exterior" />
-      <xs:enumeration value="Local" />
+      <xs:enumeration value="Deuda" />
+      <xs:enumeration value="Equity" />
+      <xs:enumeration value="Private_Equity" />
+      <xs:enumeration value="Fondos_de_inversion" />
       <xs:enumeration value="No_aplica" />
-      <xs:enumeration value="SBS" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="eLimiteAplicable">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Local" />
       <xs:enumeration value="Exterior" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="eSituacionCartera">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Vencido" />
-      <xs:enumeration value="Vigente" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="eTipoOperacion">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="compra" />
-      <xs:enumeration value="venta" />
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

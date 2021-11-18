@@ -29,23 +29,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInstrumentosOriginadores = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
+            this.comboTipo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
+            this.btnBuscar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
+            this.txtboxbusqueda = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.idInstrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoSBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoISIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID059 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clasificacionErr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situacionInstrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.situacionCartera = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoOperacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.limiteAplicable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leyAplicable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ratingEncajeSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ratingEncaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ratingUnificado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,9 +56,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.moodys = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaMoodys = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaUltimaClasificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboTipo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
-            this.btnBuscar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
-            this.txtboxbusqueda = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInstrumentosOriginadores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,26 +69,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.dgvInstrumentosOriginadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInstrumentosOriginadores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInstrumentosOriginadores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInstrumentosOriginadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInstrumentosOriginadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInstrumentosOriginadores.ColumnHeadersHeight = 25;
             this.dgvInstrumentosOriginadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idInstrumento,
             this.codigoSBS,
             this.codigoISIN,
+            this.ID059,
             this.clasificacionErr,
+            this.fechaRegistro,
             this.fechaVencimiento,
-            this.situacionInstrumento,
-            this.situacionCartera,
-            this.tipoOperacion,
             this.limiteAplicable,
-            this.leyAplicable,
             this.ratingEncajeSistema,
             this.ratingEncaje,
             this.ratingUnificado,
@@ -106,9 +102,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.dgvInstrumentosOriginadores.Name = "dgvInstrumentosOriginadores";
             this.dgvInstrumentosOriginadores.ReadOnly = true;
             this.dgvInstrumentosOriginadores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvInstrumentosOriginadores.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvInstrumentosOriginadores.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInstrumentosOriginadores.RowTemplate.Height = 25;
             this.dgvInstrumentosOriginadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInstrumentosOriginadores.Size = new System.Drawing.Size(954, 421);
@@ -192,6 +188,67 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // comboTipo
+            // 
+            this.comboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboTipo.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.comboTipo.BorderSize = 2;
+            this.comboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboTipo.ForeColor = System.Drawing.Color.DimGray;
+            this.comboTipo.IconColor = System.Drawing.Color.DodgerBlue;
+            this.comboTipo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboTipo.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboTipo.Location = new System.Drawing.Point(431, 16);
+            this.comboTipo.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboTipo.Name = "comboTipo";
+            this.comboTipo.Padding = new System.Windows.Forms.Padding(2);
+            this.comboTipo.Size = new System.Drawing.Size(200, 30);
+            this.comboTipo.TabIndex = 46;
+            this.comboTipo.Texts = "";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBuscar.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBuscar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscar.BorderRadius = 8;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(887, 16);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(78, 30);
+            this.btnBuscar.TabIndex = 29;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextColor = System.Drawing.Color.White;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtboxbusqueda
+            // 
+            this.txtboxbusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtboxbusqueda.BackColor = System.Drawing.SystemColors.Window;
+            this.txtboxbusqueda.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtboxbusqueda.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.txtboxbusqueda.BorderSize = 2;
+            this.txtboxbusqueda.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.txtboxbusqueda.ForeColor = System.Drawing.Color.DimGray;
+            this.txtboxbusqueda.IsFocused = false;
+            this.txtboxbusqueda.Location = new System.Drawing.Point(648, 16);
+            this.txtboxbusqueda.MaxLength = 32767;
+            this.txtboxbusqueda.Multiline = false;
+            this.txtboxbusqueda.Name = "txtboxbusqueda";
+            this.txtboxbusqueda.Padding = new System.Windows.Forms.Padding(6);
+            this.txtboxbusqueda.PasswordChar = false;
+            this.txtboxbusqueda.Size = new System.Drawing.Size(220, 30);
+            this.txtboxbusqueda.TabIndex = 13;
+            this.txtboxbusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtboxbusqueda.Texts = "";
+            this.txtboxbusqueda.UnderlinedStyle = true;
+            // 
             // idInstrumento
             // 
             this.idInstrumento.HeaderText = "ID";
@@ -213,12 +270,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.codigoISIN.ReadOnly = true;
             this.codigoISIN.Width = 95;
             // 
+            // ID059
+            // 
+            this.ID059.HeaderText = "ID059";
+            this.ID059.Name = "ID059";
+            this.ID059.ReadOnly = true;
+            this.ID059.Width = 64;
+            // 
             // clasificacionErr
             // 
             this.clasificacionErr.HeaderText = "Clasificación Err";
             this.clasificacionErr.Name = "clasificacionErr";
             this.clasificacionErr.ReadOnly = true;
             this.clasificacionErr.Width = 116;
+            // 
+            // fechaRegistro
+            // 
+            this.fechaRegistro.HeaderText = "Fecha registro";
+            this.fechaRegistro.Name = "fechaRegistro";
+            this.fechaRegistro.ReadOnly = true;
+            this.fechaRegistro.Width = 109;
             // 
             // fechaVencimiento
             // 
@@ -227,40 +298,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.fechaVencimiento.ReadOnly = true;
             this.fechaVencimiento.Width = 152;
             // 
-            // situacionInstrumento
-            // 
-            this.situacionInstrumento.HeaderText = "Situacion instrumento";
-            this.situacionInstrumento.Name = "situacionInstrumento";
-            this.situacionInstrumento.ReadOnly = true;
-            this.situacionInstrumento.Width = 153;
-            // 
-            // situacionCartera
-            // 
-            this.situacionCartera.HeaderText = "Situacion cartera";
-            this.situacionCartera.Name = "situacionCartera";
-            this.situacionCartera.ReadOnly = true;
-            this.situacionCartera.Width = 124;
-            // 
-            // tipoOperacion
-            // 
-            this.tipoOperacion.HeaderText = "Tipo operacion";
-            this.tipoOperacion.Name = "tipoOperacion";
-            this.tipoOperacion.ReadOnly = true;
-            this.tipoOperacion.Width = 112;
-            // 
             // limiteAplicable
             // 
             this.limiteAplicable.HeaderText = "Limite aplicable";
             this.limiteAplicable.Name = "limiteAplicable";
             this.limiteAplicable.ReadOnly = true;
             this.limiteAplicable.Width = 116;
-            // 
-            // leyAplicable
-            // 
-            this.leyAplicable.HeaderText = "Ley aplicable ";
-            this.leyAplicable.Name = "leyAplicable";
-            this.leyAplicable.ReadOnly = true;
-            this.leyAplicable.Width = 103;
             // 
             // ratingEncajeSistema
             // 
@@ -325,67 +368,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.fechaUltimaClasificacion.ReadOnly = true;
             this.fechaUltimaClasificacion.Width = 169;
             // 
-            // comboTipo
-            // 
-            this.comboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboTipo.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.comboTipo.BorderSize = 2;
-            this.comboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboTipo.ForeColor = System.Drawing.Color.DimGray;
-            this.comboTipo.IconColor = System.Drawing.Color.DodgerBlue;
-            this.comboTipo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboTipo.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboTipo.Location = new System.Drawing.Point(431, 16);
-            this.comboTipo.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboTipo.Name = "comboTipo";
-            this.comboTipo.Padding = new System.Windows.Forms.Padding(2);
-            this.comboTipo.Size = new System.Drawing.Size(200, 30);
-            this.comboTipo.TabIndex = 46;
-            this.comboTipo.Texts = "";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBuscar.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBuscar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnBuscar.BorderRadius = 8;
-            this.btnBuscar.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(887, 16);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(78, 30);
-            this.btnBuscar.TabIndex = 29;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextColor = System.Drawing.Color.White;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtboxbusqueda
-            // 
-            this.txtboxbusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtboxbusqueda.BackColor = System.Drawing.SystemColors.Window;
-            this.txtboxbusqueda.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtboxbusqueda.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.txtboxbusqueda.BorderSize = 2;
-            this.txtboxbusqueda.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.txtboxbusqueda.ForeColor = System.Drawing.Color.DimGray;
-            this.txtboxbusqueda.IsFocused = false;
-            this.txtboxbusqueda.Location = new System.Drawing.Point(648, 16);
-            this.txtboxbusqueda.MaxLength = 32767;
-            this.txtboxbusqueda.Multiline = false;
-            this.txtboxbusqueda.Name = "txtboxbusqueda";
-            this.txtboxbusqueda.Padding = new System.Windows.Forms.Padding(6);
-            this.txtboxbusqueda.PasswordChar = false;
-            this.txtboxbusqueda.Size = new System.Drawing.Size(220, 30);
-            this.txtboxbusqueda.TabIndex = 13;
-            this.txtboxbusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtboxbusqueda.Texts = "";
-            this.txtboxbusqueda.UnderlinedStyle = true;
-            // 
             // frmGestionOriginadoresInstrumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,13 +403,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         private System.Windows.Forms.DataGridViewTextBoxColumn idInstrumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoSBS;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoISIN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID059;
         private System.Windows.Forms.DataGridViewTextBoxColumn clasificacionErr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaVencimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn situacionInstrumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn situacionCartera;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoOperacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn limiteAplicable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn leyAplicable;
         private System.Windows.Forms.DataGridViewTextBoxColumn ratingEncajeSistema;
         private System.Windows.Forms.DataGridViewTextBoxColumn ratingEncaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn ratingUnificado;

@@ -686,6 +686,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.btnSiguiente.Text = "Aceptar";
             this.btnSiguiente.TextColor = System.Drawing.Color.White;
             this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // lblRegistroInstrumento
             // 

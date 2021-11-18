@@ -24,7 +24,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             ori.codigoOriginador = boxCodigoOriginador.Texts;
             ori.nombreOriginador = boxNombreOriginador.Texts;
             ori.sectorGics = boxSector.Texts;
-            ori.fidEmisor = emi.codigo;
+            ori.fidEmisor = emi.idEmisor;
 
         }
         public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig)
@@ -40,7 +40,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         public void cargarEmisor(GestionInstrumentosOriginadoresWS.emisor emiAux)
         {
             //emi.idEmisor = emiAux.idEmisor;
-            emi.codigo = emiAux.codigo;
+            emi.codigoEmisor = emiAux.codigoEmisor;
             emi.nombre = emiAux.nombre;
         }
         private void btnBuscarOriginador_Click(object sender, EventArgs e)

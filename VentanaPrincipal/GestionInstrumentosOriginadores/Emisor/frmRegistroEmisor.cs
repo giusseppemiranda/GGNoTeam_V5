@@ -19,7 +19,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
         public frmRegistroEmisor(GestionInstrumentosOriginadoresWS.emisor emi)
         {
             InitializeComponent();
-            boxCodigoEmisor.Texts = emi.codigo.ToString();
+            boxCodigoEmisor.Texts = emi.codigoEmisor.ToString();
             boxNombreEmisor.Texts = emi.nombre;
         }
     }

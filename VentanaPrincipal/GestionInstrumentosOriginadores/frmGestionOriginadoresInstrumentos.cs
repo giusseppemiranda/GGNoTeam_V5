@@ -91,24 +91,20 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = inst.idInstrumento;
             dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = inst.codigoSBS;
             dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = inst.codigoISIN;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[3].Value = inst.clasificacionErr;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[4].Value = inst.fechaVencimiento;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[5].Value = inst.situacionInstrumento;
-
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[6].Value = inst.situacionCartera;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[7].Value = inst.tipoOperacion;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[8].Value = inst.limiteAplicable;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[9].Value = inst.leyAplicable;
-
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[10].Value = inst.ratingEncajeSistema;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[11].Value = inst.ratingEncaje;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[12].Value = inst.ratingUnificado;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[13].Value = inst.ratingUnificadoLocal;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[14].Value = inst.factorRiesgo;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[15].Value = inst.score;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[16].Value = inst.moodys;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[17].Value = inst.fechaMoodys;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[18].Value = inst.fechaUltimaClasificacion;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[3].Value = inst.codigoID059;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[4].Value = inst.clasificacionErr;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[5].Value = inst.fechaRegistro;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[6].Value = inst.fechaVencimiento;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[7].Value = inst.limiteAplicable;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[8].Value = inst.ratingEncajeSistema;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[9].Value = inst.ratingEncaje;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[10].Value = inst.ratingUnificado;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[11].Value = inst.ratingUnificadoLocal;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[12].Value = inst.factorRiesgo;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[13].Value = inst.score;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[14].Value = inst.moodys;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[15].Value = inst.fechaMoodys;
+            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[16].Value = inst.fechaUltimaClasificacion;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
