@@ -67,8 +67,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         {
             frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(listaAfps);
             ventanaAgregar.ShowDialog();
-            this.btnConsultarRegistros_Click(sender, e);
-            dgvDataValorCuota.Refresh();
+            this.btnConsultarRegistros_Click(sender, e);            
         }
 
         private void btnActualizarRegistro_Click(object sender, System.EventArgs e)
@@ -79,8 +78,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                 ventanaAgregar.ShowDialog();
                 this.btnConsultarRegistros_Click(sender, e);
             }
-            
-            dgvDataValorCuota.Refresh();
         }
 
         private void btnConsultarRegistros_Click(object sender, System.EventArgs e)
@@ -94,20 +91,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                     nombreafp.Add(listaAfps[datos[i].fidAFP - 1].nombre);
                     tipofondo = comboFondo.SelectedItem.ToString();
                 }
-                // dgvDataValorCuota.Rows.Clear();
-                /* 
-                     dgvDataValorCuota.Rows.Add(datos[i].idDataValorCuota,datos[i].fecha.ToString("dd/MM/yyyy"),listaAfps[datos[i].fidAFP-1].nombre,comboFondo.SelectedItem.ToString(),datos[i].patrimonio,datos[i].cuotas,datos[i].valorCuota);
-                 }*/
-
             }
             dgvDataValorCuota.DataSource = frmTEvsAlpha.DatosPrin;
-            //dgvDataValorCuota.Refresh();
         }
 
         private void btnEliminarRegistro_Click(object sender, System.EventArgs e)
         {
             int i = -1;
-            //datos = _dao.ListarPorFechaSinYtoDDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
             if(datos!= null) i= _dao.eliminarDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index].idDataValorCuota);
             if (i == 1)
             {
@@ -146,9 +136,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         }
 
         private void dgvDataValorCuota_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            
-            
+        {       
             TrackingErrorWS.dataValorCuota dvc = (TrackingErrorWS.dataValorCuota)dgvDataValorCuota.Rows[e.RowIndex].DataBoundItem;
             dgvDataValorCuota.Rows[e.RowIndex].Cells[0].Value = dvc.idDataValorCuota;
             dgvDataValorCuota.Rows[e.RowIndex].Cells[1].Value = dvc.fecha.ToString("dd/MM/yyyy");
