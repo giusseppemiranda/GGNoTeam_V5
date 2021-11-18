@@ -934,12 +934,12 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int codigoOriginador;
+        public string codigoOriginador;
         
         public buscarUnOriginadorPorCodigoRequest() {
         }
         
-        public buscarUnOriginadorPorCodigoRequest(int codigoOriginador) {
+        public buscarUnOriginadorPorCodigoRequest(string codigoOriginador) {
             this.codigoOriginador = codigoOriginador;
         }
     }
@@ -951,13 +951,13 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
     public partial class buscarUnOriginadorPorCodigoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador[] @return;
         
         public buscarUnOriginadorPorCodigoResponse() {
         }
         
-        public buscarUnOriginadorPorCodigoResponse(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador @return) {
+        public buscarUnOriginadorPorCodigoResponse(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador[] @return) {
             this.@return = @return;
         }
     }
@@ -1371,7 +1371,7 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
             return base.Channel.buscarUnOriginadorPorCodigo(request);
         }
         
-        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador buscarUnOriginadorPorCodigo(int codigoOriginador) {
+        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador[] buscarUnOriginadorPorCodigo(string codigoOriginador) {
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoRequest();
             inValue.codigoOriginador = codigoOriginador;
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).buscarUnOriginadorPorCodigo(inValue);
@@ -1383,7 +1383,7 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
             return base.Channel.buscarUnOriginadorPorCodigoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoResponse> buscarUnOriginadorPorCodigoAsync(int codigoOriginador) {
+        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoResponse> buscarUnOriginadorPorCodigoAsync(string codigoOriginador) {
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoRequest();
             inValue.codigoOriginador = codigoOriginador;
             return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).buscarUnOriginadorPorCodigoAsync(inValue);

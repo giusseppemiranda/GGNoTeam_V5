@@ -18,6 +18,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoInstOrig;
         private GestionInstrumentosOriginadoresWS.instrumento[] instrumentos;
         private GestionInstrumentosOriginadoresWS.originador[] originadores;
+        private GestionInstrumentosOriginadoresWS.emisor[] emisores;
         public frmGestionOriginadoresInstrumentos(frmPrincipal ventana)
         {
             InitializeComponent();
@@ -65,12 +66,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (comboTipo.SelectedItem.ToString() == "Originador") {
-                _daoInstOrig.buscarUnOriginadorPorCodigo(Int32.Parse(txtboxbusqueda.Texts));
+                originadores = _daoInstOrig.buscarUnOriginadorPorCodigo(txtboxbusqueda.Texts);
+                dgvInstrumentosOriginadores.DataSource = originadores;
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
                 instrumentos=_daoInstOrig.listarInstrumentoXcodigo("");
                 dgvInstrumentosOriginadores.DataSource = instrumentos;
+            }
+            else if {
+                emisores = _daoInstOrig.listarEmisores(); //implementar buscar por codigo
+                dgvInstrumentosOriginadores.DataSource = emisores;
             }
 
 
@@ -113,7 +119,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
                 instrumentos = _daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
-                //instrumentos[0].situacionCartera;
                 dgvInstrumentosOriginadores.DataSource = instrumentos;
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")

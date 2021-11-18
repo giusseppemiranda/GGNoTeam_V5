@@ -44,8 +44,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.comboBoxClasificacionLocal = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.comboBoxLimiteAplicable = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.lblAssetClass = new System.Windows.Forms.Label();
-            this.boxSector = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.lblSector = new System.Windows.Forms.Label();
             this.comboBoxAssetClass = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.boxCodigoOriginador = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblOriginador = new System.Windows.Forms.Label();
@@ -294,41 +292,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblAssetClass.Size = new System.Drawing.Size(68, 15);
             this.lblAssetClass.TabIndex = 90;
             this.lblAssetClass.Text = "Asset class:";
-            // 
-            // boxSector
-            // 
-            this.boxSector.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxSector.BackColor = System.Drawing.SystemColors.Window;
-            this.boxSector.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxSector.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxSector.BorderSize = 2;
-            this.boxSector.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxSector.ForeColor = System.Drawing.Color.DimGray;
-            this.boxSector.IsFocused = false;
-            this.boxSector.Location = new System.Drawing.Point(179, 412);
-            this.boxSector.MaxLength = 32767;
-            this.boxSector.Multiline = false;
-            this.boxSector.Name = "boxSector";
-            this.boxSector.Padding = new System.Windows.Forms.Padding(6);
-            this.boxSector.PasswordChar = false;
-            this.boxSector.Size = new System.Drawing.Size(214, 30);
-            this.boxSector.TabIndex = 93;
-            this.boxSector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxSector.Texts = "";
-            this.boxSector.UnderlinedStyle = true;
-            // 
-            // lblSector
-            // 
-            this.lblSector.AutoSize = true;
-            this.lblSector.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblSector.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblSector.Location = new System.Drawing.Point(43, 424);
-            this.lblSector.Name = "lblSector";
-            this.lblSector.Size = new System.Drawing.Size(47, 15);
-            this.lblSector.TabIndex = 92;
-            this.lblSector.Text = "Sector:";
             // 
             // comboBoxAssetClass
             // 
@@ -762,8 +725,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.Controls.Add(this.boxCodigoOriginador);
             this.Controls.Add(this.lblOriginador);
             this.Controls.Add(this.comboBoxAssetClass);
-            this.Controls.Add(this.boxSector);
-            this.Controls.Add(this.lblSector);
             this.Controls.Add(this.lblAssetClass);
             this.Controls.Add(this.comboBoxLimiteAplicable);
             this.Controls.Add(this.comboBoxClasificacionLocal);
@@ -804,8 +765,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         private Recursos.UserControls.GGComboBox comboBoxClasificacionLocal;
         private Recursos.UserControls.GGComboBox comboBoxLimiteAplicable;
         private System.Windows.Forms.Label lblAssetClass;
-        private Recursos.UserControls.GGTextBox boxSector;
-        private System.Windows.Forms.Label lblSector;
         private Recursos.UserControls.GGComboBox comboBoxAssetClass;
         private Recursos.UserControls.GGTextBox boxCodigoOriginador;
         private System.Windows.Forms.Label lblOriginador;
