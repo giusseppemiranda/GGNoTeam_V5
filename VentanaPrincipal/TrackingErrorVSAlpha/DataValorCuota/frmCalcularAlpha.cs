@@ -20,17 +20,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             ventanaPadre = ventana_2;
-        }
-        private void iniciarTema()
-        {
-            if (Global.TemaOscuro)
-            {
-                activarTemaClaro();
-            }
-            else
-            {
-                activarTemaOscuro();
-            }
+            
+            cambiarTema();
         }
 
         public void cambiarTema()

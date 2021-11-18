@@ -17,12 +17,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private bool activarEventoComboFondo = false;
         private static BindingList<string> nombreafp = new BindingList<string>();
         private static string tipofondo;
+        private frmTEvsAlpha ventanaAnterior = null;
 
-        public frmDataValorCuota(frmPrincipal ventana)
+        public frmDataValorCuota(frmPrincipal ventana, frmTEvsAlpha ventana_2)
         {
             InitializeComponent();
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+
+            ventanaAnterior = ventana_2;
+
             dgvDataValorCuota.AutoGenerateColumns = false;
             dgvDataValorCuota.DataSource = frmTEvsAlpha.DatosPrin;
             _dao = new TrackingErrorWS.TrackingErrorWSClient();
@@ -121,7 +125,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         }
         private void btnVerCalculoAlfa_Click(object sender, System.EventArgs e)
         {
-
+            ventanaAnterior.abrirFormulario(new frmCalcularAlpha(ventanaPadre, ventanaAnterior));
         }
 
         private void comboFondo_Load(object sender, System.EventArgs e)

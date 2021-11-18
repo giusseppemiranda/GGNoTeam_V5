@@ -313,7 +313,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.btnConsultar.TabIndex = 70;
             this.btnConsultar.Text = "Consultar operaciones";
             this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            //this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // EliminarRegistro
             // 

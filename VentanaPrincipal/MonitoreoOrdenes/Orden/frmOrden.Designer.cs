@@ -83,7 +83,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.EliminarRegistro.TabIndex = 88;
             this.EliminarRegistro.Text = "Eliminar Registro";
             this.EliminarRegistro.UseVisualStyleBackColor = false;
-            this.EliminarRegistro.Click += new System.EventHandler(this.EliminarRegistro_Click);
+            //this.EliminarRegistro.Click += new System.EventHandler(this.EliminarRegistro_Click);
             // 
             // btnModificarRegistro
             // 
@@ -105,7 +105,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnModificarRegistro.TabIndex = 87;
             this.btnModificarRegistro.Text = "Modificar Registro";
             this.btnModificarRegistro.UseVisualStyleBackColor = false;
-            this.btnModificarRegistro.Click += new System.EventHandler(this.btnModificarRegistro_Click);
+            //this.btnModificarRegistro.Click += new System.EventHandler(this.btnModificarRegistro_Click);
             // 
             // btnAgregarRegistro
             // 
@@ -127,7 +127,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnAgregarRegistro.TabIndex = 86;
             this.btnAgregarRegistro.Text = "Agregar Registro";
             this.btnAgregarRegistro.UseVisualStyleBackColor = false;
-            this.btnAgregarRegistro.Click += new System.EventHandler(this.btnAgregarRegistro_Click);
+            //this.btnAgregarRegistro.Click += new System.EventHandler(this.btnAgregarRegistro_Click);
             // 
             // btnConsultarOrdenes
             // 
@@ -149,7 +149,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnConsultarOrdenes.TabIndex = 85;
             this.btnConsultarOrdenes.Text = "Consultar órdenes";
             this.btnConsultarOrdenes.UseVisualStyleBackColor = false;
-            this.btnConsultarOrdenes.Click += new System.EventHandler(this.btnConsultarEjecuciones_Click);
+            //this.btnConsultarOrdenes.Click += new System.EventHandler(this.btnConsultarEjecuciones_Click);
             // 
             // dateInicial
             // 
@@ -158,7 +158,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.dateInicial.Name = "dateInicial";
             this.dateInicial.Size = new System.Drawing.Size(392, 31);
             this.dateInicial.TabIndex = 83;
-            this.dateInicial.ValueChanged += new System.EventHandler(this.dateInicial_ValueChanged);
+            //this.dateInicial.ValueChanged += new System.EventHandler(this.dateInicial_ValueChanged);
             // 
             // lblFecha
             // 
@@ -171,7 +171,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.lblFecha.Size = new System.Drawing.Size(86, 32);
             this.lblFecha.TabIndex = 84;
             this.lblFecha.Text = "Fecha:";
-            this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
+            //this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
             // dgvOrdenes
             // 
@@ -215,7 +215,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrdenes.Size = new System.Drawing.Size(1848, 783);
             this.dgvOrdenes.TabIndex = 82;
-            this.dgvOrdenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdenes_CellContentClick);
+            //this.dgvOrdenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdenes_CellContentClick);
             // 
             // Fecha
             // 
@@ -284,7 +284,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.lblTitulo.Size = new System.Drawing.Size(442, 54);
             this.lblTitulo.TabIndex = 81;
             this.lblTitulo.Text = "Monitoreo de órdenes";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
+            //this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // comboFondo
             // 

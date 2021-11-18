@@ -115,6 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\MonitoreoOrdenesWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\TareasDiariasWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -551,6 +556,31 @@
     <None Include="Connected Services\LoginWS\LoginWS1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.ejecucion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.eliminarEjecucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.eliminarOperacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.insertarEjecucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.ListarEjecucionPorFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.listarTodosEjecucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.modificarEjecucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenesWS\MonitorOrdenWS.wsdl" />
+    <None Include="Connected Services\MonitoreoOrdenesWS\MonitorOrdenWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -702,6 +732,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\MonitoreoOrdenesWS\configuration91.svcinfo" />
+    <None Include="Connected Services\MonitoreoOrdenesWS\configuration.svcinfo" />
+    <None Include="Connected Services\MonitoreoOrdenesWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net40\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll" />
@@ -719,6 +755,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\GestionInstrumentosOriginadoresWS\" />
     <WCFMetadataStorage Include="Connected Services\LoginWS\" />
+    <WCFMetadataStorage Include="Connected Services\MonitoreoOrdenesWS\" />
     <WCFMetadataStorage Include="Connected Services\TareasDiariasWS\" />
     <WCFMetadataStorage Include="Connected Services\TrackingErrorWS\" />
   </ItemGroup>

@@ -86,7 +86,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha
 
         private void btnDataValorCuota_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmDataValorCuota(ventanaPadre));
+            abrirFormulario(new frmDataValorCuota(ventanaPadre,this));
         }
 
         private void btnAssetError_Click(object sender, EventArgs e)

@@ -31,6 +31,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblFondo_3 = new System.Windows.Forms.Label();
             this.lblFondo_2 = new System.Windows.Forms.Label();
             this.lblFondo_1 = new System.Windows.Forms.Label();
@@ -39,11 +40,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicial = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.dgvDataValorCuota = new System.Windows.Forms.DataGridView();
             this.ggTextBox3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.ggTextBox1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.ggTextBox2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.btnExportar = new FontAwesome.Sharp.IconButton();
+            this.dgvDataValorCuota = new System.Windows.Forms.DataGridView();
+            this.idDVC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreAFP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patrimonio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuotas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.YTOD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataValorCuota)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +61,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFondo_3.AutoSize = true;
             this.lblFondo_3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFondo_3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFondo_3.Location = new System.Drawing.Point(692, 424);
+            this.lblFondo_3.Location = new System.Drawing.Point(692, 410);
             this.lblFondo_3.Name = "lblFondo_3";
             this.lblFondo_3.Size = new System.Drawing.Size(59, 15);
             this.lblFondo_3.TabIndex = 56;
@@ -64,7 +73,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFondo_2.AutoSize = true;
             this.lblFondo_2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFondo_2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFondo_2.Location = new System.Drawing.Point(513, 424);
+            this.lblFondo_2.Location = new System.Drawing.Point(513, 410);
             this.lblFondo_2.Name = "lblFondo_2";
             this.lblFondo_2.Size = new System.Drawing.Size(59, 15);
             this.lblFondo_2.TabIndex = 55;
@@ -76,7 +85,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFondo_1.AutoSize = true;
             this.lblFondo_1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFondo_1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFondo_1.Location = new System.Drawing.Point(320, 424);
+            this.lblFondo_1.Location = new System.Drawing.Point(320, 410);
             this.lblFondo_1.Name = "lblFondo_1";
             this.lblFondo_1.Size = new System.Drawing.Size(59, 15);
             this.lblFondo_1.TabIndex = 54;
@@ -88,7 +97,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblTE.AutoSize = true;
             this.lblTE.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblTE.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTE.Location = new System.Drawing.Point(96, 451);
+            this.lblTE.Location = new System.Drawing.Point(96, 437);
             this.lblTE.Name = "lblTE";
             this.lblTE.Size = new System.Drawing.Size(101, 15);
             this.lblTE.TabIndex = 53;
@@ -145,40 +154,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblTitulo.TabIndex = 48;
             this.lblTitulo.Text = "Calculo Alpha";
             // 
-            // dgvDataValorCuota
-            // 
-            this.dgvDataValorCuota.AllowUserToAddRows = false;
-            this.dgvDataValorCuota.AllowUserToDeleteRows = false;
-            this.dgvDataValorCuota.AllowUserToResizeColumns = false;
-            this.dgvDataValorCuota.AllowUserToResizeRows = false;
-            this.dgvDataValorCuota.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvDataValorCuota.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDataValorCuota.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvDataValorCuota.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDataValorCuota.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDataValorCuota.ColumnHeadersHeight = 25;
-            this.dgvDataValorCuota.EnableHeadersVisualStyles = false;
-            this.dgvDataValorCuota.Location = new System.Drawing.Point(12, 83);
-            this.dgvDataValorCuota.MultiSelect = false;
-            this.dgvDataValorCuota.Name = "dgvDataValorCuota";
-            this.dgvDataValorCuota.ReadOnly = true;
-            this.dgvDataValorCuota.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvDataValorCuota.RowHeadersWidth = 82;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvDataValorCuota.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDataValorCuota.RowTemplate.Height = 25;
-            this.dgvDataValorCuota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDataValorCuota.Size = new System.Drawing.Size(952, 335);
-            this.dgvDataValorCuota.TabIndex = 63;
-            // 
             // ggTextBox3
             // 
             this.ggTextBox3.BackColor = System.Drawing.SystemColors.Window;
@@ -188,7 +163,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox3.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox3.IsFocused = false;
-            this.ggTextBox3.Location = new System.Drawing.Point(659, 442);
+            this.ggTextBox3.Location = new System.Drawing.Point(659, 428);
             this.ggTextBox3.MaxLength = 32767;
             this.ggTextBox3.Multiline = false;
             this.ggTextBox3.Name = "ggTextBox3";
@@ -210,7 +185,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox1.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox1.IsFocused = false;
-            this.ggTextBox1.Location = new System.Drawing.Point(284, 442);
+            this.ggTextBox1.Location = new System.Drawing.Point(284, 428);
             this.ggTextBox1.MaxLength = 32767;
             this.ggTextBox1.Multiline = false;
             this.ggTextBox1.Name = "ggTextBox1";
@@ -231,7 +206,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.ggTextBox2.ForeColor = System.Drawing.Color.DimGray;
             this.ggTextBox2.IsFocused = false;
-            this.ggTextBox2.Location = new System.Drawing.Point(477, 442);
+            this.ggTextBox2.Location = new System.Drawing.Point(477, 428);
             this.ggTextBox2.MaxLength = 32767;
             this.ggTextBox2.Multiline = false;
             this.ggTextBox2.Name = "ggTextBox2";
@@ -265,13 +240,127 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnExportar.UseVisualStyleBackColor = false;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
+            // dgvDataValorCuota
+            // 
+            this.dgvDataValorCuota.AllowUserToAddRows = false;
+            this.dgvDataValorCuota.AllowUserToDeleteRows = false;
+            this.dgvDataValorCuota.AllowUserToResizeColumns = false;
+            this.dgvDataValorCuota.AllowUserToResizeRows = false;
+            this.dgvDataValorCuota.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDataValorCuota.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDataValorCuota.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDataValorCuota.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataValorCuota.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDataValorCuota.ColumnHeadersHeight = 25;
+            this.dgvDataValorCuota.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDVC,
+            this.fecha,
+            this.nombreAFP,
+            this.Fondo,
+            this.patrimonio,
+            this.cuotas,
+            this.valorCuota,
+            this.YTOD});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDataValorCuota.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDataValorCuota.EnableHeadersVisualStyles = false;
+            this.dgvDataValorCuota.Location = new System.Drawing.Point(12, 83);
+            this.dgvDataValorCuota.MultiSelect = false;
+            this.dgvDataValorCuota.Name = "dgvDataValorCuota";
+            this.dgvDataValorCuota.ReadOnly = true;
+            this.dgvDataValorCuota.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvDataValorCuota.RowHeadersWidth = 25;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvDataValorCuota.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDataValorCuota.RowTemplate.Height = 25;
+            this.dgvDataValorCuota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDataValorCuota.Size = new System.Drawing.Size(952, 324);
+            this.dgvDataValorCuota.TabIndex = 65;
+            // 
+            // idDVC
+            // 
+            this.idDVC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idDVC.HeaderText = "ID";
+            this.idDVC.Name = "idDVC";
+            this.idDVC.ReadOnly = true;
+            this.idDVC.Width = 43;
+            // 
+            // fecha
+            // 
+            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 62;
+            // 
+            // nombreAFP
+            // 
+            this.nombreAFP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreAFP.HeaderText = "Nombre AFP";
+            this.nombreAFP.Name = "nombreAFP";
+            this.nombreAFP.ReadOnly = true;
+            // 
+            // Fondo
+            // 
+            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Fondo.HeaderText = "Tipo fondo";
+            this.Fondo.Name = "Fondo";
+            this.Fondo.ReadOnly = true;
+            this.Fondo.Width = 90;
+            // 
+            // patrimonio
+            // 
+            this.patrimonio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.patrimonio.HeaderText = "Patrimonio";
+            this.patrimonio.Name = "patrimonio";
+            this.patrimonio.ReadOnly = true;
+            this.patrimonio.Width = 91;
+            // 
+            // cuotas
+            // 
+            this.cuotas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cuotas.HeaderText = "Cuotas";
+            this.cuotas.Name = "cuotas";
+            this.cuotas.ReadOnly = true;
+            this.cuotas.Width = 67;
+            // 
+            // valorCuota
+            // 
+            this.valorCuota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorCuota.HeaderText = "Valor Cuota";
+            this.valorCuota.Name = "valorCuota";
+            this.valorCuota.ReadOnly = true;
+            this.valorCuota.Width = 93;
+            // 
+            // YTOD
+            // 
+            this.YTOD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.YTOD.HeaderText = "YtoD";
+            this.YTOD.Name = "YTOD";
+            this.YTOD.ReadOnly = true;
+            // 
             // frmCalcularAlpha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 478);
-            this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.dgvDataValorCuota);
+            this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.ggTextBox3);
             this.Controls.Add(this.ggTextBox1);
             this.Controls.Add(this.lblFondo_3);
@@ -306,7 +395,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private System.Windows.Forms.DateTimePicker dateInicial;
         private System.Windows.Forms.Label lblFechaInicial;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.DataGridView dgvDataValorCuota;
         private FontAwesome.Sharp.IconButton btnExportar;
+        private System.Windows.Forms.DataGridView dgvDataValorCuota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDVC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreAFP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fondo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patrimonio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuotas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorCuota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn YTOD;
     }
 }

@@ -17,67 +17,67 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
     public partial class frmEjecucion : Form
     {
         private frmMonitoreoOrdenes ventanaPrincipal = null;
-        private MonitoreoOrdenWS.MonitoreoOrdenWSClient _daoMO;
-        private MonitoreoOrdenWS.ejecucion[] listaEjecuciones;
+        //private MonitoreoOrdenWS.MonitoreoOrdenWSClient _daoMO;
+        //private MonitoreoOrdenWS.ejecucion[] listaEjecuciones;
         public frmEjecucion(frmMonitoreoOrdenes ventana)
         {
             InitializeComponent();
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmMonitoreoOrdenes.delegadoCambiarTema(cambiarTema);
-            _daoMO = new MonitoreoOrdenWS.MonitoreoOrdenWSClient();
+            //_daoMO = new MonitoreoOrdenWS.MonitoreoOrdenWSClient();
             cambiarTema();
         }
 
         private void btnConsultarEjecuciones_Click(object sender, EventArgs e)
         {
-            listaEjecuciones = _daoMO.ListarEjecucionPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1));
-            dgvOrdenes.Rows.Clear();
-            if (listaEjecuciones != null)
-            {
-                for (int i = 0; i < listaEjecuciones.Length; i++)
-                {
-                    dgvOrdenes.Rows.Add(
-                        listaEjecuciones[i].fecha.ToString("dd/MM/yyyy"), 
-                        comboFondo.SelectedItem.ToString(), 
-                        listaEjecuciones[i].codsbs, 
-                        listaEjecuciones[i].codisin, 
-                        listaEjecuciones[i].instrumento, 
-                        listaEjecuciones[i].tipoOper, 
-                        listaEjecuciones[i].AUM);
-                }
-            }
-            dgvOrdenes.Refresh();
+            //    listaEjecuciones = _daoMO.ListarEjecucionPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1));
+            //    dgvOrdenes.Rows.Clear();
+            //    if (listaEjecuciones != null)
+            //    {
+            //        for (int i = 0; i < listaEjecuciones.Length; i++)
+            //        {
+            //            dgvOrdenes.Rows.Add(
+            //                listaEjecuciones[i].fecha.ToString("dd/MM/yyyy"), 
+            //                comboFondo.SelectedItem.ToString(), 
+            //                listaEjecuciones[i].codsbs, 
+            //                listaEjecuciones[i].codisin, 
+            //                listaEjecuciones[i].instrumento, 
+            //                listaEjecuciones[i].tipoOper, 
+            //                listaEjecuciones[i].AUM);
+            //        }
+            //    }
+            //    dgvOrdenes.Refresh();
         }
 
-        private void btnAgregarRegistro_Click(object sender, EventArgs e)
+    private void btnAgregarRegistro_Click(object sender, EventArgs e)
         {
-            frmEditarEjecucion ventanaAgregar = new frmEditarEjecucion();
-            ventanaAgregar.ShowDialog();
-            this.btnConsultarEjecuciones_Click(sender, e);
+            //    frmEditarEjecucion ventanaAgregar = new frmEditarEjecucion();
+            //    ventanaAgregar.ShowDialog();
+            //    this.btnConsultarEjecuciones_Click(sender, e);
 
         }
 
-        private void EliminarRegistro_Click(object sender, EventArgs e)
+    private void EliminarRegistro_Click(object sender, EventArgs e)
         {
-            if (listaEjecuciones!= null)
-            {
-                int procesoValido = _daoMO.eliminarEjecucion(listaEjecuciones[dgvOrdenes.CurrentRow.Index].idEjecucion);
-                if (procesoValido != 1)
-                {
-                    MessageBox.Show("No se ha podido eliminar el elemento seleccionado. Intente nuevamente.");
-                }
-            }
-            this.btnConsultarEjecuciones_Click(sender, e);
+            //    if (listaEjecuciones!= null)
+            //    {
+            //        int procesoValido = _daoMO.eliminarEjecucion(listaEjecuciones[dgvOrdenes.CurrentRow.Index].idEjecucion);
+            //        if (procesoValido != 1)
+            //        {
+            //            MessageBox.Show("No se ha podido eliminar el elemento seleccionado. Intente nuevamente.");
+            //        }
+            //    }
+            //    this.btnConsultarEjecuciones_Click(sender, e);
         }
 
-        private void btnModificarRegistro_Click(object sender, EventArgs e)
+    private void btnModificarRegistro_Click(object sender, EventArgs e)
         {
-            if (listaEjecuciones!= null)
-            {
-                frmEditarEjecucion ventanaModificar = new frmEditarEjecucion(listaEjecuciones[dgvOrdenes.CurrentRow.Index]);
-                ventanaModificar.ShowDialog();
-                this.btnConsultarEjecuciones_Click(sender, e);
-            }
+            //    if (listaEjecuciones!= null)
+            //    {
+            //        frmEditarEjecucion ventanaModificar = new frmEditarEjecucion(listaEjecuciones[dgvOrdenes.CurrentRow.Index]);
+            //        ventanaModificar.ShowDialog();
+            //        this.btnConsultarEjecuciones_Click(sender, e);
+            //    }
         }
         public void cambiarTema()
         {

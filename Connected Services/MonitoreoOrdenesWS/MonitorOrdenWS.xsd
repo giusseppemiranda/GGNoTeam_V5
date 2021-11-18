@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices.sist.afp.ggNoTeam/" targetNamespace="http://webservices.sist.afp.ggNoTeam/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ListarEjecucionPorFecha" type="tns:ListarEjecucionPorFecha" />
+  <xs:element name="ListarEjecucionPorFechaResponse" type="tns:ListarEjecucionPorFechaResponse" />
+  <xs:element name="eliminarEjecucion" type="tns:eliminarEjecucion" />
+  <xs:element name="eliminarEjecucionResponse" type="tns:eliminarEjecucionResponse" />
+  <xs:element name="eliminarOperacion" type="tns:eliminarOperacion" />
+  <xs:element name="eliminarOperacionResponse" type="tns:eliminarOperacionResponse" />
+  <xs:element name="insertarEjecucion" type="tns:insertarEjecucion" />
+  <xs:element name="insertarEjecucionResponse" type="tns:insertarEjecucionResponse" />
+  <xs:element name="listarTodosEjecucion" type="tns:listarTodosEjecucion" />
+  <xs:element name="listarTodosEjecucionResponse" type="tns:listarTodosEjecucionResponse" />
+  <xs:element name="modificarEjecucion" type="tns:modificarEjecucion" />
+  <xs:element name="modificarEjecucionResponse" type="tns:modificarEjecucionResponse" />
+  <xs:complexType name="modificarEjecucion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ejecucion" type="tns:ejecucion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ejecucion">
+    <xs:sequence>
+      <xs:element name="AUM" type="xs:double" />
+      <xs:element name="activo" type="xs:int" />
+      <xs:element minOccurs="0" name="assetclass" type="tns:eAsset" />
+      <xs:element name="cantInstrOrden" type="xs:double" />
+      <xs:element name="cantidad" type="xs:double" />
+      <xs:element minOccurs="0" name="codisin" type="xs:string" />
+      <xs:element minOccurs="0" name="codsbs" type="xs:string" />
+      <xs:element name="comision" type="xs:double" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaLiq" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaOper" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fondo" type="tns:eTipoFondo" />
+      <xs:element minOccurs="0" name="horaRegistro" type="xs:string" />
+      <xs:element name="idEjecucion" type="xs:int" />
+      <xs:element minOccurs="0" name="instrumento" type="xs:string" />
+      <xs:element minOccurs="0" name="intermediario" type="xs:string" />
+      <xs:element minOccurs="0" name="medioNegociacion" type="xs:string" />
+      <xs:element name="precio" type="xs:double" />
+      <xs:element name="pxq" type="xs:double" />
+      <xs:element name="pxqsoles" type="xs:double" />
+      <xs:element minOccurs="0" name="tipoCond" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoMoneda" type="tns:eTipoMoneda" />
+      <xs:element minOccurs="0" name="tipoOper" type="tns:eTipoOperacion" />
+      <xs:element minOccurs="0" name="fCompraAntigua" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fCompraReciente" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEjecucionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOperacion">
+    <xs:sequence>
+      <xs:element name="idOperacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOperacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjecucion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjecucionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejecucion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEjecucion">
+    <xs:sequence>
+      <xs:element name="idEjecucion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEjecucionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEjecucion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ejecucion" type="tns:ejecucion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEjecucionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarEjecucionPorFecha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarEjecucionPorFechaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejecucion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="eAsset">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Renta_Fija" />
+      <xs:enumeration value="Renta_Variable" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="eTipoFondo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fondo1" />
+      <xs:enumeration value="Fondo2" />
+      <xs:enumeration value="Fondo3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="eTipoMoneda">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AUD" />
+      <xs:enumeration value="BRL" />
+      <xs:enumeration value="CAD" />
+      <xs:enumeration value="CHF" />
+      <xs:enumeration value="CLP" />
+      <xs:enumeration value="CNH" />
+      <xs:enumeration value="CNY" />
+      <xs:enumeration value="COP" />
+      <xs:enumeration value="CZK" />
+      <xs:enumeration value="DKK" />
+      <xs:enumeration value="USD" />
+      <xs:enumeration value="EGP" />
+      <xs:enumeration value="EUR" />
+      <xs:enumeration value="GBP" />
+      <xs:enumeration value="HKD" />
+      <xs:enumeration value="HUF" />
+      <xs:enumeration value="IDR" />
+      <xs:enumeration value="ILS" />
+      <xs:enumeration value="INR" />
+      <xs:enumeration value="JPY" />
+      <xs:enumeration value="KRW" />
+      <xs:enumeration value="MXN" />
+      <xs:enumeration value="NOK" />
+      <xs:enumeration value="PEN" />
+      <xs:enumeration value="NZD" />
+      <xs:enumeration value="PLN" />
+      <xs:enumeration value="RON" />
+      <xs:enumeration value="RUB" />
+      <xs:enumeration value="SEK" />
+      <xs:enumeration value="SGD" />
+      <xs:enumeration value="THB" />
+      <xs:enumeration value="TRY" />
+      <xs:enumeration value="TWD" />
+      <xs:enumeration value="noRegistrado" />
+      <xs:enumeration value="ZAR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="eTipoOperacion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="compra" />
+      <xs:enumeration value="venta" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
