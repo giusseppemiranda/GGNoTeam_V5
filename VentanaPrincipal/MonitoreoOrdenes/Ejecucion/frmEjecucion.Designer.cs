@@ -34,12 +34,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
             this.dgvOrdenes = new System.Windows.Forms.DataGridView();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblSubtitulo = new System.Windows.Forms.Label();
-            this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
-            this.btnModificarRegistro = new FontAwesome.Sharp.IconButton();
-            this.btnAgregarRegistro = new FontAwesome.Sharp.IconButton();
-            this.btnConsultarEjecuciones = new FontAwesome.Sharp.IconButton();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoSBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,14 +41,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.Instrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Operación = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AUMEjecuciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblSubtitulo = new System.Windows.Forms.Label();
+            this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
+            this.btnModificarRegistro = new FontAwesome.Sharp.IconButton();
+            this.btnAgregarRegistro = new FontAwesome.Sharp.IconButton();
+            this.btnConsultarEjecuciones = new FontAwesome.Sharp.IconButton();
+            this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
             // dateInicial
             // 
-            this.dateInicial.Location = new System.Drawing.Point(34, 66);
+            this.dateInicial.Location = new System.Drawing.Point(68, 127);
+            this.dateInicial.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dateInicial.Name = "dateInicial";
-            this.dateInicial.Size = new System.Drawing.Size(198, 20);
+            this.dateInicial.Size = new System.Drawing.Size(392, 31);
             this.dateInicial.TabIndex = 72;
             // 
             // lblFecha
@@ -62,9 +64,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFecha.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFecha.Location = new System.Drawing.Point(31, 48);
+            this.lblFecha.Location = new System.Drawing.Point(62, 92);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(42, 15);
+            this.lblFecha.Size = new System.Drawing.Size(86, 32);
             this.lblFecha.TabIndex = 74;
             this.lblFecha.Text = "Fecha:";
             // 
@@ -96,27 +99,86 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.Operación,
             this.AUMEjecuciones});
             this.dgvOrdenes.EnableHeadersVisualStyles = false;
-            this.dgvOrdenes.Location = new System.Drawing.Point(33, 92);
+            this.dgvOrdenes.Location = new System.Drawing.Point(66, 177);
+            this.dgvOrdenes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dgvOrdenes.MultiSelect = false;
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.ReadOnly = true;
             this.dgvOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvOrdenes.RowHeadersWidth = 82;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
             this.dgvOrdenes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOrdenes.RowTemplate.Height = 25;
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenes.Size = new System.Drawing.Size(924, 407);
+            this.dgvOrdenes.Size = new System.Drawing.Size(1848, 783);
             this.dgvOrdenes.TabIndex = 71;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 10;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 122;
+            // 
+            // Fondo
+            // 
+            this.Fondo.HeaderText = "Fondo";
+            this.Fondo.MinimumWidth = 10;
+            this.Fondo.Name = "Fondo";
+            this.Fondo.ReadOnly = true;
+            this.Fondo.Width = 130;
+            // 
+            // CodigoSBS
+            // 
+            this.CodigoSBS.HeaderText = "Codigo SBS";
+            this.CodigoSBS.MinimumWidth = 10;
+            this.CodigoSBS.Name = "CodigoSBS";
+            this.CodigoSBS.ReadOnly = true;
+            this.CodigoSBS.Width = 188;
+            // 
+            // CodigoISIN
+            // 
+            this.CodigoISIN.HeaderText = "Codigo ISIN ";
+            this.CodigoISIN.MinimumWidth = 10;
+            this.CodigoISIN.Name = "CodigoISIN";
+            this.CodigoISIN.ReadOnly = true;
+            this.CodigoISIN.Width = 202;
+            // 
+            // Instrumento
+            // 
+            this.Instrumento.HeaderText = "Instrumento";
+            this.Instrumento.MinimumWidth = 10;
+            this.Instrumento.Name = "Instrumento";
+            this.Instrumento.ReadOnly = true;
+            this.Instrumento.Width = 200;
+            // 
+            // Operación
+            // 
+            this.Operación.HeaderText = "Operación";
+            this.Operación.MinimumWidth = 10;
+            this.Operación.Name = "Operación";
+            this.Operación.ReadOnly = true;
+            this.Operación.Width = 176;
+            // 
+            // AUMEjecuciones
+            // 
+            this.AUMEjecuciones.HeaderText = "AUM Ejecuciones";
+            this.AUMEjecuciones.MinimumWidth = 10;
+            this.AUMEjecuciones.Name = "AUMEjecuciones";
+            this.AUMEjecuciones.ReadOnly = true;
+            this.AUMEjecuciones.Width = 255;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(28, 1);
+            this.lblTitulo.Location = new System.Drawing.Point(56, 2);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(222, 28);
+            this.lblTitulo.Size = new System.Drawing.Size(442, 54);
             this.lblTitulo.TabIndex = 70;
             this.lblTitulo.Text = "Monitoreo de órdenes";
             // 
@@ -125,9 +187,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblSubtitulo.Location = new System.Drawing.Point(30, 28);
+            this.lblSubtitulo.Location = new System.Drawing.Point(60, 54);
+            this.lblSubtitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(89, 20);
+            this.lblSubtitulo.Size = new System.Drawing.Size(179, 41);
             this.lblSubtitulo.TabIndex = 80;
             this.lblSubtitulo.Text = "Ejecuciones";
             // 
@@ -143,13 +206,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.EliminarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.EliminarRegistro.IconSize = 32;
             this.EliminarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarRegistro.Location = new System.Drawing.Point(807, 505);
+            this.EliminarRegistro.Location = new System.Drawing.Point(1614, 971);
+            this.EliminarRegistro.Margin = new System.Windows.Forms.Padding(6);
             this.EliminarRegistro.Name = "EliminarRegistro";
-            this.EliminarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.EliminarRegistro.Size = new System.Drawing.Size(150, 38);
+            this.EliminarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.EliminarRegistro.Size = new System.Drawing.Size(300, 73);
             this.EliminarRegistro.TabIndex = 79;
             this.EliminarRegistro.Text = "Eliminar Registro";
             this.EliminarRegistro.UseVisualStyleBackColor = false;
+            this.EliminarRegistro.Click += new System.EventHandler(this.EliminarRegistro_Click);
             // 
             // btnModificarRegistro
             // 
@@ -163,13 +228,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.btnModificarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarRegistro.IconSize = 32;
             this.btnModificarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarRegistro.Location = new System.Drawing.Point(628, 505);
+            this.btnModificarRegistro.Location = new System.Drawing.Point(1256, 971);
+            this.btnModificarRegistro.Margin = new System.Windows.Forms.Padding(6);
             this.btnModificarRegistro.Name = "btnModificarRegistro";
-            this.btnModificarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnModificarRegistro.Size = new System.Drawing.Size(150, 38);
+            this.btnModificarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnModificarRegistro.Size = new System.Drawing.Size(300, 73);
             this.btnModificarRegistro.TabIndex = 78;
             this.btnModificarRegistro.Text = "Modificar Registro";
             this.btnModificarRegistro.UseVisualStyleBackColor = false;
+            this.btnModificarRegistro.Click += new System.EventHandler(this.btnModificarRegistro_Click);
             // 
             // btnAgregarRegistro
             // 
@@ -183,13 +250,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.btnAgregarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarRegistro.IconSize = 32;
             this.btnAgregarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarRegistro.Location = new System.Drawing.Point(807, 48);
+            this.btnAgregarRegistro.Location = new System.Drawing.Point(1614, 92);
+            this.btnAgregarRegistro.Margin = new System.Windows.Forms.Padding(6);
             this.btnAgregarRegistro.Name = "btnAgregarRegistro";
-            this.btnAgregarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAgregarRegistro.Size = new System.Drawing.Size(150, 38);
+            this.btnAgregarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAgregarRegistro.Size = new System.Drawing.Size(300, 73);
             this.btnAgregarRegistro.TabIndex = 77;
             this.btnAgregarRegistro.Text = "Agregar Registro";
             this.btnAgregarRegistro.UseVisualStyleBackColor = false;
+            this.btnAgregarRegistro.Click += new System.EventHandler(this.btnAgregarRegistro_Click);
             // 
             // btnConsultarEjecuciones
             // 
@@ -203,67 +272,42 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.btnConsultarEjecuciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConsultarEjecuciones.IconSize = 32;
             this.btnConsultarEjecuciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarEjecuciones.Location = new System.Drawing.Point(266, 48);
+            this.btnConsultarEjecuciones.Location = new System.Drawing.Point(532, 92);
+            this.btnConsultarEjecuciones.Margin = new System.Windows.Forms.Padding(6);
             this.btnConsultarEjecuciones.Name = "btnConsultarEjecuciones";
-            this.btnConsultarEjecuciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnConsultarEjecuciones.Size = new System.Drawing.Size(150, 38);
+            this.btnConsultarEjecuciones.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnConsultarEjecuciones.Size = new System.Drawing.Size(300, 73);
             this.btnConsultarEjecuciones.TabIndex = 76;
             this.btnConsultarEjecuciones.Text = "Consultar ejecuciones";
             this.btnConsultarEjecuciones.UseVisualStyleBackColor = false;
+            this.btnConsultarEjecuciones.Click += new System.EventHandler(this.btnConsultarEjecuciones_Click);
             // 
-            // Fecha
+            // comboFondo
             // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 62;
-            // 
-            // Fondo
-            // 
-            this.Fondo.HeaderText = "Fondo";
-            this.Fondo.Name = "Fondo";
-            this.Fondo.ReadOnly = true;
-            this.Fondo.Width = 64;
-            // 
-            // CodigoSBS
-            // 
-            this.CodigoSBS.HeaderText = "Codigo SBS";
-            this.CodigoSBS.Name = "CodigoSBS";
-            this.CodigoSBS.ReadOnly = true;
-            this.CodigoSBS.Width = 93;
-            // 
-            // CodigoISIN
-            // 
-            this.CodigoISIN.HeaderText = "Codigo ISIN ";
-            this.CodigoISIN.Name = "CodigoISIN";
-            this.CodigoISIN.ReadOnly = true;
-            this.CodigoISIN.Width = 98;
-            // 
-            // Instrumento
-            // 
-            this.Instrumento.HeaderText = "Instrumento";
-            this.Instrumento.Name = "Instrumento";
-            this.Instrumento.ReadOnly = true;
-            // 
-            // Operación
-            // 
-            this.Operación.HeaderText = "Operación";
-            this.Operación.Name = "Operación";
-            this.Operación.ReadOnly = true;
-            this.Operación.Width = 87;
-            // 
-            // AUMEjecuciones
-            // 
-            this.AUMEjecuciones.HeaderText = "AUM Ejecuciones";
-            this.AUMEjecuciones.Name = "AUMEjecuciones";
-            this.AUMEjecuciones.ReadOnly = true;
-            this.AUMEjecuciones.Width = 125;
+            this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.BorderSize = 1;
+            this.comboFondo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboFondo.ForeColor = System.Drawing.Color.DimGray;
+            this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboFondo.Location = new System.Drawing.Point(909, 100);
+            this.comboFondo.Margin = new System.Windows.Forms.Padding(6);
+            this.comboFondo.MinimumSize = new System.Drawing.Size(400, 58);
+            this.comboFondo.Name = "comboFondo";
+            this.comboFondo.Padding = new System.Windows.Forms.Padding(2);
+            this.comboFondo.Size = new System.Drawing.Size(400, 58);
+            this.comboFondo.TabIndex = 81;
+            this.comboFondo.Texts = "Fondo";
             // 
             // frmEjecucion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 547);
+            this.ClientSize = new System.Drawing.Size(1962, 1052);
+            this.Controls.Add(this.comboFondo);
             this.Controls.Add(this.lblSubtitulo);
             this.Controls.Add(this.EliminarRegistro);
             this.Controls.Add(this.btnModificarRegistro);
@@ -274,6 +318,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.Controls.Add(this.dgvOrdenes);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmEjecucion";
             this.Text = "frmEjecucion";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
@@ -300,5 +345,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
         private System.Windows.Forms.DataGridViewTextBoxColumn Instrumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Operación;
         private System.Windows.Forms.DataGridViewTextBoxColumn AUMEjecuciones;
+        private Recursos.UserControls.GGComboBox comboFondo;
     }
 }

@@ -47,14 +47,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicial = new System.Windows.Forms.Label();
             this.lblFechaFinal = new System.Windows.Forms.Label();
+            this.lblSubtitulo = new System.Windows.Forms.Label();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnAccederOrden = new FontAwesome.Sharp.IconButton();
+            this.btnConsultar = new FontAwesome.Sharp.IconButton();
             this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnModificarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnGestionarEjecuciones = new FontAwesome.Sharp.IconButton();
             this.btnGestionarOrdenes = new FontAwesome.Sharp.IconButton();
-            this.lblSubtitulo = new System.Windows.Forms.Label();
-            this.btnConsultar = new FontAwesome.Sharp.IconButton();
-            this.btnAccederOrden = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,9 +64,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(30, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(60, 0);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(222, 28);
+            this.lblTitulo.Size = new System.Drawing.Size(442, 54);
             this.lblTitulo.TabIndex = 30;
             this.lblTitulo.Text = "Monitoreo de órdenes";
             // 
@@ -100,100 +102,115 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.Validacion,
             this.Comentario});
             this.dgvOrdenes.EnableHeadersVisualStyles = false;
-            this.dgvOrdenes.Location = new System.Drawing.Point(35, 100);
+            this.dgvOrdenes.Location = new System.Drawing.Point(70, 192);
+            this.dgvOrdenes.Margin = new System.Windows.Forms.Padding(6);
             this.dgvOrdenes.MultiSelect = false;
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.ReadOnly = true;
             this.dgvOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvOrdenes.RowHeadersWidth = 82;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
             this.dgvOrdenes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOrdenes.RowTemplate.Height = 25;
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenes.Size = new System.Drawing.Size(924, 391);
+            this.dgvOrdenes.Size = new System.Drawing.Size(1848, 752);
             this.dgvOrdenes.TabIndex = 31;
             // 
             // Fecha
             // 
             this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 10;
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 62;
+            this.Fecha.Width = 122;
             // 
             // Fondo
             // 
             this.Fondo.HeaderText = "Fondo";
+            this.Fondo.MinimumWidth = 10;
             this.Fondo.Name = "Fondo";
             this.Fondo.ReadOnly = true;
-            this.Fondo.Width = 64;
+            this.Fondo.Width = 130;
             // 
             // CodigoSBS
             // 
             this.CodigoSBS.HeaderText = "Código SBS";
+            this.CodigoSBS.MinimumWidth = 10;
             this.CodigoSBS.Name = "CodigoSBS";
             this.CodigoSBS.ReadOnly = true;
-            this.CodigoSBS.Width = 93;
+            this.CodigoSBS.Width = 188;
             // 
             // CodigoISIN
             // 
             this.CodigoISIN.HeaderText = "Código ISIN";
+            this.CodigoISIN.MinimumWidth = 10;
             this.CodigoISIN.Name = "CodigoISIN";
             this.CodigoISIN.ReadOnly = true;
-            this.CodigoISIN.Width = 95;
+            this.CodigoISIN.Width = 195;
             // 
             // Instrumento
             // 
             this.Instrumento.HeaderText = "Instrumento";
+            this.Instrumento.MinimumWidth = 10;
             this.Instrumento.Name = "Instrumento";
             this.Instrumento.ReadOnly = true;
+            this.Instrumento.Width = 200;
             // 
             // Operacion
             // 
             this.Operacion.HeaderText = "Operacion";
+            this.Operacion.MinimumWidth = 10;
             this.Operacion.Name = "Operacion";
             this.Operacion.ReadOnly = true;
-            this.Operacion.Width = 87;
+            this.Operacion.Width = 176;
             // 
             // AUMEjecucion
             // 
             this.AUMEjecucion.HeaderText = "AUM Ejecución";
+            this.AUMEjecucion.MinimumWidth = 10;
             this.AUMEjecucion.Name = "AUMEjecucion";
             this.AUMEjecucion.ReadOnly = true;
-            this.AUMEjecucion.Width = 113;
+            this.AUMEjecucion.Width = 231;
             // 
             // AUMOrdenes
             // 
             this.AUMOrdenes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.AUMOrdenes.HeaderText = "AUM Órdenes";
+            this.AUMOrdenes.MinimumWidth = 10;
             this.AUMOrdenes.Name = "AUMOrdenes";
             this.AUMOrdenes.ReadOnly = true;
             // 
             // Validacion
             // 
             this.Validacion.HeaderText = "Validacion";
+            this.Validacion.MinimumWidth = 10;
             this.Validacion.Name = "Validacion";
             this.Validacion.ReadOnly = true;
-            this.Validacion.Width = 85;
+            this.Validacion.Width = 176;
             // 
             // Comentario
             // 
             this.Comentario.HeaderText = "Comentario";
+            this.Comentario.MinimumWidth = 10;
             this.Comentario.Name = "Comentario";
             this.Comentario.ReadOnly = true;
-            this.Comentario.Width = 95;
+            this.Comentario.Width = 192;
             // 
             // dateFinal
             // 
-            this.dateFinal.Location = new System.Drawing.Point(241, 74);
+            this.dateFinal.Location = new System.Drawing.Point(482, 142);
+            this.dateFinal.Margin = new System.Windows.Forms.Padding(6);
             this.dateFinal.Name = "dateFinal";
-            this.dateFinal.Size = new System.Drawing.Size(198, 20);
+            this.dateFinal.Size = new System.Drawing.Size(392, 31);
             this.dateFinal.TabIndex = 63;
             // 
             // dateInicial
             // 
-            this.dateInicial.Location = new System.Drawing.Point(36, 74);
+            this.dateInicial.Location = new System.Drawing.Point(72, 142);
+            this.dateInicial.Margin = new System.Windows.Forms.Padding(6);
             this.dateInicial.Name = "dateInicial";
-            this.dateInicial.Size = new System.Drawing.Size(198, 20);
+            this.dateInicial.Size = new System.Drawing.Size(396, 31);
             this.dateInicial.TabIndex = 60;
             // 
             // lblFechaInicial
@@ -201,9 +218,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.lblFechaInicial.AutoSize = true;
             this.lblFechaInicial.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFechaInicial.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaInicial.Location = new System.Drawing.Point(33, 56);
+            this.lblFechaInicial.Location = new System.Drawing.Point(66, 108);
+            this.lblFechaInicial.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFechaInicial.Name = "lblFechaInicial";
-            this.lblFechaInicial.Size = new System.Drawing.Size(77, 15);
+            this.lblFechaInicial.Size = new System.Drawing.Size(162, 32);
             this.lblFechaInicial.TabIndex = 62;
             this.lblFechaInicial.Text = "Fecha Inicial:";
             // 
@@ -212,142 +230,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.lblFechaFinal.AutoSize = true;
             this.lblFechaFinal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFechaFinal.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFechaFinal.Location = new System.Drawing.Point(237, 56);
+            this.lblFechaFinal.Location = new System.Drawing.Point(474, 108);
+            this.lblFechaFinal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFechaFinal.Name = "lblFechaFinal";
-            this.lblFechaFinal.Size = new System.Drawing.Size(70, 15);
+            this.lblFechaFinal.Size = new System.Drawing.Size(147, 32);
             this.lblFechaFinal.TabIndex = 61;
             this.lblFechaFinal.Text = "Fecha Final:";
-            // 
-            // EliminarRegistro
-            // 
-            this.EliminarRegistro.BackColor = System.Drawing.Color.Crimson;
-            this.EliminarRegistro.FlatAppearance.BorderSize = 0;
-            this.EliminarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EliminarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.EliminarRegistro.ForeColor = System.Drawing.Color.White;
-            this.EliminarRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.EliminarRegistro.IconColor = System.Drawing.Color.White;
-            this.EliminarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EliminarRegistro.IconSize = 32;
-            this.EliminarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarRegistro.Location = new System.Drawing.Point(809, 500);
-            this.EliminarRegistro.Name = "EliminarRegistro";
-            this.EliminarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.EliminarRegistro.Size = new System.Drawing.Size(150, 38);
-            this.EliminarRegistro.TabIndex = 69;
-            this.EliminarRegistro.Text = "Eliminar Registro";
-            this.EliminarRegistro.UseVisualStyleBackColor = false;
-            // 
-            // btnModificarRegistro
-            // 
-            this.btnModificarRegistro.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnModificarRegistro.FlatAppearance.BorderSize = 0;
-            this.btnModificarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnModificarRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnModificarRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnModificarRegistro.IconColor = System.Drawing.Color.White;
-            this.btnModificarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnModificarRegistro.IconSize = 32;
-            this.btnModificarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarRegistro.Location = new System.Drawing.Point(630, 500);
-            this.btnModificarRegistro.Name = "btnModificarRegistro";
-            this.btnModificarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnModificarRegistro.Size = new System.Drawing.Size(150, 38);
-            this.btnModificarRegistro.TabIndex = 68;
-            this.btnModificarRegistro.Text = "Modificar Registro";
-            this.btnModificarRegistro.UseVisualStyleBackColor = false;
-            // 
-            // btnGestionarEjecuciones
-            // 
-            this.btnGestionarEjecuciones.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnGestionarEjecuciones.FlatAppearance.BorderSize = 0;
-            this.btnGestionarEjecuciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestionarEjecuciones.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnGestionarEjecuciones.ForeColor = System.Drawing.Color.White;
-            this.btnGestionarEjecuciones.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnGestionarEjecuciones.IconColor = System.Drawing.Color.White;
-            this.btnGestionarEjecuciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGestionarEjecuciones.IconSize = 32;
-            this.btnGestionarEjecuciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionarEjecuciones.Location = new System.Drawing.Point(809, 56);
-            this.btnGestionarEjecuciones.Name = "btnGestionarEjecuciones";
-            this.btnGestionarEjecuciones.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGestionarEjecuciones.Size = new System.Drawing.Size(150, 38);
-            this.btnGestionarEjecuciones.TabIndex = 67;
-            this.btnGestionarEjecuciones.Text = "Gestionar ejecuciones";
-            this.btnGestionarEjecuciones.UseVisualStyleBackColor = false;
-            // 
-            // btnGestionarOrdenes
-            // 
-            this.btnGestionarOrdenes.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnGestionarOrdenes.FlatAppearance.BorderSize = 0;
-            this.btnGestionarOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestionarOrdenes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnGestionarOrdenes.ForeColor = System.Drawing.Color.White;
-            this.btnGestionarOrdenes.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnGestionarOrdenes.IconColor = System.Drawing.Color.White;
-            this.btnGestionarOrdenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGestionarOrdenes.IconSize = 32;
-            this.btnGestionarOrdenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionarOrdenes.Location = new System.Drawing.Point(630, 56);
-            this.btnGestionarOrdenes.Name = "btnGestionarOrdenes";
-            this.btnGestionarOrdenes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGestionarOrdenes.Size = new System.Drawing.Size(150, 38);
-            this.btnGestionarOrdenes.TabIndex = 66;
-            this.btnGestionarOrdenes.Text = "Gestionar órdenes";
-            this.btnGestionarOrdenes.UseVisualStyleBackColor = false;
             // 
             // lblSubtitulo
             // 
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblSubtitulo.Location = new System.Drawing.Point(32, 29);
+            this.lblSubtitulo.Location = new System.Drawing.Point(64, 56);
+            this.lblSubtitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(95, 20);
+            this.lblSubtitulo.Size = new System.Drawing.Size(192, 41);
             this.lblSubtitulo.TabIndex = 25;
             this.lblSubtitulo.Text = "Operaciones";
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnConsultar.IconColor = System.Drawing.Color.White;
-            this.btnConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConsultar.IconSize = 32;
-            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(445, 56);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnConsultar.Size = new System.Drawing.Size(150, 38);
-            this.btnConsultar.TabIndex = 70;
-            this.btnConsultar.Text = "Consultar operaciones";
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            // 
-            // btnAccederOrden
-            // 
-            this.btnAccederOrden.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnAccederOrden.FlatAppearance.BorderSize = 0;
-            this.btnAccederOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccederOrden.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAccederOrden.ForeColor = System.Drawing.Color.White;
-            this.btnAccederOrden.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAccederOrden.IconColor = System.Drawing.Color.White;
-            this.btnAccederOrden.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAccederOrden.IconSize = 32;
-            this.btnAccederOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccederOrden.Location = new System.Drawing.Point(84, 500);
-            this.btnAccederOrden.Name = "btnAccederOrden";
-            this.btnAccederOrden.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAccederOrden.Size = new System.Drawing.Size(150, 38);
-            this.btnAccederOrden.TabIndex = 71;
-            this.btnAccederOrden.Text = "Acceder órden";
-            this.btnAccederOrden.UseVisualStyleBackColor = false;
             // 
             // iconButton2
             // 
@@ -361,19 +261,174 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 32;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(289, 500);
+            this.iconButton2.Location = new System.Drawing.Point(578, 962);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(6);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(150, 38);
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.iconButton2.Size = new System.Drawing.Size(300, 73);
             this.iconButton2.TabIndex = 72;
-            this.iconButton2.Text = "Acceder ejeción";
+            this.iconButton2.Text = "Acceder ejecución";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // btnAccederOrden
+            // 
+            this.btnAccederOrden.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnAccederOrden.FlatAppearance.BorderSize = 0;
+            this.btnAccederOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccederOrden.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAccederOrden.ForeColor = System.Drawing.Color.White;
+            this.btnAccederOrden.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAccederOrden.IconColor = System.Drawing.Color.White;
+            this.btnAccederOrden.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAccederOrden.IconSize = 32;
+            this.btnAccederOrden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAccederOrden.Location = new System.Drawing.Point(168, 962);
+            this.btnAccederOrden.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAccederOrden.Name = "btnAccederOrden";
+            this.btnAccederOrden.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAccederOrden.Size = new System.Drawing.Size(300, 73);
+            this.btnAccederOrden.TabIndex = 71;
+            this.btnAccederOrden.Text = "Acceder órden";
+            this.btnAccederOrden.UseVisualStyleBackColor = false;
+            this.btnAccederOrden.Click += new System.EventHandler(this.btnAccederOrden_Click);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnConsultar.IconColor = System.Drawing.Color.White;
+            this.btnConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConsultar.IconSize = 32;
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.Location = new System.Drawing.Point(925, 100);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnConsultar.Size = new System.Drawing.Size(300, 73);
+            this.btnConsultar.TabIndex = 70;
+            this.btnConsultar.Text = "Consultar operaciones";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // EliminarRegistro
+            // 
+            this.EliminarRegistro.BackColor = System.Drawing.Color.Crimson;
+            this.EliminarRegistro.FlatAppearance.BorderSize = 0;
+            this.EliminarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.EliminarRegistro.ForeColor = System.Drawing.Color.White;
+            this.EliminarRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.EliminarRegistro.IconColor = System.Drawing.Color.White;
+            this.EliminarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.EliminarRegistro.IconSize = 32;
+            this.EliminarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarRegistro.Location = new System.Drawing.Point(1618, 962);
+            this.EliminarRegistro.Margin = new System.Windows.Forms.Padding(6);
+            this.EliminarRegistro.Name = "EliminarRegistro";
+            this.EliminarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.EliminarRegistro.Size = new System.Drawing.Size(300, 73);
+            this.EliminarRegistro.TabIndex = 69;
+            this.EliminarRegistro.Text = "Eliminar Registro";
+            this.EliminarRegistro.UseVisualStyleBackColor = false;
+            this.EliminarRegistro.Click += new System.EventHandler(this.EliminarRegistro_Click);
+            // 
+            // btnModificarRegistro
+            // 
+            this.btnModificarRegistro.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnModificarRegistro.FlatAppearance.BorderSize = 0;
+            this.btnModificarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnModificarRegistro.ForeColor = System.Drawing.Color.White;
+            this.btnModificarRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnModificarRegistro.IconColor = System.Drawing.Color.White;
+            this.btnModificarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnModificarRegistro.IconSize = 32;
+            this.btnModificarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarRegistro.Location = new System.Drawing.Point(1260, 962);
+            this.btnModificarRegistro.Margin = new System.Windows.Forms.Padding(6);
+            this.btnModificarRegistro.Name = "btnModificarRegistro";
+            this.btnModificarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnModificarRegistro.Size = new System.Drawing.Size(300, 73);
+            this.btnModificarRegistro.TabIndex = 68;
+            this.btnModificarRegistro.Text = "Modificar Registro";
+            this.btnModificarRegistro.UseVisualStyleBackColor = false;
+            this.btnModificarRegistro.Click += new System.EventHandler(this.btnModificarRegistro_Click);
+            // 
+            // btnGestionarEjecuciones
+            // 
+            this.btnGestionarEjecuciones.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnGestionarEjecuciones.FlatAppearance.BorderSize = 0;
+            this.btnGestionarEjecuciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionarEjecuciones.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnGestionarEjecuciones.ForeColor = System.Drawing.Color.White;
+            this.btnGestionarEjecuciones.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGestionarEjecuciones.IconColor = System.Drawing.Color.White;
+            this.btnGestionarEjecuciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGestionarEjecuciones.IconSize = 32;
+            this.btnGestionarEjecuciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionarEjecuciones.Location = new System.Drawing.Point(1260, 100);
+            this.btnGestionarEjecuciones.Margin = new System.Windows.Forms.Padding(6);
+            this.btnGestionarEjecuciones.Name = "btnGestionarEjecuciones";
+            this.btnGestionarEjecuciones.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnGestionarEjecuciones.Size = new System.Drawing.Size(313, 73);
+            this.btnGestionarEjecuciones.TabIndex = 67;
+            this.btnGestionarEjecuciones.Text = "Gestionar ejecuciones";
+            this.btnGestionarEjecuciones.UseVisualStyleBackColor = false;
+            this.btnGestionarEjecuciones.Click += new System.EventHandler(this.btnGestionarEjecuciones_Click);
+            // 
+            // btnGestionarOrdenes
+            // 
+            this.btnGestionarOrdenes.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnGestionarOrdenes.FlatAppearance.BorderSize = 0;
+            this.btnGestionarOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionarOrdenes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnGestionarOrdenes.ForeColor = System.Drawing.Color.White;
+            this.btnGestionarOrdenes.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGestionarOrdenes.IconColor = System.Drawing.Color.White;
+            this.btnGestionarOrdenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGestionarOrdenes.IconSize = 32;
+            this.btnGestionarOrdenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionarOrdenes.Location = new System.Drawing.Point(1600, 100);
+            this.btnGestionarOrdenes.Margin = new System.Windows.Forms.Padding(6);
+            this.btnGestionarOrdenes.Name = "btnGestionarOrdenes";
+            this.btnGestionarOrdenes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnGestionarOrdenes.Size = new System.Drawing.Size(318, 73);
+            this.btnGestionarOrdenes.TabIndex = 66;
+            this.btnGestionarOrdenes.Text = "Gestionar órdenes";
+            this.btnGestionarOrdenes.UseVisualStyleBackColor = false;
+            this.btnGestionarOrdenes.Click += new System.EventHandler(this.btnGestionarOrdenes_Click);
+            // 
+            // comboFondo
+            // 
+            this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.BorderSize = 1;
+            this.comboFondo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboFondo.ForeColor = System.Drawing.Color.DimGray;
+            this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboFondo.Location = new System.Drawing.Point(781, 15);
+            this.comboFondo.Margin = new System.Windows.Forms.Padding(6);
+            this.comboFondo.MinimumSize = new System.Drawing.Size(400, 58);
+            this.comboFondo.Name = "comboFondo";
+            this.comboFondo.Padding = new System.Windows.Forms.Padding(2);
+            this.comboFondo.Size = new System.Drawing.Size(400, 58);
+            this.comboFondo.TabIndex = 74;
+            this.comboFondo.Texts = "Fondo";
             // 
             // frmMonitoreoOrdenes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 547);
+            this.ClientSize = new System.Drawing.Size(1962, 1052);
+            this.Controls.Add(this.comboFondo);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.btnAccederOrden);
             this.Controls.Add(this.btnConsultar);
@@ -389,6 +444,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.Controls.Add(this.dgvOrdenes);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmMonitoreoOrdenes";
             this.Text = "frmMonitoreoOrdenes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
@@ -423,5 +479,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         private FontAwesome.Sharp.IconButton btnConsultar;
         private FontAwesome.Sharp.IconButton btnAccederOrden;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private Recursos.UserControls.GGComboBox comboFondo;
     }
 }

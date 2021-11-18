@@ -251,6 +251,12 @@
     <Compile Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEliminarUsuario.Designer.cs">
       <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEditarEjecucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEditarEjecucion.Designer.cs">
+      <DependentUpon>frmEditarEjecucion.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEjecucion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +268,18 @@
     </Compile>
     <Compile Include="VentanaPrincipal\MonitoreoOrdenes\frmMonitoreoOrdenes.Designer.cs">
       <DependentUpon>frmMonitoreoOrdenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Operaciones\frmEditarOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Operaciones\frmEditarOperacion.Designer.cs">
+      <DependentUpon>frmEditarOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Orden\frmEditarOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Orden\frmEditarOrden.Designer.cs">
+      <DependentUpon>frmEditarOrden.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Orden\frmOrden.cs">
       <SubType>Form</SubType>
@@ -396,11 +414,20 @@
     <EmbeddedResource Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEliminarUsuario.resx">
       <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEditarEjecucion.resx">
+      <DependentUpon>frmEditarEjecucion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEjecucion.resx">
       <DependentUpon>frmEjecucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\MonitoreoOrdenes\frmMonitoreoOrdenes.resx">
       <DependentUpon>frmMonitoreoOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\MonitoreoOrdenes\Operaciones\frmEditarOperacion.resx">
+      <DependentUpon>frmEditarOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\MonitoreoOrdenes\Orden\frmEditarOrden.resx">
+      <DependentUpon>frmEditarOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\MonitoreoOrdenes\Orden\frmOrden.resx">
       <DependentUpon>frmOrden.cs</DependentUpon>
