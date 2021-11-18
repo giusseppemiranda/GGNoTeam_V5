@@ -16,5 +16,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         {
             InitializeComponent();
         }
+        public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig)
+        {
+            InitializeComponent();
+
+        }
     }
 }

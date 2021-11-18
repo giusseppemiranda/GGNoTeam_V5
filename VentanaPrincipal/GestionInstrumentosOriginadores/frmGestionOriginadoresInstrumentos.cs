@@ -1,5 +1,6 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumento;
+using GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,10 +72,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
-                instrumentos=_daoInstOrig.listarInstrumentoXcodigo("");
+                instrumentos=_daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
                 dgvInstrumentosOriginadores.DataSource = instrumentos;
             }
-            else if {
+            else if (comboTipo.SelectedItem.ToString() == "Emisor")
+            {
                 emisores = _daoInstOrig.listarEmisores(); //implementar buscar por codigo
                 dgvInstrumentosOriginadores.DataSource = emisores;
             }
@@ -110,27 +112,37 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            _daoInstOrig.eliminarInstrumento(Int32.Parse(dgvInstrumentosOriginadores.CurrentRow.Cells[0].Value.ToString()));
-
             if (comboTipo.SelectedItem.ToString() == "Originador")
             {
-                _daoInstOrig.buscarUnOriginadorPorCodigo(Int32.Parse(txtboxbusqueda.Texts));
+                _daoInstOrig.buscarUnOriginadorPorCodigo(originadores[dgvInstrumentosOriginadores.CurrentRow.Index].codigoOriginador);
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
-                instrumentos = _daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
-                dgvInstrumentosOriginadores.DataSource = instrumentos;
+                _daoInstOrig.eliminarInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index].idInstrumento);
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
             {
-
+                _daoInstOrig.listarEmisores();
             }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            frmRegistroInstrumento editarUsuarios = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index]);
-            editarUsuarios.ShowDialog();
+            if (comboTipo.SelectedItem.ToString() == "Originador")
+            {
+                frmRegistroOriginador registrarOrig = new frmRegistroOriginador(originadores[dgvInstrumentosOriginadores.CurrentRow.Index]);
+                registrarOrig.ShowDialog();
+            }
+            else if (comboTipo.SelectedItem.ToString() == "Instrumento")
+            {
+                frmRegistroInstrumento registrarinst = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index]);
+                registrarinst.ShowDialog();
+            }
+            else if (comboTipo.SelectedItem.ToString() == "Emisor")
+            {
+                _daoInstOrig.listarEmisores();
+            }
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

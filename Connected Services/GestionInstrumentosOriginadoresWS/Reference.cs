@@ -179,9 +179,11 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         
         private int activoField;
         
-        private int codigoOriginadorField;
+        private string codigoOriginadorField;
         
         private int fidEmisorField;
+        
+        private int idOriginadorField;
         
         private string nombreOriginadorField;
         
@@ -201,7 +203,7 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int codigoOriginador {
+        public string codigoOriginador {
             get {
                 return this.codigoOriginadorField;
             }
@@ -225,6 +227,18 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idOriginador {
+            get {
+                return this.idOriginadorField;
+            }
+            set {
+                this.idOriginadorField = value;
+                this.RaisePropertyChanged("idOriginador");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombreOriginador {
             get {
                 return this.nombreOriginadorField;
@@ -236,7 +250,7 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string sectorGics {
             get {
                 return this.sectorGicsField;

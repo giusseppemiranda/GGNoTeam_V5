@@ -51,8 +51,9 @@
   <xs:complexType name="originador">
     <xs:sequence>
       <xs:element name="activo" type="xs:int" />
-      <xs:element name="codigoOriginador" type="xs:int" />
+      <xs:element minOccurs="0" name="codigoOriginador" type="xs:string" />
       <xs:element name="fidEmisor" type="xs:int" />
+      <xs:element name="idOriginador" type="xs:int" />
       <xs:element minOccurs="0" name="nombreOriginador" type="xs:string" />
       <xs:element minOccurs="0" name="sectorGics" type="xs:string" />
     </xs:sequence>
