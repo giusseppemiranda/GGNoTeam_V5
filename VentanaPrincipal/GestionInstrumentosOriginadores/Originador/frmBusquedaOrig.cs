@@ -28,6 +28,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             _daoInst = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
             originadores = _daoInst.buscarUnOriginadorPorCodigo(nombreCodigo);
             dgvOriginadores.DataSource = originadores;
+            dgvOriginadores.AutoGenerateColumns = false;
             instAux = inst;
         }
 
