@@ -29,8 +29,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnModificarRegistro = new FontAwesome.Sharp.IconButton();
@@ -47,6 +47,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.Operación = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AUMordenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,9 +56,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblSubtitulo.Location = new System.Drawing.Point(28, 24);
+            this.lblSubtitulo.Location = new System.Drawing.Point(56, 46);
+            this.lblSubtitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(67, 20);
+            this.lblSubtitulo.Size = new System.Drawing.Size(135, 41);
             this.lblSubtitulo.TabIndex = 89;
             this.lblSubtitulo.Text = "Órdenes";
             // 
@@ -73,10 +75,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.EliminarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.EliminarRegistro.IconSize = 32;
             this.EliminarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarRegistro.Location = new System.Drawing.Point(805, 501);
+            this.EliminarRegistro.Location = new System.Drawing.Point(1610, 963);
+            this.EliminarRegistro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.EliminarRegistro.Name = "EliminarRegistro";
-            this.EliminarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.EliminarRegistro.Size = new System.Drawing.Size(150, 38);
+            this.EliminarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.EliminarRegistro.Size = new System.Drawing.Size(300, 73);
             this.EliminarRegistro.TabIndex = 88;
             this.EliminarRegistro.Text = "Eliminar Registro";
             this.EliminarRegistro.UseVisualStyleBackColor = false;
@@ -94,10 +97,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnModificarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarRegistro.IconSize = 32;
             this.btnModificarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarRegistro.Location = new System.Drawing.Point(626, 501);
+            this.btnModificarRegistro.Location = new System.Drawing.Point(1252, 963);
+            this.btnModificarRegistro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnModificarRegistro.Name = "btnModificarRegistro";
-            this.btnModificarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnModificarRegistro.Size = new System.Drawing.Size(150, 38);
+            this.btnModificarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnModificarRegistro.Size = new System.Drawing.Size(300, 73);
             this.btnModificarRegistro.TabIndex = 87;
             this.btnModificarRegistro.Text = "Modificar Registro";
             this.btnModificarRegistro.UseVisualStyleBackColor = false;
@@ -115,10 +119,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnAgregarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarRegistro.IconSize = 32;
             this.btnAgregarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarRegistro.Location = new System.Drawing.Point(805, 44);
+            this.btnAgregarRegistro.Location = new System.Drawing.Point(1610, 85);
+            this.btnAgregarRegistro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnAgregarRegistro.Name = "btnAgregarRegistro";
-            this.btnAgregarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAgregarRegistro.Size = new System.Drawing.Size(150, 38);
+            this.btnAgregarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAgregarRegistro.Size = new System.Drawing.Size(300, 73);
             this.btnAgregarRegistro.TabIndex = 86;
             this.btnAgregarRegistro.Text = "Agregar Registro";
             this.btnAgregarRegistro.UseVisualStyleBackColor = false;
@@ -136,10 +141,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnConsultarOrdenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConsultarOrdenes.IconSize = 32;
             this.btnConsultarOrdenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarOrdenes.Location = new System.Drawing.Point(264, 44);
+            this.btnConsultarOrdenes.Location = new System.Drawing.Point(528, 85);
+            this.btnConsultarOrdenes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnConsultarOrdenes.Name = "btnConsultarOrdenes";
-            this.btnConsultarOrdenes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnConsultarOrdenes.Size = new System.Drawing.Size(150, 38);
+            this.btnConsultarOrdenes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnConsultarOrdenes.Size = new System.Drawing.Size(300, 73);
             this.btnConsultarOrdenes.TabIndex = 85;
             this.btnConsultarOrdenes.Text = "Consultar órdenes";
             this.btnConsultarOrdenes.UseVisualStyleBackColor = false;
@@ -147,9 +153,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             // 
             // dateInicial
             // 
-            this.dateInicial.Location = new System.Drawing.Point(32, 62);
+            this.dateInicial.Location = new System.Drawing.Point(64, 119);
+            this.dateInicial.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dateInicial.Name = "dateInicial";
-            this.dateInicial.Size = new System.Drawing.Size(198, 20);
+            this.dateInicial.Size = new System.Drawing.Size(392, 31);
             this.dateInicial.TabIndex = 83;
             this.dateInicial.ValueChanged += new System.EventHandler(this.dateInicial_ValueChanged);
             // 
@@ -158,9 +165,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblFecha.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFecha.Location = new System.Drawing.Point(29, 44);
+            this.lblFecha.Location = new System.Drawing.Point(58, 85);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(42, 15);
+            this.lblFecha.Size = new System.Drawing.Size(86, 32);
             this.lblFecha.TabIndex = 84;
             this.lblFecha.Text = "Fecha:";
             this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
@@ -175,14 +183,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.dgvOrdenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvOrdenes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvOrdenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrdenes.ColumnHeadersHeight = 25;
             this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -193,85 +201,117 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.Operación,
             this.AUMordenes});
             this.dgvOrdenes.EnableHeadersVisualStyles = false;
-            this.dgvOrdenes.Location = new System.Drawing.Point(31, 88);
+            this.dgvOrdenes.Location = new System.Drawing.Point(62, 169);
+            this.dgvOrdenes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dgvOrdenes.MultiSelect = false;
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.ReadOnly = true;
             this.dgvOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvOrdenes.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvOrdenes.RowHeadersWidth = 82;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvOrdenes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOrdenes.RowTemplate.Height = 25;
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenes.Size = new System.Drawing.Size(924, 407);
+            this.dgvOrdenes.Size = new System.Drawing.Size(1848, 783);
             this.dgvOrdenes.TabIndex = 82;
             this.dgvOrdenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdenes_CellContentClick);
             // 
             // Fecha
             // 
             this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 10;
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 62;
+            this.Fecha.Width = 122;
             // 
             // Fondo
             // 
             this.Fondo.HeaderText = "Fondo";
+            this.Fondo.MinimumWidth = 10;
             this.Fondo.Name = "Fondo";
             this.Fondo.ReadOnly = true;
-            this.Fondo.Width = 64;
+            this.Fondo.Width = 130;
             // 
             // CodigoSBS
             // 
             this.CodigoSBS.HeaderText = "Codigo SBS";
+            this.CodigoSBS.MinimumWidth = 10;
             this.CodigoSBS.Name = "CodigoSBS";
             this.CodigoSBS.ReadOnly = true;
-            this.CodigoSBS.Width = 93;
+            this.CodigoSBS.Width = 188;
             // 
             // CodigoISIN
             // 
             this.CodigoISIN.HeaderText = "Codigo ISIN ";
+            this.CodigoISIN.MinimumWidth = 10;
             this.CodigoISIN.Name = "CodigoISIN";
             this.CodigoISIN.ReadOnly = true;
-            this.CodigoISIN.Width = 98;
+            this.CodigoISIN.Width = 202;
             // 
             // Instrumento
             // 
             this.Instrumento.HeaderText = "Instrumento";
+            this.Instrumento.MinimumWidth = 10;
             this.Instrumento.Name = "Instrumento";
             this.Instrumento.ReadOnly = true;
+            this.Instrumento.Width = 200;
             // 
             // Operación
             // 
             this.Operación.HeaderText = "Operación";
+            this.Operación.MinimumWidth = 10;
             this.Operación.Name = "Operación";
             this.Operación.ReadOnly = true;
-            this.Operación.Width = 87;
+            this.Operación.Width = 176;
             // 
             // AUMordenes
             // 
             this.AUMordenes.HeaderText = "AUM órdenes";
+            this.AUMordenes.MinimumWidth = 10;
             this.AUMordenes.Name = "AUMordenes";
             this.AUMordenes.ReadOnly = true;
-            this.AUMordenes.Width = 106;
+            this.AUMordenes.Width = 214;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(26, -3);
+            this.lblTitulo.Location = new System.Drawing.Point(52, -6);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(222, 28);
+            this.lblTitulo.Size = new System.Drawing.Size(442, 54);
             this.lblTitulo.TabIndex = 81;
             this.lblTitulo.Text = "Monitoreo de órdenes";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
+            // comboFondo
+            // 
+            this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.BorderSize = 1;
+            this.comboFondo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboFondo.ForeColor = System.Drawing.Color.DimGray;
+            this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboFondo.Location = new System.Drawing.Point(943, 85);
+            this.comboFondo.Margin = new System.Windows.Forms.Padding(6);
+            this.comboFondo.MinimumSize = new System.Drawing.Size(400, 58);
+            this.comboFondo.Name = "comboFondo";
+            this.comboFondo.Padding = new System.Windows.Forms.Padding(2);
+            this.comboFondo.Size = new System.Drawing.Size(400, 58);
+            this.comboFondo.TabIndex = 90;
+            this.comboFondo.Texts = "Fondo";
+            // 
             // frmOrden
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 547);
+            this.ClientSize = new System.Drawing.Size(1962, 1052);
+            this.Controls.Add(this.comboFondo);
             this.Controls.Add(this.lblSubtitulo);
             this.Controls.Add(this.EliminarRegistro);
             this.Controls.Add(this.btnModificarRegistro);
@@ -282,6 +322,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.Controls.Add(this.dgvOrdenes);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmOrden";
             this.Text = "frmOrden";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
@@ -308,5 +349,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private System.Windows.Forms.DataGridViewTextBoxColumn Operación;
         private System.Windows.Forms.DataGridViewTextBoxColumn AUMordenes;
         private System.Windows.Forms.Label lblTitulo;
+        private Recursos.UserControls.GGComboBox comboFondo;
     }
 }

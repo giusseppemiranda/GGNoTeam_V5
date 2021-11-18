@@ -14,8 +14,10 @@
   <xs:element name="insertarOriginadorResponse" type="tns:insertarOriginadorResponse" />
   <xs:element name="listarEmisores" type="tns:listarEmisores" />
   <xs:element name="listarEmisoresResponse" type="tns:listarEmisoresResponse" />
+  <xs:element name="listarInstrumentoXcodigo" type="tns:listarInstrumentoXcodigo" />
   <xs:element name="listarInstrumentoXcodigoOriginador" type="tns:listarInstrumentoXcodigoOriginador" />
   <xs:element name="listarInstrumentoXcodigoOriginadorResponse" type="tns:listarInstrumentoXcodigoOriginadorResponse" />
+  <xs:element name="listarInstrumentoXcodigoResponse" type="tns:listarInstrumentoXcodigoResponse" />
   <xs:element name="listarTodosLosOriginadores" type="tns:listarTodosLosOriginadores" />
   <xs:element name="listarTodosLosOriginadoresResponse" type="tns:listarTodosLosOriginadoresResponse" />
   <xs:element name="modificarEmisor" type="tns:modificarEmisor" />
@@ -24,16 +26,6 @@
   <xs:element name="modificarInstrumentoResponse" type="tns:modificarInstrumentoResponse" />
   <xs:element name="modificarOriginador" type="tns:modificarOriginador" />
   <xs:element name="modificarOriginadorResponse" type="tns:modificarOriginadorResponse" />
-  <xs:complexType name="eliminarOriginador">
-    <xs:sequence>
-      <xs:element name="idOriginador" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarOriginadorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarEmisor">
     <xs:sequence>
       <xs:element minOccurs="0" name="emisor" type="tns:emisor" />
@@ -49,13 +41,24 @@
   <xs:complexType name="originador">
     <xs:sequence>
       <xs:element name="activo" type="xs:int" />
-      <xs:element name="codigoOriginador" type="xs:int" />
-      <xs:element minOccurs="0" name="emisor" type="tns:emisor" />
+      <xs:element minOccurs="0" name="codigoOriginador" type="xs:string" />
+      <xs:element name="fidEmisor" type="xs:int" />
+      <xs:element name="idOriginador" type="xs:int" />
       <xs:element minOccurs="0" name="nombreOriginador" type="xs:string" />
       <xs:element minOccurs="0" name="sectorGics" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarEmisorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOriginador">
+    <xs:sequence>
+      <xs:element name="idOriginador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOriginadorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -76,7 +79,9 @@
       <xs:element minOccurs="0" name="fechaMoodys" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaUltimaClasificacion" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
+      <xs:element name="fidOriginador" type="xs:int" />
       <xs:element name="idInstrumento" type="xs:int" />
+      <xs:element minOccurs="0" name="leyAplicable" type="tns:eLeyAplicable" />
       <xs:element minOccurs="0" name="limiteAplicable" type="tns:eLimiteAplicable" />
       <xs:element minOccurs="0" name="moodys" type="xs:string" />
       <xs:element minOccurs="0" name="ratingEncaje" type="xs:string" />
@@ -104,6 +109,64 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:instrumento" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarInstrumento">
+    <xs:sequence>
+      <xs:element name="idInstrumento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarInstrumentoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEmisores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEmisoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:emisor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarUnOriginadorPorCodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoOriginador" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarUnOriginadorPorCodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:originador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOriginador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="originador" type="tns:originador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOriginadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarInstrumentoXcodigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarInstrumentoXcodigoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:instrumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarOriginador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Originador" type="tns:originador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarOriginadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarEmisor">
     <xs:sequence>
       <xs:element minOccurs="0" name="emisor" type="tns:emisor" />
@@ -125,54 +188,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarInstrumento">
-    <xs:sequence>
-      <xs:element name="idInstrumento" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarInstrumentoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarUnOriginadorPorCodigo">
-    <xs:sequence>
-      <xs:element name="codigoOriginador" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarUnOriginadorPorCodigoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:originador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEmisores">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarEmisoresResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:emisor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarOriginador">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="originador" type="tns:originador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarOriginadorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarOriginador">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Originador" type="tns:originador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarOriginadorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarTodosLosOriginadores">
     <xs:sequence />
   </xs:complexType>
@@ -181,6 +196,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:originador" />
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="eLeyAplicable">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Exterior" />
+      <xs:enumeration value="Local" />
+      <xs:enumeration value="No_aplica" />
+      <xs:enumeration value="SBS" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="eLimiteAplicable">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Local" />
