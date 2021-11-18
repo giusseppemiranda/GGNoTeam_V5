@@ -149,7 +149,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmRegistroInstrumento editarUsuarios = new frmRegistroInstrumento();
+
+            if (comboTipo.SelectedItem.ToString() == "Originador")
+            {
+                frmRegistroOriginador registrarOrig = new frmRegistroOriginador();
+                registrarOrig.ShowDialog();
+            }
+            else if (comboTipo.SelectedItem.ToString() == "Instrumento")
+            {
+                frmRegistroInstrumento registrarInst = new frmRegistroInstrumento();
+                registrarInst.ShowDialog();
+            }
+            else if (comboTipo.SelectedItem.ToString() == "Emisor")
+            {
+                frmRegistroEmisor registrarEmi = new frmRegistroEmisor();
+                registrarEmi.ShowDialog();
+            }
         }
     }
 }
