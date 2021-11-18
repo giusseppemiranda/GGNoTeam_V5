@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumento
+namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originador
 {
     public partial class frmRegistroOriginador : Form
     {

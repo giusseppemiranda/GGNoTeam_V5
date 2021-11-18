@@ -1,5 +1,5 @@
 ﻿
-namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumento
+namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originador
 {
     partial class frmRegistroOriginador
     {

@@ -417,8 +417,8 @@
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\TrackingErrorvsAlfa\frmTrackingErrorvsAlfa.resx">
       <DependentUpon>frmTrackingErrorvsAlfa.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS.wsdl" />
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS.xsd">
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.wsdl" />
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoResponse.datasource">
@@ -449,6 +449,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarInstrumentoXcodigoOriginadorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarInstrumentoXcodigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarTodosLosOriginadoresResponse.datasource">
