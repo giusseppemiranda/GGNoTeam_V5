@@ -86,6 +86,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxPatrimonio.BorderColor = System.Drawing.Color.DodgerBlue;
             this.boxPatrimonio.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.boxPatrimonio.BorderSize = 2;
+            this.boxPatrimonio.Enabled = false;
             this.boxPatrimonio.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxPatrimonio.ForeColor = System.Drawing.Color.DimGray;
             this.boxPatrimonio.IsFocused = false;

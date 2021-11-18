@@ -122,14 +122,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
                 graficoTE.SaveImage(rutaTE, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
                 graficoAlpha.SaveImage(rutaAlpha, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
                 exportarPDF(rutaPDF,rutaTE, rutaAlpha);
-            };
-
-            
-                
-
-                
-                
-            
+            }; 
         }
 
         private void exportarPDF(string ruta,string rutaTE, string rutaAlpha)

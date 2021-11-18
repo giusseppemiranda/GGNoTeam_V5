@@ -86,13 +86,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             datos = frmTEvsAlpha.DatosPrin;
             if (datos != null)
             {
+                nombreafp.Clear();
                 for (int i = 0; i < datos.Length; i++)
                 {
                     nombreafp.Add(listaAfps[datos[i].fidAFP - 1].nombre);
                     tipofondo = comboFondo.SelectedItem.ToString();
                 }
             }
-            dgvDataValorCuota.DataSource = frmTEvsAlpha.DatosPrin;
+            dgvDataValorCuota.DataSource = datos;
+            dgvDataValorCuota.Refresh();
         }
 
         private void btnEliminarRegistro_Click(object sender, System.EventArgs e)
