@@ -127,22 +127,23 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
                     return;
                 }
 
-                
 
+                int fidFondo = calcularFidFondo();
                 int i = -1;
                 if (insertar)
-                {
-                    i = _daoTE.insertarDataValorCuota(dato, comboFondo.SelectedIndex+1);
+                {                    
+                    i = _daoTE.insertarDataValorCuota(dato, fidFondo);
                     if(i == 1)
                     {
                         //MessageBox.Show("Se insertó correctamente.");
+                        this.Dispose(); 
                     } else
                     {
                         MessageBox.Show("No se han insertado los valores en la base de datos");
                     }
                 } else
                 {
-                    i = _daoTE.modificarDataValorCuota(dato, comboFondo.SelectedIndex+1);
+                    i = _daoTE.modificarDataValorCuota(dato, fidFondo);
                     if (i == 1)
                     {
                         MessageBox.Show("Se modificó correctamente.");
@@ -158,6 +159,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             {
                 MessageBox.Show("Pruebe ingresando nuevamente, hay un error. Cuota y valor cuota deben ser números.");
             }
+        }
+
+        private int calcularFidFondo()
+        {
+            int fidFondo = 0;
+
+            fidFondo = 3 * (comboAFP.SelectedIndex) + comboFondo.SelectedIndex + 1;
+
+            return fidFondo;
         }
 
         private void boxCuota__TextChanged(object sender, EventArgs e)

@@ -1,5 +1,5 @@
 ﻿
-namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumento
+namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originador
 {
     partial class frmRegistroOriginador
     {
@@ -29,43 +29,44 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         /// </summary>
         private void InitializeComponent()
         {
-            this.boxApellidos = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxCodigoOriginador = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblCodigoOriginador = new System.Windows.Forms.Label();
-            this.ggTextBox1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxNombreOriginador = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblNombreOriginador = new System.Windows.Forms.Label();
-            this.ggTextBox2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxEmisor = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblEmisor = new System.Windows.Forms.Label();
-            this.ggTextBox3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxSector = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblSector = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombreEmisor = new System.Windows.Forms.Label();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblRegistroOriginador = new System.Windows.Forms.Label();
+            this.btnBuscarEmisor = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
-            // boxApellidos
+            // boxCodigoOriginador
             // 
-            this.boxApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.boxCodigoOriginador.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxApellidos.BackColor = System.Drawing.SystemColors.Window;
-            this.boxApellidos.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxApellidos.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxApellidos.BorderSize = 2;
-            this.boxApellidos.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxApellidos.ForeColor = System.Drawing.Color.DimGray;
-            this.boxApellidos.IsFocused = false;
-            this.boxApellidos.Location = new System.Drawing.Point(176, 90);
-            this.boxApellidos.MaxLength = 32767;
-            this.boxApellidos.Multiline = false;
-            this.boxApellidos.Name = "boxApellidos";
-            this.boxApellidos.Padding = new System.Windows.Forms.Padding(6);
-            this.boxApellidos.PasswordChar = false;
-            this.boxApellidos.Size = new System.Drawing.Size(214, 30);
-            this.boxApellidos.TabIndex = 31;
-            this.boxApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxApellidos.Texts = "";
-            this.boxApellidos.UnderlinedStyle = true;
+            this.boxCodigoOriginador.BackColor = System.Drawing.SystemColors.Window;
+            this.boxCodigoOriginador.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxCodigoOriginador.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxCodigoOriginador.BorderSize = 2;
+            this.boxCodigoOriginador.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxCodigoOriginador.ForeColor = System.Drawing.Color.DimGray;
+            this.boxCodigoOriginador.IsFocused = false;
+            this.boxCodigoOriginador.Location = new System.Drawing.Point(176, 90);
+            this.boxCodigoOriginador.MaxLength = 32767;
+            this.boxCodigoOriginador.Multiline = false;
+            this.boxCodigoOriginador.Name = "boxCodigoOriginador";
+            this.boxCodigoOriginador.Padding = new System.Windows.Forms.Padding(6);
+            this.boxCodigoOriginador.PasswordChar = false;
+            this.boxCodigoOriginador.Size = new System.Drawing.Size(214, 30);
+            this.boxCodigoOriginador.TabIndex = 31;
+            this.boxCodigoOriginador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxCodigoOriginador.Texts = "";
+            this.boxCodigoOriginador.UnderlinedStyle = true;
             // 
             // lblCodigoOriginador
             // 
@@ -78,29 +79,29 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblCodigoOriginador.TabIndex = 30;
             this.lblCodigoOriginador.Text = "Codigo originador:";
             // 
-            // ggTextBox1
+            // boxNombreOriginador
             // 
-            this.ggTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.boxNombreOriginador.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ggTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox1.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox1.BorderSize = 2;
-            this.ggTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox1.IsFocused = false;
-            this.ggTextBox1.Location = new System.Drawing.Point(176, 158);
-            this.ggTextBox1.MaxLength = 32767;
-            this.ggTextBox1.Multiline = false;
-            this.ggTextBox1.Name = "ggTextBox1";
-            this.ggTextBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox1.PasswordChar = false;
-            this.ggTextBox1.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox1.TabIndex = 33;
-            this.ggTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox1.Texts = "";
-            this.ggTextBox1.UnderlinedStyle = true;
+            this.boxNombreOriginador.BackColor = System.Drawing.SystemColors.Window;
+            this.boxNombreOriginador.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxNombreOriginador.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxNombreOriginador.BorderSize = 2;
+            this.boxNombreOriginador.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxNombreOriginador.ForeColor = System.Drawing.Color.DimGray;
+            this.boxNombreOriginador.IsFocused = false;
+            this.boxNombreOriginador.Location = new System.Drawing.Point(176, 158);
+            this.boxNombreOriginador.MaxLength = 32767;
+            this.boxNombreOriginador.Multiline = false;
+            this.boxNombreOriginador.Name = "boxNombreOriginador";
+            this.boxNombreOriginador.Padding = new System.Windows.Forms.Padding(6);
+            this.boxNombreOriginador.PasswordChar = false;
+            this.boxNombreOriginador.Size = new System.Drawing.Size(214, 30);
+            this.boxNombreOriginador.TabIndex = 33;
+            this.boxNombreOriginador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxNombreOriginador.Texts = "";
+            this.boxNombreOriginador.UnderlinedStyle = true;
             // 
             // lblNombreOriginador
             // 
@@ -113,29 +114,29 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblNombreOriginador.TabIndex = 32;
             this.lblNombreOriginador.Text = "Nombre originador:";
             // 
-            // ggTextBox2
+            // boxEmisor
             // 
-            this.ggTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.boxEmisor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ggTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox2.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox2.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox2.BorderSize = 2;
-            this.ggTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox2.IsFocused = false;
-            this.ggTextBox2.Location = new System.Drawing.Point(176, 288);
-            this.ggTextBox2.MaxLength = 32767;
-            this.ggTextBox2.Multiline = false;
-            this.ggTextBox2.Name = "ggTextBox2";
-            this.ggTextBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox2.PasswordChar = false;
-            this.ggTextBox2.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox2.TabIndex = 35;
-            this.ggTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox2.Texts = "";
-            this.ggTextBox2.UnderlinedStyle = true;
+            this.boxEmisor.BackColor = System.Drawing.SystemColors.Window;
+            this.boxEmisor.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxEmisor.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxEmisor.BorderSize = 2;
+            this.boxEmisor.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxEmisor.ForeColor = System.Drawing.Color.DimGray;
+            this.boxEmisor.IsFocused = false;
+            this.boxEmisor.Location = new System.Drawing.Point(176, 288);
+            this.boxEmisor.MaxLength = 32767;
+            this.boxEmisor.Multiline = false;
+            this.boxEmisor.Name = "boxEmisor";
+            this.boxEmisor.Padding = new System.Windows.Forms.Padding(6);
+            this.boxEmisor.PasswordChar = false;
+            this.boxEmisor.Size = new System.Drawing.Size(214, 30);
+            this.boxEmisor.TabIndex = 35;
+            this.boxEmisor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxEmisor.Texts = "";
+            this.boxEmisor.UnderlinedStyle = true;
             // 
             // lblEmisor
             // 
@@ -148,29 +149,29 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblEmisor.TabIndex = 34;
             this.lblEmisor.Text = "Emisor:";
             // 
-            // ggTextBox3
+            // boxSector
             // 
-            this.ggTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.boxSector.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ggTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox3.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox3.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox3.BorderSize = 2;
-            this.ggTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox3.IsFocused = false;
-            this.ggTextBox3.Location = new System.Drawing.Point(176, 224);
-            this.ggTextBox3.MaxLength = 32767;
-            this.ggTextBox3.Multiline = false;
-            this.ggTextBox3.Name = "ggTextBox3";
-            this.ggTextBox3.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox3.PasswordChar = false;
-            this.ggTextBox3.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox3.TabIndex = 37;
-            this.ggTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox3.Texts = "";
-            this.ggTextBox3.UnderlinedStyle = true;
+            this.boxSector.BackColor = System.Drawing.SystemColors.Window;
+            this.boxSector.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxSector.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxSector.BorderSize = 2;
+            this.boxSector.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxSector.ForeColor = System.Drawing.Color.DimGray;
+            this.boxSector.IsFocused = false;
+            this.boxSector.Location = new System.Drawing.Point(176, 224);
+            this.boxSector.MaxLength = 32767;
+            this.boxSector.Multiline = false;
+            this.boxSector.Name = "boxSector";
+            this.boxSector.Padding = new System.Windows.Forms.Padding(6);
+            this.boxSector.PasswordChar = false;
+            this.boxSector.Size = new System.Drawing.Size(214, 30);
+            this.boxSector.TabIndex = 37;
+            this.boxSector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxSector.Texts = "";
+            this.boxSector.UnderlinedStyle = true;
             // 
             // lblSector
             // 
@@ -183,16 +184,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblSector.TabIndex = 36;
             this.lblSector.Text = "Sector:";
             // 
-            // label1
+            // lblNombreEmisor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(232, 321);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 15);
-            this.label1.TabIndex = 98;
-            this.label1.Text = "Nombre originador";
+            this.lblNombreEmisor.AutoSize = true;
+            this.lblNombreEmisor.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEmisor.ForeColor = System.Drawing.Color.Black;
+            this.lblNombreEmisor.Location = new System.Drawing.Point(232, 321);
+            this.lblNombreEmisor.Name = "lblNombreEmisor";
+            this.lblNombreEmisor.Size = new System.Drawing.Size(113, 15);
+            this.lblNombreEmisor.TabIndex = 98;
+            this.lblNombreEmisor.Text = "Nombre originador";
             // 
             // btnSiguiente
             // 
@@ -231,6 +232,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblRegistroOriginador
             // 
@@ -243,22 +245,44 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblRegistroOriginador.TabIndex = 127;
             this.lblRegistroOriginador.Text = "Registro originador";
             // 
+            // btnBuscarEmisor
+            // 
+            this.btnBuscarEmisor.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscarEmisor.FlatAppearance.BorderSize = 0;
+            this.btnBuscarEmisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarEmisor.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarEmisor.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarEmisor.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnBuscarEmisor.IconColor = System.Drawing.Color.White;
+            this.btnBuscarEmisor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarEmisor.IconSize = 24;
+            this.btnBuscarEmisor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarEmisor.Location = new System.Drawing.Point(396, 288);
+            this.btnBuscarEmisor.Name = "btnBuscarEmisor";
+            this.btnBuscarEmisor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBuscarEmisor.Size = new System.Drawing.Size(49, 30);
+            this.btnBuscarEmisor.TabIndex = 128;
+            this.btnBuscarEmisor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarEmisor.UseVisualStyleBackColor = false;
+            this.btnBuscarEmisor.Click += new System.EventHandler(this.btnBuscarOriginador_Click);
+            // 
             // frmRegistroOriginador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 527);
+            this.Controls.Add(this.btnBuscarEmisor);
             this.Controls.Add(this.lblRegistroOriginador);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ggTextBox3);
+            this.Controls.Add(this.lblNombreEmisor);
+            this.Controls.Add(this.boxSector);
             this.Controls.Add(this.lblSector);
-            this.Controls.Add(this.ggTextBox2);
+            this.Controls.Add(this.boxEmisor);
             this.Controls.Add(this.lblEmisor);
-            this.Controls.Add(this.ggTextBox1);
+            this.Controls.Add(this.boxNombreOriginador);
             this.Controls.Add(this.lblNombreOriginador);
-            this.Controls.Add(this.boxApellidos);
+            this.Controls.Add(this.boxCodigoOriginador);
             this.Controls.Add(this.lblCodigoOriginador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistroOriginador";
@@ -270,17 +294,18 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
 
         #endregion
 
-        private Recursos.UserControls.GGTextBox boxApellidos;
+        private Recursos.UserControls.GGTextBox boxCodigoOriginador;
         private System.Windows.Forms.Label lblCodigoOriginador;
-        private Recursos.UserControls.GGTextBox ggTextBox1;
+        private Recursos.UserControls.GGTextBox boxNombreOriginador;
         private System.Windows.Forms.Label lblNombreOriginador;
-        private Recursos.UserControls.GGTextBox ggTextBox2;
+        private Recursos.UserControls.GGTextBox boxEmisor;
         private System.Windows.Forms.Label lblEmisor;
-        private Recursos.UserControls.GGTextBox ggTextBox3;
+        private Recursos.UserControls.GGTextBox boxSector;
         private System.Windows.Forms.Label lblSector;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombreEmisor;
         private Recursos.UserControls.GGButton btnSiguiente;
         private Recursos.UserControls.GGButton btnCancelar;
         private System.Windows.Forms.Label lblRegistroOriginador;
+        private FontAwesome.Sharp.IconButton btnBuscarEmisor;
     }
 }

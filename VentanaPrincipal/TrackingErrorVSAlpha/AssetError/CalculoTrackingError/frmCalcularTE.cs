@@ -76,7 +76,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
 
         private void cargarTrackingError()
         {
-            TrackingErrorWS.trackingError[] te;
+            TrackingErrorWS.trackingError[] te;            
 
             te = _dao.ListarTrackingError(dateInicial.Value.ToString("yyyy-MM-dd"));
 

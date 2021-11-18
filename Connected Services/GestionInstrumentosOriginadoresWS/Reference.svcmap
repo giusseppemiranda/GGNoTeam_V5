@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServices/GestionInstOrigWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionInstOrigWS1.xsd" MetadataType="Schema" ID="5fa1d90f-b458-4245-a98b-06000715beec" SourceId="1" SourceUrl="http://localhost:8080/WebServices/GestionInstOrigWS?xsd=1" />
-    <MetadataFile FileName="GestionInstOrigWS1.wsdl" MetadataType="Wsdl" ID="9befc05a-9f07-45a3-9653-d675770d0d45" SourceId="1" SourceUrl="http://localhost:8080/WebServices/GestionInstOrigWS?WSDL" />
+    <MetadataFile FileName="GestionInstOrigWS1.xsd" MetadataType="Schema" ID="8bd0724d-3c00-4de7-9344-1516cab8f34e" SourceId="1" SourceUrl="http://localhost:8080/WebServices/GestionInstOrigWS?xsd=1" />
+    <MetadataFile FileName="GestionInstOrigWS1.wsdl" MetadataType="Wsdl" ID="5cb6b66f-62cd-4041-b35b-fa8d8ba0752d" SourceId="1" SourceUrl="http://localhost:8080/WebServices/GestionInstOrigWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
