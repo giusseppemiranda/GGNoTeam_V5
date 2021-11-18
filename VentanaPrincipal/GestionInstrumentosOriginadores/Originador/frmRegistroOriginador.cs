@@ -19,7 +19,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig)
         {
             InitializeComponent();
-
+            boxCodigoOriginador.Texts = orig.codigoOriginador;
+            boxNombreOriginador.Texts = orig.nombreOriginador;
+            boxSector.Texts = orig.sectorGics;
+            //boxEmisor.Texts = orig.fidEmisor;
         }
     }
 }

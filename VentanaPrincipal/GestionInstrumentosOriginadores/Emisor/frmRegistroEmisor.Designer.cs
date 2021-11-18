@@ -29,38 +29,38 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
         /// </summary>
         private void InitializeComponent()
         {
-            this.ggTextBox1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxNombreEmisor = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblNombreEmisor = new System.Windows.Forms.Label();
-            this.boxApellidos = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxCodigoEmisor = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblCodigoEmisor = new System.Windows.Forms.Label();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblRegistroEmisor = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // ggTextBox1
+            // boxNombreEmisor
             // 
-            this.ggTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.boxNombreEmisor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ggTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox1.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.ggTextBox1.BorderSize = 2;
-            this.ggTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox1.IsFocused = false;
-            this.ggTextBox1.Location = new System.Drawing.Point(184, 155);
-            this.ggTextBox1.MaxLength = 32767;
-            this.ggTextBox1.Multiline = false;
-            this.ggTextBox1.Name = "ggTextBox1";
-            this.ggTextBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.ggTextBox1.PasswordChar = false;
-            this.ggTextBox1.Size = new System.Drawing.Size(214, 30);
-            this.ggTextBox1.TabIndex = 37;
-            this.ggTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ggTextBox1.Texts = "";
-            this.ggTextBox1.UnderlinedStyle = true;
+            this.boxNombreEmisor.BackColor = System.Drawing.SystemColors.Window;
+            this.boxNombreEmisor.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxNombreEmisor.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxNombreEmisor.BorderSize = 2;
+            this.boxNombreEmisor.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxNombreEmisor.ForeColor = System.Drawing.Color.DimGray;
+            this.boxNombreEmisor.IsFocused = false;
+            this.boxNombreEmisor.Location = new System.Drawing.Point(184, 155);
+            this.boxNombreEmisor.MaxLength = 32767;
+            this.boxNombreEmisor.Multiline = false;
+            this.boxNombreEmisor.Name = "boxNombreEmisor";
+            this.boxNombreEmisor.Padding = new System.Windows.Forms.Padding(6);
+            this.boxNombreEmisor.PasswordChar = false;
+            this.boxNombreEmisor.Size = new System.Drawing.Size(214, 30);
+            this.boxNombreEmisor.TabIndex = 37;
+            this.boxNombreEmisor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxNombreEmisor.Texts = "";
+            this.boxNombreEmisor.UnderlinedStyle = true;
             // 
             // lblNombreEmisor
             // 
@@ -73,29 +73,29 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.lblNombreEmisor.TabIndex = 36;
             this.lblNombreEmisor.Text = "Nombre emisor:";
             // 
-            // boxApellidos
+            // boxCodigoEmisor
             // 
-            this.boxApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.boxCodigoEmisor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxApellidos.BackColor = System.Drawing.SystemColors.Window;
-            this.boxApellidos.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxApellidos.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxApellidos.BorderSize = 2;
-            this.boxApellidos.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxApellidos.ForeColor = System.Drawing.Color.DimGray;
-            this.boxApellidos.IsFocused = false;
-            this.boxApellidos.Location = new System.Drawing.Point(184, 88);
-            this.boxApellidos.MaxLength = 32767;
-            this.boxApellidos.Multiline = false;
-            this.boxApellidos.Name = "boxApellidos";
-            this.boxApellidos.Padding = new System.Windows.Forms.Padding(6);
-            this.boxApellidos.PasswordChar = false;
-            this.boxApellidos.Size = new System.Drawing.Size(214, 30);
-            this.boxApellidos.TabIndex = 35;
-            this.boxApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxApellidos.Texts = "";
-            this.boxApellidos.UnderlinedStyle = true;
+            this.boxCodigoEmisor.BackColor = System.Drawing.SystemColors.Window;
+            this.boxCodigoEmisor.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxCodigoEmisor.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxCodigoEmisor.BorderSize = 2;
+            this.boxCodigoEmisor.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxCodigoEmisor.ForeColor = System.Drawing.Color.DimGray;
+            this.boxCodigoEmisor.IsFocused = false;
+            this.boxCodigoEmisor.Location = new System.Drawing.Point(184, 88);
+            this.boxCodigoEmisor.MaxLength = 32767;
+            this.boxCodigoEmisor.Multiline = false;
+            this.boxCodigoEmisor.Name = "boxCodigoEmisor";
+            this.boxCodigoEmisor.Padding = new System.Windows.Forms.Padding(6);
+            this.boxCodigoEmisor.PasswordChar = false;
+            this.boxCodigoEmisor.Size = new System.Drawing.Size(214, 30);
+            this.boxCodigoEmisor.TabIndex = 35;
+            this.boxCodigoEmisor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxCodigoEmisor.Texts = "";
+            this.boxCodigoEmisor.UnderlinedStyle = true;
             // 
             // lblCodigoEmisor
             // 
@@ -165,9 +165,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.Controls.Add(this.lblRegistroEmisor);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
-            this.Controls.Add(this.ggTextBox1);
+            this.Controls.Add(this.boxNombreEmisor);
             this.Controls.Add(this.lblNombreEmisor);
-            this.Controls.Add(this.boxApellidos);
+            this.Controls.Add(this.boxCodigoEmisor);
             this.Controls.Add(this.lblCodigoEmisor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistroEmisor";
@@ -179,9 +179,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
 
         #endregion
 
-        private Recursos.UserControls.GGTextBox ggTextBox1;
+        private Recursos.UserControls.GGTextBox boxNombreEmisor;
         private System.Windows.Forms.Label lblNombreEmisor;
-        private Recursos.UserControls.GGTextBox boxApellidos;
+        private Recursos.UserControls.GGTextBox boxCodigoEmisor;
         private System.Windows.Forms.Label lblCodigoEmisor;
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;

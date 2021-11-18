@@ -16,5 +16,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
         {
             InitializeComponent();
         }
+        public frmRegistroEmisor(GestionInstrumentosOriginadoresWS.emisor emi)
+        {
+            InitializeComponent();
+
+        }
     }
 }

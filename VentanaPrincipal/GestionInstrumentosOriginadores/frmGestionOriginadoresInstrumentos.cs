@@ -1,4 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor;
 using GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumento;
 using GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originador;
 using System;
@@ -140,7 +141,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
             {
-                _daoInstOrig.listarEmisores();
+                frmRegistroEmisor registrarinst = new frmRegistroEmisor(emisores[dgvInstrumentosOriginadores.CurrentRow.Index]);
+                registrarinst.ShowDialog();
             }
             
         }
