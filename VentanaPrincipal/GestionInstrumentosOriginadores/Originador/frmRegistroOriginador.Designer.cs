@@ -37,10 +37,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblEmisor = new System.Windows.Forms.Label();
             this.boxSector = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblSector = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombreEmisor = new System.Windows.Forms.Label();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblRegistroOriginador = new System.Windows.Forms.Label();
+            this.btnBuscarOriginador = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // boxCodigoOriginador
@@ -183,16 +184,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblSector.TabIndex = 36;
             this.lblSector.Text = "Sector:";
             // 
-            // label1
+            // lblNombreEmisor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(232, 321);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 15);
-            this.label1.TabIndex = 98;
-            this.label1.Text = "Nombre originador";
+            this.lblNombreEmisor.AutoSize = true;
+            this.lblNombreEmisor.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEmisor.ForeColor = System.Drawing.Color.Black;
+            this.lblNombreEmisor.Location = new System.Drawing.Point(232, 321);
+            this.lblNombreEmisor.Name = "lblNombreEmisor";
+            this.lblNombreEmisor.Size = new System.Drawing.Size(113, 15);
+            this.lblNombreEmisor.TabIndex = 98;
+            this.lblNombreEmisor.Text = "Nombre originador";
             // 
             // btnSiguiente
             // 
@@ -231,6 +232,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblRegistroOriginador
             // 
@@ -243,15 +245,37 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblRegistroOriginador.TabIndex = 127;
             this.lblRegistroOriginador.Text = "Registro originador";
             // 
+            // btnBuscarOriginador
+            // 
+            this.btnBuscarOriginador.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscarOriginador.FlatAppearance.BorderSize = 0;
+            this.btnBuscarOriginador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarOriginador.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarOriginador.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarOriginador.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnBuscarOriginador.IconColor = System.Drawing.Color.White;
+            this.btnBuscarOriginador.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarOriginador.IconSize = 24;
+            this.btnBuscarOriginador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarOriginador.Location = new System.Drawing.Point(396, 288);
+            this.btnBuscarOriginador.Name = "btnBuscarOriginador";
+            this.btnBuscarOriginador.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBuscarOriginador.Size = new System.Drawing.Size(49, 30);
+            this.btnBuscarOriginador.TabIndex = 128;
+            this.btnBuscarOriginador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarOriginador.UseVisualStyleBackColor = false;
+            this.btnBuscarOriginador.Click += new System.EventHandler(this.btnBuscarOriginador_Click);
+            // 
             // frmRegistroOriginador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 527);
+            this.Controls.Add(this.btnBuscarOriginador);
             this.Controls.Add(this.lblRegistroOriginador);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNombreEmisor);
             this.Controls.Add(this.boxSector);
             this.Controls.Add(this.lblSector);
             this.Controls.Add(this.boxEmisor);
@@ -278,9 +302,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         private System.Windows.Forms.Label lblEmisor;
         private Recursos.UserControls.GGTextBox boxSector;
         private System.Windows.Forms.Label lblSector;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombreEmisor;
         private Recursos.UserControls.GGButton btnSiguiente;
         private Recursos.UserControls.GGButton btnCancelar;
         private System.Windows.Forms.Label lblRegistroOriginador;
+        private FontAwesome.Sharp.IconButton btnBuscarOriginador;
     }
 }
