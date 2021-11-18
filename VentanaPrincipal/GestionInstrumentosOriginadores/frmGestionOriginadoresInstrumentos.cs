@@ -105,7 +105,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             _daoInstOrig.eliminarInstrumento(Int32.Parse(dgvInstrumentosOriginadores.CurrentRow.Cells[0].Value.ToString()));
-            
+
             if (comboTipo.SelectedItem.ToString() == "Originador")
             {
                 _daoInstOrig.buscarUnOriginadorPorCodigo(Int32.Parse(txtboxbusqueda.Texts));
@@ -113,20 +113,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
                 instrumentos = _daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
+                //instrumentos[0].situacionCartera;
                 dgvInstrumentosOriginadores.DataSource = instrumentos;
+            }
+            else if (comboTipo.SelectedItem.ToString() == "Emisor")
+            {
+
             }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             frmRegistroInstrumento editarUsuarios = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index]);
-            
             editarUsuarios.ShowDialog();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmRegistroInstrumento editarUsuarios = new frmRegistroInstrumento()
+            frmRegistroInstrumento editarUsuarios = new frmRegistroInstrumento();
         }
     }
 }
