@@ -69,6 +69,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblRegistroInstrumento = new System.Windows.Forms.Label();
+            this.btnBuscarOriginador = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // boxcodSBS
@@ -335,11 +336,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.boxCodigoOriginador.Name = "boxCodigoOriginador";
             this.boxCodigoOriginador.Padding = new System.Windows.Forms.Padding(6);
             this.boxCodigoOriginador.PasswordChar = false;
-            this.boxCodigoOriginador.Size = new System.Drawing.Size(605, 30);
+            this.boxCodigoOriginador.Size = new System.Drawing.Size(550, 30);
             this.boxCodigoOriginador.TabIndex = 96;
             this.boxCodigoOriginador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxCodigoOriginador.Texts = "";
             this.boxCodigoOriginador.UnderlinedStyle = true;
+            this.boxCodigoOriginador._TextChanged += new System.EventHandler(this.boxCodigoOriginador__TextChanged);
             // 
             // lblOriginador
             // 
@@ -695,11 +697,33 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblRegistroInstrumento.TabIndex = 125;
             this.lblRegistroInstrumento.Text = "Registro instrumento";
             // 
+            // btnBuscarOriginador
+            // 
+            this.btnBuscarOriginador.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscarOriginador.FlatAppearance.BorderSize = 0;
+            this.btnBuscarOriginador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarOriginador.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarOriginador.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarOriginador.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnBuscarOriginador.IconColor = System.Drawing.Color.White;
+            this.btnBuscarOriginador.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarOriginador.IconSize = 24;
+            this.btnBuscarOriginador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarOriginador.Location = new System.Drawing.Point(735, 471);
+            this.btnBuscarOriginador.Name = "btnBuscarOriginador";
+            this.btnBuscarOriginador.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBuscarOriginador.Size = new System.Drawing.Size(49, 30);
+            this.btnBuscarOriginador.TabIndex = 126;
+            this.btnBuscarOriginador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarOriginador.UseVisualStyleBackColor = false;
+            this.btnBuscarOriginador.Click += new System.EventHandler(this.btnBuscarOriginador_Click);
+            // 
             // frmRegistroInstrumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 591);
+            this.Controls.Add(this.btnBuscarOriginador);
             this.Controls.Add(this.lblRegistroInstrumento);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
@@ -790,5 +814,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;
         private System.Windows.Forms.Label lblRegistroInstrumento;
+        private FontAwesome.Sharp.IconButton btnBuscarOriginador;
     }
 }
