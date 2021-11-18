@@ -16,7 +16,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         {
             InitializeComponent();
             boxcodSBS.Texts = inst.codigoSBS;
-            boxcodISIN.Texts = inst.codigoISIN
+            boxcodISIN.Texts = inst.codigoISIN;
+        }
+
+        public frmRegistroInstrumento()
+        {
+            InitializeComponent();
         }
 
         private void ggTextBox9__TextChanged(object sender, EventArgs e)

@@ -119,9 +119,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            frmRegistroInstrumento editarUsuarios = new frmRegistroInstrumento();
-            //instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index]
+            frmRegistroInstrumento editarUsuarios = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index]);
+            
             editarUsuarios.ShowDialog();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmRegistroInstrumento editarUsuarios = new frmRegistroInstrumento()
         }
     }
 }
