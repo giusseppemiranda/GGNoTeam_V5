@@ -61,14 +61,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarTodosEjecucion">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarTodosEjecucionResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejecucion" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarEjecucion">
     <xs:sequence>
       <xs:element name="idEjecucion" type="xs:int" />
@@ -77,6 +69,14 @@
   <xs:complexType name="eliminarEjecucionResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjecucion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjecucionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejecucion" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarEjecucion">

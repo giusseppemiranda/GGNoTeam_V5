@@ -1,5 +1,6 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using System;
+using System.ComponentModel;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -12,6 +13,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private TrackingErrorWS.TrackingErrorWSClient _dao;
         private TrackingErrorWS.dataValorCuota[] datos;
         //private TrackingErrorWS.fondo[] fondos;
+        private TrackingErrorWS.afp[] listaAfps;
+        private static BindingList<string> nombreafp = new BindingList<string>();
         private TrackingErrorWS.afp[] afps;
         private frmTEvsAlpha ventanaPadre = null;
         public frmCalcularAlpha(frmPrincipal ventana, frmTEvsAlpha ventana_2)
@@ -20,8 +23,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             ventanaPadre = ventana_2;
+
+            _dao = new TrackingErrorWS.TrackingErrorWSClient();
+            dgvDataValorCuota.AutoGenerateColumns = false;
             
             cambiarTema();
+            cargarNombresAFP();
         }
 
         public void cambiarTema()
@@ -48,66 +55,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         }
 
-        
+        private void cargarNombresAFP()
+        {
+            listaAfps = _dao.ListarTodasAfp();
+        }
+
+
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
-            /*
-            string nombre = null;
-            double Pho= 0;
-            double PT= 0;
-            double Ppro= 0;
-            double Ppri= 0;
-            double Pha= 0;
-            double YtoDI = 0;
-            double alpha= 0;
-            double YtoPro = 0;
-            double YtoDHo = 0;
-            double YtoDPri = 0;
-            double YtoDHa = 0;
-            double YtoDSys = 0;
-            int idAfp = -1;
-            afps = _dao.ListarTodasAfp();
-            fondos = _dao.listarTodosFondo();
-            TrackingErrorWS.fondo aux = new TrackingErrorWS.fondo();
-            foreach (DataGridViewRow row in dgvDataValorCuota.Rows)
-            {
-                var data = row.DataBoundItem as TrackingErrorWS.dataValorCuota;
-                PT += data.patrimonio;
+            datos = _dao.listarDataValorCuotaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
+            if(datos != null)
+            {                
+                nombreafp.Clear();
+                for (int i = 0; i < datos.Length; i++)
+                {
+                    nombreafp.Add(listaAfps[datos[i].fidAFP - 1].nombre);                    
+                }
+
+                dgvDataValorCuota.DataSource = datos;
             }
-            foreach (DataGridViewRow row in dgvDataValorCuota.Rows)
-            {
-                var data = row.DataBoundItem as TrackingErrorWS.dataValorCuota;
-                //agregar fidFondo en los mysql y procedures en workbench y funciona xd 
-                foreach (var fondo in fondos)   if (data.fidFondo == fondo.idFondo) idAfp = fondo.fidAFP;
-                foreach (var afp in afps) if (idAfp == afp.idAFP) nombre = afp.nombre;
-                
-                if (nombre == "integra") YtoDI += YtoDI + (data.valorCuota/data.cuotas);
-                if (nombre == "horizonte")
-                {
-                    Pho += data.patrimonio / PT;
-                    YtoDHo += data.ytoD;
-                }
-                if (nombre == "profuturo")
-                {
-                    Ppro += data.patrimonio / PT;
-                    YtoPro += data.ytoD;
-                }
-                if (nombre == "pri")
-                {
-                    Ppri += data.patrimonio / PT;
-                    YtoDPri += data.ytoD;
-                }
-                if (nombre == "ha")
-                {
-                    Pha += data.patrimonio / PT;
-                    YtoDHa += data.ytoD;
-                }
-                
-            }
-            YtoDSys = (YtoDHo * Pho) + (Ppro * YtoPro) + (Ppri * YtoDPri) + (Pha * YtoDHa);
-            alpha = YtoDI- YtoDSys; 
-            ggTextBox1.Texts = alpha.ToString();
-            */
+            
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
@@ -170,6 +137,23 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                 MessageBox.Show("No hay datos para exportar", "Info");
 
             }
+        }
+
+        private void dgvDataValorCuota_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvDataValorCuota_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            TrackingErrorWS.dataValorCuota dvc = (TrackingErrorWS.dataValorCuota)dgvDataValorCuota.Rows[e.RowIndex].DataBoundItem;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[0].Value = dvc.idDataValorCuota;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[1].Value = dvc.fecha.ToString("dd/MM/yyyy");
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[2].Value = nombreafp[e.RowIndex];
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[4].Value = dvc.patrimonio; ;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[5].Value = dvc.cuotas;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[6].Value = dvc.valorCuota;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[7].Value = dvc.valorCuota / dvc.cuotas;
         }
     }
 }

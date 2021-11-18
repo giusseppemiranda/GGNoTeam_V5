@@ -47,12 +47,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.dgvDataValorCuota = new System.Windows.Forms.DataGridView();
             this.idDVC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreAFP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patrimonio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuotas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.YTOD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataValorCuota)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,15 +253,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDataValorCuota.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDataValorCuota.ColumnHeadersHeight = 25;
-            this.dgvDataValorCuota.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDVC,
-            this.fecha,
-            this.nombreAFP,
-            this.Fondo,
-            this.patrimonio,
-            this.cuotas,
-            this.valorCuota,
-            this.YTOD});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,13 +276,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.dgvDataValorCuota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDataValorCuota.Size = new System.Drawing.Size(952, 324);
             this.dgvDataValorCuota.TabIndex = 65;
+            this.dgvDataValorCuota.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataValorCuota_CellContentClick);
+            this.dgvDataValorCuota.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDataValorCuota_CellFormatting);
             // 
             // idDVC
             // 
             this.idDVC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.idDVC.HeaderText = "ID";
             this.idDVC.Name = "idDVC";
-            this.idDVC.ReadOnly = true;
             this.idDVC.Width = 43;
             // 
             // fecha
@@ -305,54 +291,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.fecha.HeaderText = "Fecha";
             this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
             this.fecha.Width = 62;
-            // 
-            // nombreAFP
-            // 
-            this.nombreAFP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nombreAFP.HeaderText = "Nombre AFP";
-            this.nombreAFP.Name = "nombreAFP";
-            this.nombreAFP.ReadOnly = true;
-            // 
-            // Fondo
-            // 
-            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Fondo.HeaderText = "Tipo fondo";
-            this.Fondo.Name = "Fondo";
-            this.Fondo.ReadOnly = true;
-            this.Fondo.Width = 90;
-            // 
-            // patrimonio
-            // 
-            this.patrimonio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.patrimonio.HeaderText = "Patrimonio";
-            this.patrimonio.Name = "patrimonio";
-            this.patrimonio.ReadOnly = true;
-            this.patrimonio.Width = 91;
-            // 
-            // cuotas
-            // 
-            this.cuotas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cuotas.HeaderText = "Cuotas";
-            this.cuotas.Name = "cuotas";
-            this.cuotas.ReadOnly = true;
-            this.cuotas.Width = 67;
-            // 
-            // valorCuota
-            // 
-            this.valorCuota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.valorCuota.HeaderText = "Valor Cuota";
-            this.valorCuota.Name = "valorCuota";
-            this.valorCuota.ReadOnly = true;
-            this.valorCuota.Width = 93;
-            // 
-            // YTOD
-            // 
-            this.YTOD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.YTOD.HeaderText = "YtoD";
-            this.YTOD.Name = "YTOD";
-            this.YTOD.ReadOnly = true;
             // 
             // frmCalcularAlpha
             // 
@@ -399,11 +338,5 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private System.Windows.Forms.DataGridView dgvDataValorCuota;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDVC;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreAFP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fondo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patrimonio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cuotas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorCuota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn YTOD;
     }
 }
