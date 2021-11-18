@@ -41,7 +41,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblRegistroOriginador = new System.Windows.Forms.Label();
-            this.btnBuscarOriginador = new FontAwesome.Sharp.IconButton();
+            this.btnBuscarEmisor = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // boxCodigoOriginador
@@ -245,33 +245,33 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblRegistroOriginador.TabIndex = 127;
             this.lblRegistroOriginador.Text = "Registro originador";
             // 
-            // btnBuscarOriginador
+            // btnBuscarEmisor
             // 
-            this.btnBuscarOriginador.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBuscarOriginador.FlatAppearance.BorderSize = 0;
-            this.btnBuscarOriginador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarOriginador.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarOriginador.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarOriginador.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnBuscarOriginador.IconColor = System.Drawing.Color.White;
-            this.btnBuscarOriginador.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarOriginador.IconSize = 24;
-            this.btnBuscarOriginador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarOriginador.Location = new System.Drawing.Point(396, 288);
-            this.btnBuscarOriginador.Name = "btnBuscarOriginador";
-            this.btnBuscarOriginador.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnBuscarOriginador.Size = new System.Drawing.Size(49, 30);
-            this.btnBuscarOriginador.TabIndex = 128;
-            this.btnBuscarOriginador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarOriginador.UseVisualStyleBackColor = false;
-            this.btnBuscarOriginador.Click += new System.EventHandler(this.btnBuscarOriginador_Click);
+            this.btnBuscarEmisor.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscarEmisor.FlatAppearance.BorderSize = 0;
+            this.btnBuscarEmisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarEmisor.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarEmisor.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarEmisor.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnBuscarEmisor.IconColor = System.Drawing.Color.White;
+            this.btnBuscarEmisor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarEmisor.IconSize = 24;
+            this.btnBuscarEmisor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarEmisor.Location = new System.Drawing.Point(396, 288);
+            this.btnBuscarEmisor.Name = "btnBuscarEmisor";
+            this.btnBuscarEmisor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBuscarEmisor.Size = new System.Drawing.Size(49, 30);
+            this.btnBuscarEmisor.TabIndex = 128;
+            this.btnBuscarEmisor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarEmisor.UseVisualStyleBackColor = false;
+            this.btnBuscarEmisor.Click += new System.EventHandler(this.btnBuscarOriginador_Click);
             // 
             // frmRegistroOriginador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 527);
-            this.Controls.Add(this.btnBuscarOriginador);
+            this.Controls.Add(this.btnBuscarEmisor);
             this.Controls.Add(this.lblRegistroOriginador);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnCancelar);
@@ -306,6 +306,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         private Recursos.UserControls.GGButton btnSiguiente;
         private Recursos.UserControls.GGButton btnCancelar;
         private System.Windows.Forms.Label lblRegistroOriginador;
-        private FontAwesome.Sharp.IconButton btnBuscarOriginador;
+        private FontAwesome.Sharp.IconButton btnBuscarEmisor;
     }
 }

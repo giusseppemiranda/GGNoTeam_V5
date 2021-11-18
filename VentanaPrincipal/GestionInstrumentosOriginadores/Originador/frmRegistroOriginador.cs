@@ -14,9 +14,18 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
     public partial class frmRegistroOriginador : Form
     {
         private GestionInstrumentosOriginadoresWS.emisor emi;
+        private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoOrig;
+        private GestionInstrumentosOriginadoresWS.originador ori;
         public frmRegistroOriginador()
         {
             InitializeComponent();
+            _daoOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
+            ori = new GestionInstrumentosOriginadoresWS.originador();
+            ori.codigoOriginador = boxCodigoOriginador.Texts;
+            ori.nombreOriginador = boxNombreOriginador.Texts;
+            ori.sectorGics = boxSector.Texts;
+            ori.fidEmisor = emi.codigo;
+
         }
         public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig)
         {
@@ -30,6 +39,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
 
         public void cargarEmisor(GestionInstrumentosOriginadoresWS.emisor emiAux)
         {
+            //emi.idEmisor = emiAux.idEmisor;
             emi.codigo = emiAux.codigo;
             emi.nombre = emiAux.nombre;
         }
