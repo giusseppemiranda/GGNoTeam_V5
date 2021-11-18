@@ -35,8 +35,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         }
         private void btnBuscarOriginador_Click(object sender, EventArgs e)
         {
-            frmBusquedaEmisor emi = new frmBusquedaEmisor(this,boxEmisor.Texts);
+            frmBusquedaEmisor emi = new frmBusquedaEmisor(this, boxEmisor.Texts);
+            emi.ShowDialog();
+        }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

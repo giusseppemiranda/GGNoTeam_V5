@@ -52,5 +52,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

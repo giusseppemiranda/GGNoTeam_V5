@@ -42,7 +42,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
 
         private void dgvEmisores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-
+            GestionInstrumentosOriginadoresWS.emisor emi = (GestionInstrumentosOriginadoresWS.emisor)dgvEmisores.Rows[e.RowIndex].DataBoundItem;
+            dgvEmisores.Rows[e.RowIndex].Cells[0].Value = emi.codigo;
+            dgvEmisores.Rows[e.RowIndex].Cells[1].Value = emi.nombre;
         }
     }
 }

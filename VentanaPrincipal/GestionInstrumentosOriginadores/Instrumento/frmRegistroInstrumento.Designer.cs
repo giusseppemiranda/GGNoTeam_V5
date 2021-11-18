@@ -666,6 +666,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSiguiente
             // 
