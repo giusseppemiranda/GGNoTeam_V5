@@ -213,6 +213,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.btnSiguiente.Text = "Aceptar";
             this.btnSiguiente.TextColor = System.Drawing.Color.White;
             this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnCancelar
             // 
@@ -241,9 +242,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblRegistroOriginador.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblRegistroOriginador.Location = new System.Drawing.Point(150, 24);
             this.lblRegistroOriginador.Name = "lblRegistroOriginador";
-            this.lblRegistroOriginador.Size = new System.Drawing.Size(187, 25);
+            this.lblRegistroOriginador.Size = new System.Drawing.Size(0, 25);
             this.lblRegistroOriginador.TabIndex = 127;
-            this.lblRegistroOriginador.Text = "Registro originador";
             // 
             // btnBuscarEmisor
             // 

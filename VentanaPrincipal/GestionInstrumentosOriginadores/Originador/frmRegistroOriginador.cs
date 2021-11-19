@@ -15,42 +15,66 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
     {
         private GestionInstrumentosOriginadoresWS.emisor emi;
         private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoOrig;
-        private GestionInstrumentosOriginadoresWS.originador ori;
+        private GestionInstrumentosOriginadoresWS.originador oriAux;
         public frmRegistroOriginador()
         {
             InitializeComponent();
+            lblRegistroOriginador.Text = "Registro originador";
             _daoOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
-            ori = new GestionInstrumentosOriginadoresWS.originador();
-            ori.codigoOriginador = boxCodigoOriginador.Texts;
-            ori.nombreOriginador = boxNombreOriginador.Texts;
-            ori.sectorGics = boxSector.Texts;
-            ori.fidEmisor = emi.idEmisor;
+            oriAux = new GestionInstrumentosOriginadoresWS.originador();
+
 
         }
         public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig)
         {
             InitializeComponent();
+            lblRegistroOriginador.Text = "Modificar originador";
             boxCodigoOriginador.Texts = orig.codigoOriginador;
             boxNombreOriginador.Texts = orig.nombreOriginador;
             boxSector.Texts = orig.sectorGics;
-
-            //boxEmisor.Texts = orig.fidEmisor;
+            _daoOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
+            //emi=_daoOrig.listarEmisores(orig.fidEmisor); //REEMPLAZAR LISTAR EMISOR X CODIGO
+            boxEmisor.Texts = emi.codigoEmisor; 
+            lblNombreEmisor.Text = emi.nombre;
         }
 
         public void cargarEmisor(GestionInstrumentosOriginadoresWS.emisor emiAux)
         {
-            //emi.idEmisor = emiAux.idEmisor;
+            emi.idEmisor = emiAux.idEmisor;
             emi.codigoEmisor = emiAux.codigoEmisor;
             emi.nombre = emiAux.nombre;
         }
         private void btnBuscarOriginador_Click(object sender, EventArgs e)
         {
-            frmBusquedaEmisor emi = new frmBusquedaEmisor(this, boxEmisor.Texts);
-            emi.ShowDialog();
+            frmBusquedaEmisor buscaEmi = new frmBusquedaEmisor(this, boxEmisor.Texts);
+            buscaEmi.ShowDialog();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.Dispose();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+
+            oriAux.codigoOriginador = boxCodigoOriginador.Texts;
+            oriAux.nombreOriginador = boxNombreOriginador.Texts;
+            oriAux.sectorGics = boxSector.Texts;
+            oriAux.fidEmisor = emi.idEmisor;
+
+            if (lblRegistroOriginador.Text == "Modificar originador")
+            {
+                _daoOrig.modificarOriginador(oriAux);
+                MessageBox.Show("Modificación exitosa!");
+            }
+            else
+            {
+
+                _daoOrig.insertarOriginador(oriAux);
+                MessageBox.Show("Registro exitoso!");
+            }
+            
             this.Dispose();
         }
     }
