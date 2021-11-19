@@ -190,9 +190,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblNombreOriginador.ForeColor = System.Drawing.Color.Black;
             this.lblNombreOriginador.Location = new System.Drawing.Point(416, 501);
             this.lblNombreOriginador.Name = "lblNombreOriginador";
-            this.lblNombreOriginador.Size = new System.Drawing.Size(113, 15);
+            this.lblNombreOriginador.Size = new System.Drawing.Size(0, 15);
             this.lblNombreOriginador.TabIndex = 97;
-            this.lblNombreOriginador.Text = "Nombre originador";
             // 
             // lblRatingEncaje
             // 

@@ -14,8 +14,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
     public partial class frmRegistroInstrumento : Form
     {
         private GestionInstrumentosOriginadoresWS.originador orig;
+        private GestionInstrumentosOriginadoresWS.originador[] originadores;
         private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoInst;
         private GestionInstrumentosOriginadoresWS.instrumento instAux;
+        private String codigoAnt;
         public frmRegistroInstrumento(GestionInstrumentosOriginadoresWS.instrumento inst)
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             orig = new GestionInstrumentosOriginadoresWS.originador();            
             orig = _daoInst.buscarOrigId(inst.fidOriginador);
             boxCodigoOriginador.Texts = orig.codigoOriginador;
+            codigoAnt = orig.codigoOriginador;
             lblNombreOriginador.Text = orig.nombreOriginador;
             dateVencimiento.Value = inst.fechaVencimiento;
 
@@ -46,7 +49,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
 
 
 
-
         }
 
         public frmRegistroInstrumento()
@@ -55,7 +57,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             _daoInst = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
             cargarCombos();
             instAux = new GestionInstrumentosOriginadoresWS.instrumento();
+            orig = new GestionInstrumentosOriginadoresWS.originador();
+            orig.idOriginador = 0;
             lblRegistroInstrumento.Text = "Registro instrumento";
+            codigoAnt = "";
         }
         
         public void cargarOriginador(GestionInstrumentosOriginadoresWS.originador origAux)
@@ -63,6 +68,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             orig.idOriginador = origAux.idOriginador;
             orig.codigoOriginador = origAux.codigoOriginador;
             orig.nombreOriginador = origAux.nombreOriginador;
+        }
+        public void resetearOriginador()
+        {
+            orig.idOriginador = 0;
         }
         private void ggTextBox9__TextChanged(object sender, EventArgs e)
         {
@@ -76,8 +85,21 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
 
         private void btnBuscarOriginador_Click(object sender, EventArgs e)
         {
-            frmBusquedaOrig busquedaOrig = new frmBusquedaOrig(this,boxCodigoOriginador.Texts);
-            busquedaOrig.ShowDialog();
+            originadores=_daoInst.buscarUnOriginadorPorCodigo(boxCodigoOriginador.Texts);
+            if (originadores != null)
+            {
+                frmBusquedaOrig busquedaOrig = new frmBusquedaOrig(this, originadores);
+                busquedaOrig.ShowDialog();
+                boxCodigoOriginador.Texts = orig.codigoOriginador;
+                codigoAnt = orig.codigoOriginador;
+                lblNombreOriginador.Text = orig.nombreOriginador;
+            }
+            else
+            {
+                MessageBox.Show("No se encontró ningun originador");
+                boxCodigoOriginador.Texts = codigoAnt;
+                resetearOriginador();
+            }
         }
 
         private void boxCodigoOriginador__TextChanged(object sender, EventArgs e)
@@ -134,5 +156,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             comboBoxLimiteAplicable.DataSource = LimiteAplicableEnum;
             //comboBoxClasificacionLocal.DataSource = ;
         }
+
     }
 }
