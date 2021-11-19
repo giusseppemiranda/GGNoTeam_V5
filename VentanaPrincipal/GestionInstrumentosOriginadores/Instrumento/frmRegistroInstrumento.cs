@@ -36,7 +36,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             boxCodigoOriginador.Texts = orig.codigoOriginador;
             lblNombreOriginador.Text = orig.nombreOriginador;
             dateVencimiento.Value = inst.fechaVencimiento;
+
+            inst.fechaRegistroSpecified = true;
             dateRegistro.Value = inst.fechaRegistro;
+                        
             dateUltimaModificacion.Value = inst.fechaUltimaClasificacion;
             boxMoody.Texts = inst.moodys;
             dateMoody.Value = inst.fechaMoodys;

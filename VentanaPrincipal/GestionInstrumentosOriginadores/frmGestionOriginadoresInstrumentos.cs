@@ -127,18 +127,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         {
             if (comboTipo.SelectedItem.ToString() == "Originador")
             {
-                frmRegistroOriginador registrarOrig = new frmRegistroOriginador(originadores[dgvInstrumentosOriginadores.CurrentRow.Index]);
-                registrarOrig.ShowDialog();
+                if (dgvInstrumentosOriginadores.CurrentRow != null)
+                {
+                    frmRegistroOriginador registrarOrig = new frmRegistroOriginador(originadores[dgvInstrumentosOriginadores.CurrentRow.Index]);
+                    registrarOrig.ShowDialog();
+                }
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
-                frmRegistroInstrumento registrarinst = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index]);
-                registrarinst.ShowDialog();
+                if (dgvInstrumentosOriginadores.CurrentRow != null)
+                {
+                    frmRegistroInstrumento registrarinst = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index]);
+                    registrarinst.ShowDialog();
+                }
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
             {
-                frmRegistroEmisor registrarinst = new frmRegistroEmisor(emisores[dgvInstrumentosOriginadores.CurrentRow.Index]);
-                registrarinst.ShowDialog();
+                if (dgvInstrumentosOriginadores.CurrentRow.Index != null)
+                {
+                    frmRegistroEmisor registrarinst = new frmRegistroEmisor(emisores[dgvInstrumentosOriginadores.CurrentRow.Index]);
+                    registrarinst.ShowDialog();
+                }
             }
             
         }

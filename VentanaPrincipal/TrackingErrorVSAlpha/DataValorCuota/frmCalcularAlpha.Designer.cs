@@ -60,7 +60,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFondo_3.Size = new System.Drawing.Size(59, 15);
             this.lblFondo_3.TabIndex = 56;
             this.lblFondo_3.Text = "FONDO 3";
-            this.lblFondo_3.Visible = false;
             // 
             // lblFondo_2
             // 
@@ -72,7 +71,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFondo_2.Size = new System.Drawing.Size(59, 15);
             this.lblFondo_2.TabIndex = 55;
             this.lblFondo_2.Text = "FONDO 2";
-            this.lblFondo_2.Visible = false;
             // 
             // lblFondo_1
             // 
@@ -84,7 +82,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblFondo_1.Size = new System.Drawing.Size(59, 15);
             this.lblFondo_1.TabIndex = 54;
             this.lblFondo_1.Text = "FONDO 1";
-            this.lblFondo_1.Visible = false;
             // 
             // lblTE
             // 
@@ -168,7 +165,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ggTextBox3.Texts = "";
             this.ggTextBox3.UnderlinedStyle = false;
-            this.ggTextBox3.Visible = false;
             // 
             // ggTextBox1
             // 
@@ -211,7 +207,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ggTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ggTextBox2.Texts = "";
             this.ggTextBox2.UnderlinedStyle = false;
-            this.ggTextBox2.Visible = false;
             // 
             // btnExportar
             // 
@@ -284,14 +279,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.idDVC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.idDVC.HeaderText = "ID";
             this.idDVC.Name = "idDVC";
-            this.idDVC.Width = 43;
             // 
             // fecha
             // 
             this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.fecha.HeaderText = "Fecha";
             this.fecha.Name = "fecha";
-            this.fecha.Width = 62;
             // 
             // frmCalcularAlpha
             // 

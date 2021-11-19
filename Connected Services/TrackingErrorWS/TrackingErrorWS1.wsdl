@@ -149,6 +149,12 @@
   <message name="ListarTrackingErrorPorFechaPorFondoResponse">
     <part name="parameters" element="tns:ListarTrackingErrorPorFechaPorFondoResponse" />
   </message>
+  <message name="listarDataValorCuotaXFecha">
+    <part name="parameters" element="tns:listarDataValorCuotaXFecha" />
+  </message>
+  <message name="listarDataValorCuotaXFechaResponse">
+    <part name="parameters" element="tns:listarDataValorCuotaXFechaResponse" />
+  </message>
   <portType name="TrackingErrorWS">
     <operation name="insertarAssetError">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorRequest" message="tns:insertarAssetError" />
@@ -245,6 +251,10 @@
     <operation name="ListarTrackingErrorPorFechaPorFondo">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaPorFondoRequest" message="tns:ListarTrackingErrorPorFechaPorFondo" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaPorFondoResponse" message="tns:ListarTrackingErrorPorFechaPorFondoResponse" />
+    </operation>
+    <operation name="listarDataValorCuotaXFecha">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRequest" message="tns:listarDataValorCuotaXFecha" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaResponse" message="tns:listarDataValorCuotaXFechaResponse" />
     </operation>
   </portType>
   <binding name="TrackingErrorWSPortBinding" type="tns:TrackingErrorWS">
@@ -457,6 +467,15 @@
       </output>
     </operation>
     <operation name="ListarTrackingErrorPorFechaPorFondo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDataValorCuotaXFecha">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

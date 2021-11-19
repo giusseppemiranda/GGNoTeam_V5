@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://webservices.sist.afp.ggNoTeam/" targetNamespace="http://webservices.sist.afp.ggNoTeam/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="buscarOrigId" type="tns:buscarOrigId" />
+  <xs:element name="buscarOrigIdResponse" type="tns:buscarOrigIdResponse" />
   <xs:element name="buscarUnOriginadorPorCodigo" type="tns:buscarUnOriginadorPorCodigo" />
   <xs:element name="buscarUnOriginadorPorCodigoResponse" type="tns:buscarUnOriginadorPorCodigoResponse" />
   <xs:element name="eliminarInstrumento" type="tns:eliminarInstrumento" />
@@ -126,6 +128,16 @@
   <xs:complexType name="buscarUnOriginadorPorCodigoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:originador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarOrigId">
+    <xs:sequence>
+      <xs:element name="idOriginador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarOrigIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:originador" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarEmisores">

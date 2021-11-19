@@ -131,6 +131,15 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarInstrumentoXcodigoOriginadorResponse> listarInstrumentoXcodigoOriginadorAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarInstrumentoXcodigoOriginadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse buscarOrigId(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse> buscarOrigIdAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarEmisorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarEmisorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -1077,6 +1086,42 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarOrigId", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class buscarOrigIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOriginador;
+        
+        public buscarOrigIdRequest() {
+        }
+        
+        public buscarOrigIdRequest(int idOriginador) {
+            this.idOriginador = idOriginador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarOrigIdResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class buscarOrigIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador @return;
+        
+        public buscarOrigIdResponse() {
+        }
+        
+        public buscarOrigIdResponse(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEmisor", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
     public partial class modificarEmisorRequest {
         
@@ -1444,6 +1489,29 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarInstrumentoXcodigoOriginadorRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarInstrumentoXcodigoOriginadorRequest();
             inValue.codigoOriginador = codigoOriginador;
             return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).listarInstrumentoXcodigoOriginadorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.buscarOrigId(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdRequest request) {
+            return base.Channel.buscarOrigId(request);
+        }
+        
+        public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.originador buscarOrigId(int idOriginador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdRequest();
+            inValue.idOriginador = idOriginador;
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).buscarOrigId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse> GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS.buscarOrigIdAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdRequest request) {
+            return base.Channel.buscarOrigIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse> buscarOrigIdAsync(int idOriginador) {
+            GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdRequest();
+            inValue.idOriginador = idOriginador;
+            return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).buscarOrigIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -59,6 +59,12 @@
   <message name="listarInstrumentoXcodigoOriginadorResponse">
     <part name="parameters" element="tns:listarInstrumentoXcodigoOriginadorResponse" />
   </message>
+  <message name="buscarOrigId">
+    <part name="parameters" element="tns:buscarOrigId" />
+  </message>
+  <message name="buscarOrigIdResponse">
+    <part name="parameters" element="tns:buscarOrigIdResponse" />
+  </message>
   <message name="modificarEmisor">
     <part name="parameters" element="tns:modificarEmisor" />
   </message>
@@ -119,6 +125,10 @@
     <operation name="listarInstrumentoXcodigoOriginador">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarInstrumentoXcodigoOriginadorRequest" message="tns:listarInstrumentoXcodigoOriginador" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarInstrumentoXcodigoOriginadorResponse" message="tns:listarInstrumentoXcodigoOriginadorResponse" />
+    </operation>
+    <operation name="buscarOrigId">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdRequest" message="tns:buscarOrigId" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdResponse" message="tns:buscarOrigIdResponse" />
     </operation>
     <operation name="modificarEmisor">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarEmisorRequest" message="tns:modificarEmisor" />
@@ -212,6 +222,15 @@
       </output>
     </operation>
     <operation name="listarInstrumentoXcodigoOriginador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarOrigId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

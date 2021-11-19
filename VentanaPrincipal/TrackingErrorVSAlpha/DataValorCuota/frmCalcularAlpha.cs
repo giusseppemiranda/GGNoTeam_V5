@@ -69,7 +69,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                 nombreafp.Clear();
                 for (int i = 0; i < datos.Length; i++)
                 {
-                    nombreafp.Add(listaAfps[datos[i].fidAFP - 1].nombre);                    
+                    //nombreafp.Add(listaAfps[datos[i].fidAFP - 1].nombre);                    
                 }
 
                 dgvDataValorCuota.DataSource = datos;

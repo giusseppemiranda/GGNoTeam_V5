@@ -274,6 +274,19 @@ namespace GGNoTeam_V5.TrackingErrorWS {
             "orFondoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaP" +
             "orFondoResponse")]
         System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoResponse> ListarTrackingErrorPorFechaPorFondoAsync(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
+            "quest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse listarDataValorCuotaXFecha(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
+            "quest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse> listarDataValorCuotaXFechaAsync(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request);
     }
     
     /// <remarks/>
@@ -1730,6 +1743,42 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDataValorCuotaXFecha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarDataValorCuotaXFechaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public listarDataValorCuotaXFechaRequest() {
+        }
+        
+        public listarDataValorCuotaXFechaRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDataValorCuotaXFechaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarDataValorCuotaXFechaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return;
+        
+        public listarDataValorCuotaXFechaResponse() {
+        }
+        
+        public listarDataValorCuotaXFechaResponse(GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface TrackingErrorWSChannel : GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS, System.ServiceModel.IClientChannel {
     }
@@ -2327,6 +2376,29 @@ namespace GGNoTeam_V5.TrackingErrorWS {
             inValue.arg1 = arg1;
             inValue.arg2 = arg2;
             return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarTrackingErrorPorFechaPorFondoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarDataValorCuotaXFecha(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request) {
+            return base.Channel.listarDataValorCuotaXFecha(request);
+        }
+        
+        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] listarDataValorCuotaXFecha(string arg0) {
+            GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest();
+            inValue.arg0 = arg0;
+            GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarDataValorCuotaXFecha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarDataValorCuotaXFechaAsync(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request) {
+            return base.Channel.listarDataValorCuotaXFechaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse> listarDataValorCuotaXFechaAsync(string arg0) {
+            GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest();
+            inValue.arg0 = arg0;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarDataValorCuotaXFechaAsync(inValue);
         }
     }
 }

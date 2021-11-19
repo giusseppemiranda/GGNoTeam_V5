@@ -471,6 +471,9 @@
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarUnOriginadorPorCodigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -577,8 +580,8 @@
     <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.modificarEjecucionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\MonitorOrdenWS.wsdl" />
-    <None Include="Connected Services\MonitoreoOrdenesWS\MonitorOrdenWS.xsd">
+    <None Include="Connected Services\MonitoreoOrdenesWS\MonitorOrdenWS1.wsdl" />
+    <None Include="Connected Services\MonitoreoOrdenesWS\MonitorOrdenWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse.datasource">
