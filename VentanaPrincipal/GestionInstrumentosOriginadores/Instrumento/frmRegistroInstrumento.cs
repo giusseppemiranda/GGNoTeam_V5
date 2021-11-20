@@ -24,6 +24,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             cargarCombos();
             instAux = new GestionInstrumentosOriginadoresWS.instrumento();
             lblRegistroInstrumento.Text = "Modificar instrumento";
+            instAux.idInstrumento = inst.idInstrumento;
             boxcodSBS.Texts = inst.codigoSBS;
             boxcodISIN.Texts = inst.codigoISIN;
             boxScore.Texts = inst.score;
@@ -114,8 +115,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            
-
             instAux.codigoSBS = boxcodSBS.Texts;
             instAux.codigoISIN = boxcodISIN.Texts;
             instAux.score = boxScore.Texts;
@@ -133,12 +132,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
 
             if (lblRegistroInstrumento.Text == "Modificar instrumento")
             {
-                _daoInst.modificarInstrumento(instAux,instAux.fidOriginador);
+                _daoInst.modificarInstrumento(instAux);
                 MessageBox.Show("Modificación exitosa!");
             }
             else
             {
-                _daoInst.insertarInstrumento(instAux, instAux.fidOriginador);
+                _daoInst.insertarInstrumento(instAux);
                 MessageBox.Show("Registro exitoso!");
             }
 

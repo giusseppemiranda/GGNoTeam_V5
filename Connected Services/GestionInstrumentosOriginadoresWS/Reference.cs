@@ -875,16 +875,11 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int codigoOriginador;
-        
         public insertarInstrumentoRequest() {
         }
         
-        public insertarInstrumentoRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+        public insertarInstrumentoRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento) {
             this.instrumento = instrumento;
-            this.codigoOriginador = codigoOriginador;
         }
     }
     
@@ -952,16 +947,11 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int codigoOriginador;
-        
         public modificarInstrumentoRequest() {
         }
         
-        public modificarInstrumentoRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+        public modificarInstrumentoRequest(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento) {
             this.instrumento = instrumento;
-            this.codigoOriginador = codigoOriginador;
         }
     }
     
@@ -1356,10 +1346,9 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
             return base.Channel.insertarInstrumento(request);
         }
         
-        public int insertarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+        public int insertarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento) {
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest();
             inValue.instrumento = instrumento;
-            inValue.codigoOriginador = codigoOriginador;
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarInstrumento(inValue);
             return retVal.@return;
         }
@@ -1369,10 +1358,9 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
             return base.Channel.insertarInstrumentoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse> insertarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoResponse> insertarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento) {
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.insertarInstrumentoRequest();
             inValue.instrumento = instrumento;
-            inValue.codigoOriginador = codigoOriginador;
             return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).insertarInstrumentoAsync(inValue);
         }
         
@@ -1404,10 +1392,9 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
             return base.Channel.modificarInstrumento(request);
         }
         
-        public int modificarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+        public int modificarInstrumento(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento) {
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest();
             inValue.instrumento = instrumento;
-            inValue.codigoOriginador = codigoOriginador;
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse retVal = ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarInstrumento(inValue);
             return retVal.@return;
         }
@@ -1417,10 +1404,9 @@ namespace GGNoTeam_V5.GestionInstrumentosOriginadoresWS {
             return base.Channel.modificarInstrumentoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse> modificarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento, int codigoOriginador) {
+        public System.Threading.Tasks.Task<GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoResponse> modificarInstrumentoAsync(GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento instrumento) {
             GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest inValue = new GGNoTeam_V5.GestionInstrumentosOriginadoresWS.modificarInstrumentoRequest();
             inValue.instrumento = instrumento;
-            inValue.codigoOriginador = codigoOriginador;
             return ((GGNoTeam_V5.GestionInstrumentosOriginadoresWS.GestionInstOrigWS)(this)).modificarInstrumentoAsync(inValue);
         }
         

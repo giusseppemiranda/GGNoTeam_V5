@@ -149,7 +149,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                     registrarinst.ShowDialog();
                 }
             }
-            
+            //this.btnBuscar_Click(sender, e);
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -170,6 +171,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 frmRegistroEmisor registrarEmi = new frmRegistroEmisor();
                 registrarEmi.ShowDialog();
             }
+            //this.btnBuscar_Click(sender,e);
         }
     }
 }

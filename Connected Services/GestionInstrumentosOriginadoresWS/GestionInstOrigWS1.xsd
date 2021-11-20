@@ -69,7 +69,6 @@
   <xs:complexType name="modificarInstrumento">
     <xs:sequence>
       <xs:element minOccurs="0" name="instrumento" type="tns:instrumento" />
-      <xs:element name="codigoOriginador" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="instrumento">
@@ -191,7 +190,6 @@
   <xs:complexType name="insertarInstrumento">
     <xs:sequence>
       <xs:element minOccurs="0" name="instrumento" type="tns:instrumento" />
-      <xs:element name="codigoOriginador" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarInstrumentoResponse">
