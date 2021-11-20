@@ -149,7 +149,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                     registrarinst.ShowDialog();
                 }
             }
-            //this.btnBuscar_Click(sender, e);
+            this.btnBuscar_Click(sender, e);
 
         }
 
@@ -171,7 +171,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 frmRegistroEmisor registrarEmi = new frmRegistroEmisor();
                 registrarEmi.ShowDialog();
             }
-            //this.btnBuscar_Click(sender,e);
+            this.btnBuscar_Click(sender,e);
         }
     }
 }

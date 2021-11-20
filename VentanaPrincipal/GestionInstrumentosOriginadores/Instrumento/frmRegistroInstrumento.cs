@@ -129,6 +129,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             instAux.fechaUltimaClasificacion = dateUltimaModificacion.Value;
             instAux.moodys = boxMoody.Texts;
             instAux.fechaMoodys = dateMoody.Value;
+            instAux.activo = 1;
 
             if (lblRegistroInstrumento.Text == "Modificar instrumento")
             {
