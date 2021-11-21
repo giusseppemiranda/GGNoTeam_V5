@@ -498,6 +498,9 @@
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.instrumento.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarEmisoresPorNombreCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.listarEmisoresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

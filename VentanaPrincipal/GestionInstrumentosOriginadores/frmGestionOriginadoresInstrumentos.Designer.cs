@@ -62,7 +62,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.dgvInstrumentosOriginadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInstrumentosOriginadores.ColumnHeadersHeight = 25;
             this.dgvInstrumentosOriginadores.EnableHeadersVisualStyles = false;
-            this.dgvInstrumentosOriginadores.Location = new System.Drawing.Point(15, 61);
+            this.dgvInstrumentosOriginadores.Location = new System.Drawing.Point(17, 61);
             this.dgvInstrumentosOriginadores.MultiSelect = false;
             this.dgvInstrumentosOriginadores.Name = "dgvInstrumentosOriginadores";
             this.dgvInstrumentosOriginadores.ReadOnly = true;

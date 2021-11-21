@@ -85,7 +85,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
             {
-                emisores = _daoInstOrig.listarEmisores(); //implementar buscar por codigo
+                emisores = _daoInstOrig.listarEmisoresPorNombreCodigo(txtboxbusqueda.Texts); //implementar buscar por codigo
                 configurarColumnas();
                 dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList()); ;
             }
@@ -98,17 +98,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             switch (comboTipo.SelectedItem.ToString())
             {
                 case "Originador":
-                    {
-
-                        GestionInstrumentosOriginadoresWS.originador orig = (GestionInstrumentosOriginadoresWS.originador)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
-                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = orig.idOriginador;
-                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = orig.nombreOriginador;
-                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = orig.sectorGics;
-                        break;
-                    }
+                    
+                        try {
+                            GestionInstrumentosOriginadoresWS.originador orig = (GestionInstrumentosOriginadoresWS.originador)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
+                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = orig.idOriginador;
+                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = orig.nombreOriginador;
+                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = orig.sectorGics;
+                        }
+                        catch (Exception ex) { }
+                    break;
 
                 case "Instrumento":
-                    {
+                    
+                        try { 
                         GestionInstrumentosOriginadoresWS.instrumento inst = (GestionInstrumentosOriginadoresWS.instrumento)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = inst.idInstrumento;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = inst.codigoSBS;
@@ -127,13 +129,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[14].Value = inst.moodys;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[15].Value = inst.fechaMoodys;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[16].Value = inst.fechaUltimaClasificacion;
-                        if(dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[17].Value == null)
-                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[17].Value = obtenerNombreOrig(inst.fidOriginador);
-                        break;
-                    }
+                        }
+                        catch (Exception ex) { }
+                    break;
 
                 case "Emisor":
-                    _daoInstOrig.listarEmisores();
+                    try
+                    {
+                        GestionInstrumentosOriginadoresWS.emisor emi = (GestionInstrumentosOriginadoresWS.emisor)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = emi.idEmisor;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = emi.codigoEmisor;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = emi.nombre;
+                    }
+                        catch(Exception ex) { }
                     break;
             }
 
@@ -213,6 +221,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 dgvInstrumentosOriginadores.Columns.Add("idOriginador", "ID");
                 dgvInstrumentosOriginadores.Columns.Add("nombreOriginador", "Nombre");
                 dgvInstrumentosOriginadores.Columns.Add("sectorGics", "Sector");
+                dgvInstrumentosOriginadores.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvInstrumentosOriginadores.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvInstrumentosOriginadores.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
@@ -233,11 +244,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 dgvInstrumentosOriginadores.Columns.Add("moodys", "Moodys");
                 dgvInstrumentosOriginadores.Columns.Add("fechaMoodys", "Fecha Moodys");
                 dgvInstrumentosOriginadores.Columns.Add("fechaUltimaClasificacion", "Fecha Ultima Clasificacion");
-                dgvInstrumentosOriginadores.Columns.Add("originador", "Originador");
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
             {
-                _daoInstOrig.listarEmisores();
+                dgvInstrumentosOriginadores.Columns.Add("idEmisor", "ID");
+                dgvInstrumentosOriginadores.Columns.Add("codigoEmisor", "Código Emisor");
+                dgvInstrumentosOriginadores.Columns.Add("nombreEmisor", "Nombre Emisor");
+                dgvInstrumentosOriginadores.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvInstrumentosOriginadores.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvInstrumentosOriginadores.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
 
