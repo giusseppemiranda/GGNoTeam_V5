@@ -102,8 +102,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                         try {
                             GestionInstrumentosOriginadoresWS.originador orig = (GestionInstrumentosOriginadoresWS.originador)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
                             dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = orig.idOriginador;
-                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = orig.nombreOriginador;
-                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = orig.sectorGics;
+                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = orig.codigoOriginador;
+                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = orig.nombreOriginador;
+                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[3].Value = orig.sectorGics;
                         }
                         catch (Exception ex) { }
                     break;
@@ -219,11 +220,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             if (comboTipo.SelectedItem.ToString() == "Originador")
             {
                 dgvInstrumentosOriginadores.Columns.Add("idOriginador", "ID");
+                dgvInstrumentosOriginadores.Columns.Add("codigoOriginador", "Código originador");
                 dgvInstrumentosOriginadores.Columns.Add("nombreOriginador", "Nombre");
                 dgvInstrumentosOriginadores.Columns.Add("sectorGics", "Sector");
                 dgvInstrumentosOriginadores.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgvInstrumentosOriginadores.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgvInstrumentosOriginadores.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvInstrumentosOriginadores.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
