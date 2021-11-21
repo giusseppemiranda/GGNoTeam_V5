@@ -111,11 +111,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         {
             instAux.codigoSBS = boxcodSBS.Texts;
             instAux.codigoISIN = boxcodISIN.Texts;
+            instAux.codigoID059 = boxID059.Texts;
             instAux.score = boxScore.Texts;
             instAux.clasificacionErr = (GestionInstrumentosOriginadoresWS.eClasificacionErr)comboBoxAssetClass.SelectedIndex;
             instAux.ratingUnificadoLocal = boxClasificacionLocal.Texts;
             instAux.factorRiesgo = boxFactorRiesgo.Texts;
             instAux.limiteAplicable = (GestionInstrumentosOriginadoresWS.eLimiteAplicable)comboBoxLimiteAplicable.SelectedIndex;
+            instAux. = (GestionInstrumentosOriginadoresWS.eLimiteAplicable)comboBoxLimiteAplicable.SelectedIndex;
             instAux.ratingEncaje = boxRatingEncaje.Texts;
             instAux.fidOriginador = orig.idOriginador;
             instAux.fechaVencimiento = dateVencimiento.Value;

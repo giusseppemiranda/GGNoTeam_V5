@@ -25,11 +25,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         public frmGestionOriginadoresInstrumentos(frmPrincipal ventana)
         {
             InitializeComponent();
+            btnAsociado.Visible = false;
+            btnAsociado.Enabled = false;
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             dgvInstrumentosOriginadores.AutoGenerateColumns = false;
             _daoInstOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
             cargarComboBoxEleccion();
+
             cambiarTema();
         }
 
@@ -73,7 +76,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 originadores = _daoInstOrig.buscarUnOriginadorPorCodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
                 if (originadores != null)
-                    dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.originador> (originadores.ToList());
+                {
+                    dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.originador>(originadores.ToList());
+                    btnAsociado.Visible = true;
+                    btnAsociado.Enabled = true;
+                    btnAsociado.Text = "Ver Emisor Asociado";
+                }
                 else MessageBox.Show("No se encontraron resultados");
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
@@ -81,7 +89,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 instrumentos=_daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
                 if (instrumentos != null)
+                {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.instrumento>(instrumentos.ToList());
+                    btnAsociado.Visible = true;
+                    btnAsociado.Enabled = true;
+                    btnAsociado.Text = "Ver Originador Asociado";
+                }
                 else MessageBox.Show("No se encontraron resultados");
 
             }
@@ -90,7 +103,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 emisores = _daoInstOrig.listarEmisoresPorNombreCodigo(txtboxbusqueda.Texts); 
                 configurarColumnas();
                 if (emisores != null)
+                {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList());
+                    btnAsociado.Visible = false;
+                    btnAsociado.Enabled = false;
+                    btnAsociado.Text = "";
+                }
                 else MessageBox.Show("No se encontraron resultados");
             }
 
@@ -301,5 +319,32 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 origAux =_daoInstOrig.buscarOrigId(idOrig);
                 return origAux.nombreOriginador;
             }
+
+        private void btnAsociado_Click(object sender, EventArgs e)
+        {
+            if (dgvInstrumentosOriginadores.SelectedRows.Count > 0)
+            {
+                if (comboTipo.SelectedItem.ToString() == "Originador")
+                {
+                    frmRegistroOriginador registrarOrig = new frmRegistroOriginador();
+                    registrarOrig.ShowDialog();
+                }
+                else if (comboTipo.SelectedItem.ToString() == "Instrumento")
+                {
+                    frmRegistroInstrumento registrarInst = new frmRegistroInstrumento();
+                    registrarInst.ShowDialog();
+                }
+                else if (comboTipo.SelectedItem.ToString() == "Emisor")
+                {
+                    frmRegistroEmisor registrarEmi = new frmRegistroEmisor();
+                    registrarEmi.ShowDialog();
+                }
+                this.btnBuscar_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ninguna fila");
+            }
+        }
     }
 }
