@@ -29,8 +29,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblOriginadores = new System.Windows.Forms.Label();
             this.dgvOriginadores = new System.Windows.Forms.DataGridView();
             this.codigoOriginador = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,14 +61,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.dgvOriginadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvOriginadores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvOriginadores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOriginadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOriginadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOriginadores.ColumnHeadersHeight = 25;
             this.dgvOriginadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoOriginador,
@@ -79,9 +79,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.dgvOriginadores.Name = "dgvOriginadores";
             this.dgvOriginadores.ReadOnly = true;
             this.dgvOriginadores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvOriginadores.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvOriginadores.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOriginadores.RowTemplate.Height = 25;
             this.dgvOriginadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOriginadores.Size = new System.Drawing.Size(345, 223);
@@ -152,6 +152,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.Controls.Add(this.dgvOriginadores);
             this.Controls.Add(this.lblOriginadores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(17, 61);
             this.Name = "frmBusquedaOrig";
             this.Text = "frmBusquedaOrig";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOriginadores)).EndInit();

@@ -63,11 +63,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.boxMoody = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxScore = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxCodigoOriginador = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.comboBoxAssetClass = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
+            this.comboBoxLimiteAplicable = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.boxID059 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxcodISIN = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxcodSBS = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.comboBoxAssetClass = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
-            this.comboBoxLimiteAplicable = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.SuspendLayout();
             // 
             // lblCodSBS
@@ -563,6 +563,54 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.boxCodigoOriginador.UnderlinedStyle = true;
             this.boxCodigoOriginador._TextChanged += new System.EventHandler(this.boxCodigoOriginador__TextChanged);
             // 
+            // comboBoxAssetClass
+            // 
+            this.comboBoxAssetClass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxAssetClass.AutoCompleteCustomSource.AddRange(new string[] {
+            "Administrador",
+            "Usuario",
+            "No usuario"});
+            this.comboBoxAssetClass.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxAssetClass.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxAssetClass.BorderSize = 2;
+            this.comboBoxAssetClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBoxAssetClass.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxAssetClass.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxAssetClass.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxAssetClass.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBoxAssetClass.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBoxAssetClass.Location = new System.Drawing.Point(179, 367);
+            this.comboBoxAssetClass.MinimumSize = new System.Drawing.Size(171, 26);
+            this.comboBoxAssetClass.Name = "comboBoxAssetClass";
+            this.comboBoxAssetClass.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBoxAssetClass.Size = new System.Drawing.Size(214, 30);
+            this.comboBoxAssetClass.TabIndex = 94;
+            this.comboBoxAssetClass.Texts = "";
+            // 
+            // comboBoxLimiteAplicable
+            // 
+            this.comboBoxLimiteAplicable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBoxLimiteAplicable.AutoCompleteCustomSource.AddRange(new string[] {
+            "Administrador",
+            "Usuario",
+            "No usuario"});
+            this.comboBoxLimiteAplicable.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxLimiteAplicable.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxLimiteAplicable.BorderSize = 2;
+            this.comboBoxLimiteAplicable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBoxLimiteAplicable.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxLimiteAplicable.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBoxLimiteAplicable.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboBoxLimiteAplicable.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBoxLimiteAplicable.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBoxLimiteAplicable.Location = new System.Drawing.Point(179, 327);
+            this.comboBoxLimiteAplicable.MinimumSize = new System.Drawing.Size(171, 26);
+            this.comboBoxLimiteAplicable.Name = "comboBoxLimiteAplicable";
+            this.comboBoxLimiteAplicable.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBoxLimiteAplicable.Size = new System.Drawing.Size(214, 30);
+            this.comboBoxLimiteAplicable.TabIndex = 89;
+            this.comboBoxLimiteAplicable.Texts = "";
+            // 
             // boxID059
             // 
             this.boxID059.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -635,54 +683,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.boxcodSBS.Texts = "";
             this.boxcodSBS.UnderlinedStyle = true;
             // 
-            // comboBoxAssetClass
-            // 
-            this.comboBoxAssetClass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBoxAssetClass.AutoCompleteCustomSource.AddRange(new string[] {
-            "Administrador",
-            "Usuario",
-            "No usuario"});
-            this.comboBoxAssetClass.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxAssetClass.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboBoxAssetClass.BorderSize = 2;
-            this.comboBoxAssetClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxAssetClass.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxAssetClass.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxAssetClass.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboBoxAssetClass.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBoxAssetClass.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxAssetClass.Location = new System.Drawing.Point(179, 367);
-            this.comboBoxAssetClass.MinimumSize = new System.Drawing.Size(171, 26);
-            this.comboBoxAssetClass.Name = "comboBoxAssetClass";
-            this.comboBoxAssetClass.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBoxAssetClass.Size = new System.Drawing.Size(214, 30);
-            this.comboBoxAssetClass.TabIndex = 94;
-            this.comboBoxAssetClass.Texts = "";
-            // 
-            // comboBoxLimiteAplicable
-            // 
-            this.comboBoxLimiteAplicable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBoxLimiteAplicable.AutoCompleteCustomSource.AddRange(new string[] {
-            "Administrador",
-            "Usuario",
-            "No usuario"});
-            this.comboBoxLimiteAplicable.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxLimiteAplicable.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboBoxLimiteAplicable.BorderSize = 2;
-            this.comboBoxLimiteAplicable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxLimiteAplicable.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxLimiteAplicable.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxLimiteAplicable.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboBoxLimiteAplicable.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBoxLimiteAplicable.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxLimiteAplicable.Location = new System.Drawing.Point(179, 327);
-            this.comboBoxLimiteAplicable.MinimumSize = new System.Drawing.Size(171, 26);
-            this.comboBoxLimiteAplicable.Name = "comboBoxLimiteAplicable";
-            this.comboBoxLimiteAplicable.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBoxLimiteAplicable.Size = new System.Drawing.Size(214, 30);
-            this.comboBoxLimiteAplicable.TabIndex = 89;
-            this.comboBoxLimiteAplicable.Texts = "";
-            // 
             // frmRegistroInstrumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -728,6 +728,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.Controls.Add(this.boxcodSBS);
             this.Controls.Add(this.lblCodSBS);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(450, 1200);
             this.Name = "frmRegistroInstrumento";
             this.Text = "frmRegistroInstrumento";
             this.ResumeLayout(false);

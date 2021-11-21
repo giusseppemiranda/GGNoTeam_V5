@@ -15,19 +15,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
     {
         private frmRegistroOriginador origAux;
         private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoOrig;
-        private GestionInstrumentosOriginadoresWS.emisor[] emisores;
+        private GestionInstrumentosOriginadoresWS.emisor[] emisoresAux;
         public frmBusquedaEmisor()
         {
             InitializeComponent();
         }
 
-        public frmBusquedaEmisor(frmRegistroOriginador orig, String codigo)
+        public frmBusquedaEmisor(frmRegistroOriginador frmorig, GestionInstrumentosOriginadoresWS.emisor[] emisores)
         {
             InitializeComponent();
-            emisores = _daoOrig.listarEmisores(); //REEMPLZAR POR LISTAR POR NOMBRECODIGo
             dgvEmisores.AutoGenerateColumns = false;
-            dgvEmisores.DataSource = emisores;
-            origAux = orig;
+            dgvEmisores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList());
+            emisoresAux = emisores;
+            origAux = frmorig;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -37,7 +37,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            origAux.cargarEmisor(emisores[dgvEmisores.CurrentRow.Index]);
+            origAux.cargarEmisor(emisoresAux[dgvEmisores.CurrentRow.Index]);
+            MessageBox.Show("Emisor asignado correctamente!");
+            this.Dispose();
         }
 
         private void dgvEmisores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

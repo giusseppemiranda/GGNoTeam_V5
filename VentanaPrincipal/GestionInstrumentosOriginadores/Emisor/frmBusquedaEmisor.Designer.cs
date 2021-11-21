@@ -74,7 +74,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.codigoOriginador,
             this.nombreOriginador});
             this.dgvEmisores.EnableHeadersVisualStyles = false;
-            this.dgvEmisores.Location = new System.Drawing.Point(28, 57);
+            this.dgvEmisores.Location = new System.Drawing.Point(17, 61);
             this.dgvEmisores.MultiSelect = false;
             this.dgvEmisores.Name = "dgvEmisores";
             this.dgvEmisores.ReadOnly = true;

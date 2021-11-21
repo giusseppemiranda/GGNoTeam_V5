@@ -30,6 +30,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig)
         {
             InitializeComponent();
+            oriAux = new GestionInstrumentosOriginadoresWS.originador();
             lblRegistroOriginador.Text = "Modificar originador";
             boxCodigoOriginador.Texts = orig.codigoOriginador;
             boxNombreOriginador.Texts = orig.nombreOriginador;
@@ -49,18 +50,18 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         }
         private void btnBuscarEmisor_Click(object sender, EventArgs e)
         {
-            emisores = _daoOrig.listarEmisoresPorNombreCodigo(boxCodigoOriginador.Texts);
+            emisores = _daoOrig.listarEmisoresPorNombreCodigo(boxEmisor.Texts);
             if (emisores != null)
             {
-                frmBusquedaEmisor buscaEmi = new frmBusquedaEmisor(this, boxEmisor.Texts);
+                frmBusquedaEmisor buscaEmi = new frmBusquedaEmisor(this,emisores);
                 buscaEmi.ShowDialog();
-                boxCodigoOriginador.Texts = emi.codigoEmisor;
+                boxEmisor.Texts = emi.codigoEmisor;
                 codigoAnt = emi.codigoEmisor;
                 lblNombreEmisor.Text = emi.nombre;
             }
             else
             {
-                MessageBox.Show("No se encontró ningun originador");
+                MessageBox.Show("No se encontró ningun emisor");
                 boxEmisor.Texts = codigoAnt;
             }
         }

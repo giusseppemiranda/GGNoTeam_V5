@@ -72,22 +72,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             if (comboTipo.SelectedItem.ToString() == "Originador") {
                 originadores = _daoInstOrig.buscarUnOriginadorPorCodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
-                dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.originador> (originadores.ToList());
+                if (originadores != null)
+                    dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.originador> (originadores.ToList());
+                else MessageBox.Show("No se encontraron resultados");
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
                 instrumentos=_daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
-                dgvInstrumentosOriginadores.SuspendLayout();
-                dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.instrumento>(instrumentos.ToList());
-                dgvInstrumentosOriginadores.ResumeLayout();
+                if (instrumentos != null)
+                    dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.instrumento>(instrumentos.ToList());
+                else MessageBox.Show("No se encontraron resultados");
 
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
             {
-                emisores = _daoInstOrig.listarEmisoresPorNombreCodigo(txtboxbusqueda.Texts); //implementar buscar por codigo
+                emisores = _daoInstOrig.listarEmisoresPorNombreCodigo(txtboxbusqueda.Texts); 
                 configurarColumnas();
-                dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList()); ;
+                if (emisores != null)
+                    dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList());
+                else MessageBox.Show("No se encontraron resultados");
             }
 
 
@@ -150,69 +154,102 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (comboTipo.SelectedItem.ToString() == "Originador")
+            if (dgvInstrumentosOriginadores.SelectedRows.Count > 0)
             {
-                _daoInstOrig.buscarUnOriginadorPorCodigo(originadores[dgvInstrumentosOriginadores.CurrentRow.Index].codigoOriginador);
+                if (comboTipo.SelectedItem.ToString() == "Originador")
+                {
+                    _daoInstOrig.buscarUnOriginadorPorCodigo(originadores[dgvInstrumentosOriginadores.CurrentRow.Index].codigoOriginador);
+                }
+                else if (comboTipo.SelectedItem.ToString() == "Instrumento")
+                {
+                    _daoInstOrig.eliminarInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index].idInstrumento);
+                }
+                else if (comboTipo.SelectedItem.ToString() == "Emisor")
+                {
+                    _daoInstOrig.listarEmisores();
+                }
             }
-            else if (comboTipo.SelectedItem.ToString() == "Instrumento")
+            else
             {
-                _daoInstOrig.eliminarInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index].idInstrumento);
-            }
-            else if (comboTipo.SelectedItem.ToString() == "Emisor")
-            {
-                _daoInstOrig.listarEmisores();
+                MessageBox.Show("No se ha seleccionado ninguna fila");
             }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (comboTipo.SelectedItem.ToString() == "Originador")
-            {
-                if (dgvInstrumentosOriginadores.CurrentRow != null)
+            if (dgvInstrumentosOriginadores.SelectedRows.Count > 0) {
+                switch (comboTipo.SelectedItem.ToString())
                 {
-                    frmRegistroOriginador registrarOrig = new frmRegistroOriginador(originadores[dgvInstrumentosOriginadores.CurrentRow.Index]);
-                    registrarOrig.ShowDialog();
+                    case "Originador":
+                        {
+                            if (dgvInstrumentosOriginadores.CurrentRow != null)
+                            {
+                                frmRegistroOriginador registrarOrig = new frmRegistroOriginador(originadores[dgvInstrumentosOriginadores.CurrentRow.Index]);
+                                registrarOrig.ShowDialog();
+                            }
+
+                            break;
+                        }
+
+                    case "Instrumento":
+                        {
+                            if (dgvInstrumentosOriginadores.CurrentRow != null)
+                            {
+                                frmRegistroInstrumento registrarinst = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index]);
+                                registrarinst.ShowDialog();
+                            }
+
+                            break;
+                        }
+
+                    case "Emisor":
+                        {
+                            if (dgvInstrumentosOriginadores.CurrentRow.Index != null)
+                            {
+                                frmRegistroEmisor registrarinst = new frmRegistroEmisor(emisores[dgvInstrumentosOriginadores.CurrentRow.Index]);
+                                registrarinst.ShowDialog();
+                            }
+
+                            break;
+                        }
                 }
+                this.btnBuscar_Click(sender, e);
             }
-            else if (comboTipo.SelectedItem.ToString() == "Instrumento")
+            else
             {
-                if (dgvInstrumentosOriginadores.CurrentRow != null)
-                {
-                    frmRegistroInstrumento registrarinst = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index]);
-                    registrarinst.ShowDialog();
-                }
+                MessageBox.Show("No se ha seleccionado ninguna fila");
             }
-            else if (comboTipo.SelectedItem.ToString() == "Emisor")
-            {
-                if (dgvInstrumentosOriginadores.CurrentRow.Index != null)
-                {
-                    frmRegistroEmisor registrarinst = new frmRegistroEmisor(emisores[dgvInstrumentosOriginadores.CurrentRow.Index]);
-                    registrarinst.ShowDialog();
-                }
-            }
-            this.btnBuscar_Click(sender, e);
+            
 
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (dgvInstrumentosOriginadores.SelectedRows.Count > 0)
+            {
+                if (comboTipo.SelectedItem.ToString() == "Originador")
+                {
+                    frmRegistroOriginador registrarOrig = new frmRegistroOriginador();
+                    registrarOrig.ShowDialog();
+                }
+                else if (comboTipo.SelectedItem.ToString() == "Instrumento")
+                {
+                    frmRegistroInstrumento registrarInst = new frmRegistroInstrumento();
+                    registrarInst.ShowDialog();
+                }
+                else if (comboTipo.SelectedItem.ToString() == "Emisor")
+                {
+                    frmRegistroEmisor registrarEmi = new frmRegistroEmisor();
+                    registrarEmi.ShowDialog();
+                }
+                this.btnBuscar_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ninguna fila");
+            }
 
-            if (comboTipo.SelectedItem.ToString() == "Originador")
-            {
-                frmRegistroOriginador registrarOrig = new frmRegistroOriginador();
-                registrarOrig.ShowDialog();
-            }
-            else if (comboTipo.SelectedItem.ToString() == "Instrumento")
-            {
-                frmRegistroInstrumento registrarInst = new frmRegistroInstrumento();
-                registrarInst.ShowDialog();
-            }
-            else if (comboTipo.SelectedItem.ToString() == "Emisor")
-            {
-                frmRegistroEmisor registrarEmi = new frmRegistroEmisor();
-                registrarEmi.ShowDialog();
-            }
-            this.btnBuscar_Click(sender,e);
+
         }
         private void configurarColumnas()
         {

@@ -284,6 +284,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.Controls.Add(this.boxCodigoOriginador);
             this.Controls.Add(this.lblCodigoOriginador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(17, 61);
             this.Name = "frmRegistroOriginador";
             this.Text = "frmRegistroOriginador";
             this.ResumeLayout(false);
