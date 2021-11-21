@@ -191,9 +191,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblNombreEmisor.ForeColor = System.Drawing.Color.Black;
             this.lblNombreEmisor.Location = new System.Drawing.Point(232, 321);
             this.lblNombreEmisor.Name = "lblNombreEmisor";
-            this.lblNombreEmisor.Size = new System.Drawing.Size(113, 15);
+            this.lblNombreEmisor.Size = new System.Drawing.Size(0, 15);
             this.lblNombreEmisor.TabIndex = 98;
-            this.lblNombreEmisor.Text = "Nombre originador";
             // 
             // btnSiguiente
             // 
@@ -264,7 +263,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.btnBuscarEmisor.TabIndex = 128;
             this.btnBuscarEmisor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarEmisor.UseVisualStyleBackColor = false;
-            this.btnBuscarEmisor.Click += new System.EventHandler(this.btnBuscarOriginador_Click);
+            this.btnBuscarEmisor.Click += new System.EventHandler(this.btnBuscarEmisor_Click);
             // 
             // frmRegistroOriginador
             // 

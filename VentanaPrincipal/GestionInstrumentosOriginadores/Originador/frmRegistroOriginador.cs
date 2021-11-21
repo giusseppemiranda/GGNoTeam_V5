@@ -16,13 +16,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         private GestionInstrumentosOriginadoresWS.emisor emi;
         private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoOrig;
         private GestionInstrumentosOriginadoresWS.originador oriAux;
+        private GestionInstrumentosOriginadoresWS.emisor[] emisores;
+        private string codigoAnt;
         public frmRegistroOriginador()
         {
             InitializeComponent();
             lblRegistroOriginador.Text = "Registro originador";
             _daoOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
             oriAux = new GestionInstrumentosOriginadoresWS.originador();
-
+            codigoAnt = "";
 
         }
         public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig)
@@ -34,7 +36,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             boxSector.Texts = orig.sectorGics;
             _daoOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
             //emi=_daoOrig.listarEmisores(orig.fidEmisor); //REEMPLAZAR LISTAR EMISOR X CODIGO
-            boxEmisor.Texts = emi.codigoEmisor; 
+            boxEmisor.Texts = emi.codigoEmisor;
+            codigoAnt = boxEmisor.Texts;
             lblNombreEmisor.Text = emi.nombre;
         }
 
@@ -44,10 +47,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             emi.codigoEmisor = emiAux.codigoEmisor;
             emi.nombre = emiAux.nombre;
         }
-        private void btnBuscarOriginador_Click(object sender, EventArgs e)
+        private void btnBuscarEmisor_Click(object sender, EventArgs e)
         {
-            frmBusquedaEmisor buscaEmi = new frmBusquedaEmisor(this, boxEmisor.Texts);
-            buscaEmi.ShowDialog();
+            //emisores = _daoOrig.buscarEmisorPorCodigo(boxCodigoOriginador.Texts); IMPLEMENTAR BUSCAR EMISOR POR CODIGO
+            if (emisores != null)
+            {
+                frmBusquedaEmisor buscaEmi = new frmBusquedaEmisor(this, boxEmisor.Texts);
+                buscaEmi.ShowDialog();
+                boxCodigoOriginador.Texts = emi.codigoEmisor;
+                codigoAnt = emi.codigoEmisor;
+                lblNombreEmisor.Text = emi.nombre;
+            }
+            else
+            {
+                MessageBox.Show("No se encontró ningun originador");
+                boxEmisor.Texts = codigoAnt;
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

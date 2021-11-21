@@ -39,23 +39,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.comboTipo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.btnBuscar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.txtboxbusqueda = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.idInstrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoSBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoISIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID059 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clasificacionErr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.limiteAplicable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratingEncajeSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratingEncaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratingUnificado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratingUnificadoLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.factorRiesgo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.score = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moodys = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaMoodys = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaUltimaClasificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInstrumentosOriginadores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,24 +61,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvInstrumentosOriginadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInstrumentosOriginadores.ColumnHeadersHeight = 25;
-            this.dgvInstrumentosOriginadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idInstrumento,
-            this.codigoSBS,
-            this.codigoISIN,
-            this.ID059,
-            this.clasificacionErr,
-            this.fechaRegistro,
-            this.fechaVencimiento,
-            this.limiteAplicable,
-            this.ratingEncajeSistema,
-            this.ratingEncaje,
-            this.ratingUnificado,
-            this.ratingUnificadoLocal,
-            this.factorRiesgo,
-            this.score,
-            this.moodys,
-            this.fechaMoodys,
-            this.fechaUltimaClasificacion});
             this.dgvInstrumentosOriginadores.EnableHeadersVisualStyles = false;
             this.dgvInstrumentosOriginadores.Location = new System.Drawing.Point(15, 61);
             this.dgvInstrumentosOriginadores.MultiSelect = false;
@@ -249,125 +214,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.txtboxbusqueda.Texts = "";
             this.txtboxbusqueda.UnderlinedStyle = true;
             // 
-            // idInstrumento
-            // 
-            this.idInstrumento.HeaderText = "ID";
-            this.idInstrumento.Name = "idInstrumento";
-            this.idInstrumento.ReadOnly = true;
-            this.idInstrumento.Width = 43;
-            // 
-            // codigoSBS
-            // 
-            this.codigoSBS.HeaderText = "Código SBS";
-            this.codigoSBS.Name = "codigoSBS";
-            this.codigoSBS.ReadOnly = true;
-            this.codigoSBS.Width = 93;
-            // 
-            // codigoISIN
-            // 
-            this.codigoISIN.HeaderText = "Código ISIN";
-            this.codigoISIN.Name = "codigoISIN";
-            this.codigoISIN.ReadOnly = true;
-            this.codigoISIN.Width = 95;
-            // 
-            // ID059
-            // 
-            this.ID059.HeaderText = "ID059";
-            this.ID059.Name = "ID059";
-            this.ID059.ReadOnly = true;
-            this.ID059.Width = 64;
-            // 
-            // clasificacionErr
-            // 
-            this.clasificacionErr.HeaderText = "Clasificación Err";
-            this.clasificacionErr.Name = "clasificacionErr";
-            this.clasificacionErr.ReadOnly = true;
-            this.clasificacionErr.Width = 116;
-            // 
-            // fechaRegistro
-            // 
-            this.fechaRegistro.HeaderText = "Fecha registro";
-            this.fechaRegistro.Name = "fechaRegistro";
-            this.fechaRegistro.ReadOnly = true;
-            this.fechaRegistro.Width = 109;
-            // 
-            // fechaVencimiento
-            // 
-            this.fechaVencimiento.HeaderText = "Fecha de vencimiento";
-            this.fechaVencimiento.Name = "fechaVencimiento";
-            this.fechaVencimiento.ReadOnly = true;
-            this.fechaVencimiento.Width = 152;
-            // 
-            // limiteAplicable
-            // 
-            this.limiteAplicable.HeaderText = "Limite aplicable";
-            this.limiteAplicable.Name = "limiteAplicable";
-            this.limiteAplicable.ReadOnly = true;
-            this.limiteAplicable.Width = 116;
-            // 
-            // ratingEncajeSistema
-            // 
-            this.ratingEncajeSistema.HeaderText = "Rating encaje sistema";
-            this.ratingEncajeSistema.Name = "ratingEncajeSistema";
-            this.ratingEncajeSistema.ReadOnly = true;
-            this.ratingEncajeSistema.Width = 150;
-            // 
-            // ratingEncaje
-            // 
-            this.ratingEncaje.HeaderText = "Rating encaje";
-            this.ratingEncaje.Name = "ratingEncaje";
-            this.ratingEncaje.ReadOnly = true;
-            this.ratingEncaje.Width = 105;
-            // 
-            // ratingUnificado
-            // 
-            this.ratingUnificado.HeaderText = "Rating unificado";
-            this.ratingUnificado.Name = "ratingUnificado";
-            this.ratingUnificado.ReadOnly = true;
-            this.ratingUnificado.Width = 120;
-            // 
-            // ratingUnificadoLocal
-            // 
-            this.ratingUnificadoLocal.HeaderText = "Rating unificado local";
-            this.ratingUnificadoLocal.Name = "ratingUnificadoLocal";
-            this.ratingUnificadoLocal.ReadOnly = true;
-            this.ratingUnificadoLocal.Width = 148;
-            // 
-            // factorRiesgo
-            // 
-            this.factorRiesgo.HeaderText = "Factor riesgo";
-            this.factorRiesgo.Name = "factorRiesgo";
-            this.factorRiesgo.ReadOnly = true;
-            this.factorRiesgo.Width = 102;
-            // 
-            // score
-            // 
-            this.score.HeaderText = "Score";
-            this.score.Name = "score";
-            this.score.ReadOnly = true;
-            this.score.Width = 62;
-            // 
-            // moodys
-            // 
-            this.moodys.HeaderText = "Moodys";
-            this.moodys.Name = "moodys";
-            this.moodys.ReadOnly = true;
-            this.moodys.Width = 73;
-            // 
-            // fechaMoodys
-            // 
-            this.fechaMoodys.HeaderText = "Fecha moodys";
-            this.fechaMoodys.Name = "fechaMoodys";
-            this.fechaMoodys.ReadOnly = true;
-            this.fechaMoodys.Width = 108;
-            // 
-            // fechaUltimaClasificacion
-            // 
-            this.fechaUltimaClasificacion.HeaderText = "Fecha última clasificación";
-            this.fechaUltimaClasificacion.Name = "fechaUltimaClasificacion";
-            this.fechaUltimaClasificacion.ReadOnly = true;
-            this.fechaUltimaClasificacion.Width = 169;
-            // 
             // frmGestionOriginadoresInstrumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,22 +246,5 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         private FontAwesome.Sharp.IconButton btnActualizar;
         private FontAwesome.Sharp.IconButton btnAgregar;
         private Recursos.UserControls.GGComboBox comboTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idInstrumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoSBS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoISIN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID059;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clasificacionErr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaVencimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn limiteAplicable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ratingEncajeSistema;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ratingEncaje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ratingUnificado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ratingUnificadoLocal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn factorRiesgo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn score;
-        private System.Windows.Forms.DataGridViewTextBoxColumn moodys;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaMoodys;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaUltimaClasificacion;
     }
 }

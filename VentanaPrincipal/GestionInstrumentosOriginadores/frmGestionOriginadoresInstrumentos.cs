@@ -21,6 +21,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         private GestionInstrumentosOriginadoresWS.instrumento[] instrumentos;
         private GestionInstrumentosOriginadoresWS.originador[] originadores;
         private GestionInstrumentosOriginadoresWS.emisor[] emisores;
+        private GestionInstrumentosOriginadoresWS.originador origAux;
         public frmGestionOriginadoresInstrumentos(frmPrincipal ventana)
         {
             InitializeComponent();
@@ -67,19 +68,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            dgvInstrumentosOriginadores.DataSource = null;
             if (comboTipo.SelectedItem.ToString() == "Originador") {
                 originadores = _daoInstOrig.buscarUnOriginadorPorCodigo(txtboxbusqueda.Texts);
-                dgvInstrumentosOriginadores.DataSource = originadores;
+                configurarColumnas();
+                dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.originador> (originadores.ToList());
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
                 instrumentos=_daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
-                dgvInstrumentosOriginadores.DataSource = instrumentos;
+                configurarColumnas();
+                dgvInstrumentosOriginadores.SuspendLayout();
+                dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.instrumento>(instrumentos.ToList());
+                dgvInstrumentosOriginadores.ResumeLayout();
+
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
             {
                 emisores = _daoInstOrig.listarEmisores(); //implementar buscar por codigo
-                dgvInstrumentosOriginadores.DataSource = emisores;
+                configurarColumnas();
+                dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList()); ;
             }
 
 
@@ -87,24 +95,48 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void dgvInstrumentosOriginadores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            GestionInstrumentosOriginadoresWS.instrumento inst = (GestionInstrumentosOriginadoresWS.instrumento)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = inst.idInstrumento;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = inst.codigoSBS;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = inst.codigoISIN;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[3].Value = inst.codigoID059;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[4].Value = inst.clasificacionErr;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[5].Value = inst.fechaRegistro;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[6].Value = inst.fechaVencimiento;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[7].Value = inst.limiteAplicable;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[8].Value = inst.ratingEncajeSistema;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[9].Value = inst.ratingEncaje;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[10].Value = inst.ratingUnificado;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[11].Value = inst.ratingUnificadoLocal;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[12].Value = inst.factorRiesgo;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[13].Value = inst.score;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[14].Value = inst.moodys;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[15].Value = inst.fechaMoodys;
-            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[16].Value = inst.fechaUltimaClasificacion;
+            switch (comboTipo.SelectedItem.ToString())
+            {
+                case "Originador":
+                    {
+
+                        GestionInstrumentosOriginadoresWS.originador orig = (GestionInstrumentosOriginadoresWS.originador)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = orig.idOriginador;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = orig.nombreOriginador;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = orig.sectorGics;
+                        break;
+                    }
+
+                case "Instrumento":
+                    {
+                        GestionInstrumentosOriginadoresWS.instrumento inst = (GestionInstrumentosOriginadoresWS.instrumento)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = inst.idInstrumento;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = inst.codigoSBS;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = inst.codigoISIN;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[3].Value = inst.codigoID059;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[4].Value = inst.clasificacionErr;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[5].Value = inst.fechaRegistro;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[6].Value = inst.fechaVencimiento;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[7].Value = inst.limiteAplicable;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[8].Value = inst.ratingEncajeSistema;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[9].Value = inst.ratingEncaje;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[10].Value = inst.ratingUnificado;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[11].Value = inst.ratingUnificadoLocal;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[12].Value = inst.factorRiesgo;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[13].Value = inst.score;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[14].Value = inst.moodys;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[15].Value = inst.fechaMoodys;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[16].Value = inst.fechaUltimaClasificacion;
+                        if(dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[17].Value == null)
+                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[17].Value = obtenerNombreOrig(inst.fidOriginador);
+                        break;
+                    }
+
+                case "Emisor":
+                    _daoInstOrig.listarEmisores();
+                    break;
+            }
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -173,5 +205,46 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             }
             this.btnBuscar_Click(sender,e);
         }
+        private void configurarColumnas()
+        {
+            dgvInstrumentosOriginadores.Columns.Clear();
+            if (comboTipo.SelectedItem.ToString() == "Originador")
+            {
+                dgvInstrumentosOriginadores.Columns.Add("idOriginador", "ID");
+                dgvInstrumentosOriginadores.Columns.Add("nombreOriginador", "Nombre");
+                dgvInstrumentosOriginadores.Columns.Add("sectorGics", "Sector");
+            }
+            else if (comboTipo.SelectedItem.ToString() == "Instrumento")
+            {
+                dgvInstrumentosOriginadores.Columns.Add("idInstrumento", "ID");
+                dgvInstrumentosOriginadores.Columns.Add("codigoSBS", "Código SBS");
+                dgvInstrumentosOriginadores.Columns.Add("codigoISIN", "Código ISIN");
+                dgvInstrumentosOriginadores.Columns.Add("codigoID059", "ID059");
+                dgvInstrumentosOriginadores.Columns.Add("clasificacionErr", "Clasifiación local");
+                dgvInstrumentosOriginadores.Columns.Add("fechaRegistro", "Fecha de Registro");
+                dgvInstrumentosOriginadores.Columns.Add("fechaVencimiento", "Fecha de Vencimiento");
+                dgvInstrumentosOriginadores.Columns.Add("limiteAplicable", "Limite Aplicable");
+                dgvInstrumentosOriginadores.Columns.Add("ratingEncajeSistema", "Rating Encaje Sistema");
+                dgvInstrumentosOriginadores.Columns.Add("ratingEncaje", "Rating Encaje");
+                dgvInstrumentosOriginadores.Columns.Add("ratingUnificado", "Rating unificado");
+                dgvInstrumentosOriginadores.Columns.Add("ratingUnificadoLocal", "Rating unificado local");
+                dgvInstrumentosOriginadores.Columns.Add("factorRiesgo", "Factor riesgo");
+                dgvInstrumentosOriginadores.Columns.Add("score", "Score");
+                dgvInstrumentosOriginadores.Columns.Add("moodys", "Moodys");
+                dgvInstrumentosOriginadores.Columns.Add("fechaMoodys", "Fecha Moodys");
+                dgvInstrumentosOriginadores.Columns.Add("fechaUltimaClasificacion", "Fecha Ultima Clasificacion");
+                dgvInstrumentosOriginadores.Columns.Add("originador", "Originador");
+            }
+            else if (comboTipo.SelectedItem.ToString() == "Emisor")
+            {
+                _daoInstOrig.listarEmisores();
+            }
+        }
+
+            private string obtenerNombreOrig(int idOrig)
+            {
+                origAux =_daoInstOrig.buscarOrigId(idOrig);
+                return origAux.nombreOriginador;
+            }
     }
 }

@@ -17,7 +17,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         private GestionInstrumentosOriginadoresWS.originador[] originadores;
         private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoInst;
         private GestionInstrumentosOriginadoresWS.instrumento instAux;
-        private String codigoAnt;
+        private string codigoAnt;
         public frmRegistroInstrumento(GestionInstrumentosOriginadoresWS.instrumento inst)
         {
             InitializeComponent();
@@ -59,7 +59,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             cargarCombos();
             instAux = new GestionInstrumentosOriginadoresWS.instrumento();
             orig = new GestionInstrumentosOriginadoresWS.originador();
-            orig.idOriginador = 0;
             lblRegistroInstrumento.Text = "Registro instrumento";
             codigoAnt = "";
         }
@@ -69,10 +68,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             orig.idOriginador = origAux.idOriginador;
             orig.codigoOriginador = origAux.codigoOriginador;
             orig.nombreOriginador = origAux.nombreOriginador;
-        }
-        public void resetearOriginador()
-        {
-            orig.idOriginador = 0;
         }
         private void ggTextBox9__TextChanged(object sender, EventArgs e)
         {
@@ -99,7 +94,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             {
                 MessageBox.Show("No se encontró ningun originador");
                 boxCodigoOriginador.Texts = codigoAnt;
-                resetearOriginador();
             }
         }
 
