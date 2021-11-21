@@ -117,8 +117,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             instAux.ratingUnificadoLocal = boxClasificacionLocal.Texts;
             instAux.factorRiesgo = boxFactorRiesgo.Texts;
             instAux.limiteAplicable = (GestionInstrumentosOriginadoresWS.eLimiteAplicable)comboBoxLimiteAplicable.SelectedIndex;
-            instAux. = (GestionInstrumentosOriginadoresWS.eLimiteAplicable)comboBoxLimiteAplicable.SelectedIndex;
             instAux.ratingEncaje = boxRatingEncaje.Texts;
+            instAux.ratingEncajeSistema = boxRatingEncajeSistema.Texts;
             instAux.fidOriginador = orig.idOriginador;
             instAux.fechaVencimiento = dateVencimiento.Value;
             instAux.fechaRegistro = dateRegistro.Value;

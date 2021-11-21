@@ -34,7 +34,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblID059 = new System.Windows.Forms.Label();
             this.lblFechaRegistro = new System.Windows.Forms.Label();
             this.lblFechaVencimiento = new System.Windows.Forms.Label();
-            this.lblClasificacionLocal = new System.Windows.Forms.Label();
             this.dateRegistro = new System.Windows.Forms.DateTimePicker();
             this.dateVencimiento = new System.Windows.Forms.DateTimePicker();
             this.lblLimiteAplicable = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblRegistroInstrumento = new System.Windows.Forms.Label();
             this.btnBuscarOriginador = new FontAwesome.Sharp.IconButton();
             this.boxFactorRiesgo = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.boxClasificacionLocal = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxRatingUnificado = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxRatingEncajeSistema = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxRatingEncaje = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
@@ -68,6 +66,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.boxID059 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxcodISIN = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxcodSBS = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.lblClasificacionLocal = new System.Windows.Forms.Label();
+            this.boxClasificacionLocal = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.SuspendLayout();
             // 
             // lblCodSBS
@@ -124,17 +124,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.lblFechaVencimiento.Size = new System.Drawing.Size(115, 15);
             this.lblFechaVencimiento.TabIndex = 38;
             this.lblFechaVencimiento.Text = "Fecha vencimiento:";
-            // 
-            // lblClasificacionLocal
-            // 
-            this.lblClasificacionLocal.AutoSize = true;
-            this.lblClasificacionLocal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblClasificacionLocal.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblClasificacionLocal.Location = new System.Drawing.Point(43, 296);
-            this.lblClasificacionLocal.Name = "lblClasificacionLocal";
-            this.lblClasificacionLocal.Size = new System.Drawing.Size(105, 15);
-            this.lblClasificacionLocal.TabIndex = 40;
-            this.lblClasificacionLocal.Text = "Clasificacion local:";
             // 
             // dateRegistro
             // 
@@ -351,30 +340,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.boxFactorRiesgo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxFactorRiesgo.Texts = "";
             this.boxFactorRiesgo.UnderlinedStyle = true;
-            // 
-            // boxClasificacionLocal
-            // 
-            this.boxClasificacionLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxClasificacionLocal.BackColor = System.Drawing.SystemColors.Window;
-            this.boxClasificacionLocal.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxClasificacionLocal.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxClasificacionLocal.BorderSize = 2;
-            this.boxClasificacionLocal.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxClasificacionLocal.ForeColor = System.Drawing.Color.DimGray;
-            this.boxClasificacionLocal.IsFocused = false;
-            this.boxClasificacionLocal.Location = new System.Drawing.Point(179, 288);
-            this.boxClasificacionLocal.MaxLength = 32767;
-            this.boxClasificacionLocal.Multiline = false;
-            this.boxClasificacionLocal.Name = "boxClasificacionLocal";
-            this.boxClasificacionLocal.Padding = new System.Windows.Forms.Padding(6);
-            this.boxClasificacionLocal.PasswordChar = false;
-            this.boxClasificacionLocal.Size = new System.Drawing.Size(214, 30);
-            this.boxClasificacionLocal.TabIndex = 131;
-            this.boxClasificacionLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxClasificacionLocal.Texts = "";
-            this.boxClasificacionLocal.UnderlinedStyle = true;
             // 
             // boxRatingUnificado
             // 
@@ -683,6 +648,41 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.boxcodSBS.Texts = "";
             this.boxcodSBS.UnderlinedStyle = true;
             // 
+            // lblClasificacionLocal
+            // 
+            this.lblClasificacionLocal.AutoSize = true;
+            this.lblClasificacionLocal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblClasificacionLocal.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblClasificacionLocal.Location = new System.Drawing.Point(43, 296);
+            this.lblClasificacionLocal.Name = "lblClasificacionLocal";
+            this.lblClasificacionLocal.Size = new System.Drawing.Size(105, 15);
+            this.lblClasificacionLocal.TabIndex = 40;
+            this.lblClasificacionLocal.Text = "Clasificacion local:";
+            // 
+            // boxClasificacionLocal
+            // 
+            this.boxClasificacionLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.boxClasificacionLocal.BackColor = System.Drawing.SystemColors.Window;
+            this.boxClasificacionLocal.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxClasificacionLocal.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxClasificacionLocal.BorderSize = 2;
+            this.boxClasificacionLocal.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxClasificacionLocal.ForeColor = System.Drawing.Color.DimGray;
+            this.boxClasificacionLocal.IsFocused = false;
+            this.boxClasificacionLocal.Location = new System.Drawing.Point(179, 288);
+            this.boxClasificacionLocal.MaxLength = 32767;
+            this.boxClasificacionLocal.Multiline = false;
+            this.boxClasificacionLocal.Name = "boxClasificacionLocal";
+            this.boxClasificacionLocal.Padding = new System.Windows.Forms.Padding(6);
+            this.boxClasificacionLocal.PasswordChar = false;
+            this.boxClasificacionLocal.Size = new System.Drawing.Size(214, 30);
+            this.boxClasificacionLocal.TabIndex = 131;
+            this.boxClasificacionLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxClasificacionLocal.Texts = "";
+            this.boxClasificacionLocal.UnderlinedStyle = true;
+            // 
             // frmRegistroInstrumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -746,7 +746,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         private System.Windows.Forms.Label lblID059;
         private System.Windows.Forms.Label lblFechaRegistro;
         private System.Windows.Forms.Label lblFechaVencimiento;
-        private System.Windows.Forms.Label lblClasificacionLocal;
         private System.Windows.Forms.DateTimePicker dateRegistro;
         private System.Windows.Forms.DateTimePicker dateVencimiento;
         private System.Windows.Forms.Label lblLimiteAplicable;
@@ -775,7 +774,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         private Recursos.UserControls.GGTextBox boxRatingEncaje;
         private Recursos.UserControls.GGTextBox boxRatingEncajeSistema;
         private Recursos.UserControls.GGTextBox boxRatingUnificado;
-        private Recursos.UserControls.GGTextBox boxClasificacionLocal;
         private Recursos.UserControls.GGTextBox boxFactorRiesgo;
+        private System.Windows.Forms.Label lblClasificacionLocal;
+        private Recursos.UserControls.GGTextBox boxClasificacionLocal;
     }
 }

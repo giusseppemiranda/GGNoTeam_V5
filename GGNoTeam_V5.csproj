@@ -208,6 +208,12 @@
     <Compile Include="VentanaPrincipal\GestionInstrumentosOriginadores\Emisor\frmBusquedaEmisor.Designer.cs">
       <DependentUpon>frmBusquedaEmisor.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaPrincipal\GestionInstrumentosOriginadores\Emisor\frmEmisorAsociado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\GestionInstrumentosOriginadores\Emisor\frmEmisorAsociado.Designer.cs">
+      <DependentUpon>frmEmisorAsociado.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipal\GestionInstrumentosOriginadores\Emisor\frmRegistroEmisor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -394,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\GestionInstrumentosOriginadores\Emisor\frmBusquedaEmisor.resx">
       <DependentUpon>frmBusquedaEmisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\GestionInstrumentosOriginadores\Emisor\frmEmisorAsociado.resx">
+      <DependentUpon>frmEmisorAsociado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\GestionInstrumentosOriginadores\Emisor\frmRegistroEmisor.resx">
       <DependentUpon>frmRegistroEmisor.cs</DependentUpon>
