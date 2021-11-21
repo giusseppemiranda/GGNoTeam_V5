@@ -5,35 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServices/GestionInstOrigWS?xsd=1" namespace="http://webservices.sist.afp.ggNoTeam/" />
     </xsd:schema>
   </types>
-  <message name="modificarEmisor">
-    <part name="parameters" element="tns:modificarEmisor" />
+  <message name="listarTodosLosOriginadores">
+    <part name="parameters" element="tns:listarTodosLosOriginadores" />
   </message>
-  <message name="modificarEmisorResponse">
-    <part name="parameters" element="tns:modificarEmisorResponse" />
-  </message>
-  <message name="buscarOrigId">
-    <part name="parameters" element="tns:buscarOrigId" />
-  </message>
-  <message name="buscarOrigIdResponse">
-    <part name="parameters" element="tns:buscarOrigIdResponse" />
-  </message>
-  <message name="listarEmisores">
-    <part name="parameters" element="tns:listarEmisores" />
-  </message>
-  <message name="listarEmisoresResponse">
-    <part name="parameters" element="tns:listarEmisoresResponse" />
-  </message>
-  <message name="insertarOriginador">
-    <part name="parameters" element="tns:insertarOriginador" />
-  </message>
-  <message name="insertarOriginadorResponse">
-    <part name="parameters" element="tns:insertarOriginadorResponse" />
-  </message>
-  <message name="insertarEmisor">
-    <part name="parameters" element="tns:insertarEmisor" />
-  </message>
-  <message name="insertarEmisorResponse">
-    <part name="parameters" element="tns:insertarEmisorResponse" />
+  <message name="listarTodosLosOriginadoresResponse">
+    <part name="parameters" element="tns:listarTodosLosOriginadoresResponse" />
   </message>
   <message name="listarInstrumentoXcodigoOriginador">
     <part name="parameters" element="tns:listarInstrumentoXcodigoOriginador" />
@@ -41,41 +17,11 @@
   <message name="listarInstrumentoXcodigoOriginadorResponse">
     <part name="parameters" element="tns:listarInstrumentoXcodigoOriginadorResponse" />
   </message>
-  <message name="modificarOriginador">
-    <part name="parameters" element="tns:modificarOriginador" />
-  </message>
-  <message name="modificarOriginadorResponse">
-    <part name="parameters" element="tns:modificarOriginadorResponse" />
-  </message>
-  <message name="eliminarOriginador">
-    <part name="parameters" element="tns:eliminarOriginador" />
-  </message>
-  <message name="eliminarOriginadorResponse">
-    <part name="parameters" element="tns:eliminarOriginadorResponse" />
-  </message>
   <message name="buscarUnOriginadorPorCodigo">
     <part name="parameters" element="tns:buscarUnOriginadorPorCodigo" />
   </message>
   <message name="buscarUnOriginadorPorCodigoResponse">
     <part name="parameters" element="tns:buscarUnOriginadorPorCodigoResponse" />
-  </message>
-  <message name="modificarInstrumento">
-    <part name="parameters" element="tns:modificarInstrumento" />
-  </message>
-  <message name="modificarInstrumentoResponse">
-    <part name="parameters" element="tns:modificarInstrumentoResponse" />
-  </message>
-  <message name="listarTodosLosOriginadores">
-    <part name="parameters" element="tns:listarTodosLosOriginadores" />
-  </message>
-  <message name="listarTodosLosOriginadoresResponse">
-    <part name="parameters" element="tns:listarTodosLosOriginadoresResponse" />
-  </message>
-  <message name="listarInstrumentoXcodigo">
-    <part name="parameters" element="tns:listarInstrumentoXcodigo" />
-  </message>
-  <message name="listarInstrumentoXcodigoResponse">
-    <part name="parameters" element="tns:listarInstrumentoXcodigoResponse" />
   </message>
   <message name="eliminarInstrumento">
     <part name="parameters" element="tns:eliminarInstrumento" />
@@ -95,54 +41,78 @@
   <message name="listarEmisoresPorNombreCodigoResponse">
     <part name="parameters" element="tns:listarEmisoresPorNombreCodigoResponse" />
   </message>
+  <message name="listarInstrumentoXcodigo">
+    <part name="parameters" element="tns:listarInstrumentoXcodigo" />
+  </message>
+  <message name="listarInstrumentoXcodigoResponse">
+    <part name="parameters" element="tns:listarInstrumentoXcodigoResponse" />
+  </message>
+  <message name="modificarInstrumento">
+    <part name="parameters" element="tns:modificarInstrumento" />
+  </message>
+  <message name="modificarInstrumentoResponse">
+    <part name="parameters" element="tns:modificarInstrumentoResponse" />
+  </message>
+  <message name="eliminarOriginador">
+    <part name="parameters" element="tns:eliminarOriginador" />
+  </message>
+  <message name="eliminarOriginadorResponse">
+    <part name="parameters" element="tns:eliminarOriginadorResponse" />
+  </message>
+  <message name="modificarOriginador">
+    <part name="parameters" element="tns:modificarOriginador" />
+  </message>
+  <message name="modificarOriginadorResponse">
+    <part name="parameters" element="tns:modificarOriginadorResponse" />
+  </message>
+  <message name="buscarOrigId">
+    <part name="parameters" element="tns:buscarOrigId" />
+  </message>
+  <message name="buscarOrigIdResponse">
+    <part name="parameters" element="tns:buscarOrigIdResponse" />
+  </message>
+  <message name="insertarOriginador">
+    <part name="parameters" element="tns:insertarOriginador" />
+  </message>
+  <message name="insertarOriginadorResponse">
+    <part name="parameters" element="tns:insertarOriginadorResponse" />
+  </message>
+  <message name="insertarEmisor">
+    <part name="parameters" element="tns:insertarEmisor" />
+  </message>
+  <message name="insertarEmisorResponse">
+    <part name="parameters" element="tns:insertarEmisorResponse" />
+  </message>
+  <message name="modificarEmisor">
+    <part name="parameters" element="tns:modificarEmisor" />
+  </message>
+  <message name="modificarEmisorResponse">
+    <part name="parameters" element="tns:modificarEmisorResponse" />
+  </message>
+  <message name="listarEmisores">
+    <part name="parameters" element="tns:listarEmisores" />
+  </message>
+  <message name="listarEmisoresResponse">
+    <part name="parameters" element="tns:listarEmisoresResponse" />
+  </message>
+  <message name="BuscarUnEmisorPorID">
+    <part name="parameters" element="tns:BuscarUnEmisorPorID" />
+  </message>
+  <message name="BuscarUnEmisorPorIDResponse">
+    <part name="parameters" element="tns:BuscarUnEmisorPorIDResponse" />
+  </message>
   <portType name="GestionInstOrigWS">
-    <operation name="modificarEmisor">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarEmisorRequest" message="tns:modificarEmisor" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarEmisorResponse" message="tns:modificarEmisorResponse" />
-    </operation>
-    <operation name="buscarOrigId">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdRequest" message="tns:buscarOrigId" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdResponse" message="tns:buscarOrigIdResponse" />
-    </operation>
-    <operation name="listarEmisores">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarEmisoresRequest" message="tns:listarEmisores" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarEmisoresResponse" message="tns:listarEmisoresResponse" />
-    </operation>
-    <operation name="insertarOriginador">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarOriginadorRequest" message="tns:insertarOriginador" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarOriginadorResponse" message="tns:insertarOriginadorResponse" />
-    </operation>
-    <operation name="insertarEmisor">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorRequest" message="tns:insertarEmisor" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorResponse" message="tns:insertarEmisorResponse" />
+    <operation name="listarTodosLosOriginadores">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarTodosLosOriginadoresRequest" message="tns:listarTodosLosOriginadores" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarTodosLosOriginadoresResponse" message="tns:listarTodosLosOriginadoresResponse" />
     </operation>
     <operation name="listarInstrumentoXcodigoOriginador">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarInstrumentoXcodigoOriginadorRequest" message="tns:listarInstrumentoXcodigoOriginador" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarInstrumentoXcodigoOriginadorResponse" message="tns:listarInstrumentoXcodigoOriginadorResponse" />
     </operation>
-    <operation name="modificarOriginador">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRequest" message="tns:modificarOriginador" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorResponse" message="tns:modificarOriginadorResponse" />
-    </operation>
-    <operation name="eliminarOriginador">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorRequest" message="tns:eliminarOriginador" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorResponse" message="tns:eliminarOriginadorResponse" />
-    </operation>
     <operation name="buscarUnOriginadorPorCodigo">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarUnOriginadorPorCodigoRequest" message="tns:buscarUnOriginadorPorCodigo" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarUnOriginadorPorCodigoResponse" message="tns:buscarUnOriginadorPorCodigoResponse" />
-    </operation>
-    <operation name="modificarInstrumento">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoRequest" message="tns:modificarInstrumento" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoResponse" message="tns:modificarInstrumentoResponse" />
-    </operation>
-    <operation name="listarTodosLosOriginadores">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarTodosLosOriginadoresRequest" message="tns:listarTodosLosOriginadores" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarTodosLosOriginadoresResponse" message="tns:listarTodosLosOriginadoresResponse" />
-    </operation>
-    <operation name="listarInstrumentoXcodigo">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarInstrumentoXcodigoRequest" message="tns:listarInstrumentoXcodigo" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarInstrumentoXcodigoResponse" message="tns:listarInstrumentoXcodigoResponse" />
     </operation>
     <operation name="eliminarInstrumento">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarInstrumentoRequest" message="tns:eliminarInstrumento" />
@@ -156,46 +126,50 @@
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarEmisoresPorNombreCodigoRequest" message="tns:listarEmisoresPorNombreCodigo" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarEmisoresPorNombreCodigoResponse" message="tns:listarEmisoresPorNombreCodigoResponse" />
     </operation>
+    <operation name="listarInstrumentoXcodigo">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarInstrumentoXcodigoRequest" message="tns:listarInstrumentoXcodigo" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarInstrumentoXcodigoResponse" message="tns:listarInstrumentoXcodigoResponse" />
+    </operation>
+    <operation name="modificarInstrumento">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoRequest" message="tns:modificarInstrumento" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarInstrumentoResponse" message="tns:modificarInstrumentoResponse" />
+    </operation>
+    <operation name="eliminarOriginador">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorRequest" message="tns:eliminarOriginador" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/eliminarOriginadorResponse" message="tns:eliminarOriginadorResponse" />
+    </operation>
+    <operation name="modificarOriginador">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorRequest" message="tns:modificarOriginador" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarOriginadorResponse" message="tns:modificarOriginadorResponse" />
+    </operation>
+    <operation name="buscarOrigId">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdRequest" message="tns:buscarOrigId" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/buscarOrigIdResponse" message="tns:buscarOrigIdResponse" />
+    </operation>
+    <operation name="insertarOriginador">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarOriginadorRequest" message="tns:insertarOriginador" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarOriginadorResponse" message="tns:insertarOriginadorResponse" />
+    </operation>
+    <operation name="insertarEmisor">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorRequest" message="tns:insertarEmisor" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/insertarEmisorResponse" message="tns:insertarEmisorResponse" />
+    </operation>
+    <operation name="modificarEmisor">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarEmisorRequest" message="tns:modificarEmisor" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/modificarEmisorResponse" message="tns:modificarEmisorResponse" />
+    </operation>
+    <operation name="listarEmisores">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarEmisoresRequest" message="tns:listarEmisores" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/listarEmisoresResponse" message="tns:listarEmisoresResponse" />
+    </operation>
+    <operation name="BuscarUnEmisorPorID">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/BuscarUnEmisorPorIDRequest" message="tns:BuscarUnEmisorPorID" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/GestionInstOrigWS/BuscarUnEmisorPorIDResponse" message="tns:BuscarUnEmisorPorIDResponse" />
+    </operation>
   </portType>
   <binding name="GestionInstOrigWSPortBinding" type="tns:GestionInstOrigWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarEmisor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="buscarOrigId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarEmisores">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarOriginador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarEmisor">
+    <operation name="listarTodosLosOriginadores">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -213,52 +187,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarOriginador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarOriginador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="buscarUnOriginadorPorCodigo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarInstrumento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTodosLosOriginadores">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarInstrumentoXcodigo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -286,6 +215,96 @@
       </output>
     </operation>
     <operation name="listarEmisoresPorNombreCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarInstrumentoXcodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarInstrumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarOriginador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarOriginador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarOrigId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarOriginador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEmisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEmisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEmisores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BuscarUnEmisorPorID">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

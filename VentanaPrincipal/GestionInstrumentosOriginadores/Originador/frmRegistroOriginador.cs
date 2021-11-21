@@ -35,7 +35,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             boxNombreOriginador.Texts = orig.nombreOriginador;
             boxSector.Texts = orig.sectorGics;
             _daoOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
-            //emi=_daoOrig.listarEmisores(orig.fidEmisor); //REEMPLAZAR LISTAR EMISOR X CODIGO
+            emi=_daoOrig.BuscarUnEmisorPorID(orig.fidEmisor); 
             boxEmisor.Texts = emi.codigoEmisor;
             codigoAnt = boxEmisor.Texts;
             lblNombreEmisor.Text = emi.nombre;
@@ -49,7 +49,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         }
         private void btnBuscarEmisor_Click(object sender, EventArgs e)
         {
-            //emisores = _daoOrig.buscarEmisorPorCodigo(boxCodigoOriginador.Texts); IMPLEMENTAR BUSCAR EMISOR POR CODIGO
+            emisores = _daoOrig.listarEmisoresPorNombreCodigo(boxCodigoOriginador.Texts);
             if (emisores != null)
             {
                 frmBusquedaEmisor buscaEmi = new frmBusquedaEmisor(this, boxEmisor.Texts);
