@@ -201,5 +201,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
                 return;
             }
         }
+
+        private void frmEditarRegistroDataValorCuota_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
