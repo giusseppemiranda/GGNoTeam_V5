@@ -38,10 +38,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnActualizarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnAgregarUsuario = new FontAwesome.Sharp.IconButton();
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
-            this.txtBoxBusqueda = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.btnBuscar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
-            this.btnVerTareas = new FontAwesome.Sharp.IconButton();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +46,11 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Validacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVerTareas = new FontAwesome.Sharp.IconButton();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
+            this.txtBoxBusqueda = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,7 +221,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Validacion,
             this.Rol});
             this.dgvPersonas.EnableHeadersVisualStyles = false;
-            this.dgvPersonas.Location = new System.Drawing.Point(35, 56);
+            this.dgvPersonas.Location = new System.Drawing.Point(12, 56);
             this.dgvPersonas.MultiSelect = false;
             this.dgvPersonas.Name = "dgvPersonas";
             this.dgvPersonas.ReadOnly = true;
@@ -232,84 +233,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonas.Size = new System.Drawing.Size(912, 407);
             this.dgvPersonas.TabIndex = 24;
-            // 
-            // txtBoxBusqueda
-            // 
-            this.txtBoxBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxBusqueda.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBoxBusqueda.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtBoxBusqueda.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.txtBoxBusqueda.BorderSize = 2;
-            this.txtBoxBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.txtBoxBusqueda.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBoxBusqueda.IsFocused = false;
-            this.txtBoxBusqueda.Location = new System.Drawing.Point(514, 20);
-            this.txtBoxBusqueda.MaxLength = 32767;
-            this.txtBoxBusqueda.Multiline = false;
-            this.txtBoxBusqueda.Name = "txtBoxBusqueda";
-            this.txtBoxBusqueda.Padding = new System.Windows.Forms.Padding(6);
-            this.txtBoxBusqueda.PasswordChar = false;
-            this.txtBoxBusqueda.Size = new System.Drawing.Size(347, 30);
-            this.txtBoxBusqueda.TabIndex = 25;
-            this.txtBoxBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBoxBusqueda.Texts = "";
-            this.txtBoxBusqueda.UnderlinedStyle = true;
-            this.txtBoxBusqueda.Enter += new System.EventHandler(this.txtBoxBusqueda_Enter);
-            this.txtBoxBusqueda.Leave += new System.EventHandler(this.txtBoxBusqueda_Leave);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBuscar.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBuscar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnBuscar.BorderRadius = 8;
-            this.btnBuscar.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(867, 12);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(78, 38);
-            this.btnBuscar.TabIndex = 27;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextColor = System.Drawing.Color.White;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnVerTareas
-            // 
-            this.btnVerTareas.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnVerTareas.FlatAppearance.BorderSize = 0;
-            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerTareas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnVerTareas.ForeColor = System.Drawing.Color.White;
-            this.btnVerTareas.IconChar = FontAwesome.Sharp.IconChar.Tasks;
-            this.btnVerTareas.IconColor = System.Drawing.Color.White;
-            this.btnVerTareas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVerTareas.IconSize = 32;
-            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVerTareas.Location = new System.Drawing.Point(582, 469);
-            this.btnVerTareas.Name = "btnVerTareas";
-            this.btnVerTareas.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnVerTareas.Size = new System.Drawing.Size(107, 60);
-            this.btnVerTareas.TabIndex = 28;
-            this.btnVerTareas.Text = "Asignar Tareas";
-            this.btnVerTareas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVerTareas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnVerTareas.UseVisualStyleBackColor = false;
-            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(30, 9);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(200, 28);
-            this.lblTitulo.TabIndex = 29;
-            this.lblTitulo.Text = "Gestión de Usuarios";
+            this.dgvPersonas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPersonas_CellFormatting);
             // 
             // ID
             // 
@@ -367,11 +291,102 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Rol.Name = "Rol";
             this.Rol.ReadOnly = true;
             // 
+            // btnVerTareas
+            // 
+            this.btnVerTareas.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnVerTareas.FlatAppearance.BorderSize = 0;
+            this.btnVerTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerTareas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnVerTareas.ForeColor = System.Drawing.Color.White;
+            this.btnVerTareas.IconChar = FontAwesome.Sharp.IconChar.Tasks;
+            this.btnVerTareas.IconColor = System.Drawing.Color.White;
+            this.btnVerTareas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVerTareas.IconSize = 32;
+            this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVerTareas.Location = new System.Drawing.Point(582, 469);
+            this.btnVerTareas.Name = "btnVerTareas";
+            this.btnVerTareas.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnVerTareas.Size = new System.Drawing.Size(107, 60);
+            this.btnVerTareas.TabIndex = 28;
+            this.btnVerTareas.Text = "Asignar Tareas";
+            this.btnVerTareas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVerTareas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnVerTareas.UseVisualStyleBackColor = false;
+            this.btnVerTareas.Click += new System.EventHandler(this.btnVerTareas_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(30, 9);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(200, 28);
+            this.lblTitulo.TabIndex = 29;
+            this.lblTitulo.Text = "Gestión de Usuarios";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.Location = new System.Drawing.Point(346, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 15);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Ingrese el código o nombre:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBuscar.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBuscar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscar.BorderRadius = 8;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(867, 12);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(78, 38);
+            this.btnBuscar.TabIndex = 27;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextColor = System.Drawing.Color.White;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBoxBusqueda
+            // 
+            this.txtBoxBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxBusqueda.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBoxBusqueda.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtBoxBusqueda.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.txtBoxBusqueda.BorderSize = 2;
+            this.txtBoxBusqueda.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.txtBoxBusqueda.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBoxBusqueda.IsFocused = false;
+            this.txtBoxBusqueda.Location = new System.Drawing.Point(514, 20);
+            this.txtBoxBusqueda.MaxLength = 32767;
+            this.txtBoxBusqueda.Multiline = false;
+            this.txtBoxBusqueda.Name = "txtBoxBusqueda";
+            this.txtBoxBusqueda.Padding = new System.Windows.Forms.Padding(6);
+            this.txtBoxBusqueda.PasswordChar = false;
+            this.txtBoxBusqueda.Size = new System.Drawing.Size(347, 30);
+            this.txtBoxBusqueda.TabIndex = 25;
+            this.txtBoxBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxBusqueda.Texts = "";
+            this.txtBoxBusqueda.UnderlinedStyle = true;
+            this.txtBoxBusqueda.Enter += new System.EventHandler(this.txtBoxBusqueda_Enter);
+            this.txtBoxBusqueda.Leave += new System.EventHandler(this.txtBoxBusqueda_Leave);
+            // 
             // frmGestionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 553);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnVerTareas);
             this.Controls.Add(this.btnBuscar);
@@ -413,5 +428,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn Validacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
+        private System.Windows.Forms.Label label1;
     }
 }
