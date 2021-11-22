@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,14 +40,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             boxCodigoOriginador.Texts = orig.codigoOriginador;
             codigoAnt = orig.codigoOriginador;
             lblNombreOriginador.Text = orig.nombreOriginador;
-            dateVencimiento.Value = inst.fechaVencimiento;
+            
+            dateVencimiento.Value = DateTime.ParseExact(inst.fechaVencimiento, "yyyy-MM-dddd", CultureInfo.InvariantCulture);
 
-            inst.fechaRegistroSpecified = true;
-            dateRegistro.Value = inst.fechaRegistro;
-                        
-            dateUltimaModificacion.Value = inst.fechaUltimaClasificacion;
+            dateRegistro.Value = DateTime.ParseExact(inst.fechaRegistro, "yyyy-MM-dddd", CultureInfo.InvariantCulture); ;
+
+            dateUltimaModificacion.Value = DateTime.ParseExact(inst.fechaUltimaClasificacion, "yyyy-MM-dddd", CultureInfo.InvariantCulture); ;
             boxMoody.Texts = inst.moodys;
-            dateMoody.Value = inst.fechaMoodys;
+            dateMoody.Value = DateTime.ParseExact(inst.fechaMoodys, "yyyy-MM-dddd", CultureInfo.InvariantCulture);
 
 
 
@@ -120,11 +121,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             instAux.ratingEncaje = boxRatingEncaje.Texts;
             instAux.ratingEncajeSistema = boxRatingEncajeSistema.Texts;
             instAux.fidOriginador = orig.idOriginador;
-            instAux.fechaVencimiento = dateVencimiento.Value;
-            instAux.fechaRegistro = dateRegistro.Value;
-            instAux.fechaUltimaClasificacion = dateUltimaModificacion.Value;
+            instAux.fechaVencimiento = dateVencimiento.Value.ToString("yyyy-MM-dd");
+            instAux.fechaRegistro = dateRegistro.Value.ToString("yyyy-MM-dd");
+            instAux.fechaUltimaClasificacion = dateUltimaModificacion.Value.ToString("yyyy-MM-dd");
             instAux.moodys = boxMoody.Texts;
-            instAux.fechaMoodys = dateMoody.Value;
+            instAux.fechaMoodys = dateMoody.Value.ToString("yyyy-MM-dd");
             instAux.activo = 1;
 
             if (lblRegistroInstrumento.Text == "Modificar instrumento")
