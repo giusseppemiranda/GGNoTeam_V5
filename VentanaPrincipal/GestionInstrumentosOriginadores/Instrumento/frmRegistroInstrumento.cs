@@ -41,13 +41,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             codigoAnt = orig.codigoOriginador;
             lblNombreOriginador.Text = orig.nombreOriginador;
             
-            dateVencimiento.Value = DateTime.ParseExact(inst.fechaVencimiento, "yyyy-MM-dddd", CultureInfo.InvariantCulture);
+            dateVencimiento.Value = DateTime.Parse(inst.fechaVencimiento.Replace("-","/"));
 
-            dateRegistro.Value = DateTime.ParseExact(inst.fechaRegistro, "yyyy-MM-dddd", CultureInfo.InvariantCulture); ;
+            dateRegistro.Value = DateTime.Parse(inst.fechaRegistro.Replace("-", "/")); 
 
-            dateUltimaModificacion.Value = DateTime.ParseExact(inst.fechaUltimaClasificacion, "yyyy-MM-dddd", CultureInfo.InvariantCulture); ;
+            dateUltimaModificacion.Value = DateTime.Parse(inst.fechaUltimaClasificacion.Replace("-", "/")); 
             boxMoody.Texts = inst.moodys;
-            dateMoody.Value = DateTime.ParseExact(inst.fechaMoodys, "yyyy-MM-dddd", CultureInfo.InvariantCulture);
+            dateMoody.Value = DateTime.Parse(inst.fechaMoodys.Replace("-", "/"));
 
 
 
@@ -110,28 +110,35 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+           
             instAux.codigoSBS = boxcodSBS.Texts;
             instAux.codigoISIN = boxcodISIN.Texts;
             instAux.codigoID059 = boxID059.Texts;
             instAux.score = boxScore.Texts;
-            instAux.clasificacionErr = (GestionInstrumentosOriginadoresWS.eClasificacionErr)comboBoxAssetClass.SelectedIndex;
+            //GestionInstrumentosOriginadoresWS.eClasificacionErr myEnum = (GestionInstrumentosOriginadoresWS.eClasificacionErr)Enum.Parse(typeof(GestionInstrumentosOriginadoresWS.eClasificacionErr), myString);
+            instAux.clasificacionErr = (GestionInstrumentosOriginadoresWS.eClasificacionErr)Enum.Parse(typeof(GestionInstrumentosOriginadoresWS.eClasificacionErr),(comboBoxAssetClass.SelectedItem.ToString()));
+            instAux.clasificacionErrSpecified = true;
             instAux.ratingUnificadoLocal = boxClasificacionLocal.Texts;
+            instAux.ratingUnificado = boxRatingUnificado.Texts;
             instAux.factorRiesgo = boxFactorRiesgo.Texts;
-            instAux.limiteAplicable = (GestionInstrumentosOriginadoresWS.eLimiteAplicable)comboBoxLimiteAplicable.SelectedIndex;
+            instAux.limiteAplicable = (GestionInstrumentosOriginadoresWS.eLimiteAplicable)Enum.Parse(typeof(GestionInstrumentosOriginadoresWS.eLimiteAplicable),(comboBoxLimiteAplicable.SelectedItem.ToString()));
+            instAux.limiteAplicableSpecified = true;
             instAux.ratingEncaje = boxRatingEncaje.Texts;
             instAux.ratingEncajeSistema = boxRatingEncajeSistema.Texts;
             instAux.fidOriginador = orig.idOriginador;
-            instAux.fechaVencimiento = dateVencimiento.Value.ToString("yyyy-MM-dd");
-            instAux.fechaRegistro = dateRegistro.Value.ToString("yyyy-MM-dd");
-            instAux.fechaUltimaClasificacion = dateUltimaModificacion.Value.ToString("yyyy-MM-dd");
+            instAux.fechaVencimiento = dateVencimiento.Value.ToString("yyyy/MM/dd").Replace("/","-");
+            instAux.fechaRegistro = dateRegistro.Value.ToString("yyyy/MM/dd").Replace("/", "-");
+            instAux.fechaUltimaClasificacion = dateUltimaModificacion.Value.ToString("yyyy/MM/dd").Replace("/", "-");
             instAux.moodys = boxMoody.Texts;
-            instAux.fechaMoodys = dateMoody.Value.ToString("yyyy-MM-dd");
+            instAux.fechaMoodys = dateMoody.Value.ToString("yyyy/MM/dd").Replace("/", "-");
             instAux.activo = 1;
 
             if (lblRegistroInstrumento.Text == "Modificar instrumento")
             {
-                _daoInst.modificarInstrumento(instAux);
-                MessageBox.Show("Modificación exitosa!");
+                if (_daoInst.modificarInstrumento(instAux) > 0)
+                    MessageBox.Show("Modificación exitosa!");
+                else
+                    MessageBox.Show("Error al modificar");
             }
             else
             {
