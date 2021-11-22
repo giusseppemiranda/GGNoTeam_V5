@@ -31,6 +31,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         {
             InitializeComponent();
             oriAux = new GestionInstrumentosOriginadoresWS.originador();
+            oriAux.idOriginador = orig.idOriginador;
             lblRegistroOriginador.Text = "Modificar originador";
             boxCodigoOriginador.Texts = orig.codigoOriginador;
             boxNombreOriginador.Texts = orig.nombreOriginador;
@@ -81,8 +82,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
 
             if (lblRegistroOriginador.Text == "Modificar originador")
             {
-                _daoOrig.modificarOriginador(oriAux);
+                if(_daoOrig.modificarOriginador(oriAux)>0)
                 MessageBox.Show("Modificación exitosa!");
+                else
+                    MessageBox.Show("Revise los campos e intente de nuevo", "Error al modificar",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
