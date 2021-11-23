@@ -36,6 +36,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
@@ -43,6 +44,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnAgregarTarea = new FontAwesome.Sharp.IconButton();
             this.btnListarPorTipo = new FontAwesome.Sharp.IconButton();
             this.btnListarCompletos = new FontAwesome.Sharp.IconButton();
+            this.comboEstadoTarea = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +70,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvTareasPendientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Estado,
-            this.Descripcion});
+            this.Descripcion,
+            this.Autor});
             this.dgvTareasPendientes.EnableHeadersVisualStyles = false;
             this.dgvTareasPendientes.Location = new System.Drawing.Point(34, 49);
             this.dgvTareasPendientes.MultiSelect = false;
@@ -115,6 +118,13 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
+            // 
+            // Autor
+            // 
+            this.Autor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Autor.HeaderText = "Autor";
+            this.Autor.Name = "Autor";
+            this.Autor.ReadOnly = true;
             // 
             // lblNombre
             // 
@@ -265,11 +275,32 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnListarCompletos.UseVisualStyleBackColor = false;
             this.btnListarCompletos.Click += new System.EventHandler(this.btnListarCompletos_Click);
             // 
+            // comboEstadoTarea
+            // 
+            this.comboEstadoTarea.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboEstadoTarea.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboEstadoTarea.BorderSize = 1;
+            this.comboEstadoTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboEstadoTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboEstadoTarea.ForeColor = System.Drawing.Color.DimGray;
+            this.comboEstadoTarea.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboEstadoTarea.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboEstadoTarea.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboEstadoTarea.Location = new System.Drawing.Point(476, 12);
+            this.comboEstadoTarea.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboEstadoTarea.Name = "comboEstadoTarea";
+            this.comboEstadoTarea.Padding = new System.Windows.Forms.Padding(1);
+            this.comboEstadoTarea.Size = new System.Drawing.Size(200, 30);
+            this.comboEstadoTarea.TabIndex = 67;
+            this.comboEstadoTarea.Texts = "";
+            this.comboEstadoTarea.OnSelectedIndexChanged += new System.EventHandler(this.comboEstadoTarea_OnSelectedIndexChanged);
+            // 
             // frmTareasPendientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 553);
+            this.Controls.Add(this.comboEstadoTarea);
             this.Controls.Add(this.btnListarCompletos);
             this.Controls.Add(this.btnListarPorTipo);
             this.Controls.Add(this.lblNombre);
@@ -297,10 +328,12 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.Label lblNombre;
+        private FontAwesome.Sharp.IconButton btnListarPorTipo;
+        private FontAwesome.Sharp.IconButton btnListarCompletos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private FontAwesome.Sharp.IconButton btnListarPorTipo;
-        private FontAwesome.Sharp.IconButton btnListarCompletos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private Recursos.UserControls.GGComboBox comboEstadoTarea;
     }
 }

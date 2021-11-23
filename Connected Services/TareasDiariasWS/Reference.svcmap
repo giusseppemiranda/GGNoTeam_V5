@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.236.140.237:8080/WebServices/TareasDiariasWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServices/TareasDiariasWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TareasDiariasWS1.wsdl" MetadataType="Wsdl" ID="d8cbd0b8-ff72-4f08-9533-f9925decc4bc" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/TareasDiariasWS?WSDL" />
-    <MetadataFile FileName="TareasDiariasWS1.xsd" MetadataType="Schema" ID="7f8b2f68-6349-40ce-a2c7-9a95bd1b241f" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/TareasDiariasWS?xsd=1" />
+    <MetadataFile FileName="TareasDiariasWS1.xsd" MetadataType="Schema" ID="2e8f1d66-f07d-4bed-adb4-44810679205b" SourceId="1" SourceUrl="http://localhost:8080/WebServices/TareasDiariasWS?xsd=1" />
+    <MetadataFile FileName="TareasDiariasWS1.wsdl" MetadataType="Wsdl" ID="068dfd60-4250-4310-8b60-d0964320e3b2" SourceId="1" SourceUrl="http://localhost:8080/WebServices/TareasDiariasWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

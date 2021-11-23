@@ -24,6 +24,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         public frmTareasPendientes(frmPrincipal ventana, LoginWS.persona persona)
         {
             InitializeComponent();
+            cargarCombo();
             cambiarTema();
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
@@ -43,6 +44,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         public frmTareasPendientes(LoginWS.persona persona)
         {
             InitializeComponent();
+            cargarCombo();
             cambiarTema();
             btnSalir.Visible = true;
             user = persona;
@@ -72,6 +74,13 @@ namespace GGNoTeam_V5.VentanaPrincipal
         {
             lblNombre.Text = "Gestión de tareas y pendientes de " + user.nombre.ToUpper() + " " + user.apellidos.ToUpper();
             lblNombre.ForeColor = Color.DarkSalmon;
+        }
+        private void cargarCombo()
+        {
+            comboEstadoTarea.Items.Add("Pendientes");
+            comboEstadoTarea.Items.Add("Completadas");
+            comboEstadoTarea.Items.Add("Perdidas");
+            comboEstadoTarea.SelectedIndex = 0;
         }
 
         private void pintarDGVInicial()
@@ -239,6 +248,14 @@ namespace GGNoTeam_V5.VentanaPrincipal
         {
             user = _daoPersona.listarPorCodExacto(Int32.Parse(user.codigo))[0];
             colocarEnDGV(user.itinerario.listaTarea);
+        }
+        private void ActualizarPerdidas()
+        {
+            //listar tareas segun usuario, no conectar al dgv, revisar fecha y comparar con fecha actual, cambiar estado segun fecha
+        }
+        void comboEstadoTarea_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
