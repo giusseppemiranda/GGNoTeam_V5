@@ -115,7 +115,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\MonitoreoOrdenesWS\Reference.cs">
+    <Compile Include="Connected Services\MonitoreoOrdenWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -587,29 +587,62 @@
     <None Include="Connected Services\LoginWS\LoginWS1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.ejecucion.datasource">
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.ejecucion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.eliminarEjecucionResponse.datasource">
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.eliminarOperacionResponse.datasource">
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.insertarEjecucionResponse.datasource">
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.ListarEjecucionPorFechaResponse.datasource">
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.listarTodosEjecucionResponse.datasource">
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.insertarOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\GGNoTeam_V5.MonitoreoOrdenesWS.modificarEjecucionResponse.datasource">
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\MonitorOrdenWS1.wsdl" />
-    <None Include="Connected Services\MonitoreoOrdenesWS\MonitorOrdenWS1.xsd">
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.ListarEjecucionPorFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.ListarOrdenPorFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.ListarPorFechaOperacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.modificarOrdenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.operacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.operacioninsertar_2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.OperacionModificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.orden.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS.wsdl" />
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse.datasource">
@@ -766,9 +799,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenesWS\configuration91.svcinfo" />
-    <None Include="Connected Services\MonitoreoOrdenesWS\configuration.svcinfo" />
-    <None Include="Connected Services\MonitoreoOrdenesWS\Reference.svcmap">
+    <None Include="Connected Services\MonitoreoOrdenWS\configuration91.svcinfo" />
+    <None Include="Connected Services\MonitoreoOrdenWS\configuration.svcinfo" />
+    <None Include="Connected Services\MonitoreoOrdenWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -789,7 +822,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\GestionInstrumentosOriginadoresWS\" />
     <WCFMetadataStorage Include="Connected Services\LoginWS\" />
-    <WCFMetadataStorage Include="Connected Services\MonitoreoOrdenesWS\" />
+    <WCFMetadataStorage Include="Connected Services\MonitoreoOrdenWS\" />
     <WCFMetadataStorage Include="Connected Services\TareasDiariasWS\" />
     <WCFMetadataStorage Include="Connected Services\TrackingErrorWS\" />
   </ItemGroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="04233687-c1cd-488e-85c1-6418cee2651a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3ace6c96-2b1f-42d1-849e-7f83fbdde775" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.236.140.237:8080/WebServices/MonitorOrdenWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServices/MonitorOrdenWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MonitorOrdenWS1.wsdl" MetadataType="Wsdl" ID="5942d6f9-8d3f-402b-945b-4640b3bcd3d3" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/MonitorOrdenWS?WSDL" />
-    <MetadataFile FileName="MonitorOrdenWS1.xsd" MetadataType="Schema" ID="42831027-e13a-4ba1-84b4-f34f391fd0a5" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/MonitorOrdenWS?xsd=1" />
+    <MetadataFile FileName="MonitorOrdenWS.wsdl" MetadataType="Wsdl" ID="9ebd6219-ffa0-4efc-95b4-f286b9f4ea68" SourceId="1" SourceUrl="http://localhost:8080/WebServices/MonitorOrdenWS?WSDL" />
+    <MetadataFile FileName="MonitorOrdenWS.xsd" MetadataType="Schema" ID="2ab84f1b-b501-4ed6-9eab-09981d82401a" SourceId="1" SourceUrl="http://localhost:8080/WebServices/MonitorOrdenWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

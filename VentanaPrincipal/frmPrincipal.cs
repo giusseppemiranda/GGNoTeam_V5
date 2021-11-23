@@ -14,7 +14,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
     public partial class frmPrincipal : Form
     {
 
-        private static Form frmActivo = null;
+        public static Form frmActivo = null;
         private frmLogin ventanaPadre;
         private IconButton iconoActivo = null;
         private LoginWS.persona usuario;

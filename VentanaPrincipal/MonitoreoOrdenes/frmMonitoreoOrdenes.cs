@@ -24,64 +24,65 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         public delegate void delegadoCambiarTema();
         public event delegadoCambiarTema eventoCambiarTema;
         private frmPrincipal ventanaPrincipal = null;
-        //private MonitoreoOrdenWS.MonitoreoOrdenWSClient _daoMO;
-        //private MonitoreoOrdenWS.operacion[] listaOperaciones;
+        private MonitoreoOrdenWS.MonitorOrdenWSClient _daoMO;
+        private MonitoreoOrdenWS.operacion[] listaOperaciones;
+
         public frmMonitoreoOrdenes(frmPrincipal ventana)
         {
             InitializeComponent();
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
-            //_daoMO = new MonitoreoOrdenWS.MonitoreoOrdenWSClient();
+            _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
             cambiarTema();
         }
 
         private void btnconsultar_click(object sender, EventArgs e)
         {
-            //    listaOperaciones = _daoMO.ListarOperacionPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
-            //    dgvOrdenes.Rows.Clear();
-            //    if (listaOperaciones != null)
-            //    {
-            //        for (int i = 0; i < listaOperaciones.Length; i++)
-            //        {
-            //            dgvOrdenes.Rows.Add(
-            //                listaOperaciones[i].fecha.ToString("dd/MM/yyyy"), 
-            //                comboFondo.SelectedItem.ToString(), 
-            //                listaOperaciones[i].codsbs, 
-            //                listaOperaciones[i].codsin, 
-            //                listaOperaciones[i].instrumento,
+            listaOperaciones = _daoMO.ListarPorFechaOperacion(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"));
+            dgvOrdenes.Rows.Clear();
+            if (listaOperaciones != null)
+            {
+                for (int i = 0; i < listaOperaciones.Length; i++)
+                {
+                    dgvOrdenes.Rows.Add(
+                        listaOperaciones[i].fecha.ToString("dd/MM/yyyy"),
+                        comboFondo.SelectedItem.ToString(),
+                        listaOperaciones[i].codsbs,
+                        listaOperaciones[i].codisin,
+                        listaOperaciones[i].instrumento,
 
-            //                listaOperaciones[i].operacion,
-            //                listaOperaciones[i].aumSit.AUM,
-            //                listaOperaciones[i].aumOrd.porcentageFondo,
+                        //listaOperaciones[i].operacion,
+                        listaOperaciones[i].aumSit.AUM,
+                        listaOperaciones[i].aumOrd.porcentageFondo,
 
-            //                listaOperaciones[i].estadoValidacion,
-            //                listaOperaciones[i].comentario);
-            //        }
-            //    }
-            //    dgvOrdenes.Refresh();
+                        listaOperaciones[i].estadoValidacion,
+                        listaOperaciones[i].comentario);
+                }
+            }
+            dgvOrdenes.Refresh();
         }
 
         private void EliminarRegistro_Click(object sender, EventArgs e)
         {
-            //    if (listaOperaciones != null)
-            //    {
-            //        int procesoValido = _daoMO.eliminarOperacion(listaOperaciones[dgvOrdenes.CurrentRow.Index].idOperacion);
-            //        if (procesoValido != 1)
-            //        {
-            //            MessageBox.Show("No se ha podido eliminar el elemento seleccionado. Intente nuevamente.");
-            //        }
-            //    }
-            //    this.btnConsultar_Click(sender, e);
+            if (listaOperaciones != null)
+            {
+                int procesoValido = _daoMO.eliminarOperacion(listaOperaciones[dgvOrdenes.CurrentRow.Index].idOperacion);
+                if (procesoValido != 1)
+                {
+                    MessageBox.Show("No se ha podido eliminar el elemento seleccionado. Intente nuevamente.");
+                }
+            }
+            this.btnconsultar_click(sender, e);
         }
 
         private void btnModificarRegistro_Click(object sender, EventArgs e)
         {
-            //    if (listaOperaciones != null)
-            //    {
-            //        frmEditarOperacion ventanaModificar = new frmEditarOperacion(listaOperaciones[dgvOrdenes.CurrentRow.Index]);
-            //        ventanaModificar.ShowDialog();
-            //        this.btnConsultar_Click(sender, e);
-            //    }
+            if (listaOperaciones != null)
+            {
+                frmEditarOperacion ventanaModificar = new frmEditarOperacion(listaOperaciones[dgvOrdenes.CurrentRow.Index]);
+                ventanaModificar.ShowDialog();
+                this.btnconsultar_click(sender, e);
+            }
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -106,18 +107,18 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         }
         private void abrirFormulario(Form formulario)
         {
-            //    /*
-            //    if (frmActivo != null)
-            //    {
-            //        frmActivo.Dispose();
-            //    }
-            //    frmActivo = formulario;
-            //    formulario.TopLevel = false;
-            //    formulario.Dock = DockStyle.Fill;
-            //    panelCentral.Controls.Clear();
-            //    panelCentral.Controls.Add(formulario);
-            //    formulario.Show();
-            //    */
+            /*
+            if (frmActivo != null)
+            {
+                frmActivo.Dispose();
+            }
+            frmActivo = formulario;
+            formulario.TopLevel = false;
+            formulario.Dock = DockStyle.Fill;
+            panelCentral.Controls.Clear();
+            panelCentral.Controls.Add(formulario);
+            formulario.Show();
+            */
         }
         public void cambiarTema()
         {

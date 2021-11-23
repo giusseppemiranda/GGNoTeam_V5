@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="bNSIArHVi5EHXupBpDHjxhWuw/USGKP3kdzkaFWjVWQ=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="pWIiiHjzyxLy2DbElub1Gb55MdknTj6xPo78rHKG9uQ=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="MonitorOrdenWSPortBinding1">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="MonitorOrdenWSPort1" contract="MonitoreoOrdenesWS.MonitorOrdenWS" bindingType="basicHttpBinding" address="http://54.236.140.237:8080/WebServices/MonitorOrdenWS" bindingConfiguration="MonitorOrdenWSPortBinding1">
+    <endpoint name="MonitorOrdenWSPort1" contract="MonitoreoOrdenWS.MonitorOrdenWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServices/MonitorOrdenWS" bindingConfiguration="MonitorOrdenWSPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.236.140.237:8080/WebServices/MonitorOrdenWS</serializedValue>
+          <serializedValue>http://localhost:8080/WebServices/MonitorOrdenWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -127,7 +127,7 @@
           <serializedValue>MonitorOrdenWSPortBinding1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MonitoreoOrdenesWS.MonitorOrdenWS</serializedValue>
+          <serializedValue>MonitoreoOrdenWS.MonitorOrdenWS</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
