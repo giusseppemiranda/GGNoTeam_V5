@@ -155,7 +155,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         {
             int fidFondo = 0;
 
-            fidFondo = 3 * (comboAFP.SelectedIndex) + comboFondo.SelectedIndex + 1;
+            fidFondo = 3 * (comboAFP.SelectedIndex) + comboFondo.SelectedIndex + 1;            
 
             return fidFondo;
         }

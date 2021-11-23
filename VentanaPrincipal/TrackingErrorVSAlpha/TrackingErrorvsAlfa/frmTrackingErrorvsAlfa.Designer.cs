@@ -66,9 +66,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             // 
             // graficoAlpha
             // 
+            this.graficoAlpha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.graficoAlpha.ChartAreas.Add(chartArea1);
-            this.graficoAlpha.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.DockedToChartArea = "ChartArea1";
             legend1.Name = "Legend1";
             this.graficoAlpha.Legends.Add(legend1);
@@ -76,6 +76,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             this.graficoAlpha.Name = "graficoAlpha";
             this.graficoAlpha.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
             series1.Legend = "Legend1";
             series1.Name = "Alpha";
             this.graficoAlpha.Series.Add(series1);
@@ -86,11 +87,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             // 
             // graficoTE
             // 
+            this.graficoTE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             chartArea2.Name = "ChartArea1";
             this.graficoTE.ChartAreas.Add(chartArea2);
-            this.graficoTE.Dock = System.Windows.Forms.DockStyle.Top;
             legend2.DockedToChartArea = "ChartArea1";
             legend2.Name = "Legend1";
+            legend2.Title = "asdfasdf";
             this.graficoTE.Legends.Add(legend2);
             this.graficoTE.Location = new System.Drawing.Point(0, 0);
             this.graficoTE.Name = "graficoTE";

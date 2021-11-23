@@ -1,6 +1,7 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -12,10 +13,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private frmPrincipal ventanaPrincipal = null;
         private TrackingErrorWS.TrackingErrorWSClient _dao;
         private TrackingErrorWS.dataValorCuota[] datos;
-        //private TrackingErrorWS.fondo[] fondos;
         private TrackingErrorWS.afp[] listaAfps;
-        private static BindingList<string> nombreafp = new BindingList<string>();
-        private TrackingErrorWS.afp[] afps;
+        private TrackingErrorWS.alpha[] listaAlphas;
+        private string[] fondos = { "Fondo 1", "Fondo 2", "Fondo 3" };
         private frmTEvsAlpha ventanaPadre = null;
         public frmCalcularAlpha(frmPrincipal ventana, frmTEvsAlpha ventana_2)
         {
@@ -26,7 +26,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
             _dao = new TrackingErrorWS.TrackingErrorWSClient();
             dgvDataValorCuota.AutoGenerateColumns = false;
-            
+
+            Global.pintarDGV(ref dgvDataValorCuota, Color.DarkSalmon);
             cambiarTema();
             cargarNombresAFP();
         }
@@ -63,7 +64,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
-                       
+            datos = _dao.listarDataValorCuotaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
+            listaAlphas = _dao.listarAlphaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
+            if (datos != null)
+            {
+                dgvDataValorCuota.DataSource = datos;
+                boxAlpha_1.Texts = listaAlphas[0].alpha1.ToString();
+                boxAlpha_2.Texts = listaAlphas[1].alpha1.ToString();
+                boxAlpha_3.Texts = listaAlphas[2].alpha1.ToString();
+            }
+            else
+            {
+                dgvDataValorCuota.DataSource = null;
+                boxAlpha_1.Texts = "";
+                boxAlpha_2.Texts = "";
+                boxAlpha_3.Texts = "";
+            }
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
@@ -109,7 +125,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                                 }
                             }
                             outputCsv[dgvDataValorCuota.Rows.Count - 1] = "Fondo 1,Fondo 2,Fondo 3,";
-                            outputCsv[dgvDataValorCuota.Rows.Count] = ggTextBox1.Texts + "," + ggTextBox2.Texts + "," + ggTextBox3.Texts + ",";
+                            outputCsv[dgvDataValorCuota.Rows.Count] = boxAlpha_1.Texts + "," + boxAlpha_2.Texts + "," + boxAlpha_3.Texts + ",";
 
                             File.WriteAllLines(sfd.FileName, outputCsv, Encoding.UTF8);
                             MessageBox.Show("Reporte exportado correctamente!", "Info");
@@ -136,13 +152,20 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private void dgvDataValorCuota_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             TrackingErrorWS.dataValorCuota dvc = (TrackingErrorWS.dataValorCuota)dgvDataValorCuota.Rows[e.RowIndex].DataBoundItem;
+            int fondoindex;
+            int afpindex;
+
             dgvDataValorCuota.Rows[e.RowIndex].Cells[0].Value = dvc.idDataValorCuota;
             dgvDataValorCuota.Rows[e.RowIndex].Cells[1].Value = dvc.fecha.ToString("dd/MM/yyyy");
-            dgvDataValorCuota.Rows[e.RowIndex].Cells[2].Value = nombreafp[e.RowIndex];
-            dgvDataValorCuota.Rows[e.RowIndex].Cells[4].Value = dvc.patrimonio; ;
-            dgvDataValorCuota.Rows[e.RowIndex].Cells[5].Value = dvc.cuotas;
-            dgvDataValorCuota.Rows[e.RowIndex].Cells[6].Value = dvc.valorCuota;
-            dgvDataValorCuota.Rows[e.RowIndex].Cells[7].Value = dvc.valorCuota / dvc.cuotas;
+            afpindex = (int)((dvc.fidAFP - 1) / 3);
+            fondoindex = dvc.fidAFP - (afpindex * 3) - 1;
+
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[2].Value = listaAfps[afpindex].nombre;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[3].Value = fondos[fondoindex];
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[4].Value = dvc.cuotas;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[5].Value = dvc.valorCuota;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[6].Value = dvc.patrimonio;
+            dgvDataValorCuota.Rows[e.RowIndex].Cells[7].Value = dvc.patrimonio * dvc.valorCuota / dvc.cuotas;
         }
     }
 }
