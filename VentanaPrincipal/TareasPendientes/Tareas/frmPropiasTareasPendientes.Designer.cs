@@ -29,11 +29,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnConsultarTareas = new FontAwesome.Sharp.IconButton();
-            this.comboEstadoTarea = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.btnRenovarTarea = new FontAwesome.Sharp.IconButton();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
@@ -44,6 +43,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.fechaLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboEstadoTarea = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,25 +69,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.btnConsultarTareas.UseVisualStyleBackColor = false;
             this.btnConsultarTareas.Click += new System.EventHandler(this.btnConsultarTareas_Click);
             // 
-            // comboEstadoTarea
-            // 
-            this.comboEstadoTarea.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboEstadoTarea.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboEstadoTarea.BorderSize = 1;
-            this.comboEstadoTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboEstadoTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboEstadoTarea.ForeColor = System.Drawing.Color.DimGray;
-            this.comboEstadoTarea.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboEstadoTarea.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboEstadoTarea.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboEstadoTarea.Location = new System.Drawing.Point(692, 15);
-            this.comboEstadoTarea.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboEstadoTarea.Name = "comboEstadoTarea";
-            this.comboEstadoTarea.Padding = new System.Windows.Forms.Padding(1);
-            this.comboEstadoTarea.Size = new System.Drawing.Size(200, 30);
-            this.comboEstadoTarea.TabIndex = 74;
-            this.comboEstadoTarea.Texts = "";
-            // 
             // btnRenovarTarea
             // 
             this.btnRenovarTarea.BackColor = System.Drawing.Color.DodgerBlue;
@@ -109,6 +90,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.btnRenovarTarea.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRenovarTarea.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnRenovarTarea.UseVisualStyleBackColor = false;
+            this.btnRenovarTarea.Click += new System.EventHandler(this.btnRenovarTarea_Click);
             // 
             // lblNombre
             // 
@@ -177,14 +159,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.dgvTareasPendientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTareasPendientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTareasPendientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTareasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTareasPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTareasPendientes.ColumnHeadersHeight = 25;
             this.dgvTareasPendientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -198,22 +180,23 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.dgvTareasPendientes.Name = "dgvTareasPendientes";
             this.dgvTareasPendientes.ReadOnly = true;
             this.dgvTareasPendientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTareasPendientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvTareasPendientes.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTareasPendientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvTareasPendientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTareasPendientes.RowTemplate.Height = 25;
             this.dgvTareasPendientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTareasPendientes.Size = new System.Drawing.Size(917, 432);
             this.dgvTareasPendientes.TabIndex = 69;
+            this.dgvTareasPendientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvTareasPendientes_CellFormatting);
             // 
             // ID
             // 
@@ -250,6 +233,25 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.Autor.HeaderText = "Autor";
             this.Autor.Name = "Autor";
             this.Autor.ReadOnly = true;
+            // 
+            // comboEstadoTarea
+            // 
+            this.comboEstadoTarea.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboEstadoTarea.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboEstadoTarea.BorderSize = 1;
+            this.comboEstadoTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboEstadoTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboEstadoTarea.ForeColor = System.Drawing.Color.DimGray;
+            this.comboEstadoTarea.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboEstadoTarea.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboEstadoTarea.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboEstadoTarea.Location = new System.Drawing.Point(692, 15);
+            this.comboEstadoTarea.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboEstadoTarea.Name = "comboEstadoTarea";
+            this.comboEstadoTarea.Padding = new System.Windows.Forms.Padding(1);
+            this.comboEstadoTarea.Size = new System.Drawing.Size(200, 30);
+            this.comboEstadoTarea.TabIndex = 74;
+            this.comboEstadoTarea.Texts = "";
             // 
             // frmPropiasTareasPendientes
             // 

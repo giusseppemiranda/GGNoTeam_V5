@@ -31,14 +31,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         {
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
             this.comboBoxEstado = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
-            this.lblIndicación = new System.Windows.Forms.Label();
             this.boxDescripcion = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.boxID = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.dateFechaCreacion = new System.Windows.Forms.DateTimePicker();
+            this.dateFechaLimite = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaLimite = new System.Windows.Forms.Label();
+            this.lblFechaCreacion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEstado
@@ -46,7 +47,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblEstado.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblEstado.Location = new System.Drawing.Point(44, 187);
+            this.lblEstado.Location = new System.Drawing.Point(44, 195);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(46, 15);
             this.lblEstado.TabIndex = 44;
@@ -57,22 +58,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblDescripcion.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblDescripcion.Location = new System.Drawing.Point(44, 133);
+            this.lblDescripcion.Location = new System.Drawing.Point(44, 143);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(75, 15);
             this.lblDescripcion.TabIndex = 41;
             this.lblDescripcion.Text = "Descripción:";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblID.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblID.Location = new System.Drawing.Point(44, 87);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(56, 15);
-            this.lblID.TabIndex = 40;
-            this.lblID.Text = "ID Tarea:";
             // 
             // comboBoxEstado
             // 
@@ -91,26 +81,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.comboBoxEstado.IconColor = System.Drawing.Color.DodgerBlue;
             this.comboBoxEstado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxEstado.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBoxEstado.Location = new System.Drawing.Point(158, 167);
+            this.comboBoxEstado.Location = new System.Drawing.Point(158, 175);
             this.comboBoxEstado.MinimumSize = new System.Drawing.Size(171, 26);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBoxEstado.Size = new System.Drawing.Size(231, 35);
+            this.comboBoxEstado.Size = new System.Drawing.Size(311, 35);
             this.comboBoxEstado.TabIndex = 57;
             this.comboBoxEstado.Texts = "";
-            // 
-            // lblIndicación
-            // 
-            this.lblIndicación.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblIndicación.AutoSize = true;
-            this.lblIndicación.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblIndicación.ForeColor = System.Drawing.Color.Tomato;
-            this.lblIndicación.Location = new System.Drawing.Point(155, 58);
-            this.lblIndicación.Name = "lblIndicación";
-            this.lblIndicación.Size = new System.Drawing.Size(234, 15);
-            this.lblIndicación.TabIndex = 56;
-            this.lblIndicación.Text = "El campo ID se genera automaticamente.";
             // 
             // boxDescripcion
             // 
@@ -123,13 +100,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.boxDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxDescripcion.ForeColor = System.Drawing.Color.DimGray;
             this.boxDescripcion.IsFocused = false;
-            this.boxDescripcion.Location = new System.Drawing.Point(158, 121);
+            this.boxDescripcion.Location = new System.Drawing.Point(158, 131);
             this.boxDescripcion.MaxLength = 32767;
             this.boxDescripcion.Multiline = false;
             this.boxDescripcion.Name = "boxDescripcion";
             this.boxDescripcion.Padding = new System.Windows.Forms.Padding(6);
             this.boxDescripcion.PasswordChar = false;
-            this.boxDescripcion.Size = new System.Drawing.Size(231, 30);
+            this.boxDescripcion.Size = new System.Drawing.Size(311, 30);
             this.boxDescripcion.TabIndex = 53;
             this.boxDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxDescripcion.Texts = "";
@@ -146,7 +123,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(196, 222);
+            this.btnCancelar.Location = new System.Drawing.Point(196, 230);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 47);
             this.btnCancelar.TabIndex = 59;
@@ -166,7 +143,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(290, 222);
+            this.btnSiguiente.Location = new System.Drawing.Point(290, 230);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(84, 47);
             this.btnSiguiente.TabIndex = 58;
@@ -186,46 +163,58 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.lblTitulo.TabIndex = 60;
             this.lblTitulo.Text = "Titulo";
             // 
-            // boxID
+            // dateFechaCreacion
             // 
-            this.boxID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxID.BackColor = System.Drawing.SystemColors.Window;
-            this.boxID.BorderColor = System.Drawing.Color.Tomato;
-            this.boxID.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxID.BorderSize = 2;
-            this.boxID.Enabled = false;
-            this.boxID.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxID.ForeColor = System.Drawing.Color.DimGray;
-            this.boxID.IsFocused = false;
-            this.boxID.Location = new System.Drawing.Point(158, 76);
-            this.boxID.MaxLength = 32767;
-            this.boxID.Multiline = false;
-            this.boxID.Name = "boxID";
-            this.boxID.Padding = new System.Windows.Forms.Padding(6);
-            this.boxID.PasswordChar = false;
-            this.boxID.Size = new System.Drawing.Size(231, 30);
-            this.boxID.TabIndex = 61;
-            this.boxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxID.Texts = "";
-            this.boxID.UnderlinedStyle = false;
+            this.dateFechaCreacion.Location = new System.Drawing.Point(158, 58);
+            this.dateFechaCreacion.Name = "dateFechaCreacion";
+            this.dateFechaCreacion.Size = new System.Drawing.Size(198, 20);
+            this.dateFechaCreacion.TabIndex = 62;
+            // 
+            // dateFechaLimite
+            // 
+            this.dateFechaLimite.Location = new System.Drawing.Point(158, 96);
+            this.dateFechaLimite.Name = "dateFechaLimite";
+            this.dateFechaLimite.Size = new System.Drawing.Size(198, 20);
+            this.dateFechaLimite.TabIndex = 63;
+            // 
+            // lblFechaLimite
+            // 
+            this.lblFechaLimite.AutoSize = true;
+            this.lblFechaLimite.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFechaLimite.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblFechaLimite.Location = new System.Drawing.Point(44, 101);
+            this.lblFechaLimite.Name = "lblFechaLimite";
+            this.lblFechaLimite.Size = new System.Drawing.Size(77, 15);
+            this.lblFechaLimite.TabIndex = 64;
+            this.lblFechaLimite.Text = "Fecha Límite";
+            // 
+            // lblFechaCreacion
+            // 
+            this.lblFechaCreacion.AutoSize = true;
+            this.lblFechaCreacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFechaCreacion.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblFechaCreacion.Location = new System.Drawing.Point(42, 58);
+            this.lblFechaCreacion.Name = "lblFechaCreacion";
+            this.lblFechaCreacion.Size = new System.Drawing.Size(90, 15);
+            this.lblFechaCreacion.TabIndex = 65;
+            this.lblFechaCreacion.Text = "Fecha Creación";
             // 
             // frmEditarTarea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 290);
-            this.Controls.Add(this.boxID);
+            this.ClientSize = new System.Drawing.Size(491, 305);
+            this.Controls.Add(this.lblFechaCreacion);
+            this.Controls.Add(this.lblFechaLimite);
+            this.Controls.Add(this.dateFechaLimite);
+            this.Controls.Add(this.dateFechaCreacion);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.comboBoxEstado);
-            this.Controls.Add(this.lblIndicación);
             this.Controls.Add(this.boxDescripcion);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.lblID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditarTarea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -239,13 +228,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         #endregion
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.Label lblID;
         private Recursos.UserControls.GGComboBox comboBoxEstado;
-        private System.Windows.Forms.Label lblIndicación;
         private Recursos.UserControls.GGTextBox boxDescripcion;
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;
         private System.Windows.Forms.Label lblTitulo;
-        private Recursos.UserControls.GGTextBox boxID;
+        private System.Windows.Forms.DateTimePicker dateFechaCreacion;
+        private System.Windows.Forms.DateTimePicker dateFechaLimite;
+        private System.Windows.Forms.Label lblFechaLimite;
+        private System.Windows.Forms.Label lblFechaCreacion;
     }
 }

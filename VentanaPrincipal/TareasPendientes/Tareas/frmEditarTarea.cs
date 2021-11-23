@@ -7,63 +7,72 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
 {
     public partial class frmEditarTarea : Form
     {
-        private TareasDiariasWS.tarea tareaModificar;
         private bool casoEdicion = false;
         private TareasDiariasWS.TareasDiariasWSClient _daoTareas;
-        private int fidItinerario = -1;
         private frmTareasPendientes ventanaTareas;
         private bool accionComoAdministrador = false;
+        private TareasDiariasWS.tarea tareaAux;
+        private int idAux;
 
         //Agregar tarea
-        public frmEditarTarea(frmTareasPendientes ventana, int fidItinerario, bool accionAdmin)
+        public frmEditarTarea(frmTareasPendientes ventana, int fidItinerario, LoginWS.persona admin)
         {
             InitializeComponent();
             cambiarTema();
 
-            tareaModificar = new TareasDiariasWS.tarea();
-            this.fidItinerario = fidItinerario;
+            tareaAux = new TareasDiariasWS.tarea();
+            tareaAux.fidItinerario = fidItinerario;
+            tareaAux.fidAutor = admin.idPersona;
             ventanaTareas = ventana;
-            accionComoAdministrador = accionAdmin;
-
-            //cargarComboBox();
+            //accionComoAdministrador = accionAdmin;
+            cargarComboBox();
+            comboBoxEstado.Visible = false;
+            lblEstado.Visible = false;
+            dateFechaCreacion.Enabled = false;
             cargarDatosTipoAccion_Agregar();
         }
 
         //Modificar tarea
-        public frmEditarTarea(frmTareasPendientes ventana, LoginWS.tarea task, bool accionAdmin)
+        public frmEditarTarea(frmTareasPendientes ventana, LoginWS.tarea task, LoginWS.persona admin)
         {
             InitializeComponent();
             cambiarTema();
-            //cargarComboBox();
-
-            tareaModificar = new TareasDiariasWS.tarea();
-            boxID.Texts = task.idTarea.ToString();
-            boxDescripcion.Texts = task.descripcion;
+            cargarComboBox();
+            tareaAux = new TareasDiariasWS.tarea();
+            tareaAux.idTarea = task.idTarea;
+            //tareaAux.fechaCreacion = task.fechaCreacion;
+            //tareaAux.fechaLimite = task.fechaLimite;
+            //tareaAux.descripcion = task.descripcion;
+            tareaAux.fidItinerario = task.fidItinerario;
+            tareaAux.fidAutor = task.fidAutor;
+            tareaAux.fechaCreacion = task.fechaCreacion;
+            tareaAux.fechaLimite = task.fechaLimite;
+            tareaAux.descripcion = task.descripcion;
             casoEdicion = true;
             ventanaTareas = ventana;
-            accionComoAdministrador = accionAdmin;
-
-            cargarDatosTipoAccion_Modificar(true);
+            comboBoxEstado.Visible = true;
+            lblEstado.Visible = true;
+            dateFechaCreacion.Enabled = false;
+            //accionComoAdministrador = accionAdmin;
+            cargarDatosTipoAccion_Modificar();
         }
 
-        private void cargarDatosTipoAccion_Modificar(bool estado)
+        private void cargarDatosTipoAccion_Modificar()
         {
             lblTitulo.Text = "MODIFICAR TAREA";
             btnSiguiente.Text = "Actualizar";
-            if (estado)
-            {
-                comboBoxEstado.SelectedIndex = 0;
-            }
-            else
-            {
-                comboBoxEstado.SelectedIndex = 1;
-            }
+            dateFechaCreacion.Value = DateTime.Parse(tareaAux.fechaCreacion.Replace("-", "/"));
+            dateFechaLimite.Value = DateTime.Parse(tareaAux.fechaLimite.Replace("-", "/"));
+            boxDescripcion.Texts = tareaAux.descripcion;
+            comboBoxEstado.SelectedIndex = tareaAux.estado;
         }
 
         private void cargarDatosTipoAccion_Agregar()
         {
             lblTitulo.Text = "AGREGAR TAREA";
             btnSiguiente.Text = "Agregar";
+            comboBoxEstado.SelectedIndex = 0;
+            dateFechaCreacion.Value = DateTime.Now;
         }
 
         public void cambiarTema()
@@ -81,8 +90,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private void activarTemaOscuro()
         {
             this.BackColor = Global.FrmOscuro_2;
-            boxID.BackColor = Color.Black;
-            boxID.BorderColor = boxID.BackColor;
+            //boxID.BackColor = Color.Black;
+            //boxID.BorderColor = boxID.BackColor;
 
             //boxHora.BackColor = boxID.BackColor;
             //boxHora.BorderColor = boxID.BackColor;
@@ -95,8 +104,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private void activarTemaClaro()
         {
             this.BackColor = Global.FrmClaro_2;
-            boxID.BackColor = Color.DarkGray;
-            boxID.BorderColor = boxID.BackColor;
+            //boxID.BackColor = Color.DarkGray;
+            //boxID.BorderColor = boxID.BackColor;
             //boxHora.BackColor = boxID.BackColor;
             //boxHora.BorderColor = boxID.BackColor;
             Global.pintarTxtBoxClaro(ref boxDescripcion);
@@ -104,12 +113,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             //Global.pintarTxtBoxClaro(ref boxPlazo);
         }
 
-        //private void cargarComboBox()
-        //{
-        //    comboBoxEstado.Items.Add("Completo");
-        //    comboBoxEstado.Items.Add("Incompleto");
-        //    comboBoxEstado.SelectedIndex = 1;
-        //}
+        private void cargarComboBox()
+        {
+            comboBoxEstado.Items.Add("Pendientes");
+            comboBoxEstado.Items.Add("Completadas");
+            comboBoxEstado.SelectedIndex = 0;
+        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -123,30 +132,32 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             {
                 MessageBox.Show("La descripción de la tarea a insertar no puede encontrarse vacía. Intente nuevamente");
                 return;
-            } 
-
-            _daoTareas = new TareasDiariasWS.TareasDiariasWSClient();
-            if (casoEdicion)
-            {
-                modificarTarea();
             }
-            else
+            if (DateTime.Compare(dateFechaCreacion.Value, dateFechaLimite.Value) > 0)
             {
-                agregarTarea();
+                MessageBox.Show("La fecha limite debe ser mayor a la fecha de creacion. Intente nuevamente");
+                return;
+            }
+            _daoTareas = new TareasDiariasWS.TareasDiariasWSClient();
+            switch (btnSiguiente.Text)
+            {
+                case "Actualizar":
+                    modificarTarea();
+                    break;
+                case "Agregar":
+                    agregarTarea();
+                    break;
             }
             this.Dispose();
         }
 
         private void modificarTarea()
         {
-            int procesoValido = -1;
-            tareaModificar.idTarea = Int32.Parse(boxID.Texts);
-            procesoValido = _daoTareas.modificarTarea(tareaModificar);
-            if (procesoValido == 1)
+            if (_daoTareas.modificarTarea(tareaAux) >0)
             {
                 MessageBox.Show("La tarea ha sido modificada con éxito");
-                if (accionComoAdministrador)
-                    notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha modificado la tarea con ID " + tareaModificar.idTarea + " : " + tareaModificar.descripcion + " . De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
+                //if (accionComoAdministrador)
+                    notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha modificado la tarea con ID " + tareaAux.idTarea + " : " + tareaAux.descripcion + " . De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
                 //ventanaTareas.actualizarDGV();
             }
             else
@@ -157,14 +168,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
 
         private void agregarTarea()
         {
-            int procesoValido = -1;
-            tareaModificar.fidItinerario = fidItinerario;
-            procesoValido = _daoTareas.insertarTarea(tareaModificar);
-            if (procesoValido != 0)
+            if (_daoTareas.insertarTarea(tareaAux)>0)
             {
                 MessageBox.Show("La tarea ha sido insertada con éxito");
-                if (accionComoAdministrador)
-                    notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha agregado la tarea con ID " + tareaModificar.idTarea + " : " + tareaModificar.descripcion + " . De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
+                //if (accionComoAdministrador)
+                    notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha agregado la tarea con ID " + tareaAux.idTarea + " : " + tareaAux.descripcion + " . De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
                 //ventanaTareas.actualizarDGV();
             }
             else
@@ -175,9 +183,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
 
         private void cargarDatos()
         {
-            tareaModificar.fechaCreacion = DateTime.Now.ToString("yyyy-MM-dd");
-            tareaModificar.descripcion = boxDescripcion.Texts;
-            tareaModificar.estado = comboBoxEstado.SelectedIndex;
+            tareaAux.fechaCreacion = dateFechaCreacion.Value.ToString("yyyy/MM/dd").Replace("/", "-");
+            tareaAux.fechaLimite = dateFechaLimite.Value.ToString("yyyy/MM/dd").Replace("/", "-");
+            tareaAux.descripcion = boxDescripcion.Texts;
+            tareaAux.descripcion = tareaAux.descripcion.Substring(0, 1).ToUpper() + tareaAux.descripcion.Substring(1).ToLower();
+            tareaAux.estado = comboBoxEstado.SelectedIndex;
         }
 
         private void notificacion(string ASUNTO, string CUERPO)
