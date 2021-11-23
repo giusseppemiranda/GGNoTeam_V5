@@ -1,3 +1,5 @@
+using GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +19,7 @@ namespace GGNoTeam_V5
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
+
         }
     }
 }

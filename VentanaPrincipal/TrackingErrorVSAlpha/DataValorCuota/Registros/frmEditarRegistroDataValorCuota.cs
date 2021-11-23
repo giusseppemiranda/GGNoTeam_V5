@@ -127,12 +127,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
                 i = _daoTE.insertarDataValorCuota(dato, fidFondo);
                 if (i == 1)
                 {
-                    //MessageBox.Show("Se insertó correctamente.");
+                    MessageBox.Show("Se insertó correctamente.");
                     this.Dispose();
                 }
                 else
                 {
-                    MessageBox.Show("No se han insertado los valores en la base de datos");
+                    MessageBox.Show("No se han insertado los valores en la base de datos.");
                 }
             }
             else
@@ -145,7 +145,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
                 }
                 else
                 {
-                    MessageBox.Show("No se han modificado los valores en la base de datos");
+                    MessageBox.Show("No se han modificado los valores en la base de datos.");
                 }
             }
 
@@ -155,7 +155,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         {
             int fidFondo = 0;
 
-            fidFondo = 3 * (comboAFP.SelectedIndex) + comboFondo.SelectedIndex + 1;
+            fidFondo = 3 * (comboAFP.SelectedIndex) + comboFondo.SelectedIndex + 1;            
 
             return fidFondo;
         }
