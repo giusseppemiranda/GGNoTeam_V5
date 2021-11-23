@@ -7,6 +7,7 @@ using GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores;
 using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha;
 using GGNoTeam_V5.Recursos.sendMail;
 using GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada;
+using GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas;
 
 namespace GGNoTeam_V5.VentanaPrincipal
 {
@@ -158,7 +159,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         public void mostrarTareasPendientes()
         {
-            abrirFormulario(new frmTareasPendientes(this, usuario));
+            abrirFormulario(new frmPropiasTareasPendientes(this, usuario));
         }
 
         private void cambiarTemaIconosMenu(ref IconButton icono)

@@ -311,6 +311,12 @@
     <Compile Include="VentanaPrincipal\TareasPendientes\Tareas\frmEditarTarea.Designer.cs">
       <DependentUpon>frmEditarTarea.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaPrincipal\TareasPendientes\Tareas\frmPropiasTareasPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\TareasPendientes\Tareas\frmPropiasTareasPendientes.Designer.cs">
+      <DependentUpon>frmPropiasTareasPendientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\frmCalcularAlpha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,6 +459,9 @@
     <EmbeddedResource Include="VentanaPrincipal\TareasPendientes\Tareas\frmEditarTarea.resx">
       <DependentUpon>frmEditarTarea.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\TareasPendientes\Tareas\frmPropiasTareasPendientes.resx">
+      <DependentUpon>frmPropiasTareasPendientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\DataValorCuota\frmCalcularAlpha.resx">
       <DependentUpon>frmCalcularAlpha.cs</DependentUpon>
     </EmbeddedResource>
@@ -550,6 +559,9 @@
     <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.listarNoUsuariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.listarPorCodExactoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -606,7 +618,7 @@
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.listarTareasResponse.datasource">
+    <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.modificarTareaResponse.datasource">

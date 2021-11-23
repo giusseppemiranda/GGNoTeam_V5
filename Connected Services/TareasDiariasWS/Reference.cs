@@ -16,22 +16,17 @@ namespace GGNoTeam_V5.TareasDiariasWS {
     public interface TareasDiariasWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasPorEstadoPorItin" +
+            "erarioRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasPorEstadoPorItin" +
+            "erarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse eliminarTarea(GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest request);
+        GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioResponse listarTareasPorEstadoPorItinerario(GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse> eliminarTareaAsync(GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse insertarTarea(GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse> insertarTareaAsync(GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasPorEstadoPorItin" +
+            "erarioRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasPorEstadoPorItin" +
+            "erarioResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioResponse> listarTareasPorEstadoPorItinerarioAsync(GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/modificarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/modificarTareaResponse")]
@@ -43,49 +38,22 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.modificarTareaResponse> modificarTareaAsync(GGNoTeam_V5.TareasDiariasWS.modificarTareaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TareasDiariasWS.listarTareasResponse listarTareas(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request);
+        GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse insertarTarea(GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/listarTareasResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasResponse> listarTareasAsync(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTarea", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarTareaRequest {
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse> insertarTareaAsync(GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idTarea;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse eliminarTarea(GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest request);
         
-        public eliminarTareaRequest() {
-        }
-        
-        public eliminarTareaRequest(int idTarea) {
-            this.idTarea = idTarea;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTareaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarTareaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarTareaResponse() {
-        }
-        
-        public eliminarTareaResponse(int @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse> eliminarTareaAsync(GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest request);
     }
     
     /// <remarks/>
@@ -98,15 +66,17 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         
         private string descripcionField;
         
-        private bool estadoField;
+        private int estadoField;
+        
+        private string fechaCreacionField;
+        
+        private string fechaLimiteField;
+        
+        private int fidAutorField;
         
         private int fidItinerarioField;
         
-        private string horaEstField;
-        
         private int idTareaField;
-        
-        private int plazoField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -122,7 +92,7 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public bool estado {
+        public int estado {
             get {
                 return this.estadoField;
             }
@@ -134,6 +104,42 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string fechaCreacion {
+            get {
+                return this.fechaCreacionField;
+            }
+            set {
+                this.fechaCreacionField = value;
+                this.RaisePropertyChanged("fechaCreacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string fechaLimite {
+            get {
+                return this.fechaLimiteField;
+            }
+            set {
+                this.fechaLimiteField = value;
+                this.RaisePropertyChanged("fechaLimite");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int fidAutor {
+            get {
+                return this.fidAutorField;
+            }
+            set {
+                this.fidAutorField = value;
+                this.RaisePropertyChanged("fidAutor");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int fidItinerario {
             get {
                 return this.fidItinerarioField;
@@ -145,19 +151,7 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string horaEst {
-            get {
-                return this.horaEstField;
-            }
-            set {
-                this.horaEstField = value;
-                this.RaisePropertyChanged("horaEst");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idTarea {
             get {
                 return this.idTareaField;
@@ -165,18 +159,6 @@ namespace GGNoTeam_V5.TareasDiariasWS {
             set {
                 this.idTareaField = value;
                 this.RaisePropertyChanged("idTarea");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int plazo {
-            get {
-                return this.plazoField;
-            }
-            set {
-                this.plazoField = value;
-                this.RaisePropertyChanged("plazo");
             }
         }
         
@@ -193,35 +175,40 @@ namespace GGNoTeam_V5.TareasDiariasWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTarea", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarTareaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTareasPorEstadoPorItinerario", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarTareasPorEstadoPorItinerarioRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TareasDiariasWS.tarea tarea;
+        public int estado;
         
-        public insertarTareaRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int fidItinerario;
+        
+        public listarTareasPorEstadoPorItinerarioRequest() {
         }
         
-        public insertarTareaRequest(GGNoTeam_V5.TareasDiariasWS.tarea tarea) {
-            this.tarea = tarea;
+        public listarTareasPorEstadoPorItinerarioRequest(int estado, int fidItinerario) {
+            this.estado = estado;
+            this.fidItinerario = fidItinerario;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTareaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarTareaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTareasPorEstadoPorItinerarioResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarTareasPorEstadoPorItinerarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TareasDiariasWS.tarea[] @return;
         
-        public insertarTareaResponse() {
+        public listarTareasPorEstadoPorItinerarioResponse() {
         }
         
-        public insertarTareaResponse(int @return) {
+        public listarTareasPorEstadoPorItinerarioResponse(GGNoTeam_V5.TareasDiariasWS.tarea[] @return) {
             this.@return = @return;
         }
     }
@@ -265,27 +252,71 @@ namespace GGNoTeam_V5.TareasDiariasWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTareas", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarTareasRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTarea", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarTareaRequest {
         
-        public listarTareasRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TareasDiariasWS.tarea tarea;
+        
+        public insertarTareaRequest() {
+        }
+        
+        public insertarTareaRequest(GGNoTeam_V5.TareasDiariasWS.tarea tarea) {
+            this.tarea = tarea;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTareasResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarTareasResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTareaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarTareaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TareasDiariasWS.tarea[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarTareasResponse() {
+        public insertarTareaResponse() {
         }
         
-        public listarTareasResponse(GGNoTeam_V5.TareasDiariasWS.tarea[] @return) {
+        public insertarTareaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTarea", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarTareaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idTarea;
+        
+        public eliminarTareaRequest() {
+        }
+        
+        public eliminarTareaRequest(int idTarea) {
+            this.idTarea = idTarea;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTareaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarTareaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarTareaResponse() {
+        }
+        
+        public eliminarTareaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -318,49 +349,28 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.eliminarTarea(GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest request) {
-            return base.Channel.eliminarTarea(request);
+        GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioResponse GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.listarTareasPorEstadoPorItinerario(GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioRequest request) {
+            return base.Channel.listarTareasPorEstadoPorItinerario(request);
         }
         
-        public int eliminarTarea(int idTarea) {
-            GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest inValue = new GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest();
-            inValue.idTarea = idTarea;
-            GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse retVal = ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).eliminarTarea(inValue);
+        public GGNoTeam_V5.TareasDiariasWS.tarea[] listarTareasPorEstadoPorItinerario(int estado, int fidItinerario) {
+            GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioRequest inValue = new GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioRequest();
+            inValue.estado = estado;
+            inValue.fidItinerario = fidItinerario;
+            GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioResponse retVal = ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).listarTareasPorEstadoPorItinerario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse> GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.eliminarTareaAsync(GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest request) {
-            return base.Channel.eliminarTareaAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioResponse> GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.listarTareasPorEstadoPorItinerarioAsync(GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioRequest request) {
+            return base.Channel.listarTareasPorEstadoPorItinerarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse> eliminarTareaAsync(int idTarea) {
-            GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest inValue = new GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest();
-            inValue.idTarea = idTarea;
-            return ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).eliminarTareaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.insertarTarea(GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest request) {
-            return base.Channel.insertarTarea(request);
-        }
-        
-        public int insertarTarea(GGNoTeam_V5.TareasDiariasWS.tarea tarea) {
-            GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest inValue = new GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest();
-            inValue.tarea = tarea;
-            GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse retVal = ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).insertarTarea(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse> GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.insertarTareaAsync(GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest request) {
-            return base.Channel.insertarTareaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse> insertarTareaAsync(GGNoTeam_V5.TareasDiariasWS.tarea tarea) {
-            GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest inValue = new GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest();
-            inValue.tarea = tarea;
-            return ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).insertarTareaAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioResponse> listarTareasPorEstadoPorItinerarioAsync(int estado, int fidItinerario) {
+            GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioRequest inValue = new GGNoTeam_V5.TareasDiariasWS.listarTareasPorEstadoPorItinerarioRequest();
+            inValue.estado = estado;
+            inValue.fidItinerario = fidItinerario;
+            return ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).listarTareasPorEstadoPorItinerarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -387,24 +397,49 @@ namespace GGNoTeam_V5.TareasDiariasWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TareasDiariasWS.listarTareasResponse GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.listarTareas(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request) {
-            return base.Channel.listarTareas(request);
+        GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.insertarTarea(GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest request) {
+            return base.Channel.insertarTarea(request);
         }
         
-        public GGNoTeam_V5.TareasDiariasWS.tarea[] listarTareas() {
-            GGNoTeam_V5.TareasDiariasWS.listarTareasRequest inValue = new GGNoTeam_V5.TareasDiariasWS.listarTareasRequest();
-            GGNoTeam_V5.TareasDiariasWS.listarTareasResponse retVal = ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).listarTareas(inValue);
+        public int insertarTarea(GGNoTeam_V5.TareasDiariasWS.tarea tarea) {
+            GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest inValue = new GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest();
+            inValue.tarea = tarea;
+            GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse retVal = ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).insertarTarea(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasResponse> GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.listarTareasAsync(GGNoTeam_V5.TareasDiariasWS.listarTareasRequest request) {
-            return base.Channel.listarTareasAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse> GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.insertarTareaAsync(GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest request) {
+            return base.Channel.insertarTareaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.listarTareasResponse> listarTareasAsync() {
-            GGNoTeam_V5.TareasDiariasWS.listarTareasRequest inValue = new GGNoTeam_V5.TareasDiariasWS.listarTareasRequest();
-            return ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).listarTareasAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.insertarTareaResponse> insertarTareaAsync(GGNoTeam_V5.TareasDiariasWS.tarea tarea) {
+            GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest inValue = new GGNoTeam_V5.TareasDiariasWS.insertarTareaRequest();
+            inValue.tarea = tarea;
+            return ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).insertarTareaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.eliminarTarea(GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest request) {
+            return base.Channel.eliminarTarea(request);
+        }
+        
+        public int eliminarTarea(int idTarea) {
+            GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest inValue = new GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest();
+            inValue.idTarea = idTarea;
+            GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse retVal = ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).eliminarTarea(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse> GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS.eliminarTareaAsync(GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest request) {
+            return base.Channel.eliminarTareaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse> eliminarTareaAsync(int idTarea) {
+            GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest inValue = new GGNoTeam_V5.TareasDiariasWS.eliminarTareaRequest();
+            inValue.idTarea = idTarea;
+            return ((GGNoTeam_V5.TareasDiariasWS.TareasDiariasWS)(this)).eliminarTareaAsync(inValue);
         }
     }
 }

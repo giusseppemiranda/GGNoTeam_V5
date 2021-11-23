@@ -35,17 +35,11 @@
   <message name="listarAdministradoresResponse">
     <part name="parameters" element="tns:listarAdministradoresResponse" />
   </message>
-  <message name="listarUsuarios">
-    <part name="parameters" element="tns:listarUsuarios" />
+  <message name="listarPersonaPorID">
+    <part name="parameters" element="tns:listarPersonaPorID" />
   </message>
-  <message name="listarUsuariosResponse">
-    <part name="parameters" element="tns:listarUsuariosResponse" />
-  </message>
-  <message name="modificarPersona">
-    <part name="parameters" element="tns:modificarPersona" />
-  </message>
-  <message name="modificarPersonaResponse">
-    <part name="parameters" element="tns:modificarPersonaResponse" />
+  <message name="listarPersonaPorIDResponse">
+    <part name="parameters" element="tns:listarPersonaPorIDResponse" />
   </message>
   <message name="eliminarPersona">
     <part name="parameters" element="tns:eliminarPersona" />
@@ -53,17 +47,29 @@
   <message name="eliminarPersonaResponse">
     <part name="parameters" element="tns:eliminarPersonaResponse" />
   </message>
-  <message name="insertarPersona">
-    <part name="parameters" element="tns:insertarPersona" />
-  </message>
-  <message name="insertarPersonaResponse">
-    <part name="parameters" element="tns:insertarPersonaResponse" />
-  </message>
   <message name="listarNoUsuarios">
     <part name="parameters" element="tns:listarNoUsuarios" />
   </message>
   <message name="listarNoUsuariosResponse">
     <part name="parameters" element="tns:listarNoUsuariosResponse" />
+  </message>
+  <message name="modificarPersona">
+    <part name="parameters" element="tns:modificarPersona" />
+  </message>
+  <message name="modificarPersonaResponse">
+    <part name="parameters" element="tns:modificarPersonaResponse" />
+  </message>
+  <message name="listarUsuarios">
+    <part name="parameters" element="tns:listarUsuarios" />
+  </message>
+  <message name="listarUsuariosResponse">
+    <part name="parameters" element="tns:listarUsuariosResponse" />
+  </message>
+  <message name="insertarPersona">
+    <part name="parameters" element="tns:insertarPersona" />
+  </message>
+  <message name="insertarPersonaResponse">
+    <part name="parameters" element="tns:insertarPersonaResponse" />
   </message>
   <portType name="LoginWS">
     <operation name="listarPorCodExacto_TareasInompletas">
@@ -86,25 +92,29 @@
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarAdministradoresRequest" message="tns:listarAdministradores" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarAdministradoresResponse" message="tns:listarAdministradoresResponse" />
     </operation>
-    <operation name="listarUsuarios">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosRequest" message="tns:listarUsuarios" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
-    </operation>
-    <operation name="modificarPersona">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaRequest" message="tns:modificarPersona" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaResponse" message="tns:modificarPersonaResponse" />
+    <operation name="listarPersonaPorID">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDRequest" message="tns:listarPersonaPorID" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDResponse" message="tns:listarPersonaPorIDResponse" />
     </operation>
     <operation name="eliminarPersona">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/eliminarPersonaRequest" message="tns:eliminarPersona" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/eliminarPersonaResponse" message="tns:eliminarPersonaResponse" />
     </operation>
-    <operation name="insertarPersona">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/insertarPersonaRequest" message="tns:insertarPersona" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/insertarPersonaResponse" message="tns:insertarPersonaResponse" />
-    </operation>
     <operation name="listarNoUsuarios">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosRequest" message="tns:listarNoUsuarios" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosResponse" message="tns:listarNoUsuariosResponse" />
+    </operation>
+    <operation name="modificarPersona">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaRequest" message="tns:modificarPersona" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaResponse" message="tns:modificarPersonaResponse" />
+    </operation>
+    <operation name="listarUsuarios">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosRequest" message="tns:listarUsuarios" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
+    </operation>
+    <operation name="insertarPersona">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/insertarPersonaRequest" message="tns:insertarPersona" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/LoginWS/insertarPersonaResponse" message="tns:insertarPersonaResponse" />
     </operation>
   </portType>
   <binding name="LoginWSPortBinding" type="tns:LoginWS">
@@ -154,16 +164,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarUsuarios">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarPersona">
+    <operation name="listarPersonaPorID">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -181,7 +182,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarPersona">
+    <operation name="listarNoUsuarios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -190,7 +191,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarNoUsuarios">
+    <operation name="modificarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPersona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

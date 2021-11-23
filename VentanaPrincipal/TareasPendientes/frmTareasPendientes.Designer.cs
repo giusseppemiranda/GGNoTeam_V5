@@ -34,17 +34,19 @@ namespace GGNoTeam_V5.VentanaPrincipal
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.comboEstadoTarea = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
+            this.btnConsultarTareas = new FontAwesome.Sharp.IconButton();
+            this.btnListarCompletos = new FontAwesome.Sharp.IconButton();
+            this.btnListarPorTipo = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnModificarTarea = new FontAwesome.Sharp.IconButton();
             this.btnAgregarTarea = new FontAwesome.Sharp.IconButton();
-            this.btnListarPorTipo = new FontAwesome.Sharp.IconButton();
-            this.btnListarCompletos = new FontAwesome.Sharp.IconButton();
-            this.comboEstadoTarea = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvTareasPendientes.ColumnHeadersHeight = 25;
             this.dgvTareasPendientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Estado,
+            this.fechaCreacion,
+            this.fechaLimite,
             this.Descripcion,
             this.Autor});
             this.dgvTareasPendientes.EnableHeadersVisualStyles = false;
@@ -104,13 +107,19 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.ID.ReadOnly = true;
             this.ID.Width = 76;
             // 
-            // Estado
+            // fechaCreacion
             // 
-            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 66;
+            this.fechaCreacion.HeaderText = "Fecha de creación";
+            this.fechaCreacion.Name = "fechaCreacion";
+            this.fechaCreacion.ReadOnly = true;
+            this.fechaCreacion.Width = 129;
+            // 
+            // fechaLimite
+            // 
+            this.fechaLimite.HeaderText = "Fecha límite";
+            this.fechaLimite.Name = "fechaLimite";
+            this.fechaLimite.ReadOnly = true;
+            this.fechaLimite.Width = 97;
             // 
             // Descripcion
             // 
@@ -136,6 +145,95 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.lblNombre.Size = new System.Drawing.Size(235, 20);
             this.lblNombre.TabIndex = 31;
             this.lblNombre.Text = "Gestión de tareas de -USUARIO-";
+            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
+            // 
+            // comboEstadoTarea
+            // 
+            this.comboEstadoTarea.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboEstadoTarea.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboEstadoTarea.BorderSize = 1;
+            this.comboEstadoTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboEstadoTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboEstadoTarea.ForeColor = System.Drawing.Color.DimGray;
+            this.comboEstadoTarea.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboEstadoTarea.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboEstadoTarea.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboEstadoTarea.Location = new System.Drawing.Point(360, 16);
+            this.comboEstadoTarea.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboEstadoTarea.Name = "comboEstadoTarea";
+            this.comboEstadoTarea.Padding = new System.Windows.Forms.Padding(1);
+            this.comboEstadoTarea.Size = new System.Drawing.Size(200, 30);
+            this.comboEstadoTarea.TabIndex = 67;
+            this.comboEstadoTarea.Texts = "";
+            this.comboEstadoTarea.OnSelectedIndexChanged += new System.EventHandler(this.comboEstadoTarea_OnSelectedIndexChanged);
+            this.comboEstadoTarea.Load += new System.EventHandler(this.comboEstadoTarea_Load);
+            // 
+            // btnConsultarTareas
+            // 
+            this.btnConsultarTareas.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnConsultarTareas.FlatAppearance.BorderSize = 0;
+            this.btnConsultarTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarTareas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnConsultarTareas.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarTareas.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnConsultarTareas.IconColor = System.Drawing.Color.White;
+            this.btnConsultarTareas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConsultarTareas.IconSize = 25;
+            this.btnConsultarTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarTareas.Location = new System.Drawing.Point(566, 16);
+            this.btnConsultarTareas.Name = "btnConsultarTareas";
+            this.btnConsultarTareas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnConsultarTareas.Size = new System.Drawing.Size(53, 30);
+            this.btnConsultarTareas.TabIndex = 68;
+            this.btnConsultarTareas.Text = " ";
+            this.btnConsultarTareas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultarTareas.UseVisualStyleBackColor = false;
+            this.btnConsultarTareas.Click += new System.EventHandler(this.btnConsultarTareas_Click);
+            // 
+            // btnListarCompletos
+            // 
+            this.btnListarCompletos.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnListarCompletos.FlatAppearance.BorderSize = 0;
+            this.btnListarCompletos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarCompletos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnListarCompletos.ForeColor = System.Drawing.Color.White;
+            this.btnListarCompletos.IconChar = FontAwesome.Sharp.IconChar.CheckDouble;
+            this.btnListarCompletos.IconColor = System.Drawing.Color.White;
+            this.btnListarCompletos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnListarCompletos.IconSize = 32;
+            this.btnListarCompletos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnListarCompletos.Location = new System.Drawing.Point(191, 487);
+            this.btnListarCompletos.Name = "btnListarCompletos";
+            this.btnListarCompletos.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnListarCompletos.Size = new System.Drawing.Size(151, 52);
+            this.btnListarCompletos.TabIndex = 33;
+            this.btnListarCompletos.Text = "Listar Total Tareas";
+            this.btnListarCompletos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnListarCompletos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnListarCompletos.UseVisualStyleBackColor = false;
+            // 
+            // btnListarPorTipo
+            // 
+            this.btnListarPorTipo.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnListarPorTipo.FlatAppearance.BorderSize = 0;
+            this.btnListarPorTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarPorTipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnListarPorTipo.ForeColor = System.Drawing.Color.White;
+            this.btnListarPorTipo.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnListarPorTipo.IconColor = System.Drawing.Color.White;
+            this.btnListarPorTipo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnListarPorTipo.IconSize = 32;
+            this.btnListarPorTipo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnListarPorTipo.Location = new System.Drawing.Point(34, 487);
+            this.btnListarPorTipo.Name = "btnListarPorTipo";
+            this.btnListarPorTipo.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnListarPorTipo.Size = new System.Drawing.Size(151, 52);
+            this.btnListarPorTipo.TabIndex = 32;
+            this.btnListarPorTipo.Text = "Listar Completos";
+            this.btnListarPorTipo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnListarPorTipo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnListarPorTipo.UseVisualStyleBackColor = false;
+            this.btnListarPorTipo.Click += new System.EventHandler(this.btnListarPorTipo_Click);
             // 
             // btnEliminar
             // 
@@ -229,77 +327,12 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnAgregarTarea.UseVisualStyleBackColor = false;
             this.btnAgregarTarea.Click += new System.EventHandler(this.btnAgregarTarea_Click);
             // 
-            // btnListarPorTipo
-            // 
-            this.btnListarPorTipo.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnListarPorTipo.FlatAppearance.BorderSize = 0;
-            this.btnListarPorTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarPorTipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnListarPorTipo.ForeColor = System.Drawing.Color.White;
-            this.btnListarPorTipo.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.btnListarPorTipo.IconColor = System.Drawing.Color.White;
-            this.btnListarPorTipo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnListarPorTipo.IconSize = 32;
-            this.btnListarPorTipo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListarPorTipo.Location = new System.Drawing.Point(34, 487);
-            this.btnListarPorTipo.Name = "btnListarPorTipo";
-            this.btnListarPorTipo.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnListarPorTipo.Size = new System.Drawing.Size(151, 52);
-            this.btnListarPorTipo.TabIndex = 32;
-            this.btnListarPorTipo.Text = "Listar Completos";
-            this.btnListarPorTipo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnListarPorTipo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnListarPorTipo.UseVisualStyleBackColor = false;
-            this.btnListarPorTipo.Click += new System.EventHandler(this.btnListarPorTipo_Click);
-            // 
-            // btnListarCompletos
-            // 
-            this.btnListarCompletos.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnListarCompletos.FlatAppearance.BorderSize = 0;
-            this.btnListarCompletos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarCompletos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnListarCompletos.ForeColor = System.Drawing.Color.White;
-            this.btnListarCompletos.IconChar = FontAwesome.Sharp.IconChar.CheckDouble;
-            this.btnListarCompletos.IconColor = System.Drawing.Color.White;
-            this.btnListarCompletos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnListarCompletos.IconSize = 32;
-            this.btnListarCompletos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListarCompletos.Location = new System.Drawing.Point(191, 487);
-            this.btnListarCompletos.Name = "btnListarCompletos";
-            this.btnListarCompletos.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnListarCompletos.Size = new System.Drawing.Size(151, 52);
-            this.btnListarCompletos.TabIndex = 33;
-            this.btnListarCompletos.Text = "Listar Total Tareas";
-            this.btnListarCompletos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnListarCompletos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnListarCompletos.UseVisualStyleBackColor = false;
-            this.btnListarCompletos.Click += new System.EventHandler(this.btnListarCompletos_Click);
-            // 
-            // comboEstadoTarea
-            // 
-            this.comboEstadoTarea.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboEstadoTarea.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboEstadoTarea.BorderSize = 1;
-            this.comboEstadoTarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboEstadoTarea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboEstadoTarea.ForeColor = System.Drawing.Color.DimGray;
-            this.comboEstadoTarea.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboEstadoTarea.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboEstadoTarea.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboEstadoTarea.Location = new System.Drawing.Point(476, 12);
-            this.comboEstadoTarea.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboEstadoTarea.Name = "comboEstadoTarea";
-            this.comboEstadoTarea.Padding = new System.Windows.Forms.Padding(1);
-            this.comboEstadoTarea.Size = new System.Drawing.Size(200, 30);
-            this.comboEstadoTarea.TabIndex = 67;
-            this.comboEstadoTarea.Texts = "";
-            this.comboEstadoTarea.OnSelectedIndexChanged += new System.EventHandler(this.comboEstadoTarea_OnSelectedIndexChanged);
-            // 
             // frmTareasPendientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 553);
+            this.Controls.Add(this.btnConsultarTareas);
             this.Controls.Add(this.comboEstadoTarea);
             this.Controls.Add(this.btnListarCompletos);
             this.Controls.Add(this.btnListarPorTipo);
@@ -323,17 +356,19 @@ namespace GGNoTeam_V5.VentanaPrincipal
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTareasPendientes;
-        private FontAwesome.Sharp.IconButton btnModificarTarea;
         private FontAwesome.Sharp.IconButton btnAgregarTarea;
         private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.Label lblNombre;
-        private FontAwesome.Sharp.IconButton btnListarPorTipo;
-        private FontAwesome.Sharp.IconButton btnListarCompletos;
+        private Recursos.UserControls.GGComboBox comboEstadoTarea;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaCreacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaLimite;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
-        private Recursos.UserControls.GGComboBox comboEstadoTarea;
+        private FontAwesome.Sharp.IconButton btnConsultarTareas;
+        private FontAwesome.Sharp.IconButton btnListarPorTipo;
+        private FontAwesome.Sharp.IconButton btnListarCompletos;
+        private FontAwesome.Sharp.IconButton btnModificarTarea;
     }
 }
