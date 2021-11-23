@@ -234,6 +234,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxValorCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxValorCuota.Texts = "";
             this.boxValorCuota.UnderlinedStyle = true;
+            this.boxValorCuota._TextChanged += new System.EventHandler(this.boxValorCuota__TextChanged);
             // 
             // lblValorCuota
             // 
@@ -267,6 +268,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxCuota.Texts = "";
             this.boxCuota.UnderlinedStyle = true;
+            this.boxCuota._TextChanged += new System.EventHandler(this.boxCuota__TextChanged);
             // 
             // lblCuota
             // 

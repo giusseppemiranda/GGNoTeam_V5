@@ -79,6 +79,31 @@ namespace GGNoTeam_V5.Recursos.Validaciones
             return 0;
         }
 
+        public static int PuntoFlotante(GGNoTeam_V5.Recursos.UserControls.GGTextBox box, string Titulo)
+        {
+            string msgCasoVacio = Titulo + " no debe encontrarse vacía. Intente nuevamente.";
+            string msgCasoInvalido = Titulo + " tiene error. No debe contener caracteres especiales, tampoco iniciar con espacios en blancos ni debe contener letras.";
+
+            return PuntoFlotante(box, msgCasoVacio, msgCasoInvalido);
+        }
+
+        public static int PuntoFlotante(GGNoTeam_V5.Recursos.UserControls.GGTextBox box, string msgCasoVacio, string msgCasoInvalido)
+        {
+            string patron;
+
+            if (cadenaVacia(box, msgCasoVacio) != 0) return 1;
+
+
+            patron = "^[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)$";
+            if (!Regex.IsMatch(box.Texts, patron)){
+                MessageBox.Show(msgCasoInvalido);
+                return 2;
+            } else
+            {
+                return 0;
+            }
+        }
+
 
         /**
          * (VALOR RETORNO) :   MOTIVO
