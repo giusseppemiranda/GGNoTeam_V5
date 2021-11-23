@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.Recursos.Validaciones;
 
 namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
 {
@@ -146,56 +147,34 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            int valido = -1;
+            valido = ValidarTextBox.NumeroEntero(boxCodigo, "El código",15);
+            if (valido != 0) return;
+            valido = ValidarTextBox.NoNumerico(boxNombres, "El nombre",45);
+            if (valido != 0) return;
+            valido = ValidarTextBox.NoNumerico(boxApellidos, "El apellido",45);
+            if (valido != 0) return;
+            valido = ValidarTextBox.correo(boxCorreo, "El correo", 45);
+            if (valido != 0) return;
+            valido = ValidarTextBox.cadenaGrande(boxContraseña, "La contraseña", 15);
+            if (valido != 0) return;
+            valido = ValidarTextBox.cadenaGrande(boxCodigoValidacion, "El código de validación", 4);
+            if (valido != 0) return;
 
-            if(boxCodigo.Texts == "")
-            {
-                MessageBox.Show("El codigo del usuario no puede ser vacío. Intente nuevamente.");
-                return;
-            }
-
-            if(boxNombres.Texts == "")
-            {
-                MessageBox.Show("El nombre del usuario no puede ser vacío. Intente nuevamente.");
-                return;
-            }
-
-            if (boxApellidos.Texts == "")
-            {
-                MessageBox.Show("El apellido del usuario no puede ser vacío. Intente nuevamente.");
-                return;
-            }
-
-            if (boxCorreo.Texts == "")
-            {
-                MessageBox.Show("El correo del usuario no puede ser vacío. Intente nuevamente.");
-                return;
-            }
-
-            if (boxContraseña.Texts.Length >= 15)
-            {
-                MessageBox.Show("La contraseña no puede tener más de 15 caractéres. Intente nuevamente.");
-                return;
-            }
-
-            if (boxCodigoValidacion.Texts.Length != 4)
-            {
-                MessageBox.Show("El código de validación de ingreso por correo es un número de 4 digitos. Intente nuevamente.");
-                return;
-            }
-
+            //MessageBox.Show("Paso validación");
             ventanaPadre.activarBotones();
-            
+
             if (boxID.Texts == "")
             {
-                //persona.idPersona = Int32.Parse(boxID.Texts);
                 cargarDatos_2();
                 _daoCliente.insertarPersona(persona);
-            } else
+            }
+            else
             {
                 cargarDatos();
                 _daoCliente.modificarPersona(persona);
             }
-            
+
             this.Dispose();
         }
         private void cargarDatos_2()

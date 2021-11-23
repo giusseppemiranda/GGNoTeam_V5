@@ -34,16 +34,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.lblFondo = new System.Windows.Forms.Label();
             this.boxPatrimonio = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.lblPatrimonio = new System.Windows.Forms.Label();
-            this.boxCuota = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.lblCuota = new System.Windows.Forms.Label();
-            this.boxValorCuota = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.lblValorCuota = new System.Windows.Forms.Label();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.comboAFP = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
+            this.boxValorCuota = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.lblValorCuota = new System.Windows.Forms.Label();
+            this.boxCuota = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.lblCuota = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -90,7 +90,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.boxPatrimonio.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxPatrimonio.ForeColor = System.Drawing.Color.DimGray;
             this.boxPatrimonio.IsFocused = false;
-            this.boxPatrimonio.Location = new System.Drawing.Point(190, 198);
+            this.boxPatrimonio.Location = new System.Drawing.Point(190, 302);
             this.boxPatrimonio.MaxLength = 32767;
             this.boxPatrimonio.Multiline = false;
             this.boxPatrimonio.Name = "boxPatrimonio";
@@ -107,80 +107,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.lblPatrimonio.AutoSize = true;
             this.lblPatrimonio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblPatrimonio.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblPatrimonio.Location = new System.Drawing.Point(55, 198);
+            this.lblPatrimonio.Location = new System.Drawing.Point(55, 302);
             this.lblPatrimonio.MaximumSize = new System.Drawing.Size(120, 40);
             this.lblPatrimonio.Name = "lblPatrimonio";
             this.lblPatrimonio.Size = new System.Drawing.Size(117, 30);
             this.lblPatrimonio.TabIndex = 34;
             this.lblPatrimonio.Text = "Patrimonio (CuotaxValorCuota):";
-            // 
-            // boxCuota
-            // 
-            this.boxCuota.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.boxCuota.BackColor = System.Drawing.SystemColors.Window;
-            this.boxCuota.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxCuota.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxCuota.BorderSize = 2;
-            this.boxCuota.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxCuota.ForeColor = System.Drawing.Color.DimGray;
-            this.boxCuota.IsFocused = false;
-            this.boxCuota.Location = new System.Drawing.Point(191, 243);
-            this.boxCuota.MaxLength = 32767;
-            this.boxCuota.Multiline = false;
-            this.boxCuota.Name = "boxCuota";
-            this.boxCuota.Padding = new System.Windows.Forms.Padding(6);
-            this.boxCuota.PasswordChar = false;
-            this.boxCuota.Size = new System.Drawing.Size(214, 30);
-            this.boxCuota.TabIndex = 37;
-            this.boxCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxCuota.Texts = "";
-            this.boxCuota.UnderlinedStyle = true;
-            this.boxCuota._TextChanged += new System.EventHandler(this.boxCuota__TextChanged);
-            // 
-            // lblCuota
-            // 
-            this.lblCuota.AutoSize = true;
-            this.lblCuota.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCuota.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCuota.Location = new System.Drawing.Point(56, 255);
-            this.lblCuota.Name = "lblCuota";
-            this.lblCuota.Size = new System.Drawing.Size(42, 15);
-            this.lblCuota.TabIndex = 36;
-            this.lblCuota.Text = "Cuota:";
-            // 
-            // boxValorCuota
-            // 
-            this.boxValorCuota.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.boxValorCuota.BackColor = System.Drawing.SystemColors.Window;
-            this.boxValorCuota.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxValorCuota.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxValorCuota.BorderSize = 2;
-            this.boxValorCuota.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxValorCuota.ForeColor = System.Drawing.Color.DimGray;
-            this.boxValorCuota.IsFocused = false;
-            this.boxValorCuota.Location = new System.Drawing.Point(191, 290);
-            this.boxValorCuota.MaxLength = 32767;
-            this.boxValorCuota.Multiline = false;
-            this.boxValorCuota.Name = "boxValorCuota";
-            this.boxValorCuota.Padding = new System.Windows.Forms.Padding(6);
-            this.boxValorCuota.PasswordChar = false;
-            this.boxValorCuota.Size = new System.Drawing.Size(214, 30);
-            this.boxValorCuota.TabIndex = 39;
-            this.boxValorCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxValorCuota.Texts = "";
-            this.boxValorCuota.UnderlinedStyle = true;
-            this.boxValorCuota._TextChanged += new System.EventHandler(this.boxValorCuota__TextChanged);
-            // 
-            // lblValorCuota
-            // 
-            this.lblValorCuota.AutoSize = true;
-            this.lblValorCuota.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblValorCuota.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblValorCuota.Location = new System.Drawing.Point(56, 297);
-            this.lblValorCuota.Name = "lblValorCuota";
-            this.lblValorCuota.Size = new System.Drawing.Size(73, 15);
-            this.lblValorCuota.TabIndex = 38;
-            this.lblValorCuota.Text = "Valor Cuota:";
             // 
             // btnCancelar
             // 
@@ -281,21 +213,89 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.comboFondo.TabIndex = 46;
             this.comboFondo.Texts = "";
             // 
+            // boxValorCuota
+            // 
+            this.boxValorCuota.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.boxValorCuota.BackColor = System.Drawing.SystemColors.Window;
+            this.boxValorCuota.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxValorCuota.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxValorCuota.BorderSize = 2;
+            this.boxValorCuota.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxValorCuota.ForeColor = System.Drawing.Color.DimGray;
+            this.boxValorCuota.IsFocused = false;
+            this.boxValorCuota.Location = new System.Drawing.Point(190, 245);
+            this.boxValorCuota.MaxLength = 32767;
+            this.boxValorCuota.Multiline = false;
+            this.boxValorCuota.Name = "boxValorCuota";
+            this.boxValorCuota.Padding = new System.Windows.Forms.Padding(6);
+            this.boxValorCuota.PasswordChar = false;
+            this.boxValorCuota.Size = new System.Drawing.Size(214, 30);
+            this.boxValorCuota.TabIndex = 50;
+            this.boxValorCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxValorCuota.Texts = "";
+            this.boxValorCuota.UnderlinedStyle = true;
+            this.boxValorCuota._TextChanged += new System.EventHandler(this.boxValorCuota__TextChanged);
+            // 
+            // lblValorCuota
+            // 
+            this.lblValorCuota.AutoSize = true;
+            this.lblValorCuota.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblValorCuota.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblValorCuota.Location = new System.Drawing.Point(57, 255);
+            this.lblValorCuota.Name = "lblValorCuota";
+            this.lblValorCuota.Size = new System.Drawing.Size(73, 15);
+            this.lblValorCuota.TabIndex = 49;
+            this.lblValorCuota.Text = "Valor Cuota:";
+            // 
+            // boxCuota
+            // 
+            this.boxCuota.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.boxCuota.BackColor = System.Drawing.SystemColors.Window;
+            this.boxCuota.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxCuota.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.boxCuota.BorderSize = 2;
+            this.boxCuota.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxCuota.ForeColor = System.Drawing.Color.DimGray;
+            this.boxCuota.IsFocused = false;
+            this.boxCuota.Location = new System.Drawing.Point(190, 198);
+            this.boxCuota.MaxLength = 32767;
+            this.boxCuota.Multiline = false;
+            this.boxCuota.Name = "boxCuota";
+            this.boxCuota.Padding = new System.Windows.Forms.Padding(6);
+            this.boxCuota.PasswordChar = false;
+            this.boxCuota.Size = new System.Drawing.Size(214, 30);
+            this.boxCuota.TabIndex = 48;
+            this.boxCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxCuota.Texts = "";
+            this.boxCuota.UnderlinedStyle = true;
+            this.boxCuota._TextChanged += new System.EventHandler(this.boxCuota__TextChanged);
+            // 
+            // lblCuota
+            // 
+            this.lblCuota.AutoSize = true;
+            this.lblCuota.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCuota.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblCuota.Location = new System.Drawing.Point(57, 213);
+            this.lblCuota.Name = "lblCuota";
+            this.lblCuota.Size = new System.Drawing.Size(42, 15);
+            this.lblCuota.TabIndex = 47;
+            this.lblCuota.Text = "Cuota:";
+            // 
             // frmEditarRegistroDataValorCuota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 410);
+            this.Controls.Add(this.boxValorCuota);
+            this.Controls.Add(this.lblValorCuota);
+            this.Controls.Add(this.boxCuota);
+            this.Controls.Add(this.lblCuota);
             this.Controls.Add(this.comboFondo);
             this.Controls.Add(this.comboAFP);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
-            this.Controls.Add(this.boxValorCuota);
-            this.Controls.Add(this.lblValorCuota);
-            this.Controls.Add(this.boxCuota);
-            this.Controls.Add(this.lblCuota);
             this.Controls.Add(this.boxPatrimonio);
             this.Controls.Add(this.lblPatrimonio);
             this.Controls.Add(this.lblFondo);
@@ -305,6 +305,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             this.Name = "frmEditarRegistroDataValorCuota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAgregarRegistroDataValorCuota";
+            this.Load += new System.EventHandler(this.frmEditarRegistroDataValorCuota_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,15 +317,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         private System.Windows.Forms.Label lblFondo;
         private Recursos.UserControls.GGTextBox boxPatrimonio;
         private System.Windows.Forms.Label lblPatrimonio;
-        private Recursos.UserControls.GGTextBox boxCuota;
-        private System.Windows.Forms.Label lblCuota;
-        private Recursos.UserControls.GGTextBox boxValorCuota;
-        private System.Windows.Forms.Label lblValorCuota;
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblTitulo;
         private Recursos.UserControls.GGComboBox comboAFP;
         private Recursos.UserControls.GGComboBox comboFondo;
+        private Recursos.UserControls.GGTextBox boxValorCuota;
+        private System.Windows.Forms.Label lblValorCuota;
+        private Recursos.UserControls.GGTextBox boxCuota;
+        private System.Windows.Forms.Label lblCuota;
     }
 }

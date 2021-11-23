@@ -1,4 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.Recursos.Validaciones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +22,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         public frmEditarRegistroDataValorCuota(TrackingErrorWS.afp[] listaAfps)
         {
             InitializeComponent();
-                        
-            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();            
+
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             dato = new TrackingErrorWS.dataValorCuota();
             lblTitulo.Text = "INSERTAR DATA VALOR CUOTA";
             insertar = true;
@@ -39,7 +40,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         //EDITAR DATA VALOR CUOTA
         public frmEditarRegistroDataValorCuota(TrackingErrorWS.dataValorCuota dato, TrackingErrorWS.afp[] listaAfps, int tipoFondo)
         {
-            InitializeComponent();           
+            InitializeComponent();
 
             lblTitulo.Text = "EDITAR DATA VALOR CUOTA";
             this.dato = dato;
@@ -49,7 +50,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             cargarCombo();
             cargarComboAFP(listaAfps);
             cargarCamposEdicion(tipoFondo);
-            
+
         }
 
         private void cargarCamposEdicion(int tipoFondo)
@@ -64,10 +65,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
 
         private void cargarComboAFP(TrackingErrorWS.afp[] listaAfps)
         {
-            for(int i = 0; i < listaAfps.Length; i++)
+            for (int i = 0; i < listaAfps.Length; i++)
             {
                 comboAFP.Items.Add(listaAfps[i].nombre);
-            }            
+            }
         }
 
         private void cargarCombo()
@@ -105,60 +106,49 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
-        {            
-            try
+        {
+            int validar = -1;
+            validar = ValidarTextBox.PuntoFlotante(boxCuota, "La CUOTA");
+            if (validar != 0) return;
+            validar = ValidarTextBox.PuntoFlotante(boxValorCuota, "El VALOR CUOTA");
+            if (validar != 0) return;
+
+            dato.fecha = dateTimePicker1.Value;
+            dato.fechaSpecified = true;
+            dato.fidAFP = comboAFP.SelectedIndex + 1;
+            dato.cuotas = Convert.ToDouble(boxCuota.Texts);
+            dato.valorCuota = Convert.ToDouble(boxValorCuota.Texts);
+
+
+            int fidFondo = calcularFidFondo();
+            int i = -1;
+            if (insertar)
             {
-                dato.fecha = dateTimePicker1.Value;
-                dato.fechaSpecified = true;
-                dato.fidAFP = comboAFP.SelectedIndex+1;
-                dato.cuotas = Convert.ToDouble(boxCuota.Texts);
-                dato.valorCuota = Convert.ToDouble(boxValorCuota.Texts);                
-                
-                if(boxValorCuota.Texts == "")
+                i = _daoTE.insertarDataValorCuota(dato, fidFondo);
+                if (i == 1)
                 {
-                    MessageBox.Show("Valor cuota no puede estar vacío");
-                    return;
-                } 
-
-
-                if (boxCuota.Texts == "")
-                {
-                    MessageBox.Show("Cuota no puede estar vacío");
-                    return;
+                    //MessageBox.Show("Se insertó correctamente.");
+                    this.Dispose();
                 }
-
-
-                int fidFondo = calcularFidFondo();
-                int i = -1;
-                if (insertar)
-                {                    
-                    i = _daoTE.insertarDataValorCuota(dato, fidFondo);
-                    if(i == 1)
-                    {
-                        //MessageBox.Show("Se insertó correctamente.");
-                        this.Dispose(); 
-                    } else
-                    {
-                        MessageBox.Show("No se han insertado los valores en la base de datos");
-                    }
-                } else
+                else
                 {
-                    i = _daoTE.modificarDataValorCuota(dato, fidFondo);
-                    if (i == 1)
-                    {
-                        MessageBox.Show("Se modificó correctamente.");
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se han modificado los valores en la base de datos");
-                    }
-                }                                
+                    MessageBox.Show("No se han insertado los valores en la base de datos");
+                }
             }
-            catch 
+            else
             {
-                MessageBox.Show("Pruebe ingresando nuevamente, hay un error. Cuota y valor cuota deben ser números.");
+                i = _daoTE.modificarDataValorCuota(dato, fidFondo);
+                if (i == 1)
+                {
+                    MessageBox.Show("Se modificó correctamente.");
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("No se han modificado los valores en la base de datos");
+                }
             }
+
         }
 
         private int calcularFidFondo()
@@ -182,6 +172,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             }
             catch
             {
+                boxPatrimonio.Texts = "ERROR";
                 return;
             }
         }
@@ -198,8 +189,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
             }
             catch
             {
+                boxPatrimonio.Texts = "ERROR";
                 return;
             }
+        }
+
+        private void frmEditarRegistroDataValorCuota_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -178,6 +178,7 @@
       <DependentUpon>GGTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Recursos\UserControls\Global.cs" />
+    <Compile Include="Recursos\Validaciones\ValidarTextBox.cs" />
     <Compile Include="VentanaPrincipal\Bandeja de Entrada\frmGmail.cs">
       <SubType>Form</SubType>
     </Compile>
