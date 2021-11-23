@@ -22,11 +22,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         private GestionInstrumentosOriginadoresWS.originador[] originadores;
         private GestionInstrumentosOriginadoresWS.emisor[] emisores;
         private GestionInstrumentosOriginadoresWS.originador origAux;
+        private GestionInstrumentosOriginadoresWS.originador origAux2;
+        private GestionInstrumentosOriginadoresWS.emisor emiAux;
+        private string[] nombresOrig;
         public frmGestionOriginadoresInstrumentos(frmPrincipal ventana)
         {
             InitializeComponent();
-            btnAsociado.Visible = false;
-            btnAsociado.Enabled = false;
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             dgvInstrumentosOriginadores.AutoGenerateColumns = false;
@@ -78,9 +79,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 if (originadores != null)
                 {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.originador>(originadores.ToList());
-                    btnAsociado.Visible = true;
-                    btnAsociado.Enabled = true;
-                    btnAsociado.Text = "Ver Emisor Asociado";
+                    cargarNombresEmis();
+
+
                 }
                 else MessageBox.Show("No se encontraron resultados");
             }
@@ -91,9 +92,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 if (instrumentos != null)
                 {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.instrumento>(instrumentos.ToList());
-                    btnAsociado.Visible = true;
-                    btnAsociado.Enabled = true;
-                    btnAsociado.Text = "Ver Originador Asociado";
+                    cargarNombresOrig();
+                    
                 }
                 else MessageBox.Show("No se encontraron resultados");
 
@@ -105,11 +105,38 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 if (emisores != null)
                 {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList());
-                    btnAsociado.Visible = false;
-                    btnAsociado.Enabled = false;
-                    btnAsociado.Text = "";
+                    
                 }
                 else MessageBox.Show("No se encontraron resultados");
+            }
+
+
+        }
+
+        private void cargarNombresOrig()
+        {
+            int i = 0;
+            while (true)
+            {
+                if (i==instrumentos.Length) break;
+                origAux2 = _daoInstOrig.buscarOrigId(instrumentos[i].fidOriginador);
+                dgvInstrumentosOriginadores.Rows[i].Cells[17].Value = origAux2.codigoOriginador;
+                i++;
+            }
+                
+            
+        }
+
+        private void cargarNombresEmis()
+        {
+            int i = 0;
+            while (true)
+            {
+                if (i == originadores.Length) break;
+                emiAux = _daoInstOrig.BuscarUnEmisorPorID(originadores[i].fidEmisor);
+                dgvInstrumentosOriginadores.Rows[i].Cells[4].Value = emiAux.codigoEmisor;
+                dgvInstrumentosOriginadores.Rows[i].Cells[5].Value = emiAux.nombre;
+                i++;
             }
 
 
@@ -278,10 +305,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 dgvInstrumentosOriginadores.Columns.Add("codigoOriginador", "Código originador");
                 dgvInstrumentosOriginadores.Columns.Add("nombreOriginador", "Nombre");
                 dgvInstrumentosOriginadores.Columns.Add("sectorGics", "Sector");
+                dgvInstrumentosOriginadores.Columns.Add("codEmi", "Codigo de emisor asociado");
+                dgvInstrumentosOriginadores.Columns.Add("nombreEmi", "Nombre de emisor asociado");
                 dgvInstrumentosOriginadores.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgvInstrumentosOriginadores.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgvInstrumentosOriginadores.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgvInstrumentosOriginadores.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                //dgvInstrumentosOriginadores.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                //dgvInstrumentosOriginadores.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
@@ -302,6 +333,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 dgvInstrumentosOriginadores.Columns.Add("moodys", "Moodys");
                 dgvInstrumentosOriginadores.Columns.Add("fechaMoodys", "Fecha Moodys");
                 dgvInstrumentosOriginadores.Columns.Add("fechaUltimaClasificacion", "Fecha Ultima Clasificacion");
+                dgvInstrumentosOriginadores.Columns.Add("codOrig", "Codigo de originador asociado");
+
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
             {
@@ -314,11 +347,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             }
         }
 
-            private string obtenerNombreOrig(int idOrig)
-            {
-                origAux =_daoInstOrig.buscarOrigId(idOrig);
-                return origAux.nombreOriginador;
-            }
 
         private void btnAsociado_Click(object sender, EventArgs e)
         {
