@@ -706,6 +706,12 @@
     <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarAlphaXFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.listarAlpha_Fecha_FondoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\TrackingErrorWS\GGNoTeam_V5.TrackingErrorWS.ListarAssetErrorXFechaResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -40,13 +40,21 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicial = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.ggTextBox3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.ggTextBox1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.ggTextBox2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.btnExportar = new FontAwesome.Sharp.IconButton();
-            this.dgvDataValorCuota = new System.Windows.Forms.DataGridView();
             this.idDVC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxAlpha_3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxAlpha_1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.boxAlpha_2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.dgvDataValorCuota = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreAFP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuotas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patrimonio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ytod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataValorCuota)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,69 +153,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.lblTitulo.TabIndex = 48;
             this.lblTitulo.Text = "Calculo Alpha";
             // 
-            // ggTextBox3
-            // 
-            this.ggTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox3.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox3.BorderFocusColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox3.BorderSize = 2;
-            this.ggTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox3.IsFocused = false;
-            this.ggTextBox3.Location = new System.Drawing.Point(659, 428);
-            this.ggTextBox3.MaxLength = 32767;
-            this.ggTextBox3.Multiline = false;
-            this.ggTextBox3.Name = "ggTextBox3";
-            this.ggTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.ggTextBox3.PasswordChar = false;
-            this.ggTextBox3.Size = new System.Drawing.Size(125, 32);
-            this.ggTextBox3.TabIndex = 59;
-            this.ggTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ggTextBox3.Texts = "";
-            this.ggTextBox3.UnderlinedStyle = false;
-            // 
-            // ggTextBox1
-            // 
-            this.ggTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox1.BorderFocusColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox1.BorderSize = 2;
-            this.ggTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox1.IsFocused = false;
-            this.ggTextBox1.Location = new System.Drawing.Point(284, 428);
-            this.ggTextBox1.MaxLength = 32767;
-            this.ggTextBox1.Multiline = false;
-            this.ggTextBox1.Name = "ggTextBox1";
-            this.ggTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.ggTextBox1.PasswordChar = false;
-            this.ggTextBox1.Size = new System.Drawing.Size(125, 32);
-            this.ggTextBox1.TabIndex = 57;
-            this.ggTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ggTextBox1.Texts = "";
-            this.ggTextBox1.UnderlinedStyle = false;
-            // 
-            // ggTextBox2
-            // 
-            this.ggTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.ggTextBox2.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox2.BorderFocusColor = System.Drawing.Color.DodgerBlue;
-            this.ggTextBox2.BorderSize = 2;
-            this.ggTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.ggTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.ggTextBox2.IsFocused = false;
-            this.ggTextBox2.Location = new System.Drawing.Point(477, 428);
-            this.ggTextBox2.MaxLength = 32767;
-            this.ggTextBox2.Multiline = false;
-            this.ggTextBox2.Name = "ggTextBox2";
-            this.ggTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.ggTextBox2.PasswordChar = false;
-            this.ggTextBox2.Size = new System.Drawing.Size(125, 32);
-            this.ggTextBox2.TabIndex = 58;
-            this.ggTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ggTextBox2.Texts = "";
-            this.ggTextBox2.UnderlinedStyle = false;
-            // 
             // btnExportar
             // 
             this.btnExportar.BackColor = System.Drawing.Color.MediumAquamarine;
@@ -229,6 +174,84 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnExportar.UseVisualStyleBackColor = false;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
+            // idDVC
+            // 
+            this.idDVC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idDVC.HeaderText = "ID";
+            this.idDVC.Name = "idDVC";
+            // 
+            // fecha
+            // 
+            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            // 
+            // boxAlpha_3
+            // 
+            this.boxAlpha_3.BackColor = System.Drawing.SystemColors.Window;
+            this.boxAlpha_3.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxAlpha_3.BorderFocusColor = System.Drawing.Color.DodgerBlue;
+            this.boxAlpha_3.BorderSize = 2;
+            this.boxAlpha_3.Enabled = false;
+            this.boxAlpha_3.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxAlpha_3.ForeColor = System.Drawing.Color.DimGray;
+            this.boxAlpha_3.IsFocused = false;
+            this.boxAlpha_3.Location = new System.Drawing.Point(659, 428);
+            this.boxAlpha_3.MaxLength = 32767;
+            this.boxAlpha_3.Multiline = false;
+            this.boxAlpha_3.Name = "boxAlpha_3";
+            this.boxAlpha_3.Padding = new System.Windows.Forms.Padding(7);
+            this.boxAlpha_3.PasswordChar = false;
+            this.boxAlpha_3.Size = new System.Drawing.Size(125, 32);
+            this.boxAlpha_3.TabIndex = 59;
+            this.boxAlpha_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.boxAlpha_3.Texts = "";
+            this.boxAlpha_3.UnderlinedStyle = false;
+            // 
+            // boxAlpha_1
+            // 
+            this.boxAlpha_1.BackColor = System.Drawing.SystemColors.Window;
+            this.boxAlpha_1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxAlpha_1.BorderFocusColor = System.Drawing.Color.DodgerBlue;
+            this.boxAlpha_1.BorderSize = 2;
+            this.boxAlpha_1.Enabled = false;
+            this.boxAlpha_1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxAlpha_1.ForeColor = System.Drawing.Color.DimGray;
+            this.boxAlpha_1.IsFocused = false;
+            this.boxAlpha_1.Location = new System.Drawing.Point(284, 428);
+            this.boxAlpha_1.MaxLength = 32767;
+            this.boxAlpha_1.Multiline = false;
+            this.boxAlpha_1.Name = "boxAlpha_1";
+            this.boxAlpha_1.Padding = new System.Windows.Forms.Padding(7);
+            this.boxAlpha_1.PasswordChar = false;
+            this.boxAlpha_1.Size = new System.Drawing.Size(125, 32);
+            this.boxAlpha_1.TabIndex = 57;
+            this.boxAlpha_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.boxAlpha_1.Texts = "";
+            this.boxAlpha_1.UnderlinedStyle = false;
+            // 
+            // boxAlpha_2
+            // 
+            this.boxAlpha_2.BackColor = System.Drawing.SystemColors.Window;
+            this.boxAlpha_2.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.boxAlpha_2.BorderFocusColor = System.Drawing.Color.DodgerBlue;
+            this.boxAlpha_2.BorderSize = 2;
+            this.boxAlpha_2.Enabled = false;
+            this.boxAlpha_2.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.boxAlpha_2.ForeColor = System.Drawing.Color.DimGray;
+            this.boxAlpha_2.IsFocused = false;
+            this.boxAlpha_2.Location = new System.Drawing.Point(477, 428);
+            this.boxAlpha_2.MaxLength = 32767;
+            this.boxAlpha_2.Multiline = false;
+            this.boxAlpha_2.Name = "boxAlpha_2";
+            this.boxAlpha_2.Padding = new System.Windows.Forms.Padding(7);
+            this.boxAlpha_2.PasswordChar = false;
+            this.boxAlpha_2.Size = new System.Drawing.Size(125, 32);
+            this.boxAlpha_2.TabIndex = 58;
+            this.boxAlpha_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.boxAlpha_2.Texts = "";
+            this.boxAlpha_2.UnderlinedStyle = false;
+            // 
             // dgvDataValorCuota
             // 
             this.dgvDataValorCuota.AllowUserToAddRows = false;
@@ -248,6 +271,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDataValorCuota.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDataValorCuota.ColumnHeadersHeight = 25;
+            this.dgvDataValorCuota.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.nombreAFP,
+            this.Fondo,
+            this.cuotas,
+            this.valorCuota,
+            this.patrimonio,
+            this.ytod});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -269,22 +301,70 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.dgvDataValorCuota.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDataValorCuota.RowTemplate.Height = 25;
             this.dgvDataValorCuota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDataValorCuota.Size = new System.Drawing.Size(952, 324);
+            this.dgvDataValorCuota.Size = new System.Drawing.Size(952, 320);
             this.dgvDataValorCuota.TabIndex = 65;
-            this.dgvDataValorCuota.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataValorCuota_CellContentClick);
             this.dgvDataValorCuota.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDataValorCuota_CellFormatting);
             // 
-            // idDVC
+            // dataGridViewTextBoxColumn1
             // 
-            this.idDVC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idDVC.HeaderText = "ID";
-            this.idDVC.Name = "idDVC";
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 43;
             // 
-            // fecha
+            // dataGridViewTextBoxColumn2
             // 
-            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 62;
+            // 
+            // nombreAFP
+            // 
+            this.nombreAFP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreAFP.HeaderText = "Nombre AFP";
+            this.nombreAFP.Name = "nombreAFP";
+            this.nombreAFP.ReadOnly = true;
+            // 
+            // Fondo
+            // 
+            this.Fondo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Fondo.HeaderText = "Tipo fondo";
+            this.Fondo.Name = "Fondo";
+            this.Fondo.ReadOnly = true;
+            this.Fondo.Width = 90;
+            // 
+            // cuotas
+            // 
+            this.cuotas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cuotas.HeaderText = "Cuotas";
+            this.cuotas.Name = "cuotas";
+            this.cuotas.ReadOnly = true;
+            this.cuotas.Width = 67;
+            // 
+            // valorCuota
+            // 
+            this.valorCuota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.valorCuota.HeaderText = "Valor Cuota";
+            this.valorCuota.Name = "valorCuota";
+            this.valorCuota.ReadOnly = true;
+            this.valorCuota.Width = 93;
+            // 
+            // patrimonio
+            // 
+            this.patrimonio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.patrimonio.HeaderText = "Patrimonio";
+            this.patrimonio.Name = "patrimonio";
+            this.patrimonio.ReadOnly = true;
+            // 
+            // ytod
+            // 
+            this.ytod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ytod.HeaderText = "Y_To_D";
+            this.ytod.Name = "ytod";
+            this.ytod.ReadOnly = true;
             // 
             // frmCalcularAlpha
             // 
@@ -293,14 +373,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.ClientSize = new System.Drawing.Size(981, 478);
             this.Controls.Add(this.dgvDataValorCuota);
             this.Controls.Add(this.btnExportar);
-            this.Controls.Add(this.ggTextBox3);
-            this.Controls.Add(this.ggTextBox1);
+            this.Controls.Add(this.boxAlpha_3);
+            this.Controls.Add(this.boxAlpha_1);
             this.Controls.Add(this.lblFondo_3);
             this.Controls.Add(this.lblFondo_2);
             this.Controls.Add(this.lblFondo_1);
             this.Controls.Add(this.lblTE);
             this.Controls.Add(this.btnConsultarRegistros);
-            this.Controls.Add(this.ggTextBox2);
+            this.Controls.Add(this.boxAlpha_2);
             this.Controls.Add(this.dateInicial);
             this.Controls.Add(this.lblFechaInicial);
             this.Controls.Add(this.lblTitulo);
@@ -316,20 +396,28 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         #endregion
 
-        private Recursos.UserControls.GGTextBox ggTextBox3;
-        private Recursos.UserControls.GGTextBox ggTextBox1;
+        private Recursos.UserControls.GGTextBox boxAlpha_3;
+        private Recursos.UserControls.GGTextBox boxAlpha_1;
         private System.Windows.Forms.Label lblFondo_3;
         private System.Windows.Forms.Label lblFondo_2;
         private System.Windows.Forms.Label lblFondo_1;
         private System.Windows.Forms.Label lblTE;
         private FontAwesome.Sharp.IconButton btnConsultarRegistros;
-        private Recursos.UserControls.GGTextBox ggTextBox2;
+        private Recursos.UserControls.GGTextBox boxAlpha_2;
         private System.Windows.Forms.DateTimePicker dateInicial;
         private System.Windows.Forms.Label lblFechaInicial;
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnExportar;
-        private System.Windows.Forms.DataGridView dgvDataValorCuota;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDVC;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridView dgvDataValorCuota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreAFP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fondo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuotas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorCuota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patrimonio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ytod;
     }
 }
