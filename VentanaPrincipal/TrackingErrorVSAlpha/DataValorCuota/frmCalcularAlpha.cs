@@ -63,18 +63,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
-            datos = _dao.listarDataValorCuotaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
-            if(datos != null)
-            {                
-                nombreafp.Clear();
-                for (int i = 0; i < datos.Length; i++)
-                {
-                    //nombreafp.Add(listaAfps[datos[i].fidAFP - 1].nombre);                    
-                }
-
-                dgvDataValorCuota.DataSource = datos;
-            }
-            
+                       
         }
 
         private void btnExportar_Click(object sender, EventArgs e)
