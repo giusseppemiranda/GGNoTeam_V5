@@ -28,6 +28,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             cambiarTema();
             cargarTipoEdicion();
             cargarComboFondo();
+            cargarComboOperacion();
+            cargarComboAssetClass();
         }
 
         ////Modificar Ejecucion
@@ -40,6 +42,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             cargarTipoEdicion();
             cargarDatosEjecucion();
             cargarComboFondo();
+            cargarComboOperacion();
+            cargarComboAssetClass();
         }
 
         private void cargarDatosEjecucion()
@@ -48,9 +52,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             TextBoxCodigoSbs.Texts = Ejecucion.codsbs;
             TextBoxCodigoSin.Texts = Ejecucion.codisin;
             TextBoxInstrumento.Texts = Ejecucion.instrumento;
-            dateTimePicker1.Value = Ejecucion.fechaOper;
-            TextBoxOperacion.Texts = Ejecucion.tipoOper.ToString();
-            comboFondo.SelectedIndex = Convert.ToInt32(Ejecucion.fondo) - 1;
+            dateTimePicker1.Value = Convert.ToDateTime(Ejecucion.fecha);
+            TextBoxOperacion.Texts = Ejecucion.fidTipoOperacion.ToString();
+            comboFondo.SelectedIndex = Ejecucion.fidFondo - 1;
+        }
+        private void cargarComboOperacion()
+        {
+            String[] operaciones = { "Compra", "Venta" };
+            comboOperacion.DataSource = operaciones;
+        }
+        private void cargarComboAssetClass()
+        {
+            String[] assets = { "Renta Fija", "Renta Variable" };
+            ComboAssetClass.DataSource = assets;
         }
         private void cargarComboFondo()
         {
@@ -72,6 +86,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
         }
         public void cambiarTema()
         {
+            if (Global.TemaOscuro)
+            {
+                activarTemaClaro();
+            }
+            else
+            {
+                activarTemaOscuro();
+            }
 
         }
         private void activarTemaOscuro()
@@ -90,9 +112,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
         }
         private bool cargarDatos()
         {
-            Ejecucion.fechaOper = dateTimePicker1.Value;
-            Ejecucion.fechaOperSpecified= true;
-            Ejecucion.fondo= (MonitoreoOrdenWS.eTipoFondo)(comboFondo.SelectedIndex + 1);
+            Ejecucion.fecha = dateTimePicker1.Value.ToString("yyyy-MM-dd"); 
+            Ejecucion.fidFondo= comboFondo.SelectedIndex + 1;
 
             if (TextBoxAUMEjecuciones.Texts == "")
             {
@@ -128,8 +149,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
                 Ejecucion.codsbs = TextBoxCodigoSbs.Texts;
                 Ejecucion.codisin = TextBoxCodigoSin.Texts;
                 Ejecucion.instrumento = TextBoxInstrumento.Texts;
-                Ejecucion.tipoOper = (MonitoreoOrdenWS.eTipoOperacion)Convert.ToInt32(TextBoxOperacion.Texts);
-                }
+                Ejecucion.fidTipoOperacion = comboOperacion.SelectedIndex + 1;
+                Ejecucion.fidAssetClass = ComboAssetClass.SelectedIndex + 1;
+            }
             catch
             {
                 MessageBox.Show("Los valores ingresados en porcentaje Fondo codigo SBS  y en codigo ISIN deben ser números, no deben contener letras. Intente nuevamente");
@@ -147,7 +169,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
                 if (cargarDatos())
                 {
                     int i = _daoMO.insertarEjecucion(Ejecucion);
-                    if (i == 1)
+                    if (i != 0)
                     {
                         MessageBox.Show("La inserción fue realizada con éxito.");
                         this.Dispose();
@@ -179,5 +201,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
 
         }
 
-}
+        private void frmEditarEjecucion_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

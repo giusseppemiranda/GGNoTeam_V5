@@ -183,7 +183,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.TextBoxAUMOrdenes.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxAUMOrdenes.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxAUMOrdenes.IsFocused = false;
-            this.TextBoxAUMOrdenes.Location = new System.Drawing.Point(378, 780);
+            this.TextBoxAUMOrdenes.Location = new System.Drawing.Point(378, 771);
             this.TextBoxAUMOrdenes.Margin = new System.Windows.Forms.Padding(6);
             this.TextBoxAUMOrdenes.MaxLength = 32767;
             this.TextBoxAUMOrdenes.Multiline = false;
@@ -206,7 +206,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.TextBoxInstrumento.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxInstrumento.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxInstrumento.IsFocused = false;
-            this.TextBoxInstrumento.Location = new System.Drawing.Point(378, 558);
+            this.TextBoxInstrumento.Location = new System.Drawing.Point(378, 549);
             this.TextBoxInstrumento.Margin = new System.Windows.Forms.Padding(6);
             this.TextBoxInstrumento.MaxLength = 32767;
             this.TextBoxInstrumento.Multiline = false;
@@ -229,7 +229,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.TextBoxCodigoSin.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxCodigoSin.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxCodigoSin.IsFocused = false;
-            this.TextBoxCodigoSin.Location = new System.Drawing.Point(378, 445);
+            this.TextBoxCodigoSin.Location = new System.Drawing.Point(378, 436);
             this.TextBoxCodigoSin.Margin = new System.Windows.Forms.Padding(6);
             this.TextBoxCodigoSin.MaxLength = 32767;
             this.TextBoxCodigoSin.Multiline = false;
@@ -272,7 +272,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.TextBoxCodigoSbs.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxCodigoSbs.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxCodigoSbs.IsFocused = false;
-            this.TextBoxCodigoSbs.Location = new System.Drawing.Point(378, 336);
+            this.TextBoxCodigoSbs.Location = new System.Drawing.Point(378, 327);
             this.TextBoxCodigoSbs.Margin = new System.Windows.Forms.Padding(6);
             this.TextBoxCodigoSbs.MaxLength = 32767;
             this.TextBoxCodigoSbs.Multiline = false;
@@ -338,7 +338,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.ComboAssetClass.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.ComboAssetClass.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.ComboAssetClass.ListTextColor = System.Drawing.Color.DimGray;
-            this.ComboAssetClass.Location = new System.Drawing.Point(378, 889);
+            this.ComboAssetClass.Location = new System.Drawing.Point(378, 869);
             this.ComboAssetClass.Margin = new System.Windows.Forms.Padding(6);
             this.ComboAssetClass.MinimumSize = new System.Drawing.Size(400, 58);
             this.ComboAssetClass.Name = "ComboAssetClass";
@@ -352,7 +352,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(97, 905);
+            this.label5.Location = new System.Drawing.Point(97, 885);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 32);
@@ -363,7 +363,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 1105);
+            this.ClientSize = new System.Drawing.Size(902, 1086);
             this.Controls.Add(this.ComboAssetClass);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboOperacion);

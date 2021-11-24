@@ -34,13 +34,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
             this.dgvOrdenes = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoSBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoISIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Instrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Operación = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AUMEjecuciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
@@ -48,13 +41,21 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.btnAgregarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnConsultarEjecuciones = new FontAwesome.Sharp.IconButton();
             this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AssetClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoSBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoISIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Instrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Operación = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AUMEjecuciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
             // dateInicial
             // 
             this.dateInicial.Location = new System.Drawing.Point(68, 127);
-            this.dateInicial.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dateInicial.Margin = new System.Windows.Forms.Padding(6);
             this.dateInicial.Name = "dateInicial";
             this.dateInicial.Size = new System.Drawing.Size(392, 31);
             this.dateInicial.TabIndex = 72;
@@ -92,6 +93,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.dgvOrdenes.ColumnHeadersHeight = 25;
             this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
+            this.AssetClass,
             this.Fondo,
             this.CodigoSBS,
             this.CodigoISIN,
@@ -100,7 +102,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.AUMEjecuciones});
             this.dgvOrdenes.EnableHeadersVisualStyles = false;
             this.dgvOrdenes.Location = new System.Drawing.Point(66, 177);
-            this.dgvOrdenes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvOrdenes.Margin = new System.Windows.Forms.Padding(6);
             this.dgvOrdenes.MultiSelect = false;
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.ReadOnly = true;
@@ -113,62 +115,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrdenes.Size = new System.Drawing.Size(1848, 783);
             this.dgvOrdenes.TabIndex = 71;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 10;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 122;
-            // 
-            // Fondo
-            // 
-            this.Fondo.HeaderText = "Fondo";
-            this.Fondo.MinimumWidth = 10;
-            this.Fondo.Name = "Fondo";
-            this.Fondo.ReadOnly = true;
-            this.Fondo.Width = 130;
-            // 
-            // CodigoSBS
-            // 
-            this.CodigoSBS.HeaderText = "Codigo SBS";
-            this.CodigoSBS.MinimumWidth = 10;
-            this.CodigoSBS.Name = "CodigoSBS";
-            this.CodigoSBS.ReadOnly = true;
-            this.CodigoSBS.Width = 188;
-            // 
-            // CodigoISIN
-            // 
-            this.CodigoISIN.HeaderText = "Codigo ISIN ";
-            this.CodigoISIN.MinimumWidth = 10;
-            this.CodigoISIN.Name = "CodigoISIN";
-            this.CodigoISIN.ReadOnly = true;
-            this.CodigoISIN.Width = 202;
-            // 
-            // Instrumento
-            // 
-            this.Instrumento.HeaderText = "Instrumento";
-            this.Instrumento.MinimumWidth = 10;
-            this.Instrumento.Name = "Instrumento";
-            this.Instrumento.ReadOnly = true;
-            this.Instrumento.Width = 200;
-            // 
-            // Operación
-            // 
-            this.Operación.HeaderText = "Operación";
-            this.Operación.MinimumWidth = 10;
-            this.Operación.Name = "Operación";
-            this.Operación.ReadOnly = true;
-            this.Operación.Width = 176;
-            // 
-            // AUMEjecuciones
-            // 
-            this.AUMEjecuciones.HeaderText = "AUM Ejecuciones";
-            this.AUMEjecuciones.MinimumWidth = 10;
-            this.AUMEjecuciones.Name = "AUMEjecuciones";
-            this.AUMEjecuciones.ReadOnly = true;
-            this.AUMEjecuciones.Width = 255;
+            this.dgvOrdenes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrdenes_CellFormatting);
             // 
             // lblTitulo
             // 
@@ -302,6 +249,70 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.comboFondo.TabIndex = 81;
             this.comboFondo.Texts = "Fondo";
             // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 10;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 122;
+            // 
+            // AssetClass
+            // 
+            this.AssetClass.HeaderText = "Asset Class";
+            this.AssetClass.MinimumWidth = 10;
+            this.AssetClass.Name = "AssetClass";
+            this.AssetClass.ReadOnly = true;
+            this.AssetClass.Width = 183;
+            // 
+            // Fondo
+            // 
+            this.Fondo.HeaderText = "Fondo";
+            this.Fondo.MinimumWidth = 10;
+            this.Fondo.Name = "Fondo";
+            this.Fondo.ReadOnly = true;
+            this.Fondo.Width = 130;
+            // 
+            // CodigoSBS
+            // 
+            this.CodigoSBS.HeaderText = "Codigo SBS";
+            this.CodigoSBS.MinimumWidth = 10;
+            this.CodigoSBS.Name = "CodigoSBS";
+            this.CodigoSBS.ReadOnly = true;
+            this.CodigoSBS.Width = 188;
+            // 
+            // CodigoISIN
+            // 
+            this.CodigoISIN.HeaderText = "Codigo ISIN ";
+            this.CodigoISIN.MinimumWidth = 10;
+            this.CodigoISIN.Name = "CodigoISIN";
+            this.CodigoISIN.ReadOnly = true;
+            this.CodigoISIN.Width = 202;
+            // 
+            // Instrumento
+            // 
+            this.Instrumento.HeaderText = "Instrumento";
+            this.Instrumento.MinimumWidth = 10;
+            this.Instrumento.Name = "Instrumento";
+            this.Instrumento.ReadOnly = true;
+            this.Instrumento.Width = 200;
+            // 
+            // Operación
+            // 
+            this.Operación.HeaderText = "Operación";
+            this.Operación.MinimumWidth = 10;
+            this.Operación.Name = "Operación";
+            this.Operación.ReadOnly = true;
+            this.Operación.Width = 176;
+            // 
+            // AUMEjecuciones
+            // 
+            this.AUMEjecuciones.HeaderText = "AUM Ejecuciones";
+            this.AUMEjecuciones.MinimumWidth = 10;
+            this.AUMEjecuciones.Name = "AUMEjecuciones";
+            this.AUMEjecuciones.ReadOnly = true;
+            this.AUMEjecuciones.Width = 255;
+            // 
             // frmEjecucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -318,7 +329,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.Controls.Add(this.dgvOrdenes);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmEjecucion";
             this.Text = "frmEjecucion";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
@@ -338,13 +349,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
         private System.Windows.Forms.DataGridView dgvOrdenes;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblSubtitulo;
+        private Recursos.UserControls.GGComboBox comboFondo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AssetClass;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fondo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoSBS;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoISIN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Instrumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Operación;
         private System.Windows.Forms.DataGridViewTextBoxColumn AUMEjecuciones;
-        private Recursos.UserControls.GGComboBox comboFondo;
     }
 }

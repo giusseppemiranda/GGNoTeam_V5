@@ -16,18 +16,23 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
     public partial class frmOrden : Form
     {
         private frmPrincipal ventanaPrincipal = null;
+        private TrackingErrorWS.TrackingErrorWSClient _daoTE;
         private MonitoreoOrdenWS.MonitorOrdenWSClient _daoMO;
         private MonitoreoOrdenWS.orden[] listaOrdenes;
+        private String[] assets = { "Renta Fija", "Renta Variable" };
+        private String[] operaciones = { "Compra", "Venta" };
+        private String[] fondos;
+
         public frmOrden(frmPrincipal ventana)
         {
             InitializeComponent();
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             cambiarTema();
+            cargarComboFondo();
         }
-
-
 
         private void btnModificarRegistro_Click(object sender, EventArgs e)
         {
@@ -62,48 +67,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private void btnConsultarEjecuciones_Click(object sender, EventArgs e)
         {
 
-            //listaOrdenes = _daoMO.ListarOrdenPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1));
             listaOrdenes = _daoMO.ListarOrdenPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
-            dgvOrdenes.Rows.Clear();
+           
             if (listaOrdenes != null)
             {
-                for (int i = 0; i < listaOrdenes.Length; i++)
-                {
-                    dgvOrdenes.Rows.Add(
-                        listaOrdenes[i].fecha.ToString("dd/MM/yyyy"),
-                        comboFondo.SelectedItem.ToString(),
-                        listaOrdenes[i].id,
-                        listaOrdenes[i].codSBS,
-                        listaOrdenes[i].codISIN,
-                        listaOrdenes[i].instrumento,
-                        listaOrdenes[i].operacion.ToString(),
-                        listaOrdenes[i].porcentageFondo,
-                        listaOrdenes[i].assetClass.ToString());
-                }
+                dgvOrdenes.DataSource = listaOrdenes;
             }
-            dgvOrdenes.Refresh();
+            else
+            {
+                dgvOrdenes.DataSource = null;
+            }
         }
 
-        private void lblTitulo_Click(object sender, EventArgs e)
+
+        private void cargarComboFondo()
         {
-
+            fondos = _daoTE.ListarFondos();
+            comboFondo.DataSource = fondos;
         }
-
-        private void dgvOrdenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblFecha_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateInicial_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         public void cambiarTema()
         {
             if (Global.TemaOscuro)
@@ -127,10 +108,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.BackColor = Global.FrmClaro;
 
         }
-
-        private void btnModificarRegistro_Click_1(object sender, EventArgs e)
+    
+        private void dgvOrdenes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-
+            MonitoreoOrdenWS.orden orden = (MonitoreoOrdenWS.orden)dgvOrdenes.Rows[e.RowIndex].DataBoundItem;
+           
+            dgvOrdenes.Rows[e.RowIndex].Cells[0].Value = orden.fecha;
+            dgvOrdenes.Rows[e.RowIndex].Cells[1].Value = assets[orden.fidAssetClass-1];
+            dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = fondos[orden.fidFondo-1];
+            dgvOrdenes.Rows[e.RowIndex].Cells[3].Value = orden.codsbs;
+            dgvOrdenes.Rows[e.RowIndex].Cells[4].Value = orden.codisin;
+            dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = orden.instrumento;
+            dgvOrdenes.Rows[e.RowIndex].Cells[6].Value = operaciones[orden.fidTipoOperacion - 1];
+            dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = orden.porcentageFondo;
         }
     }
 }

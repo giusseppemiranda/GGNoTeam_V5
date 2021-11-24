@@ -32,6 +32,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             cargarTipoEdicion();
             cargarComboFondo();
             cargarComboOperacion();
+            cargarComboAssetClass();
         }
 
         //Modificar Orden
@@ -44,18 +45,20 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             cambiarTema();
             cargarTipoEdicion();
             cargarDatosOrden();
+            cargarComboOperacion();
+            cargarComboAssetClass();
             cargarComboFondo();
         }
 
         private void cargarDatosOrden()
         {
             TextBoxAUMOrdenes.Texts = Orden.porcentageFondo.ToString();
-            TextBoxCodigoSbs.Texts = Orden.codSBS;
-            TextBoxCodigoSin.Texts = Orden.codISIN;
+            TextBoxCodigoSbs.Texts = Orden.codsbs;
+            TextBoxCodigoSin.Texts = Orden.codsbs;
             TextBoxInstrumento.Texts = Orden.instrumento;
-            dateTimePicker1.Value = Orden.fecha;
+            dateTimePicker1.Value = Convert.ToDateTime(Orden.fecha);
             //TextBoxOperacion.Texts = Orden.operacion.ToString();
-            comboFondo.SelectedIndex = Convert.ToInt32(Orden.fondo) - 1;
+            comboFondo.SelectedIndex = Convert.ToInt32(Orden.fidFondo) - 1;
         }
         private void cargarComboFondo()
         {
@@ -69,7 +72,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         }
         private void cargarComboAssetClass()
         {
-            String[] assets = { "Compra", "Venta" };
+            String[] assets = { "Renta Fija", "Renta Variable" };
             ComboAssetClass.DataSource = assets;
         }
         private void cargarTipoEdicion()
@@ -119,7 +122,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
                     MessageBox.Show("Llamando al Dao");
                     int i = _daoMO.insertarOrden(Orden);
                     MessageBox.Show("Respuesta del Dao: "+ i.ToString());
-                    if (i == 1)
+                    if (i !=0)
                     {
                         MessageBox.Show("La inserción fue realizada con éxito.");
                         this.Dispose();
@@ -154,9 +157,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
 
         private bool cargarDatos()
         {
-            Orden.fecha = dateTimePicker1.Value;
-            Orden.fechaSpecified = true;
-            //Orden.fondo = (MonitoreoOrdenWS.eTipoFondo) comboFondo.SelectedIndex + 1;
+            Orden.fecha = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            Orden.fidFondo= comboFondo.SelectedIndex + 1;
 
             if (TextBoxAUMOrdenes.Texts == "")
             {
@@ -185,18 +187,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             try
             {
                 Orden.porcentageFondo = Convert.ToDouble( TextBoxAUMOrdenes.Texts);
-                Orden.codSBS = TextBoxCodigoSbs.Texts;
-                Orden.codISIN = TextBoxCodigoSin.Texts;
+                Orden.codsbs = TextBoxCodigoSbs.Texts;
+                Orden.codisin= TextBoxCodigoSin.Texts;
                 Orden.instrumento = TextBoxInstrumento.Texts;
-                //Orden.assetClass = ComboAssetClass.Texts;
-                /*
-                 Venta => 0
-                 Compra => 1
-                 */
-                if(comboOperacion.Texts == "Venta")
-                    Orden.operacion = (MonitoreoOrdenWS.eTipoOperacion)0;
-                else
-                    Orden.operacion = (MonitoreoOrdenWS.eTipoOperacion)1;
+                Orden.fidAssetClass = ComboAssetClass.SelectedIndex + 1;
+                Orden.fidTipoOperacion= comboOperacion.SelectedIndex + 1;
+
             }
             catch
             {

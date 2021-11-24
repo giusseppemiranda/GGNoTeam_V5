@@ -602,13 +602,16 @@
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.insertarOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.ListarEjecucionPorFechaResponse.datasource">
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.ListarOrdenPorFechaResponse.datasource">
@@ -626,16 +629,13 @@
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.modificarOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.operacion.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.operacioninsertar_2Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.OperacionModificarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.orden.datasource">

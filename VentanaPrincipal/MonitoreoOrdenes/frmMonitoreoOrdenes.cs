@@ -45,17 +45,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
                 for (int i = 0; i < listaOperaciones.Length; i++)
                 {
                     dgvOrdenes.Rows.Add(
-                        listaOperaciones[i].fecha.ToString("dd/MM/yyyy"),
+                        listaOperaciones[i].fecha,
                         comboFondo.SelectedItem.ToString(),
                         listaOperaciones[i].codsbs,
                         listaOperaciones[i].codisin,
                         listaOperaciones[i].instrumento,
 
                         //listaOperaciones[i].operacion,
-                        listaOperaciones[i].aumSit.AUM,
-                        listaOperaciones[i].aumOrd.porcentageFondo,
+                        //listaOperaciones[i].aumSit.AUM,
+                        //listaOperaciones[i].aumOrd.porcentageFondo,
 
-                        listaOperaciones[i].estadoValidacion,
+                        listaOperaciones[i].validacion,
                         listaOperaciones[i].comentario);
                 }
             }

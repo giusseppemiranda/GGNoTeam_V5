@@ -18,39 +18,40 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
     {
         private frmPrincipal ventanaPrincipal = null;
         private MonitoreoOrdenWS.MonitorOrdenWSClient _daoMO;
+        private TrackingErrorWS.TrackingErrorWSClient _daoTE;
         private MonitoreoOrdenWS.ejecucion[] listaEjecuciones;
+        private String[] assets = { "Renta Fija", "Renta Variable" };
+        private String[] operaciones = { "Compra", "Venta" };
+        private String[] fondos;
         public frmEjecucion(frmPrincipal ventana)
         {
             InitializeComponent();
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             cambiarTema();
+            cargarComboFondo();
         }
 
         private void btnConsultarEjecuciones_Click(object sender, EventArgs e)
         {
-            //listaEjecuciones = _daoMO.ListarEjecucionPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1));
-            listaEjecuciones = _daoMO.ListarEjecucionPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
-            dgvOrdenes.Rows.Clear();
+            listaEjecuciones = _daoMO.listarEjecucionPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
             if (listaEjecuciones != null)
             {
-                for (int i = 0; i < listaEjecuciones.Length; i++)
-                {
-                    dgvOrdenes.Rows.Add(
-                        listaEjecuciones[i].fechaOper.ToString("dd/MM/yyyy"),
-                        comboFondo.SelectedItem.ToString(),
-                        listaEjecuciones[i].codsbs,
-                        listaEjecuciones[i].codisin,
-                        listaEjecuciones[i].instrumento,
-                        listaEjecuciones[i].tipoOper,
-                        listaEjecuciones[i].AUM);
-                }
+                dgvOrdenes.DataSource = listaEjecuciones;
             }
-            dgvOrdenes.Refresh();
+            else
+            {
+                dgvOrdenes.DataSource = null;
+            }
         }
-
-    private void btnAgregarRegistro_Click(object sender, EventArgs e)
+        private void cargarComboFondo()
+        {
+            fondos = _daoTE.ListarFondos();
+            comboFondo.DataSource = fondos;
+        }
+        private void btnAgregarRegistro_Click(object sender, EventArgs e)
         {
             frmEditarEjecucion ventanaAgregar = new frmEditarEjecucion();
             ventanaAgregar.ShowDialog();
@@ -58,7 +59,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
 
         }
 
-    private void EliminarRegistro_Click(object sender, EventArgs e)
+        private void EliminarRegistro_Click(object sender, EventArgs e)
         {
             if (listaEjecuciones != null)
             {
@@ -71,7 +72,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.btnConsultarEjecuciones_Click(sender, e);
         }
 
-    private void btnModificarRegistro_Click(object sender, EventArgs e)
+        private void btnModificarRegistro_Click(object sender, EventArgs e)
         {
             if (listaEjecuciones != null)
             {
@@ -101,6 +102,21 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
         private void activarTemaClaro()
         {
             this.BackColor = Global.FrmClaro;
+
+        }
+
+        private void dgvOrdenes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            MonitoreoOrdenWS.ejecucion orden = (MonitoreoOrdenWS.ejecucion)dgvOrdenes.Rows[e.RowIndex].DataBoundItem;
+
+            dgvOrdenes.Rows[e.RowIndex].Cells[0].Value = orden.fecha;
+            dgvOrdenes.Rows[e.RowIndex].Cells[1].Value = assets[orden.fidAssetClass - 1];
+            dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = fondos[orden.fidFondo - 1];
+            dgvOrdenes.Rows[e.RowIndex].Cells[3].Value = orden.codsbs;
+            dgvOrdenes.Rows[e.RowIndex].Cells[4].Value = orden.codisin;
+            dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = orden.instrumento;
+            dgvOrdenes.Rows[e.RowIndex].Cells[6].Value = operaciones[orden.fidTipoOperacion - 1];
+            dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = orden.AUM;
 
         }
     }

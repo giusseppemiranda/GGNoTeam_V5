@@ -93,16 +93,31 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
 
         private void cargarDatosOperacion()
         {
-            dateTimePicker1.Value = Operacion.fecha;
+            double eje = 0; 
+            double ord=0;
+            dateTimePicker1.Value = Convert.ToDateTime(Operacion.fecha);
             //comboFondo.SelectedIndex = Operacion.fondo - 1;
-            TextBoxAUMEjecuciones.Texts = Operacion.aumSit.AUM.ToString();
-            TextBoxAUMOrdenes.Texts = Operacion.aumOrd.porcentageFondo.ToString();
+            MonitoreoOrdenWS.ejecucion[] ejecuciones = _daoMO.listarTodosEjecucion();
+            MonitoreoOrdenWS.orden[] ordenes= _daoMO.listaTodosOrden();
+
+            foreach (var orden in ordenes)
+            {
+                if (orden.idOrden == Operacion.fidOrden) ord = orden.porcentageFondo;
+            }
+            foreach (var ejecucion in ejecuciones)
+            {
+                if (ejecucion.idEjecucion== Operacion.fidEjecu) eje= ejecucion.AUM;
+            }
+
+            TextBoxAUMEjecuciones.Texts = eje.ToString();
+            TextBoxAUMOrdenes.Texts = ord.ToString();
+
             TextBoxCodigoSbs.Texts = Operacion.codsbs;
             TextBoxCodigoSin.Texts = Operacion.codisin;
             TextBoxComentarios.Texts = Operacion.comentario;
             TextBoxInstrumento.Texts = Operacion.instrumento;
             TextBoxOperacion.Texts = Operacion.idOperacion.ToString();
-            TextBoxValidacion.Texts = Operacion.estadoValidacion.ToString();
+            TextBoxValidacion.Texts = Operacion.validacion.ToString();
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
@@ -112,7 +127,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
                 Operacion = new MonitoreoOrdenWS.operacion();
                 if (cargarDatos())
                 {
-                    int i = _daoMO.operacioninsertar_2(Operacion, Operacion.aumOrd.idOrden, Operacion.aumSit.idEjecucion);
+                    int i = _daoMO.insertarOperacion(Operacion);
                     if (i == 1)
                     {
                         MessageBox.Show("La inserción fue realizada con éxito.");
@@ -129,7 +144,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             {
                 if (cargarDatos())
                 {
-                    int i = _daoMO.OperacionModificar(Operacion);
+                    int i = _daoMO.modificarOperacion(Operacion);
                     if (i == 0)
                     {
                         MessageBox.Show("Se ha realizado correctamente la modificación");
@@ -146,8 +161,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
 
         private bool cargarDatos()
         {
-            Operacion.fecha = dateTimePicker1.Value;
-            Operacion.fechaSpecified = true;
+            Operacion.fecha = dateTimePicker1.Value.ToString();
             //Operacion.fidFondo = comboFondo.SelectedIndex + 1;
 
 
@@ -188,14 +202,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
 
             try
             {
-                Operacion.aumSit.AUM = Convert.ToDouble(TextBoxAUMEjecuciones.Texts);
-                Operacion.aumOrd.porcentageFondo = Convert.ToDouble(TextBoxAUMOrdenes.Texts);
+                Operacion.fidEjecu= Convert.ToInt32(TextBoxAUMEjecuciones.Texts);
+                Operacion.fidOrden= Convert.ToInt32(TextBoxAUMOrdenes.Texts);
+                
                 Operacion.codsbs = TextBoxCodigoSbs.Texts;
                 Operacion.codisin = TextBoxCodigoSin.Texts;
                 Operacion.comentario = TextBoxComentarios.Texts;
                 Operacion.instrumento = TextBoxInstrumento.Texts;
                 //Operacion.operacion = Convert.ToInt32(TextBoxOperacion.Texts);
-                Operacion.estadoValidacion = Convert.ToBoolean(TextBoxValidacion.Texts);
+                Operacion.validacion = Convert.ToBoolean(TextBoxValidacion.Texts);
 
             }
             catch

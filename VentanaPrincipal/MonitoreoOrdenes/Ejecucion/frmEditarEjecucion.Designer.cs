@@ -45,6 +45,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.ComboAssetClass = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboOperacion = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -69,7 +73,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.TextBoxAUMEjecuciones.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxAUMEjecuciones.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxAUMEjecuciones.IsFocused = false;
-            this.TextBoxAUMEjecuciones.Location = new System.Drawing.Point(348, 771);
+            this.TextBoxAUMEjecuciones.Location = new System.Drawing.Point(348, 835);
             this.TextBoxAUMEjecuciones.Margin = new System.Windows.Forms.Padding(6);
             this.TextBoxAUMEjecuciones.MaxLength = 32767;
             this.TextBoxAUMEjecuciones.Multiline = false;
@@ -87,7 +91,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(70, 771);
+            this.label6.Location = new System.Drawing.Point(70, 835);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(195, 32);
@@ -285,7 +289,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(276, 931);
+            this.btnCancelar.Location = new System.Drawing.Point(238, 1031);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(6);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(168, 90);
@@ -306,7 +310,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(464, 931);
+            this.btnSiguiente.Location = new System.Drawing.Point(426, 1031);
             this.btnSiguiente.Margin = new System.Windows.Forms.Padding(6);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(168, 90);
@@ -314,6 +318,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.btnSiguiente.Text = "Aceptar";
             this.btnSiguiente.TextColor = System.Drawing.Color.White;
             this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
             // lblFecha
             // 
@@ -327,11 +332,79 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.lblFecha.TabIndex = 116;
             this.lblFecha.Text = "codigo sbs:";
             // 
+            // ComboAssetClass
+            // 
+            this.ComboAssetClass.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ComboAssetClass.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.ComboAssetClass.BorderSize = 1;
+            this.ComboAssetClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.ComboAssetClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ComboAssetClass.ForeColor = System.Drawing.Color.DimGray;
+            this.ComboAssetClass.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.ComboAssetClass.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.ComboAssetClass.ListTextColor = System.Drawing.Color.DimGray;
+            this.ComboAssetClass.Location = new System.Drawing.Point(348, 932);
+            this.ComboAssetClass.Margin = new System.Windows.Forms.Padding(6);
+            this.ComboAssetClass.MinimumSize = new System.Drawing.Size(400, 58);
+            this.ComboAssetClass.Name = "ComboAssetClass";
+            this.ComboAssetClass.Padding = new System.Windows.Forms.Padding(2);
+            this.ComboAssetClass.Size = new System.Drawing.Size(432, 58);
+            this.ComboAssetClass.TabIndex = 133;
+            this.ComboAssetClass.Texts = "Asset class";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5.Location = new System.Drawing.Point(67, 948);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 32);
+            this.label5.TabIndex = 132;
+            this.label5.Text = "Asset class:";
+            // 
+            // comboOperacion
+            // 
+            this.comboOperacion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboOperacion.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboOperacion.BorderSize = 1;
+            this.comboOperacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboOperacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboOperacion.ForeColor = System.Drawing.Color.DimGray;
+            this.comboOperacion.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboOperacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboOperacion.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboOperacion.Location = new System.Drawing.Point(348, 753);
+            this.comboOperacion.Margin = new System.Windows.Forms.Padding(6);
+            this.comboOperacion.MinimumSize = new System.Drawing.Size(400, 58);
+            this.comboOperacion.Name = "comboOperacion";
+            this.comboOperacion.Padding = new System.Windows.Forms.Padding(2);
+            this.comboOperacion.Size = new System.Drawing.Size(432, 58);
+            this.comboOperacion.TabIndex = 135;
+            this.comboOperacion.Texts = "Operacion";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(70, 753);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 32);
+            this.label7.TabIndex = 134;
+            this.label7.Text = "operacion:";
+            // 
             // frmEditarEjecucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 1158);
+            this.Controls.Add(this.comboOperacion);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.ComboAssetClass);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.TextBoxAUMEjecuciones);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TextBoxOperacion);
@@ -354,6 +427,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.Name = "frmEditarEjecucion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditarRegistroAssetError";
+            this.Load += new System.EventHandler(this.frmEditarEjecucion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +451,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;
         private System.Windows.Forms.Label lblFecha;
+        private Recursos.UserControls.GGComboBox ComboAssetClass;
+        private System.Windows.Forms.Label label5;
+        private Recursos.UserControls.GGComboBox comboOperacion;
+        private System.Windows.Forms.Label label7;
     }
 }
