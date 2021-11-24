@@ -129,7 +129,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
 
         private void obtenerDatosAlpha(int fidFondo)
         {
-            //listaAlpha = _daoTE.listarAlpha_Fecha_Fondo(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), fidFondo);
+            listaAlpha = _daoTE.listarAlpha_Fecha_Fondo(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), fidFondo);
         }
 
         private void generarGraficoAlpha(int fondo)
@@ -180,9 +180,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
 
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
-                string rutaTE = folderBrowserDialog1.SelectedPath + "\\" + DateTime.Now.ToString("dd_MM_yyyy") + "_TrackingError_FROM_" + dateInicial.Value.ToString("dd_MM_yyyy") + "_TO_" + dateFinal.Value.ToString("dd_MM_yyyy") + ".png";
-                string rutaAlpha = folderBrowserDialog1.SelectedPath + "\\" + DateTime.Now.ToString("dd_MM_yyyy") + "_Alpha_FROM_" + dateInicial.Value.ToString("dd_MM_yyyy") + "_TO_" + dateFinal.Value.ToString("dd_MM_yyyy") + ".png";
-                string rutaPDF = folderBrowserDialog1.SelectedPath + "\\" + DateTime.Now.ToString("dd_MM_yyyy") + "_TrackingErrorVSAlpha_FROM_" + dateInicial.Value.ToString("dd_MM_yyyy") + "_TO_" + dateFinal.Value.ToString("dd_MM_yyyy") + ".pdf"; ;
+                string rutaTE = folderBrowserDialog1.SelectedPath + "\\" +"_TrackingError_FROM_" + dateInicial.Value.ToString("ddMMyyyy") + "_TO_" + dateFinal.Value.ToString("ddMMyyyy") + ".png";
+                string rutaAlpha = folderBrowserDialog1.SelectedPath + "\\"+"_Alpha_FROM_" + dateInicial.Value.ToString("ddMMyyyy") + "_TO_" + dateFinal.Value.ToString("ddMMyyyy") + ".png";
+                string rutaPDF = folderBrowserDialog1.SelectedPath + "\\"+ "_TrackingErrorVSAlpha_FROM_" + dateInicial.Value.ToString("ddMMyyyy") + "_TO_" + dateFinal.Value.ToString("ddMMyyyy") + ".pdf"; ;
 
                 graficoTE.SaveImage(rutaTE, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
                 graficoAlpha.SaveImage(rutaAlpha, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);

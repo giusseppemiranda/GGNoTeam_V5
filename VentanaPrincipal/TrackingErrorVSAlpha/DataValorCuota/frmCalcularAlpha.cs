@@ -63,7 +63,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
-            datos = _dao.listarDataValorCuotaXFecha(dateInicial.Value.ToString("yyyy-MM-dd")); 
+            datos = _dao.listarDataValorCuotaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
+            listaAlphas = _dao.listarAlphaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
             if (datos != null)
             {
                 dgvDataValorCuota.DataSource = datos;
