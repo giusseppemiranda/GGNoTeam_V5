@@ -22,8 +22,8 @@ namespace GGNoTeam_V5.Recursos.Validaciones
         public static int correo(GGNoTeam_V5.Recursos.UserControls.GGTextBox box, string msgCasoVacio, string msgCasoCantidadMaxima, int cantMaxima)
         {
             if (cadenaVacia(box, msgCasoVacio) != 0) return 1;
-            if (cadenaGrande(box, msgCasoCantidadMaxima, cantMaxima) != 0) return 2;
-            if (Regex.IsMatch(box.Texts, "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")) return 0;
+            if (cadenaGrande(box, msgCasoCantidadMaxima, cantMaxima) != 0) return 2;            
+            if (Regex.IsMatch(box.Texts.ToLowerInvariant(), "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")) return 0;
             else 
             {
                 MessageBox.Show("El correo ingresado no concuerda con el formato de correo.\nFormato válido:\n\tusuariocorreo@gmail.com\n\tusuariocorreo@outlook.com");

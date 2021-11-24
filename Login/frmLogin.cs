@@ -62,10 +62,9 @@ namespace GGNoTeam_V5
 
             if (UsuarioAutorizado(usuario, password))
             {
-                frmPrincipal pricipal = new frmPrincipal(this, persona);
+                frmPrincipal pricipal = new frmPrincipal(this, usuario);
                 pricipal.Show();
                 txtboxPassword.Texts = "";
-
                 this.Hide();
             }
         }
@@ -74,37 +73,17 @@ namespace GGNoTeam_V5
         {
             bool usuarioValido = false;
             lblCredencialesIncorrectas.Visible = false;
-            LoginWS.persona[] usuario = _daoLogin.listarPorCodNom(user);
-            if (usuario != null)
+            int validarCredenciales = -1;
+            validarCredenciales = _daoLogin.verificarCredenciales(user, password);
+            if(validarCredenciales == 1)
             {
-                if (usuario.Length == 1)
-                {
-                    if (user == usuario[0].codigo && usuario[0].tipoUsuario != 3)
-                    {
-                        if (password == usuario[0].contraseña)
-                        {
-                            persona = usuario[0];
-                            usuarioValido = true;
-                        }
-                        else
-                        {
-                            usuarioValido = false;
-                            lblCredencialesIncorrectas.Visible = true;
-                        }
-                    }
-                    else
-                    {
-                        usuarioValido = false;
-                        lblCredencialesIncorrectas.Visible = true;
-                    }
-                }
-            }
-            else
+                usuarioValido = true;
+            } else
             {
-                lblCredencialesIncorrectas.Visible = true;
-
                 usuarioValido = false;
-            }
+                lblCredencialesIncorrectas.Visible = true;
+            }            
+            
             return usuarioValido;
         }
 
