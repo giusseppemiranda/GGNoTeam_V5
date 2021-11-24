@@ -236,7 +236,6 @@ namespace GGNoTeam_V5.Login
             this.cod_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cod_4.Texts = "";
             this.cod_4.UnderlinedStyle = false;
-            this.cod_4._TextChanged += new System.EventHandler(this.cod_4__TextChanged);
             this.cod_4.Leave += new System.EventHandler(this.cod_4_Leave);
             // 
             // btnCancelar
@@ -325,7 +324,6 @@ namespace GGNoTeam_V5.Login
             this.Name = "frmCodigoValidacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCodigoValidacion";
-            this.Load += new System.EventHandler(this.frmCodigoValidacion_Load);
             this.panelControl.ResumeLayout(false);
             this.panelControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAFPIntegra)).EndInit();

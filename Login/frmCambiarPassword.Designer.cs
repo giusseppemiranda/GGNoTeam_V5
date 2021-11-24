@@ -59,7 +59,6 @@ namespace GGNoTeam_V5.Login
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(311, 23);
             this.panelControl.TabIndex = 0;
-            this.panelControl.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnTemaOscuro
             // 
@@ -142,7 +141,6 @@ namespace GGNoTeam_V5.Login
             this.lblFirstPassword.Size = new System.Drawing.Size(232, 15);
             this.lblFirstPassword.TabIndex = 17;
             this.lblFirstPassword.Text = "Ingrese contraseña (Máx. 15 caracteres):";
-            this.lblFirstPassword.Click += new System.EventHandler(this.lblFirstPassword_Click);
             // 
             // lblSecondPassword
             // 
@@ -179,7 +177,6 @@ namespace GGNoTeam_V5.Login
             this.lblDescripcion.Size = new System.Drawing.Size(239, 30);
             this.lblDescripcion.TabIndex = 27;
             this.lblDescripcion.Text = "Para reestablecer su credencial de acceso escriba una nueva contraseña.";
-            this.lblDescripcion.Click += new System.EventHandler(this.lblDescripcion_Click);
             // 
             // btnCancelar
             // 

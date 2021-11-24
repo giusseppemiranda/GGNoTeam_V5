@@ -105,39 +105,7 @@ namespace GGNoTeam_V5
 
                 usuarioValido = false;
             }
-
-
-
-
-
-            ////////////////////////////////////////////////////////
-            // Caso ejemplo utilizado para verificar
-            //if (user == "admin" || user == "usuario")
-            //{
-            //    if (password == "1234")
-            //    {
-            //        usuarioValido = true;
-            //    }
-            //    else
-            //    {
-            //        usuarioValido = false;
-            //        lblCredencialesIncorrectas.Visible = true;
-            //    }
-            //}
-            //else
-            //{
-            //    lblCredencialesIncorrectas.Visible = true;
-
-            //    usuarioValido = false;
-            //}
-            /////////////////////////////////////////////////////////
-
             return usuarioValido;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void lblPasswordOlvidada_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

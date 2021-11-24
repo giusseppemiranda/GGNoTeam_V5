@@ -165,8 +165,7 @@ namespace GGNoTeam_V5.Login
             this.txtboxUser.TabIndex = 17;
             this.txtboxUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtboxUser.Texts = "";
-            this.txtboxUser.UnderlinedStyle = true;
-            this.txtboxUser._TextChanged += new System.EventHandler(this.txtboxUsername__TextChanged);
+            this.txtboxUser.UnderlinedStyle = true;            
             this.txtboxUser.Enter += new System.EventHandler(this.txtboxUser_Enter);
             this.txtboxUser.Leave += new System.EventHandler(this.txtboxUser_Leave);
             // 
@@ -199,8 +198,7 @@ namespace GGNoTeam_V5.Login
             this.lblIDCorreo.Name = "lblIDCorreo";
             this.lblIDCorreo.Size = new System.Drawing.Size(143, 15);
             this.lblIDCorreo.TabIndex = 19;
-            this.lblIDCorreo.Text = "Ingrese su ID de usuario:";
-            this.lblIDCorreo.Click += new System.EventHandler(this.lblIDCorreo_Click);
+            this.lblIDCorreo.Text = "Ingrese su ID de usuario:";            
             // 
             // btnCancelar
             // 
@@ -233,8 +231,7 @@ namespace GGNoTeam_V5.Login
             this.lblUsuarioNoEncontrado.Size = new System.Drawing.Size(153, 15);
             this.lblUsuarioNoEncontrado.TabIndex = 21;
             this.lblUsuarioNoEncontrado.Text = "El ID ingresado no existen.";
-            this.lblUsuarioNoEncontrado.Visible = false;
-            this.lblUsuarioNoEncontrado.Click += new System.EventHandler(this.lblUsuarioNoEncontrado_Click);
+            this.lblUsuarioNoEncontrado.Visible = false;            
             // 
             // frmOlvidePassword
             // 
@@ -253,8 +250,7 @@ namespace GGNoTeam_V5.Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOlvidePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmOlvidePassword";
-            this.Load += new System.EventHandler(this.frmOlvidePassword_Load_1);
+            this.Text = "frmOlvidePassword";            
             this.panelControl.ResumeLayout(false);
             this.panelControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAFPIntegra)).EndInit();
