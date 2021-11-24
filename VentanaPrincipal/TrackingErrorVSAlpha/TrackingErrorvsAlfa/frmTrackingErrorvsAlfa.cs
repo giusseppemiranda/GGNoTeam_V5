@@ -129,7 +129,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
 
         private void obtenerDatosAlpha(int fidFondo)
         {
-            listaAlpha = _daoTE.listarAlpha_Fecha_Fondo(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), fidFondo);
+            //listaAlpha = _daoTE.listarAlpha_Fecha_Fondo(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), fidFondo);
         }
 
         private void generarGraficoAlpha(int fondo)

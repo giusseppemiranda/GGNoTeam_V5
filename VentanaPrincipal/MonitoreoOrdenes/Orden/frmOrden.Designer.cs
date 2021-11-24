@@ -29,8 +29,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnModificarRegistro = new FontAwesome.Sharp.IconButton();
@@ -76,14 +76,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.EliminarRegistro.IconSize = 32;
             this.EliminarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EliminarRegistro.Location = new System.Drawing.Point(1610, 963);
-            this.EliminarRegistro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.EliminarRegistro.Margin = new System.Windows.Forms.Padding(6);
             this.EliminarRegistro.Name = "EliminarRegistro";
             this.EliminarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.EliminarRegistro.Size = new System.Drawing.Size(300, 73);
             this.EliminarRegistro.TabIndex = 88;
             this.EliminarRegistro.Text = "Eliminar Registro";
             this.EliminarRegistro.UseVisualStyleBackColor = false;
-            //this.EliminarRegistro.Click += new System.EventHandler(this.EliminarRegistro_Click);
             // 
             // btnModificarRegistro
             // 
@@ -98,14 +97,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnModificarRegistro.IconSize = 32;
             this.btnModificarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificarRegistro.Location = new System.Drawing.Point(1252, 963);
-            this.btnModificarRegistro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnModificarRegistro.Margin = new System.Windows.Forms.Padding(6);
             this.btnModificarRegistro.Name = "btnModificarRegistro";
             this.btnModificarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnModificarRegistro.Size = new System.Drawing.Size(300, 73);
             this.btnModificarRegistro.TabIndex = 87;
             this.btnModificarRegistro.Text = "Modificar Registro";
             this.btnModificarRegistro.UseVisualStyleBackColor = false;
-            //this.btnModificarRegistro.Click += new System.EventHandler(this.btnModificarRegistro_Click);
+            this.btnModificarRegistro.Click += new System.EventHandler(this.btnModificarRegistro_Click_1);
             // 
             // btnAgregarRegistro
             // 
@@ -120,14 +119,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnAgregarRegistro.IconSize = 32;
             this.btnAgregarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarRegistro.Location = new System.Drawing.Point(1610, 85);
-            this.btnAgregarRegistro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAgregarRegistro.Margin = new System.Windows.Forms.Padding(6);
             this.btnAgregarRegistro.Name = "btnAgregarRegistro";
             this.btnAgregarRegistro.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnAgregarRegistro.Size = new System.Drawing.Size(300, 73);
             this.btnAgregarRegistro.TabIndex = 86;
             this.btnAgregarRegistro.Text = "Agregar Registro";
             this.btnAgregarRegistro.UseVisualStyleBackColor = false;
-            //this.btnAgregarRegistro.Click += new System.EventHandler(this.btnAgregarRegistro_Click);
+            this.btnAgregarRegistro.Click += new System.EventHandler(this.btnAgregarRegistro_Click_1);
             // 
             // btnConsultarOrdenes
             // 
@@ -142,23 +141,21 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnConsultarOrdenes.IconSize = 32;
             this.btnConsultarOrdenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarOrdenes.Location = new System.Drawing.Point(528, 85);
-            this.btnConsultarOrdenes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnConsultarOrdenes.Margin = new System.Windows.Forms.Padding(6);
             this.btnConsultarOrdenes.Name = "btnConsultarOrdenes";
             this.btnConsultarOrdenes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnConsultarOrdenes.Size = new System.Drawing.Size(300, 73);
             this.btnConsultarOrdenes.TabIndex = 85;
             this.btnConsultarOrdenes.Text = "Consultar órdenes";
             this.btnConsultarOrdenes.UseVisualStyleBackColor = false;
-            //this.btnConsultarOrdenes.Click += new System.EventHandler(this.btnConsultarEjecuciones_Click);
             // 
             // dateInicial
             // 
             this.dateInicial.Location = new System.Drawing.Point(64, 119);
-            this.dateInicial.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dateInicial.Margin = new System.Windows.Forms.Padding(6);
             this.dateInicial.Name = "dateInicial";
             this.dateInicial.Size = new System.Drawing.Size(392, 31);
             this.dateInicial.TabIndex = 83;
-            //this.dateInicial.ValueChanged += new System.EventHandler(this.dateInicial_ValueChanged);
             // 
             // lblFecha
             // 
@@ -171,7 +168,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.lblFecha.Size = new System.Drawing.Size(86, 32);
             this.lblFecha.TabIndex = 84;
             this.lblFecha.Text = "Fecha:";
-            //this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
             // dgvOrdenes
             // 
@@ -183,14 +179,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.dgvOrdenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvOrdenes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvOrdenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOrdenes.ColumnHeadersHeight = 25;
             this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -202,20 +198,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.AUMordenes});
             this.dgvOrdenes.EnableHeadersVisualStyles = false;
             this.dgvOrdenes.Location = new System.Drawing.Point(62, 169);
-            this.dgvOrdenes.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvOrdenes.Margin = new System.Windows.Forms.Padding(6);
             this.dgvOrdenes.MultiSelect = false;
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.ReadOnly = true;
             this.dgvOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvOrdenes.RowHeadersWidth = 82;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvOrdenes.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvOrdenes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvOrdenes.RowTemplate.Height = 25;
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrdenes.Size = new System.Drawing.Size(1848, 783);
             this.dgvOrdenes.TabIndex = 82;
-            //this.dgvOrdenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdenes_CellContentClick);
             // 
             // Fecha
             // 
@@ -284,7 +279,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.lblTitulo.Size = new System.Drawing.Size(442, 54);
             this.lblTitulo.TabIndex = 81;
             this.lblTitulo.Text = "Monitoreo de órdenes";
-            //this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // comboFondo
             // 
@@ -322,7 +316,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.Controls.Add(this.dgvOrdenes);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmOrden";
             this.Text = "frmOrden";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();

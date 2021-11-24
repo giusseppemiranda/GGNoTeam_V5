@@ -15,14 +15,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
 {
     public partial class frmOrden : Form
     {
-        private frmMonitoreoOrdenes ventanaPrincipal = null;
+        private frmPrincipal ventanaPrincipal = null;
         private MonitoreoOrdenWS.MonitorOrdenWSClient _daoMO;
         private MonitoreoOrdenWS.orden[] listaOrdenes;
-        public frmOrden(frmMonitoreoOrdenes ventana)
+        public frmOrden(frmPrincipal ventana)
         {
             InitializeComponent();
             ventanaPrincipal = ventana;
-            ventanaPrincipal.eventoCambiarTema += new frmMonitoreoOrdenes.delegadoCambiarTema(cambiarTema);
+            ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
             cambiarTema();
         }
@@ -124,6 +124,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private void activarTemaClaro()
         {
             this.BackColor = Global.FrmClaro;
+
+        }
+
+        private void btnAgregarRegistro_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificarRegistro_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

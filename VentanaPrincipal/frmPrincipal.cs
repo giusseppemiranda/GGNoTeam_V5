@@ -8,13 +8,14 @@ using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha;
 using GGNoTeam_V5.Recursos.sendMail;
 using GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada;
 using GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas;
+using GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes;
 
 namespace GGNoTeam_V5.VentanaPrincipal
 {
     public partial class frmPrincipal : Form
     {
 
-        public static Form frmActivo = null;
+        private static Form frmActivo = null;
         private frmLogin ventanaPadre;
         private IconButton iconoActivo = null;
         private LoginWS.persona usuario;
@@ -107,7 +108,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             panelMenu.Visible = true;
         }
 
-        private void abrirFormulario(Form formulario)
+        public void abrirFormulario(Form formulario)
         {
             if (frmActivo != null)
             {
@@ -213,7 +214,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void btnMonitoreoOrdenes_Click(object sender, EventArgs e)
         {
-
+            abrirFormulario(new frmMonitoreoOrdenes(this));
             cambiarTemaIconosMenu(ref iconoActivo);
             iconoActivo = btnMonitoreoOrdenes;
             iconoActivo.BackColor = this.BackColor;

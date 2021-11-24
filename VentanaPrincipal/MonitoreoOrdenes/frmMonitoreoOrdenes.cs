@@ -87,22 +87,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-
+            ventanaPrincipal.abrirFormulario(new frmEjecucion(ventanaPrincipal));
         }
 
         private void btnAccederOrden_Click(object sender, EventArgs e)
         {
-
+            ventanaPrincipal.abrirFormulario(new frmOrden(ventanaPrincipal));
         }
 
         private void btnGestionarOrdenes_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmOrden(this));
+            abrirFormulario(new frmOrden(ventanaPrincipal));
         }
 
         private void btnGestionarEjecuciones_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmEjecucion(this));
+            abrirFormulario(new frmEjecucion(ventanaPrincipal));
 
         }
         private void abrirFormulario(Form formulario)

@@ -16,14 +16,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
 {
     public partial class frmEjecucion : Form
     {
-        private frmMonitoreoOrdenes ventanaPrincipal = null;
+        private frmPrincipal ventanaPrincipal = null;
         private MonitoreoOrdenWS.MonitorOrdenWSClient _daoMO;
         private MonitoreoOrdenWS.ejecucion[] listaEjecuciones;
-        public frmEjecucion(frmMonitoreoOrdenes ventana)
+        public frmEjecucion(frmPrincipal ventana)
         {
             InitializeComponent();
             ventanaPrincipal = ventana;
-            ventanaPrincipal.eventoCambiarTema += new frmMonitoreoOrdenes.delegadoCambiarTema(cambiarTema);
+            ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
             cambiarTema();
         }
