@@ -28,7 +28,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             insertarOperacion = true;
             cambiarTema();
             cargarTipoEdicion();
-            cargarComboFondo();
+            //cargarComboFondo();
         }
 
         //Modificar Operacion
@@ -41,13 +41,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             cambiarTema();
             cargarTipoEdicion();
             cargarDatosOperacion();
-            cargarComboFondo();
+            //cargarComboFondo();
         }
+
+       /*
         private void cargarComboFondo()
         {
             String[] fondos = _daoTE.ListarFondos();
             comboFondo.DataSource = fondos;
         }
+       */
         private void cargarTipoEdicion()
         {
             if (insertarOperacion)
@@ -128,7 +131,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
                 if (cargarDatos())
                 {
                     int i = _daoMO.insertarOperacion(Operacion);
-                    if (i == 1)
+                    if (i != 0)
                     {
                         MessageBox.Show("La inserción fue realizada con éxito.");
                         this.Dispose();
@@ -161,9 +164,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
 
         private bool cargarDatos()
         {
-            Operacion.fecha = dateTimePicker1.Value.ToString();
-            //Operacion.fidFondo = comboFondo.SelectedIndex + 1;
-
+            Operacion.fecha = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 
             if (TextBoxAUMOrdenes.Texts == "")
             {
@@ -209,7 +210,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
                 Operacion.codisin = TextBoxCodigoSin.Texts;
                 Operacion.comentario = TextBoxComentarios.Texts;
                 Operacion.instrumento = TextBoxInstrumento.Texts;
-                //Operacion.operacion = Convert.ToInt32(TextBoxOperacion.Texts);
+                //Operacion.operacion= Convert.ToInt32(TextBoxOperacion.Texts);
                 Operacion.validacion = Convert.ToBoolean(TextBoxValidacion.Texts);
 
             }

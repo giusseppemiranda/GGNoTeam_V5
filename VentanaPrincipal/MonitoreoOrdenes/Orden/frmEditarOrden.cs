@@ -119,9 +119,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
                 Orden = new MonitoreoOrdenWS.orden();
                 if (cargarDatos())
                 {
-                    MessageBox.Show("Llamando al Dao");
                     int i = _daoMO.insertarOrden(Orden);
-                    MessageBox.Show("Respuesta del Dao: "+ i.ToString());
                     if (i !=0)
                     {
                         MessageBox.Show("La inserción fue realizada con éxito.");

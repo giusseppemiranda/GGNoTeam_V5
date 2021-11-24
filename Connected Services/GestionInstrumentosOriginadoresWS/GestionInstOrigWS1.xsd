@@ -32,6 +32,16 @@
   <xs:element name="modificarInstrumentoResponse" type="tns:modificarInstrumentoResponse" />
   <xs:element name="modificarOriginador" type="tns:modificarOriginador" />
   <xs:element name="modificarOriginadorResponse" type="tns:modificarOriginadorResponse" />
+  <xs:complexType name="eliminarOriginador">
+    <xs:sequence>
+      <xs:element name="idOriginador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOriginadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarEmisor">
     <xs:sequence>
       <xs:element minOccurs="0" name="emisor" type="tns:emisor" />
@@ -56,16 +66,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarEmisorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarOriginador">
-    <xs:sequence>
-      <xs:element name="idOriginador" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarOriginadorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -143,24 +143,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="buscarOrigId">
-    <xs:sequence>
-      <xs:element name="idOriginador" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarOrigIdResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:originador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarEmisores">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarEmisoresResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:emisor" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="buscarUnOriginadorPorCodigo">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigoOriginador" type="xs:string" />
@@ -171,14 +153,22 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:originador" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarOriginador">
+  <xs:complexType name="listarEmisores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEmisoresResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="originador" type="tns:originador" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:emisor" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarOriginadorResponse">
+  <xs:complexType name="buscarOrigId">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element name="idOriginador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarOrigIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:originador" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarInstrumentoXcodigo">
@@ -189,6 +179,16 @@
   <xs:complexType name="listarInstrumentoXcodigoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:instrumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOriginador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="originador" type="tns:originador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOriginadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarOriginador">

@@ -25,7 +25,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         public event delegadoCambiarTema eventoCambiarTema;
         private frmPrincipal ventanaPrincipal = null;
         private MonitoreoOrdenWS.MonitorOrdenWSClient _daoMO;
+        private TrackingErrorWS.TrackingErrorWSClient _daoTE;
         private MonitoreoOrdenWS.operacion[] listaOperaciones;
+        private String[] operaciones = { "Compra", "Venta" };
+        private String[] fondos;
 
         public frmMonitoreoOrdenes(frmPrincipal ventana)
         {
@@ -33,33 +36,28 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             cambiarTema();
+            cargarComboFondo();
+        }
+        private void cargarComboFondo()
+        {
+            fondos = _daoTE.ListarFondos();
+            comboFondo.DataSource = fondos;
         }
 
         private void btnconsultar_click(object sender, EventArgs e)
         {
             listaOperaciones = _daoMO.ListarPorFechaOperacion(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"));
-            dgvOrdenes.Rows.Clear();
+           
             if (listaOperaciones != null)
             {
-                for (int i = 0; i < listaOperaciones.Length; i++)
-                {
-                    dgvOrdenes.Rows.Add(
-                        listaOperaciones[i].fecha,
-                        comboFondo.SelectedItem.ToString(),
-                        listaOperaciones[i].codsbs,
-                        listaOperaciones[i].codisin,
-                        listaOperaciones[i].instrumento,
-
-                        //listaOperaciones[i].operacion,
-                        //listaOperaciones[i].aumSit.AUM,
-                        //listaOperaciones[i].aumOrd.porcentageFondo,
-
-                        listaOperaciones[i].validacion,
-                        listaOperaciones[i].comentario);
-                }
+                dgvOrdenes.DataSource = listaOperaciones;
             }
-            dgvOrdenes.Refresh();
+            else
+            {
+                dgvOrdenes.DataSource = null;
+            }
         }
 
         private void EliminarRegistro_Click(object sender, EventArgs e)
@@ -97,29 +95,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
 
         private void btnGestionarOrdenes_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmOrden(ventanaPrincipal));
+           
         }
 
         private void btnGestionarEjecuciones_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmEjecucion(ventanaPrincipal));
+            
 
         }
-        private void abrirFormulario(Form formulario)
-        {
-            /*
-            if (frmActivo != null)
-            {
-                frmActivo.Dispose();
-            }
-            frmActivo = formulario;
-            formulario.TopLevel = false;
-            formulario.Dock = DockStyle.Fill;
-            panelCentral.Controls.Clear();
-            panelCentral.Controls.Add(formulario);
-            formulario.Show();
-            */
-        }
+       
         public void cambiarTema()
         {
             if (Global.TemaOscuro)
@@ -144,5 +128,32 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
 
         }
 
+        private void dgvOrdenes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            MonitoreoOrdenWS.operacion orden = (MonitoreoOrdenWS.operacion)dgvOrdenes.Rows[e.RowIndex].DataBoundItem;
+
+            double aumEje = 0,aumOrd=0;
+            int idFondo = 0;
+            string op = null;
+            MonitoreoOrdenWS.ejecucion[] ejes = _daoMO.listarTodosEjecucion();
+            MonitoreoOrdenWS.orden[] ops = _daoMO.listaTodosOrden();
+            foreach (var eje in ejes) if (eje.idEjecucion == orden.fidEjecu)
+                {
+                    aumEje = eje.AUM;
+                    idFondo = eje.fidFondo;
+                }
+            foreach (var ope in ops) if (ope.idOrden== orden.fidOrden) aumOrd= ope.porcentageFondo;
+
+            dgvOrdenes.Rows[e.RowIndex].Cells[0].Value = orden.fecha;
+            dgvOrdenes.Rows[e.RowIndex].Cells[1].Value = idFondo;
+            dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = orden.codsbs;
+            dgvOrdenes.Rows[e.RowIndex].Cells[3].Value = orden.codisin;
+            dgvOrdenes.Rows[e.RowIndex].Cells[4].Value = orden.instrumento;
+            dgvOrdenes.Rows[e.RowIndex].Cells[5].Value = aumEje;
+            dgvOrdenes.Rows[e.RowIndex].Cells[6].Value = aumOrd;
+            dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = orden.validacion;
+            dgvOrdenes.Rows[e.RowIndex].Cells[8].Value = orden.comentario;
+
+        }
     }
 }
