@@ -74,9 +74,6 @@ namespace GGNoTeam_V5
         {
             bool usuarioValido = false;
             lblCredencialesIncorrectas.Visible = false;
-
-            //ArrayList datosPersona = new ArrayList();
-
             LoginWS.persona[] usuario = _daoLogin.listarPorCodNom(user);
 
             if (usuario!= null)
