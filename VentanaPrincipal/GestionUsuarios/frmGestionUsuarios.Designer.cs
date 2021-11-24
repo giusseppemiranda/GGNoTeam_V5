@@ -66,7 +66,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnListarAdministradores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnListarAdministradores.IconSize = 36;
             this.btnListarAdministradores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListarAdministradores.Location = new System.Drawing.Point(283, 469);
+            this.btnListarAdministradores.Location = new System.Drawing.Point(260, 469);
             this.btnListarAdministradores.Name = "btnListarAdministradores";
             this.btnListarAdministradores.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnListarAdministradores.Size = new System.Drawing.Size(118, 61);
@@ -89,7 +89,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnListarUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnListarUsuarios.IconSize = 36;
             this.btnListarUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListarUsuarios.Location = new System.Drawing.Point(159, 469);
+            this.btnListarUsuarios.Location = new System.Drawing.Point(136, 469);
             this.btnListarUsuarios.Name = "btnListarUsuarios";
             this.btnListarUsuarios.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnListarUsuarios.Size = new System.Drawing.Size(118, 61);
@@ -112,7 +112,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnListarPersonas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnListarPersonas.IconSize = 36;
             this.btnListarPersonas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListarPersonas.Location = new System.Drawing.Point(35, 469);
+            this.btnListarPersonas.Location = new System.Drawing.Point(12, 469);
             this.btnListarPersonas.Name = "btnListarPersonas";
             this.btnListarPersonas.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnListarPersonas.Size = new System.Drawing.Size(118, 61);
@@ -231,7 +231,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.dgvPersonas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPersonas.RowTemplate.Height = 25;
             this.dgvPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonas.Size = new System.Drawing.Size(912, 407);
+            this.dgvPersonas.Size = new System.Drawing.Size(935, 407);
             this.dgvPersonas.TabIndex = 24;
             this.dgvPersonas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPersonas_CellFormatting);
             // 

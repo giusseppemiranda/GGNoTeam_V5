@@ -147,7 +147,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             this.lblFondo_3.Size = new System.Drawing.Size(59, 15);
             this.lblFondo_3.TabIndex = 44;
             this.lblFondo_3.Text = "FONDO 3";
-            this.lblFondo_3.Click += new System.EventHandler(this.lblFondo_3_Click);
             // 
             // dgvAssetError
             // 
@@ -258,7 +257,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             this.boxFondo_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.boxFondo_3.Texts = "";
             this.boxFondo_3.UnderlinedStyle = false;
-            this.boxFondo_3._TextChanged += new System.EventHandler(this.ggTextBox3__TextChanged);
             // 
             // boxFondo_2
             // 
