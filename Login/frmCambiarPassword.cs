@@ -27,10 +27,6 @@ namespace GGNoTeam_V5.Login
             cambiarTema();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -42,11 +38,6 @@ namespace GGNoTeam_V5.Login
         {
             if (txtboxPrimeraPassword.Texts == txtboxSegundaPassword.Texts)
             {
-
-                // Se debe colocar AQUI el código para cambiar el password dentro de la base de datos
-                //
-                //
-                //
                 persona.contraseña = txtboxPrimeraPassword.Texts;
                 _daoLogin.modificarPersona(persona);
                 MessageBox.Show("Contraseña correctamente modificada");
@@ -102,10 +93,6 @@ namespace GGNoTeam_V5.Login
             cambiarTema();
         }
 
-        private void lblDescripcion_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtboxPrimeraPassword__TextChanged(object sender, EventArgs e)
         {
@@ -114,11 +101,6 @@ namespace GGNoTeam_V5.Login
             {
                 txtboxPrimeraPassword.Texts = pass;
             }
-        }
-
-        private void lblFirstPassword_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtboxSegundaPassword__TextChanged(object sender, EventArgs e)

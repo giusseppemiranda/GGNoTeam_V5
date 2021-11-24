@@ -24,7 +24,7 @@ namespace GGNoTeam_V5.Login
 
             if (idUser.Contains("@"))
             {
-                descripcion = "Se ha enviado un correo a " + idUser + " con el código de acceso para reestablecer la contraseña. Si no observa dicho código en su bandeja comuníquese con un administrador";
+                descripcion = "Se ha enviado un correo a " + idUser + " con el código de acceso para reestablecer la contraseña. Si no observa dicho código en su bandeja comuníquese con un administrador.";
             }
             else
             {
@@ -36,11 +36,6 @@ namespace GGNoTeam_V5.Login
             lblDescripcion.Text = descripcion;
             ventanaPadre = ventanaAnterior;
             cambiarTema();
-        }
-
-        private void frmCodigoValidacion_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -84,10 +79,6 @@ namespace GGNoTeam_V5.Login
 
             codigo = cod_1.Texts + cod_2.Texts + cod_3.Texts + cod_4.Texts;
 
-            // Aqui debería ir el código de validación
-            //
-            //
-            //
             if (codigo == persona[0].validacion)
             {
                 valido = true;
@@ -172,10 +163,6 @@ namespace GGNoTeam_V5.Login
             }
         }
 
-        private void cod_4__TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         public void cambioPasswordCorrecto()
         {

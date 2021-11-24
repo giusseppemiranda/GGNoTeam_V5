@@ -89,7 +89,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.dgvAssetError.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAssetError.Size = new System.Drawing.Size(952, 335);
             this.dgvAssetError.TabIndex = 50;
-            this.dgvAssetError.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssetError_CellContentClick);
+            this.dgvAssetError.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAssetError_CellFormatting);
             // 
             // fecha
             // 

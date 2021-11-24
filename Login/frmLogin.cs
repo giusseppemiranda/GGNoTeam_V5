@@ -24,9 +24,9 @@ namespace GGNoTeam_V5
         private LoginWS.persona persona;
 
         public frmLogin()
-        {            
+        {
             InitializeComponent();
-            _daoLogin = new LoginWS.LoginWSClient();                        
+            _daoLogin = new LoginWS.LoginWSClient();
 
             this.FormBorderStyle = FormBorderStyle.None;
             lblUser.ForeColor = txtboxUsername.BorderColor;
@@ -62,10 +62,9 @@ namespace GGNoTeam_V5
 
             if (UsuarioAutorizado(usuario, password))
             {
-                frmPrincipal pricipal = new frmPrincipal(this,persona);
+                frmPrincipal pricipal = new frmPrincipal(this, usuario);
                 pricipal.Show();
                 txtboxPassword.Texts = "";
-                
                 this.Hide();
             }
         }
@@ -74,75 +73,22 @@ namespace GGNoTeam_V5
         {
             bool usuarioValido = false;
             lblCredencialesIncorrectas.Visible = false;
-
-            //ArrayList datosPersona = new ArrayList();
-
-            LoginWS.persona[] usuario = _daoLogin.listarPorCodNom(user);
-
-            if (usuario.Length == 1)
+            int validarCredenciales = -1;
+            validarCredenciales = _daoLogin.verificarCredenciales(user, password);
+            if(validarCredenciales == 1)
             {
-                if (user == usuario[0].codigo && usuario[0].tipoUsuario != 3)
-                {
-                    if (password == usuario[0].contraseña)
-                    {
-                        persona = usuario[0];                        
-                        usuarioValido = true;
-                    }
-                    else
-                    {
-                        usuarioValido = false;
-                        lblCredencialesIncorrectas.Visible = true;
-                    }
-                }
-                else
-                {
-                    usuarioValido = false;
-                    lblCredencialesIncorrectas.Visible = true;
-                }
-            }
-            else
+                usuarioValido = true;
+            } else
             {
-                lblCredencialesIncorrectas.Visible = true;
-
                 usuarioValido = false;
-            }
-
-
-
-
-
-            ////////////////////////////////////////////////////////
-            // Caso ejemplo utilizado para verificar
-            //if (user == "admin" || user == "usuario")
-            //{
-            //    if (password == "1234")
-            //    {
-            //        usuarioValido = true;
-            //    }
-            //    else
-            //    {
-            //        usuarioValido = false;
-            //        lblCredencialesIncorrectas.Visible = true;
-            //    }
-            //}
-            //else
-            //{
-            //    lblCredencialesIncorrectas.Visible = true;
-
-            //    usuarioValido = false;
-            //}
-            /////////////////////////////////////////////////////////
-
+                lblCredencialesIncorrectas.Visible = true;
+            }            
+            
             return usuarioValido;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblPasswordOlvidada_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {            
+        {
             frmOlvidePassword ventana = new frmOlvidePassword(this);
             ventana.Show();
             this.Hide();
@@ -176,7 +122,7 @@ namespace GGNoTeam_V5
             Global.pintarTxtBoxOscuro(ref txtboxUsername);
             Global.pintarTxtBoxOscuro(ref txtboxPassword);
             Global.pintarBtnOscuro(ref btnIniciarSesion);
-            Global.pintarLinkOscuro(ref lblPasswordOlvidada);            
+            Global.pintarLinkOscuro(ref lblPasswordOlvidada);
         }
 
         public void activarTemaClaro()
@@ -250,7 +196,7 @@ namespace GGNoTeam_V5
         }
 
 
-        
-    }       
+
+    }
 }
 

@@ -164,10 +164,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             //MessageBox.Show("Paso validación");
             ventanaPadre.activarBotones();
 
+            int validez = -1;
+
             if (boxID.Texts == "")
             {
                 cargarDatos_2();
-                _daoCliente.insertarPersona(persona);
+                validez = _daoCliente.insertarPersona(persona);
+                if(validez != 1)
+                {
+                    MessageBox.Show("No se ha insertado correctamente al usuario.");
+                } else
+                {
+                    MessageBox.Show("Se insertó correctamente al usuario.");
+                }
             }
             else
             {

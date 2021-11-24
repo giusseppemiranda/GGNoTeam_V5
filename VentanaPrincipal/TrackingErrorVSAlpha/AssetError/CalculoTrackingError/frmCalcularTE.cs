@@ -127,16 +127,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             dgvAssetError.Rows[e.RowIndex].Cells[5].Value = asset.wgtP * asset.totalRiskD;
         }
 
-        private void ggTextBox3__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFondo_3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExportar_Click(object sender, EventArgs e)
         {
             if (dgvAssetError.Rows.Count > 0)

@@ -19,15 +19,18 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private frmLogin ventanaPadre;
         private IconButton iconoActivo = null;
         private LoginWS.persona usuario;
+        private LoginWS.LoginWSClient _daoLogin;
 
         public delegate void delegadoCambiarTema();
         public event delegadoCambiarTema eventoCambiarTema;
 
-        public frmPrincipal(frmLogin ventana, LoginWS.persona persona)
+        public frmPrincipal(frmLogin ventana, String user)
         {
             InitializeComponent();
-            abrirFormulario(new frmBienvenida(this, persona));
-            usuario = persona;
+            _daoLogin = new LoginWS.LoginWSClient();
+            usuario = _daoLogin.buscarPersonaCodigoExacto(user);
+
+            abrirFormulario(new frmBienvenida(this, usuario));            
             ventanaPadre = ventana;
             cargarPantallaSegunTipoUsuario();
             cambiarTema();

@@ -28,6 +28,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
             ventanaPadre = ventana_2;
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
+            dgvAssetError.AutoGenerateColumns = false;
 
             cargarCombo();
             cambiarTema();
@@ -67,15 +68,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
             listaAsset = _daoTE.ListarPorFechaPorFondoAssetError(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
-            dgvAssetError.Rows.Clear();
             if (listaAsset != null)
             {
-                for (int i = 0; i < listaAsset.Length; i++)
-                {
-                    dgvAssetError.Rows.Add(listaAsset[i].fecha.ToString("dd/MM/yyyy"), comboFondo.SelectedItem.ToString(), listaAsset[i].nombre, listaAsset[i].wgtP, listaAsset[i].totalRiskD);
-                }
+                dgvAssetError.DataSource = listaAsset;
+            }else
+            {
+                dgvAssetError.DataSource = null;
             }
-            dgvAssetError.Refresh();
+            
         }
 
         private void btnAgregarRegistros_Click(object sender, EventArgs e)
@@ -108,11 +108,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.btnConsultarRegistros_Click(sender, e);
         }
 
-        private void dgvAssetError_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnVerCalculoTE_Click(object sender, EventArgs e)
         {
             ventanaPadre.abrirFormulario(new frmCalcularTE(ventanaPrincipal, ventanaPadre));
@@ -121,6 +116,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         private void comboFondo_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             this.btnConsultarRegistros_Click(sender, e);
+        }
+
+        private void dgvAssetError_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            TrackingErrorWS.assetError dvc = (TrackingErrorWS.assetError)dgvAssetError.Rows[e.RowIndex].DataBoundItem;
+            dgvAssetError.Rows[e.RowIndex].Cells[0].Value = dvc.fecha.ToString("dd-MM-yyyy");
+            dgvAssetError.Rows[e.RowIndex].Cells[1].Value = comboFondo.SelectedItem.ToString();
+            dgvAssetError.Rows[e.RowIndex].Cells[2].Value = dvc.nombre;
+            dgvAssetError.Rows[e.RowIndex].Cells[3].Value = dvc.wgtP;
+            dgvAssetError.Rows[e.RowIndex].Cells[4].Value = dvc.totalRiskD;            
         }
     }
 }

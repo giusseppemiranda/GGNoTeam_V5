@@ -18,22 +18,7 @@ namespace GGNoTeam_V5.Login
             _daoLogin = new LoginWS.LoginWSClient();
             ventanaPadre = ventanaAnterior;
             cambiarTema();
-        }
-
-        private void frmOlvidePassword_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmOlvidePassword_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtboxUsername__TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -72,15 +57,6 @@ namespace GGNoTeam_V5.Login
             }
         }
 
-
-        /*
-                        msg.CC.Add("sebastian.portal@pucp.edu.pe");
-                        msg.CC.Add("giovanni.miranda@pucp.edu.pe");
-                        msg.CC.Add("luis.bazalar@pucp.edu.pe");
-                        msg.CC.Add("a20170080@pucp.edu.pe");
-                        msg.CC.Add("etavarad@pucp.edu.pe");
-                        msg.CC.Add("john.soto@pucp.edu.pe");
-            */
         private void enviarCorreoUsuario()
         {
             System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
@@ -124,21 +100,6 @@ namespace GGNoTeam_V5.Login
                 lblUsuarioNoEncontrado.Visible = true;
                 valido = false;
             }
-
-
-            ////////////////////////////////////////////////////////
-            // Caso ejemplo utilizado para verificar
-
-            //if (usuario == "usuario@nomail.com" || usuario == "admin@nomail.com" || usuario == "12345678")
-            //{
-            //    valido = true;
-            //}
-            //else
-            //{
-            //    lblUsuarioNoEncontrado.Visible = true;
-            //    valido = false;
-            //}
-            /////////////////////////////////////////////////////////
 
             return valido;
         }
@@ -188,14 +149,5 @@ namespace GGNoTeam_V5.Login
             cambiarTema();
         }
 
-        private void lblUsuarioNoEncontrado_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblIDCorreo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

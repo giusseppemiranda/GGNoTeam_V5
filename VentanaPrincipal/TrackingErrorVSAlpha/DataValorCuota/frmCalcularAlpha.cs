@@ -1,6 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using System;
-using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -64,8 +63,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
-            datos = _dao.listarDataValorCuotaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
-            //listaAlphas = _dao.listarAlphaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
+            datos = _dao.listarDataValorCuotaXFecha(dateInicial.Value.ToString("yyyy-MM-dd")); 
             if (datos != null)
             {
                 dgvDataValorCuota.DataSource = datos;
@@ -144,10 +142,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             }
         }
 
-        private void dgvDataValorCuota_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void dgvDataValorCuota_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
