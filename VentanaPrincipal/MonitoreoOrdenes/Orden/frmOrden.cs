@@ -77,7 +77,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
                         listaOrdenes[i].codISIN,
                         listaOrdenes[i].instrumento,
                         listaOrdenes[i].operacion.ToString(),
-                        listaOrdenes[i].porcentageFondo);
+                        listaOrdenes[i].porcentageFondo,
+                        listaOrdenes[i].assetClass.ToString());
                 }
             }
             dgvOrdenes.Refresh();
@@ -124,11 +125,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private void activarTemaClaro()
         {
             this.BackColor = Global.FrmClaro;
-
-        }
-
-        private void btnAgregarRegistro_Click_1(object sender, EventArgs e)
-        {
 
         }
 

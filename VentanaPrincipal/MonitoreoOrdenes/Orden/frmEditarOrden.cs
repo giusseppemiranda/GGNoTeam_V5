@@ -31,6 +31,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             cambiarTema();
             cargarTipoEdicion();
             cargarComboFondo();
+            cargarComboOperacion();
         }
 
         //Modificar Orden
@@ -53,13 +54,23 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             TextBoxCodigoSin.Texts = Orden.codISIN;
             TextBoxInstrumento.Texts = Orden.instrumento;
             dateTimePicker1.Value = Orden.fecha;
-            TextBoxOperacion.Texts = Orden.operacion.ToString();
+            //TextBoxOperacion.Texts = Orden.operacion.ToString();
             comboFondo.SelectedIndex = Convert.ToInt32(Orden.fondo) - 1;
         }
         private void cargarComboFondo()
         {
             String[] fondos = _daoTE.ListarFondos();
             comboFondo.DataSource = fondos;
+        }
+        private void cargarComboOperacion()
+        {
+            String[] operaciones = { "Compra","Venta"};
+            comboOperacion.DataSource = operaciones;
+        }
+        private void cargarComboAssetClass()
+        {
+            String[] assets = { "Compra", "Venta" };
+            ComboAssetClass.DataSource = assets;
         }
         private void cargarTipoEdicion()
         {
@@ -105,7 +116,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
                 Orden = new MonitoreoOrdenWS.orden();
                 if (cargarDatos())
                 {
+                    MessageBox.Show("Llamando al Dao");
                     int i = _daoMO.insertarOrden(Orden);
+                    MessageBox.Show("Respuesta del Dao: "+ i.ToString());
                     if (i == 1)
                     {
                         MessageBox.Show("La inserción fue realizada con éxito.");
@@ -138,17 +151,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
 
         }
 
-        private void btnCancelar_Click_1(object sender, EventArgs e)
-        {
-            this.Dispose();
-
-        }
 
         private bool cargarDatos()
         {
             Orden.fecha = dateTimePicker1.Value;
             Orden.fechaSpecified = true;
-            Orden.fondo = (MonitoreoOrdenWS.eTipoFondo) comboFondo.SelectedIndex + 1;
+            //Orden.fondo = (MonitoreoOrdenWS.eTipoFondo) comboFondo.SelectedIndex + 1;
 
             if (TextBoxAUMOrdenes.Texts == "")
             {
@@ -173,18 +181,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
                 return false;
             }
 
-            if (TextBoxOperacion.Texts == "")
-            {
-                MessageBox.Show("Operacion no puede tener un campo vacío");
-                return false;
-            }
+            
             try
             {
                 Orden.porcentageFondo = Convert.ToDouble( TextBoxAUMOrdenes.Texts);
                 Orden.codSBS = TextBoxCodigoSbs.Texts;
                 Orden.codISIN = TextBoxCodigoSin.Texts;
                 Orden.instrumento = TextBoxInstrumento.Texts;
-                Orden.operacion = (MonitoreoOrdenWS.eTipoOperacion) Convert.ToInt32(TextBoxOperacion.Texts);
+                //Orden.assetClass = ComboAssetClass.Texts;
+                /*
+                 Venta => 0
+                 Compra => 1
+                 */
+                if(comboOperacion.Texts == "Venta")
+                    Orden.operacion = (MonitoreoOrdenWS.eTipoOperacion)0;
+                else
+                    Orden.operacion = (MonitoreoOrdenWS.eTipoOperacion)1;
             }
             catch
             {
@@ -195,5 +207,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             return true;
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+
+        }
     }
 }

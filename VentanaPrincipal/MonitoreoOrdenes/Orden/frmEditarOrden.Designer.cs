@@ -28,47 +28,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextBoxAUMOrdenes = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TextBoxOperacion = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TextBoxInstrumento = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TextBoxCodigoSin = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblFondo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.comboOperacion = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
+            this.TextBoxAUMOrdenes = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.TextBoxInstrumento = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.TextBoxCodigoSin = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.TextBoxCodigoSbs = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.ComboAssetClass = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // TextBoxAUMOrdenes
-            // 
-            this.TextBoxAUMOrdenes.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBoxAUMOrdenes.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBoxAUMOrdenes.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.TextBoxAUMOrdenes.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.TextBoxAUMOrdenes.BorderSize = 2;
-            this.TextBoxAUMOrdenes.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.TextBoxAUMOrdenes.ForeColor = System.Drawing.Color.DimGray;
-            this.TextBoxAUMOrdenes.IsFocused = false;
-            this.TextBoxAUMOrdenes.Location = new System.Drawing.Point(378, 780);
-            this.TextBoxAUMOrdenes.Margin = new System.Windows.Forms.Padding(6);
-            this.TextBoxAUMOrdenes.MaxLength = 32767;
-            this.TextBoxAUMOrdenes.Multiline = false;
-            this.TextBoxAUMOrdenes.Name = "TextBoxAUMOrdenes";
-            this.TextBoxAUMOrdenes.Padding = new System.Windows.Forms.Padding(12);
-            this.TextBoxAUMOrdenes.PasswordChar = false;
-            this.TextBoxAUMOrdenes.Size = new System.Drawing.Size(432, 61);
-            this.TextBoxAUMOrdenes.TabIndex = 115;
-            this.TextBoxAUMOrdenes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TextBoxAUMOrdenes.Texts = "";
-            this.TextBoxAUMOrdenes.UnderlinedStyle = true;
             // 
             // label6
             // 
@@ -82,29 +61,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.label6.TabIndex = 114;
             this.label6.Text = "AUM Orden:";
             // 
-            // TextBoxOperacion
-            // 
-            this.TextBoxOperacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBoxOperacion.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBoxOperacion.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.TextBoxOperacion.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.TextBoxOperacion.BorderSize = 2;
-            this.TextBoxOperacion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.TextBoxOperacion.ForeColor = System.Drawing.Color.DimGray;
-            this.TextBoxOperacion.IsFocused = false;
-            this.TextBoxOperacion.Location = new System.Drawing.Point(378, 667);
-            this.TextBoxOperacion.Margin = new System.Windows.Forms.Padding(6);
-            this.TextBoxOperacion.MaxLength = 32767;
-            this.TextBoxOperacion.Multiline = false;
-            this.TextBoxOperacion.Name = "TextBoxOperacion";
-            this.TextBoxOperacion.Padding = new System.Windows.Forms.Padding(12);
-            this.TextBoxOperacion.PasswordChar = false;
-            this.TextBoxOperacion.Size = new System.Drawing.Size(432, 61);
-            this.TextBoxOperacion.TabIndex = 113;
-            this.TextBoxOperacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TextBoxOperacion.Texts = "";
-            this.TextBoxOperacion.UnderlinedStyle = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -116,29 +72,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.label3.Size = new System.Drawing.Size(137, 32);
             this.label3.TabIndex = 112;
             this.label3.Text = "operacion:";
-            // 
-            // TextBoxInstrumento
-            // 
-            this.TextBoxInstrumento.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBoxInstrumento.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBoxInstrumento.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.TextBoxInstrumento.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.TextBoxInstrumento.BorderSize = 2;
-            this.TextBoxInstrumento.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.TextBoxInstrumento.ForeColor = System.Drawing.Color.DimGray;
-            this.TextBoxInstrumento.IsFocused = false;
-            this.TextBoxInstrumento.Location = new System.Drawing.Point(378, 558);
-            this.TextBoxInstrumento.Margin = new System.Windows.Forms.Padding(6);
-            this.TextBoxInstrumento.MaxLength = 32767;
-            this.TextBoxInstrumento.Multiline = false;
-            this.TextBoxInstrumento.Name = "TextBoxInstrumento";
-            this.TextBoxInstrumento.Padding = new System.Windows.Forms.Padding(12);
-            this.TextBoxInstrumento.PasswordChar = false;
-            this.TextBoxInstrumento.Size = new System.Drawing.Size(432, 61);
-            this.TextBoxInstrumento.TabIndex = 111;
-            this.TextBoxInstrumento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TextBoxInstrumento.Texts = "";
-            this.TextBoxInstrumento.UnderlinedStyle = true;
             // 
             // label4
             // 
@@ -152,29 +85,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.label4.TabIndex = 110;
             this.label4.Text = "instrumento:";
             // 
-            // TextBoxCodigoSin
-            // 
-            this.TextBoxCodigoSin.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBoxCodigoSin.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBoxCodigoSin.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.TextBoxCodigoSin.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.TextBoxCodigoSin.BorderSize = 2;
-            this.TextBoxCodigoSin.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.TextBoxCodigoSin.ForeColor = System.Drawing.Color.DimGray;
-            this.TextBoxCodigoSin.IsFocused = false;
-            this.TextBoxCodigoSin.Location = new System.Drawing.Point(378, 445);
-            this.TextBoxCodigoSin.Margin = new System.Windows.Forms.Padding(6);
-            this.TextBoxCodigoSin.MaxLength = 32767;
-            this.TextBoxCodigoSin.Multiline = false;
-            this.TextBoxCodigoSin.Name = "TextBoxCodigoSin";
-            this.TextBoxCodigoSin.Padding = new System.Windows.Forms.Padding(12);
-            this.TextBoxCodigoSin.PasswordChar = false;
-            this.TextBoxCodigoSin.Size = new System.Drawing.Size(432, 61);
-            this.TextBoxCodigoSin.TabIndex = 109;
-            this.TextBoxCodigoSin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TextBoxCodigoSin.Texts = "";
-            this.TextBoxCodigoSin.UnderlinedStyle = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -186,26 +96,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.label2.Size = new System.Drawing.Size(141, 32);
             this.label2.TabIndex = 108;
             this.label2.Text = "codigo sin:";
-            // 
-            // comboFondo
-            // 
-            this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboFondo.BorderSize = 1;
-            this.comboFondo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboFondo.ForeColor = System.Drawing.Color.DimGray;
-            this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboFondo.Location = new System.Drawing.Point(378, 227);
-            this.comboFondo.Margin = new System.Windows.Forms.Padding(6);
-            this.comboFondo.MinimumSize = new System.Drawing.Size(400, 58);
-            this.comboFondo.Name = "comboFondo";
-            this.comboFondo.Padding = new System.Windows.Forms.Padding(2);
-            this.comboFondo.Size = new System.Drawing.Size(432, 58);
-            this.comboFondo.TabIndex = 107;
-            this.comboFondo.Texts = "Fondo";
             // 
             // dateTimePicker1
             // 
@@ -238,6 +128,139 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.label1.Size = new System.Drawing.Size(86, 32);
             this.label1.TabIndex = 104;
             this.label1.Text = "Fecha:";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFecha.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblFecha.Location = new System.Drawing.Point(100, 336);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(145, 32);
+            this.lblFecha.TabIndex = 100;
+            this.lblFecha.Text = "codigo sbs:";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(383, 75);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(110, 37);
+            this.lblTitulo.TabIndex = 99;
+            this.lblTitulo.Text = "ORDEN";
+            // 
+            // comboOperacion
+            // 
+            this.comboOperacion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboOperacion.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboOperacion.BorderSize = 1;
+            this.comboOperacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboOperacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboOperacion.ForeColor = System.Drawing.Color.DimGray;
+            this.comboOperacion.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboOperacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboOperacion.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboOperacion.Location = new System.Drawing.Point(378, 667);
+            this.comboOperacion.Margin = new System.Windows.Forms.Padding(6);
+            this.comboOperacion.MinimumSize = new System.Drawing.Size(400, 58);
+            this.comboOperacion.Name = "comboOperacion";
+            this.comboOperacion.Padding = new System.Windows.Forms.Padding(2);
+            this.comboOperacion.Size = new System.Drawing.Size(432, 58);
+            this.comboOperacion.TabIndex = 116;
+            this.comboOperacion.Texts = "Operacion";
+            // 
+            // TextBoxAUMOrdenes
+            // 
+            this.TextBoxAUMOrdenes.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBoxAUMOrdenes.BackColor = System.Drawing.SystemColors.Window;
+            this.TextBoxAUMOrdenes.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.TextBoxAUMOrdenes.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.TextBoxAUMOrdenes.BorderSize = 2;
+            this.TextBoxAUMOrdenes.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.TextBoxAUMOrdenes.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBoxAUMOrdenes.IsFocused = false;
+            this.TextBoxAUMOrdenes.Location = new System.Drawing.Point(378, 780);
+            this.TextBoxAUMOrdenes.Margin = new System.Windows.Forms.Padding(6);
+            this.TextBoxAUMOrdenes.MaxLength = 32767;
+            this.TextBoxAUMOrdenes.Multiline = false;
+            this.TextBoxAUMOrdenes.Name = "TextBoxAUMOrdenes";
+            this.TextBoxAUMOrdenes.Padding = new System.Windows.Forms.Padding(12);
+            this.TextBoxAUMOrdenes.PasswordChar = false;
+            this.TextBoxAUMOrdenes.Size = new System.Drawing.Size(432, 61);
+            this.TextBoxAUMOrdenes.TabIndex = 115;
+            this.TextBoxAUMOrdenes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextBoxAUMOrdenes.Texts = "";
+            this.TextBoxAUMOrdenes.UnderlinedStyle = true;
+            // 
+            // TextBoxInstrumento
+            // 
+            this.TextBoxInstrumento.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBoxInstrumento.BackColor = System.Drawing.SystemColors.Window;
+            this.TextBoxInstrumento.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.TextBoxInstrumento.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.TextBoxInstrumento.BorderSize = 2;
+            this.TextBoxInstrumento.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.TextBoxInstrumento.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBoxInstrumento.IsFocused = false;
+            this.TextBoxInstrumento.Location = new System.Drawing.Point(378, 558);
+            this.TextBoxInstrumento.Margin = new System.Windows.Forms.Padding(6);
+            this.TextBoxInstrumento.MaxLength = 32767;
+            this.TextBoxInstrumento.Multiline = false;
+            this.TextBoxInstrumento.Name = "TextBoxInstrumento";
+            this.TextBoxInstrumento.Padding = new System.Windows.Forms.Padding(12);
+            this.TextBoxInstrumento.PasswordChar = false;
+            this.TextBoxInstrumento.Size = new System.Drawing.Size(432, 61);
+            this.TextBoxInstrumento.TabIndex = 111;
+            this.TextBoxInstrumento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextBoxInstrumento.Texts = "";
+            this.TextBoxInstrumento.UnderlinedStyle = true;
+            // 
+            // TextBoxCodigoSin
+            // 
+            this.TextBoxCodigoSin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TextBoxCodigoSin.BackColor = System.Drawing.SystemColors.Window;
+            this.TextBoxCodigoSin.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.TextBoxCodigoSin.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.TextBoxCodigoSin.BorderSize = 2;
+            this.TextBoxCodigoSin.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.TextBoxCodigoSin.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBoxCodigoSin.IsFocused = false;
+            this.TextBoxCodigoSin.Location = new System.Drawing.Point(378, 445);
+            this.TextBoxCodigoSin.Margin = new System.Windows.Forms.Padding(6);
+            this.TextBoxCodigoSin.MaxLength = 32767;
+            this.TextBoxCodigoSin.Multiline = false;
+            this.TextBoxCodigoSin.Name = "TextBoxCodigoSin";
+            this.TextBoxCodigoSin.Padding = new System.Windows.Forms.Padding(12);
+            this.TextBoxCodigoSin.PasswordChar = false;
+            this.TextBoxCodigoSin.Size = new System.Drawing.Size(432, 61);
+            this.TextBoxCodigoSin.TabIndex = 109;
+            this.TextBoxCodigoSin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextBoxCodigoSin.Texts = "";
+            this.TextBoxCodigoSin.UnderlinedStyle = true;
+            // 
+            // comboFondo
+            // 
+            this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.BorderSize = 1;
+            this.comboFondo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboFondo.ForeColor = System.Drawing.Color.DimGray;
+            this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboFondo.Location = new System.Drawing.Point(378, 227);
+            this.comboFondo.Margin = new System.Windows.Forms.Padding(6);
+            this.comboFondo.MinimumSize = new System.Drawing.Size(400, 58);
+            this.comboFondo.Name = "comboFondo";
+            this.comboFondo.Padding = new System.Windows.Forms.Padding(2);
+            this.comboFondo.Size = new System.Drawing.Size(432, 58);
+            this.comboFondo.TabIndex = 107;
+            this.comboFondo.Texts = "Fondo";
             // 
             // TextBoxCodigoSbs
             // 
@@ -273,7 +296,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(306, 940);
+            this.btnCancelar.Location = new System.Drawing.Point(282, 990);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(6);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(168, 90);
@@ -281,6 +304,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSiguiente
             // 
@@ -293,7 +317,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(494, 940);
+            this.btnSiguiente.Location = new System.Drawing.Point(470, 990);
             this.btnSiguiente.Margin = new System.Windows.Forms.Padding(6);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(168, 90);
@@ -301,39 +325,50 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnSiguiente.Text = "Aceptar";
             this.btnSiguiente.TextColor = System.Drawing.Color.White;
             this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
-            // lblFecha
+            // ComboAssetClass
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblFecha.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblFecha.Location = new System.Drawing.Point(100, 336);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(145, 32);
-            this.lblFecha.TabIndex = 100;
-            this.lblFecha.Text = "codigo sbs:";
+            this.ComboAssetClass.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ComboAssetClass.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.ComboAssetClass.BorderSize = 1;
+            this.ComboAssetClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.ComboAssetClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ComboAssetClass.ForeColor = System.Drawing.Color.DimGray;
+            this.ComboAssetClass.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.ComboAssetClass.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.ComboAssetClass.ListTextColor = System.Drawing.Color.DimGray;
+            this.ComboAssetClass.Location = new System.Drawing.Point(378, 889);
+            this.ComboAssetClass.Margin = new System.Windows.Forms.Padding(6);
+            this.ComboAssetClass.MinimumSize = new System.Drawing.Size(400, 58);
+            this.ComboAssetClass.Name = "ComboAssetClass";
+            this.ComboAssetClass.Padding = new System.Windows.Forms.Padding(2);
+            this.ComboAssetClass.Size = new System.Drawing.Size(432, 58);
+            this.ComboAssetClass.TabIndex = 118;
+            this.ComboAssetClass.Texts = "Asset class";
             // 
-            // lblTitulo
+            // label5
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(383, 75);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(110, 37);
-            this.lblTitulo.TabIndex = 99;
-            this.lblTitulo.Text = "ORDEN";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5.Location = new System.Drawing.Point(97, 905);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 32);
+            this.label5.TabIndex = 117;
+            this.label5.Text = "Asset class:";
             // 
             // frmEditarOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 1105);
+            this.Controls.Add(this.ComboAssetClass);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboOperacion);
             this.Controls.Add(this.TextBoxAUMOrdenes);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.TextBoxOperacion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TextBoxInstrumento);
             this.Controls.Add(this.label4);
@@ -362,7 +397,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
 
         private Recursos.UserControls.GGTextBox TextBoxAUMOrdenes;
         private System.Windows.Forms.Label label6;
-        private Recursos.UserControls.GGTextBox TextBoxOperacion;
         private System.Windows.Forms.Label label3;
         private Recursos.UserControls.GGTextBox TextBoxInstrumento;
         private System.Windows.Forms.Label label4;
@@ -377,5 +411,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private Recursos.UserControls.GGButton btnSiguiente;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblTitulo;
+        private Recursos.UserControls.GGComboBox comboOperacion;
+        private Recursos.UserControls.GGComboBox ComboAssetClass;
+        private System.Windows.Forms.Label label5;
     }
 }

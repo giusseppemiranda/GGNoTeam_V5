@@ -414,7 +414,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboFondo.Location = new System.Drawing.Point(781, 15);
+            this.comboFondo.Location = new System.Drawing.Point(770, 15);
             this.comboFondo.Margin = new System.Windows.Forms.Padding(6);
             this.comboFondo.MinimumSize = new System.Drawing.Size(400, 58);
             this.comboFondo.Name = "comboFondo";

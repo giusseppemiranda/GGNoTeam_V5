@@ -29,8 +29,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnModificarRegistro = new FontAwesome.Sharp.IconButton();
@@ -39,15 +39,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
             this.dgvOrdenes = new System.Windows.Forms.DataGridView();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AssetClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoSBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoISIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Instrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Operación = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AUMordenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.comboFondo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,7 +127,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.btnAgregarRegistro.TabIndex = 86;
             this.btnAgregarRegistro.Text = "Agregar Registro";
             this.btnAgregarRegistro.UseVisualStyleBackColor = false;
-            this.btnAgregarRegistro.Click += new System.EventHandler(this.btnAgregarRegistro_Click_1);
+            this.btnAgregarRegistro.Click += new System.EventHandler(this.btnAgregarRegistro_Click);
             // 
             // btnConsultarOrdenes
             // 
@@ -179,17 +180,18 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.dgvOrdenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvOrdenes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvOrdenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrdenes.ColumnHeadersHeight = 25;
             this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
+            this.AssetClass,
             this.Fondo,
             this.CodigoSBS,
             this.CodigoISIN,
@@ -204,13 +206,45 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.dgvOrdenes.ReadOnly = true;
             this.dgvOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvOrdenes.RowHeadersWidth = 82;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvOrdenes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvOrdenes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOrdenes.RowTemplate.Height = 25;
             this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrdenes.Size = new System.Drawing.Size(1848, 783);
             this.dgvOrdenes.TabIndex = 82;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblTitulo.Location = new System.Drawing.Point(52, -6);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(442, 54);
+            this.lblTitulo.TabIndex = 81;
+            this.lblTitulo.Text = "Monitoreo de órdenes";
+            // 
+            // comboFondo
+            // 
+            this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.BorderSize = 1;
+            this.comboFondo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboFondo.ForeColor = System.Drawing.Color.DimGray;
+            this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboFondo.Location = new System.Drawing.Point(943, 85);
+            this.comboFondo.Margin = new System.Windows.Forms.Padding(6);
+            this.comboFondo.MinimumSize = new System.Drawing.Size(400, 58);
+            this.comboFondo.Name = "comboFondo";
+            this.comboFondo.Padding = new System.Windows.Forms.Padding(2);
+            this.comboFondo.Size = new System.Drawing.Size(400, 58);
+            this.comboFondo.TabIndex = 90;
+            this.comboFondo.Texts = "Fondo";
             // 
             // Fecha
             // 
@@ -219,6 +253,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             this.Fecha.Width = 122;
+            // 
+            // AssetClass
+            // 
+            this.AssetClass.HeaderText = "Asset Class";
+            this.AssetClass.MinimumWidth = 10;
+            this.AssetClass.Name = "AssetClass";
+            this.AssetClass.ReadOnly = true;
+            this.AssetClass.Width = 183;
             // 
             // Fondo
             // 
@@ -268,38 +310,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.AUMordenes.ReadOnly = true;
             this.AUMordenes.Width = 214;
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(52, -6);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(442, 54);
-            this.lblTitulo.TabIndex = 81;
-            this.lblTitulo.Text = "Monitoreo de órdenes";
-            // 
-            // comboFondo
-            // 
-            this.comboFondo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboFondo.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboFondo.BorderSize = 1;
-            this.comboFondo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboFondo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboFondo.ForeColor = System.Drawing.Color.DimGray;
-            this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboFondo.Location = new System.Drawing.Point(943, 85);
-            this.comboFondo.Margin = new System.Windows.Forms.Padding(6);
-            this.comboFondo.MinimumSize = new System.Drawing.Size(400, 58);
-            this.comboFondo.Name = "comboFondo";
-            this.comboFondo.Padding = new System.Windows.Forms.Padding(2);
-            this.comboFondo.Size = new System.Drawing.Size(400, 58);
-            this.comboFondo.TabIndex = 90;
-            this.comboFondo.Texts = "Fondo";
-            // 
             // frmOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -335,14 +345,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private System.Windows.Forms.DateTimePicker dateInicial;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.DataGridView dgvOrdenes;
+        private System.Windows.Forms.Label lblTitulo;
+        private Recursos.UserControls.GGComboBox comboFondo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AssetClass;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fondo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoSBS;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoISIN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Instrumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Operación;
         private System.Windows.Forms.DataGridViewTextBoxColumn AUMordenes;
-        private System.Windows.Forms.Label lblTitulo;
-        private Recursos.UserControls.GGComboBox comboFondo;
     }
 }
