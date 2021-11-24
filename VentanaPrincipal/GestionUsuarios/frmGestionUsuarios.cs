@@ -209,7 +209,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         {
             if (dgvPersonas.CurrentRow != null)
             {
-                frmTareasPendientes tareas = new frmTareasPendientes(lista[dgvPersonas.CurrentRow.Index]);
+                frmTareasPendientes tareas = new frmTareasPendientes(lista[dgvPersonas.CurrentRow.Index],usuario);
                 tareas.ShowDialog();
             }
         }
