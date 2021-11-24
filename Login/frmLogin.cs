@@ -79,22 +79,14 @@ namespace GGNoTeam_V5
 
             LoginWS.persona[] usuario = _daoLogin.listarPorCodNom(user);
 
-            if (usuario!= null)
+            if (usuario.Length == 1)
             {
-                if (usuario.Length == 1)
+                if (user == usuario[0].codigo && usuario[0].tipoUsuario != 3)
                 {
-                    if (user == usuario[0].codigo && usuario[0].tipoUsuario != 3)
+                    if (password == usuario[0].contraseña)
                     {
-                        if (password == usuario[0].contraseña)
-                        {
-                            persona = usuario[0];                        
-                            usuarioValido = true;
-                        }
-                        else
-                        {
-                            usuarioValido = false;
-                            lblCredencialesIncorrectas.Visible = true;
-                        }
+                        persona = usuario[0];                        
+                        usuarioValido = true;
                     }
                     else
                     {
@@ -102,10 +94,16 @@ namespace GGNoTeam_V5
                         lblCredencialesIncorrectas.Visible = true;
                     }
                 }
+                else
+                {
+                    usuarioValido = false;
+                    lblCredencialesIncorrectas.Visible = true;
+                }
             }
             else
             {
                 lblCredencialesIncorrectas.Visible = true;
+
                 usuarioValido = false;
             }
 
