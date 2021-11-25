@@ -96,5 +96,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             
             this.Dispose();
         }
+
+        private void frmRegistroOriginador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

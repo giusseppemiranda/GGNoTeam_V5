@@ -49,17 +49,20 @@ namespace GGNoTeam_V5.VentanaPrincipal
             InitializeComponent();
             cargarCombo();
             cambiarTema();
-            btnSalir.Visible = true;
-            user = persona;
+
             tareaAdmin = new TareasDiariasWS.tarea();
-            adminAux = admin;
             _daoTareasDiarias = new TareasDiariasWS.TareasDiariasWSClient();
             _daoPersona = new LoginWS.LoginWSClient();
+
+            btnSalir.Visible = true;
+            user = persona;            
+            adminAux = admin;            
+            dgvTareasPendientes.AutoGenerateColumns = false;
+            
             cargarLabelInicial();
             pintarDGVInicial();
-            cargarSubTema();
-            dgvTareasPendientes.AutoGenerateColumns = false;
-            ActualizarPerdidas();
+            cargarSubTema();            
+            ActualizarPerdidas();            
         }
 
         private void cargarSubTema()

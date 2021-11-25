@@ -50,13 +50,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.boxNombreEmisor.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxNombreEmisor.ForeColor = System.Drawing.Color.DimGray;
             this.boxNombreEmisor.IsFocused = false;
-            this.boxNombreEmisor.Location = new System.Drawing.Point(184, 155);
+            this.boxNombreEmisor.Location = new System.Drawing.Point(177, 118);
             this.boxNombreEmisor.MaxLength = 32767;
             this.boxNombreEmisor.Multiline = false;
             this.boxNombreEmisor.Name = "boxNombreEmisor";
             this.boxNombreEmisor.Padding = new System.Windows.Forms.Padding(6);
             this.boxNombreEmisor.PasswordChar = false;
-            this.boxNombreEmisor.Size = new System.Drawing.Size(214, 30);
+            this.boxNombreEmisor.Size = new System.Drawing.Size(221, 30);
             this.boxNombreEmisor.TabIndex = 37;
             this.boxNombreEmisor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxNombreEmisor.Texts = "";
@@ -67,7 +67,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.lblNombreEmisor.AutoSize = true;
             this.lblNombreEmisor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombreEmisor.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblNombreEmisor.Location = new System.Drawing.Point(48, 167);
+            this.lblNombreEmisor.Location = new System.Drawing.Point(41, 130);
             this.lblNombreEmisor.Name = "lblNombreEmisor";
             this.lblNombreEmisor.Size = new System.Drawing.Size(97, 15);
             this.lblNombreEmisor.TabIndex = 36;
@@ -85,13 +85,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.boxCodigoEmisor.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxCodigoEmisor.ForeColor = System.Drawing.Color.DimGray;
             this.boxCodigoEmisor.IsFocused = false;
-            this.boxCodigoEmisor.Location = new System.Drawing.Point(184, 88);
+            this.boxCodigoEmisor.Location = new System.Drawing.Point(177, 67);
             this.boxCodigoEmisor.MaxLength = 32767;
             this.boxCodigoEmisor.Multiline = false;
             this.boxCodigoEmisor.Name = "boxCodigoEmisor";
             this.boxCodigoEmisor.Padding = new System.Windows.Forms.Padding(6);
             this.boxCodigoEmisor.PasswordChar = false;
-            this.boxCodigoEmisor.Size = new System.Drawing.Size(214, 30);
+            this.boxCodigoEmisor.Size = new System.Drawing.Size(221, 30);
             this.boxCodigoEmisor.TabIndex = 35;
             this.boxCodigoEmisor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxCodigoEmisor.Texts = "";
@@ -102,7 +102,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.lblCodigoEmisor.AutoSize = true;
             this.lblCodigoEmisor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCodigoEmisor.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCodigoEmisor.Location = new System.Drawing.Point(48, 100);
+            this.lblCodigoEmisor.Location = new System.Drawing.Point(41, 79);
             this.lblCodigoEmisor.Name = "lblCodigoEmisor";
             this.lblCodigoEmisor.Size = new System.Drawing.Size(89, 15);
             this.lblCodigoEmisor.TabIndex = 34;
@@ -119,7 +119,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 313);
+            this.btnCancelar.Location = new System.Drawing.Point(196, 169);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 47);
             this.btnCancelar.TabIndex = 61;
@@ -138,7 +138,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(171, 217);
+            this.btnSiguiente.Location = new System.Drawing.Point(286, 169);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(112, 47);
             this.btnSiguiente.TabIndex = 60;
@@ -151,7 +151,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.lblRegistroEmisor.AutoSize = true;
             this.lblRegistroEmisor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistroEmisor.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRegistroEmisor.Location = new System.Drawing.Point(150, 24);
+            this.lblRegistroEmisor.Location = new System.Drawing.Point(119, 23);
             this.lblRegistroEmisor.Name = "lblRegistroEmisor";
             this.lblRegistroEmisor.Size = new System.Drawing.Size(151, 25);
             this.lblRegistroEmisor.TabIndex = 62;
@@ -161,7 +161,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 372);
+            this.ClientSize = new System.Drawing.Size(420, 242);
             this.Controls.Add(this.lblRegistroEmisor);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
@@ -171,6 +171,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.Controls.Add(this.lblCodigoEmisor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistroEmisor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistroEmisor";
             this.ResumeLayout(false);
             this.PerformLayout();

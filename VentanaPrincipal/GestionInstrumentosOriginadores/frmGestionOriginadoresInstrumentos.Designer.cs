@@ -78,14 +78,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             // 
             // lblTitulo
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(12, 16);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(341, 50);
+            this.lblTitulo.Size = new System.Drawing.Size(482, 26);
             this.lblTitulo.TabIndex = 31;
-            this.lblTitulo.Text = "Gestión de Instrumentos, Originadores\r\ny Emisores";
+            this.lblTitulo.Text = "Gestión de Instrumentos, Originadores y Emisores";
             // 
             // btnEliminar
             // 
@@ -99,10 +98,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 32;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(621, 488);
+            this.btnEliminar.Location = new System.Drawing.Point(575, 488);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnEliminar.Size = new System.Drawing.Size(112, 38);
+            this.btnEliminar.Size = new System.Drawing.Size(128, 38);
             this.btnEliminar.TabIndex = 44;
             this.btnEliminar.Text = "Eliminar ";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -121,10 +120,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 32;
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(739, 488);
+            this.btnActualizar.Location = new System.Drawing.Point(709, 488);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnActualizar.Size = new System.Drawing.Size(112, 38);
+            this.btnActualizar.Size = new System.Drawing.Size(128, 38);
             this.btnActualizar.TabIndex = 43;
             this.btnActualizar.Text = "Modificar";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -143,10 +142,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 32;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(857, 488);
+            this.btnAgregar.Location = new System.Drawing.Point(843, 488);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(112, 38);
+            this.btnAgregar.Size = new System.Drawing.Size(128, 38);
             this.btnAgregar.TabIndex = 45;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -164,7 +163,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.comboTipo.IconColor = System.Drawing.Color.DodgerBlue;
             this.comboTipo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboTipo.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboTipo.Location = new System.Drawing.Point(431, 16);
+            this.comboTipo.Location = new System.Drawing.Point(500, 16);
             this.comboTipo.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboTipo.Name = "comboTipo";
             this.comboTipo.Padding = new System.Windows.Forms.Padding(2);
@@ -183,7 +182,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(887, 16);
+            this.btnBuscar.Location = new System.Drawing.Point(893, 16);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(78, 30);
             this.btnBuscar.TabIndex = 29;
@@ -202,13 +201,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.txtboxbusqueda.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtboxbusqueda.ForeColor = System.Drawing.Color.DimGray;
             this.txtboxbusqueda.IsFocused = false;
-            this.txtboxbusqueda.Location = new System.Drawing.Point(648, 16);
+            this.txtboxbusqueda.Location = new System.Drawing.Point(706, 16);
             this.txtboxbusqueda.MaxLength = 32767;
             this.txtboxbusqueda.Multiline = false;
             this.txtboxbusqueda.Name = "txtboxbusqueda";
             this.txtboxbusqueda.Padding = new System.Windows.Forms.Padding(6);
             this.txtboxbusqueda.PasswordChar = false;
-            this.txtboxbusqueda.Size = new System.Drawing.Size(220, 30);
+            this.txtboxbusqueda.Size = new System.Drawing.Size(181, 30);
             this.txtboxbusqueda.TabIndex = 13;
             this.txtboxbusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtboxbusqueda.Texts = "";
@@ -232,7 +231,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.Text = "frmGestionOriginadoresInstrumentos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInstrumentosOriginadores)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

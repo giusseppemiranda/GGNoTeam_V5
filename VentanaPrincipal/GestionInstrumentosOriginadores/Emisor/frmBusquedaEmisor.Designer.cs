@@ -153,6 +153,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.Controls.Add(this.lblEmisores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBusquedaEmisor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBusquedaEmisor";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmisores)).EndInit();
             this.ResumeLayout(false);

@@ -32,8 +32,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             dgvInstrumentosOriginadores.AutoGenerateColumns = false;
             _daoInstOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
-            cargarComboBoxEleccion();
 
+            Global.pintarDGV(ref dgvInstrumentosOriginadores, Color.DarkSalmon);
+            cargarComboBoxEleccion();
             cambiarTema();
         }
 
@@ -68,6 +69,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             comboTipo.Items.Add("Emisor");
             comboTipo.Items.Add("Instrumento");
             comboTipo.Items.Add("Originador");
+            comboTipo.SelectedIndex = 0;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -80,8 +82,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.originador>(originadores.ToList());
                     cargarNombresEmis();
-
-
                 }
                 else MessageBox.Show("No se encontraron resultados");
             }
@@ -109,8 +109,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 }
                 else MessageBox.Show("No se encontraron resultados");
             }
-
-
         }
 
         private void cargarNombresOrig()
@@ -123,8 +121,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 dgvInstrumentosOriginadores.Rows[i].Cells[17].Value = origAux2.codigoOriginador;
                 i++;
             }
-                
-            
         }
 
         private void cargarNombresEmis()
@@ -138,8 +134,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 dgvInstrumentosOriginadores.Rows[i].Cells[5].Value = emiAux.nombre;
                 i++;
             }
-
-
         }
 
         private void dgvInstrumentosOriginadores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

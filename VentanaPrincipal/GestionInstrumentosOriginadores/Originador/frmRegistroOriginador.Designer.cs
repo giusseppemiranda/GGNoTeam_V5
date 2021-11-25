@@ -56,7 +56,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.boxCodigoOriginador.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxCodigoOriginador.ForeColor = System.Drawing.Color.DimGray;
             this.boxCodigoOriginador.IsFocused = false;
-            this.boxCodigoOriginador.Location = new System.Drawing.Point(176, 90);
+            this.boxCodigoOriginador.Location = new System.Drawing.Point(176, 45);
             this.boxCodigoOriginador.MaxLength = 32767;
             this.boxCodigoOriginador.Multiline = false;
             this.boxCodigoOriginador.Name = "boxCodigoOriginador";
@@ -73,7 +73,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblCodigoOriginador.AutoSize = true;
             this.lblCodigoOriginador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblCodigoOriginador.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCodigoOriginador.Location = new System.Drawing.Point(40, 102);
+            this.lblCodigoOriginador.Location = new System.Drawing.Point(40, 60);
             this.lblCodigoOriginador.Name = "lblCodigoOriginador";
             this.lblCodigoOriginador.Size = new System.Drawing.Size(108, 15);
             this.lblCodigoOriginador.TabIndex = 30;
@@ -91,7 +91,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.boxNombreOriginador.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxNombreOriginador.ForeColor = System.Drawing.Color.DimGray;
             this.boxNombreOriginador.IsFocused = false;
-            this.boxNombreOriginador.Location = new System.Drawing.Point(176, 158);
+            this.boxNombreOriginador.Location = new System.Drawing.Point(176, 91);
             this.boxNombreOriginador.MaxLength = 32767;
             this.boxNombreOriginador.Multiline = false;
             this.boxNombreOriginador.Name = "boxNombreOriginador";
@@ -108,7 +108,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblNombreOriginador.AutoSize = true;
             this.lblNombreOriginador.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombreOriginador.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblNombreOriginador.Location = new System.Drawing.Point(40, 170);
+            this.lblNombreOriginador.Location = new System.Drawing.Point(40, 106);
             this.lblNombreOriginador.Name = "lblNombreOriginador";
             this.lblNombreOriginador.Size = new System.Drawing.Size(116, 15);
             this.lblNombreOriginador.TabIndex = 32;
@@ -126,7 +126,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.boxEmisor.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxEmisor.ForeColor = System.Drawing.Color.DimGray;
             this.boxEmisor.IsFocused = false;
-            this.boxEmisor.Location = new System.Drawing.Point(176, 288);
+            this.boxEmisor.Location = new System.Drawing.Point(176, 182);
             this.boxEmisor.MaxLength = 32767;
             this.boxEmisor.Multiline = false;
             this.boxEmisor.Name = "boxEmisor";
@@ -143,7 +143,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblEmisor.AutoSize = true;
             this.lblEmisor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblEmisor.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblEmisor.Location = new System.Drawing.Point(40, 300);
+            this.lblEmisor.Location = new System.Drawing.Point(40, 197);
             this.lblEmisor.Name = "lblEmisor";
             this.lblEmisor.Size = new System.Drawing.Size(47, 15);
             this.lblEmisor.TabIndex = 34;
@@ -161,7 +161,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.boxSector.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxSector.ForeColor = System.Drawing.Color.DimGray;
             this.boxSector.IsFocused = false;
-            this.boxSector.Location = new System.Drawing.Point(176, 224);
+            this.boxSector.Location = new System.Drawing.Point(176, 136);
             this.boxSector.MaxLength = 32767;
             this.boxSector.Multiline = false;
             this.boxSector.Name = "boxSector";
@@ -178,7 +178,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblSector.AutoSize = true;
             this.lblSector.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblSector.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblSector.Location = new System.Drawing.Point(40, 236);
+            this.lblSector.Location = new System.Drawing.Point(40, 151);
             this.lblSector.Name = "lblSector";
             this.lblSector.Size = new System.Drawing.Size(47, 15);
             this.lblSector.TabIndex = 36;
@@ -189,7 +189,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblNombreEmisor.AutoSize = true;
             this.lblNombreEmisor.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreEmisor.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreEmisor.Location = new System.Drawing.Point(232, 321);
+            this.lblNombreEmisor.Location = new System.Drawing.Point(232, 276);
             this.lblNombreEmisor.Name = "lblNombreEmisor";
             this.lblNombreEmisor.Size = new System.Drawing.Size(0, 15);
             this.lblNombreEmisor.TabIndex = 98;
@@ -205,7 +205,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(176, 357);
+            this.btnSiguiente.Location = new System.Drawing.Point(278, 244);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(112, 47);
             this.btnSiguiente.TabIndex = 126;
@@ -225,7 +225,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 468);
+            this.btnCancelar.Location = new System.Drawing.Point(188, 244);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 47);
             this.btnCancelar.TabIndex = 125;
@@ -256,7 +256,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.btnBuscarEmisor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscarEmisor.IconSize = 24;
             this.btnBuscarEmisor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarEmisor.Location = new System.Drawing.Point(396, 288);
+            this.btnBuscarEmisor.Location = new System.Drawing.Point(396, 182);
             this.btnBuscarEmisor.Name = "btnBuscarEmisor";
             this.btnBuscarEmisor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnBuscarEmisor.Size = new System.Drawing.Size(49, 30);
@@ -269,7 +269,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 527);
+            this.ClientSize = new System.Drawing.Size(453, 321);
             this.Controls.Add(this.btnBuscarEmisor);
             this.Controls.Add(this.lblRegistroOriginador);
             this.Controls.Add(this.btnSiguiente);
@@ -286,7 +286,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(17, 61);
             this.Name = "frmRegistroOriginador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegistroOriginador";
+            this.Load += new System.EventHandler(this.frmRegistroOriginador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
