@@ -37,7 +37,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
 
         //Modificar Orden
         public frmEditarOrden(MonitoreoOrdenWS.orden orden)
-        {
+        { 
             InitializeComponent();
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
