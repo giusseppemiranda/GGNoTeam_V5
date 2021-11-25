@@ -111,7 +111,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private void dgvOrdenes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             MonitoreoOrdenWS.orden orden = (MonitoreoOrdenWS.orden)dgvOrdenes.Rows[e.RowIndex].DataBoundItem;
-           
             dgvOrdenes.Rows[e.RowIndex].Cells[0].Value = orden.fecha;
             dgvOrdenes.Rows[e.RowIndex].Cells[1].Value = assets[orden.fidAssetClass-1];
             dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = fondos[orden.fidFondo-1];
