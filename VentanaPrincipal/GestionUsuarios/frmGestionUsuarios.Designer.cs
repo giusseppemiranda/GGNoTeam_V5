@@ -117,7 +117,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnListarPersonas.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnListarPersonas.Size = new System.Drawing.Size(118, 61);
             this.btnListarPersonas.TabIndex = 18;
-            this.btnListarPersonas.Text = "No Usuarios";
+            this.btnListarPersonas.Text = "Inactivos";
             this.btnListarPersonas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListarPersonas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnListarPersonas.UseVisualStyleBackColor = false;

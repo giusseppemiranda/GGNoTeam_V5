@@ -54,7 +54,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
         {
             ListaTiposUsuarios.Add("Administrador");
             ListaTiposUsuarios.Add("Usuario");
-            ListaTiposUsuarios.Add("No usuario");
+            ListaTiposUsuarios.Add("Inactivo");
 
             for(int i = 0; i < ListaTiposUsuarios.Count; i++)
             {
@@ -74,7 +74,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
 
             comboBoxTipoUsuario.SelectedIndex = persona.tipoUsuario - 1;
 
-            boxContraseña.Texts = persona.contraseña;
+            //boxContraseña.Texts = persona.contraseña;
             boxCodigoValidacion.Texts = persona.validacion;            
         }
 
