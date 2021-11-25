@@ -39,6 +39,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
+
+            dgvOrdenes.AutoGenerateColumns = false;
+
+            Global.pintarDGV(ref dgvOrdenes, Color.DarkSalmon);
             cambiarTema();
             cargarComboFondo();
             ops = _daoMO.listaTodosOrden();
@@ -87,25 +91,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             }
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            ventanaPrincipal.abrirFormulario(new frmEjecucion(ventanaPrincipal));
-        }
-
         private void btnAccederOrden_Click(object sender, EventArgs e)
         {
             ventanaPrincipal.abrirFormulario(new frmOrden(ventanaPrincipal));
-        }
-
-        private void btnGestionarOrdenes_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnGestionarEjecuciones_Click(object sender, EventArgs e)
-        {
-            
-
         }
        
         public void cambiarTema()
@@ -156,6 +144,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             dgvOrdenes.Rows[e.RowIndex].Cells[7].Value = orden.validacion;
             dgvOrdenes.Rows[e.RowIndex].Cells[8].Value = orden.comentario;
 
+        }
+
+        private void btnAccederEjecucion_Click(object sender, EventArgs e)
+        {
+            ventanaPrincipal.abrirFormulario(new frmEjecucion(ventanaPrincipal));
         }
     }
 }
