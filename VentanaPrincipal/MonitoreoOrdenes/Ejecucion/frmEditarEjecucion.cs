@@ -116,6 +116,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             Ejecucion.fecha = dateTimePicker1.Value.ToString("yyyy-MM-dd"); 
             Ejecucion.fidFondo= comboFondo.SelectedIndex + 1;
 
+            TextBoxAUMEjecuciones.Texts = TextBoxAUMEjecuciones.Texts.Trim();
+            TextBoxCodigoSbs.Texts = TextBoxCodigoSbs.Texts.Trim();
+            TextBoxCodigoSin.Texts = TextBoxCodigoSin.Texts.Trim();
+            TextBoxInstrumento.Texts = TextBoxInstrumento.Texts.Trim();
+
+
             if (TextBoxAUMEjecuciones.Texts == "")
             {
                 MessageBox.Show("AUM Ejecuciones no puede tener un campo vacío");

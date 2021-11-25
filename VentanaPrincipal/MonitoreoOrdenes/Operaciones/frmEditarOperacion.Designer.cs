@@ -77,7 +77,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxComentarios.MaxLength = 32767;
             this.TextBoxComentarios.Multiline = false;
             this.TextBoxComentarios.Name = "TextBoxComentarios";
-            this.TextBoxComentarios.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TextBoxComentarios.Padding = new System.Windows.Forms.Padding(6);
             this.TextBoxComentarios.PasswordChar = false;
             this.TextBoxComentarios.Size = new System.Drawing.Size(216, 30);
             this.TextBoxComentarios.TabIndex = 175;
@@ -115,6 +115,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxAUMOrdenes.BorderColor = System.Drawing.Color.DodgerBlue;
             this.TextBoxAUMOrdenes.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.TextBoxAUMOrdenes.BorderSize = 2;
+            this.TextBoxAUMOrdenes.Enabled = false;
             this.TextBoxAUMOrdenes.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxAUMOrdenes.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxAUMOrdenes.IsFocused = false;
@@ -122,7 +123,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxAUMOrdenes.MaxLength = 32767;
             this.TextBoxAUMOrdenes.Multiline = false;
             this.TextBoxAUMOrdenes.Name = "TextBoxAUMOrdenes";
-            this.TextBoxAUMOrdenes.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TextBoxAUMOrdenes.Padding = new System.Windows.Forms.Padding(6);
             this.TextBoxAUMOrdenes.PasswordChar = false;
             this.TextBoxAUMOrdenes.Size = new System.Drawing.Size(216, 30);
             this.TextBoxAUMOrdenes.TabIndex = 171;
@@ -150,6 +151,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxAUMEjecuciones.BorderColor = System.Drawing.Color.DodgerBlue;
             this.TextBoxAUMEjecuciones.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.TextBoxAUMEjecuciones.BorderSize = 2;
+            this.TextBoxAUMEjecuciones.Enabled = false;
             this.TextBoxAUMEjecuciones.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxAUMEjecuciones.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxAUMEjecuciones.IsFocused = false;
@@ -157,7 +159,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxAUMEjecuciones.MaxLength = 32767;
             this.TextBoxAUMEjecuciones.Multiline = false;
             this.TextBoxAUMEjecuciones.Name = "TextBoxAUMEjecuciones";
-            this.TextBoxAUMEjecuciones.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TextBoxAUMEjecuciones.Padding = new System.Windows.Forms.Padding(6);
             this.TextBoxAUMEjecuciones.PasswordChar = false;
             this.TextBoxAUMEjecuciones.Size = new System.Drawing.Size(216, 30);
             this.TextBoxAUMEjecuciones.TabIndex = 169;
@@ -185,6 +187,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxOperacion.BorderColor = System.Drawing.Color.DodgerBlue;
             this.TextBoxOperacion.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.TextBoxOperacion.BorderSize = 2;
+            this.TextBoxOperacion.Enabled = false;
             this.TextBoxOperacion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxOperacion.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxOperacion.IsFocused = false;
@@ -192,7 +195,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxOperacion.MaxLength = 32767;
             this.TextBoxOperacion.Multiline = false;
             this.TextBoxOperacion.Name = "TextBoxOperacion";
-            this.TextBoxOperacion.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TextBoxOperacion.Padding = new System.Windows.Forms.Padding(6);
             this.TextBoxOperacion.PasswordChar = false;
             this.TextBoxOperacion.Size = new System.Drawing.Size(216, 30);
             this.TextBoxOperacion.TabIndex = 167;
@@ -220,6 +223,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxInstrumento.BorderColor = System.Drawing.Color.DodgerBlue;
             this.TextBoxInstrumento.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.TextBoxInstrumento.BorderSize = 2;
+            this.TextBoxInstrumento.Enabled = false;
             this.TextBoxInstrumento.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxInstrumento.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxInstrumento.IsFocused = false;
@@ -227,7 +231,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxInstrumento.MaxLength = 32767;
             this.TextBoxInstrumento.Multiline = false;
             this.TextBoxInstrumento.Name = "TextBoxInstrumento";
-            this.TextBoxInstrumento.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TextBoxInstrumento.Padding = new System.Windows.Forms.Padding(6);
             this.TextBoxInstrumento.PasswordChar = false;
             this.TextBoxInstrumento.Size = new System.Drawing.Size(216, 30);
             this.TextBoxInstrumento.TabIndex = 165;
@@ -255,6 +259,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxCodigoSin.BorderColor = System.Drawing.Color.DodgerBlue;
             this.TextBoxCodigoSin.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.TextBoxCodigoSin.BorderSize = 2;
+            this.TextBoxCodigoSin.Enabled = false;
             this.TextBoxCodigoSin.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxCodigoSin.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxCodigoSin.IsFocused = false;
@@ -262,7 +267,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxCodigoSin.MaxLength = 32767;
             this.TextBoxCodigoSin.Multiline = false;
             this.TextBoxCodigoSin.Name = "TextBoxCodigoSin";
-            this.TextBoxCodigoSin.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TextBoxCodigoSin.Padding = new System.Windows.Forms.Padding(6);
             this.TextBoxCodigoSin.PasswordChar = false;
             this.TextBoxCodigoSin.Size = new System.Drawing.Size(216, 30);
             this.TextBoxCodigoSin.TabIndex = 163;
@@ -286,6 +291,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(188, 51);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
@@ -311,6 +317,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxCodigoSbs.BorderColor = System.Drawing.Color.DodgerBlue;
             this.TextBoxCodigoSbs.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.TextBoxCodigoSbs.BorderSize = 2;
+            this.TextBoxCodigoSbs.Enabled = false;
             this.TextBoxCodigoSbs.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxCodigoSbs.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxCodigoSbs.IsFocused = false;
@@ -318,7 +325,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.TextBoxCodigoSbs.MaxLength = 32767;
             this.TextBoxCodigoSbs.Multiline = false;
             this.TextBoxCodigoSbs.Name = "TextBoxCodigoSbs";
-            this.TextBoxCodigoSbs.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TextBoxCodigoSbs.Padding = new System.Windows.Forms.Padding(6);
             this.TextBoxCodigoSbs.PasswordChar = false;
             this.TextBoxCodigoSbs.Size = new System.Drawing.Size(216, 30);
             this.TextBoxCodigoSbs.TabIndex = 157;
@@ -394,7 +401,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.comboValidacion.Location = new System.Drawing.Point(188, 293);
             this.comboValidacion.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboValidacion.Name = "comboValidacion";
-            this.comboValidacion.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboValidacion.Padding = new System.Windows.Forms.Padding(1);
             this.comboValidacion.Size = new System.Drawing.Size(216, 30);
             this.comboValidacion.TabIndex = 176;
             this.comboValidacion.Texts = "Operacion";

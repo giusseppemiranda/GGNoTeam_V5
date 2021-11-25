@@ -148,6 +148,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             int valido = -1;
+            boxContraseña.Texts = boxContraseña.Texts.Trim();
+
             valido = ValidarTextBox.NumeroEntero(boxCodigo, "El código",15);
             if (valido != 0) return;
             valido = ValidarTextBox.NoNumerico(boxNombres, "El nombre",45);
@@ -155,7 +157,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             valido = ValidarTextBox.NoNumerico(boxApellidos, "El apellido",45);
             if (valido != 0) return;
             valido = ValidarTextBox.correo(boxCorreo, "El correo", 45);
-            if (valido != 0) return;
+            if (valido != 0) return;            
             valido = ValidarTextBox.cadenaGrande(boxContraseña, "La contraseña", 15);
             if (valido != 0) return;
             valido = (boxContraseña.Texts.Contains("#")) ? 1 : 0;

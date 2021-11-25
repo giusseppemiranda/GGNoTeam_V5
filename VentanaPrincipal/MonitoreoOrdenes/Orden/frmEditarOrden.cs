@@ -158,6 +158,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             Orden.fecha = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             Orden.fidFondo= comboFondo.SelectedIndex + 1;
 
+            TextBoxAUMOrdenes.Texts = TextBoxAUMOrdenes.Texts.Trim();
+            TextBoxCodigoSbs.Texts = TextBoxCodigoSbs.Texts.Trim();
+            TextBoxCodigoSin.Texts = TextBoxCodigoSin.Texts.Trim();
+            TextBoxInstrumento.Texts = TextBoxInstrumento.Texts.Trim();
+
             if (TextBoxAUMOrdenes.Texts == "")
             {
                 MessageBox.Show("AUM Ordenes no puede tener un campo vacío");
