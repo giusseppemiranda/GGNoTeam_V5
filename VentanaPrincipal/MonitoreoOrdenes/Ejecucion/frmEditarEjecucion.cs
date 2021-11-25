@@ -164,6 +164,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
                 Ejecucion = new MonitoreoOrdenWS.ejecucion();
                 if (cargarDatos())
                 {
+
                     int i = _daoMO.insertarEjecucion(Ejecucion);
                     if (i != 0)
                     {
