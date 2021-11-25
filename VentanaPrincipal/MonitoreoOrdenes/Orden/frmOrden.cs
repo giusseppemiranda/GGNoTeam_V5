@@ -66,7 +66,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
 
         private void btnConsultarEjecuciones_Click(object sender, EventArgs e)
         {
-
             listaOrdenes = _daoMO.ListarOrdenPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
            
             if (listaOrdenes != null)

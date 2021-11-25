@@ -29,9 +29,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnVerCalculoAlfa = new FontAwesome.Sharp.IconButton();
             this.btnEliminarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnActualizarRegistro = new FontAwesome.Sharp.IconButton();
@@ -69,7 +69,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnVerCalculoAlfa.Location = new System.Drawing.Point(11, 432);
             this.btnVerCalculoAlfa.Name = "btnVerCalculoAlfa";
             this.btnVerCalculoAlfa.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnVerCalculoAlfa.Size = new System.Drawing.Size(184, 38);
+            this.btnVerCalculoAlfa.Size = new System.Drawing.Size(167, 38);
             this.btnVerCalculoAlfa.TabIndex = 65;
             this.btnVerCalculoAlfa.Text = "Ver Calculo Alpha";
             this.btnVerCalculoAlfa.UseVisualStyleBackColor = false;
@@ -87,7 +87,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnEliminarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarRegistro.IconSize = 32;
             this.btnEliminarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarRegistro.Location = new System.Drawing.Point(800, 432);
+            this.btnEliminarRegistro.Location = new System.Drawing.Point(806, 432);
             this.btnEliminarRegistro.Name = "btnEliminarRegistro";
             this.btnEliminarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEliminarRegistro.Size = new System.Drawing.Size(163, 38);
@@ -109,7 +109,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnActualizarRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizarRegistro.IconSize = 32;
             this.btnActualizarRegistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarRegistro.Location = new System.Drawing.Point(631, 432);
+            this.btnActualizarRegistro.Location = new System.Drawing.Point(637, 432);
             this.btnActualizarRegistro.Name = "btnActualizarRegistro";
             this.btnActualizarRegistro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnActualizarRegistro.Size = new System.Drawing.Size(163, 38);
@@ -129,14 +129,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.dgvDataValorCuota.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDataValorCuota.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDataValorCuota.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDataValorCuota.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataValorCuota.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDataValorCuota.ColumnHeadersHeight = 25;
             this.dgvDataValorCuota.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDVC,
@@ -146,14 +146,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.patrimonio,
             this.cuotas,
             this.valorCuota});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDataValorCuota.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDataValorCuota.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDataValorCuota.EnableHeadersVisualStyles = false;
             this.dgvDataValorCuota.Location = new System.Drawing.Point(11, 91);
             this.dgvDataValorCuota.MultiSelect = false;
@@ -161,13 +161,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.dgvDataValorCuota.ReadOnly = true;
             this.dgvDataValorCuota.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvDataValorCuota.RowHeadersWidth = 25;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvDataValorCuota.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvDataValorCuota.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvDataValorCuota.RowTemplate.Height = 25;
             this.dgvDataValorCuota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDataValorCuota.Size = new System.Drawing.Size(952, 335);
+            this.dgvDataValorCuota.Size = new System.Drawing.Size(958, 335);
             this.dgvDataValorCuota.TabIndex = 62;
             this.dgvDataValorCuota.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDataValorCuota_CellFormatting);
             // 
@@ -237,10 +237,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnAgregarRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarRegistros.IconSize = 32;
             this.btnAgregarRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarRegistros.Location = new System.Drawing.Point(824, 47);
+            this.btnAgregarRegistros.Location = new System.Drawing.Point(468, 432);
             this.btnAgregarRegistros.Name = "btnAgregarRegistros";
             this.btnAgregarRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAgregarRegistros.Size = new System.Drawing.Size(139, 38);
+            this.btnAgregarRegistros.Size = new System.Drawing.Size(163, 38);
             this.btnAgregarRegistros.TabIndex = 61;
             this.btnAgregarRegistros.Text = "Agregar Registro";
             this.btnAgregarRegistros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -259,10 +259,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnConsultarRegistros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConsultarRegistros.IconSize = 32;
             this.btnConsultarRegistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarRegistros.Location = new System.Drawing.Point(654, 47);
+            this.btnConsultarRegistros.Location = new System.Drawing.Point(765, 47);
             this.btnConsultarRegistros.Name = "btnConsultarRegistros";
             this.btnConsultarRegistros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnConsultarRegistros.Size = new System.Drawing.Size(159, 38);
+            this.btnConsultarRegistros.Size = new System.Drawing.Size(204, 38);
             this.btnConsultarRegistros.TabIndex = 60;
             this.btnConsultarRegistros.Text = "Consultar Registros";
             this.btnConsultarRegistros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -280,7 +280,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             // 
             this.dateInicial.Location = new System.Drawing.Point(11, 65);
             this.dateInicial.Name = "dateInicial";
-            this.dateInicial.Size = new System.Drawing.Size(198, 20);
+            this.dateInicial.Size = new System.Drawing.Size(199, 20);
             this.dateInicial.TabIndex = 56;
             // 
             // lblFechaInicial
@@ -327,7 +327,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.comboFondo.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboFondo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboFondo.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboFondo.Location = new System.Drawing.Point(448, 55);
+            this.comboFondo.Location = new System.Drawing.Point(559, 55);
             this.comboFondo.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboFondo.Name = "comboFondo";
             this.comboFondo.Padding = new System.Windows.Forms.Padding(1);
