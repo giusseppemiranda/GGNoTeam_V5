@@ -27,6 +27,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             insertarOperacion = true;
             cambiarTema();
+            cargarComboValidacion();
             cargarTipoEdicion();
             //cargarComboFondo();
         }
@@ -38,6 +39,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             Operacion = operacion;
+            cargarComboValidacion();
             cambiarTema();
             cargarTipoEdicion();
             cargarDatosOperacion();
@@ -115,12 +117,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             TextBoxAUMEjecuciones.Texts = eje.ToString();
             TextBoxAUMOrdenes.Texts = ord.ToString();
 
+            comboValidacion.SelectedIndex = Convert.ToInt32(Operacion.validacion);
             TextBoxCodigoSbs.Texts = Operacion.codsbs;
             TextBoxCodigoSin.Texts = Operacion.codisin;
             TextBoxComentarios.Texts = Operacion.comentario;
             TextBoxInstrumento.Texts = Operacion.instrumento;
             TextBoxOperacion.Texts = Operacion.idOperacion.ToString();
-            TextBoxValidacion.Texts = Operacion.validacion.ToString();
+            
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
@@ -161,7 +164,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
                 }
             }
         }
-
+        private void cargarComboValidacion()
+        {
+            String[] validacion = { "False", "True" };
+            comboValidacion.DataSource = validacion;
+        }
         private bool cargarDatos()
         {
             Operacion.fecha = dateTimePicker1.Value.ToString("yyyy-MM-dd");
@@ -211,7 +218,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
                 Operacion.comentario = TextBoxComentarios.Texts;
                 Operacion.instrumento = TextBoxInstrumento.Texts;
                 //Operacion.operacion= Convert.ToInt32(TextBoxOperacion.Texts);
-                Operacion.validacion = Convert.ToBoolean(TextBoxValidacion.Texts);
+                Operacion.validacion = Convert.ToBoolean(comboValidacion.SelectedIndex);
 
             }
             catch

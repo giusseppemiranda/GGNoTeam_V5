@@ -29,6 +29,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         private MonitoreoOrdenWS.operacion[] listaOperaciones;
         private String[] operaciones = { "Compra", "Venta" };
         private String[] fondos;
+        private MonitoreoOrdenWS.orden[] ops;
+        private MonitoreoOrdenWS.ejecucion[] ejes;
 
         public frmMonitoreoOrdenes(frmPrincipal ventana)
         {
@@ -39,6 +41,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             cambiarTema();
             cargarComboFondo();
+            ops = _daoMO.listaTodosOrden();
+            ejes = _daoMO.listarTodosEjecucion();
         }
         private void cargarComboFondo()
         {
@@ -134,9 +138,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
 
             double aumEje = 0,aumOrd=0;
             int idFondo = 0;
-            string op = null;
-            MonitoreoOrdenWS.ejecucion[] ejes = _daoMO.listarTodosEjecucion();
-            MonitoreoOrdenWS.orden[] ops = _daoMO.listaTodosOrden();
+            
             foreach (var eje in ejes) if (eje.idEjecucion == orden.fidEjecu)
                 {
                     aumEje = eje.AUM;

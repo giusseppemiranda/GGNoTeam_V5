@@ -30,7 +30,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.lblTitulo = new System.Windows.Forms.Label();
             this.TextBoxComentarios = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.TextBoxValidacion = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TextBoxAUMOrdenes = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.comboValidacion = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -95,29 +95,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.label7.Size = new System.Drawing.Size(195, 32);
             this.label7.TabIndex = 174;
             this.label7.Text = "Comentarios:";
-            // 
-            // TextBoxValidacion
-            // 
-            this.TextBoxValidacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBoxValidacion.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBoxValidacion.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.TextBoxValidacion.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.TextBoxValidacion.BorderSize = 2;
-            this.TextBoxValidacion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.TextBoxValidacion.ForeColor = System.Drawing.Color.DimGray;
-            this.TextBoxValidacion.IsFocused = false;
-            this.TextBoxValidacion.Location = new System.Drawing.Point(375, 824);
-            this.TextBoxValidacion.Margin = new System.Windows.Forms.Padding(6);
-            this.TextBoxValidacion.MaxLength = 32767;
-            this.TextBoxValidacion.Multiline = false;
-            this.TextBoxValidacion.Name = "TextBoxValidacion";
-            this.TextBoxValidacion.Padding = new System.Windows.Forms.Padding(12);
-            this.TextBoxValidacion.PasswordChar = false;
-            this.TextBoxValidacion.Size = new System.Drawing.Size(432, 61);
-            this.TextBoxValidacion.TabIndex = 173;
-            this.TextBoxValidacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TextBoxValidacion.Texts = "";
-            this.TextBoxValidacion.UnderlinedStyle = true;
             // 
             // label8
             // 
@@ -403,14 +380,34 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
             this.lblFecha.TabIndex = 154;
             this.lblFecha.Text = "codigo sbs:";
             // 
+            // comboValidacion
+            // 
+            this.comboValidacion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboValidacion.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboValidacion.BorderSize = 1;
+            this.comboValidacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboValidacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboValidacion.ForeColor = System.Drawing.Color.DimGray;
+            this.comboValidacion.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.comboValidacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboValidacion.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboValidacion.Location = new System.Drawing.Point(375, 814);
+            this.comboValidacion.Margin = new System.Windows.Forms.Padding(6);
+            this.comboValidacion.MinimumSize = new System.Drawing.Size(400, 58);
+            this.comboValidacion.Name = "comboValidacion";
+            this.comboValidacion.Padding = new System.Windows.Forms.Padding(2);
+            this.comboValidacion.Size = new System.Drawing.Size(432, 58);
+            this.comboValidacion.TabIndex = 176;
+            this.comboValidacion.Texts = "Operacion";
+            // 
             // frmEditarOperacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 1271);
+            this.Controls.Add(this.comboValidacion);
             this.Controls.Add(this.TextBoxComentarios);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.TextBoxValidacion);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.TextBoxAUMOrdenes);
             this.Controls.Add(this.label5);
@@ -443,7 +440,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
         private System.Windows.Forms.Label lblTitulo;
         private Recursos.UserControls.GGTextBox TextBoxComentarios;
         private System.Windows.Forms.Label label7;
-        private Recursos.UserControls.GGTextBox TextBoxValidacion;
         private System.Windows.Forms.Label label8;
         private Recursos.UserControls.GGTextBox TextBoxAUMOrdenes;
         private System.Windows.Forms.Label label5;
@@ -461,5 +457,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Operaciones
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;
         private System.Windows.Forms.Label lblFecha;
+        private Recursos.UserControls.GGComboBox comboValidacion;
     }
 }

@@ -43,11 +43,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             Orden = orden;
             cambiarTema();
-            cargarTipoEdicion();
-            cargarDatosOrden();
             cargarComboOperacion();
             cargarComboAssetClass();
             cargarComboFondo();
+            cargarTipoEdicion();
+            cargarDatosOrden();
         }
 
         private void cargarDatosOrden()

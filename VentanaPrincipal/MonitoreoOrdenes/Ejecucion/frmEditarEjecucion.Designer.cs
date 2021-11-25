@@ -31,8 +31,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.lblTitulo = new System.Windows.Forms.Label();
             this.TextBoxAUMEjecuciones = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TextBoxOperacion = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.TextBoxInstrumento = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TextBoxCodigoSin = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
@@ -73,7 +71,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.TextBoxAUMEjecuciones.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.TextBoxAUMEjecuciones.ForeColor = System.Drawing.Color.DimGray;
             this.TextBoxAUMEjecuciones.IsFocused = false;
-            this.TextBoxAUMEjecuciones.Location = new System.Drawing.Point(348, 835);
+            this.TextBoxAUMEjecuciones.Location = new System.Drawing.Point(348, 800);
             this.TextBoxAUMEjecuciones.Margin = new System.Windows.Forms.Padding(6);
             this.TextBoxAUMEjecuciones.MaxLength = 32767;
             this.TextBoxAUMEjecuciones.Multiline = false;
@@ -91,47 +89,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(70, 835);
+            this.label6.Location = new System.Drawing.Point(70, 800);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(195, 32);
             this.label6.TabIndex = 130;
             this.label6.Text = "AUM Ejecucion:";
-            // 
-            // TextBoxOperacion
-            // 
-            this.TextBoxOperacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TextBoxOperacion.BackColor = System.Drawing.SystemColors.Window;
-            this.TextBoxOperacion.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.TextBoxOperacion.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.TextBoxOperacion.BorderSize = 2;
-            this.TextBoxOperacion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.TextBoxOperacion.ForeColor = System.Drawing.Color.DimGray;
-            this.TextBoxOperacion.IsFocused = false;
-            this.TextBoxOperacion.Location = new System.Drawing.Point(348, 658);
-            this.TextBoxOperacion.Margin = new System.Windows.Forms.Padding(6);
-            this.TextBoxOperacion.MaxLength = 32767;
-            this.TextBoxOperacion.Multiline = false;
-            this.TextBoxOperacion.Name = "TextBoxOperacion";
-            this.TextBoxOperacion.Padding = new System.Windows.Forms.Padding(12);
-            this.TextBoxOperacion.PasswordChar = false;
-            this.TextBoxOperacion.Size = new System.Drawing.Size(432, 61);
-            this.TextBoxOperacion.TabIndex = 129;
-            this.TextBoxOperacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TextBoxOperacion.Texts = "";
-            this.TextBoxOperacion.UnderlinedStyle = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(70, 658);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 32);
-            this.label3.TabIndex = 128;
-            this.label3.Text = "operacion:";
             // 
             // TextBoxInstrumento
             // 
@@ -343,7 +306,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.ComboAssetClass.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.ComboAssetClass.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.ComboAssetClass.ListTextColor = System.Drawing.Color.DimGray;
-            this.ComboAssetClass.Location = new System.Drawing.Point(348, 932);
+            this.ComboAssetClass.Location = new System.Drawing.Point(348, 911);
             this.ComboAssetClass.Margin = new System.Windows.Forms.Padding(6);
             this.ComboAssetClass.MinimumSize = new System.Drawing.Size(400, 58);
             this.ComboAssetClass.Name = "ComboAssetClass";
@@ -357,7 +320,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(67, 948);
+            this.label5.Location = new System.Drawing.Point(67, 927);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 32);
@@ -375,7 +338,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.comboOperacion.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboOperacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboOperacion.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboOperacion.Location = new System.Drawing.Point(348, 753);
+            this.comboOperacion.Location = new System.Drawing.Point(348, 665);
             this.comboOperacion.Margin = new System.Windows.Forms.Padding(6);
             this.comboOperacion.MinimumSize = new System.Drawing.Size(400, 58);
             this.comboOperacion.Name = "comboOperacion";
@@ -389,7 +352,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(70, 753);
+            this.label7.Location = new System.Drawing.Point(77, 665);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(137, 32);
@@ -407,8 +370,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TextBoxAUMEjecuciones);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.TextBoxOperacion);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.TextBoxInstrumento);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TextBoxCodigoSin);
@@ -437,8 +398,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
         private System.Windows.Forms.Label lblTitulo;
         private Recursos.UserControls.GGTextBox TextBoxAUMEjecuciones;
         private System.Windows.Forms.Label label6;
-        private Recursos.UserControls.GGTextBox TextBoxOperacion;
-        private System.Windows.Forms.Label label3;
         private Recursos.UserControls.GGTextBox TextBoxInstrumento;
         private System.Windows.Forms.Label label4;
         private Recursos.UserControls.GGTextBox TextBoxCodigoSin;

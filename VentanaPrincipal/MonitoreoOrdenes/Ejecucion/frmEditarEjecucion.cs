@@ -26,10 +26,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             insertarEjecucion = true;
             cambiarTema();
-            cargarTipoEdicion();
             cargarComboFondo();
             cargarComboOperacion();
             cargarComboAssetClass();
+            cargarTipoEdicion();
         }
 
         ////Modificar Ejecucion
@@ -37,13 +37,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
         {
             InitializeComponent();
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
+            _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
             Ejecucion = ejecucion;
             cambiarTema();
-            cargarTipoEdicion();
-            cargarDatosEjecucion();
             cargarComboFondo();
             cargarComboOperacion();
             cargarComboAssetClass();
+            cargarTipoEdicion();
+            cargarDatosEjecucion();
         }
 
         private void cargarDatosEjecucion()
@@ -53,7 +54,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             TextBoxCodigoSin.Texts = Ejecucion.codisin;
             TextBoxInstrumento.Texts = Ejecucion.instrumento;
             dateTimePicker1.Value = Convert.ToDateTime(Ejecucion.fecha);
-            TextBoxOperacion.Texts = Ejecucion.fidTipoOperacion.ToString();
+            //TextBoxOperacion.Texts = Ejecucion.fidTipoOperacion.ToString();
             comboFondo.SelectedIndex = Ejecucion.fidFondo - 1;
         }
         private void cargarComboOperacion()
@@ -138,11 +139,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
                 return false;
             }
 
-            if (TextBoxOperacion.Texts == "")
-            {
-                MessageBox.Show("Operacion no puede tener un campo vacío");
-                return false;
-            }
             try
             {
                 Ejecucion.AUM = Convert.ToDouble (TextBoxAUMEjecuciones.Texts);
