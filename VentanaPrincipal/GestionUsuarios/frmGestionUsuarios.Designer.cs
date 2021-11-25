@@ -348,9 +348,9 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(889, 5);
+            this.btnBuscar.Location = new System.Drawing.Point(889, 13);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(78, 38);
+            this.btnBuscar.Size = new System.Drawing.Size(78, 30);
             this.btnBuscar.TabIndex = 27;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextColor = System.Drawing.Color.White;
