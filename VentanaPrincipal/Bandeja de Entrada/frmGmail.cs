@@ -16,6 +16,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
         public frmGmail(frmPrincipal ventana)
         {
             InitializeComponent();
+            this.Cursor = Cursors.WaitCursor;
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);            
             btnBefore.Enabled = false;
@@ -32,6 +33,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
                 }
             }
             cambiarTema();
+            this.Cursor = Cursors.Default;
         }
 
         private void mostrarMensaje(MailMessage msg)

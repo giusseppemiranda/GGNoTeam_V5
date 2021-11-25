@@ -239,10 +239,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblRegistroOriginador.AutoSize = true;
             this.lblRegistroOriginador.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistroOriginador.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRegistroOriginador.Location = new System.Drawing.Point(150, 24);
+            this.lblRegistroOriginador.Location = new System.Drawing.Point(171, 9);
             this.lblRegistroOriginador.Name = "lblRegistroOriginador";
-            this.lblRegistroOriginador.Size = new System.Drawing.Size(0, 25);
+            this.lblRegistroOriginador.Size = new System.Drawing.Size(94, 25);
             this.lblRegistroOriginador.TabIndex = 127;
+            this.lblRegistroOriginador.Text = "-TITULO-";
             // 
             // btnBuscarEmisor
             // 

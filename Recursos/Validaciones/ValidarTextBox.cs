@@ -53,6 +53,9 @@ namespace GGNoTeam_V5.Recursos.Validaciones
         {
             string patron = "";
 
+            string texto = box.Texts.Trim();
+            box.Texts = texto;
+
             //CASO 1
             if (cadenaVacia(box, msgCasoVacio) != 0) return 1;            
 
@@ -68,6 +71,8 @@ namespace GGNoTeam_V5.Recursos.Validaciones
             //CASO 4
             if (cadenaGrande(box, msgCasoCantidadMaxima, cantidad) != 0) return 4;            
 
+            
+            /*
             //CASO 2            
             patron = "^[a-zA-Z]+(\\s[a-zA-Z])*$";
             if (!Regex.IsMatch(box.Texts, patron))
@@ -75,9 +80,24 @@ namespace GGNoTeam_V5.Recursos.Validaciones
                 MessageBox.Show(msgCasoInvalido);
                 return 2;
             }
+            */
 
             return 0;
         }
+
+        
+        public static int inicioNormal(GGNoTeam_V5.Recursos.UserControls.GGTextBox box, string Titulo)
+        {
+            string patron;
+            patron = "^[a-zA-Z]+(\\s[a-zA-Z])*$";
+            if (!Regex.IsMatch(box.Texts, patron))
+            {
+                MessageBox.Show(Titulo+" no puede contener caracteres en blanco al inicio y tampoco iniciar con números.");
+                return 2;
+            }
+            return 0;
+        }
+        
 
         public static int PuntoFlotante(GGNoTeam_V5.Recursos.UserControls.GGTextBox box, string Titulo)
         {

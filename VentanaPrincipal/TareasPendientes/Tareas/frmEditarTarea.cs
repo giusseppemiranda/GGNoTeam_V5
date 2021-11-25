@@ -1,4 +1,5 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.Recursos.Validaciones;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -126,18 +127,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
-        {
-            cargarDatos();
-            if (boxDescripcion.Texts == "")
-            {
-                MessageBox.Show("La descripción de la tarea a insertar no puede encontrarse vacía. Intente nuevamente");
-                return;
-            }
+        {            
+            int validez = -1;
+            validez = ValidarTextBox.NoNumerico(boxDescripcion, "La descripción",45);
+            if (validez != 0) return;            
             if (DateTime.Compare(dateFechaCreacion.Value, dateFechaLimite.Value) > 0)
             {
                 MessageBox.Show("La fecha limite debe ser mayor a la fecha de creacion. Intente nuevamente");
                 return;
             }
+            cargarDatos();
+
             _daoTareas = new TareasDiariasWS.TareasDiariasWSClient();
             switch (btnSiguiente.Text)
             {
@@ -157,7 +157,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             {
                 MessageBox.Show("La tarea ha sido modificada con éxito");
                 //if (accionComoAdministrador)
-                    notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha modificado la tarea con ID " + tareaAux.idTarea + " : " + tareaAux.descripcion + " . De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
+                notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha MODIFICADO la tarea " + tareaAux.descripcion.ToUpper() + " con fecha de finalización " + tareaAux.fechaLimite + " (yyyy - MM - dd)" + ". De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
                 //ventanaTareas.actualizarDGV();
             }
             else
@@ -172,7 +172,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             {
                 MessageBox.Show("La tarea ha sido insertada con éxito");
                 //if (accionComoAdministrador)
-                    notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha agregado la tarea con ID " + tareaAux.idTarea + " : " + tareaAux.descripcion + " . De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
+                    notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha agregado la tarea " + tareaAux.descripcion.ToUpper() +" con fecha de finalización " +tareaAux.fechaLimite +" (yyyy - MM - dd)"+". De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
                 //ventanaTareas.actualizarDGV();
             }
             else
@@ -190,6 +190,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             tareaAux.estado = comboBoxEstado.SelectedIndex;
         }
 
+        
+
         private void notificacion(string ASUNTO, string CUERPO)
         {
             System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
@@ -198,6 +200,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             msg.Body = CUERPO;
             msg.BodyEncoding = System.Text.Encoding.UTF8;
             msg.IsBodyHtml = true;
+            msg.From = new System.Net.Mail.MailAddress("noreply@afpintegra.riesgoseinversion.pe");
             ventanaTareas.enviarNotificacionCorreo(msg);
         }
 

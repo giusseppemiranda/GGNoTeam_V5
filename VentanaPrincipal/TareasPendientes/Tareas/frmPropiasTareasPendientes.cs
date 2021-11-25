@@ -118,6 +118,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
 
         private void btnConsultarTareas_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             dgvTareasPendientes.DataSource = null;
             switch (comboEstadoTarea.SelectedItem.ToString())
             {
@@ -153,6 +154,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                     }
             }
             cargarNombresAutores();
+            this.Cursor = Cursors.Default;
         }
 
         private void ActualizarPerdidas()
@@ -183,14 +185,18 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
 
             if(dgvTareasPendientes.SelectedRows.Count > 0)
             {
-                tareaAux = (TareasDiariasWS.tarea)dgvTareasPendientes.CurrentRow.DataBoundItem;
-                tareaAux.estado = 1;
-                _daoTareasDiarias.modificarTarea(tareaAux);
-                if (!tareaAux.descripcion.Contains("COMPLETO")){
-                    enviarConfirmacionAutor();
-                }
-                    
-                this.btnConsultarTareas_Click(sender, e);
+                var resultado = MessageBox.Show("¿Está seguro que desea marcar la tarea como completa?", "Tarea completa", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    tareaAux = (TareasDiariasWS.tarea)dgvTareasPendientes.CurrentRow.DataBoundItem;
+                    tareaAux.estado = 1;
+                    _daoTareasDiarias.modificarTarea(tareaAux);
+                    if (!tareaAux.descripcion.Contains("COMPLETO"))
+                    {
+                        enviarConfirmacionAutor();
+                    }
+                    this.btnConsultarTareas_Click(sender, e);
+                }                                    
             }
         }
 
@@ -220,12 +226,20 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             _daoTareasDiarias.insertarTarea(tareaAdmin);
         }
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvTareasPendientes.SelectedRows.Count > 0)
+        {           
+            if (dgvTareasPendientes.CurrentRow != null)
             {
-                tareaAux = (TareasDiariasWS.tarea)dgvTareasPendientes.CurrentRow.DataBoundItem;
-                _daoTareasDiarias.eliminarTarea(tareaAux.idTarea);
-                this.btnConsultarTareas_Click(sender, e);
+                var resultado = MessageBox.Show("¿Está seguro que desea elimiar la tarea?", "Eliminar tarea", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    tareaAux = (TareasDiariasWS.tarea)dgvTareasPendientes.CurrentRow.DataBoundItem;
+                    _daoTareasDiarias.eliminarTarea(tareaAux.idTarea);
+                    this.btnConsultarTareas_Click(sender, e);
+                    MessageBox.Show("La tarea se la eliminado con éxito.");
+                }
+            } else
+            {
+                MessageBox.Show("No ha seleccionado el elemento a borrar.");
             }
         }
 

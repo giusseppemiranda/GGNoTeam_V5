@@ -158,6 +158,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             if (valido != 0) return;
             valido = ValidarTextBox.cadenaGrande(boxContraseña, "La contraseña", 15);
             if (valido != 0) return;
+            valido = (boxContraseña.Texts.Contains("#")) ? 1 : 0;
+            if(valido != 0)
+            {
+                MessageBox.Show("La contraseña no puede utilizar el caracter #");
+                return;
+            }
             valido = ValidarTextBox.cadenaGrande(boxCodigoValidacion, "El código de validación", 4);
             if (valido != 0) return;
 
@@ -172,7 +178,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
                 validez = _daoCliente.insertarPersona(persona);
                 if(validez != 1)
                 {
-                    MessageBox.Show("No se ha insertado correctamente al usuario.");
+                    MessageBox.Show("No se ha insertado correctamente al usuario. Ya debe de existir en la base de datos.");
                 } else
                 {
                     MessageBox.Show("Se insertó correctamente al usuario.");

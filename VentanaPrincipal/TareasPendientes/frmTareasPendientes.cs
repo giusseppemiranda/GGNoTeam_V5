@@ -179,7 +179,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
                 else MessageBox.Show("No tiene lo permisos para modifcar esta tarea");
 
             }
-        }
+        }        
 
         public void enviarNotificacionCorreo(System.Net.Mail.MailMessage msg)
         {
@@ -257,6 +257,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void btnConsultarTareas_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             dgvTareasPendientes.DataSource = null;
             switch(comboEstadoTarea.SelectedItem.ToString()){
                 case "Pendientes":
@@ -285,6 +286,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
                     }
             }
             cargarNombresAutores();
+            this.Cursor = Cursors.Default;
         }
 
         private void cargarNombresAutores()

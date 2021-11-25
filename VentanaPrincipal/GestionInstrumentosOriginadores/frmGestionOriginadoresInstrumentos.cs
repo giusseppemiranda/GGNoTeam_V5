@@ -74,8 +74,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             dgvInstrumentosOriginadores.DataSource = null;
-            if (comboTipo.SelectedItem.ToString() == "Originador") {
+            if (comboTipo.SelectedItem.ToString() == "Originador")
+            {
                 originadores = _daoInstOrig.buscarUnOriginadorPorCodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
                 if (originadores != null)
@@ -87,28 +89,29 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
-                instrumentos=_daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
+                instrumentos = _daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
                 if (instrumentos != null)
                 {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.instrumento>(instrumentos.ToList());
                     cargarNombresOrig();
-                    
+
                 }
                 else MessageBox.Show("No se encontraron resultados");
 
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
             {
-                emisores = _daoInstOrig.listarEmisoresPorNombreCodigo(txtboxbusqueda.Texts); 
+                emisores = _daoInstOrig.listarEmisoresPorNombreCodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
                 if (emisores != null)
                 {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList());
-                    
+
                 }
                 else MessageBox.Show("No se encontraron resultados");
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void cargarNombresOrig()
@@ -116,7 +119,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             int i = 0;
             while (true)
             {
-                if (i==instrumentos.Length) break;
+                if (i == instrumentos.Length) break;
                 origAux2 = _daoInstOrig.buscarOrigId(instrumentos[i].fidOriginador);
                 dgvInstrumentosOriginadores.Rows[i].Cells[17].Value = origAux2.codigoOriginador;
                 i++;
@@ -141,20 +144,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             switch (comboTipo.SelectedItem.ToString())
             {
                 case "Originador":
-                    
-                        try {
-                            GestionInstrumentosOriginadoresWS.originador orig = (GestionInstrumentosOriginadoresWS.originador)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
-                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = orig.idOriginador;
-                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = orig.codigoOriginador;
-                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = orig.nombreOriginador;
-                            dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[3].Value = orig.sectorGics;
-                        }
-                        catch (Exception ex) { }
+
+                    try
+                    {
+                        GestionInstrumentosOriginadoresWS.originador orig = (GestionInstrumentosOriginadoresWS.originador)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = orig.idOriginador;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = orig.codigoOriginador;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = orig.nombreOriginador;
+                        dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[3].Value = orig.sectorGics;
+                    }
+                    catch (Exception ex) { }
                     break;
 
                 case "Instrumento":
-                    
-                        try { 
+
+                    try
+                    {
                         GestionInstrumentosOriginadoresWS.instrumento inst = (GestionInstrumentosOriginadoresWS.instrumento)dgvInstrumentosOriginadores.Rows[e.RowIndex].DataBoundItem;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[0].Value = inst.idInstrumento;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = inst.codigoSBS;
@@ -173,8 +178,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[14].Value = inst.moodys;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[15].Value = inst.fechaMoodys;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[16].Value = inst.fechaUltimaClasificacion;
-                        }
-                        catch (Exception ex) { }
+                    }
+                    catch (Exception ex) { }
                     break;
 
                 case "Emisor":
@@ -185,7 +190,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = emi.codigoEmisor;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = emi.nombre;
                     }
-                        catch(Exception ex) { }
+                    catch (Exception ex) { }
                     break;
             }
 
@@ -216,7 +221,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (dgvInstrumentosOriginadores.SelectedRows.Count > 0) {
+            if (dgvInstrumentosOriginadores.SelectedRows.Count > 0)
+            {
                 switch (comboTipo.SelectedItem.ToString())
                 {
                     case "Originador":
@@ -258,38 +264,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             {
                 MessageBox.Show("No se ha seleccionado ninguna fila");
             }
-            
-
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if (dgvInstrumentosOriginadores.SelectedRows.Count > 0)
-            {
-                if (comboTipo.SelectedItem.ToString() == "Originador")
-                {
-                    frmRegistroOriginador registrarOrig = new frmRegistroOriginador();
-                    registrarOrig.ShowDialog();
-                }
-                else if (comboTipo.SelectedItem.ToString() == "Instrumento")
-                {
-                    frmRegistroInstrumento registrarInst = new frmRegistroInstrumento();
-                    registrarInst.ShowDialog();
-                }
-                else if (comboTipo.SelectedItem.ToString() == "Emisor")
-                {
-                    frmRegistroEmisor registrarEmi = new frmRegistroEmisor();
-                    registrarEmi.ShowDialog();
-                }
-                this.btnBuscar_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado ninguna fila");
-            }
 
 
         }
+
+
         private void configurarColumnas()
         {
             dgvInstrumentosOriginadores.Columns.Clear();
@@ -341,7 +320,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             }
         }
 
-
+        /*
         private void btnAsociado_Click(object sender, EventArgs e)
         {
             if (dgvInstrumentosOriginadores.SelectedRows.Count > 0)
@@ -367,6 +346,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             {
                 MessageBox.Show("No se ha seleccionado ninguna fila");
             }
+        }
+        */
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+            if (comboTipo.SelectedItem.ToString() == "Originador")
+            {
+                frmRegistroOriginador registrarOrig = new frmRegistroOriginador();
+                registrarOrig.ShowDialog();
+            }
+            else if (comboTipo.SelectedItem.ToString() == "Instrumento")
+            {
+                frmRegistroInstrumento registrarInst = new frmRegistroInstrumento();
+                registrarInst.ShowDialog();
+            }
+            else if (comboTipo.SelectedItem.ToString() == "Emisor")
+            {
+                frmRegistroEmisor registrarEmi = new frmRegistroEmisor();
+                registrarEmi.ShowDialog();
+            }
+            this.btnBuscar_Click(sender, e);
         }
     }
 }

@@ -22,5 +22,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             boxCodigoEmisor.Texts = emi.codigoEmisor.ToString();
             boxNombreEmisor.Texts = emi.nombre;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
