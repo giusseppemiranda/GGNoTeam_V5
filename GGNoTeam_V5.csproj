@@ -257,12 +257,6 @@
     <Compile Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEditarUsuario.Designer.cs">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEliminarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEliminarUsuario.Designer.cs">
-      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEditarEjecucion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,9 +425,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEliminarUsuario.resx">
-      <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEditarEjecucion.resx">
       <DependentUpon>frmEditarEjecucion.cs</DependentUpon>
