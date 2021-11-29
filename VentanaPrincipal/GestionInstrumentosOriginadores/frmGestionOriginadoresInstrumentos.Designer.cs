@@ -31,7 +31,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvInstrumentosOriginadores = new System.Windows.Forms.DataGridView();
+            this.dgvInstrumentosOriginadores = new Recursos.CustomDGV.ProgressDataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
@@ -262,7 +262,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private Recursos.UserControls.GGTextBox txtboxbusqueda;
         private Recursos.UserControls.GGButton btnBuscar;
-        private System.Windows.Forms.DataGridView dgvInstrumentosOriginadores;
+        private Recursos.CustomDGV.ProgressDataGridView dgvInstrumentosOriginadores;
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnActualizar;

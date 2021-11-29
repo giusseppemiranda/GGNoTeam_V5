@@ -262,29 +262,22 @@ namespace GGNoTeam_V5.VentanaPrincipal
             switch(comboEstadoTarea.SelectedItem.ToString()){
                 case "Pendientes":
                     {
-                        tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(0,user.itinerario.idItineraio);
-                        actualizarBotones();
-                        if(tareas!=null)
-                            dgvTareasPendientes.DataSource = new BindingList<TareasDiariasWS.tarea>(tareas.ToList());
+                        tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(0,user.itinerario.idItineraio);                                                
                         break;
                     }
                 case "Completadas":
                     {
                         tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(1, user.itinerario.idItineraio);
-                        actualizarBotones();
-                        if (tareas != null)
-                            dgvTareasPendientes.DataSource = new BindingList<TareasDiariasWS.tarea>(tareas.ToList());
                         break;
                     }
                 case "Perdidas":
                     {
                         tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(2, user.itinerario.idItineraio);
-                        actualizarBotones();
-                        if (tareas != null)
-                            dgvTareasPendientes.DataSource = new BindingList<TareasDiariasWS.tarea>(tareas.ToList());
                         break;
                     }
             }
+            actualizarBotones();
+            if (tareas != null)  dgvTareasPendientes.setDataSource1(new BindingList<TareasDiariasWS.tarea>(tareas.ToList()));
             cargarNombresAutores();
             this.Cursor = Cursors.Default;
         }

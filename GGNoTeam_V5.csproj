@@ -156,6 +156,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\CustomDGV\ProgressDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recursos\PantallaDeCarga\Global_LoadingForm.cs" />
+    <Compile Include="Recursos\PantallaDeCarga\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\PantallaDeCarga\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Recursos\sendMail\credenciales.cs" />
     <Compile Include="Recursos\sendMail\Gmail.cs" />
     <Compile Include="Recursos\sendMail\servidorCliente.cs" />
@@ -381,6 +391,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Recursos\PantallaDeCarga\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recursos\UserControls\GGComboBox.resx">
       <DependentUpon>GGComboBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -477,8 +490,8 @@
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\TrackingErrorvsAlfa\frmTrackingErrorvsAlfa.resx">
       <DependentUpon>frmTrackingErrorvsAlfa.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS.wsdl" />
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS.xsd">
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.wsdl" />
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse.datasource">
@@ -638,8 +651,8 @@
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.orden.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS1.wsdl" />
-    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS1.xsd">
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS.wsdl" />
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse.datasource">
@@ -814,6 +827,12 @@
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\netcoreapp3.1\FontAwesome.Sharp.dll" />
     <Content Include="Recursos\Imagenes\User.png" />
+    <Content Include="Recursos\PantallaDeCarga\gifPantallaCarga.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\PantallaDeCarga\gifPantallaCarga_2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\calendarDark.png" />
     <Content Include="Resources\calendarWhite.png" />
     <Content Include="Resources\image.png" />

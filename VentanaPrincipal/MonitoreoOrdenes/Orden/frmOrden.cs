@@ -71,7 +71,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
            
             if (listaOrdenes != null)
             {
-                dgvOrdenes.DataSource = listaOrdenes;
+                dgvOrdenes.setDataSource1(listaOrdenes);
             }
             else
             {

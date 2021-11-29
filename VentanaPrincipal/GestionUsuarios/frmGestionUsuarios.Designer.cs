@@ -37,7 +37,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnEliminarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnActualizarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnAgregarUsuario = new FontAwesome.Sharp.IconButton();
-            this.dgvPersonas = new System.Windows.Forms.DataGridView();
+            this.dgvPersonas = new Recursos.CustomDGV.ProgressDataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -415,7 +415,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private FontAwesome.Sharp.IconButton btnEliminarUsuario;
         private FontAwesome.Sharp.IconButton btnActualizarUsuario;
         private FontAwesome.Sharp.IconButton btnAgregarUsuario;
-        private System.Windows.Forms.DataGridView dgvPersonas;
+        private Recursos.CustomDGV.ProgressDataGridView dgvPersonas;
         private Recursos.UserControls.GGTextBox txtBoxBusqueda;
         private Recursos.UserControls.GGButton btnBuscar;
         private FontAwesome.Sharp.IconButton btnVerTareas;

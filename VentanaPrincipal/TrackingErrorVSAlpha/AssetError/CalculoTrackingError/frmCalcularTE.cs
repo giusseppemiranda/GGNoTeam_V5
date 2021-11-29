@@ -111,7 +111,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             datos = _dao.ListarAssetErrorXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
             if (datos != null)
             {
-                dgvAssetError.DataSource = datos;
+                dgvAssetError.setDataSource1(datos);
+            } else
+            {
+                dgvAssetError.DataSource = null;
             }
         }
 

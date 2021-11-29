@@ -40,7 +40,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion
             listaEjecuciones = _daoMO.listarEjecucionPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
             if (listaEjecuciones != null)
             {
-                dgvOrdenes.DataSource = listaEjecuciones;
+                dgvOrdenes.setDataSource1(listaEjecuciones);
             }
             else
             {

@@ -32,7 +32,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblEmisores = new System.Windows.Forms.Label();
-            this.dgvEmisores = new System.Windows.Forms.DataGridView();
+            this.dgvEmisores = new Recursos.CustomDGV.ProgressDataGridView();
             this.codigoOriginador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreOriginador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
@@ -164,7 +164,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
         #endregion
 
         private System.Windows.Forms.Label lblEmisores;
-        private System.Windows.Forms.DataGridView dgvEmisores;
+        private Recursos.CustomDGV.ProgressDataGridView dgvEmisores;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoOriginador;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreOriginador;
         private Recursos.UserControls.GGButton btnSiguiente;

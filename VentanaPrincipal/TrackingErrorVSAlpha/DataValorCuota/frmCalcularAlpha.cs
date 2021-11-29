@@ -67,7 +67,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             listaAlphas = _dao.listarAlphaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
             if (datos != null)
             {
-                dgvDataValorCuota.DataSource = datos;
+                dgvDataValorCuota.setDataSource1(datos);
                 boxAlpha_1.Texts = listaAlphas[0].alpha1.ToString();
                 boxAlpha_2.Texts = listaAlphas[1].alpha1.ToString();
                 boxAlpha_3.Texts = listaAlphas[2].alpha1.ToString();

@@ -110,7 +110,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void colocarEnDGV(LoginWS.persona[] lista)
         {
-            dgvPersonas.DataSource = lista;
+            dgvPersonas.setDataSource1(lista);
         }
 
         private void btnPersona_Click(object sender, EventArgs e)

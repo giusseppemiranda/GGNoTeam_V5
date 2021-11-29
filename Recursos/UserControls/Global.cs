@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GGNoTeam_V5.Recursos.UserControls;
 using FontAwesome.Sharp;
+using GGNoTeam_V5.Recursos.CustomDGV;
 
 namespace GGNoTeam_V5.Recursos.UserControls
 {
@@ -254,8 +255,9 @@ namespace GGNoTeam_V5.Recursos.UserControls
             return (Byte)Math.Max(0, color - 255 * porcentaje);
         }
 
-        public static void pintarDGV(ref DataGridView dgv, Color colorPrincipal)
+        public static void pintarDGV(ref ProgressDataGridView dgv, Color colorPrincipal)
         {
+            
             System.Windows.Forms.DataGridViewCellStyle rowStyle = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle colHeadStyle = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle rowHeadStyle = new System.Windows.Forms.DataGridViewCellStyle();
@@ -307,7 +309,7 @@ namespace GGNoTeam_V5.Recursos.UserControls
             dgv.ColumnHeadersDefaultCellStyle = colHeadStyle;
             dgv.RowHeadersDefaultCellStyle = rowHeadStyle;
             
-
+            
         }
     }
 }

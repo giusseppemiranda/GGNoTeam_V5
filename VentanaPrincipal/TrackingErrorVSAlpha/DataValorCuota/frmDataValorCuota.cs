@@ -86,7 +86,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             datos = _dao.ListarPorFechaPorFondoDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
             if (datos != null)
             {
-                dgvDataValorCuota.DataSource = datos;
+                dgvDataValorCuota.setDataSource1(datos);
             }
             else
             {

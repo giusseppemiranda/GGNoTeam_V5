@@ -70,7 +70,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             listaAsset = _daoTE.ListarPorFechaPorFondoAssetError(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
             if (listaAsset != null)
             {
-                dgvAssetError.DataSource = listaAsset;
+                dgvAssetError.setDataSource1(listaAsset);
             }else
             {
                 dgvAssetError.DataSource = null;

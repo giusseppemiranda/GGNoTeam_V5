@@ -46,7 +46,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.boxAlpha_3 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxAlpha_1 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxAlpha_2 = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.dgvDataValorCuota = new System.Windows.Forms.DataGridView();
+            this.dgvDataValorCuota = new Recursos.CustomDGV.ProgressDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreAFP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -410,7 +410,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private FontAwesome.Sharp.IconButton btnExportar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDVC;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.DataGridView dgvDataValorCuota;
+        private Recursos.CustomDGV.ProgressDataGridView dgvDataValorCuota;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreAFP;

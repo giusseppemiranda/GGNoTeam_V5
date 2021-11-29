@@ -60,7 +60,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
            
             if (listaOperaciones != null)
             {
-                dgvOrdenes.DataSource = listaOperaciones;
+                dgvOrdenes.setDataSource1(listaOperaciones);
             }
             else
             {

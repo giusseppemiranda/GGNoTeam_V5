@@ -32,7 +32,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
+            this.dgvTareasPendientes = new Recursos.CustomDGV.ProgressDataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -305,7 +305,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvTareasPendientes;
+        private Recursos.CustomDGV.ProgressDataGridView dgvTareasPendientes;
         private FontAwesome.Sharp.IconButton btnAgregarTarea;
         private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnEliminar;

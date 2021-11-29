@@ -37,7 +37,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnCompletarTarea = new FontAwesome.Sharp.IconButton();
-            this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
+            this.dgvTareasPendientes = new Recursos.CustomDGV.ProgressDataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -282,7 +282,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private System.Windows.Forms.Label lblNombre;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnCompletarTarea;
-        private System.Windows.Forms.DataGridView dgvTareasPendientes;
+        private Recursos.CustomDGV.ProgressDataGridView dgvTareasPendientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaCreacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaLimite;

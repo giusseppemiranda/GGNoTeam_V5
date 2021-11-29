@@ -43,7 +43,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             this.EliminarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnModificarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnConsultar = new FontAwesome.Sharp.IconButton();
-            this.dgvOrdenes = new System.Windows.Forms.DataGridView();
+            this.dgvOrdenes = new Recursos.CustomDGV.ProgressDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.f = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codSBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -407,7 +407,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         private FontAwesome.Sharp.IconButton EliminarRegistro;
         private FontAwesome.Sharp.IconButton btnModificarRegistro;
         private FontAwesome.Sharp.IconButton btnConsultar;
-        private System.Windows.Forms.DataGridView dgvOrdenes;
+        private Recursos.CustomDGV.ProgressDataGridView dgvOrdenes;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn f;
         private System.Windows.Forms.DataGridViewTextBoxColumn codSBS;

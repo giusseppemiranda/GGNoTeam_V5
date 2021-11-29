@@ -36,7 +36,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.dgvOrdenes = new System.Windows.Forms.DataGridView();
+            this.dgvOrdenes = new Recursos.CustomDGV.ProgressDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asset_Class = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.f = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -344,7 +344,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private System.Windows.Forms.DateTimePicker dateInicial;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.DataGridView dgvOrdenes;
+        private Recursos.CustomDGV.ProgressDataGridView dgvOrdenes;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asset_Class;
         private System.Windows.Forms.DataGridViewTextBoxColumn f;

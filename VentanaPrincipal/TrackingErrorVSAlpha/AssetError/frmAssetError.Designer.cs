@@ -31,7 +31,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvAssetError = new System.Windows.Forms.DataGridView();
+            this.dgvAssetError = new Recursos.CustomDGV.ProgressDataGridView();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -335,7 +335,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private FontAwesome.Sharp.IconButton btnEliminarRegistro;
         private FontAwesome.Sharp.IconButton btnActualizarRegistro;
-        private System.Windows.Forms.DataGridView dgvAssetError;
+        private Recursos.CustomDGV.ProgressDataGridView dgvAssetError;
         private FontAwesome.Sharp.IconButton btnAgregarRegistros;
         private FontAwesome.Sharp.IconButton btnConsultarRegistros;
         private System.Windows.Forms.DateTimePicker dateFinal;

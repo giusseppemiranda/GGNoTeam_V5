@@ -84,7 +84,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 actualizarBotones();
                 if (originadores != null)
                 {
-                    dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.originador>(originadores.ToList());
+                    dgvInstrumentosOriginadores.setDataSource1(new BindingList<GestionInstrumentosOriginadoresWS.originador>(originadores.ToList()));
                     cargarNombresEmis();
                 }
                 else MessageBox.Show("No se encontraron resultados");
@@ -96,7 +96,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 actualizarBotones();
                 if (instrumentos != null)
                 {
-                    dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.instrumento>(instrumentos.ToList());
+                    dgvInstrumentosOriginadores.setDataSource1(new BindingList<GestionInstrumentosOriginadoresWS.instrumento>(instrumentos.ToList()));
                     cargarNombresOrig();
 
                 }
@@ -110,7 +110,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 actualizarBotones();
                 if (emisores != null)
                 {
-                    dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList());
+                    dgvInstrumentosOriginadores.setDataSource1(new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList())) ;
 
                 }
                 else MessageBox.Show("No se encontraron resultados");
