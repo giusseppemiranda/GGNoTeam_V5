@@ -477,8 +477,8 @@
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\TrackingErrorvsAlfa\frmTrackingErrorvsAlfa.resx">
       <DependentUpon>frmTrackingErrorvsAlfa.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.wsdl" />
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.xsd">
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS.wsdl" />
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse.datasource">
@@ -638,8 +638,8 @@
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.orden.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS.wsdl" />
-    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS.xsd">
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS1.wsdl" />
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse.datasource">

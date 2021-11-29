@@ -189,10 +189,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             this.lblNombreEmisor.AutoSize = true;
             this.lblNombreEmisor.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreEmisor.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreEmisor.Location = new System.Drawing.Point(232, 276);
+            this.lblNombreEmisor.Location = new System.Drawing.Point(173, 215);
             this.lblNombreEmisor.Name = "lblNombreEmisor";
-            this.lblNombreEmisor.Size = new System.Drawing.Size(0, 15);
+            this.lblNombreEmisor.Size = new System.Drawing.Size(100, 15);
             this.lblNombreEmisor.TabIndex = 98;
+            this.lblNombreEmisor.Text = "[Nombre Emisor]";
             // 
             // btnSiguiente
             // 

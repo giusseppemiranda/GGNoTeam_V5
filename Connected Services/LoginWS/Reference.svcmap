@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.236.140.237:8080/WebServices/LoginWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServices/LoginWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="LoginWS1.wsdl" MetadataType="Wsdl" ID="5f0b7d50-fbe9-4d8b-af8d-23f0ee5797b5" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/LoginWS?WSDL" />
-    <MetadataFile FileName="LoginWS1.xsd" MetadataType="Schema" ID="5a926945-690a-49fc-809b-259ace69b75b" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/LoginWS?xsd=1" />
+    <MetadataFile FileName="LoginWS1.xsd" MetadataType="Schema" ID="8886e3ec-b2d3-4d92-84ba-8d57eaf9ec96" SourceId="1" SourceUrl="http://localhost:8080/WebServices/LoginWS?xsd=1" />
+    <MetadataFile FileName="LoginWS1.wsdl" MetadataType="Wsdl" ID="396bbf6d-d22f-4c5f-93c5-868d56dea665" SourceId="1" SourceUrl="http://localhost:8080/WebServices/LoginWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

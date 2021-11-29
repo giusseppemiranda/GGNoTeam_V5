@@ -29,6 +29,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             boxcodSBS.Texts = inst.codigoSBS;
             boxcodISIN.Texts = inst.codigoISIN;
             boxScore.Texts = inst.score;
+            boxID059.Texts = inst.codigoID059;
+            boxRatingEncajeSistema.Texts = inst.ratingEncajeSistema;
+            boxRatingUnificado.Texts = inst.ratingUnificado;
             comboBoxAssetClass.SelectedItem = inst.clasificacionErr.ToString();
             boxClasificacionLocal.Texts = inst.ratingUnificadoLocal;
             boxFactorRiesgo.Texts = inst.factorRiesgo;
@@ -43,9 +46,47 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             
             dateVencimiento.Value = DateTime.Parse(inst.fechaVencimiento.Replace("-","/"));
 
-            dateRegistro.Value = DateTime.Parse(inst.fechaRegistro.Replace("-", "/")); 
-
+            dateRegistro.Value = DateTime.Parse(inst.fechaRegistro.Replace("-", "/"));
+            dateRegistro.Enabled = false;
             dateUltimaModificacion.Value = DateTime.Parse(inst.fechaUltimaClasificacion.Replace("-", "/")); 
+            boxMoody.Texts = inst.moodys;
+            dateMoody.Value = DateTime.Parse(inst.fechaMoodys.Replace("-", "/"));
+
+
+
+        }
+
+        public frmRegistroInstrumento(GestionInstrumentosOriginadoresWS.instrumento inst,int i)
+        {
+            InitializeComponent();
+            cargarCombos();
+            instAux = new GestionInstrumentosOriginadoresWS.instrumento();
+            lblRegistroInstrumento.Text = "Registro instrumento";
+            //instAux.idInstrumento = inst.idInstrumento;
+            boxcodSBS.Texts = inst.codigoSBS;
+            boxcodISIN.Texts = inst.codigoISIN;
+            boxScore.Texts = inst.score;
+            boxID059.Texts = inst.codigoID059;
+            boxRatingEncajeSistema.Texts = inst.ratingEncajeSistema;
+            boxRatingUnificado.Texts = inst.ratingUnificado;
+            comboBoxAssetClass.SelectedItem = inst.clasificacionErr.ToString();
+            boxClasificacionLocal.Texts = inst.ratingUnificadoLocal;
+            boxFactorRiesgo.Texts = inst.factorRiesgo;
+            comboBoxLimiteAplicable.SelectedItem = inst.limiteAplicable.ToString();
+            boxRatingEncaje.Texts = inst.ratingEncaje;
+            _daoInst = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
+            orig = new GestionInstrumentosOriginadoresWS.originador();
+            orig = _daoInst.buscarOrigId(inst.fidOriginador);
+            boxCodigoOriginador.Texts = orig.codigoOriginador;
+            codigoAnt = orig.codigoOriginador;
+            lblNombreOriginador.Text = orig.nombreOriginador;
+
+            dateVencimiento.Value = DateTime.Parse(inst.fechaVencimiento.Replace("-", "/"));
+
+
+            //dateRegistro.Value = DateTime.Parse(inst.fechaRegistro.Replace("-", "/"));
+            dateRegistro.Enabled = false;
+            dateUltimaModificacion.Value = DateTime.Parse(inst.fechaUltimaClasificacion.Replace("-", "/"));
             boxMoody.Texts = inst.moodys;
             dateMoody.Value = DateTime.Parse(inst.fechaMoodys.Replace("-", "/"));
 
@@ -62,6 +103,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             orig = new GestionInstrumentosOriginadoresWS.originador();
             lblRegistroInstrumento.Text = "Registro instrumento";
             codigoAnt = "";
+            dateRegistro.Enabled = false;
         }
         
         public void cargarOriginador(GestionInstrumentosOriginadoresWS.originador origAux)

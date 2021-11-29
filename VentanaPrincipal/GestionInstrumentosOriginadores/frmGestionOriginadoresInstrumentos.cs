@@ -66,9 +66,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void cargarComboBoxEleccion()
         {
-            comboTipo.Items.Add("Emisor");
+            
             comboTipo.Items.Add("Instrumento");
             comboTipo.Items.Add("Originador");
+            comboTipo.Items.Add("Emisor");
             comboTipo.SelectedIndex = 0;
         }
 
@@ -80,6 +81,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             {
                 originadores = _daoInstOrig.buscarUnOriginadorPorCodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
+                actualizarBotones();
                 if (originadores != null)
                 {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.originador>(originadores.ToList());
@@ -91,6 +93,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             {
                 instrumentos = _daoInstOrig.listarInstrumentoXcodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
+                actualizarBotones();
                 if (instrumentos != null)
                 {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.instrumento>(instrumentos.ToList());
@@ -104,6 +107,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             {
                 emisores = _daoInstOrig.listarEmisoresPorNombreCodigo(txtboxbusqueda.Texts);
                 configurarColumnas();
+                actualizarBotones();
                 if (emisores != null)
                 {
                     dgvInstrumentosOriginadores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList());
@@ -114,6 +118,17 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.Cursor = Cursors.Default;
         }
 
+        private void actualizarBotones()
+        {
+            if (comboTipo.SelectedItem.ToString() == "Instrumento")
+            {
+                btnEliminar.Enabled = true;
+
+            }else
+            {
+                btnEliminar.Enabled = false;
+            }
+        }
         private void cargarNombresOrig()
         {
             int i = 0;
@@ -200,23 +215,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         {
             if (dgvInstrumentosOriginadores.SelectedRows.Count > 0)
             {
-                if (comboTipo.SelectedItem.ToString() == "Originador")
-                {
-                    _daoInstOrig.buscarUnOriginadorPorCodigo(originadores[dgvInstrumentosOriginadores.CurrentRow.Index].codigoOriginador);
-                }
-                else if (comboTipo.SelectedItem.ToString() == "Instrumento")
-                {
-                    _daoInstOrig.eliminarInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index].idInstrumento);
-                }
-                else if (comboTipo.SelectedItem.ToString() == "Emisor")
-                {
-                    _daoInstOrig.listarEmisores();
-                }
+                _daoInstOrig.eliminarInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index].idInstrumento);
             }
             else
             {
                 MessageBox.Show("No se ha seleccionado ninguna fila");
             }
+            this.btnBuscar_Click(sender,e);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -367,6 +372,52 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 registrarEmi.ShowDialog();
             }
             this.btnBuscar_Click(sender, e);
+        }
+
+        private void btnAgregarPlantilla_Click(object sender, EventArgs e)
+        {
+            if (dgvInstrumentosOriginadores.SelectedRows.Count > 0)
+            {
+                switch (comboTipo.SelectedItem.ToString())
+                {
+                    case "Originador":
+                        {
+                            if (dgvInstrumentosOriginadores.CurrentRow != null)
+                            {
+                                frmRegistroOriginador registrarOrig = new frmRegistroOriginador(originadores[dgvInstrumentosOriginadores.CurrentRow.Index],1);
+                                registrarOrig.ShowDialog();
+                            }
+
+                            break;
+                        }
+
+                    case "Instrumento":
+                        {
+                            if (dgvInstrumentosOriginadores.CurrentRow != null)
+                            {
+                                frmRegistroInstrumento registrarinst = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index],1);
+                                registrarinst.ShowDialog();
+                            }
+
+                            break;
+                        }
+                    case "Emisor":
+                        {
+                            if (dgvInstrumentosOriginadores.CurrentRow != null)
+                            {
+                                frmRegistroEmisor registrarinst = new frmRegistroEmisor(emisores[dgvInstrumentosOriginadores.CurrentRow.Index], 1);
+                                registrarinst.ShowDialog();
+                            }
+
+                            break;
+                        }
+                }
+                this.btnBuscar_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ninguna fila");
+            }
         }
     }
 }

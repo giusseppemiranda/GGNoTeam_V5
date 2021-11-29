@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.236.140.237:8080/WebServices/MonitorOrdenWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServices/MonitorOrdenWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MonitorOrdenWS.wsdl" MetadataType="Wsdl" ID="5f7c3bff-f0b7-4dec-b6c6-d45a576215b1" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/MonitorOrdenWS?WSDL" />
-    <MetadataFile FileName="MonitorOrdenWS.xsd" MetadataType="Schema" ID="8886b859-2be8-4e0b-8525-11d2d6736b55" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/MonitorOrdenWS?xsd=1" />
+    <MetadataFile FileName="MonitorOrdenWS1.wsdl" MetadataType="Wsdl" ID="71719a90-9e32-48bd-852a-dc72790412ac" SourceId="1" SourceUrl="http://localhost:8080/WebServices/MonitorOrdenWS?WSDL" />
+    <MetadataFile FileName="MonitorOrdenWS1.xsd" MetadataType="Schema" ID="35e3c6c4-6626-40dd-87c7-a9fb6a69acf0" SourceId="1" SourceUrl="http://localhost:8080/WebServices/MonitorOrdenWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

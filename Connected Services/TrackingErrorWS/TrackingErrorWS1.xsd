@@ -97,17 +97,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarDataValorCuota">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="dataVC" type="tns:dataValorCuota" />
-      <xs:element name="idFondo" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarDataValorCuotaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarAlpha_Fecha_Fondo">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -118,6 +107,17 @@
   <xs:complexType name="listarAlpha_Fecha_FondoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alpha" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarDataValorCuota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dataVC" type="tns:dataValorCuota" />
+      <xs:element name="idFondo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarDataValorCuotaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListarTrackingError">
@@ -285,14 +285,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ListarTodosTrackingError">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="ListarTodosTrackingErrorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:trackingError" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarAssetError">
     <xs:sequence>
       <xs:element minOccurs="0" name="asset" type="tns:assetError" />
@@ -302,6 +294,14 @@
   <xs:complexType name="modificarAssetErrorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarTodosTrackingError">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarTodosTrackingErrorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:trackingError" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarAlpha">

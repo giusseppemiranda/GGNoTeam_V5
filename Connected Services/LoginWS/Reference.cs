@@ -16,15 +16,6 @@ namespace GGNoTeam_V5.LoginWS {
     public interface LoginWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.LoginWS.modificarPersonaResponse modificarPersona(GGNoTeam_V5.LoginWS.modificarPersonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.modificarPersonaResponse> modificarPersonaAsync(GGNoTeam_V5.LoginWS.modificarPersonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/eliminarPersonaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/eliminarPersonaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,6 +23,15 @@ namespace GGNoTeam_V5.LoginWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/eliminarPersonaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/eliminarPersonaResponse")]
         System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.eliminarPersonaResponse> eliminarPersonaAsync(GGNoTeam_V5.LoginWS.eliminarPersonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.LoginWS.modificarPersonaResponse modificarPersona(GGNoTeam_V5.LoginWS.modificarPersonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/modificarPersonaResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.modificarPersonaResponse> modificarPersonaAsync(GGNoTeam_V5.LoginWS.modificarPersonaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarUsuariosResponse")]
@@ -43,15 +43,6 @@ namespace GGNoTeam_V5.LoginWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarUsuariosResponse> listarUsuariosAsync(GGNoTeam_V5.LoginWS.listarUsuariosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.LoginWS.listarNoUsuariosResponse listarNoUsuarios(GGNoTeam_V5.LoginWS.listarNoUsuariosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarNoUsuariosResponse> listarNoUsuariosAsync(GGNoTeam_V5.LoginWS.listarNoUsuariosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/insertarPersonaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/insertarPersonaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -61,13 +52,22 @@ namespace GGNoTeam_V5.LoginWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.insertarPersonaResponse> insertarPersonaAsync(GGNoTeam_V5.LoginWS.insertarPersonaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.LoginWS.listarPorCodNomResponse listarPorCodNom(GGNoTeam_V5.LoginWS.listarPorCodNomRequest request);
+        GGNoTeam_V5.LoginWS.listarNoUsuariosResponse listarNoUsuarios(GGNoTeam_V5.LoginWS.listarNoUsuariosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodNomResponse> listarPorCodNomAsync(GGNoTeam_V5.LoginWS.listarPorCodNomRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarNoUsuariosResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarNoUsuariosResponse> listarNoUsuariosAsync(GGNoTeam_V5.LoginWS.listarNoUsuariosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.LoginWS.listarPorCodExactoResponse listarPorCodExacto(GGNoTeam_V5.LoginWS.listarPorCodExactoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodExactoResponse> listarPorCodExactoAsync(GGNoTeam_V5.LoginWS.listarPorCodExactoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarAdministradoresRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarAdministradoresResponse")]
@@ -79,13 +79,40 @@ namespace GGNoTeam_V5.LoginWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarAdministradoresResponse> listarAdministradoresAsync(GGNoTeam_V5.LoginWS.listarAdministradoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/verificarCredencialesRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/verificarCredencialesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.LoginWS.listarPorCodExactoResponse listarPorCodExacto(GGNoTeam_V5.LoginWS.listarPorCodExactoRequest request);
+        GGNoTeam_V5.LoginWS.verificarCredencialesResponse verificarCredenciales(GGNoTeam_V5.LoginWS.verificarCredencialesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExactoResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodExactoResponse> listarPorCodExactoAsync(GGNoTeam_V5.LoginWS.listarPorCodExactoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/verificarCredencialesRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/verificarCredencialesResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.verificarCredencialesResponse> verificarCredencialesAsync(GGNoTeam_V5.LoginWS.verificarCredencialesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/buscarPersonaCodigoExactoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/buscarPersonaCodigoExactoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse buscarPersonaCodigoExacto(GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/buscarPersonaCodigoExactoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/buscarPersonaCodigoExactoResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse> buscarPersonaCodigoExactoAsync(GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.LoginWS.listarPorCodNomResponse listarPorCodNom(GGNoTeam_V5.LoginWS.listarPorCodNomRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodNomResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodNomResponse> listarPorCodNomAsync(GGNoTeam_V5.LoginWS.listarPorCodNomRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse listarPersonaPorID(GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse> listarPersonaPorIDAsync(GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExacto_TareasCompletasRe" +
@@ -112,37 +139,51 @@ namespace GGNoTeam_V5.LoginWS {
             "equest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPorCodExacto_TareasInompletasR" +
             "esponse")]
         System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodExacto_TareasInompletasResponse> listarPorCodExacto_TareasInompletasAsync(GGNoTeam_V5.LoginWS.listarPorCodExacto_TareasInompletasRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersona", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarPersonaRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse listarPersonaPorID(GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPersona;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/listarPersonaPorIDResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse> listarPersonaPorIDAsync(GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idItinerario;
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/buscarPersonaCodigoExactoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/buscarPersonaCodigoExactoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse buscarPersonaCodigoExacto(GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest request);
+        public eliminarPersonaRequest() {
+        }
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/buscarPersonaCodigoExactoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/buscarPersonaCodigoExactoResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse> buscarPersonaCodigoExactoAsync(GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest request);
+        public eliminarPersonaRequest(int idPersona, int idItinerario) {
+            this.idPersona = idPersona;
+            this.idItinerario = idItinerario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarPersonaResponse {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/verificarCredencialesRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/verificarCredencialesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.LoginWS.verificarCredencialesResponse verificarCredenciales(GGNoTeam_V5.LoginWS.verificarCredencialesRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/LoginWS/verificarCredencialesRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/LoginWS/verificarCredencialesResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.verificarCredencialesResponse> verificarCredencialesAsync(GGNoTeam_V5.LoginWS.verificarCredencialesRequest request);
+        public eliminarPersonaResponse() {
+        }
+        
+        public eliminarPersonaResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -314,7 +355,7 @@ namespace GGNoTeam_V5.LoginWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -374,7 +415,7 @@ namespace GGNoTeam_V5.LoginWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -528,47 +569,6 @@ namespace GGNoTeam_V5.LoginWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersona", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarPersonaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPersona;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idItinerario;
-        
-        public eliminarPersonaRequest() {
-        }
-        
-        public eliminarPersonaRequest(int idPersona, int idItinerario) {
-            this.idPersona = idPersona;
-            this.idItinerario = idItinerario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarPersonaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPersonaResponse() {
-        }
-        
-        public eliminarPersonaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarios", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
     public partial class listarUsuariosRequest {
         
@@ -590,34 +590,6 @@ namespace GGNoTeam_V5.LoginWS {
         }
         
         public listarUsuariosResponse(GGNoTeam_V5.LoginWS.persona[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNoUsuarios", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarNoUsuariosRequest {
-        
-        public listarNoUsuariosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNoUsuariosResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarNoUsuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.LoginWS.persona[] @return;
-        
-        public listarNoUsuariosResponse() {
-        }
-        
-        public listarNoUsuariosResponse(GGNoTeam_V5.LoginWS.persona[] @return) {
             this.@return = @return;
         }
     }
@@ -661,63 +633,27 @@ namespace GGNoTeam_V5.LoginWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorCodNom", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarPorCodNomRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNoUsuarios", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarNoUsuariosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codnom;
-        
-        public listarPorCodNomRequest() {
-        }
-        
-        public listarPorCodNomRequest(string codnom) {
-            this.codnom = codnom;
+        public listarNoUsuariosRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorCodNomResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarPorCodNomResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNoUsuariosResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarNoUsuariosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public GGNoTeam_V5.LoginWS.persona[] @return;
         
-        public listarPorCodNomResponse() {
+        public listarNoUsuariosResponse() {
         }
         
-        public listarPorCodNomResponse(GGNoTeam_V5.LoginWS.persona[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAdministradores", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarAdministradoresRequest {
-        
-        public listarAdministradoresRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAdministradoresResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarAdministradoresResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.LoginWS.persona[] @return;
-        
-        public listarAdministradoresResponse() {
-        }
-        
-        public listarAdministradoresResponse(GGNoTeam_V5.LoginWS.persona[] @return) {
+        public listarNoUsuariosResponse(GGNoTeam_V5.LoginWS.persona[] @return) {
             this.@return = @return;
         }
     }
@@ -754,6 +690,183 @@ namespace GGNoTeam_V5.LoginWS {
         }
         
         public listarPorCodExactoResponse(GGNoTeam_V5.LoginWS.persona[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAdministradores", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarAdministradoresRequest {
+        
+        public listarAdministradoresRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAdministradoresResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarAdministradoresResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.LoginWS.persona[] @return;
+        
+        public listarAdministradoresResponse() {
+        }
+        
+        public listarAdministradoresResponse(GGNoTeam_V5.LoginWS.persona[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarCredenciales", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class verificarCredencialesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg1;
+        
+        public verificarCredencialesRequest() {
+        }
+        
+        public verificarCredencialesRequest(string arg0, string arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarCredencialesResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class verificarCredencialesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public verificarCredencialesResponse() {
+        }
+        
+        public verificarCredencialesResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPersonaCodigoExacto", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class buscarPersonaCodigoExactoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public buscarPersonaCodigoExactoRequest() {
+        }
+        
+        public buscarPersonaCodigoExactoRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPersonaCodigoExactoResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class buscarPersonaCodigoExactoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.LoginWS.persona @return;
+        
+        public buscarPersonaCodigoExactoResponse() {
+        }
+        
+        public buscarPersonaCodigoExactoResponse(GGNoTeam_V5.LoginWS.persona @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorCodNom", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarPorCodNomRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codnom;
+        
+        public listarPorCodNomRequest() {
+        }
+        
+        public listarPorCodNomRequest(string codnom) {
+            this.codnom = codnom;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorCodNomResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarPorCodNomResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.LoginWS.persona[] @return;
+        
+        public listarPorCodNomResponse() {
+        }
+        
+        public listarPorCodNomResponse(GGNoTeam_V5.LoginWS.persona[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonaPorID", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarPersonaPorIDRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPersona;
+        
+        public listarPersonaPorIDRequest() {
+        }
+        
+        public listarPersonaPorIDRequest(int idPersona) {
+            this.idPersona = idPersona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonaPorIDResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarPersonaPorIDResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.LoginWS.persona @return;
+        
+        public listarPersonaPorIDResponse() {
+        }
+        
+        public listarPersonaPorIDResponse(GGNoTeam_V5.LoginWS.persona @return) {
             this.@return = @return;
         }
     }
@@ -830,119 +943,6 @@ namespace GGNoTeam_V5.LoginWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonaPorID", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarPersonaPorIDRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPersona;
-        
-        public listarPersonaPorIDRequest() {
-        }
-        
-        public listarPersonaPorIDRequest(int idPersona) {
-            this.idPersona = idPersona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonaPorIDResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarPersonaPorIDResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.LoginWS.persona @return;
-        
-        public listarPersonaPorIDResponse() {
-        }
-        
-        public listarPersonaPorIDResponse(GGNoTeam_V5.LoginWS.persona @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPersonaCodigoExacto", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class buscarPersonaCodigoExactoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public buscarPersonaCodigoExactoRequest() {
-        }
-        
-        public buscarPersonaCodigoExactoRequest(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPersonaCodigoExactoResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class buscarPersonaCodigoExactoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.LoginWS.persona @return;
-        
-        public buscarPersonaCodigoExactoResponse() {
-        }
-        
-        public buscarPersonaCodigoExactoResponse(GGNoTeam_V5.LoginWS.persona @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarCredenciales", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class verificarCredencialesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg1;
-        
-        public verificarCredencialesRequest() {
-        }
-        
-        public verificarCredencialesRequest(string arg0, string arg1) {
-            this.arg0 = arg0;
-            this.arg1 = arg1;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarCredencialesResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class verificarCredencialesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public verificarCredencialesResponse() {
-        }
-        
-        public verificarCredencialesResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface LoginWSChannel : GGNoTeam_V5.LoginWS.LoginWS, System.ServiceModel.IClientChannel {
     }
@@ -971,29 +971,6 @@ namespace GGNoTeam_V5.LoginWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.LoginWS.modificarPersonaResponse GGNoTeam_V5.LoginWS.LoginWS.modificarPersona(GGNoTeam_V5.LoginWS.modificarPersonaRequest request) {
-            return base.Channel.modificarPersona(request);
-        }
-        
-        public int modificarPersona(GGNoTeam_V5.LoginWS.persona Persona) {
-            GGNoTeam_V5.LoginWS.modificarPersonaRequest inValue = new GGNoTeam_V5.LoginWS.modificarPersonaRequest();
-            inValue.Persona = Persona;
-            GGNoTeam_V5.LoginWS.modificarPersonaResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).modificarPersona(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.modificarPersonaResponse> GGNoTeam_V5.LoginWS.LoginWS.modificarPersonaAsync(GGNoTeam_V5.LoginWS.modificarPersonaRequest request) {
-            return base.Channel.modificarPersonaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.modificarPersonaResponse> modificarPersonaAsync(GGNoTeam_V5.LoginWS.persona Persona) {
-            GGNoTeam_V5.LoginWS.modificarPersonaRequest inValue = new GGNoTeam_V5.LoginWS.modificarPersonaRequest();
-            inValue.Persona = Persona;
-            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).modificarPersonaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         GGNoTeam_V5.LoginWS.eliminarPersonaResponse GGNoTeam_V5.LoginWS.LoginWS.eliminarPersona(GGNoTeam_V5.LoginWS.eliminarPersonaRequest request) {
             return base.Channel.eliminarPersona(request);
         }
@@ -1019,6 +996,29 @@ namespace GGNoTeam_V5.LoginWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.LoginWS.modificarPersonaResponse GGNoTeam_V5.LoginWS.LoginWS.modificarPersona(GGNoTeam_V5.LoginWS.modificarPersonaRequest request) {
+            return base.Channel.modificarPersona(request);
+        }
+        
+        public int modificarPersona(GGNoTeam_V5.LoginWS.persona Persona) {
+            GGNoTeam_V5.LoginWS.modificarPersonaRequest inValue = new GGNoTeam_V5.LoginWS.modificarPersonaRequest();
+            inValue.Persona = Persona;
+            GGNoTeam_V5.LoginWS.modificarPersonaResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).modificarPersona(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.modificarPersonaResponse> GGNoTeam_V5.LoginWS.LoginWS.modificarPersonaAsync(GGNoTeam_V5.LoginWS.modificarPersonaRequest request) {
+            return base.Channel.modificarPersonaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.modificarPersonaResponse> modificarPersonaAsync(GGNoTeam_V5.LoginWS.persona Persona) {
+            GGNoTeam_V5.LoginWS.modificarPersonaRequest inValue = new GGNoTeam_V5.LoginWS.modificarPersonaRequest();
+            inValue.Persona = Persona;
+            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).modificarPersonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         GGNoTeam_V5.LoginWS.listarUsuariosResponse GGNoTeam_V5.LoginWS.LoginWS.listarUsuarios(GGNoTeam_V5.LoginWS.listarUsuariosRequest request) {
             return base.Channel.listarUsuarios(request);
         }
@@ -1037,27 +1037,6 @@ namespace GGNoTeam_V5.LoginWS {
         public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarUsuariosResponse> listarUsuariosAsync() {
             GGNoTeam_V5.LoginWS.listarUsuariosRequest inValue = new GGNoTeam_V5.LoginWS.listarUsuariosRequest();
             return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarUsuariosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.LoginWS.listarNoUsuariosResponse GGNoTeam_V5.LoginWS.LoginWS.listarNoUsuarios(GGNoTeam_V5.LoginWS.listarNoUsuariosRequest request) {
-            return base.Channel.listarNoUsuarios(request);
-        }
-        
-        public GGNoTeam_V5.LoginWS.persona[] listarNoUsuarios() {
-            GGNoTeam_V5.LoginWS.listarNoUsuariosRequest inValue = new GGNoTeam_V5.LoginWS.listarNoUsuariosRequest();
-            GGNoTeam_V5.LoginWS.listarNoUsuariosResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarNoUsuarios(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarNoUsuariosResponse> GGNoTeam_V5.LoginWS.LoginWS.listarNoUsuariosAsync(GGNoTeam_V5.LoginWS.listarNoUsuariosRequest request) {
-            return base.Channel.listarNoUsuariosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarNoUsuariosResponse> listarNoUsuariosAsync() {
-            GGNoTeam_V5.LoginWS.listarNoUsuariosRequest inValue = new GGNoTeam_V5.LoginWS.listarNoUsuariosRequest();
-            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarNoUsuariosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1084,26 +1063,47 @@ namespace GGNoTeam_V5.LoginWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.LoginWS.listarPorCodNomResponse GGNoTeam_V5.LoginWS.LoginWS.listarPorCodNom(GGNoTeam_V5.LoginWS.listarPorCodNomRequest request) {
-            return base.Channel.listarPorCodNom(request);
+        GGNoTeam_V5.LoginWS.listarNoUsuariosResponse GGNoTeam_V5.LoginWS.LoginWS.listarNoUsuarios(GGNoTeam_V5.LoginWS.listarNoUsuariosRequest request) {
+            return base.Channel.listarNoUsuarios(request);
         }
         
-        public GGNoTeam_V5.LoginWS.persona[] listarPorCodNom(string codnom) {
-            GGNoTeam_V5.LoginWS.listarPorCodNomRequest inValue = new GGNoTeam_V5.LoginWS.listarPorCodNomRequest();
-            inValue.codnom = codnom;
-            GGNoTeam_V5.LoginWS.listarPorCodNomResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPorCodNom(inValue);
+        public GGNoTeam_V5.LoginWS.persona[] listarNoUsuarios() {
+            GGNoTeam_V5.LoginWS.listarNoUsuariosRequest inValue = new GGNoTeam_V5.LoginWS.listarNoUsuariosRequest();
+            GGNoTeam_V5.LoginWS.listarNoUsuariosResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarNoUsuarios(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodNomResponse> GGNoTeam_V5.LoginWS.LoginWS.listarPorCodNomAsync(GGNoTeam_V5.LoginWS.listarPorCodNomRequest request) {
-            return base.Channel.listarPorCodNomAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarNoUsuariosResponse> GGNoTeam_V5.LoginWS.LoginWS.listarNoUsuariosAsync(GGNoTeam_V5.LoginWS.listarNoUsuariosRequest request) {
+            return base.Channel.listarNoUsuariosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodNomResponse> listarPorCodNomAsync(string codnom) {
-            GGNoTeam_V5.LoginWS.listarPorCodNomRequest inValue = new GGNoTeam_V5.LoginWS.listarPorCodNomRequest();
-            inValue.codnom = codnom;
-            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPorCodNomAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarNoUsuariosResponse> listarNoUsuariosAsync() {
+            GGNoTeam_V5.LoginWS.listarNoUsuariosRequest inValue = new GGNoTeam_V5.LoginWS.listarNoUsuariosRequest();
+            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarNoUsuariosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.LoginWS.listarPorCodExactoResponse GGNoTeam_V5.LoginWS.LoginWS.listarPorCodExacto(GGNoTeam_V5.LoginWS.listarPorCodExactoRequest request) {
+            return base.Channel.listarPorCodExacto(request);
+        }
+        
+        public GGNoTeam_V5.LoginWS.persona[] listarPorCodExacto(int codigo) {
+            GGNoTeam_V5.LoginWS.listarPorCodExactoRequest inValue = new GGNoTeam_V5.LoginWS.listarPorCodExactoRequest();
+            inValue.codigo = codigo;
+            GGNoTeam_V5.LoginWS.listarPorCodExactoResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPorCodExacto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodExactoResponse> GGNoTeam_V5.LoginWS.LoginWS.listarPorCodExactoAsync(GGNoTeam_V5.LoginWS.listarPorCodExactoRequest request) {
+            return base.Channel.listarPorCodExactoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodExactoResponse> listarPorCodExactoAsync(int codigo) {
+            GGNoTeam_V5.LoginWS.listarPorCodExactoRequest inValue = new GGNoTeam_V5.LoginWS.listarPorCodExactoRequest();
+            inValue.codigo = codigo;
+            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPorCodExactoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1128,26 +1128,97 @@ namespace GGNoTeam_V5.LoginWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.LoginWS.listarPorCodExactoResponse GGNoTeam_V5.LoginWS.LoginWS.listarPorCodExacto(GGNoTeam_V5.LoginWS.listarPorCodExactoRequest request) {
-            return base.Channel.listarPorCodExacto(request);
+        GGNoTeam_V5.LoginWS.verificarCredencialesResponse GGNoTeam_V5.LoginWS.LoginWS.verificarCredenciales(GGNoTeam_V5.LoginWS.verificarCredencialesRequest request) {
+            return base.Channel.verificarCredenciales(request);
         }
         
-        public GGNoTeam_V5.LoginWS.persona[] listarPorCodExacto(int codigo) {
-            GGNoTeam_V5.LoginWS.listarPorCodExactoRequest inValue = new GGNoTeam_V5.LoginWS.listarPorCodExactoRequest();
-            inValue.codigo = codigo;
-            GGNoTeam_V5.LoginWS.listarPorCodExactoResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPorCodExacto(inValue);
+        public int verificarCredenciales(string arg0, string arg1) {
+            GGNoTeam_V5.LoginWS.verificarCredencialesRequest inValue = new GGNoTeam_V5.LoginWS.verificarCredencialesRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            GGNoTeam_V5.LoginWS.verificarCredencialesResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).verificarCredenciales(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodExactoResponse> GGNoTeam_V5.LoginWS.LoginWS.listarPorCodExactoAsync(GGNoTeam_V5.LoginWS.listarPorCodExactoRequest request) {
-            return base.Channel.listarPorCodExactoAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.verificarCredencialesResponse> GGNoTeam_V5.LoginWS.LoginWS.verificarCredencialesAsync(GGNoTeam_V5.LoginWS.verificarCredencialesRequest request) {
+            return base.Channel.verificarCredencialesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodExactoResponse> listarPorCodExactoAsync(int codigo) {
-            GGNoTeam_V5.LoginWS.listarPorCodExactoRequest inValue = new GGNoTeam_V5.LoginWS.listarPorCodExactoRequest();
-            inValue.codigo = codigo;
-            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPorCodExactoAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.verificarCredencialesResponse> verificarCredencialesAsync(string arg0, string arg1) {
+            GGNoTeam_V5.LoginWS.verificarCredencialesRequest inValue = new GGNoTeam_V5.LoginWS.verificarCredencialesRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).verificarCredencialesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse GGNoTeam_V5.LoginWS.LoginWS.buscarPersonaCodigoExacto(GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest request) {
+            return base.Channel.buscarPersonaCodigoExacto(request);
+        }
+        
+        public GGNoTeam_V5.LoginWS.persona buscarPersonaCodigoExacto(string arg0) {
+            GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest inValue = new GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest();
+            inValue.arg0 = arg0;
+            GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).buscarPersonaCodigoExacto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse> GGNoTeam_V5.LoginWS.LoginWS.buscarPersonaCodigoExactoAsync(GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest request) {
+            return base.Channel.buscarPersonaCodigoExactoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse> buscarPersonaCodigoExactoAsync(string arg0) {
+            GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest inValue = new GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest();
+            inValue.arg0 = arg0;
+            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).buscarPersonaCodigoExactoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.LoginWS.listarPorCodNomResponse GGNoTeam_V5.LoginWS.LoginWS.listarPorCodNom(GGNoTeam_V5.LoginWS.listarPorCodNomRequest request) {
+            return base.Channel.listarPorCodNom(request);
+        }
+        
+        public GGNoTeam_V5.LoginWS.persona[] listarPorCodNom(string codnom) {
+            GGNoTeam_V5.LoginWS.listarPorCodNomRequest inValue = new GGNoTeam_V5.LoginWS.listarPorCodNomRequest();
+            inValue.codnom = codnom;
+            GGNoTeam_V5.LoginWS.listarPorCodNomResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPorCodNom(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodNomResponse> GGNoTeam_V5.LoginWS.LoginWS.listarPorCodNomAsync(GGNoTeam_V5.LoginWS.listarPorCodNomRequest request) {
+            return base.Channel.listarPorCodNomAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPorCodNomResponse> listarPorCodNomAsync(string codnom) {
+            GGNoTeam_V5.LoginWS.listarPorCodNomRequest inValue = new GGNoTeam_V5.LoginWS.listarPorCodNomRequest();
+            inValue.codnom = codnom;
+            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPorCodNomAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse GGNoTeam_V5.LoginWS.LoginWS.listarPersonaPorID(GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest request) {
+            return base.Channel.listarPersonaPorID(request);
+        }
+        
+        public GGNoTeam_V5.LoginWS.persona listarPersonaPorID(int idPersona) {
+            GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest inValue = new GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest();
+            inValue.idPersona = idPersona;
+            GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPersonaPorID(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse> GGNoTeam_V5.LoginWS.LoginWS.listarPersonaPorIDAsync(GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest request) {
+            return base.Channel.listarPersonaPorIDAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse> listarPersonaPorIDAsync(int idPersona) {
+            GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest inValue = new GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest();
+            inValue.idPersona = idPersona;
+            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPersonaPorIDAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1194,77 +1265,6 @@ namespace GGNoTeam_V5.LoginWS {
             GGNoTeam_V5.LoginWS.listarPorCodExacto_TareasInompletasRequest inValue = new GGNoTeam_V5.LoginWS.listarPorCodExacto_TareasInompletasRequest();
             inValue.codigo = codigo;
             return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPorCodExacto_TareasInompletasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse GGNoTeam_V5.LoginWS.LoginWS.listarPersonaPorID(GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest request) {
-            return base.Channel.listarPersonaPorID(request);
-        }
-        
-        public GGNoTeam_V5.LoginWS.persona listarPersonaPorID(int idPersona) {
-            GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest inValue = new GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest();
-            inValue.idPersona = idPersona;
-            GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPersonaPorID(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse> GGNoTeam_V5.LoginWS.LoginWS.listarPersonaPorIDAsync(GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest request) {
-            return base.Channel.listarPersonaPorIDAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.listarPersonaPorIDResponse> listarPersonaPorIDAsync(int idPersona) {
-            GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest inValue = new GGNoTeam_V5.LoginWS.listarPersonaPorIDRequest();
-            inValue.idPersona = idPersona;
-            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).listarPersonaPorIDAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse GGNoTeam_V5.LoginWS.LoginWS.buscarPersonaCodigoExacto(GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest request) {
-            return base.Channel.buscarPersonaCodigoExacto(request);
-        }
-        
-        public GGNoTeam_V5.LoginWS.persona buscarPersonaCodigoExacto(string arg0) {
-            GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest inValue = new GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest();
-            inValue.arg0 = arg0;
-            GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).buscarPersonaCodigoExacto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse> GGNoTeam_V5.LoginWS.LoginWS.buscarPersonaCodigoExactoAsync(GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest request) {
-            return base.Channel.buscarPersonaCodigoExactoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoResponse> buscarPersonaCodigoExactoAsync(string arg0) {
-            GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest inValue = new GGNoTeam_V5.LoginWS.buscarPersonaCodigoExactoRequest();
-            inValue.arg0 = arg0;
-            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).buscarPersonaCodigoExactoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.LoginWS.verificarCredencialesResponse GGNoTeam_V5.LoginWS.LoginWS.verificarCredenciales(GGNoTeam_V5.LoginWS.verificarCredencialesRequest request) {
-            return base.Channel.verificarCredenciales(request);
-        }
-        
-        public int verificarCredenciales(string arg0, string arg1) {
-            GGNoTeam_V5.LoginWS.verificarCredencialesRequest inValue = new GGNoTeam_V5.LoginWS.verificarCredencialesRequest();
-            inValue.arg0 = arg0;
-            inValue.arg1 = arg1;
-            GGNoTeam_V5.LoginWS.verificarCredencialesResponse retVal = ((GGNoTeam_V5.LoginWS.LoginWS)(this)).verificarCredenciales(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.verificarCredencialesResponse> GGNoTeam_V5.LoginWS.LoginWS.verificarCredencialesAsync(GGNoTeam_V5.LoginWS.verificarCredencialesRequest request) {
-            return base.Channel.verificarCredencialesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.LoginWS.verificarCredencialesResponse> verificarCredencialesAsync(string arg0, string arg1) {
-            GGNoTeam_V5.LoginWS.verificarCredencialesRequest inValue = new GGNoTeam_V5.LoginWS.verificarCredencialesRequest();
-            inValue.arg0 = arg0;
-            inValue.arg1 = arg1;
-            return ((GGNoTeam_V5.LoginWS.LoginWS)(this)).verificarCredencialesAsync(inValue);
         }
     }
 }

@@ -29,8 +29,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInstrumentosOriginadores = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
@@ -39,6 +39,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.comboTipo = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.btnBuscar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.txtboxbusqueda = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.btnAgregarPlantilla = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInstrumentosOriginadores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,14 +53,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.dgvInstrumentosOriginadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInstrumentosOriginadores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInstrumentosOriginadores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInstrumentosOriginadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInstrumentosOriginadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvInstrumentosOriginadores.ColumnHeadersHeight = 25;
             this.dgvInstrumentosOriginadores.EnableHeadersVisualStyles = false;
             this.dgvInstrumentosOriginadores.Location = new System.Drawing.Point(17, 61);
@@ -67,9 +68,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.dgvInstrumentosOriginadores.Name = "dgvInstrumentosOriginadores";
             this.dgvInstrumentosOriginadores.ReadOnly = true;
             this.dgvInstrumentosOriginadores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            this.dgvInstrumentosOriginadores.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkGray;
+            this.dgvInstrumentosOriginadores.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvInstrumentosOriginadores.RowTemplate.Height = 25;
             this.dgvInstrumentosOriginadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInstrumentosOriginadores.Size = new System.Drawing.Size(954, 421);
@@ -213,11 +214,34 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             this.txtboxbusqueda.Texts = "";
             this.txtboxbusqueda.UnderlinedStyle = true;
             // 
+            // btnAgregarPlantilla
+            // 
+            this.btnAgregarPlantilla.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAgregarPlantilla.FlatAppearance.BorderSize = 0;
+            this.btnAgregarPlantilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarPlantilla.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAgregarPlantilla.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarPlantilla.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.btnAgregarPlantilla.IconColor = System.Drawing.Color.White;
+            this.btnAgregarPlantilla.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAgregarPlantilla.IconSize = 32;
+            this.btnAgregarPlantilla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarPlantilla.Location = new System.Drawing.Point(17, 497);
+            this.btnAgregarPlantilla.Name = "btnAgregarPlantilla";
+            this.btnAgregarPlantilla.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnAgregarPlantilla.Size = new System.Drawing.Size(186, 38);
+            this.btnAgregarPlantilla.TabIndex = 47;
+            this.btnAgregarPlantilla.Text = "Agregar con plantilla";
+            this.btnAgregarPlantilla.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarPlantilla.UseVisualStyleBackColor = false;
+            this.btnAgregarPlantilla.Click += new System.EventHandler(this.btnAgregarPlantilla_Click);
+            // 
             // frmGestionOriginadoresInstrumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 547);
+            this.Controls.Add(this.btnAgregarPlantilla);
             this.Controls.Add(this.comboTipo);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnEliminar);
@@ -244,5 +268,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         private FontAwesome.Sharp.IconButton btnActualizar;
         private FontAwesome.Sharp.IconButton btnAgregar;
         private Recursos.UserControls.GGComboBox comboTipo;
+        private FontAwesome.Sharp.IconButton btnAgregarPlantilla;
     }
 }

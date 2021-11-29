@@ -2,7 +2,7 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservices.sist.afp.ggNoTeam/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="MonitorOrdenWS" targetNamespace="http://webservices.sist.afp.ggNoTeam/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://54.236.140.237:8080/WebServices/MonitorOrdenWS?xsd=1" namespace="http://webservices.sist.afp.ggNoTeam/" />
+      <xsd:import schemaLocation="http://localhost:8080/WebServices/MonitorOrdenWS?xsd=1" namespace="http://webservices.sist.afp.ggNoTeam/" />
     </xsd:schema>
   </types>
   <message name="eliminarOrden">
@@ -35,53 +35,11 @@
   <message name="insertarEjecucionResponse">
     <part name="parameters" element="tns:insertarEjecucionResponse" />
   </message>
-  <message name="listarTodosEjecucion">
-    <part name="parameters" element="tns:listarTodosEjecucion" />
+  <message name="listarEjecucionPorFecha">
+    <part name="parameters" element="tns:listarEjecucionPorFecha" />
   </message>
-  <message name="listarTodosEjecucionResponse">
-    <part name="parameters" element="tns:listarTodosEjecucionResponse" />
-  </message>
-  <message name="modificarEjecucion">
-    <part name="parameters" element="tns:modificarEjecucion" />
-  </message>
-  <message name="modificarEjecucionResponse">
-    <part name="parameters" element="tns:modificarEjecucionResponse" />
-  </message>
-  <message name="eliminarOperacion">
-    <part name="parameters" element="tns:eliminarOperacion" />
-  </message>
-  <message name="eliminarOperacionResponse">
-    <part name="parameters" element="tns:eliminarOperacionResponse" />
-  </message>
-  <message name="eliminarEjecucion">
-    <part name="parameters" element="tns:eliminarEjecucion" />
-  </message>
-  <message name="eliminarEjecucionResponse">
-    <part name="parameters" element="tns:eliminarEjecucionResponse" />
-  </message>
-  <message name="ListarPorFechaOperacion">
-    <part name="parameters" element="tns:ListarPorFechaOperacion" />
-  </message>
-  <message name="ListarPorFechaOperacionResponse">
-    <part name="parameters" element="tns:ListarPorFechaOperacionResponse" />
-  </message>
-  <message name="insertarOperacion">
-    <part name="parameters" element="tns:insertarOperacion" />
-  </message>
-  <message name="insertarOperacionResponse">
-    <part name="parameters" element="tns:insertarOperacionResponse" />
-  </message>
-  <message name="ListarOrdenPorFecha">
-    <part name="parameters" element="tns:ListarOrdenPorFecha" />
-  </message>
-  <message name="ListarOrdenPorFechaResponse">
-    <part name="parameters" element="tns:ListarOrdenPorFechaResponse" />
-  </message>
-  <message name="modificarOperacion">
-    <part name="parameters" element="tns:modificarOperacion" />
-  </message>
-  <message name="modificarOperacionResponse">
-    <part name="parameters" element="tns:modificarOperacionResponse" />
+  <message name="listarEjecucionPorFechaResponse">
+    <part name="parameters" element="tns:listarEjecucionPorFechaResponse" />
   </message>
   <message name="listaOperacionTodos">
     <part name="parameters" element="tns:listaOperacionTodos" />
@@ -89,11 +47,53 @@
   <message name="listaOperacionTodosResponse">
     <part name="parameters" element="tns:listaOperacionTodosResponse" />
   </message>
-  <message name="listarEjecucionPorFecha">
-    <part name="parameters" element="tns:listarEjecucionPorFecha" />
+  <message name="modificarOperacion">
+    <part name="parameters" element="tns:modificarOperacion" />
   </message>
-  <message name="listarEjecucionPorFechaResponse">
-    <part name="parameters" element="tns:listarEjecucionPorFechaResponse" />
+  <message name="modificarOperacionResponse">
+    <part name="parameters" element="tns:modificarOperacionResponse" />
+  </message>
+  <message name="modificarEjecucion">
+    <part name="parameters" element="tns:modificarEjecucion" />
+  </message>
+  <message name="modificarEjecucionResponse">
+    <part name="parameters" element="tns:modificarEjecucionResponse" />
+  </message>
+  <message name="listarTodosEjecucion">
+    <part name="parameters" element="tns:listarTodosEjecucion" />
+  </message>
+  <message name="listarTodosEjecucionResponse">
+    <part name="parameters" element="tns:listarTodosEjecucionResponse" />
+  </message>
+  <message name="ListarPorFechaOperacion">
+    <part name="parameters" element="tns:ListarPorFechaOperacion" />
+  </message>
+  <message name="ListarPorFechaOperacionResponse">
+    <part name="parameters" element="tns:ListarPorFechaOperacionResponse" />
+  </message>
+  <message name="eliminarEjecucion">
+    <part name="parameters" element="tns:eliminarEjecucion" />
+  </message>
+  <message name="eliminarEjecucionResponse">
+    <part name="parameters" element="tns:eliminarEjecucionResponse" />
+  </message>
+  <message name="eliminarOperacion">
+    <part name="parameters" element="tns:eliminarOperacion" />
+  </message>
+  <message name="eliminarOperacionResponse">
+    <part name="parameters" element="tns:eliminarOperacionResponse" />
+  </message>
+  <message name="ListarOrdenPorFecha">
+    <part name="parameters" element="tns:ListarOrdenPorFecha" />
+  </message>
+  <message name="ListarOrdenPorFechaResponse">
+    <part name="parameters" element="tns:ListarOrdenPorFechaResponse" />
+  </message>
+  <message name="insertarOperacion">
+    <part name="parameters" element="tns:insertarOperacion" />
+  </message>
+  <message name="insertarOperacionResponse">
+    <part name="parameters" element="tns:insertarOperacionResponse" />
   </message>
   <portType name="MonitorOrdenWS">
     <operation name="eliminarOrden">
@@ -116,45 +116,45 @@
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarEjecucionRequest" message="tns:insertarEjecucion" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarEjecucionResponse" message="tns:insertarEjecucionResponse" />
     </operation>
-    <operation name="listarTodosEjecucion">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionRequest" message="tns:listarTodosEjecucion" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionResponse" message="tns:listarTodosEjecucionResponse" />
-    </operation>
-    <operation name="modificarEjecucion">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionRequest" message="tns:modificarEjecucion" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionResponse" message="tns:modificarEjecucionResponse" />
-    </operation>
-    <operation name="eliminarOperacion">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionRequest" message="tns:eliminarOperacion" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionResponse" message="tns:eliminarOperacionResponse" />
-    </operation>
-    <operation name="eliminarEjecucion">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionRequest" message="tns:eliminarEjecucion" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionResponse" message="tns:eliminarEjecucionResponse" />
-    </operation>
-    <operation name="ListarPorFechaOperacion">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarPorFechaOperacionRequest" message="tns:ListarPorFechaOperacion" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarPorFechaOperacionResponse" message="tns:ListarPorFechaOperacionResponse" />
-    </operation>
-    <operation name="insertarOperacion">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionRequest" message="tns:insertarOperacion" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionResponse" message="tns:insertarOperacionResponse" />
-    </operation>
-    <operation name="ListarOrdenPorFecha">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarOrdenPorFechaRequest" message="tns:ListarOrdenPorFecha" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarOrdenPorFechaResponse" message="tns:ListarOrdenPorFechaResponse" />
-    </operation>
-    <operation name="modificarOperacion">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarOperacionRequest" message="tns:modificarOperacion" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarOperacionResponse" message="tns:modificarOperacionResponse" />
+    <operation name="listarEjecucionPorFecha">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarEjecucionPorFechaRequest" message="tns:listarEjecucionPorFecha" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarEjecucionPorFechaResponse" message="tns:listarEjecucionPorFechaResponse" />
     </operation>
     <operation name="listaOperacionTodos">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosRequest" message="tns:listaOperacionTodos" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosResponse" message="tns:listaOperacionTodosResponse" />
     </operation>
-    <operation name="listarEjecucionPorFecha">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarEjecucionPorFechaRequest" message="tns:listarEjecucionPorFecha" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarEjecucionPorFechaResponse" message="tns:listarEjecucionPorFechaResponse" />
+    <operation name="modificarOperacion">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarOperacionRequest" message="tns:modificarOperacion" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarOperacionResponse" message="tns:modificarOperacionResponse" />
+    </operation>
+    <operation name="modificarEjecucion">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionRequest" message="tns:modificarEjecucion" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionResponse" message="tns:modificarEjecucionResponse" />
+    </operation>
+    <operation name="listarTodosEjecucion">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionRequest" message="tns:listarTodosEjecucion" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionResponse" message="tns:listarTodosEjecucionResponse" />
+    </operation>
+    <operation name="ListarPorFechaOperacion">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarPorFechaOperacionRequest" message="tns:ListarPorFechaOperacion" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarPorFechaOperacionResponse" message="tns:ListarPorFechaOperacionResponse" />
+    </operation>
+    <operation name="eliminarEjecucion">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionRequest" message="tns:eliminarEjecucion" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionResponse" message="tns:eliminarEjecucionResponse" />
+    </operation>
+    <operation name="eliminarOperacion">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionRequest" message="tns:eliminarOperacion" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionResponse" message="tns:eliminarOperacionResponse" />
+    </operation>
+    <operation name="ListarOrdenPorFecha">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarOrdenPorFechaRequest" message="tns:ListarOrdenPorFecha" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarOrdenPorFechaResponse" message="tns:ListarOrdenPorFechaResponse" />
+    </operation>
+    <operation name="insertarOperacion">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionRequest" message="tns:insertarOperacion" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionResponse" message="tns:insertarOperacionResponse" />
     </operation>
   </portType>
   <binding name="MonitorOrdenWSPortBinding" type="tns:MonitorOrdenWS">
@@ -204,70 +204,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosEjecucion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarEjecucion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarOperacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarEjecucion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarPorFechaOperacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarOperacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarOrdenPorFecha">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarOperacion">
+    <operation name="listarEjecucionPorFecha">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -285,7 +222,70 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarEjecucionPorFecha">
+    <operation name="modificarOperacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEjecucion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosEjecucion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarPorFechaOperacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEjecucion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarOperacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarOrdenPorFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarOperacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -297,7 +297,7 @@
   </binding>
   <service name="MonitorOrdenWS">
     <port name="MonitorOrdenWSPort" binding="tns:MonitorOrdenWSPortBinding">
-      <soap:address location="http://54.236.140.237:8080/WebServices/MonitorOrdenWS" />
+      <soap:address location="http://localhost:8080/WebServices/MonitorOrdenWS" />
     </port>
   </service>
 </definitions>

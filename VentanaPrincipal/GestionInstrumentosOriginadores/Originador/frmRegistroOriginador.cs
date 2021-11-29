@@ -43,6 +43,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             lblNombreEmisor.Text = emi.nombre;
         }
 
+        public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig,int i)
+        {
+            InitializeComponent();
+            oriAux = new GestionInstrumentosOriginadoresWS.originador();
+            //oriAux.idOriginador = orig.idOriginador;
+            lblRegistroOriginador.Text = "Registro originador";
+            boxCodigoOriginador.Texts = orig.codigoOriginador;
+            boxNombreOriginador.Texts = orig.nombreOriginador;
+            boxSector.Texts = orig.sectorGics;
+            _daoOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
+            emi = _daoOrig.BuscarUnEmisorPorID(orig.fidEmisor);
+            boxEmisor.Texts = emi.codigoEmisor;
+            codigoAnt = boxEmisor.Texts;
+            lblNombreEmisor.Text = emi.nombre;
+        }
+
         public void cargarEmisor(GestionInstrumentosOriginadoresWS.emisor emiAux)
         {
             emi.idEmisor = emiAux.idEmisor;
