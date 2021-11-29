@@ -83,15 +83,10 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Cursor = Cursors.WaitCursor;
             dgvPersonas.comenzarHilo();
             LoginWS.persona[] usuarios = _daoListar.listarUsuarios();
-            if (usuarios != null)
-            {
-                lista = usuarios;
-                colocarEnDGV(usuarios);
-            }
-            else
-            {
-                dgvPersonas.DataSource = null;
-            }
+
+            lista = usuarios;
+            colocarEnDGV(usuarios);
+
             Global.pintarDGV(ref dgvPersonas, btnListarUsuarios.BackColor);
             this.Cursor = Cursors.Default;
         }
@@ -101,15 +96,10 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Cursor = Cursors.WaitCursor;
             dgvPersonas.comenzarHilo();
             LoginWS.persona[] administradores = _daoListar.listarAdministradores();
-            if (administradores != null)
-            {
-                lista = administradores;
-                colocarEnDGV(administradores);
-            }
-            else
-            {
-                dgvPersonas.DataSource = null;
-            }
+
+            lista = administradores;
+            colocarEnDGV(administradores);
+
             Global.pintarDGV(ref dgvPersonas, btnListarAdministradores.BackColor);
             this.Cursor = Cursors.Default;
         }
@@ -124,15 +114,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Cursor = Cursors.WaitCursor;
             dgvPersonas.comenzarHilo();
             LoginWS.persona[] noUsuarios = _daoListar.listarNoUsuarios();
-            if (noUsuarios != null)
-            {
-                lista = noUsuarios;
-                colocarEnDGV(noUsuarios);
-            }
-            else
-            {
-                dgvPersonas.DataSource = null;
-            }
+            lista = noUsuarios;
+            colocarEnDGV(noUsuarios);
             Global.pintarDGV(ref dgvPersonas, btnListarPersonas.BackColor);
             this.Cursor = Cursors.Default;
         }
@@ -225,20 +208,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             }
         }
 
-        private void txtBoxBusqueda_Enter(object sender, EventArgs e)
-        {
-            txtBoxBusqueda.Texts = "";
-        }
 
-        private void txtBoxBusqueda_Leave(object sender, EventArgs e)
-        {
-            //txtBoxBusqueda.Texts = "Ingrese el nombre o el código del usuario:";
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void dgvPersonas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

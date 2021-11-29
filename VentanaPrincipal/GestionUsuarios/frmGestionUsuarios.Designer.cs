@@ -334,8 +334,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 15);
             this.label1.TabIndex = 30;
-            this.label1.Text = "Ingrese el código o nombre:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Ingrese el código o nombre:";            
             // 
             // btnBuscar
             // 
@@ -378,8 +377,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.txtBoxBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBoxBusqueda.Texts = "";
             this.txtBoxBusqueda.UnderlinedStyle = true;
-            this.txtBoxBusqueda.Enter += new System.EventHandler(this.txtBoxBusqueda_Enter);
-            this.txtBoxBusqueda.Leave += new System.EventHandler(this.txtBoxBusqueda_Leave);
             // 
             // frmGestionUsuarios
             // 

@@ -76,7 +76,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             }
             else
             {
-                dgvDataValorCuota.DataSource = null;
+                dgvDataValorCuota.setDataSource1(null);
                 boxAlpha_1.Texts = "";
                 boxAlpha_2.Texts = "";
                 boxAlpha_3.Texts = "";

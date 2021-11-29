@@ -76,8 +76,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
 
         private void cargarTrackingError()
         {
-            TrackingErrorWS.trackingError[] te;            
-
+            TrackingErrorWS.trackingError[] te;
             te = _dao.ListarTrackingError(dateInicial.Value.ToString("yyyy-MM-dd"));
 
             if (te != null)
@@ -111,13 +110,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             this.Cursor = Cursors.WaitCursor;
             dgvAssetError.comenzarHilo();
             datos = _dao.ListarAssetErrorXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
-            if (datos != null)
-            {
-                dgvAssetError.setDataSource1(datos);
-            } else
-            {
-                dgvAssetError.DataSource = null;
-            }
+
+            dgvAssetError.setDataSource1(datos);
+
             this.Cursor = Cursors.Default;
         }
 
@@ -175,7 +170,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
                                     outputCsv[i] += dgvAssetError.Rows[i - 1].Cells[j].Value.ToString() + ",";
                                 }
                             }
-                            outputCsv[dgvAssetError.Rows.Count-1] = "Fondo 1,Fondo 2,Fondo 3,";
+                            outputCsv[dgvAssetError.Rows.Count - 1] = "Fondo 1,Fondo 2,Fondo 3,";
                             outputCsv[dgvAssetError.Rows.Count] = boxFondo_1.Texts + "," + boxFondo_2.Texts + "," + boxFondo_3.Texts + ",";
 
                             File.WriteAllLines(sfd.FileName, outputCsv, Encoding.UTF8);

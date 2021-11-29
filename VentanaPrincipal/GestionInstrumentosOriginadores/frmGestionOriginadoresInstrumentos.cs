@@ -66,7 +66,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
         private void cargarComboBoxEleccion()
         {
-            
+
             comboTipo.Items.Add("Instrumento");
             comboTipo.Items.Add("Originador");
             comboTipo.Items.Add("Emisor");
@@ -88,7 +88,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                     dgvInstrumentosOriginadores.setDataSource1(new BindingList<GestionInstrumentosOriginadoresWS.originador>(originadores.ToList()));
                     cargarNombresEmis();
                 }
-                else MessageBox.Show("No se encontraron resultados");
+                else
+                {
+                    dgvInstrumentosOriginadores.setDataSource1(null);
+                    MessageBox.Show("No se encontraron resultados");
+                }
             }
             else if (comboTipo.SelectedItem.ToString() == "Instrumento")
             {
@@ -101,7 +105,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                     cargarNombresOrig();
 
                 }
-                else MessageBox.Show("No se encontraron resultados");
+                else
+                {
+                    dgvInstrumentosOriginadores.setDataSource1(null);
+                    MessageBox.Show("No se encontraron resultados");
+                }
+
 
             }
             else if (comboTipo.SelectedItem.ToString() == "Emisor")
@@ -111,10 +120,14 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                 actualizarBotones();
                 if (emisores != null)
                 {
-                    dgvInstrumentosOriginadores.setDataSource1(new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList())) ;
+                    dgvInstrumentosOriginadores.setDataSource1(new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList()));
 
                 }
-                else MessageBox.Show("No se encontraron resultados");
+                else
+                {
+                    dgvInstrumentosOriginadores.setDataSource1(null);
+                    MessageBox.Show("No se encontraron resultados");
+                }
             }
             this.Cursor = Cursors.Default;
         }
@@ -125,7 +138,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             {
                 btnEliminar.Enabled = true;
 
-            }else
+            }
+            else
             {
                 btnEliminar.Enabled = false;
             }
@@ -222,7 +236,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
             {
                 MessageBox.Show("No se ha seleccionado ninguna fila");
             }
-            this.btnBuscar_Click(sender,e);
+            this.btnBuscar_Click(sender, e);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -385,7 +399,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                         {
                             if (dgvInstrumentosOriginadores.CurrentRow != null)
                             {
-                                frmRegistroOriginador registrarOrig = new frmRegistroOriginador(originadores[dgvInstrumentosOriginadores.CurrentRow.Index],1);
+                                frmRegistroOriginador registrarOrig = new frmRegistroOriginador(originadores[dgvInstrumentosOriginadores.CurrentRow.Index], 1);
                                 registrarOrig.ShowDialog();
                             }
 
@@ -396,7 +410,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                         {
                             if (dgvInstrumentosOriginadores.CurrentRow != null)
                             {
-                                frmRegistroInstrumento registrarinst = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index],1);
+                                frmRegistroInstrumento registrarinst = new frmRegistroInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index], 1);
                                 registrarinst.ShowDialog();
                             }
 

@@ -159,13 +159,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             valido = ValidarTextBox.correo(boxCorreo, "El correo", 45);
             if (valido != 0) return;            
             valido = ValidarTextBox.cadenaGrande(boxContraseña, "La contraseña", 15);
-            if (valido != 0) return;
-            valido = (boxContraseña.Texts.Contains("#")) ? 1 : 0;
-            if(valido != 0)
-            {
-                MessageBox.Show("La contraseña no puede utilizar el caracter #");
-                return;
-            }
+            if (valido != 0) return;            
             valido = ValidarTextBox.cadenaGrande(boxCodigoValidacion, "El código de validación", 4);
             if (valido != 0) return;
 
@@ -189,7 +183,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             else
             {
                 cargarDatos();
-                _daoCliente.modificarPersona(persona);
+                validez = _daoCliente.modificarPersona(persona);
+                if(validez == 1)
+                {
+                    MessageBox.Show("Se ha modificado correctamente al usuario seleccionado.");
+                } else
+                {
+                    MessageBox.Show("Hubo un error al modificar al usuario. Intente nuevamente.");
+                }
+                
             }
 
             this.Dispose();

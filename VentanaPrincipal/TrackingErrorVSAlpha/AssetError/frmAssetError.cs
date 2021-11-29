@@ -70,13 +70,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             this.Cursor = Cursors.WaitCursor;
             dgvAssetError.comenzarHilo();
             listaAsset = _daoTE.ListarPorFechaPorFondoAssetError(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
-            if (listaAsset != null)
-            {
-                dgvAssetError.setDataSource1(listaAsset);
-            }else
-            {
-                dgvAssetError.DataSource = null;
-            }
+
+            dgvAssetError.setDataSource1(listaAsset);
+
             this.Cursor = Cursors.Default;
         }
 
@@ -127,7 +123,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             dgvAssetError.Rows[e.RowIndex].Cells[1].Value = comboFondo.SelectedItem.ToString();
             dgvAssetError.Rows[e.RowIndex].Cells[2].Value = dvc.nombre;
             dgvAssetError.Rows[e.RowIndex].Cells[3].Value = dvc.wgtP;
-            dgvAssetError.Rows[e.RowIndex].Cells[4].Value = dvc.totalRiskD;            
+            dgvAssetError.Rows[e.RowIndex].Cells[4].Value = dvc.totalRiskD;
         }
     }
 }
