@@ -76,6 +76,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+            dgvInstrumentosOriginadores.comenzarHilo();
             dgvInstrumentosOriginadores.DataSource = null;
             if (comboTipo.SelectedItem.ToString() == "Originador")
             {

@@ -28,12 +28,14 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
             return dataSource1;
         }
 
-        public void setDataSource1(object lista)
+        public void comenzarHilo()
         {
+            //MessageBox.Show("HOLA");
             //BUGFIX ======> if one of the threads is running stop the execution
             if (AnimationThread.IsBusy || DataThread.IsBusy) return;
 
             //set the flagging that the loading cursor will show
+            //ShowLoadingCursor = true;
             ShowLoadingCursor = true;
 
             //get the grid's content and save it to a Bitmap
@@ -42,6 +44,10 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
             //start the animation of cursor
             AnimationThread.RunWorkerAsync();
 
+        }
+
+        public void setDataSource1(object lista)
+        {            
             dataSource1 = lista;
             DataSource = lista;
 
@@ -84,7 +90,7 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
 
         private void DataThread_DoWork(object sender, DoWorkEventArgs e)
         {
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             /*Invoke(new Action(() =>
             {
                 DataSource = (object)e.Argument;
@@ -188,27 +194,7 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
 
             base.OnPaint(e);
         }
-
-
-
-        //public method to execute everything
-        public void LoadData(string connectionString, string commandText, bool autoGenerateColumns)
-        {
-            //BUGFIX ======> if one of the threads is running stop the execution
-            if (AnimationThread.IsBusy || DataThread.IsBusy) return;
-
-            //set the flagging that the loading cursor will show
-            ShowLoadingCursor = true;
-
-            //get the grid's content and save it to a Bitmap
-            GetGridBodyAndSaveToImage();
-
-            //start the animation of cursor
-            AnimationThread.RunWorkerAsync();
-
-            //load the data
-
-        }
+        
     }
 }
 

@@ -119,6 +119,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private void btnConsultarTareas_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+            dgvTareasPendientes.comenzarHilo();
             dgvTareasPendientes.DataSource = null;
             switch (comboEstadoTarea.SelectedItem.ToString())
             {
@@ -126,7 +127,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                     {
                         actualizarBotones();
                         tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(0, user.itinerario.idItineraio);
-
                         break;
                     }
                 case "Completadas":

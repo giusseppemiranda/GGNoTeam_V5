@@ -92,7 +92,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa
             this.graficoTE.ChartAreas.Add(chartArea2);
             legend2.DockedToChartArea = "ChartArea1";
             legend2.Name = "Legend1";
-            legend2.Title = "asdfasdf";
             this.graficoTE.Legends.Add(legend2);
             this.graficoTE.Location = new System.Drawing.Point(0, 0);
             this.graficoTE.Name = "graficoTE";

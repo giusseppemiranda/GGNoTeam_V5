@@ -63,6 +63,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+            dgvDataValorCuota.comenzarHilo();
             datos = _dao.listarDataValorCuotaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
             listaAlphas = _dao.listarAlphaXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
             if (datos != null)
@@ -79,6 +81,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
                 boxAlpha_2.Texts = "";
                 boxAlpha_3.Texts = "";
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void btnExportar_Click(object sender, EventArgs e)

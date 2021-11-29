@@ -258,6 +258,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void btnConsultarTareas_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+            dgvTareasPendientes.comenzarHilo();
             dgvTareasPendientes.DataSource = null;
             switch(comboEstadoTarea.SelectedItem.ToString()){
                 case "Pendientes":

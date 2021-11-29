@@ -67,6 +67,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
 
         private void btnConsultarRegistros_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+            dgvAssetError.comenzarHilo();
             listaAsset = _daoTE.ListarPorFechaPorFondoAssetError(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
             if (listaAsset != null)
             {
@@ -75,7 +77,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError
             {
                 dgvAssetError.DataSource = null;
             }
-            
+            this.Cursor = Cursors.Default;
         }
 
         private void btnAgregarRegistros_Click(object sender, EventArgs e)

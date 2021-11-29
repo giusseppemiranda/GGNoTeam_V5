@@ -79,7 +79,9 @@ namespace GGNoTeam_V5.VentanaPrincipal
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
-        {                        
+        {
+            this.Cursor = Cursors.WaitCursor;
+            dgvPersonas.comenzarHilo();
             LoginWS.persona[] usuarios = _daoListar.listarUsuarios();
             if (usuarios != null)
             {
@@ -91,10 +93,13 @@ namespace GGNoTeam_V5.VentanaPrincipal
                 dgvPersonas.DataSource = null;
             }
             Global.pintarDGV(ref dgvPersonas, btnListarUsuarios.BackColor);
+            this.Cursor = Cursors.Default;
         }
 
         private void btnAdministradores_Click(object sender, EventArgs e)
-        {                   
+        {
+            this.Cursor = Cursors.WaitCursor;
+            dgvPersonas.comenzarHilo();
             LoginWS.persona[] administradores = _daoListar.listarAdministradores();
             if (administradores != null)
             {
@@ -106,6 +111,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
                 dgvPersonas.DataSource = null;
             }
             Global.pintarDGV(ref dgvPersonas, btnListarAdministradores.BackColor);
+            this.Cursor = Cursors.Default;
         }
 
         private void colocarEnDGV(LoginWS.persona[] lista)
@@ -114,7 +120,9 @@ namespace GGNoTeam_V5.VentanaPrincipal
         }
 
         private void btnPersona_Click(object sender, EventArgs e)
-        {                     
+        {
+            this.Cursor = Cursors.WaitCursor;
+            dgvPersonas.comenzarHilo();
             LoginWS.persona[] noUsuarios = _daoListar.listarNoUsuarios();
             if (noUsuarios != null)
             {
@@ -126,27 +134,30 @@ namespace GGNoTeam_V5.VentanaPrincipal
                 dgvPersonas.DataSource = null;
             }
             Global.pintarDGV(ref dgvPersonas, btnListarPersonas.BackColor);
+            this.Cursor = Cursors.Default;
         }
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
             int resultadoEliminacion = -1;
-            if(dgvPersonas.CurrentRow != null)
+            if (dgvPersonas.CurrentRow != null)
             {
-                
-                var result = MessageBox.Show("¿Está seguro que desea eliminar a la persona?","Eliminar persona", MessageBoxButtons.OKCancel);
-                if(result == DialogResult.OK)
+
+                var result = MessageBox.Show("¿Está seguro que desea eliminar a la persona?", "Eliminar persona", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
                 {
                     resultadoEliminacion = _daoListar.eliminarPersona(lista[dgvPersonas.CurrentRow.Index].idPersona, lista[dgvPersonas.CurrentRow.Index].itinerario.idItineraio);
-                    if(resultadoEliminacion == 1)
+                    if (resultadoEliminacion == 1)
                     {
                         MessageBox.Show("Se ha eliminado correctamente al usuario");
                         this.btnPersona_Click(sender, e);
-                    } else
+                    }
+                    else
                     {
                         MessageBox.Show("Hubo un error al eliminar al usuario");
                     }
-                } else if (result == DialogResult.Cancel)
+                }
+                else if (result == DialogResult.Cancel)
                 {
                     return;
                 }
@@ -189,27 +200,27 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (txtBoxBusqueda.Texts != "Ingrese el nombre o el código del usuario:")
+            this.Cursor = Cursors.WaitCursor;
+            dgvPersonas.comenzarHilo();
+            Global.pintarDGV(ref dgvPersonas, Color.SlateBlue);
+            lista = _daoListar.listarPorCodNom(txtBoxBusqueda.Texts);
+            if (lista != null)
             {
-                Global.pintarDGV(ref dgvPersonas, Color.SlateBlue);                
-                lista = _daoListar.listarPorCodNom(txtBoxBusqueda.Texts);
-                if (lista != null)
-                {
 
-                    colocarEnDGV(lista);
-                }
-                else
-                {
-
-                }
+                colocarEnDGV(lista);
             }
+            else
+            {
+
+            }
+            this.Cursor = Cursors.Default;
         }
 
         private void btnVerTareas_Click(object sender, EventArgs e)
         {
             if (dgvPersonas.CurrentRow != null)
             {
-                frmTareasPendientes tareas = new frmTareasPendientes(lista[dgvPersonas.CurrentRow.Index],usuario);
+                frmTareasPendientes tareas = new frmTareasPendientes(lista[dgvPersonas.CurrentRow.Index], usuario);
                 tareas.ShowDialog();
             }
         }

@@ -108,6 +108,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
 
         private void cargarDGV()
         {
+            this.Cursor = Cursors.WaitCursor;
+            dgvAssetError.comenzarHilo();
             datos = _dao.ListarAssetErrorXFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
             if (datos != null)
             {
@@ -116,6 +118,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             {
                 dgvAssetError.DataSource = null;
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void dgvAssetError_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
