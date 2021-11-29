@@ -397,8 +397,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.Controls.Add(this.btnListarPersonas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionUsuarios";
-            this.Text = "frmUsuarios";
-            this.Load += new System.EventHandler(this.frmUsuarios_Load);
+            this.Text = "frmUsuarios";            
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -130,8 +130,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            ventanaPadre.activarBotones();
+        {            
             this.Dispose();
         }
 
@@ -162,9 +161,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             if (valido != 0) return;            
             valido = ValidarTextBox.cadenaGrande(boxCodigoValidacion, "El código de validación", 4);
             if (valido != 0) return;
-
-            //MessageBox.Show("Paso validación");
-            ventanaPadre.activarBotones();
+            
 
             int validez = -1;
 

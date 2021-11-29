@@ -24,27 +24,14 @@ namespace GGNoTeam_V5.VentanaPrincipal
         public frmGestionUsuarios(frmPrincipal ventana, LoginWS.persona persona)
         {
             InitializeComponent();
-            iniciarTema();
             _daoListar = new LoginWS.LoginWSClient();
             dgvPersonas.AutoGenerateColumns = false;
             usuario = persona;
             ventanaPadre = ventana;
             ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+
+            cambiarTema();
             Global.pintarDGV(ref dgvPersonas, btnListarPersonas.BackColor);
-            //dataEjemplo();
-        }
-
-
-        private void iniciarTema()
-        {
-            if (Global.TemaOscuro)
-            {
-                activarTemaClaro();
-            }
-            else
-            {
-                activarTemaOscuro();
-            }
         }
 
         public void cambiarTema()
@@ -73,35 +60,50 @@ namespace GGNoTeam_V5.VentanaPrincipal
             Global.pintarBtnClaro(ref btnBuscar);
         }
 
-        private void frmUsuarios_Load(object sender, EventArgs e)
-        {
 
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+            preQuery();
+            LoginWS.persona[] noUsuarios = _daoListar.listarNoUsuarios();
+            lista = noUsuarios;
+            colocarEnDGV(noUsuarios);
+            Global.pintarDGV(ref dgvPersonas, btnListarPersonas.BackColor);
+            postQuery();
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.WaitCursor;
-            dgvPersonas.comenzarHilo();
+            preQuery();
+
             LoginWS.persona[] usuarios = _daoListar.listarUsuarios();
-
             lista = usuarios;
-            colocarEnDGV(usuarios);
 
+            colocarEnDGV(usuarios);
             Global.pintarDGV(ref dgvPersonas, btnListarUsuarios.BackColor);
-            this.Cursor = Cursors.Default;
+            postQuery();
         }
 
         private void btnAdministradores_Click(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.WaitCursor;
-            dgvPersonas.comenzarHilo();
+            preQuery();
+
             LoginWS.persona[] administradores = _daoListar.listarAdministradores();
-
             lista = administradores;
-            colocarEnDGV(administradores);
 
+            colocarEnDGV(administradores);
             Global.pintarDGV(ref dgvPersonas, btnListarAdministradores.BackColor);
-            this.Cursor = Cursors.Default;
+            postQuery();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            preQuery();
+            Global.pintarDGV(ref dgvPersonas, Color.SlateBlue);
+            lista = _daoListar.listarPorCodNom(txtBoxBusqueda.Texts);
+
+            colocarEnDGV(lista);
+            Global.pintarDGV(ref dgvPersonas, Color.DarkCyan);
+            postQuery();
         }
 
         private void colocarEnDGV(LoginWS.persona[] lista)
@@ -109,16 +111,47 @@ namespace GGNoTeam_V5.VentanaPrincipal
             dgvPersonas.setDataSource1(lista);
         }
 
-        private void btnPersona_Click(object sender, EventArgs e)
+        public void preQuery()
         {
             this.Cursor = Cursors.WaitCursor;
             dgvPersonas.comenzarHilo();
-            LoginWS.persona[] noUsuarios = _daoListar.listarNoUsuarios();
-            lista = noUsuarios;
-            colocarEnDGV(noUsuarios);
-            Global.pintarDGV(ref dgvPersonas, btnListarPersonas.BackColor);
+            disableButtons();
+        }
+
+        public void postQuery()
+        {
+            enableButtons();
             this.Cursor = Cursors.Default;
         }
+
+
+
+        public void disableButtons()
+        {
+
+            btnActualizarUsuario.Enabled = false;
+            btnAgregarUsuario.Enabled = false;
+            btnBuscar.Enabled = false;
+            btnEliminarUsuario.Enabled = false;
+            btnListarAdministradores.Enabled = false;
+            btnListarPersonas.Enabled = false;
+            btnListarUsuarios.Enabled = false;
+            btnVerTareas.Enabled = false;
+        }
+
+        public void enableButtons()
+        {
+            btnActualizarUsuario.Enabled = true;
+            btnAgregarUsuario.Enabled = true;
+            btnBuscar.Enabled = true;
+            btnEliminarUsuario.Enabled = true;
+            btnListarAdministradores.Enabled = true;
+            btnListarPersonas.Enabled = true;
+            btnListarUsuarios.Enabled = true;
+            btnVerTareas.Enabled = true;
+        }
+
+
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
@@ -145,18 +178,14 @@ namespace GGNoTeam_V5.VentanaPrincipal
                     return;
                 }
             }
-
-
         }
-
-
 
         private void btnActualizarUsuario_Click(object sender, EventArgs e)
         {
             if (dgvPersonas.CurrentRow != null)
             {
                 dgvColorActivo = dgvPersonas.GridColor;
-                desactivarBotones();
+                //desactivarBotones();
 
                 frmEditarUsuario editarUsuarios = new frmEditarUsuario(lista[dgvPersonas.CurrentRow.Index], btnActualizarUsuario.BackColor, this);
                 editarUsuarios.ShowDialog();
@@ -166,38 +195,22 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
             dgvColorActivo = dgvPersonas.GridColor;
-            desactivarBotones();
+            //desactivarBotones();
             frmEditarUsuario crearUsuario = new frmEditarUsuario(btnAgregarUsuario.BackColor, this);
             crearUsuario.ShowDialog();
         }
 
-        public void desactivarBotones()
-        {
-            Global.pintarDGV(ref dgvPersonas, Color.Black);
-        }
+        //public void desactivarBotones()
+        //{
+        //    Global.pintarDGV(ref dgvPersonas, Color.Black);
+        //}
 
-        public void activarBotones()
-        {
-            Global.pintarDGV(ref dgvPersonas, dgvColorActivo);
-        }
+        //public void activarBotones()
+        //{
+        //    Global.pintarDGV(ref dgvPersonas, dgvColorActivo);
+        //}
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            this.Cursor = Cursors.WaitCursor;
-            dgvPersonas.comenzarHilo();
-            Global.pintarDGV(ref dgvPersonas, Color.SlateBlue);
-            lista = _daoListar.listarPorCodNom(txtBoxBusqueda.Texts);
-            if (lista != null)
-            {
 
-                colocarEnDGV(lista);
-            }
-            else
-            {
-
-            }
-            this.Cursor = Cursors.Default;
-        }
 
         private void btnVerTareas_Click(object sender, EventArgs e)
         {
