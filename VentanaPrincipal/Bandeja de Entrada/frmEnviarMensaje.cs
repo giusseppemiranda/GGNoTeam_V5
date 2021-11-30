@@ -109,7 +109,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
         private void btnDeleteMessage_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = "";
-            txtBoxAsunto.Texts = "";
+            txtBoxAsunto.Texts = "Asunto";
         }
 
         private void btnAdjuntarArchivo_Click(object sender, EventArgs e)

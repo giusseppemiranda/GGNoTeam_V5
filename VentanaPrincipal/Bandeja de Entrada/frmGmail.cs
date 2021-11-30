@@ -5,6 +5,8 @@ using GGNoTeam_V5.Recursos.sendMail;
 using AE.Net.Mail;
 using System.Collections.Generic;
 using System.Linq;
+using SautinSoft;
+using System.Text.RegularExpressions;
 
 namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
 {
@@ -42,10 +44,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
             lblNumeroMensaje.Text = pagina; 
             msgFrom.Text = msg.From.ToString();
             msgAsunto.Text = msg.Subject;
-            msgDate.Text = msg.Date.ToString("R");
-            msgCuerpo.Text = msg.Body;
+            msgDate.Text = msg.Date.ToString("dd - MM - yyyy");
+            obtenerBody(msg);
         }
 
+        private void obtenerBody(MailMessage msg)
+        {/*
+            HtmlToRtf h = new SautinSoft.HtmlToRtf();
+
+            h.PageStyle.PageNumbers.Format = "Página {page} de {numpages}";
+            h.PageStyle.PageNumbers.AlignH = SautinSoft.HtmlToRtf.eAlign.Center;
+            h.PageStyle.PageNumbers.AlignV = SautinSoft.HtmlToRtf.eAlign.Bottom;
+
+            if (h.OpenHtml(msg.Body))
+            {
+                richTextBox1.Rtf = h.ToRtf();
+            };
+           */
+
+            richTextBox1.Text = msg.Body;
+        }
 
         public void cambiarTema()
         {
@@ -64,8 +82,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
             this.BackColor = Global.FrmOscuro;
             btnNext.IconColor = Color.WhiteSmoke;
             btnBefore.IconColor = Color.WhiteSmoke;
-            pintarLabelOscuro(msgAsunto);
-            pintarLabelOscuro(msgCuerpo);
+            pintarLabelOscuro(msgAsunto);            
             pintarLabelOscuro(msgDate);
             pintarLabelOscuro(msgFrom);
         }
@@ -75,8 +92,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
             this.BackColor = Global.FrmClaro;
             btnNext.IconColor = Color.Black;
             btnBefore.IconColor = Color.Black;
-            pintarLabelClaro(msgAsunto);
-            pintarLabelClaro(msgCuerpo);
+            pintarLabelClaro(msgAsunto);            
             pintarLabelClaro(msgDate);
             pintarLabelClaro(msgFrom);
         }

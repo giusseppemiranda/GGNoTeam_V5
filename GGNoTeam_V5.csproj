@@ -67,6 +67,9 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="SautinSoft.HtmlToRtf, Version=8.1.6.7, Culture=neutral, PublicKeyToken=bce916f184012969, processorArchitecture=MSIL">
+      <HintPath>packages\sautinsoft.htmltortf.8.1.6.7\lib\net48\SautinSoft.HtmlToRtf.dll</HintPath>
+    </Reference>
     <Reference Include="SautinSoft.RtfToHtml, Version=7.6.6.17, Culture=neutral, PublicKeyToken=c666a5e96a3d5457, processorArchitecture=MSIL">
       <HintPath>packages\sautinsoft.rtftohtml.7.6.6.17\lib\net48\SautinSoft.RtfToHtml.dll</HintPath>
     </Reference>
