@@ -168,6 +168,12 @@ namespace GGNoTeam_V5.VentanaPrincipal
                     resultadoEliminacion = _daoListar.eliminarPersona(lista[dgvPersonas.CurrentRow.Index].idPersona, lista[dgvPersonas.CurrentRow.Index].itinerario.idItineraio);
                     if (resultadoEliminacion == 1)
                     {
+                        Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                        Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                        Program.acccionGlobal.idObjeto = lista[dgvPersonas.CurrentRow.Index].idPersona;
+                        Program.acccionGlobal.tablaReferenciada = "Persona";
+                        Program.acccionGlobal.tipoAccion = "Eliminar";
+                        Program._daoAcciones.insertarAccion(Program.acccionGlobal);
                         MessageBox.Show("Se ha eliminado correctamente al usuario");
                         this.btnPersona_Click(sender, e);
                     }

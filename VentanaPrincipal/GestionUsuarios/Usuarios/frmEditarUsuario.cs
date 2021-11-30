@@ -170,7 +170,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
                 cargarDatos_2();
                 validez = _daoCliente.insertarPersona(persona);
                 if (validez > 0)
-                {
+                {   
                     Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
                     Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
                     Program.acccionGlobal.idObjeto = validez;
