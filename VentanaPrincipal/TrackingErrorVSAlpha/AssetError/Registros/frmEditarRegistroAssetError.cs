@@ -109,40 +109,57 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            if (insertarAssetError)
+            if (insertarAssetError) casoInsertar();
+            else casoModificar();                        
+        }
+
+        private void casoModificar()
+        {
+            if (cargarDatos())
             {
-                AssetError = new TrackingErrorWS.assetError();
-                if (cargarDatos())
+                int i = _daoTE.modificarAssetError(AssetError, AssetError.fidFondo);
+                if (i == 0)
                 {
-                    int i = _daoTE.insertarAssetError(AssetError, AssetError.fidFondo);
-                    if(i == 1)
-                    {
-                        MessageBox.Show("La inserción fue realizada con éxito.");
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Hubo un error al insertar.");
-                    }
-                    
+                    MessageBox.Show("Se ha realizado correctamente la modificación del Asset Error");
+                    this.Dispose();
                 }
-            } else
+                else
+                {
+                    MessageBox.Show("Hubo un error al modificar.");
+                }
+
+            }
+        }
+
+        private void casoInsertar()
+        {
+            int i = -1;
+            AssetError = new TrackingErrorWS.assetError();
+            if (cargarDatos())
             {
-                if (cargarDatos())
+                i = _daoTE.insertarAssetError(AssetError, AssetError.fidFondo);
+                if (i != 0)
                 {
-                    int i = _daoTE.modificarAssetError(AssetError, AssetError.fidFondo);
-                    if(i == 0)
-                    {
-                        MessageBox.Show("Se ha realizado correctamente la modificación del Asset Error");
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Hubo un error al modificar.");
-                    }
-                    
+                    MessageBox.Show("La inserción fue realizada con éxito.");
+                    CargarLogInsertar(i);
+                    this.Dispose();
                 }
-            }            
+                else
+                {
+                    MessageBox.Show("Hubo un error al insertar.");
+                }
+
+            }
+        }
+
+        private void CargarLogInsertar(int id)
+        {
+            Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+            Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+            Program.acccionGlobal.idObjeto = id;
+            Program.acccionGlobal.tablaReferenciada = "TrackingError";
+            Program.acccionGlobal.tipoAccion = "Insertar";
+            Program._daoAcciones.insertarAccion(Program.acccionGlobal);
         }
 
         private bool cargarDatos()
