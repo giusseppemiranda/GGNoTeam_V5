@@ -187,6 +187,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
                 if (_daoInst.modificarInstrumento(instAux) > 0)
                 {
                     MessageBox.Show("Modificación exitosa!");
+                    Program.acccionGlobal.idObjeto=instAux.idInstrumento;
                     Program._daoAcciones.insertarAccion(Program.acccionGlobal);
                 }
                 else
@@ -194,8 +195,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             }
             else
             {
-                _daoInst.insertarInstrumento(instAux);
+                int a= _daoInst.insertarInstrumento(instAux);
                 MessageBox.Show("Registro exitoso!");
+                Program.acccionGlobal.idObjeto = a;
                 Program._daoAcciones.insertarAccion(Program.acccionGlobal);
             }
 
