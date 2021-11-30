@@ -34,7 +34,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         }
 
         //Modificar tarea
-        public frmEditarTarea(frmTareasPendientes ventana, LoginWS.tarea task, LoginWS.persona admin)
+        public frmEditarTarea(frmTareasPendientes ventana, TareasDiariasWS.tarea task, LoginWS.persona admin)
         {
             InitializeComponent();
             cambiarTema();
@@ -159,6 +159,12 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                 //if (accionComoAdministrador)
                 notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha MODIFICADO la tarea " + tareaAux.descripcion.ToUpper() + " con fecha de finalización " + tareaAux.fechaLimite + " (yyyy - MM - dd)" + ". De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
                 //ventanaTareas.actualizarDGV();
+                Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                Program.acccionGlobal.idObjeto = tareaAux.idTarea;
+                Program.acccionGlobal.tablaReferenciada = "Tarea";
+                Program.acccionGlobal.tipoAccion = "Actualizar";
+                Program._daoAcciones.insertarAccion(Program.acccionGlobal);
             }
             else
             {
@@ -168,12 +174,19 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
 
         private void agregarTarea()
         {
-            if (_daoTareas.insertarTarea(tareaAux)>0)
+            int aux= _daoTareas.insertarTarea(tareaAux);
+            if (aux>0)
             {
                 MessageBox.Show("La tarea ha sido insertada con éxito");
                 //if (accionComoAdministrador)
                     notificacion("ACTUALIZACIÓN DE TAREA", "Estimado (a),\n El sistema de Gestión de Riesgos e Inversiones le informa que se ha agregado la tarea " + tareaAux.descripcion.ToUpper() +" con fecha de finalización " +tareaAux.fechaLimite +" (yyyy - MM - dd)"+". De encontrar algún error en lo comentado escriba un correo a AFPIntegralp2@gmail.com");
                 //ventanaTareas.actualizarDGV();
+                Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                Program.acccionGlobal.idObjeto = aux;
+                Program.acccionGlobal.tablaReferenciada = "Tarea";
+                Program.acccionGlobal.tipoAccion = "Agregar";
+                Program._daoAcciones.insertarAccion(Program.acccionGlobal);
             }
             else
             {

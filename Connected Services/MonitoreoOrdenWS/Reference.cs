@@ -16,13 +16,13 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
     public interface MonitorOrdenWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOrdenResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaTodosOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaTodosOrdenResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse eliminarOrden(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest request);
+        GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse listaTodosOrden(GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOrdenResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse> eliminarOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaTodosOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaTodosOrdenResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse> listaTodosOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarOrdenResponse")]
@@ -34,15 +34,6 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.modificarOrdenResponse> modificarOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.modificarOrdenRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaTodosOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaTodosOrdenResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse listaTodosOrden(GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaTodosOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaTodosOrdenResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse> listaTodosOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOrdenResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -52,6 +43,24 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarOrdenResponse> insertarOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.insertarOrdenRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOrdenResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse eliminarOrden(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOrdenRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOrdenResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse> eliminarOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionResponse modificarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionResponse> modificarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarEjecucionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -59,6 +68,15 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarEjecucionResponse")]
         System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse> insertarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse eliminarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse> eliminarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarEjecucionPorFechaReques" +
@@ -74,13 +92,13 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse> listarEjecucionPorFechaAsync(GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse listaOperacionTodos(GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest request);
+        GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse insertarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse> listaOperacionTodosAsync(GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse> insertarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarOperacionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarOperacionResponse")]
@@ -92,22 +110,13 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse> modificarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionResponse modificarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionRequest request);
+        GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse listaOperacionTodos(GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/modificarEjecucionResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionResponse> modificarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.modificarEjecucionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse listarTodosEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse> listarTodosEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listaOperacionTodosResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse> listaOperacionTodosAsync(GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarPorFechaOperacionReques" +
@@ -123,22 +132,13 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.ListarPorFechaOperacionResponse> ListarPorFechaOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.ListarPorFechaOperacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse eliminarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest request);
+        GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse listarTodosEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarEjecucionResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse> eliminarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse eliminarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse> eliminarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/listarTodosEjecucionResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse> listarTodosEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarOrdenPorFechaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/ListarOrdenPorFechaResponse")]
@@ -150,49 +150,13 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.ListarOrdenPorFechaResponse> ListarOrdenPorFechaAsync(GGNoTeam_V5.MonitoreoOrdenWS.ListarOrdenPorFechaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse insertarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest request);
+        GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse eliminarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/insertarOperacionResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse> insertarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOrden", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarOrdenRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOrden;
-        
-        public eliminarOrdenRequest() {
-        }
-        
-        public eliminarOrdenRequest(int idOrden) {
-            this.idOrden = idOrden;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOrdenResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarOrdenResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarOrdenResponse() {
-        }
-        
-        public eliminarOrdenResponse(int @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/MonitorOrdenWS/eliminarOperacionResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse> eliminarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest request);
     }
     
     /// <remarks/>
@@ -373,6 +337,8 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         
         private int fidEjecuField;
         
+        private int fidFondoField;
+        
         private int fidOrdenField;
         
         private int idOperacionField;
@@ -455,6 +421,18 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int fidFondo {
+            get {
+                return this.fidFondoField;
+            }
+            set {
+                this.fidFondoField = value;
+                this.RaisePropertyChanged("fidFondo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int fidOrden {
             get {
                 return this.fidOrdenField;
@@ -466,7 +444,7 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public int idOperacion {
             get {
                 return this.idOperacionField;
@@ -478,7 +456,7 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string instrumento {
             get {
                 return this.instrumentoField;
@@ -490,7 +468,7 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public bool validacion {
             get {
                 return this.validacionField;
@@ -672,6 +650,34 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaTodosOrden", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listaTodosOrdenRequest {
+        
+        public listaTodosOrdenRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaTodosOrdenResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listaTodosOrdenResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.MonitoreoOrdenWS.orden[] @return;
+        
+        public listaTodosOrdenResponse() {
+        }
+        
+        public listaTodosOrdenResponse(GGNoTeam_V5.MonitoreoOrdenWS.orden[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOrden", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
     public partial class modificarOrdenRequest {
         
@@ -701,34 +707,6 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         public modificarOrdenResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listaTodosOrden", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listaTodosOrdenRequest {
-        
-        public listaTodosOrdenRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listaTodosOrdenResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listaTodosOrdenResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.MonitoreoOrdenWS.orden[] @return;
-        
-        public listaTodosOrdenResponse() {
-        }
-        
-        public listaTodosOrdenResponse(GGNoTeam_V5.MonitoreoOrdenWS.orden[] @return) {
             this.@return = @return;
         }
     }
@@ -772,135 +750,35 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEjecucion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarEjecucionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOrden", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarOrdenRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.MonitoreoOrdenWS.ejecucion Ejecucion;
+        public int idOrden;
         
-        public insertarEjecucionRequest() {
+        public eliminarOrdenRequest() {
         }
         
-        public insertarEjecucionRequest(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion Ejecucion) {
-            this.Ejecucion = Ejecucion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEjecucionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarEjecucionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarEjecucionResponse() {
-        }
-        
-        public insertarEjecucionResponse(int @return) {
-            this.@return = @return;
+        public eliminarOrdenRequest(int idOrden) {
+            this.idOrden = idOrden;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjecucionPorFecha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarEjecucionPorFechaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fechaIni;
-        
-        public listarEjecucionPorFechaRequest() {
-        }
-        
-        public listarEjecucionPorFechaRequest(string fechaIni) {
-            this.fechaIni = fechaIni;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjecucionPorFechaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarEjecucionPorFechaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] @return;
-        
-        public listarEjecucionPorFechaResponse() {
-        }
-        
-        public listarEjecucionPorFechaResponse(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listaOperacionTodos", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listaOperacionTodosRequest {
-        
-        public listaOperacionTodosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listaOperacionTodosResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listaOperacionTodosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.MonitoreoOrdenWS.operacion[] @return;
-        
-        public listaOperacionTodosResponse() {
-        }
-        
-        public listaOperacionTodosResponse(GGNoTeam_V5.MonitoreoOrdenWS.operacion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOperacion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarOperacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.MonitoreoOrdenWS.operacion Operacion;
-        
-        public modificarOperacionRequest() {
-        }
-        
-        public modificarOperacionRequest(GGNoTeam_V5.MonitoreoOrdenWS.operacion Operacion) {
-            this.Operacion = Operacion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOperacionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarOperacionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOrdenResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarOrdenResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarOperacionResponse() {
+        public eliminarOrdenResponse() {
         }
         
-        public modificarOperacionResponse(int @return) {
+        public eliminarOrdenResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -944,27 +822,207 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEjecucion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarTodosEjecucionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEjecucion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarEjecucionRequest {
         
-        public listarTodosEjecucionRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.MonitoreoOrdenWS.ejecucion Ejecucion;
+        
+        public insertarEjecucionRequest() {
+        }
+        
+        public insertarEjecucionRequest(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion Ejecucion) {
+            this.Ejecucion = Ejecucion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEjecucionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarTodosEjecucionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEjecucionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarEjecucionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarEjecucionResponse() {
+        }
+        
+        public insertarEjecucionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEjecucion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarEjecucionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEjecucion;
+        
+        public eliminarEjecucionRequest() {
+        }
+        
+        public eliminarEjecucionRequest(int idEjecucion) {
+            this.idEjecucion = idEjecucion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEjecucionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarEjecucionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarEjecucionResponse() {
+        }
+        
+        public eliminarEjecucionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjecucionPorFecha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarEjecucionPorFechaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaIni;
+        
+        public listarEjecucionPorFechaRequest() {
+        }
+        
+        public listarEjecucionPorFechaRequest(string fechaIni) {
+            this.fechaIni = fechaIni;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjecucionPorFechaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarEjecucionPorFechaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] @return;
         
-        public listarTodosEjecucionResponse() {
+        public listarEjecucionPorFechaResponse() {
         }
         
-        public listarTodosEjecucionResponse(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] @return) {
+        public listarEjecucionPorFechaResponse(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOperacion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarOperacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.MonitoreoOrdenWS.operacion arg0;
+        
+        public insertarOperacionRequest() {
+        }
+        
+        public insertarOperacionRequest(GGNoTeam_V5.MonitoreoOrdenWS.operacion arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOperacionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarOperacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarOperacionResponse() {
+        }
+        
+        public insertarOperacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOperacion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarOperacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.MonitoreoOrdenWS.operacion Operacion;
+        
+        public modificarOperacionRequest() {
+        }
+        
+        public modificarOperacionRequest(GGNoTeam_V5.MonitoreoOrdenWS.operacion Operacion) {
+            this.Operacion = Operacion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarOperacionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarOperacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarOperacionResponse() {
+        }
+        
+        public modificarOperacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaOperacionTodos", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listaOperacionTodosRequest {
+        
+        public listaOperacionTodosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaOperacionTodosResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listaOperacionTodosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.MonitoreoOrdenWS.operacion[] @return;
+        
+        public listaOperacionTodosResponse() {
+        }
+        
+        public listaOperacionTodosResponse(GGNoTeam_V5.MonitoreoOrdenWS.operacion[] @return) {
             this.@return = @return;
         }
     }
@@ -1013,71 +1071,27 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEjecucion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarEjecucionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEjecucion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarTodosEjecucionRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEjecucion;
-        
-        public eliminarEjecucionRequest() {
-        }
-        
-        public eliminarEjecucionRequest(int idEjecucion) {
-            this.idEjecucion = idEjecucion;
+        public listarTodosEjecucionRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEjecucionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarEjecucionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEjecucionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarTodosEjecucionResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] @return;
         
-        public eliminarEjecucionResponse() {
+        public listarTodosEjecucionResponse() {
         }
         
-        public eliminarEjecucionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOperacion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarOperacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOperacion;
-        
-        public eliminarOperacionRequest() {
-        }
-        
-        public eliminarOperacionRequest(int idOperacion) {
-            this.idOperacion = idOperacion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOperacionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarOperacionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarOperacionResponse() {
-        }
-        
-        public eliminarOperacionResponse(int @return) {
+        public listarTodosEjecucionResponse(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] @return) {
             this.@return = @return;
         }
     }
@@ -1121,35 +1135,35 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOperacion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarOperacionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOperacion", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarOperacionRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.MonitoreoOrdenWS.operacion arg0;
+        public int idOperacion;
         
-        public insertarOperacionRequest() {
+        public eliminarOperacionRequest() {
         }
         
-        public insertarOperacionRequest(GGNoTeam_V5.MonitoreoOrdenWS.operacion arg0) {
-            this.arg0 = arg0;
+        public eliminarOperacionRequest(int idOperacion) {
+            this.idOperacion = idOperacion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOperacionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarOperacionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOperacionResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarOperacionResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarOperacionResponse() {
+        public eliminarOperacionResponse() {
         }
         
-        public insertarOperacionResponse(int @return) {
+        public eliminarOperacionResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1182,26 +1196,24 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarOrden(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest request) {
-            return base.Channel.eliminarOrden(request);
+        GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listaTodosOrden(GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest request) {
+            return base.Channel.listaTodosOrden(request);
         }
         
-        public int eliminarOrden(int idOrden) {
-            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest();
-            inValue.idOrden = idOrden;
-            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarOrden(inValue);
+        public GGNoTeam_V5.MonitoreoOrdenWS.orden[] listaTodosOrden() {
+            GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest();
+            GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listaTodosOrden(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest request) {
-            return base.Channel.eliminarOrdenAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listaTodosOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest request) {
+            return base.Channel.listaTodosOrdenAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse> eliminarOrdenAsync(int idOrden) {
-            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest();
-            inValue.idOrden = idOrden;
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarOrdenAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse> listaTodosOrdenAsync() {
+            GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest();
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listaTodosOrdenAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1228,27 +1240,6 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listaTodosOrden(GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest request) {
-            return base.Channel.listaTodosOrden(request);
-        }
-        
-        public GGNoTeam_V5.MonitoreoOrdenWS.orden[] listaTodosOrden() {
-            GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest();
-            GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listaTodosOrden(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listaTodosOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest request) {
-            return base.Channel.listaTodosOrdenAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenResponse> listaTodosOrdenAsync() {
-            GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listaTodosOrdenRequest();
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listaTodosOrdenAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         GGNoTeam_V5.MonitoreoOrdenWS.insertarOrdenResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.insertarOrden(GGNoTeam_V5.MonitoreoOrdenWS.insertarOrdenRequest request) {
             return base.Channel.insertarOrden(request);
         }
@@ -1272,93 +1263,26 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.insertarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest request) {
-            return base.Channel.insertarEjecucion(request);
+        GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarOrden(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest request) {
+            return base.Channel.eliminarOrden(request);
         }
         
-        public int insertarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion Ejecucion) {
-            GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest();
-            inValue.Ejecucion = Ejecucion;
-            GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).insertarEjecucion(inValue);
+        public int eliminarOrden(int idOrden) {
+            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest();
+            inValue.idOrden = idOrden;
+            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarOrden(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.insertarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest request) {
-            return base.Channel.insertarEjecucionAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarOrdenAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest request) {
+            return base.Channel.eliminarOrdenAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse> insertarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion Ejecucion) {
-            GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest();
-            inValue.Ejecucion = Ejecucion;
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).insertarEjecucionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listarEjecucionPorFecha(GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest request) {
-            return base.Channel.listarEjecucionPorFecha(request);
-        }
-        
-        public GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] listarEjecucionPorFecha(string fechaIni) {
-            GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest();
-            inValue.fechaIni = fechaIni;
-            GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listarEjecucionPorFecha(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listarEjecucionPorFechaAsync(GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest request) {
-            return base.Channel.listarEjecucionPorFechaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse> listarEjecucionPorFechaAsync(string fechaIni) {
-            GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest();
-            inValue.fechaIni = fechaIni;
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listarEjecucionPorFechaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listaOperacionTodos(GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest request) {
-            return base.Channel.listaOperacionTodos(request);
-        }
-        
-        public GGNoTeam_V5.MonitoreoOrdenWS.operacion[] listaOperacionTodos() {
-            GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest();
-            GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listaOperacionTodos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listaOperacionTodosAsync(GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest request) {
-            return base.Channel.listaOperacionTodosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse> listaOperacionTodosAsync() {
-            GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest();
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listaOperacionTodosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.modificarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest request) {
-            return base.Channel.modificarOperacion(request);
-        }
-        
-        public int modificarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.operacion Operacion) {
-            GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest();
-            inValue.Operacion = Operacion;
-            GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).modificarOperacion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.modificarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest request) {
-            return base.Channel.modificarOperacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse> modificarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.operacion Operacion) {
-            GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest();
-            inValue.Operacion = Operacion;
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).modificarOperacionAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenResponse> eliminarOrdenAsync(int idOrden) {
+            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarOrdenRequest();
+            inValue.idOrden = idOrden;
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarOrdenAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1385,24 +1309,139 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listarTodosEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest request) {
-            return base.Channel.listarTodosEjecucion(request);
+        GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.insertarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest request) {
+            return base.Channel.insertarEjecucion(request);
         }
         
-        public GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] listarTodosEjecucion() {
-            GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest();
-            GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listarTodosEjecucion(inValue);
+        public int insertarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion Ejecucion) {
+            GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest();
+            inValue.Ejecucion = Ejecucion;
+            GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).insertarEjecucion(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listarTodosEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest request) {
-            return base.Channel.listarTodosEjecucionAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.insertarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest request) {
+            return base.Channel.insertarEjecucionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse> listarTodosEjecucionAsync() {
-            GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest();
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listarTodosEjecucionAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionResponse> insertarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.ejecucion Ejecucion) {
+            GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.insertarEjecucionRequest();
+            inValue.Ejecucion = Ejecucion;
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).insertarEjecucionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest request) {
+            return base.Channel.eliminarEjecucion(request);
+        }
+        
+        public int eliminarEjecucion(int idEjecucion) {
+            GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest();
+            inValue.idEjecucion = idEjecucion;
+            GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarEjecucion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest request) {
+            return base.Channel.eliminarEjecucionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse> eliminarEjecucionAsync(int idEjecucion) {
+            GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest();
+            inValue.idEjecucion = idEjecucion;
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarEjecucionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listarEjecucionPorFecha(GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest request) {
+            return base.Channel.listarEjecucionPorFecha(request);
+        }
+        
+        public GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] listarEjecucionPorFecha(string fechaIni) {
+            GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest();
+            inValue.fechaIni = fechaIni;
+            GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listarEjecucionPorFecha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listarEjecucionPorFechaAsync(GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest request) {
+            return base.Channel.listarEjecucionPorFechaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaResponse> listarEjecucionPorFechaAsync(string fechaIni) {
+            GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listarEjecucionPorFechaRequest();
+            inValue.fechaIni = fechaIni;
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listarEjecucionPorFechaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.insertarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest request) {
+            return base.Channel.insertarOperacion(request);
+        }
+        
+        public int insertarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.operacion arg0) {
+            GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest();
+            inValue.arg0 = arg0;
+            GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).insertarOperacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.insertarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest request) {
+            return base.Channel.insertarOperacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse> insertarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.operacion arg0) {
+            GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest();
+            inValue.arg0 = arg0;
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).insertarOperacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.modificarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest request) {
+            return base.Channel.modificarOperacion(request);
+        }
+        
+        public int modificarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.operacion Operacion) {
+            GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest();
+            inValue.Operacion = Operacion;
+            GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).modificarOperacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.modificarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest request) {
+            return base.Channel.modificarOperacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionResponse> modificarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.operacion Operacion) {
+            GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.modificarOperacionRequest();
+            inValue.Operacion = Operacion;
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).modificarOperacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listaOperacionTodos(GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest request) {
+            return base.Channel.listaOperacionTodos(request);
+        }
+        
+        public GGNoTeam_V5.MonitoreoOrdenWS.operacion[] listaOperacionTodos() {
+            GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest();
+            GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listaOperacionTodos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listaOperacionTodosAsync(GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest request) {
+            return base.Channel.listaOperacionTodosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosResponse> listaOperacionTodosAsync() {
+            GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listaOperacionTodosRequest();
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listaOperacionTodosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1431,49 +1470,24 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest request) {
-            return base.Channel.eliminarEjecucion(request);
+        GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listarTodosEjecucion(GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest request) {
+            return base.Channel.listarTodosEjecucion(request);
         }
         
-        public int eliminarEjecucion(int idEjecucion) {
-            GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest();
-            inValue.idEjecucion = idEjecucion;
-            GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarEjecucion(inValue);
+        public GGNoTeam_V5.MonitoreoOrdenWS.ejecucion[] listarTodosEjecucion() {
+            GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest();
+            GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listarTodosEjecucion(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest request) {
-            return base.Channel.eliminarEjecucionAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.listarTodosEjecucionAsync(GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest request) {
+            return base.Channel.listarTodosEjecucionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionResponse> eliminarEjecucionAsync(int idEjecucion) {
-            GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarEjecucionRequest();
-            inValue.idEjecucion = idEjecucion;
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarEjecucionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest request) {
-            return base.Channel.eliminarOperacion(request);
-        }
-        
-        public int eliminarOperacion(int idOperacion) {
-            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest();
-            inValue.idOperacion = idOperacion;
-            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarOperacion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest request) {
-            return base.Channel.eliminarOperacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse> eliminarOperacionAsync(int idOperacion) {
-            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest();
-            inValue.idOperacion = idOperacion;
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarOperacionAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionResponse> listarTodosEjecucionAsync() {
+            GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.listarTodosEjecucionRequest();
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).listarTodosEjecucionAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1500,26 +1514,26 @@ namespace GGNoTeam_V5.MonitoreoOrdenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.insertarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest request) {
-            return base.Channel.insertarOperacion(request);
+        GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest request) {
+            return base.Channel.eliminarOperacion(request);
         }
         
-        public int insertarOperacion(GGNoTeam_V5.MonitoreoOrdenWS.operacion arg0) {
-            GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest();
-            inValue.arg0 = arg0;
-            GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).insertarOperacion(inValue);
+        public int eliminarOperacion(int idOperacion) {
+            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest();
+            inValue.idOperacion = idOperacion;
+            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse retVal = ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarOperacion(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.insertarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest request) {
-            return base.Channel.insertarOperacionAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse> GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS.eliminarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest request) {
+            return base.Channel.eliminarOperacionAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionResponse> insertarOperacionAsync(GGNoTeam_V5.MonitoreoOrdenWS.operacion arg0) {
-            GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.insertarOperacionRequest();
-            inValue.arg0 = arg0;
-            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).insertarOperacionAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionResponse> eliminarOperacionAsync(int idOperacion) {
+            GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest inValue = new GGNoTeam_V5.MonitoreoOrdenWS.eliminarOperacionRequest();
+            inValue.idOperacion = idOperacion;
+            return ((GGNoTeam_V5.MonitoreoOrdenWS.MonitorOrdenWS)(this)).eliminarOperacionAsync(inValue);
         }
     }
 }
