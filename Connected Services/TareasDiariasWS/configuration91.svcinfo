@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Mu8JohLa8qG4ybdv1os4iHCY/XHxDGaTPy5H/Lefiug=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="y1LClzSLkGwhXhl/9Yr/k4JR0nIqWKN8MJtfnjf5Afw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="TareasDiariasWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="TareasDiariasWSPort" contract="TareasDiariasWS.TareasDiariasWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServices/TareasDiariasWS" bindingConfiguration="TareasDiariasWSPortBinding">
+    <endpoint name="TareasDiariasWSPort" contract="TareasDiariasWS.TareasDiariasWS" bindingType="basicHttpBinding" address="http://54.236.140.237:8080/WebServices/TareasDiariasWS" bindingConfiguration="TareasDiariasWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/WebServices/TareasDiariasWS</serializedValue>
+          <serializedValue>http://54.236.140.237:8080/WebServices/TareasDiariasWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -58,7 +58,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             user = persona;            
             adminAux = admin;            
             dgvTareasPendientes.AutoGenerateColumns = false;
-            
+            btnEliminar.Visible = false;
             cargarLabelInicial();
             pintarDGVInicial();
             cargarSubTema();            
@@ -156,6 +156,12 @@ namespace GGNoTeam_V5.VentanaPrincipal
                     if (validez == 1)
                     {
                         MessageBox.Show("La tarea ha sido eliminada con éxito");
+                        Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                        Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                        Program.acccionGlobal.idObjeto = idTarea;
+                        Program.acccionGlobal.tablaReferenciada = "Tarea";
+                        Program.acccionGlobal.tipoAccion = "Eliminar";
+                        Program._daoAcciones.insertarAccion(Program.acccionGlobal);
                     }
                     else
                     {
@@ -172,7 +178,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             {
                 if (adminAux.idPersona == user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index].fidAutor)
                 {
-                    frmEditarTarea ventanaModificar = new frmEditarTarea(this, user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index], adminAux);
+                    frmEditarTarea ventanaModificar = new frmEditarTarea(this, tareas[dgvTareasPendientes.CurrentRow.Index], adminAux);
                     ventanaModificar.ShowDialog();
                     this.btnConsultarTareas_Click(sender, e);
                 }
