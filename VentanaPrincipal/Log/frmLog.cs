@@ -27,7 +27,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Log
         private void agregarAccion()
         {
             //
-            //
         }
     }
 }
