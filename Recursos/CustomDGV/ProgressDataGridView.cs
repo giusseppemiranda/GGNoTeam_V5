@@ -129,7 +129,7 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
             using (Graphics graphics = CreateGraphics())
             {
                 //remove pixelation
-                graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                graphics.SmoothingMode = SmoothingMode.AntiAlias;                
 
                 //calculate the size and position of the cursor
                 int cursorSize = 100;
@@ -148,14 +148,14 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
                 //graphics.DrawImage(GridCellsImageCopy, x, y);
 
                 //draw base image
-                using (LinearGradientBrush brush = new LinearGradientBrush(ClientRectangle, Color.Transparent , Color.Transparent, LinearGradientMode.Vertical))
-                {
-                    using (Pen pen = new Pen(brush, brushWidth))
-                    {
-                        pen.DashStyle = DashStyle.Solid;
-                        graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, 0, 360);
-                    }
-                }
+                //using (LinearGradientBrush brush = new LinearGradientBrush(ClientRectangle, Color.Transparent , Color.Transparent, LinearGradientMode.Vertical))
+                //{
+                //    using (Pen pen = new Pen(brush, brushWidth))
+                //    {
+                //        pen.DashStyle = DashStyle.Solid;
+                //        graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, 0, 360);
+                //    }
+                //}
 
                 if (changeColor)
                 {
@@ -164,7 +164,7 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
                     {
                         using (Pen pen = new Pen(brush, brushWidth))
                         {
-                            pen.DashStyle = DashStyle.Solid;
+                            pen.DashStyle = DashStyle.Dot;
                             graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, CurrentAngle, 6);
                         }
                     }
@@ -174,7 +174,7 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
                     {
                         using (Pen pen = new Pen(brush, brushWidth))
                         {
-                            pen.DashStyle = DashStyle.Solid;
+                            pen.DashStyle = DashStyle.Dot;
                             graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, CurrentAngle, 6);
                         }
                     }

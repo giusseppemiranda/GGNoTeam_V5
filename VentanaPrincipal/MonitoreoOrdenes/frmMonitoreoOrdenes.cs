@@ -16,6 +16,7 @@ using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa;
 using GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion;
 using GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden;
 using static GGNoTeam_V5.VentanaPrincipal.frmPrincipal;
+using System.Threading;
 
 namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
 {
@@ -35,19 +36,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         public frmMonitoreoOrdenes(frmPrincipal ventana)
         {
             InitializeComponent();
+
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
 
             dgvOrdenes.AutoGenerateColumns = false;
-
             Global.pintarDGV(ref dgvOrdenes, Color.DarkSalmon);
             cambiarTema();
-            cargarComboFondo();
-            ops = _daoMO.listaTodosOrden();
-            ejes = _daoMO.listarTodosEjecucion();
-        }
+            
+            Thread hilo = new Thread(() =>
+            {
+                cargarComboFondo();
+                ops = _daoMO.listaTodosOrden();
+                ejes = _daoMO.listarTodosEjecucion();
+            });
+            hilo.Start();
+            hilo.Join();           
+        } 
+
         private void cargarComboFondo()
         {
             fondos = _daoTE.ListarFondos();
