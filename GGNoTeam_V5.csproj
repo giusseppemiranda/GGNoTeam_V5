@@ -67,6 +67,9 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="SautinSoft.RtfToHtml, Version=7.6.6.17, Culture=neutral, PublicKeyToken=c666a5e96a3d5457, processorArchitecture=MSIL">
+      <HintPath>packages\sautinsoft.rtftohtml.7.6.6.17\lib\net48\SautinSoft.RtfToHtml.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -189,6 +192,12 @@
     </Compile>
     <Compile Include="Recursos\UserControls\Global.cs" />
     <Compile Include="Recursos\Validaciones\ValidarTextBox.cs" />
+    <Compile Include="VentanaPrincipal\Bandeja de Entrada\frmEnviarMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\Bandeja de Entrada\frmEnviarMensaje.Designer.cs">
+      <DependentUpon>frmEnviarMensaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipal\Bandeja de Entrada\frmGmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\UserControls\GGTextBox.resx">
       <DependentUpon>GGTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\Bandeja de Entrada\frmEnviarMensaje.resx">
+      <DependentUpon>frmEnviarMensaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\Bandeja de Entrada\frmGmail.resx">
       <DependentUpon>frmGmail.cs</DependentUpon>

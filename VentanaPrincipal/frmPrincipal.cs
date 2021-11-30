@@ -20,6 +20,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private IconButton iconoActivo = null;
         private LoginWS.persona usuario;
         private LoginWS.LoginWSClient _daoLogin;
+        private int m, mx, my;
 
         public delegate void delegadoCambiarTema();
         public event delegadoCambiarTema eventoCambiarTema;
@@ -239,9 +240,29 @@ namespace GGNoTeam_V5.VentanaPrincipal
             iconoActivo.BackColor = this.BackColor;
         }
 
+        private void panelControl_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panelControl_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+
         private void btnMenu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panelControl_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
         }
     }
 }

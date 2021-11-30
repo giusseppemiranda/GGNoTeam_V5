@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GGNoTeam_V5.Recursos.UserControls;
+using GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada;
 using GGNoTeam_V5.VentanaPrincipal.Usuarios;
 
 namespace GGNoTeam_V5.VentanaPrincipal
@@ -137,6 +138,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             btnListarPersonas.Enabled = false;
             btnListarUsuarios.Enabled = false;
             btnVerTareas.Enabled = false;
+            btnEnviarMensaje.Enabled = false;
         }
 
         public void enableButtons()
@@ -149,6 +151,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             btnListarPersonas.Enabled = true;
             btnListarUsuarios.Enabled = true;
             btnVerTareas.Enabled = true;
+            btnEnviarMensaje.Enabled = true;
         }
 
 
@@ -200,17 +203,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             crearUsuario.ShowDialog();
         }
 
-        //public void desactivarBotones()
-        //{
-        //    Global.pintarDGV(ref dgvPersonas, Color.Black);
-        //}
-
-        //public void activarBotones()
-        //{
-        //    Global.pintarDGV(ref dgvPersonas, dgvColorActivo);
-        //}
-
-
 
         private void btnVerTareas_Click(object sender, EventArgs e)
         {
@@ -235,6 +227,15 @@ namespace GGNoTeam_V5.VentanaPrincipal
             dgvPersonas.Rows[e.RowIndex].Cells[5].Value = user.contraseña;
             dgvPersonas.Rows[e.RowIndex].Cells[6].Value = user.validacion;
             dgvPersonas.Rows[e.RowIndex].Cells[7].Value = user.rol;
+        }
+
+        private void btnEnviarMensaje_Click(object sender, EventArgs e)
+        {
+            if(dgvPersonas.CurrentRow != null)
+            {
+                frmEnviarMensaje mensajes = new frmEnviarMensaje(lista[dgvPersonas.CurrentRow.Index], usuario);
+                mensajes.ShowDialog();
+            }
         }
     }
 }
