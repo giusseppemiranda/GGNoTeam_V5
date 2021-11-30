@@ -52,11 +52,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             emiAux.nombre = boxNombreEmisor.Texts;
             if (lblRegistroEmisor.Text == "Modificar Emisor")
             {
-                _daoInstOrig.modificarEmisor(emiAux);
+                if (_daoInstOrig.modificarEmisor(emiAux) > 0)
+                {
+                    Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                    Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                    Program.acccionGlobal.idObjeto = emiAux.idEmisor;
+                    Program.acccionGlobal.tipoAccion = "Modificar";
+                    Program._daoAcciones.insertarAccion(Program.acccionGlobal);
+                }
             }
             else
             {
-                _daoInstOrig.insertarEmisor(emiAux);
+                int a = _daoInstOrig.insertarEmisor(emiAux);
+                if ( a> 0)
+                {
+                    Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                    Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                    Program.acccionGlobal.idObjeto = a;
+                    Program.acccionGlobal.tipoAccion = "Insertar";
+                    Program._daoAcciones.insertarAccion(Program.acccionGlobal);
+                }
             }
             MessageBox.Show("Se insertó emisor con éxito!");
             this.Dispose();

@@ -230,7 +230,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
         {
             if (dgvInstrumentosOriginadores.SelectedRows.Count > 0)
             {
-                _daoInstOrig.eliminarInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index].idInstrumento);
+                if (_daoInstOrig.eliminarInstrumento(instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index].idInstrumento) > 0)
+                {
+                    Program.acccionGlobal.idObjeto = instrumentos[dgvInstrumentosOriginadores.CurrentRow.Index].idInstrumento;
+                    Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                    Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                    Program.acccionGlobal.tipoAccion = "Eliminar";
+                    Program.acccionGlobal.tablaReferenciada = "Instrumentos";
+                    Program._daoAcciones.insertarAccion(Program.acccionGlobal);
+                }
+
             }
             else
             {

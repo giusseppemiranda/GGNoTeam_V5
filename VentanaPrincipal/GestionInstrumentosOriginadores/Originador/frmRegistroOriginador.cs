@@ -104,7 +104,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
                 if (_daoOrig.modificarOriginador(oriAux) > 0)
                 {
                     MessageBox.Show("Modificación exitosa!");
+                    Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                    Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                    Program.acccionGlobal.idObjeto = oriAux.idOriginador;
                     Program.acccionGlobal.tipoAccion = "Modificar";
+                    Program._daoAcciones.insertarAccion(Program.acccionGlobal);
                 }
                 else
                     MessageBox.Show("Revise los campos e intente de nuevo", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -112,12 +116,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             else
             {
 
-                _daoOrig.insertarOriginador(oriAux);
+                int a = _daoOrig.insertarOriginador(oriAux);
                 MessageBox.Show("Registro exitoso!");
+                Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                Program.acccionGlobal.idObjeto = a;
                 Program.acccionGlobal.tipoAccion = "Insertar";
+                Program._daoAcciones.insertarAccion(Program.acccionGlobal);
             }
-            Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
-            Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+            
             this.Dispose();
         }
 
