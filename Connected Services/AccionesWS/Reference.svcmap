@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f5390500-bb07-4675-854c-1d70875451c6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aeea645c-ce24-4b44-b401-0d4bd9df21b0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.236.140.237:8080/WebServices/LoginWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.236.140.237:8080/WebServices/AccionesWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="LoginWS.wsdl" MetadataType="Wsdl" ID="f36e1cea-0d9c-42ea-a6c3-174d3773a7a9" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/LoginWS?WSDL" />
-    <MetadataFile FileName="LoginWS.xsd" MetadataType="Schema" ID="9c00f971-3c20-4eab-a7d1-10db32a0eabe" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/LoginWS?xsd=1" />
+    <MetadataFile FileName="AccionesWS.xsd" MetadataType="Schema" ID="dd688f74-daaa-4b60-8250-41d9a2b8c13e" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/AccionesWS?xsd=1" />
+    <MetadataFile FileName="AccionesWS.wsdl" MetadataType="Wsdl" ID="e6aedc1d-adac-4042-8e3f-4a8165663dfc" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/AccionesWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

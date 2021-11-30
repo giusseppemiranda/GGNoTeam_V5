@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://webservices.sist.afp.ggNoTeam/" targetNamespace="http://webservices.sist.afp.ggNoTeam/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="buscarPersonaCodigoExacto" type="tns:buscarPersonaCodigoExacto" />
+  <xs:element name="buscarPersonaCodigoExactoResponse" type="tns:buscarPersonaCodigoExactoResponse" />
   <xs:element name="eliminarPersona" type="tns:eliminarPersona" />
   <xs:element name="eliminarPersonaResponse" type="tns:eliminarPersonaResponse" />
   <xs:element name="insertarPersona" type="tns:insertarPersona" />
@@ -8,6 +10,8 @@
   <xs:element name="listarAdministradoresResponse" type="tns:listarAdministradoresResponse" />
   <xs:element name="listarNoUsuarios" type="tns:listarNoUsuarios" />
   <xs:element name="listarNoUsuariosResponse" type="tns:listarNoUsuariosResponse" />
+  <xs:element name="listarPersonaPorID" type="tns:listarPersonaPorID" />
+  <xs:element name="listarPersonaPorIDResponse" type="tns:listarPersonaPorIDResponse" />
   <xs:element name="listarPorCodExacto" type="tns:listarPorCodExacto" />
   <xs:element name="listarPorCodExactoResponse" type="tns:listarPorCodExactoResponse" />
   <xs:element name="listarPorCodExacto_TareasCompletas" type="tns:listarPorCodExacto_TareasCompletas" />
@@ -20,10 +24,12 @@
   <xs:element name="listarUsuariosResponse" type="tns:listarUsuariosResponse" />
   <xs:element name="modificarPersona" type="tns:modificarPersona" />
   <xs:element name="modificarPersonaResponse" type="tns:modificarPersonaResponse" />
-  <xs:complexType name="listarAdministradores">
+  <xs:element name="verificarCredenciales" type="tns:verificarCredenciales" />
+  <xs:element name="verificarCredencialesResponse" type="tns:verificarCredencialesResponse" />
+  <xs:complexType name="listarNoUsuarios">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarAdministradoresResponse">
+  <xs:complexType name="listarNoUsuariosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
     </xs:sequence>
@@ -53,17 +59,18 @@
   <xs:complexType name="tarea">
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaLimite" type="xs:string" />
+      <xs:element name="fidAutor" type="xs:int" />
       <xs:element name="fidItinerario" type="xs:int" />
-      <xs:element minOccurs="0" name="horaEst" type="xs:string" />
       <xs:element name="idTarea" type="xs:int" />
-      <xs:element name="plazo" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarNoUsuarios">
+  <xs:complexType name="listarAdministradores">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarNoUsuariosResponse">
+  <xs:complexType name="listarAdministradoresResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
     </xs:sequence>
@@ -127,6 +134,26 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="buscarPersonaCodigoExacto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarPersonaCodigoExactoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPersonaPorID">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPersonaPorIDResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarPorCodExacto_TareasCompletas">
     <xs:sequence>
       <xs:element name="codigo" type="xs:int" />
@@ -135,6 +162,17 @@
   <xs:complexType name="listarPorCodExacto_TareasCompletasResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificarCredenciales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificarCredencialesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPorCodExacto_TareasInompletas">

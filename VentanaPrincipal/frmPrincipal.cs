@@ -35,6 +35,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             ventanaPadre = ventana;
             cargarPantallaSegunTipoUsuario();
             cambiarTema();
+            Program.acccionGlobal.nombreActor = usuario.nombre + " " +usuario.apellidos;
         }
 
         private void cargarPantallaSegunTipoUsuario()

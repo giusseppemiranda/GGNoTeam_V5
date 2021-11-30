@@ -108,6 +108,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\AccionesWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\GestionInstrumentosOriginadoresWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -275,6 +280,12 @@
     </Compile>
     <Compile Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEditarUsuario.Designer.cs">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPrincipal\Log\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\Log\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEditarEjecucion.cs">
       <SubType>Form</SubType>
@@ -451,6 +462,9 @@
     <EmbeddedResource Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\Log\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEditarEjecucion.resx">
       <DependentUpon>frmEditarEjecucion.cs</DependentUpon>
     </EmbeddedResource>
@@ -502,6 +516,19 @@
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\TrackingErrorvsAlfa\frmTrackingErrorvsAlfa.resx">
       <DependentUpon>frmTrackingErrorvsAlfa.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\AccionesWS\AccionesWS.wsdl" />
+    <None Include="Connected Services\AccionesWS\AccionesWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AccionesWS\GGNoTeam_V5.AccionesWS.accion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AccionesWS\GGNoTeam_V5.AccionesWS.insertarAccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AccionesWS\GGNoTeam_V5.AccionesWS.listarAccionesPorFechasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.wsdl" />
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.xsd">
       <SubType>Designer</SubType>
@@ -605,8 +632,8 @@
     <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.verificarCredencialesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LoginWS\LoginWS1.wsdl" />
-    <None Include="Connected Services\LoginWS\LoginWS1.xsd">
+    <None Include="Connected Services\LoginWS\LoginWS.wsdl" />
+    <None Include="Connected Services\LoginWS\LoginWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.ejecucion.datasource">
@@ -809,12 +836,6 @@
     </None>
     <None Include="Connected Services\TareasDiariasWS\configuration.svcinfo" />
     <None Include="Connected Services\TareasDiariasWS\configuration91.svcinfo" />
-    <None Include="Connected Services\LoginWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\LoginWS\configuration.svcinfo" />
-    <None Include="Connected Services\LoginWS\configuration91.svcinfo" />
     <None Include="Connected Services\TrackingErrorWS\configuration91.svcinfo" />
     <None Include="Connected Services\TrackingErrorWS\configuration.svcinfo" />
     <None Include="Connected Services\TrackingErrorWS\Reference.svcmap">
@@ -830,6 +851,18 @@
     <None Include="Connected Services\MonitoreoOrdenWS\configuration91.svcinfo" />
     <None Include="Connected Services\MonitoreoOrdenWS\configuration.svcinfo" />
     <None Include="Connected Services\MonitoreoOrdenWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\LoginWS\configuration91.svcinfo" />
+    <None Include="Connected Services\LoginWS\configuration.svcinfo" />
+    <None Include="Connected Services\LoginWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AccionesWS\configuration91.svcinfo" />
+    <None Include="Connected Services\AccionesWS\configuration.svcinfo" />
+    <None Include="Connected Services\AccionesWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -854,6 +887,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AccionesWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionInstrumentosOriginadoresWS\" />
     <WCFMetadataStorage Include="Connected Services\LoginWS\" />
     <WCFMetadataStorage Include="Connected Services\MonitoreoOrdenWS\" />

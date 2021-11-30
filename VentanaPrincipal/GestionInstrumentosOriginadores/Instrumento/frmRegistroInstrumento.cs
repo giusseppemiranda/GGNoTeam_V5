@@ -23,6 +23,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         {
             InitializeComponent();
             cargarCombos();
+            Program.acccionGlobal.tablaReferenciada = "Instrumentos";
+            Program.acccionGlobal.tipoAccion = "Modificar";
             instAux = new GestionInstrumentosOriginadoresWS.instrumento();
             lblRegistroInstrumento.Text = "Modificar instrumento";
             instAux.idInstrumento = inst.idInstrumento;
@@ -60,6 +62,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         {
             InitializeComponent();
             cargarCombos();
+            Program.acccionGlobal.tablaReferenciada = "Instrumentos";
+            Program.acccionGlobal.tipoAccion = "Insertar";
             instAux = new GestionInstrumentosOriginadoresWS.instrumento();
             lblRegistroInstrumento.Text = "Registro instrumento";
             //instAux.idInstrumento = inst.idInstrumento;
@@ -97,6 +101,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         public frmRegistroInstrumento()
         {
             InitializeComponent();
+            Program.acccionGlobal.tablaReferenciada = "Instrumentos";
+            Program.acccionGlobal.tipoAccion = "Insertar";
             _daoInst = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
             cargarCombos();
             instAux = new GestionInstrumentosOriginadoresWS.instrumento();
@@ -152,7 +158,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-           
+            Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+            Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
             instAux.codigoSBS = boxcodSBS.Texts;
             instAux.codigoISIN = boxcodISIN.Texts;
             instAux.codigoID059 = boxID059.Texts;
@@ -178,7 +185,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             if (lblRegistroInstrumento.Text == "Modificar instrumento")
             {
                 if (_daoInst.modificarInstrumento(instAux) > 0)
+                {
                     MessageBox.Show("Modificación exitosa!");
+                    Program._daoAcciones.insertarAccion(Program.acccionGlobal);
+                }
                 else
                     MessageBox.Show("Error al modificar");
             }
@@ -186,8 +196,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             {
                 _daoInst.insertarInstrumento(instAux);
                 MessageBox.Show("Registro exitoso!");
+                Program._daoAcciones.insertarAccion(Program.acccionGlobal);
             }
 
+            
             
             this.Dispose();
 

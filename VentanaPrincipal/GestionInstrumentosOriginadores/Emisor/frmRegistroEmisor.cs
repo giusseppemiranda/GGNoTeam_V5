@@ -17,12 +17,15 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
         public frmRegistroEmisor()
         {
             InitializeComponent();
+
+            Program.acccionGlobal.tablaReferenciada = "Emisores";
             emiAux = new GestionInstrumentosOriginadoresWS.emisor();
 
         }
         public frmRegistroEmisor(GestionInstrumentosOriginadoresWS.emisor emi)
         {
             InitializeComponent();
+            Program.acccionGlobal.tablaReferenciada = "Emisores";
             lblRegistroEmisor.Text = "Modificar Emisor";
             boxCodigoEmisor.Texts = emi.codigoEmisor.ToString();
             boxNombreEmisor.Texts = emi.nombre;
@@ -32,6 +35,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
         public frmRegistroEmisor(GestionInstrumentosOriginadoresWS.emisor emi,int i)
         {
             InitializeComponent();
+            Program.acccionGlobal.tablaReferenciada = "Emisores";
             boxCodigoEmisor.Texts = emi.codigoEmisor.ToString();
             boxNombreEmisor.Texts = emi.nombre;
             emiAux = new GestionInstrumentosOriginadoresWS.emisor();

@@ -17,6 +17,8 @@ namespace GGNoTeam_V5
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
+        public static AccionesWS.accion acccionGlobal = new AccionesWS.accion();
+        public static AccionesWS.AccionesWSClient _daoAcciones = new AccionesWS.AccionesWSClient();
         [STAThread]
         static void Main()
         {            
