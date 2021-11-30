@@ -65,6 +65,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void btnPersona_Click(object sender, EventArgs e)
         {
             preQuery();
+            
             LoginWS.persona[] noUsuarios = _daoListar.listarNoUsuarios();
             lista = noUsuarios;
             colocarEnDGV(noUsuarios);
@@ -75,7 +76,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             preQuery();
-
+            
             LoginWS.persona[] usuarios = _daoListar.listarUsuarios();
             lista = usuarios;
 
@@ -87,6 +88,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void btnAdministradores_Click(object sender, EventArgs e)
         {
             preQuery();
+            
 
             LoginWS.persona[] administradores = _daoListar.listarAdministradores();
             lista = administradores;
@@ -99,11 +101,11 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             preQuery();
-            Global.pintarDGV(ref dgvPersonas, Color.SlateBlue);
+            
             lista = _daoListar.listarPorCodNom(txtBoxBusqueda.Texts);
-
+            
             colocarEnDGV(lista);
-            Global.pintarDGV(ref dgvPersonas, Color.DarkCyan);
+            Global.pintarDGV(ref dgvPersonas, Color.DarkOliveGreen);
             postQuery();
         }
 
@@ -113,8 +115,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
         }
 
         public void preQuery()
-        {
-            this.Cursor = Cursors.WaitCursor;
+        {            
+            this.Cursor = Cursors.WaitCursor;            
             dgvPersonas.comenzarHilo();
             disableButtons();
         }
@@ -128,8 +130,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
 
 
         public void disableButtons()
-        {
-
+        {            
             btnActualizarUsuario.Enabled = false;
             btnAgregarUsuario.Enabled = false;
             btnBuscar.Enabled = false;

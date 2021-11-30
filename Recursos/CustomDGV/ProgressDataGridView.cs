@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GGNoTeam_V5.Recursos.UserControls;
+using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
@@ -17,6 +18,7 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
 
         private int CurrentAngle = 0;
         private bool ShowLoadingCursor = false;
+        private bool changeColor = false;
 
         private Bitmap GridCellsImageCopy;
         private ControlsRectangle GridRectangle = new ControlsRectangle();
@@ -37,6 +39,7 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
             //set the flagging that the loading cursor will show
             //ShowLoadingCursor = true;
             ShowLoadingCursor = true;
+            //Global.pintarDGV(ref this, Color.Black);
 
             //get the grid's content and save it to a Bitmap
             GetGridBodyAndSaveToImage();
@@ -52,6 +55,7 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
             DataSource = lista;
 
             //object arguments = lista;
+            if (DataThread.IsBusy) return;
             DataThread.RunWorkerAsync();
         }
 
@@ -90,7 +94,7 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
 
         private void DataThread_DoWork(object sender, DoWorkEventArgs e)
         {
-            Thread.Sleep(100);
+            Thread.Sleep(500);
             /*Invoke(new Action(() =>
             {
                 DataSource = (object)e.Argument;
@@ -103,16 +107,19 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
             while (ShowLoadingCursor)
             {
                 //calculate the angle of the animation
-                CurrentAngle += 45;
+                CurrentAngle += 20;
 
                 if (CurrentAngle > 360)
+                {
                     CurrentAngle = 0;
+                    changeColor = (changeColor) ? false : true;
+                }
 
                 //paint the animation
                 PaintLoadingCursor();
 
                 //animation effect/delay
-                Thread.Sleep(75);
+                Thread.Sleep(10);
             }
         }
 
@@ -125,10 +132,10 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
                 graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
                 //calculate the size and position of the cursor
-                int cursorSize = 30;
+                int cursorSize = 100;
                 int cursorX = (Width / 2) - (cursorSize / 2);
                 int cursorY = (Height / 2) - (cursorSize / 2);
-                int brushWidth = 6;
+                int brushWidth = 20;
 
                 //BUGFIX/WORKAROUND ======> pixelation
                 //I think it is because the loading cursor that we are painting has no reference color to blend with
@@ -136,29 +143,51 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
                 //So the workaround will be to paint an image which will serve as the base/background image so that
                 //the loading cursor will have a reference color to blend and remove the pixelation.
                 //It also serves as a way to show that the grids cells are disabled, because the data is loading.
-                int x = RowHeadersVisible ? RowHeadersWidth : 0;
-                int y = ColumnHeadersVisible ? ColumnHeadersHeight : 0;
-                graphics.DrawImage(GridCellsImageCopy, x, y);
+                //int x = RowHeadersVisible ? RowHeadersWidth : 0;
+                //int y = ColumnHeadersVisible ? ColumnHeadersHeight : 0;
+                //graphics.DrawImage(GridCellsImageCopy, x, y);
 
                 //draw base image
-                using (LinearGradientBrush brush = new LinearGradientBrush(ClientRectangle, Color.FromArgb(93, 93, 93), Color.FromArgb(0, 0, 255), LinearGradientMode.Vertical))
+                using (LinearGradientBrush brush = new LinearGradientBrush(ClientRectangle, Color.Transparent , Color.Transparent, LinearGradientMode.Vertical))
                 {
                     using (Pen pen = new Pen(brush, brushWidth))
                     {
-                        pen.DashStyle = DashStyle.Dot;
+                        pen.DashStyle = DashStyle.Solid;
                         graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, 0, 360);
                     }
                 }
 
-                //draw the animation effect
-                using (SolidBrush brush = new SolidBrush(Color.White))
+                if (changeColor)
                 {
-                    using (Pen pen = new Pen(brush, brushWidth))
+                    //draw the animation effect                
+                    using (SolidBrush brush = new SolidBrush(Color.White))
                     {
-                        pen.DashStyle = DashStyle.Dot;
-                        graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, CurrentAngle, 90);
+                        using (Pen pen = new Pen(brush, brushWidth))
+                        {
+                            pen.DashStyle = DashStyle.Solid;
+                            graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, CurrentAngle, 6);
+                        }
+                    }
+                } else
+                {
+                    using (SolidBrush brush = new SolidBrush(Color.DarkTurquoise))
+                    {
+                        using (Pen pen = new Pen(brush, brushWidth))
+                        {
+                            pen.DashStyle = DashStyle.Solid;
+                            graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, CurrentAngle, 6);
+                        }
                     }
                 }
+
+                //using (SolidBrush brush = new SolidBrush(Color.Black))
+                //{
+                //    using (Pen pen = new Pen(brush, brushWidth))
+                //    {
+                //        pen.DashStyle = DashStyle.Solid;
+                //        graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, CurrentAngle, 45);
+                //    }
+                //}
             }
         }
 
