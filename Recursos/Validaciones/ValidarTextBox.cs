@@ -71,21 +71,38 @@ namespace GGNoTeam_V5.Recursos.Validaciones
             //CASO 4
             if (cadenaGrande(box, msgCasoCantidadMaxima, cantidad) != 0) return 4;            
 
-            
-            /*
-            //CASO 2            
-            patron = "^[a-zA-Z]+(\\s[a-zA-Z])*$";
-            if (!Regex.IsMatch(box.Texts, patron))
-            {
-                MessageBox.Show(msgCasoInvalido);
-                return 2;
-            }
-            */
 
             return 0;
         }
 
-        
+
+        public static int alfaNumerico(GGNoTeam_V5.Recursos.UserControls.GGTextBox box, string Titulo, int cantMaxima)
+        {
+            string msgCasoVacio = Titulo + " no debe encontrarse vacía. Intente nuevamente.";
+            string msgCasoInvalido = Titulo + " tiene error. No debe contener caracteres especiales y tampoco iniciar con espacios en blancos.";
+            string msgCasoContieneNumeros = Titulo + " no debe contener números. Intente nuevamente.";
+            string msgCasoCantidadMaxima = Titulo + " no puede exceder el tamaño de " + cantMaxima + " caracteres.";
+
+            return alfaNumerico(box, msgCasoVacio, msgCasoInvalido, msgCasoContieneNumeros, msgCasoCantidadMaxima, cantMaxima);
+        }
+
+        public static int alfaNumerico(GGNoTeam_V5.Recursos.UserControls.GGTextBox box, string msgCasoVacio, string msgCasoInvalido, string msgCasoContieneNumeros, string msgCasoCantidadMaxima, int cantidad)
+        {
+            string patron = "";
+
+            string texto = box.Texts.Trim();
+            box.Texts = texto;
+
+            //CASO 1
+            if (cadenaVacia(box, msgCasoVacio) != 0) return 1;
+
+
+            //CASO 4
+            if (cadenaGrande(box, msgCasoCantidadMaxima, cantidad) != 0) return 4;
+
+            return 0;
+        }
+
         public static int inicioNormal(GGNoTeam_V5.Recursos.UserControls.GGTextBox box, string Titulo)
         {
             string patron;
