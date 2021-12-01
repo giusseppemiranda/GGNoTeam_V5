@@ -27,8 +27,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
             InitializeComponent();
             _daoInst = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
             originadores = originadoresParam;
-            dgvOriginadores.DataSource = originadores;
             dgvOriginadores.AutoGenerateColumns = false;
+            dgvOriginadores.DataSource = originadores;            
             instAux = frminst;
         }
 
