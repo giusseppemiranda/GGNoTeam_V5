@@ -37,7 +37,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.lblItinerario = new System.Windows.Forms.Label();
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.Contraseña = new System.Windows.Forms.Label();
-            this.lblValidación = new System.Windows.Forms.Label();
             this.boxID = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxCodigo = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxNombres = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
@@ -45,7 +44,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxCorreo = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxItinerario = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.boxContraseña = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
-            this.boxCodigoValidacion = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.comboBoxTipoUsuario = new GGNoTeam_V5.Recursos.UserControls.GGComboBox();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
@@ -142,17 +140,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.Contraseña.Size = new System.Drawing.Size(72, 15);
             this.Contraseña.TabIndex = 23;
             this.Contraseña.Text = "Contraseña:";
-            // 
-            // lblValidación
-            // 
-            this.lblValidación.AutoSize = true;
-            this.lblValidación.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblValidación.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblValidación.Location = new System.Drawing.Point(55, 435);
-            this.lblValidación.Name = "lblValidación";
-            this.lblValidación.Size = new System.Drawing.Size(106, 15);
-            this.lblValidación.TabIndex = 24;
-            this.lblValidación.Text = "Código validación:";
             // 
             // boxID
             // 
@@ -326,30 +313,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxContraseña.Texts = "";
             this.boxContraseña.UnderlinedStyle = true;
             // 
-            // boxCodigoValidacion
-            // 
-            this.boxCodigoValidacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxCodigoValidacion.BackColor = System.Drawing.SystemColors.Window;
-            this.boxCodigoValidacion.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.boxCodigoValidacion.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.boxCodigoValidacion.BorderSize = 2;
-            this.boxCodigoValidacion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.boxCodigoValidacion.ForeColor = System.Drawing.Color.DimGray;
-            this.boxCodigoValidacion.IsFocused = false;
-            this.boxCodigoValidacion.Location = new System.Drawing.Point(189, 423);
-            this.boxCodigoValidacion.MaxLength = 32767;
-            this.boxCodigoValidacion.Multiline = false;
-            this.boxCodigoValidacion.Name = "boxCodigoValidacion";
-            this.boxCodigoValidacion.Padding = new System.Windows.Forms.Padding(6);
-            this.boxCodigoValidacion.PasswordChar = false;
-            this.boxCodigoValidacion.Size = new System.Drawing.Size(214, 30);
-            this.boxCodigoValidacion.TabIndex = 34;
-            this.boxCodigoValidacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.boxCodigoValidacion.Texts = "";
-            this.boxCodigoValidacion.UnderlinedStyle = true;
-            // 
             // comboBoxTipoUsuario
             // 
             this.comboBoxTipoUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -385,7 +348,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Location = new System.Drawing.Point(321, 459);
+            this.btnSiguiente.Location = new System.Drawing.Point(319, 437);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(84, 47);
             this.btnSiguiente.TabIndex = 19;
@@ -405,7 +368,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(231, 459);
+            this.btnCancelar.Location = new System.Drawing.Point(229, 437);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 47);
             this.btnCancelar.TabIndex = 37;
@@ -465,7 +428,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 527);
+            this.ClientSize = new System.Drawing.Size(453, 505);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblIndicación);
@@ -473,7 +436,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.comboBoxTipoUsuario);
-            this.Controls.Add(this.boxCodigoValidacion);
             this.Controls.Add(this.boxContraseña);
             this.Controls.Add(this.boxItinerario);
             this.Controls.Add(this.boxCorreo);
@@ -481,7 +443,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.Controls.Add(this.boxNombres);
             this.Controls.Add(this.boxCodigo);
             this.Controls.Add(this.boxID);
-            this.Controls.Add(this.lblValidación);
             this.Controls.Add(this.Contraseña);
             this.Controls.Add(this.lblTipoUsuario);
             this.Controls.Add(this.lblItinerario);
@@ -510,7 +471,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
         private System.Windows.Forms.Label lblItinerario;
         private System.Windows.Forms.Label lblTipoUsuario;
         private System.Windows.Forms.Label Contraseña;
-        private System.Windows.Forms.Label lblValidación;
         private Recursos.UserControls.GGTextBox boxID;
         private Recursos.UserControls.GGTextBox boxCodigo;
         private Recursos.UserControls.GGTextBox boxNombres;
@@ -518,7 +478,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
         private Recursos.UserControls.GGTextBox boxCorreo;
         private Recursos.UserControls.GGTextBox boxItinerario;
         private Recursos.UserControls.GGTextBox boxContraseña;
-        private Recursos.UserControls.GGTextBox boxCodigoValidacion;
         private Recursos.UserControls.GGComboBox comboBoxTipoUsuario;
         private Recursos.UserControls.GGButton btnSiguiente;
         private Recursos.UserControls.GGButton btnCancelar;
