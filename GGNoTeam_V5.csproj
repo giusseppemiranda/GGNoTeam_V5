@@ -519,8 +519,8 @@
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\TrackingErrorvsAlfa\frmTrackingErrorvsAlfa.resx">
       <DependentUpon>frmTrackingErrorvsAlfa.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AccionesWS\AccionesWS1.wsdl" />
-    <None Include="Connected Services\AccionesWS\AccionesWS1.xsd">
+    <None Include="Connected Services\AccionesWS\AccionesWS.wsdl" />
+    <None Include="Connected Services\AccionesWS\AccionesWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AccionesWS\GGNoTeam_V5.AccionesWS.accion.datasource">
@@ -536,8 +536,8 @@
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS2.wsdl" />
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS2.xsd">
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS11.wsdl" />
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse.datasource">
@@ -639,8 +639,8 @@
     <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.verificarCredencialesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LoginWS\LoginWS11.wsdl" />
-    <None Include="Connected Services\LoginWS\LoginWS11.xsd">
+    <None Include="Connected Services\LoginWS\LoginWS.wsdl" />
+    <None Include="Connected Services\LoginWS\LoginWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.ejecucion.datasource">

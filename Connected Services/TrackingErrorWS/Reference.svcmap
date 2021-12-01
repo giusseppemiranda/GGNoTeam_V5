@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.0.16:8080/WebServices/TrackingErrorWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.236.140.237:8080/WebServices/TrackingErrorWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TrackingErrorWS1.xsd" MetadataType="Schema" ID="65e41fce-959e-4314-9945-725bc39adad6" SourceId="1" SourceUrl="http://192.168.0.16:8080/WebServices/TrackingErrorWS?xsd=1" />
-    <MetadataFile FileName="TrackingErrorWS1.wsdl" MetadataType="Wsdl" ID="f3f1dd4e-813d-41ab-a819-3bff896bed75" SourceId="1" SourceUrl="http://192.168.0.16:8080/WebServices/TrackingErrorWS?WSDL" />
+    <MetadataFile FileName="TrackingErrorWS1.wsdl" MetadataType="Wsdl" ID="eea378e0-91fa-4c6f-8330-dcd1f844dbcd" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/TrackingErrorWS?WSDL" />
+    <MetadataFile FileName="TrackingErrorWS1.xsd" MetadataType="Schema" ID="d51a1b2d-dc7f-45c5-be80-5ee634dd306e" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/TrackingErrorWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -2,20 +2,20 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservices.sist.afp.ggNoTeam/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="TareasDiariasWS" targetNamespace="http://webservices.sist.afp.ggNoTeam/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://192.168.0.16:8080/WebServices/TareasDiariasWS?xsd=1" namespace="http://webservices.sist.afp.ggNoTeam/" />
+      <xsd:import schemaLocation="http://54.236.140.237:8080/WebServices/TareasDiariasWS?xsd=1" namespace="http://webservices.sist.afp.ggNoTeam/" />
     </xsd:schema>
   </types>
-  <message name="eliminarTarea">
-    <part name="parameters" element="tns:eliminarTarea" />
-  </message>
-  <message name="eliminarTareaResponse">
-    <part name="parameters" element="tns:eliminarTareaResponse" />
-  </message>
   <message name="insertarTarea">
     <part name="parameters" element="tns:insertarTarea" />
   </message>
   <message name="insertarTareaResponse">
     <part name="parameters" element="tns:insertarTareaResponse" />
+  </message>
+  <message name="eliminarTarea">
+    <part name="parameters" element="tns:eliminarTarea" />
+  </message>
+  <message name="eliminarTareaResponse">
+    <part name="parameters" element="tns:eliminarTareaResponse" />
   </message>
   <message name="modificarTarea">
     <part name="parameters" element="tns:modificarTarea" />
@@ -30,13 +30,13 @@
     <part name="parameters" element="tns:listarTareasPorEstadoPorItinerarioResponse" />
   </message>
   <portType name="TareasDiariasWS">
-    <operation name="eliminarTarea">
-      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaRequest" message="tns:eliminarTarea" />
-      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaResponse" message="tns:eliminarTareaResponse" />
-    </operation>
     <operation name="insertarTarea">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaRequest" message="tns:insertarTarea" />
       <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/insertarTareaResponse" message="tns:insertarTareaResponse" />
+    </operation>
+    <operation name="eliminarTarea">
+      <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaRequest" message="tns:eliminarTarea" />
+      <output wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/eliminarTareaResponse" message="tns:eliminarTareaResponse" />
     </operation>
     <operation name="modificarTarea">
       <input wsam:Action="http://webservices.sist.afp.ggNoTeam/TareasDiariasWS/modificarTareaRequest" message="tns:modificarTarea" />
@@ -49,7 +49,7 @@
   </portType>
   <binding name="TareasDiariasWSPortBinding" type="tns:TareasDiariasWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarTarea">
+    <operation name="insertarTarea">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarTarea">
+    <operation name="eliminarTarea">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -88,7 +88,7 @@
   </binding>
   <service name="TareasDiariasWS">
     <port name="TareasDiariasWSPort" binding="tns:TareasDiariasWSPortBinding">
-      <soap:address location="http://192.168.0.16:8080/WebServices/TareasDiariasWS" />
+      <soap:address location="http://54.236.140.237:8080/WebServices/TareasDiariasWS" />
     </port>
   </service>
 </definitions>

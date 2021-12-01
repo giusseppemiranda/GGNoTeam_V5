@@ -50,9 +50,8 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
         }
 
         public void setDataSource1(object lista)
-        {                        
-
-            //dataSource1 = lista;
+        {            
+            dataSource1 = lista;
             DataSource = lista;
 
             //object arguments = lista;

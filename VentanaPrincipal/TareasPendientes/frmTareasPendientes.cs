@@ -284,7 +284,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
                     }
             }
             actualizarBotones();
-            dgvTareasPendientes.setDataSource1(tareas);
+            dgvTareasPendientes.setDataSource1(new BindingList<TareasDiariasWS.tarea>(tareas.ToList()));
             cargarNombresAutores();
             this.Cursor = Cursors.Default;
         }

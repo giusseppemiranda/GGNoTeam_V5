@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.0.16:8080/WebServices/GestionInstOrigWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.236.140.237:8080/WebServices/GestionInstOrigWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionInstOrigWS2.xsd" MetadataType="Schema" ID="c6c400e8-6415-41fa-b4cb-c1ca2021e591" SourceId="1" SourceUrl="http://192.168.0.16:8080/WebServices/GestionInstOrigWS?xsd=1" />
-    <MetadataFile FileName="GestionInstOrigWS2.wsdl" MetadataType="Wsdl" ID="f1a689d3-1ba9-4567-9ede-63c6a282e317" SourceId="1" SourceUrl="http://192.168.0.16:8080/WebServices/GestionInstOrigWS?WSDL" />
+    <MetadataFile FileName="GestionInstOrigWS11.wsdl" MetadataType="Wsdl" ID="9d26193e-672e-4851-97bd-6bca93767d9e" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/GestionInstOrigWS?WSDL" />
+    <MetadataFile FileName="GestionInstOrigWS11.xsd" MetadataType="Schema" ID="c0c4e0ce-208a-415d-b158-3b600a196957" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/GestionInstOrigWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

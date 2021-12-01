@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="5LkuECI/goOmX2/cNJI+D105aSWX0Qi2YGfB3YpubnQ=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="d18NFfgK3kgkDdR4hintIz+h4hYz+R3At40Rr/Cb9NA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="LoginWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="LoginWSPort" contract="LoginWS.LoginWS" bindingType="basicHttpBinding" address="http://192.168.0.16:8080/WebServices/LoginWS" bindingConfiguration="LoginWSPortBinding">
+    <endpoint name="LoginWSPort" contract="LoginWS.LoginWS" bindingType="basicHttpBinding" address="http://54.236.140.237:8080/WebServices/LoginWS" bindingConfiguration="LoginWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://192.168.0.16:8080/WebServices/LoginWS</serializedValue>
+          <serializedValue>http://54.236.140.237:8080/WebServices/LoginWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
