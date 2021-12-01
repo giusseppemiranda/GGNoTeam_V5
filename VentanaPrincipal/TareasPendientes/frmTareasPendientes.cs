@@ -26,23 +26,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private LoginWS.persona personaAux;
         private LoginWS.persona adminAux;
         private TareasDiariasWS.tarea tareaAdmin;
-        //public frmTareasPendientes(frmPrincipal ventana, LoginWS.persona persona)
-        //{
-        //    InitializeComponent();
-        //    cargarCombo();
-        //    cambiarTema();
-        //    ventanaPadre = ventana;
-        //    ventanaPadre.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
-
-        //    _daoTareasDiarias = new TareasDiariasWS.TareasDiariasWSClient();
-        //    _daoPersona = new LoginWS.LoginWSClient();
-        //    user = _daoPersona.listarPorCodExacto(Int32.Parse(persona.codigo))[0];
-        //    accionAdmin = true;
-
-        //    cargarLabelInicial();
-        //    cargarDatosPorTipoUsuario();
-        //    pintarDGVInicial();
-        //}
+        
 
         public frmTareasPendientes(LoginWS.persona persona, LoginWS.persona admin)
         {
@@ -192,42 +176,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             msg.To.Add(user.correo);
             servidorCliente server = new servidorCliente();
             server.sendMessage(msg);
-        }
-
-        //private void btnListarPorTipo_Click(object sender, EventArgs e)
-        //{
-
-        //    dgvTareasPendientes.Rows.Clear();
-        //    if (listarCompletos)
-        //    {
-        //        user = _daoPersona.listarPorCodExacto_TareasCompletas(Int32.Parse(user.codigo))[0];
-        //        if (user.itinerario.listaTarea != null)
-        //        {
-        //            for (int i = 0; i < user.itinerario.listaTarea.Length; i++)
-        //            {
-        //                dgvTareasPendientes.Rows.Add(user.itinerario.listaTarea[i].idTarea, "Completo", user.itinerario.listaTarea[i].descripcion);
-        //            }                    
-        //        }
-        //        listarCompletos = false;
-        //        btnListarPorTipo.Text = "Listar Incompletos";
-        //        btnListarPorTipo.IconChar = FontAwesome.Sharp.IconChar.Times;
-        //    }
-        //    else
-        //    {
-        //        user = _daoPersona.listarPorCodExacto_TareasInompletas(Int32.Parse(user.codigo))[0];
-        //        if (user.itinerario.listaTarea != null)
-        //        {
-        //            for (int i = 0; i < user.itinerario.listaTarea.Length; i++)
-        //            {
-        //                dgvTareasPendientes.Rows.Add(user.itinerario.listaTarea[i].idTarea, "Incompleto", user.itinerario.listaTarea[i].descripcion);
-        //            }                    
-        //        }
-        //        listarCompletos = true;
-        //        btnListarPorTipo.Text = "Listar Completos";
-        //        btnListarPorTipo.IconChar = FontAwesome.Sharp.IconChar.Check;
-        //    }
-
-        //}
+        }        
 
         private void ActualizarPerdidas()
         {
@@ -285,7 +234,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             }
             actualizarBotones();
             dgvTareasPendientes.setDataSource1(tareas);
-
+            user = _daoPersona.buscarPersonaCodigoExacto(user.codigo);
 
             cargarNombresAutores();
             this.Cursor = Cursors.Default;

@@ -160,7 +160,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                 for (int i = 0; i < tareas.Length; i++)
                 {
                     dt = Convert.ToDateTime(tareas[i].fechaLimite.Replace("-", "/"));
-                    if (DateTime.Compare(dt, DateTime.Now) < 0)
+                    if (DateTime.Compare(dt.AddDays(1), DateTime.Now) < 0)
                     {
                         tareas[i].estado = 2;
                         if (!tareas[i].descripcion.Contains("COMPLETO"))
