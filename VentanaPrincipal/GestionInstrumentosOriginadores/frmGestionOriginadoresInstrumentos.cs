@@ -183,7 +183,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = orig.nombreOriginador;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[3].Value = orig.sectorGics;
                     }
-                    catch (Exception ex) { }
+                    catch (Exception ) { }
                     break;
 
                 case "Instrumento":
@@ -209,7 +209,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[15].Value = inst.fechaMoodys;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[16].Value = inst.fechaUltimaClasificacion;
                     }
-                    catch (Exception ex) { }
+                    catch (Exception ) { }
                     break;
 
                 case "Emisor":
@@ -220,7 +220,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[1].Value = emi.codigoEmisor;
                         dgvInstrumentosOriginadores.Rows[e.RowIndex].Cells[2].Value = emi.nombre;
                     }
-                    catch (Exception ex) { }
+                    catch (Exception ) { }
                     break;
             }
 
@@ -278,7 +278,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores
 
                     case "Emisor":
                         {
-                            if (dgvInstrumentosOriginadores.CurrentRow.Index != null)
+                            if (dgvInstrumentosOriginadores.CurrentRow != null)
                             {
                                 frmRegistroEmisor registrarinst = new frmRegistroEmisor(emisores[dgvInstrumentosOriginadores.CurrentRow.Index]);
                                 registrarinst.ShowDialog();
