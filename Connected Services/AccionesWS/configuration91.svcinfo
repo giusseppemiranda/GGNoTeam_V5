@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="EDPH45rnGtMV0HWNgWlKcj3bc4QJnoYU17RHUN5Y53o=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="FijgiK35iH1pigpyzFL8YzeqCF6TI3q2kInmEYzbiIU=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="AccionesWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="AccionesWSPort" contract="AccionesWS.AccionesWS" bindingType="basicHttpBinding" address="http://54.236.140.237:8080/WebServices/AccionesWS" bindingConfiguration="AccionesWSPortBinding">
+    <endpoint name="AccionesWSPort" contract="AccionesWS.AccionesWS" bindingType="basicHttpBinding" address="http://192.168.0.16:8080/WebServices/AccionesWS" bindingConfiguration="AccionesWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.236.140.237:8080/WebServices/AccionesWS</serializedValue>
+          <serializedValue>http://192.168.0.16:8080/WebServices/AccionesWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

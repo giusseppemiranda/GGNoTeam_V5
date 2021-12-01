@@ -57,6 +57,7 @@ namespace GGNoTeam_V5
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            txtboxPassword.Texts = txtboxPassword.Texts.Trim();
             String usuario = txtboxUsername.Texts.ToString();
             String password = txtboxPassword.Texts.ToString();
 
@@ -73,7 +74,7 @@ namespace GGNoTeam_V5
         {
             bool usuarioValido = false;
             lblCredencialesIncorrectas.Visible = false;
-            int validarCredenciales = -1;
+            int validarCredenciales;
             validarCredenciales = _daoLogin.verificarCredenciales(user, password);
             if(validarCredenciales == 1)
             {

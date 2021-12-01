@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.236.140.237:8080/WebServices/AccionesWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.0.16:8080/WebServices/AccionesWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AccionesWS.xsd" MetadataType="Schema" ID="dd688f74-daaa-4b60-8250-41d9a2b8c13e" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/AccionesWS?xsd=1" />
-    <MetadataFile FileName="AccionesWS.wsdl" MetadataType="Wsdl" ID="e6aedc1d-adac-4042-8e3f-4a8165663dfc" SourceId="1" SourceUrl="http://54.236.140.237:8080/WebServices/AccionesWS?WSDL" />
+    <MetadataFile FileName="AccionesWS1.xsd" MetadataType="Schema" ID="780beefd-bee8-44ac-9cac-9ec8fb89222c" SourceId="1" SourceUrl="http://192.168.0.16:8080/WebServices/AccionesWS?xsd=1" />
+    <MetadataFile FileName="AccionesWS1.wsdl" MetadataType="Wsdl" ID="6dd3fd97-2c95-4de5-9bc0-bf7b0f8423de" SourceId="1" SourceUrl="http://192.168.0.16:8080/WebServices/AccionesWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
