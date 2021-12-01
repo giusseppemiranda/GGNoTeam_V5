@@ -24,7 +24,7 @@ namespace GGNoTeam_V5.Recursos.sendMail
             try
             {
                 cliente.Send(msg);
-                MessageBox.Show("El mensaje se ha enviado correctamente.");
+                //MessageBox.Show("El mensaje se ha enviado correctamente.");
             }
             catch (Exception)
             {
