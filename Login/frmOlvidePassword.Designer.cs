@@ -165,7 +165,7 @@ namespace GGNoTeam_V5.Login
             this.txtboxUser.TabIndex = 17;
             this.txtboxUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtboxUser.Texts = "";
-            this.txtboxUser.UnderlinedStyle = true;            
+            this.txtboxUser.UnderlinedStyle = true;
             this.txtboxUser.Enter += new System.EventHandler(this.txtboxUser_Enter);
             this.txtboxUser.Leave += new System.EventHandler(this.txtboxUser_Leave);
             // 
@@ -196,9 +196,9 @@ namespace GGNoTeam_V5.Login
             this.lblIDCorreo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblIDCorreo.Location = new System.Drawing.Point(30, 316);
             this.lblIDCorreo.Name = "lblIDCorreo";
-            this.lblIDCorreo.Size = new System.Drawing.Size(143, 15);
+            this.lblIDCorreo.Size = new System.Drawing.Size(167, 15);
             this.lblIDCorreo.TabIndex = 19;
-            this.lblIDCorreo.Text = "Ingrese su ID de usuario:";            
+            this.lblIDCorreo.Text = "Ingrese su código de usuario:";
             // 
             // btnCancelar
             // 
@@ -228,10 +228,10 @@ namespace GGNoTeam_V5.Login
             this.lblUsuarioNoEncontrado.Location = new System.Drawing.Point(30, 367);
             this.lblUsuarioNoEncontrado.MaximumSize = new System.Drawing.Size(214, 43);
             this.lblUsuarioNoEncontrado.Name = "lblUsuarioNoEncontrado";
-            this.lblUsuarioNoEncontrado.Size = new System.Drawing.Size(153, 15);
+            this.lblUsuarioNoEncontrado.Size = new System.Drawing.Size(177, 15);
             this.lblUsuarioNoEncontrado.TabIndex = 21;
-            this.lblUsuarioNoEncontrado.Text = "El ID ingresado no existen.";
-            this.lblUsuarioNoEncontrado.Visible = false;            
+            this.lblUsuarioNoEncontrado.Text = "El código ingresado no existen.";
+            this.lblUsuarioNoEncontrado.Visible = false;
             // 
             // frmOlvidePassword
             // 
@@ -250,7 +250,7 @@ namespace GGNoTeam_V5.Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOlvidePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmOlvidePassword";            
+            this.Text = "frmOlvidePassword";
             this.panelControl.ResumeLayout(false);
             this.panelControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAFPIntegra)).EndInit();

@@ -185,9 +185,9 @@ namespace GGNoTeam_V5
             this.lblUser.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblUser.Location = new System.Drawing.Point(27, 208);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(66, 15);
+            this.lblUser.Size = new System.Drawing.Size(91, 15);
             this.lblUser.TabIndex = 15;
-            this.lblUser.Text = "ID usuario:";
+            this.lblUser.Text = "Código usuario:";
             // 
             // lblPasswordOlvidada
             // 
