@@ -144,7 +144,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                         break;
                     }
             }
-            dgvTareasPendientes.setDataSource1(new BindingList<TareasDiariasWS.tarea>(tareas.ToList()));
+            dgvTareasPendientes.setDataSource1(tareas);
             cargarNombresAutores();
             this.Cursor = Cursors.Default;
         }
