@@ -20,8 +20,7 @@ namespace GGNoTeam_V5
     public partial class frmLogin : Form
     {
 
-        private LoginWS.LoginWSClient _daoLogin;
-        private LoginWS.persona persona;
+        private LoginWS.LoginWSClient _daoLogin;        
 
         public frmLogin()
         {

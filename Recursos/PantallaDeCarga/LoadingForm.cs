@@ -12,8 +12,7 @@ namespace GGNoTeam_V5.Recursos
 {
     public partial class LoadingForm : Form
     {
-
-        LoadingForm load;
+        
         
         public LoadingForm()
         {

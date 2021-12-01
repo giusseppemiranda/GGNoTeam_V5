@@ -254,11 +254,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             m = 0;
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panelControl_MouseDown(object sender, MouseEventArgs e)
         {
             m = 1;

@@ -36,6 +36,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.btnCancelar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnSiguiente = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblRegistroEmisor = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // boxNombreEmisor
@@ -159,11 +160,24 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             this.lblRegistroEmisor.TabIndex = 62;
             this.lblRegistroEmisor.Text = "Registro emisor";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(420, 20);
+            this.panel1.TabIndex = 63;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
             // frmRegistroEmisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 242);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblRegistroEmisor);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSiguiente);
@@ -189,5 +203,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
         private Recursos.UserControls.GGButton btnCancelar;
         private Recursos.UserControls.GGButton btnSiguiente;
         private System.Windows.Forms.Label lblRegistroEmisor;
+        private System.Windows.Forms.Panel panel1;
     }
 }

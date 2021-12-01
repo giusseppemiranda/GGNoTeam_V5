@@ -32,21 +32,13 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
 
         public void comenzarHilo()
         {
-            //MessageBox.Show("HOLA");
-            //BUGFIX ======> if one of the threads is running stop the execution
             if (AnimationThread.IsBusy || DataThread.IsBusy) return;
 
-            //set the flagging that the loading cursor will show
-            //ShowLoadingCursor = true;
             ShowLoadingCursor = true;
-            //Global.pintarDGV(ref this, Color.Black);
 
-            //get the grid's content and save it to a Bitmap
             GetGridBodyAndSaveToImage();
 
-            //start the animation of cursor
             AnimationThread.RunWorkerAsync();
-
         }
 
         public void setDataSource1(object lista)
@@ -54,7 +46,6 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
             dataSource1 = lista;
             DataSource = lista;
 
-            //object arguments = lista;
             if (DataThread.IsBusy) return;
             DataThread.RunWorkerAsync();
         }
@@ -124,38 +115,15 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
         }
 
         private void PaintLoadingCursor()
-        {
-            //get the graphics object of the datagridview
+        {       
             using (Graphics graphics = CreateGraphics())
             {
-                //remove pixelation
                 graphics.SmoothingMode = SmoothingMode.AntiAlias;                
 
-                //calculate the size and position of the cursor
                 int cursorSize = 100;
                 int cursorX = (Width / 2) - (cursorSize / 2);
                 int cursorY = (Height / 2) - (cursorSize / 2);
                 int brushWidth = 20;
-
-                //BUGFIX/WORKAROUND ======> pixelation
-                //I think it is because the loading cursor that we are painting has no reference color to blend with
-                //since it is like a floating image on top of the DataGrid, thats why there is still a pixelation.
-                //So the workaround will be to paint an image which will serve as the base/background image so that
-                //the loading cursor will have a reference color to blend and remove the pixelation.
-                //It also serves as a way to show that the grids cells are disabled, because the data is loading.
-                //int x = RowHeadersVisible ? RowHeadersWidth : 0;
-                //int y = ColumnHeadersVisible ? ColumnHeadersHeight : 0;
-                //graphics.DrawImage(GridCellsImageCopy, x, y);
-
-                //draw base image
-                //using (LinearGradientBrush brush = new LinearGradientBrush(ClientRectangle, Color.Transparent , Color.Transparent, LinearGradientMode.Vertical))
-                //{
-                //    using (Pen pen = new Pen(brush, brushWidth))
-                //    {
-                //        pen.DashStyle = DashStyle.Solid;
-                //        graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, 0, 360);
-                //    }
-                //}
 
                 if (changeColor)
                 {
@@ -179,46 +147,35 @@ namespace GGNoTeam_V5.Recursos.CustomDGV
                         }
                     }
                 }
-
-                //using (SolidBrush brush = new SolidBrush(Color.Black))
-                //{
-                //    using (Pen pen = new Pen(brush, brushWidth))
-                //    {
-                //        pen.DashStyle = DashStyle.Solid;
-                //        graphics.DrawArc(pen, cursorX, cursorY, cursorSize, cursorSize, CurrentAngle, 45);
-                //    }
-                //}
             }
         }
 
         private void GetGridBodyAndSaveToImage()
         {
-            //get the rectangle of the DataGridView in the Screen (not in the form) or the actual position of the
-            //DataGridView in the Screen monitor
+
             GetWindowRect(Handle, out GridRectangle);
 
-            //calculate the dimension of the bitmap and create it
+
             int rowHeadsWidth = RowHeadersVisible ? RowHeadersWidth : 0;
             int columnHeadsHeight = ColumnHeadersVisible ? ColumnHeadersHeight : 0;
             int width = Width - rowHeadsWidth - 1;
             int height = Height - columnHeadsHeight - 1;
             GridCellsImageCopy = new Bitmap(width, height);
 
-            //copy the DataGrids content to the bitmap but don't include the rowheader and columnheader
+
             using (Graphics bitmapGraphics = Graphics.FromImage(GridCellsImageCopy))
             {
                 bitmapGraphics.CopyFromScreen(GridRectangle.Left + rowHeadsWidth, GridRectangle.Top + columnHeadsHeight,
                     0, 0, new Size(GridRectangle.Width, GridRectangle.Height), CopyPixelOperation.SourceCopy);
             }
 
-            //make the image grayscale only if the grid cells are not empty
+
             if (Rows.Count > 0)
                 GridCellsImageCopy = (Bitmap)ToolStripRenderer.CreateDisabledImage(GridCellsImageCopy);
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            //disable the painting of the DataGridView when the loading cursor is showing
             if (ShowLoadingCursor) return;
 
             base.OnPaint(e);

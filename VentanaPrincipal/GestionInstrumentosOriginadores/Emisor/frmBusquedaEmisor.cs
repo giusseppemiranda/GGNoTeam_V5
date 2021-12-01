@@ -16,6 +16,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
         private frmRegistroOriginador origAux;
         private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoOrig;
         private GestionInstrumentosOriginadoresWS.emisor[] emisoresAux;
+        private int m, mx, my;
+
         public frmBusquedaEmisor()
         {
             InitializeComponent();
@@ -48,5 +50,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
             dgvEmisores.Rows[e.RowIndex].Cells[0].Value = emi.codigoEmisor;
             dgvEmisores.Rows[e.RowIndex].Cells[1].Value = emi.nombre;
         }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+
     }
 }

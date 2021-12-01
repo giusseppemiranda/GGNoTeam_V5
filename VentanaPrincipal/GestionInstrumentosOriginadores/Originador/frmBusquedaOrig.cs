@@ -16,6 +16,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         private frmRegistroInstrumento instAux;
         private GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient _daoInst;
         private GestionInstrumentosOriginadoresWS.originador[] originadores;
+        private int m, mx, my;
+
         public frmBusquedaOrig()
         {
             InitializeComponent();
@@ -53,6 +55,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         private void cerrar()
         {
             this.Dispose();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
         }
     }
 }

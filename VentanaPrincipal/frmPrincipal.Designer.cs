@@ -269,7 +269,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Visible = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             this.btnMenu.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.btnMenu.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             // 

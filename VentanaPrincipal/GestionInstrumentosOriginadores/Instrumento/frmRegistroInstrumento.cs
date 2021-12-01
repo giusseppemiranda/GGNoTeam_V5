@@ -1,4 +1,5 @@
-﻿using GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originador;
+﻿using GGNoTeam_V5.Recursos.Validaciones;
+using GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -156,8 +157,22 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             this.Dispose();
         }
 
+
+        //true si hay errores
+        //false si no tiene errores
+        private bool validaciones()
+        {
+            int valido = -1;
+
+            //valido = ValidarTextBox.alfaNumerico
+            if (valido != 0) return true;
+
+            return false;
+        }
+
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            if (validaciones()) return;
             Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
             Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
             instAux.codigoSBS = boxcodSBS.Texts;

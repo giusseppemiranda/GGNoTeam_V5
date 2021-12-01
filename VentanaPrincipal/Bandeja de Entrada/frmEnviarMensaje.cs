@@ -19,6 +19,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
         private MailMessage msg;
         private string correoDestinatario;
         private LoginWS.persona emisor;
+        private int m, mx, my;
         public frmEnviarMensaje(LoginWS.persona destinatario, LoginWS.persona emisor)
         {
             InitializeComponent();
@@ -167,5 +168,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
                 txtBoxAsunto.Texts = "Asunto";
             }
         }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+        
     }
 }

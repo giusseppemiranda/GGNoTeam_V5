@@ -33,9 +33,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
             this.txtBoxAsunto = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEnviar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
+            this.btnEnviar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.btnAdjuntarArchivo = new FontAwesome.Sharp.IconButton();
             this.btnAdjuntarImagen = new FontAwesome.Sharp.IconButton();
             this.btnDeleteMessage = new FontAwesome.Sharp.IconButton();
@@ -99,6 +99,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -106,26 +107,9 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 25);
             this.panel1.TabIndex = 3;
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEnviar.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEnviar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEnviar.BorderRadius = 8;
-            this.btnEnviar.BorderSize = 0;
-            this.btnEnviar.FlatAppearance.BorderSize = 0;
-            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(12, 390);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(128, 44);
-            this.btnEnviar.TabIndex = 18;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.TextColor = System.Drawing.Color.White;
-            this.btnEnviar.UseVisualStyleBackColor = false;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // lblTitulo
             // 
@@ -157,6 +141,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnEnviar.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnEnviar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEnviar.BorderRadius = 8;
+            this.btnEnviar.BorderSize = 0;
+            this.btnEnviar.FlatAppearance.BorderSize = 0;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEnviar.ForeColor = System.Drawing.Color.White;
+            this.btnEnviar.Location = new System.Drawing.Point(12, 390);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(128, 44);
+            this.btnEnviar.TabIndex = 18;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.TextColor = System.Drawing.Color.White;
+            this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // btnAdjuntarArchivo
             // 
