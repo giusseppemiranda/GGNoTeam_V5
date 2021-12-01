@@ -9,6 +9,7 @@ using GGNoTeam_V5.Recursos.sendMail;
 using GGNoTeam_V5.VentanaPrincipal.Bandeja_de_Entrada;
 using GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas;
 using GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes;
+using GGNoTeam_V5.VentanaPrincipal.Log;
 
 namespace GGNoTeam_V5.VentanaPrincipal
 {
@@ -88,6 +89,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             Global.pintarControlBoxOscuro(ref panelControl, ref lblTitulo, ref btnCerrar, ref btnMinimizar, ref btnTemaOscuro);
             lblUser.ForeColor = lblTitulo.ForeColor;
             Global.pintarMenuNavegacionOscuro(ref panelMenu, ref btnMenu, ref btnSignOut, ref btnUsuarios, ref btnHome, ref btnTEALPHA, ref btnMonitoreoOrdenes, ref btnOriginadorInstrumento, ref btnBandejaEntrada);
+            Global.pintarBotonMenuOscuro(ref btnLog);
             if (iconoActivo != null)
             {
                 iconoActivo.BackColor = this.BackColor;
@@ -101,6 +103,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             Global.pintarControlBoxClaro(ref panelControl, ref lblTitulo, ref btnCerrar, ref btnMinimizar, ref btnTemaOscuro);
             lblUser.ForeColor = lblTitulo.ForeColor;
             Global.pintarMenuNavegacionClaro(ref panelMenu, ref btnMenu, ref btnSignOut, ref btnUsuarios, ref btnHome, ref btnTEALPHA, ref btnMonitoreoOrdenes, ref btnOriginadorInstrumento, ref btnBandejaEntrada);
+            Global.pintarBotonMenuClaro(ref btnLog);
             if (iconoActivo != null)
             {
                 iconoActivo.BackColor = this.BackColor;
@@ -202,6 +205,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             btnMonitoreoOrdenes.Text = btnMonitoreoOrdenes.Tag.ToString();
             btnOriginadorInstrumento.Text = btnOriginadorInstrumento.Tag.ToString();
             btnBandejaEntrada.Text = btnBandejaEntrada.Tag.ToString();
+            btnLog.Text = btnLog.Tag.ToString();
         }
 
         private void btnHome_MouseLeave(object sender, EventArgs e)
@@ -214,7 +218,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             btnMonitoreoOrdenes.Text = "";
             btnOriginadorInstrumento.Text = "";
             btnBandejaEntrada.Text = "";
-
+            btnLog.Text = "";
         }
 
         private void btnMonitoreoOrdenes_Click(object sender, EventArgs e)
@@ -247,6 +251,14 @@ namespace GGNoTeam_V5.VentanaPrincipal
             {
                 this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
             }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmLog(this));
+            cambiarTemaIconosMenu(ref iconoActivo);
+            iconoActivo = btnOriginadorInstrumento;
+            iconoActivo.BackColor = this.BackColor;
         }
 
         private void panelControl_MouseUp(object sender, MouseEventArgs e)

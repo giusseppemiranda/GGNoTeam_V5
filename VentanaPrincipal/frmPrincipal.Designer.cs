@@ -45,6 +45,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnTEALPHA = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
+            this.btnLog = new FontAwesome.Sharp.IconButton();
             this.panelControl.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -176,6 +177,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Silver;
+            this.panelMenu.Controls.Add(this.btnLog);
             this.panelMenu.Controls.Add(this.btnBandejaEntrada);
             this.panelMenu.Controls.Add(this.btnOriginadorInstrumento);
             this.panelMenu.Controls.Add(this.btnMonitoreoOrdenes);
@@ -332,6 +334,26 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnHome.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             // 
+            // btnLog
+            // 
+            this.btnLog.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLog.FlatAppearance.BorderSize = 0;
+            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLog.IconChar = FontAwesome.Sharp.IconChar.ShieldAlt;
+            this.btnLog.IconColor = System.Drawing.Color.Black;
+            this.btnLog.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLog.IconSize = 24;
+            this.btnLog.Location = new System.Drawing.Point(0, 301);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(43, 43);
+            this.btnLog.TabIndex = 33;
+            this.btnLog.Tag = "Log de acciones realizada";
+            this.btnLog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnLog.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
+            this.btnLog.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,5 +392,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private FontAwesome.Sharp.IconButton btnHome;
         private System.Windows.Forms.Label lblUser;
+        private FontAwesome.Sharp.IconButton btnLog;
     }
 }
