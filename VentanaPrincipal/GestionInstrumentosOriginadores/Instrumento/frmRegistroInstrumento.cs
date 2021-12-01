@@ -164,8 +164,41 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
         {
             int valido = -1;
 
-            //valido = ValidarTextBox.alfaNumerico
+            valido = ValidarTextBox.alfaNumerico(boxcodSBS, "El código SBS", 45);
             if (valido != 0) return true;
+
+            valido = ValidarTextBox.alfaNumerico(boxcodISIN, "El código ISIN", 45);
+            if (valido != 0) return true;
+
+            valido = ValidarTextBox.alfaNumerico(boxID059, "El ID-059", 45);
+            if (valido != 0) return true;
+
+            valido = ValidarTextBox.alfaNumerico(boxClasificacionLocal, "La clasificación local", 10);
+            if (valido != 0) return true;
+
+            valido = ValidarTextBox.alfaNumerico(boxRatingEncaje, "El rating encaje", 10);
+            if (valido != 0) return true;
+
+            valido = ValidarTextBox.alfaNumerico(boxRatingEncajeSistema, "El rating encaje de Sistema", 10);
+            if (valido != 0) return true;
+
+            valido = ValidarTextBox.NumeroEntero(boxMoody, "Moddys", 3);
+            if (valido != 0) return true;
+
+            valido = ValidarTextBox.NumeroEntero(boxScore, "Score", 3);
+            if (valido != 0) return true;
+
+            valido = ValidarTextBox.alfaNumerico(boxRatingUnificado, "El rating unificado", 10);
+            if (valido != 0) return true;
+
+            valido = ValidarTextBox.PuntoFlotante(boxFactorRiesgo, "El factor de riesgo");
+            if (valido != 0) return true;
+
+            if(Convert.ToDouble(boxFactorRiesgo)< 0 && Convert.ToDouble(boxFactorRiesgo) > 1)
+            {
+                MessageBox.Show("Factor Riesgo debe encontrarse entre 0 y 1");
+                return true;
+            }
 
             return false;
         }
