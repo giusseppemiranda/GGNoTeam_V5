@@ -285,6 +285,8 @@ namespace GGNoTeam_V5.VentanaPrincipal
             }
             actualizarBotones();
             dgvTareasPendientes.setDataSource1(tareas);
+
+
             cargarNombresAutores();
             this.Cursor = Cursors.Default;
         }
