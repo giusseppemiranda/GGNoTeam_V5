@@ -83,15 +83,13 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
 
         private void btnConsultarRegistros_Click(object sender, System.EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+            dgvDataValorCuota.comenzarHilo();
             datos = _dao.ListarPorFechaPorFondoDataValorCuota(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"), comboFondo.SelectedIndex + 1);
-            if (datos != null)
-            {
-                dgvDataValorCuota.DataSource = datos;
-            }
-            else
-            {
-                dgvDataValorCuota.DataSource = null;
-            }
+
+            dgvDataValorCuota.setDataSource1(datos);
+
+            this.Cursor = Cursors.Default;
         }
 
         private void btnEliminarRegistro_Click(object sender, System.EventArgs e)

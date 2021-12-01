@@ -58,7 +58,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             user = persona;            
             adminAux = admin;            
             dgvTareasPendientes.AutoGenerateColumns = false;
-            
+            btnEliminar.Visible = false;
             cargarLabelInicial();
             pintarDGVInicial();
             cargarSubTema();            
@@ -156,6 +156,12 @@ namespace GGNoTeam_V5.VentanaPrincipal
                     if (validez == 1)
                     {
                         MessageBox.Show("La tarea ha sido eliminada con éxito");
+                        Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                        Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                        Program.acccionGlobal.idObjeto = idTarea;
+                        Program.acccionGlobal.tablaReferenciada = "Tarea";
+                        Program.acccionGlobal.tipoAccion = "Eliminar";
+                        Program._daoAcciones.insertarAccion(Program.acccionGlobal);
                     }
                     else
                     {
@@ -172,7 +178,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             {
                 if (adminAux.idPersona == user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index].fidAutor)
                 {
-                    frmEditarTarea ventanaModificar = new frmEditarTarea(this, user.itinerario.listaTarea[dgvTareasPendientes.CurrentRow.Index], adminAux);
+                    frmEditarTarea ventanaModificar = new frmEditarTarea(this, tareas[dgvTareasPendientes.CurrentRow.Index], adminAux);
                     ventanaModificar.ShowDialog();
                     this.btnConsultarTareas_Click(sender, e);
                 }
@@ -258,33 +264,27 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void btnConsultarTareas_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+            dgvTareasPendientes.comenzarHilo();
             dgvTareasPendientes.DataSource = null;
             switch(comboEstadoTarea.SelectedItem.ToString()){
                 case "Pendientes":
                     {
-                        tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(0,user.itinerario.idItineraio);
-                        actualizarBotones();
-                        if(tareas!=null)
-                            dgvTareasPendientes.DataSource = new BindingList<TareasDiariasWS.tarea>(tareas.ToList());
+                        tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(0,user.itinerario.idItineraio);                                                
                         break;
                     }
                 case "Completadas":
                     {
                         tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(1, user.itinerario.idItineraio);
-                        actualizarBotones();
-                        if (tareas != null)
-                            dgvTareasPendientes.DataSource = new BindingList<TareasDiariasWS.tarea>(tareas.ToList());
                         break;
                     }
                 case "Perdidas":
                     {
                         tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(2, user.itinerario.idItineraio);
-                        actualizarBotones();
-                        if (tareas != null)
-                            dgvTareasPendientes.DataSource = new BindingList<TareasDiariasWS.tarea>(tareas.ToList());
                         break;
                     }
             }
+            actualizarBotones();
+            dgvTareasPendientes.setDataSource1(tareas);
             cargarNombresAutores();
             this.Cursor = Cursors.Default;
         }

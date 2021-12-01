@@ -37,7 +37,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnEliminarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnActualizarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnAgregarUsuario = new FontAwesome.Sharp.IconButton();
-            this.dgvPersonas = new System.Windows.Forms.DataGridView();
+            this.dgvPersonas = new GGNoTeam_V5.Recursos.CustomDGV.ProgressDataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +51,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new GGNoTeam_V5.Recursos.UserControls.GGButton();
             this.txtBoxBusqueda = new GGNoTeam_V5.Recursos.UserControls.GGTextBox();
+            this.btnEnviarMensaje = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,17 +60,17 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnListarAdministradores.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnListarAdministradores.FlatAppearance.BorderSize = 0;
             this.btnListarAdministradores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarAdministradores.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnListarAdministradores.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnListarAdministradores.ForeColor = System.Drawing.Color.White;
             this.btnListarAdministradores.IconChar = FontAwesome.Sharp.IconChar.UserSecret;
             this.btnListarAdministradores.IconColor = System.Drawing.Color.White;
             this.btnListarAdministradores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnListarAdministradores.IconSize = 36;
             this.btnListarAdministradores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListarAdministradores.Location = new System.Drawing.Point(260, 481);
+            this.btnListarAdministradores.Location = new System.Drawing.Point(184, 478);
             this.btnListarAdministradores.Name = "btnListarAdministradores";
             this.btnListarAdministradores.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnListarAdministradores.Size = new System.Drawing.Size(118, 61);
+            this.btnListarAdministradores.Size = new System.Drawing.Size(108, 61);
             this.btnListarAdministradores.TabIndex = 20;
             this.btnListarAdministradores.Text = "Administradores";
             this.btnListarAdministradores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -82,17 +83,17 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnListarUsuarios.BackColor = System.Drawing.Color.MediumOrchid;
             this.btnListarUsuarios.FlatAppearance.BorderSize = 0;
             this.btnListarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarUsuarios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnListarUsuarios.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnListarUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnListarUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserTie;
             this.btnListarUsuarios.IconColor = System.Drawing.Color.White;
             this.btnListarUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnListarUsuarios.IconSize = 36;
             this.btnListarUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListarUsuarios.Location = new System.Drawing.Point(136, 481);
+            this.btnListarUsuarios.Location = new System.Drawing.Point(98, 478);
             this.btnListarUsuarios.Name = "btnListarUsuarios";
             this.btnListarUsuarios.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnListarUsuarios.Size = new System.Drawing.Size(118, 61);
+            this.btnListarUsuarios.Size = new System.Drawing.Size(80, 61);
             this.btnListarUsuarios.TabIndex = 19;
             this.btnListarUsuarios.Text = "Usuarios";
             this.btnListarUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -105,17 +106,17 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnListarPersonas.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnListarPersonas.FlatAppearance.BorderSize = 0;
             this.btnListarPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarPersonas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnListarPersonas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnListarPersonas.ForeColor = System.Drawing.Color.White;
             this.btnListarPersonas.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.btnListarPersonas.IconColor = System.Drawing.Color.White;
             this.btnListarPersonas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnListarPersonas.IconSize = 36;
             this.btnListarPersonas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListarPersonas.Location = new System.Drawing.Point(12, 481);
+            this.btnListarPersonas.Location = new System.Drawing.Point(11, 478);
             this.btnListarPersonas.Name = "btnListarPersonas";
             this.btnListarPersonas.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnListarPersonas.Size = new System.Drawing.Size(118, 61);
+            this.btnListarPersonas.Size = new System.Drawing.Size(80, 61);
             this.btnListarPersonas.TabIndex = 18;
             this.btnListarPersonas.Text = "Inactivos";
             this.btnListarPersonas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -135,10 +136,10 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnEliminarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarUsuario.IconSize = 32;
             this.btnEliminarUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(717, 481);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(747, 479);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(80, 60);
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(70, 60);
             this.btnEliminarUsuario.TabIndex = 21;
             this.btnEliminarUsuario.Text = "Eliminar";
             this.btnEliminarUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -158,10 +159,10 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnActualizarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizarUsuario.IconSize = 32;
             this.btnActualizarUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnActualizarUsuario.Location = new System.Drawing.Point(803, 481);
+            this.btnActualizarUsuario.Location = new System.Drawing.Point(823, 479);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
             this.btnActualizarUsuario.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnActualizarUsuario.Size = new System.Drawing.Size(80, 60);
+            this.btnActualizarUsuario.Size = new System.Drawing.Size(70, 60);
             this.btnActualizarUsuario.TabIndex = 22;
             this.btnActualizarUsuario.Text = "Actualizar";
             this.btnActualizarUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -181,10 +182,10 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnAgregarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarUsuario.IconSize = 32;
             this.btnAgregarUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(889, 481);
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(899, 479);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.btnAgregarUsuario.Size = new System.Drawing.Size(80, 60);
+            this.btnAgregarUsuario.Size = new System.Drawing.Size(70, 60);
             this.btnAgregarUsuario.TabIndex = 23;
             this.btnAgregarUsuario.Text = "Agregar";
             this.btnAgregarUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -303,7 +304,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnVerTareas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVerTareas.IconSize = 32;
             this.btnVerTareas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVerTareas.Location = new System.Drawing.Point(604, 481);
+            this.btnVerTareas.Location = new System.Drawing.Point(423, 478);
             this.btnVerTareas.Name = "btnVerTareas";
             this.btnVerTareas.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnVerTareas.Size = new System.Drawing.Size(107, 60);
@@ -335,7 +336,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.label1.Size = new System.Drawing.Size(162, 15);
             this.label1.TabIndex = 30;
             this.label1.Text = "Ingrese el código o nombre:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnBuscar
             // 
@@ -378,14 +378,36 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.txtBoxBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBoxBusqueda.Texts = "";
             this.txtBoxBusqueda.UnderlinedStyle = true;
-            this.txtBoxBusqueda.Enter += new System.EventHandler(this.txtBoxBusqueda_Enter);
-            this.txtBoxBusqueda.Leave += new System.EventHandler(this.txtBoxBusqueda_Leave);
+            // 
+            // btnEnviarMensaje
+            // 
+            this.btnEnviarMensaje.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnEnviarMensaje.FlatAppearance.BorderSize = 0;
+            this.btnEnviarMensaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarMensaje.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEnviarMensaje.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarMensaje.IconChar = FontAwesome.Sharp.IconChar.Envelope;
+            this.btnEnviarMensaje.IconColor = System.Drawing.Color.White;
+            this.btnEnviarMensaje.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEnviarMensaje.IconSize = 32;
+            this.btnEnviarMensaje.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEnviarMensaje.Location = new System.Drawing.Point(536, 478);
+            this.btnEnviarMensaje.Name = "btnEnviarMensaje";
+            this.btnEnviarMensaje.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnEnviarMensaje.Size = new System.Drawing.Size(107, 60);
+            this.btnEnviarMensaje.TabIndex = 31;
+            this.btnEnviarMensaje.Text = "Enviar Mensajes";
+            this.btnEnviarMensaje.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEnviarMensaje.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEnviarMensaje.UseVisualStyleBackColor = false;
+            this.btnEnviarMensaje.Click += new System.EventHandler(this.btnEnviarMensaje_Click);
             // 
             // frmGestionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 553);
+            this.Controls.Add(this.btnEnviarMensaje);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnVerTareas);
@@ -401,7 +423,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionUsuarios";
             this.Text = "frmUsuarios";
-            this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -415,7 +436,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private FontAwesome.Sharp.IconButton btnEliminarUsuario;
         private FontAwesome.Sharp.IconButton btnActualizarUsuario;
         private FontAwesome.Sharp.IconButton btnAgregarUsuario;
-        private System.Windows.Forms.DataGridView dgvPersonas;
+        private Recursos.CustomDGV.ProgressDataGridView dgvPersonas;
         private Recursos.UserControls.GGTextBox txtBoxBusqueda;
         private Recursos.UserControls.GGButton btnBuscar;
         private FontAwesome.Sharp.IconButton btnVerTareas;
@@ -429,5 +450,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private System.Windows.Forms.DataGridViewTextBoxColumn Validacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnEnviarMensaje;
     }
 }

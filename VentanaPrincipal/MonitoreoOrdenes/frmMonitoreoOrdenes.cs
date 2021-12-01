@@ -16,7 +16,7 @@ using GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.TrackingErrorvsAlfa;
 using GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion;
 using GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden;
 using static GGNoTeam_V5.VentanaPrincipal.frmPrincipal;
-using GGNoTeam_V5.MonitoreoOrdenWS;
+using System.Threading;
 
 namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
 {
@@ -36,19 +36,27 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
         public frmMonitoreoOrdenes(frmPrincipal ventana)
         {
             InitializeComponent();
+
             ventanaPrincipal = ventana;
             ventanaPrincipal.eventoCambiarTema += new frmPrincipal.delegadoCambiarTema(cambiarTema);
+
             _daoMO = new MonitoreoOrdenWS.MonitorOrdenWSClient();
             _daoTE = new TrackingErrorWS.TrackingErrorWSClient();
 
             dgvOrdenes.AutoGenerateColumns = false;
-
             Global.pintarDGV(ref dgvOrdenes, Color.DarkSalmon);
             cambiarTema();
-            cargarComboFondo();
-            ops = _daoMO.listaTodosOrden();
-            ejes = _daoMO.listarTodosEjecucion();
-        }
+            
+            Thread hilo = new Thread(() =>
+            {
+                cargarComboFondo();
+                ops = _daoMO.listaTodosOrden();
+                ejes = _daoMO.listarTodosEjecucion();
+            });
+            hilo.Start();
+            hilo.Join();           
+        } 
+
         private void cargarComboFondo()
         {
             fondos = _daoTE.ListarFondos();
@@ -57,15 +65,11 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
 
         private void btnconsultar_click(object sender, EventArgs e)
         {
-            var filter = new[] { comboFondo.SelectedIndex };
             listaOperaciones = _daoMO.ListarPorFechaOperacion(dateInicial.Value.ToString("yyyy-MM-dd"), dateFinal.Value.ToString("yyyy-MM-dd"));
-            
-            var result = listaOperaciones.Where(d => filter.Contains(d.fidFondo));
-
-
-            if (result != null)
+           
+            if (listaOperaciones != null)
             {
-                dgvOrdenes.DataSource = result;
+                dgvOrdenes.setDataSource1(listaOperaciones);
             }
             else
             {
@@ -140,7 +144,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes
             foreach (var ope in ops) if (ope.idOrden== orden.fidOrden) aumOrd= ope.porcentageFondo;
 
             dgvOrdenes.Rows[e.RowIndex].Cells[0].Value = orden.fecha;
-            dgvOrdenes.Rows[e.RowIndex].Cells[1].Value = fondos[orden.fidFondo - 1];
+            dgvOrdenes.Rows[e.RowIndex].Cells[1].Value = idFondo;
             dgvOrdenes.Rows[e.RowIndex].Cells[2].Value = orden.codsbs;
             dgvOrdenes.Rows[e.RowIndex].Cells[3].Value = orden.codisin;
             dgvOrdenes.Rows[e.RowIndex].Cells[4].Value = orden.instrumento;

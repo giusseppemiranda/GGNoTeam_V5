@@ -130,8 +130,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            ventanaPadre.activarBotones();
+        {            
             this.Dispose();
         }
 
@@ -159,18 +158,10 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             valido = ValidarTextBox.correo(boxCorreo, "El correo", 45);
             if (valido != 0) return;            
             valido = ValidarTextBox.cadenaGrande(boxContraseña, "La contraseña", 15);
-            if (valido != 0) return;
-            valido = (boxContraseña.Texts.Contains("#")) ? 1 : 0;
-            if(valido != 0)
-            {
-                MessageBox.Show("La contraseña no puede utilizar el caracter #");
-                return;
-            }
+            if (valido != 0) return;            
             valido = ValidarTextBox.cadenaGrande(boxCodigoValidacion, "El código de validación", 4);
             if (valido != 0) return;
-
-            //MessageBox.Show("Paso validación");
-            ventanaPadre.activarBotones();
+            
 
             int validez = -1;
 
@@ -178,18 +169,40 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             {
                 cargarDatos_2();
                 validez = _daoCliente.insertarPersona(persona);
-                if(validez != 1)
-                {
-                    MessageBox.Show("No se ha insertado correctamente al usuario. Ya debe de existir en la base de datos.");
+                if (validez > 0)
+                {   
+                    Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                    Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                    Program.acccionGlobal.idObjeto = validez;
+                    Program.acccionGlobal.tablaReferenciada = "Persona";
+                    Program.acccionGlobal.tipoAccion = "Insertar";
+                    Program._daoAcciones.insertarAccion(Program.acccionGlobal);
+                    MessageBox.Show("Se insertó correctamente al usuario.");
+
                 } else
                 {
-                    MessageBox.Show("Se insertó correctamente al usuario.");
+                    
+                    MessageBox.Show("No se ha insertado correctamente al usuario. Ya debe de existir en la base de datos.");
                 }
             }
             else
             {
                 cargarDatos();
-                _daoCliente.modificarPersona(persona);
+                validez = _daoCliente.modificarPersona(persona);
+                if(validez == 1)
+                {
+                    Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                    Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                    Program.acccionGlobal.idObjeto = persona.idPersona;
+                    Program.acccionGlobal.tablaReferenciada = "Persona";
+                    Program.acccionGlobal.tipoAccion = "Modificar";
+                    Program._daoAcciones.insertarAccion(Program.acccionGlobal);
+                    MessageBox.Show("Se ha modificado correctamente al usuario seleccionado.");
+                } else
+                {
+                    MessageBox.Show("Hubo un error al modificar al usuario. Intente nuevamente.");
+                }
+                
             }
 
             this.Dispose();

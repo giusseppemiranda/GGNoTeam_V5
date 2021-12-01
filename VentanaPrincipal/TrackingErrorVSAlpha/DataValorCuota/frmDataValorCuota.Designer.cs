@@ -35,7 +35,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
             this.btnVerCalculoAlfa = new FontAwesome.Sharp.IconButton();
             this.btnEliminarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnActualizarRegistro = new FontAwesome.Sharp.IconButton();
-            this.dgvDataValorCuota = new System.Windows.Forms.DataGridView();
+            this.dgvDataValorCuota = new Recursos.CustomDGV.ProgressDataGridView();
             this.idDVC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreAFP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -369,7 +369,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         private FontAwesome.Sharp.IconButton btnVerCalculoAlfa;
         private FontAwesome.Sharp.IconButton btnEliminarRegistro;
         private FontAwesome.Sharp.IconButton btnActualizarRegistro;
-        private System.Windows.Forms.DataGridView dgvDataValorCuota;
+        private Recursos.CustomDGV.ProgressDataGridView dgvDataValorCuota;
         private FontAwesome.Sharp.IconButton btnAgregarRegistros;
         private FontAwesome.Sharp.IconButton btnConsultarRegistros;
         private System.Windows.Forms.DateTimePicker dateFinal;

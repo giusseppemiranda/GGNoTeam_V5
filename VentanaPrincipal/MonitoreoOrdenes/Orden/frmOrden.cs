@@ -74,7 +74,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
             listaOrdenes = _daoMO.ListarOrdenPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
              if (listaOrdenes != null)
             {
-                dgvOrdenes.DataSource = listaOrdenes;
+                dgvOrdenes.setDataSource1(listaOrdenes);
             }
             else
             {

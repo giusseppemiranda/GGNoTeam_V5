@@ -52,6 +52,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.panelIndicadorVentana = new System.Windows.Forms.Panel();
             this.lblIndicación = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblID
@@ -147,7 +148,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.lblValidación.AutoSize = true;
             this.lblValidación.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblValidación.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblValidación.Location = new System.Drawing.Point(55, 412);
+            this.lblValidación.Location = new System.Drawing.Point(55, 435);
             this.lblValidación.Name = "lblValidación";
             this.lblValidación.Size = new System.Drawing.Size(106, 15);
             this.lblValidación.TabIndex = 24;
@@ -337,7 +338,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.boxCodigoValidacion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.boxCodigoValidacion.ForeColor = System.Drawing.Color.DimGray;
             this.boxCodigoValidacion.IsFocused = false;
-            this.boxCodigoValidacion.Location = new System.Drawing.Point(189, 400);
+            this.boxCodigoValidacion.Location = new System.Drawing.Point(189, 423);
             this.boxCodigoValidacion.MaxLength = 32767;
             this.boxCodigoValidacion.Multiline = false;
             this.boxCodigoValidacion.Name = "boxCodigoValidacion";
@@ -446,11 +447,26 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             this.lblTitulo.TabIndex = 40;
             this.lblTitulo.Text = "TITULO";
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Tomato;
+            this.label1.Location = new System.Drawing.Point(55, 394);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(304, 15);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Coloque la contraseña solo si desea asignar una nueva.";
+            // 
             // frmEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 527);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblIndicación);
             this.Controls.Add(this.panelIndicadorVentana);
@@ -509,5 +525,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
         private System.Windows.Forms.Panel panelIndicadorVentana;
         private System.Windows.Forms.Label lblIndicación;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label label1;
     }
 }

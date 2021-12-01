@@ -39,7 +39,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
             this.lblFondo_1 = new System.Windows.Forms.Label();
             this.lblFondo_2 = new System.Windows.Forms.Label();
             this.lblFondo_3 = new System.Windows.Forms.Label();
-            this.dgvAssetError = new System.Windows.Forms.DataGridView();
+            this.dgvAssetError = new Recursos.CustomDGV.ProgressDataGridView();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fondo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -363,7 +363,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.CalculoTr
         private Recursos.UserControls.GGTextBox boxFondo_1;
         private Recursos.UserControls.GGTextBox boxFondo_2;
         private Recursos.UserControls.GGTextBox boxFondo_3;
-        private System.Windows.Forms.DataGridView dgvAssetError;
+        private Recursos.CustomDGV.ProgressDataGridView dgvAssetError;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fondo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;

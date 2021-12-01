@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices.sist.afp.ggNoTeam/" targetNamespace="http://webservices.sist.afp.ggNoTeam/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarAccion" type="tns:insertarAccion" />
+  <xs:element name="insertarAccionResponse" type="tns:insertarAccionResponse" />
+  <xs:element name="listarAccionesPorFechas" type="tns:listarAccionesPorFechas" />
+  <xs:element name="listarAccionesPorFechasResponse" type="tns:listarAccionesPorFechasResponse" />
+  <xs:complexType name="listarAccionesPorFechas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAccionesPorFechasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:accion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="hora" type="xs:string" />
+      <xs:element name="idAccion" type="xs:int" />
+      <xs:element name="idObjeto" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreActor" type="xs:string" />
+      <xs:element minOccurs="0" name="tablaReferenciada" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoAccion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accion" type="tns:accion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAccionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

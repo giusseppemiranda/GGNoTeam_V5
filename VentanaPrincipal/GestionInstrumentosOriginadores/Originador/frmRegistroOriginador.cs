@@ -21,6 +21,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         public frmRegistroOriginador()
         {
             InitializeComponent();
+            Program.acccionGlobal.tablaReferenciada = "Originadores";
             lblRegistroOriginador.Text = "Registro originador";
             _daoOrig = new GestionInstrumentosOriginadoresWS.GestionInstOrigWSClient();
             oriAux = new GestionInstrumentosOriginadoresWS.originador();
@@ -30,6 +31,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig)
         {
             InitializeComponent();
+            Program.acccionGlobal.tablaReferenciada = "Originadores";
             oriAux = new GestionInstrumentosOriginadoresWS.originador();
             oriAux.idOriginador = orig.idOriginador;
             lblRegistroOriginador.Text = "Modificar originador";
@@ -46,6 +48,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
         public frmRegistroOriginador(GestionInstrumentosOriginadoresWS.originador orig,int i)
         {
             InitializeComponent();
+            Program.acccionGlobal.tablaReferenciada = "Originadores";
             oriAux = new GestionInstrumentosOriginadoresWS.originador();
             //oriAux.idOriginador = orig.idOriginador;
             lblRegistroOriginador.Text = "Registro originador";
@@ -98,16 +101,28 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Originado
 
             if (lblRegistroOriginador.Text == "Modificar originador")
             {
-                if(_daoOrig.modificarOriginador(oriAux)>0)
-                MessageBox.Show("Modificación exitosa!");
+                if (_daoOrig.modificarOriginador(oriAux) > 0)
+                {
+                    MessageBox.Show("Modificación exitosa!");
+                    Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                    Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                    Program.acccionGlobal.idObjeto = oriAux.idOriginador;
+                    Program.acccionGlobal.tipoAccion = "Modificar";
+                    Program._daoAcciones.insertarAccion(Program.acccionGlobal);
+                }
                 else
-                    MessageBox.Show("Revise los campos e intente de nuevo", "Error al modificar",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Revise los campos e intente de nuevo", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
 
-                _daoOrig.insertarOriginador(oriAux);
+                int a = _daoOrig.insertarOriginador(oriAux);
                 MessageBox.Show("Registro exitoso!");
+                Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+                Program.acccionGlobal.idObjeto = a;
+                Program.acccionGlobal.tipoAccion = "Insertar";
+                Program._daoAcciones.insertarAccion(Program.acccionGlobal);
             }
             
             this.Dispose();

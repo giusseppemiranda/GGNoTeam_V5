@@ -1,13 +1,6 @@
 ﻿using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.Recursos.Validaciones;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Registros
@@ -107,48 +100,78 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota.Regis
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            if (pasarValidaciones() != 0) return;
+
+            cargarDatos();
+
+            int fidFondo = calcularFidFondo();
+
+            if (insertar) casoInsertar(fidFondo);
+            else casoModificar(fidFondo);            
+
+        }
+
+        private int pasarValidaciones()
+        {
             int validar = -1;
             validar = ValidarTextBox.PuntoFlotante(boxCuota, "La CUOTA");
-            if (validar != 0) return;
+            if (validar != 0) return validar;
             validar = ValidarTextBox.PuntoFlotante(boxValorCuota, "El VALOR CUOTA");
-            if (validar != 0) return;
+            if (validar != 0) return validar;
 
+            return validar;
+        }
+        
+        private void casoModificar(int fidFondo)
+        {
+            int i = -1;
+            i = _daoTE.modificarDataValorCuota(dato, fidFondo);
+            if (i == 1)
+            {
+                MessageBox.Show("Se modificó correctamente.");
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("No se han modificado los valores en la base de datos.");
+            }
+        }
+
+
+        
+        private void casoInsertar(int fidFondo)
+        {
+            int i = -1;
+            i = _daoTE.insertarDataValorCuota(dato, fidFondo);
+            if (i != 0)
+            {
+                MessageBox.Show("Se insertó correctamente.");
+                cargarLogInsertar(i);
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("No se han insertado los valores en la base de datos.");
+            }
+        }
+
+        private void cargarLogInsertar(int id)
+        {            
+            Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+            Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+            Program.acccionGlobal.idObjeto = id;
+            Program.acccionGlobal.tablaReferenciada = "Alpha";
+            Program.acccionGlobal.tipoAccion = "Insertar";
+            Program._daoAcciones.insertarAccion(Program.acccionGlobal);       
+        }
+
+        private void cargarDatos()
+        {
             dato.fecha = dateTimePicker1.Value;
             dato.fechaSpecified = true;
             dato.fidAFP = comboAFP.SelectedIndex + 1;
             dato.cuotas = Convert.ToDouble(boxCuota.Texts);
             dato.valorCuota = Convert.ToDouble(boxValorCuota.Texts);
-
-
-            int fidFondo = calcularFidFondo();
-            int i = -1;
-            if (insertar)
-            {
-                i = _daoTE.insertarDataValorCuota(dato, fidFondo);
-                if (i == 1)
-                {
-                    MessageBox.Show("Se insertó correctamente.");
-                    this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("No se han insertado los valores en la base de datos.");
-                }
-            }
-            else
-            {
-                i = _daoTE.modificarDataValorCuota(dato, fidFondo);
-                if (i == 1)
-                {
-                    MessageBox.Show("Se modificó correctamente.");
-                    this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("No se han modificado los valores en la base de datos.");
-                }
-            }
-
         }
 
         private int calcularFidFondo()

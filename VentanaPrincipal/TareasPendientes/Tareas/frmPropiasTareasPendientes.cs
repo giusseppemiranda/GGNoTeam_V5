@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
 
-{ 
+{
     public partial class frmPropiasTareasPendientes : Form
     {
         private frmPrincipal ventanaPadre = null;
@@ -95,7 +95,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             {
                 case "Pendientes":
                     btnEliminar.Visible = false;
-                    if(user.tipoUsuario==1)
+                    if (user.tipoUsuario == 1)
                         btnRenovarTarea.Visible = true;
                     btnCompletarTarea.Visible = true;
                     break;
@@ -119,6 +119,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private void btnConsultarTareas_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+            dgvTareasPendientes.comenzarHilo();
             dgvTareasPendientes.DataSource = null;
             switch (comboEstadoTarea.SelectedItem.ToString())
             {
@@ -126,39 +127,30 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                     {
                         actualizarBotones();
                         tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(0, user.itinerario.idItineraio);
-                        if (tareas != null)
-                        {
-                            dgvTareasPendientes.DataSource = new BindingList<TareasDiariasWS.tarea>(tareas.ToList());
-                        }
                         break;
                     }
                 case "Completadas":
                     {
                         actualizarBotones();
                         tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(1, user.itinerario.idItineraio);
-                        if (tareas != null)
-                        {
-                            dgvTareasPendientes.DataSource = new BindingList<TareasDiariasWS.tarea>(tareas.ToList());
-                        }
+
                         break;
                     }
                 case "Perdidas":
                     {
                         actualizarBotones();
                         tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(2, user.itinerario.idItineraio);
-                        if (tareas != null)
-                        {
-                            dgvTareasPendientes.DataSource = new BindingList<TareasDiariasWS.tarea>(tareas.ToList());
-                        }
+
                         break;
                     }
             }
+            dgvTareasPendientes.setDataSource1(new BindingList<TareasDiariasWS.tarea>(tareas.ToList()));
             cargarNombresAutores();
             this.Cursor = Cursors.Default;
         }
 
         private void ActualizarPerdidas()
-        { 
+        {
             tareas = _daoTareasDiarias.listarTareasPorEstadoPorItinerario(0, user.itinerario.idItineraio);
             DateTime dt;
             if (tareas != null)
@@ -174,7 +166,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                             enviarPerdidaAutor(tareas[i]);
                         }
                         _daoTareasDiarias.modificarTarea(tareas[i]);
-                        
+
                     }
                 }
             }
@@ -183,7 +175,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         private void btnCompletarTarea_Click(object sender, EventArgs e)
         {
 
-            if(dgvTareasPendientes.SelectedRows.Count > 0)
+            if (dgvTareasPendientes.SelectedRows.Count > 0)
             {
                 var resultado = MessageBox.Show("¿Está seguro que desea marcar la tarea como completa?", "Tarea completa", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
@@ -196,7 +188,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                         enviarConfirmacionAutor();
                     }
                     this.btnConsultarTareas_Click(sender, e);
-                }                                    
+                }
             }
         }
 
@@ -204,7 +196,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
         {
             adminAux = _daoPersona.listarPersonaPorID(tareaAux.fidAutor);
             tareaAdmin.estado = 0;
-            tareaAdmin.fechaCreacion = DateTime.Now.ToString("yyyy/MM/dd").Replace("/","-");
+            tareaAdmin.fechaCreacion = DateTime.Now.ToString("yyyy/MM/dd").Replace("/", "-");
             tareaAdmin.fechaLimite = DateTime.Now.AddDays(7).ToString("yyyy/MM/dd").Replace("/", "-");
             tareaAdmin.fidAutor = user.idPersona;
             tareaAdmin.fidItinerario = adminAux.itinerario.idItineraio;
@@ -226,7 +218,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             _daoTareasDiarias.insertarTarea(tareaAdmin);
         }
         private void btnEliminar_Click(object sender, EventArgs e)
-        {           
+        {
             if (dgvTareasPendientes.CurrentRow != null)
             {
                 var resultado = MessageBox.Show("¿Está seguro que desea elimiar la tarea?", "Eliminar tarea", MessageBoxButtons.YesNo);
@@ -237,7 +229,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                     this.btnConsultarTareas_Click(sender, e);
                     MessageBox.Show("La tarea se la eliminado con éxito.");
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("No ha seleccionado el elemento a borrar.");
             }
@@ -269,7 +262,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
             if (dgvTareasPendientes.SelectedRows.Count > 0)
             {
                 tareaUsuario = (TareasDiariasWS.tarea)dgvTareasPendientes.CurrentRow.DataBoundItem;
-                
+
                 if (tareaUsuario.descripcion.Contains("INCOMPLETO"))
                 {
                     //completar tarea para admin
@@ -302,7 +295,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TareasPendientes.Tareas
                 }
                 else MessageBox.Show("Tarea no renovable");
             }
-            
+
         }
     }
 }

@@ -1,9 +1,4 @@
-using GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes;
-
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GGNoTeam_V5
@@ -13,13 +8,14 @@ namespace GGNoTeam_V5
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
+        public static AccionesWS.accion acccionGlobal = new AccionesWS.accion();
+        public static AccionesWS.AccionesWSClient _daoAcciones = new AccionesWS.AccionesWSClient();
         [STAThread]
         static void Main()
-        {            
+        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
-
         }
     }
 }

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices.sist.afp.ggNoTeam/" targetNamespace="http://webservices.sist.afp.ggNoTeam/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ListarOrdenPorFecha" type="tns:ListarOrdenPorFecha" />
+  <xs:element name="ListarOrdenPorFechaResponse" type="tns:ListarOrdenPorFechaResponse" />
+  <xs:element name="ListarPorFechaOperacion" type="tns:ListarPorFechaOperacion" />
+  <xs:element name="ListarPorFechaOperacionResponse" type="tns:ListarPorFechaOperacionResponse" />
+  <xs:element name="eliminarEjecucion" type="tns:eliminarEjecucion" />
+  <xs:element name="eliminarEjecucionResponse" type="tns:eliminarEjecucionResponse" />
+  <xs:element name="eliminarOperacion" type="tns:eliminarOperacion" />
+  <xs:element name="eliminarOperacionResponse" type="tns:eliminarOperacionResponse" />
+  <xs:element name="eliminarOrden" type="tns:eliminarOrden" />
+  <xs:element name="eliminarOrdenResponse" type="tns:eliminarOrdenResponse" />
+  <xs:element name="insertarEjecucion" type="tns:insertarEjecucion" />
+  <xs:element name="insertarEjecucionResponse" type="tns:insertarEjecucionResponse" />
+  <xs:element name="insertarOperacion" type="tns:insertarOperacion" />
+  <xs:element name="insertarOperacionResponse" type="tns:insertarOperacionResponse" />
+  <xs:element name="insertarOrden" type="tns:insertarOrden" />
+  <xs:element name="insertarOrdenResponse" type="tns:insertarOrdenResponse" />
+  <xs:element name="listaOperacionTodos" type="tns:listaOperacionTodos" />
+  <xs:element name="listaOperacionTodosResponse" type="tns:listaOperacionTodosResponse" />
+  <xs:element name="listaTodosOrden" type="tns:listaTodosOrden" />
+  <xs:element name="listaTodosOrdenResponse" type="tns:listaTodosOrdenResponse" />
+  <xs:element name="listarEjecucionPorFecha" type="tns:listarEjecucionPorFecha" />
+  <xs:element name="listarEjecucionPorFechaResponse" type="tns:listarEjecucionPorFechaResponse" />
+  <xs:element name="listarTodosEjecucion" type="tns:listarTodosEjecucion" />
+  <xs:element name="listarTodosEjecucionResponse" type="tns:listarTodosEjecucionResponse" />
+  <xs:element name="modificarEjecucion" type="tns:modificarEjecucion" />
+  <xs:element name="modificarEjecucionResponse" type="tns:modificarEjecucionResponse" />
+  <xs:element name="modificarOperacion" type="tns:modificarOperacion" />
+  <xs:element name="modificarOperacionResponse" type="tns:modificarOperacionResponse" />
+  <xs:element name="modificarOrden" type="tns:modificarOrden" />
+  <xs:element name="modificarOrdenResponse" type="tns:modificarOrdenResponse" />
+  <xs:complexType name="modificarOperacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Operacion" type="tns:operacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="operacion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element minOccurs="0" name="codisin" type="xs:string" />
+      <xs:element minOccurs="0" name="codsbs" type="xs:string" />
+      <xs:element minOccurs="0" name="comentario" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element name="fidEjecu" type="xs:int" />
+      <xs:element name="fidFondo" type="xs:int" />
+      <xs:element name="fidOrden" type="xs:int" />
+      <xs:element name="idOperacion" type="xs:int" />
+      <xs:element minOccurs="0" name="instrumento" type="xs:string" />
+      <xs:element name="validacion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarOperacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listaTodosOrden">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listaTodosOrdenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:orden" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orden">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element minOccurs="0" name="codisin" type="xs:string" />
+      <xs:element minOccurs="0" name="codsbs" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element name="fidAssetClass" type="xs:int" />
+      <xs:element name="fidFondo" type="xs:int" />
+      <xs:element name="fidTipoOperacion" type="xs:int" />
+      <xs:element name="idOrden" type="xs:int" />
+      <xs:element minOccurs="0" name="instrumento" type="xs:string" />
+      <xs:element name="porcentageFondo" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaOperacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarPorFechaOperacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:operacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEjecucion">
+    <xs:sequence>
+      <xs:element name="idEjecucion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEjecucionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarOrden">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="orden" type="tns:orden" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarOrdenResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOperacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:operacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOperacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listaOperacionTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listaOperacionTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:operacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjecucionPorFecha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjecucionPorFechaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejecucion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ejecucion">
+    <xs:sequence>
+      <xs:element name="AUM" type="xs:double" />
+      <xs:element name="activo" type="xs:int" />
+      <xs:element minOccurs="0" name="codisin" type="xs:string" />
+      <xs:element minOccurs="0" name="codsbs" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element name="fidAssetClass" type="xs:int" />
+      <xs:element name="fidFondo" type="xs:int" />
+      <xs:element name="fidTipoOperacion" type="xs:int" />
+      <xs:element name="idEjecucion" type="xs:int" />
+      <xs:element minOccurs="0" name="instrumento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOrden">
+    <xs:sequence>
+      <xs:element name="idOrden" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOrdenResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEjecucion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ejecucion" type="tns:ejecucion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEjecucionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOperacion">
+    <xs:sequence>
+      <xs:element name="idOperacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOperacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjecucion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjecucionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejecucion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarOrdenPorFecha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarOrdenPorFechaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:orden" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOrden">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="orden" type="tns:orden" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarOrdenResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEjecucion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ejecucion" type="tns:ejecucion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEjecucionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

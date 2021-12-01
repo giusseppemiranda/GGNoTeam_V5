@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GGNoTeam_V5.Recursos.UserControls;
 using FontAwesome.Sharp;
+using GGNoTeam_V5.Recursos.CustomDGV;
 
 namespace GGNoTeam_V5.Recursos.UserControls
 {
@@ -254,22 +255,24 @@ namespace GGNoTeam_V5.Recursos.UserControls
             return (Byte)Math.Max(0, color - 255 * porcentaje);
         }
 
-        public static void pintarDGV(ref DataGridView dgv, Color colorPrincipal)
+        public static void pintarDGV(ref ProgressDataGridView dgv, Color colorPrincipal)
         {
+            
             System.Windows.Forms.DataGridViewCellStyle rowStyle = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle colHeadStyle = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle rowHeadStyle = new System.Windows.Forms.DataGridViewCellStyle();
 
-            double porcAclarar_background = 0.35;
+            //mayor porcAclarar -> mayor tono blanco
+            double porcAclarar_background = 0.40;
             double porcAclarar_celda = porcAclarar_background - 0.1;
 
             Byte green = colorPrincipal.G;
             Byte blue = colorPrincipal.B;
             Byte red = colorPrincipal.R;
 
-            Byte redOscuro = oscurecer(red, porcAclarar_background);
-            Byte greenOscuro = oscurecer(green, porcAclarar_background);
-            Byte blueOscuro = oscurecer(blue, porcAclarar_background);
+            Byte redOscuro = oscurecer(red, porcAclarar_background * 0.8);
+            Byte greenOscuro = oscurecer(green, porcAclarar_background * 0.8);
+            Byte blueOscuro = oscurecer(blue, porcAclarar_background * 0.8);
 
             Byte redClaro_background = aclarar(red, porcAclarar_background);
             Byte greenClaro_background = aclarar(green, porcAclarar_background);
@@ -285,7 +288,7 @@ namespace GGNoTeam_V5.Recursos.UserControls
             //RowsDefaultCellStyle
             rowStyle.BackColor = Color.FromArgb(redClaro_celda, greenClaro_celda, blueClaro_celda);
             rowStyle.SelectionBackColor = colorPrincipal;
-            rowStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            rowStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             //ColumnHeadersDefaultStyle
             colHeadStyle.BackColor = Color.FromArgb(redOscuro, greenOscuro, blueOscuro);
@@ -307,7 +310,7 @@ namespace GGNoTeam_V5.Recursos.UserControls
             dgv.ColumnHeadersDefaultCellStyle = colHeadStyle;
             dgv.RowHeadersDefaultCellStyle = rowHeadStyle;
             
-
+            
         }
     }
 }

@@ -30,6 +30,7 @@ namespace GGNoTeam_V5.VentanaPrincipal
         private void InitializeComponent()
         {
             this.panelControl = new System.Windows.Forms.Panel();
+            this.lblUser = new System.Windows.Forms.Label();
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnTemaOscuro = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnTEALPHA = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
-            this.lblUser = new System.Windows.Forms.Label();
             this.panelControl.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,20 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(1024, 29);
             this.panelControl.TabIndex = 0;
+            this.panelControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControl_MouseDown);
+            this.panelControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl_MouseMove);
+            this.panelControl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelControl_MouseUp);
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblUser.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblUser.Location = new System.Drawing.Point(610, 7);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(290, 15);
+            this.lblUser.TabIndex = 8;
+            this.lblUser.Text = "Codigo: Nombre_1 Nombre_2 Apellido_1 Apellido_2";
             // 
             // btnMinimizar
             // 
@@ -318,17 +332,6 @@ namespace GGNoTeam_V5.VentanaPrincipal
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             this.btnHome.MouseEnter += new System.EventHandler(this.btnUsuarios_MouseEnter);
             this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblUser.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblUser.Location = new System.Drawing.Point(610, 7);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(290, 15);
-            this.lblUser.TabIndex = 8;
-            this.lblUser.Text = "Codigo: Nombre_1 Nombre_2 Apellido_1 Apellido_2";
             // 
             // frmPrincipal
             // 

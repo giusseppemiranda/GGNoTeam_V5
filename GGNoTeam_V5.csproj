@@ -67,6 +67,12 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="SautinSoft.HtmlToRtf, Version=8.1.6.7, Culture=neutral, PublicKeyToken=bce916f184012969, processorArchitecture=MSIL">
+      <HintPath>packages\sautinsoft.htmltortf.8.1.6.7\lib\net48\SautinSoft.HtmlToRtf.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.RtfToHtml, Version=7.6.6.17, Culture=neutral, PublicKeyToken=c666a5e96a3d5457, processorArchitecture=MSIL">
+      <HintPath>packages\sautinsoft.rtftohtml.7.6.6.17\lib\net48\SautinSoft.RtfToHtml.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -105,6 +111,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\AccionesWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\GestionInstrumentosOriginadoresWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -156,6 +167,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\CustomDGV\ProgressDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recursos\PantallaDeCarga\Global_LoadingForm.cs" />
+    <Compile Include="Recursos\PantallaDeCarga\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\PantallaDeCarga\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Recursos\sendMail\credenciales.cs" />
     <Compile Include="Recursos\sendMail\Gmail.cs" />
     <Compile Include="Recursos\sendMail\servidorCliente.cs" />
@@ -179,6 +200,12 @@
     </Compile>
     <Compile Include="Recursos\UserControls\Global.cs" />
     <Compile Include="Recursos\Validaciones\ValidarTextBox.cs" />
+    <Compile Include="VentanaPrincipal\Bandeja de Entrada\frmEnviarMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\Bandeja de Entrada\frmEnviarMensaje.Designer.cs">
+      <DependentUpon>frmEnviarMensaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipal\Bandeja de Entrada\frmGmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +283,12 @@
     </Compile>
     <Compile Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEditarUsuario.Designer.cs">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPrincipal\Log\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal\Log\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEditarEjecucion.cs">
       <SubType>Form</SubType>
@@ -381,11 +414,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Recursos\PantallaDeCarga\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recursos\UserControls\GGComboBox.resx">
       <DependentUpon>GGComboBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\UserControls\GGTextBox.resx">
       <DependentUpon>GGTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\Bandeja de Entrada\frmEnviarMensaje.resx">
+      <DependentUpon>frmEnviarMensaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\Bandeja de Entrada\frmGmail.resx">
       <DependentUpon>frmGmail.cs</DependentUpon>
@@ -425,6 +464,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\GestionUsuarios\Usuarios\frmEditarUsuario.resx">
       <DependentUpon>frmEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal\Log\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal\MonitoreoOrdenes\Ejecucion\frmEditarEjecucion.resx">
       <DependentUpon>frmEditarEjecucion.cs</DependentUpon>
@@ -477,8 +519,25 @@
     <EmbeddedResource Include="VentanaPrincipal\TrackingErrorVSAlpha\TrackingErrorvsAlfa\frmTrackingErrorvsAlfa.resx">
       <DependentUpon>frmTrackingErrorvsAlfa.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS.wsdl" />
-    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS.xsd">
+    <None Include="Connected Services\AccionesWS\AccionesWS.wsdl" />
+    <None Include="Connected Services\AccionesWS\AccionesWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AccionesWS\GGNoTeam_V5.AccionesWS.accion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AccionesWS\GGNoTeam_V5.AccionesWS.insertarAccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AccionesWS\GGNoTeam_V5.AccionesWS.listarAccionesPorFechasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.wsdl" />
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS11.wsdl" />
+    <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GestionInstOrigWS11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionInstrumentosOriginadoresWS\GGNoTeam_V5.GestionInstrumentosOriginadoresWS.buscarOrigIdResponse.datasource">
@@ -580,8 +639,8 @@
     <None Include="Connected Services\LoginWS\GGNoTeam_V5.LoginWS.verificarCredencialesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LoginWS\LoginWS1.wsdl" />
-    <None Include="Connected Services\LoginWS\LoginWS1.xsd">
+    <None Include="Connected Services\LoginWS\LoginWS.wsdl" />
+    <None Include="Connected Services\LoginWS\LoginWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.ejecucion.datasource">
@@ -638,8 +697,12 @@
     <None Include="Connected Services\MonitoreoOrdenWS\GGNoTeam_V5.MonitoreoOrdenWS.orden.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS1.wsdl" />
-    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS1.xsd">
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS.wsdl" />
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS2.wsdl" />
+    <None Include="Connected Services\MonitoreoOrdenWS\MonitorOrdenWS2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TareasDiariasWS\GGNoTeam_V5.TareasDiariasWS.eliminarTareaResponse.datasource">
@@ -784,12 +847,6 @@
     </None>
     <None Include="Connected Services\TareasDiariasWS\configuration.svcinfo" />
     <None Include="Connected Services\TareasDiariasWS\configuration91.svcinfo" />
-    <None Include="Connected Services\LoginWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\LoginWS\configuration.svcinfo" />
-    <None Include="Connected Services\LoginWS\configuration91.svcinfo" />
     <None Include="Connected Services\TrackingErrorWS\configuration91.svcinfo" />
     <None Include="Connected Services\TrackingErrorWS\configuration.svcinfo" />
     <None Include="Connected Services\TrackingErrorWS\Reference.svcmap">
@@ -808,12 +865,30 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\LoginWS\configuration91.svcinfo" />
+    <None Include="Connected Services\LoginWS\configuration.svcinfo" />
+    <None Include="Connected Services\LoginWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AccionesWS\configuration91.svcinfo" />
+    <None Include="Connected Services\AccionesWS\configuration.svcinfo" />
+    <None Include="Connected Services\AccionesWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net40\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\net48\FontAwesome.Sharp.dll" />
     <Content Include="packages\FontAwesome.Sharp.5.15.3\lib\netcoreapp3.1\FontAwesome.Sharp.dll" />
     <Content Include="Recursos\Imagenes\User.png" />
+    <Content Include="Recursos\PantallaDeCarga\gifPantallaCarga.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\PantallaDeCarga\gifPantallaCarga_2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\calendarDark.png" />
     <Content Include="Resources\calendarWhite.png" />
     <Content Include="Resources\image.png" />
@@ -823,6 +898,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AccionesWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionInstrumentosOriginadoresWS\" />
     <WCFMetadataStorage Include="Connected Services\LoginWS\" />
     <WCFMetadataStorage Include="Connected Services\MonitoreoOrdenWS\" />

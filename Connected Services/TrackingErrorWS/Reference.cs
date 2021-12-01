@@ -16,24 +16,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
     public interface TrackingErrorWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse modificarAlpha(GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse> modificarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAfpRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAfpResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse eliminarAfp(GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAfpRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAfpResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse> eliminarAfpAsync(GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAfpRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAfpResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -52,22 +34,13 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAfpResponse> modificarAfpAsync(GGNoTeam_V5.TrackingErrorWS.modificarAfpRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAfpRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAfpResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse eliminarAlpha(GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest request);
+        GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse eliminarAfp(GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse> eliminarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse listarTodasAlpha(GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse> listarTodasAlphaAsync(GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAfpRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAfpResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse> eliminarAfpAsync(GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodasAfpRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodasAfpResponse")]
@@ -88,6 +61,33 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarAlphaResponse> insertarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.insertarAlphaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse modificarAlpha(GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAlphaResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse> modificarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse eliminarAlpha(GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAlphaResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse> eliminarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse listarTodasAlpha(GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarTodasAlphaResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse> listarTodasAlphaAsync(GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarFondosRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarFondosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -97,19 +97,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarFondosResponse> ListarFondosAsync(GGNoTeam_V5.TrackingErrorWS.ListarFondosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataVa" +
-            "lorCuotaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataVa" +
-            "lorCuotaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse ListarPorFechaPorFondoDataValorCuota(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataVa" +
-            "lorCuotaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataVa" +
-            "lorCuotaResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse> ListarPorFechaPorFondoDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarAlphaXFechaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarAlphaXFechaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -117,37 +104,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarAlphaXFechaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarAlphaXFechaResponse")]
         System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarAlphaXFechaResponse> listarAlphaXFechaAsync(GGNoTeam_V5.TrackingErrorWS.listarAlphaXFechaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse insertarAssetError(GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse> insertarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetE" +
-            "rrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetE" +
-            "rrorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse ListarPorFechaPorFondoAssetError(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetE" +
-            "rrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetE" +
-            "rrorResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse> ListarPorFechaPorFondoAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse modificarAssetError(GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse> modificarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarAlpha_Fecha_FondoReque" +
@@ -163,6 +119,24 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarAlpha_Fecha_FondoResponse> listarAlpha_Fecha_FondoAsync(GGNoTeam_V5.TrackingErrorWS.listarAlpha_Fecha_FondoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse insertarAssetError(GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarAssetErrorResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse> insertarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse modificarAssetError(GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarAssetErrorResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse> modificarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAssetErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarAssetErrorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -172,104 +146,17 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAssetErrorResponse> eliminarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.eliminarAssetErrorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRequest" +
-            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRespons" +
-            "e")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetE" +
+            "rrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetE" +
+            "rrorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse eliminarTrackingError(GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest request);
+        GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse ListarPorFechaPorFondoAssetError(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRequest" +
-            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRespons" +
-            "e")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse> eliminarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaP" +
-            "orFondoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaP" +
-            "orFondoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoResponse ListarTrackingErrorPorFechaPorFondo(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaP" +
-            "orFondoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaP" +
-            "orFondoResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoResponse> ListarTrackingErrorPorFechaPorFondoAsync(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorReques" +
-            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorResponse modificarTrackingError(GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorReques" +
-            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorRespon" +
-            "se")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorResponse> modificarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
-            "quest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse listarDataValorCuotaXFecha(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
-            "quest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse> listarDataValorCuotaXFechaAsync(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaReques" +
-            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.ListarAssetErrorXFechaResponse ListarAssetErrorXFecha(GGNoTeam_V5.TrackingErrorWS.ListarAssetErrorXFechaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaReques" +
-            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaRespon" +
-            "se")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarAssetErrorXFechaResponse> ListarAssetErrorXFechaAsync(GGNoTeam_V5.TrackingErrorWS.ListarAssetErrorXFechaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaReque" +
-            "st", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse modificarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaReque" +
-            "st", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse> modificarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorRequ" +
-            "est", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse ListarTodosTrackingError(GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorRequ" +
-            "est", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorResp" +
-            "onse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse> ListarTodosTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse ListarTrackingError(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorResponse")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse> ListarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetE" +
+            "rrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoAssetE" +
+            "rrorResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse> ListarPorFechaPorFondoAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarDataValorCuotaReques" +
@@ -285,17 +172,17 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse> insertarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRequest" +
-            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRespons" +
-            "e")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaReque" +
+            "st", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaRespo" +
+            "nse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorResponse insertarTrackingError(GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorRequest request);
+        GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse modificarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRequest" +
-            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRespons" +
-            "e")]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorResponse> insertarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaReque" +
+            "st", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarDataValorCuotaRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse> modificarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarDataValorCuotaReques" +
@@ -309,6 +196,119 @@ namespace GGNoTeam_V5.TrackingErrorWS {
             "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarDataValorCuotaRespon" +
             "se")]
         System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse> eliminarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
+            "quest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse listarDataValorCuotaXFecha(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
+            "quest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/listarDataValorCuotaXFechaRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse> listarDataValorCuotaXFechaAsync(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataVa" +
+            "lorCuotaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataVa" +
+            "lorCuotaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse ListarPorFechaPorFondoDataValorCuota(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataVa" +
+            "lorCuotaRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarPorFechaPorFondoDataVa" +
+            "lorCuotaResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse> ListarPorFechaPorFondoDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaP" +
+            "orFondoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaP" +
+            "orFondoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoResponse ListarTrackingErrorPorFechaPorFondo(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaP" +
+            "orFondoRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorPorFechaP" +
+            "orFondoResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoResponse> ListarTrackingErrorPorFechaPorFondoAsync(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorPorFechaPorFondoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse ListarTrackingError(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorRequest", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTrackingErrorResponse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse> ListarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorReques" +
+            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorResponse modificarTrackingError(GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorReques" +
+            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/modificarTrackingErrorRespon" +
+            "se")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorResponse> modificarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorRequ" +
+            "est", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse ListarTodosTrackingError(GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorRequ" +
+            "est", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarTodosTrackingErrorResp" +
+            "onse")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse> ListarTodosTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRequest" +
+            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse eliminarTrackingError(GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRequest" +
+            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/eliminarTrackingErrorRespons" +
+            "e")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse> eliminarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaReques" +
+            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.ListarAssetErrorXFechaResponse ListarAssetErrorXFecha(GGNoTeam_V5.TrackingErrorWS.ListarAssetErrorXFechaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaReques" +
+            "t", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/ListarAssetErrorXFechaRespon" +
+            "se")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarAssetErrorXFechaResponse> ListarAssetErrorXFechaAsync(GGNoTeam_V5.TrackingErrorWS.ListarAssetErrorXFechaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRequest" +
+            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorResponse insertarTrackingError(GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRequest" +
+            "", ReplyAction="http://webservices.sist.afp.ggNoTeam/TrackingErrorWS/insertarTrackingErrorRespons" +
+            "e")]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorResponse> insertarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorRequest request);
     }
     
     /// <remarks/>
@@ -317,19 +317,13 @@ namespace GGNoTeam_V5.TrackingErrorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/")]
-    public partial class alpha : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class afp : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int activoField;
         
-        private double alpha1Field;
+        private int idAFPField;
         
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private int idAlphaField;
-        
-        private double patrimonioTotalField;
+        private string nombreField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -344,62 +338,26 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("alpha", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public double alpha1 {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int idAFP {
             get {
-                return this.alpha1Field;
+                return this.idAFPField;
             }
             set {
-                this.alpha1Field = value;
-                this.RaisePropertyChanged("alpha1");
+                this.idAFPField = value;
+                this.RaisePropertyChanged("idAFP");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fecha {
+        public string nombre {
             get {
-                return this.fechaField;
+                return this.nombreField;
             }
             set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int idAlpha {
-            get {
-                return this.idAlphaField;
-            }
-            set {
-                this.idAlphaField = value;
-                this.RaisePropertyChanged("idAlpha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public double patrimonioTotal {
-            get {
-                return this.patrimonioTotalField;
-            }
-            set {
-                this.patrimonioTotalField = value;
-                this.RaisePropertyChanged("patrimonioTotal");
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
             }
         }
         
@@ -502,150 +460,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
             set {
                 this.trackingerrorField = value;
                 this.RaisePropertyChanged("trackingerror");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/")]
-    public partial class assetError : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int activoField;
-        
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private int fidFondoField;
-        
-        private int idAssetErrorField;
-        
-        private string nombreField;
-        
-        private double productoField;
-        
-        private double totalRiskDField;
-        
-        private double wgtPField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int fidFondo {
-            get {
-                return this.fidFondoField;
-            }
-            set {
-                this.fidFondoField = value;
-                this.RaisePropertyChanged("fidFondo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int idAssetError {
-            get {
-                return this.idAssetErrorField;
-            }
-            set {
-                this.idAssetErrorField = value;
-                this.RaisePropertyChanged("idAssetError");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public double producto {
-            get {
-                return this.productoField;
-            }
-            set {
-                this.productoField = value;
-                this.RaisePropertyChanged("producto");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public double totalRiskD {
-            get {
-                return this.totalRiskDField;
-            }
-            set {
-                this.totalRiskDField = value;
-                this.RaisePropertyChanged("totalRiskD");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public double wgtP {
-            get {
-                return this.wgtPField;
-            }
-            set {
-                this.wgtPField = value;
-                this.RaisePropertyChanged("wgtP");
             }
         }
         
@@ -809,13 +623,25 @@ namespace GGNoTeam_V5.TrackingErrorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/")]
-    public partial class afp : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class assetError : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int activoField;
         
-        private int idAFPField;
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private int fidFondoField;
+        
+        private int idAssetErrorField;
         
         private string nombreField;
+        
+        private double productoField;
+        
+        private double totalRiskDField;
+        
+        private double wgtPField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -831,18 +657,54 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idAFP {
+        public System.DateTime fecha {
             get {
-                return this.idAFPField;
+                return this.fechaField;
             }
             set {
-                this.idAFPField = value;
-                this.RaisePropertyChanged("idAFP");
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int fidFondo {
+            get {
+                return this.fidFondoField;
+            }
+            set {
+                this.fidFondoField = value;
+                this.RaisePropertyChanged("fidFondo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idAssetError {
+            get {
+                return this.idAssetErrorField;
+            }
+            set {
+                this.idAssetErrorField = value;
+                this.RaisePropertyChanged("idAssetError");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -850,6 +712,42 @@ namespace GGNoTeam_V5.TrackingErrorWS {
             set {
                 this.nombreField = value;
                 this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public double producto {
+            get {
+                return this.productoField;
+            }
+            set {
+                this.productoField = value;
+                this.RaisePropertyChanged("producto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public double totalRiskD {
+            get {
+                return this.totalRiskDField;
+            }
+            set {
+                this.totalRiskDField = value;
+                this.RaisePropertyChanged("totalRiskD");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public double wgtP {
+            get {
+                return this.wgtPField;
+            }
+            set {
+                this.wgtPField = value;
+                this.RaisePropertyChanged("wgtP");
             }
         }
         
@@ -863,80 +761,105 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAlpha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarAlphaRequest {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/")]
+    public partial class alpha : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.alpha alpha;
+        private int activoField;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idFondo;
+        private double alpha1Field;
         
-        public modificarAlphaRequest() {
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private int idAlphaField;
+        
+        private double patrimonioTotalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
         }
         
-        public modificarAlphaRequest(GGNoTeam_V5.TrackingErrorWS.alpha alpha, int idFondo) {
-            this.alpha = alpha;
-            this.idFondo = idFondo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAlphaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarAlphaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarAlphaResponse() {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("alpha", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public double alpha1 {
+            get {
+                return this.alpha1Field;
+            }
+            set {
+                this.alpha1Field = value;
+                this.RaisePropertyChanged("alpha1");
+            }
         }
         
-        public modificarAlphaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAfp", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarAfpRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idAfp;
-        
-        public eliminarAfpRequest() {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
         }
         
-        public eliminarAfpRequest(int idAfp) {
-            this.idAfp = idAfp;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAfpResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarAfpResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarAfpResponse() {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
         }
         
-        public eliminarAfpResponse(int @return) {
-            this.@return = @return;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idAlpha {
+            get {
+                return this.idAlphaField;
+            }
+            set {
+                this.idAlphaField = value;
+                this.RaisePropertyChanged("idAlpha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public double patrimonioTotal {
+            get {
+                return this.patrimonioTotalField;
+            }
+            set {
+                this.patrimonioTotalField = value;
+                this.RaisePropertyChanged("patrimonioTotal");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
@@ -1015,63 +938,35 @@ namespace GGNoTeam_V5.TrackingErrorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlpha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarAlphaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAfp", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarAfpRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idAlpha;
+        public int idAfp;
         
-        public eliminarAlphaRequest() {
+        public eliminarAfpRequest() {
         }
         
-        public eliminarAlphaRequest(int idAlpha) {
-            this.idAlpha = idAlpha;
+        public eliminarAfpRequest(int idAfp) {
+            this.idAfp = idAfp;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlphaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarAlphaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAfpResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarAfpResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarAlphaResponse() {
+        public eliminarAfpResponse() {
         }
         
-        public eliminarAlphaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasAlpha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarTodasAlphaRequest {
-        
-        public listarTodasAlphaRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasAlphaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarTodasAlphaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.alpha[] @return;
-        
-        public listarTodasAlphaResponse() {
-        }
-        
-        public listarTodasAlphaResponse(GGNoTeam_V5.TrackingErrorWS.alpha[] @return) {
+        public eliminarAfpResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1148,6 +1043,111 @@ namespace GGNoTeam_V5.TrackingErrorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAlpha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarAlphaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.alpha alpha;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idFondo;
+        
+        public modificarAlphaRequest() {
+        }
+        
+        public modificarAlphaRequest(GGNoTeam_V5.TrackingErrorWS.alpha alpha, int idFondo) {
+            this.alpha = alpha;
+            this.idFondo = idFondo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAlphaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarAlphaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarAlphaResponse() {
+        }
+        
+        public modificarAlphaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlpha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarAlphaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idAlpha;
+        
+        public eliminarAlphaRequest() {
+        }
+        
+        public eliminarAlphaRequest(int idAlpha) {
+            this.idAlpha = idAlpha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlphaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarAlphaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarAlphaResponse() {
+        }
+        
+        public eliminarAlphaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasAlpha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarTodasAlphaRequest {
+        
+        public listarTodasAlphaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasAlphaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarTodasAlphaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.alpha[] @return;
+        
+        public listarTodasAlphaResponse() {
+        }
+        
+        public listarTodasAlphaResponse(GGNoTeam_V5.TrackingErrorWS.alpha[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ListarFondos", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
     public partial class ListarFondosRequest {
         
@@ -1169,52 +1169,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         public ListarFondosResponse(string[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarPorFechaPorFondoDataValorCuota", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class ListarPorFechaPorFondoDataValorCuotaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fechaIni;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fechaFin;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idFondo;
-        
-        public ListarPorFechaPorFondoDataValorCuotaRequest() {
-        }
-        
-        public ListarPorFechaPorFondoDataValorCuotaRequest(string fechaIni, string fechaFin, int idFondo) {
-            this.fechaIni = fechaIni;
-            this.fechaFin = fechaFin;
-            this.idFondo = idFondo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarPorFechaPorFondoDataValorCuotaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class ListarPorFechaPorFondoDataValorCuotaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return;
-        
-        public ListarPorFechaPorFondoDataValorCuotaResponse() {
-        }
-        
-        public ListarPorFechaPorFondoDataValorCuotaResponse(GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return) {
             this.@return = @return;
         }
     }
@@ -1251,134 +1205,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         public listarAlphaXFechaResponse(GGNoTeam_V5.TrackingErrorWS.alpha[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAssetError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarAssetErrorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.assetError asset;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idFondo;
-        
-        public insertarAssetErrorRequest() {
-        }
-        
-        public insertarAssetErrorRequest(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
-            this.asset = asset;
-            this.idFondo = idFondo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAssetErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarAssetErrorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarAssetErrorResponse() {
-        }
-        
-        public insertarAssetErrorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarPorFechaPorFondoAssetError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class ListarPorFechaPorFondoAssetErrorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fechaIni;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fechaFin;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idFondo;
-        
-        public ListarPorFechaPorFondoAssetErrorRequest() {
-        }
-        
-        public ListarPorFechaPorFondoAssetErrorRequest(string fechaIni, string fechaFin, int idFondo) {
-            this.fechaIni = fechaIni;
-            this.fechaFin = fechaFin;
-            this.idFondo = idFondo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarPorFechaPorFondoAssetErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class ListarPorFechaPorFondoAssetErrorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.assetError[] @return;
-        
-        public ListarPorFechaPorFondoAssetErrorResponse() {
-        }
-        
-        public ListarPorFechaPorFondoAssetErrorResponse(GGNoTeam_V5.TrackingErrorWS.assetError[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAssetError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarAssetErrorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.assetError asset;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idFondo;
-        
-        public modificarAssetErrorRequest() {
-        }
-        
-        public modificarAssetErrorRequest(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
-            this.asset = asset;
-            this.idFondo = idFondo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAssetErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarAssetErrorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarAssetErrorResponse() {
-        }
-        
-        public modificarAssetErrorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1432,6 +1258,88 @@ namespace GGNoTeam_V5.TrackingErrorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAssetError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarAssetErrorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.assetError asset;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idFondo;
+        
+        public insertarAssetErrorRequest() {
+        }
+        
+        public insertarAssetErrorRequest(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
+            this.asset = asset;
+            this.idFondo = idFondo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAssetErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarAssetErrorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarAssetErrorResponse() {
+        }
+        
+        public insertarAssetErrorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAssetError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarAssetErrorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.assetError asset;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idFondo;
+        
+        public modificarAssetErrorRequest() {
+        }
+        
+        public modificarAssetErrorRequest(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
+            this.asset = asset;
+            this.idFondo = idFondo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAssetErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarAssetErrorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarAssetErrorResponse() {
+        }
+        
+        public modificarAssetErrorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAssetError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
     public partial class eliminarAssetErrorRequest {
         
@@ -1468,35 +1376,245 @@ namespace GGNoTeam_V5.TrackingErrorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTrackingError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarTrackingErrorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarPorFechaPorFondoAssetError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class ListarPorFechaPorFondoAssetErrorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idtrackingerror;
+        public string fechaIni;
         
-        public eliminarTrackingErrorRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaFin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idFondo;
+        
+        public ListarPorFechaPorFondoAssetErrorRequest() {
         }
         
-        public eliminarTrackingErrorRequest(int idtrackingerror) {
-            this.idtrackingerror = idtrackingerror;
+        public ListarPorFechaPorFondoAssetErrorRequest(string fechaIni, string fechaFin, int idFondo) {
+            this.fechaIni = fechaIni;
+            this.fechaFin = fechaFin;
+            this.idFondo = idFondo;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTrackingErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarTrackingErrorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarPorFechaPorFondoAssetErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class ListarPorFechaPorFondoAssetErrorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.assetError[] @return;
+        
+        public ListarPorFechaPorFondoAssetErrorResponse() {
+        }
+        
+        public ListarPorFechaPorFondoAssetErrorResponse(GGNoTeam_V5.TrackingErrorWS.assetError[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDataValorCuota", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarDataValorCuotaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idFondo;
+        
+        public insertarDataValorCuotaRequest() {
+        }
+        
+        public insertarDataValorCuotaRequest(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
+            this.dataVC = dataVC;
+            this.idFondo = idFondo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDataValorCuotaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class insertarDataValorCuotaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarTrackingErrorResponse() {
+        public insertarDataValorCuotaResponse() {
         }
         
-        public eliminarTrackingErrorResponse(int @return) {
+        public insertarDataValorCuotaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarDataValorCuota", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarDataValorCuotaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idFondo;
+        
+        public modificarDataValorCuotaRequest() {
+        }
+        
+        public modificarDataValorCuotaRequest(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
+            this.dataVC = dataVC;
+            this.idFondo = idFondo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarDataValorCuotaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class modificarDataValorCuotaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarDataValorCuotaResponse() {
+        }
+        
+        public modificarDataValorCuotaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDataValorCuota", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarDataValorCuotaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idData;
+        
+        public eliminarDataValorCuotaRequest() {
+        }
+        
+        public eliminarDataValorCuotaRequest(int idData) {
+            this.idData = idData;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDataValorCuotaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarDataValorCuotaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarDataValorCuotaResponse() {
+        }
+        
+        public eliminarDataValorCuotaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDataValorCuotaXFecha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarDataValorCuotaXFechaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public listarDataValorCuotaXFechaRequest() {
+        }
+        
+        public listarDataValorCuotaXFechaRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDataValorCuotaXFechaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class listarDataValorCuotaXFechaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return;
+        
+        public listarDataValorCuotaXFechaResponse() {
+        }
+        
+        public listarDataValorCuotaXFechaResponse(GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarPorFechaPorFondoDataValorCuota", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class ListarPorFechaPorFondoDataValorCuotaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaIni;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaFin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idFondo;
+        
+        public ListarPorFechaPorFondoDataValorCuotaRequest() {
+        }
+        
+        public ListarPorFechaPorFondoDataValorCuotaRequest(string fechaIni, string fechaFin, int idFondo) {
+            this.fechaIni = fechaIni;
+            this.fechaFin = fechaFin;
+            this.idFondo = idFondo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarPorFechaPorFondoDataValorCuotaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class ListarPorFechaPorFondoDataValorCuotaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return;
+        
+        public ListarPorFechaPorFondoDataValorCuotaResponse() {
+        }
+        
+        public ListarPorFechaPorFondoDataValorCuotaResponse(GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return) {
             this.@return = @return;
         }
     }
@@ -1550,6 +1668,42 @@ namespace GGNoTeam_V5.TrackingErrorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTrackingError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class ListarTrackingErrorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public ListarTrackingErrorRequest() {
+        }
+        
+        public ListarTrackingErrorRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTrackingErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class ListarTrackingErrorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public GGNoTeam_V5.TrackingErrorWS.trackingError[] @return;
+        
+        public ListarTrackingErrorResponse() {
+        }
+        
+        public ListarTrackingErrorResponse(GGNoTeam_V5.TrackingErrorWS.trackingError[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarTrackingError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
     public partial class modificarTrackingErrorRequest {
         
@@ -1591,35 +1745,63 @@ namespace GGNoTeam_V5.TrackingErrorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDataValorCuotaXFecha", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarDataValorCuotaXFechaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTodosTrackingError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class ListarTodosTrackingErrorRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public listarDataValorCuotaXFechaRequest() {
-        }
-        
-        public listarDataValorCuotaXFechaRequest(string arg0) {
-            this.arg0 = arg0;
+        public ListarTodosTrackingErrorRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDataValorCuotaXFechaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class listarDataValorCuotaXFechaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTodosTrackingErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class ListarTodosTrackingErrorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return;
+        public GGNoTeam_V5.TrackingErrorWS.trackingError[] @return;
         
-        public listarDataValorCuotaXFechaResponse() {
+        public ListarTodosTrackingErrorResponse() {
         }
         
-        public listarDataValorCuotaXFechaResponse(GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] @return) {
+        public ListarTodosTrackingErrorResponse(GGNoTeam_V5.TrackingErrorWS.trackingError[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTrackingError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarTrackingErrorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idtrackingerror;
+        
+        public eliminarTrackingErrorRequest() {
+        }
+        
+        public eliminarTrackingErrorRequest(int idtrackingerror) {
+            this.idtrackingerror = idtrackingerror;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTrackingErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
+    public partial class eliminarTrackingErrorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarTrackingErrorResponse() {
+        }
+        
+        public eliminarTrackingErrorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1656,152 +1838,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         public ListarAssetErrorXFechaResponse(GGNoTeam_V5.TrackingErrorWS.assetError[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarDataValorCuota", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarDataValorCuotaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idFondo;
-        
-        public modificarDataValorCuotaRequest() {
-        }
-        
-        public modificarDataValorCuotaRequest(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
-            this.dataVC = dataVC;
-            this.idFondo = idFondo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarDataValorCuotaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class modificarDataValorCuotaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarDataValorCuotaResponse() {
-        }
-        
-        public modificarDataValorCuotaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTodosTrackingError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class ListarTodosTrackingErrorRequest {
-        
-        public ListarTodosTrackingErrorRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTodosTrackingErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class ListarTodosTrackingErrorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.trackingError[] @return;
-        
-        public ListarTodosTrackingErrorResponse() {
-        }
-        
-        public ListarTodosTrackingErrorResponse(GGNoTeam_V5.TrackingErrorWS.trackingError[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTrackingError", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class ListarTrackingErrorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public ListarTrackingErrorRequest() {
-        }
-        
-        public ListarTrackingErrorRequest(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTrackingErrorResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class ListarTrackingErrorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.trackingError[] @return;
-        
-        public ListarTrackingErrorResponse() {
-        }
-        
-        public ListarTrackingErrorResponse(GGNoTeam_V5.TrackingErrorWS.trackingError[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDataValorCuota", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarDataValorCuotaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idFondo;
-        
-        public insertarDataValorCuotaRequest() {
-        }
-        
-        public insertarDataValorCuotaRequest(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
-            this.dataVC = dataVC;
-            this.idFondo = idFondo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDataValorCuotaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class insertarDataValorCuotaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarDataValorCuotaResponse() {
-        }
-        
-        public insertarDataValorCuotaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1847,42 +1883,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDataValorCuota", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarDataValorCuotaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idData;
-        
-        public eliminarDataValorCuotaRequest() {
-        }
-        
-        public eliminarDataValorCuotaRequest(int idData) {
-            this.idData = idData;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDataValorCuotaResponse", WrapperNamespace="http://webservices.sist.afp.ggNoTeam/", IsWrapped=true)]
-    public partial class eliminarDataValorCuotaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sist.afp.ggNoTeam/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarDataValorCuotaResponse() {
-        }
-        
-        public eliminarDataValorCuotaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface TrackingErrorWSChannel : GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS, System.ServiceModel.IClientChannel {
     }
@@ -1908,54 +1908,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         
         public TrackingErrorWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarAlpha(GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest request) {
-            return base.Channel.modificarAlpha(request);
-        }
-        
-        public int modificarAlpha(GGNoTeam_V5.TrackingErrorWS.alpha alpha, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest();
-            inValue.alpha = alpha;
-            inValue.idFondo = idFondo;
-            GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarAlpha(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest request) {
-            return base.Channel.modificarAlphaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse> modificarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.alpha alpha, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest();
-            inValue.alpha = alpha;
-            inValue.idFondo = idFondo;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarAlphaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarAfp(GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest request) {
-            return base.Channel.eliminarAfp(request);
-        }
-        
-        public int eliminarAfp(int idAfp) {
-            GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest();
-            inValue.idAfp = idAfp;
-            GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarAfp(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarAfpAsync(GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest request) {
-            return base.Channel.eliminarAfpAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse> eliminarAfpAsync(int idAfp) {
-            GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest();
-            inValue.idAfp = idAfp;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarAfpAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2005,47 +1957,26 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarAlpha(GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest request) {
-            return base.Channel.eliminarAlpha(request);
+        GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarAfp(GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest request) {
+            return base.Channel.eliminarAfp(request);
         }
         
-        public int eliminarAlpha(int idAlpha) {
-            GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest();
-            inValue.idAlpha = idAlpha;
-            GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarAlpha(inValue);
+        public int eliminarAfp(int idAfp) {
+            GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest();
+            inValue.idAfp = idAfp;
+            GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarAfp(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest request) {
-            return base.Channel.eliminarAlphaAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarAfpAsync(GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest request) {
+            return base.Channel.eliminarAfpAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse> eliminarAlphaAsync(int idAlpha) {
-            GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest();
-            inValue.idAlpha = idAlpha;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarAlphaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarTodasAlpha(GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest request) {
-            return base.Channel.listarTodasAlpha(request);
-        }
-        
-        public GGNoTeam_V5.TrackingErrorWS.alpha[] listarTodasAlpha() {
-            GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest();
-            GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarTodasAlpha(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarTodasAlphaAsync(GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest request) {
-            return base.Channel.listarTodasAlphaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse> listarTodasAlphaAsync() {
-            GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest();
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarTodasAlphaAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAfpResponse> eliminarAfpAsync(int idAfp) {
+            GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarAfpRequest();
+            inValue.idAfp = idAfp;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarAfpAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2095,6 +2026,75 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarAlpha(GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest request) {
+            return base.Channel.modificarAlpha(request);
+        }
+        
+        public int modificarAlpha(GGNoTeam_V5.TrackingErrorWS.alpha alpha, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest();
+            inValue.alpha = alpha;
+            inValue.idFondo = idFondo;
+            GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarAlpha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest request) {
+            return base.Channel.modificarAlphaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAlphaResponse> modificarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.alpha alpha, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarAlphaRequest();
+            inValue.alpha = alpha;
+            inValue.idFondo = idFondo;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarAlphaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarAlpha(GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest request) {
+            return base.Channel.eliminarAlpha(request);
+        }
+        
+        public int eliminarAlpha(int idAlpha) {
+            GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest();
+            inValue.idAlpha = idAlpha;
+            GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarAlpha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarAlphaAsync(GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest request) {
+            return base.Channel.eliminarAlphaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarAlphaResponse> eliminarAlphaAsync(int idAlpha) {
+            GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarAlphaRequest();
+            inValue.idAlpha = idAlpha;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarAlphaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarTodasAlpha(GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest request) {
+            return base.Channel.listarTodasAlpha(request);
+        }
+        
+        public GGNoTeam_V5.TrackingErrorWS.alpha[] listarTodasAlpha() {
+            GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest();
+            GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarTodasAlpha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarTodasAlphaAsync(GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest request) {
+            return base.Channel.listarTodasAlphaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaResponse> listarTodasAlphaAsync() {
+            GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarTodasAlphaRequest();
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarTodasAlphaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         GGNoTeam_V5.TrackingErrorWS.ListarFondosResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarFondos(GGNoTeam_V5.TrackingErrorWS.ListarFondosRequest request) {
             return base.Channel.ListarFondos(request);
         }
@@ -2113,33 +2113,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarFondosResponse> ListarFondosAsync() {
             GGNoTeam_V5.TrackingErrorWS.ListarFondosRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarFondosRequest();
             return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarFondosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuota(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest request) {
-            return base.Channel.ListarPorFechaPorFondoDataValorCuota(request);
-        }
-        
-        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] ListarPorFechaPorFondoDataValorCuota(string fechaIni, string fechaFin, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest();
-            inValue.fechaIni = fechaIni;
-            inValue.fechaFin = fechaFin;
-            inValue.idFondo = idFondo;
-            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarPorFechaPorFondoDataValorCuota(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest request) {
-            return base.Channel.ListarPorFechaPorFondoDataValorCuotaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse> ListarPorFechaPorFondoDataValorCuotaAsync(string fechaIni, string fechaFin, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest();
-            inValue.fechaIni = fechaIni;
-            inValue.fechaFin = fechaFin;
-            inValue.idFondo = idFondo;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarPorFechaPorFondoDataValorCuotaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2163,83 +2136,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
             GGNoTeam_V5.TrackingErrorWS.listarAlphaXFechaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarAlphaXFechaRequest();
             inValue.arg0 = arg0;
             return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarAlphaXFechaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.insertarAssetError(GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest request) {
-            return base.Channel.insertarAssetError(request);
-        }
-        
-        public int insertarAssetError(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest();
-            inValue.asset = asset;
-            inValue.idFondo = idFondo;
-            GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).insertarAssetError(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.insertarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest request) {
-            return base.Channel.insertarAssetErrorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse> insertarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest();
-            inValue.asset = asset;
-            inValue.idFondo = idFondo;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).insertarAssetErrorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarPorFechaPorFondoAssetError(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest request) {
-            return base.Channel.ListarPorFechaPorFondoAssetError(request);
-        }
-        
-        public GGNoTeam_V5.TrackingErrorWS.assetError[] ListarPorFechaPorFondoAssetError(string fechaIni, string fechaFin, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest();
-            inValue.fechaIni = fechaIni;
-            inValue.fechaFin = fechaFin;
-            inValue.idFondo = idFondo;
-            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarPorFechaPorFondoAssetError(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest request) {
-            return base.Channel.ListarPorFechaPorFondoAssetErrorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse> ListarPorFechaPorFondoAssetErrorAsync(string fechaIni, string fechaFin, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest();
-            inValue.fechaIni = fechaIni;
-            inValue.fechaFin = fechaFin;
-            inValue.idFondo = idFondo;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarPorFechaPorFondoAssetErrorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarAssetError(GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest request) {
-            return base.Channel.modificarAssetError(request);
-        }
-        
-        public int modificarAssetError(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest();
-            inValue.asset = asset;
-            inValue.idFondo = idFondo;
-            GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarAssetError(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest request) {
-            return base.Channel.modificarAssetErrorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse> modificarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest();
-            inValue.asset = asset;
-            inValue.idFondo = idFondo;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarAssetErrorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2270,6 +2166,56 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.insertarAssetError(GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest request) {
+            return base.Channel.insertarAssetError(request);
+        }
+        
+        public int insertarAssetError(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest();
+            inValue.asset = asset;
+            inValue.idFondo = idFondo;
+            GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).insertarAssetError(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.insertarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest request) {
+            return base.Channel.insertarAssetErrorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorResponse> insertarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.insertarAssetErrorRequest();
+            inValue.asset = asset;
+            inValue.idFondo = idFondo;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).insertarAssetErrorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarAssetError(GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest request) {
+            return base.Channel.modificarAssetError(request);
+        }
+        
+        public int modificarAssetError(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest();
+            inValue.asset = asset;
+            inValue.idFondo = idFondo;
+            GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarAssetError(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest request) {
+            return base.Channel.modificarAssetErrorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorResponse> modificarAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.assetError asset, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarAssetErrorRequest();
+            inValue.asset = asset;
+            inValue.idFondo = idFondo;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarAssetErrorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         GGNoTeam_V5.TrackingErrorWS.eliminarAssetErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarAssetError(GGNoTeam_V5.TrackingErrorWS.eliminarAssetErrorRequest request) {
             return base.Channel.eliminarAssetError(request);
         }
@@ -2293,26 +2239,153 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarTrackingError(GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest request) {
-            return base.Channel.eliminarTrackingError(request);
+        GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarPorFechaPorFondoAssetError(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest request) {
+            return base.Channel.ListarPorFechaPorFondoAssetError(request);
         }
         
-        public int eliminarTrackingError(int idtrackingerror) {
-            GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest();
-            inValue.idtrackingerror = idtrackingerror;
-            GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarTrackingError(inValue);
+        public GGNoTeam_V5.TrackingErrorWS.assetError[] ListarPorFechaPorFondoAssetError(string fechaIni, string fechaFin, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest();
+            inValue.fechaIni = fechaIni;
+            inValue.fechaFin = fechaFin;
+            inValue.idFondo = idFondo;
+            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarPorFechaPorFondoAssetError(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest request) {
-            return base.Channel.eliminarTrackingErrorAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest request) {
+            return base.Channel.ListarPorFechaPorFondoAssetErrorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse> eliminarTrackingErrorAsync(int idtrackingerror) {
-            GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest();
-            inValue.idtrackingerror = idtrackingerror;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarTrackingErrorAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorResponse> ListarPorFechaPorFondoAssetErrorAsync(string fechaIni, string fechaFin, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoAssetErrorRequest();
+            inValue.fechaIni = fechaIni;
+            inValue.fechaFin = fechaFin;
+            inValue.idFondo = idFondo;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarPorFechaPorFondoAssetErrorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.insertarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest request) {
+            return base.Channel.insertarDataValorCuota(request);
+        }
+        
+        public int insertarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest();
+            inValue.dataVC = dataVC;
+            inValue.idFondo = idFondo;
+            GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).insertarDataValorCuota(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.insertarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest request) {
+            return base.Channel.insertarDataValorCuotaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse> insertarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest();
+            inValue.dataVC = dataVC;
+            inValue.idFondo = idFondo;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).insertarDataValorCuotaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest request) {
+            return base.Channel.modificarDataValorCuota(request);
+        }
+        
+        public int modificarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest();
+            inValue.dataVC = dataVC;
+            inValue.idFondo = idFondo;
+            GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarDataValorCuota(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest request) {
+            return base.Channel.modificarDataValorCuotaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse> modificarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest();
+            inValue.dataVC = dataVC;
+            inValue.idFondo = idFondo;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarDataValorCuotaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest request) {
+            return base.Channel.eliminarDataValorCuota(request);
+        }
+        
+        public int eliminarDataValorCuota(int idData) {
+            GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest();
+            inValue.idData = idData;
+            GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarDataValorCuota(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest request) {
+            return base.Channel.eliminarDataValorCuotaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse> eliminarDataValorCuotaAsync(int idData) {
+            GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest();
+            inValue.idData = idData;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarDataValorCuotaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarDataValorCuotaXFecha(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request) {
+            return base.Channel.listarDataValorCuotaXFecha(request);
+        }
+        
+        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] listarDataValorCuotaXFecha(string arg0) {
+            GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest();
+            inValue.arg0 = arg0;
+            GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarDataValorCuotaXFecha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarDataValorCuotaXFechaAsync(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request) {
+            return base.Channel.listarDataValorCuotaXFechaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse> listarDataValorCuotaXFechaAsync(string arg0) {
+            GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest();
+            inValue.arg0 = arg0;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarDataValorCuotaXFechaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuota(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest request) {
+            return base.Channel.ListarPorFechaPorFondoDataValorCuota(request);
+        }
+        
+        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] ListarPorFechaPorFondoDataValorCuota(string fechaIni, string fechaFin, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest();
+            inValue.fechaIni = fechaIni;
+            inValue.fechaFin = fechaFin;
+            inValue.idFondo = idFondo;
+            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarPorFechaPorFondoDataValorCuota(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest request) {
+            return base.Channel.ListarPorFechaPorFondoDataValorCuotaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaResponse> ListarPorFechaPorFondoDataValorCuotaAsync(string fechaIni, string fechaFin, int idFondo) {
+            GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarPorFechaPorFondoDataValorCuotaRequest();
+            inValue.fechaIni = fechaIni;
+            inValue.fechaFin = fechaFin;
+            inValue.idFondo = idFondo;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarPorFechaPorFondoDataValorCuotaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2343,6 +2416,29 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarTrackingError(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest request) {
+            return base.Channel.ListarTrackingError(request);
+        }
+        
+        public GGNoTeam_V5.TrackingErrorWS.trackingError[] ListarTrackingError(string arg0) {
+            GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest();
+            inValue.arg0 = arg0;
+            GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarTrackingError(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest request) {
+            return base.Channel.ListarTrackingErrorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse> ListarTrackingErrorAsync(string arg0) {
+            GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest();
+            inValue.arg0 = arg0;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarTrackingErrorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarTrackingError(GGNoTeam_V5.TrackingErrorWS.modificarTrackingErrorRequest request) {
             return base.Channel.modificarTrackingError(request);
         }
@@ -2368,26 +2464,47 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarDataValorCuotaXFecha(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request) {
-            return base.Channel.listarDataValorCuotaXFecha(request);
+        GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarTodosTrackingError(GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest request) {
+            return base.Channel.ListarTodosTrackingError(request);
         }
         
-        public GGNoTeam_V5.TrackingErrorWS.dataValorCuota[] listarDataValorCuotaXFecha(string arg0) {
-            GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest();
-            inValue.arg0 = arg0;
-            GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarDataValorCuotaXFecha(inValue);
+        public GGNoTeam_V5.TrackingErrorWS.trackingError[] ListarTodosTrackingError() {
+            GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest();
+            GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarTodosTrackingError(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.listarDataValorCuotaXFechaAsync(GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest request) {
-            return base.Channel.listarDataValorCuotaXFechaAsync(request);
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarTodosTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest request) {
+            return base.Channel.ListarTodosTrackingErrorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaResponse> listarDataValorCuotaXFechaAsync(string arg0) {
-            GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.listarDataValorCuotaXFechaRequest();
-            inValue.arg0 = arg0;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).listarDataValorCuotaXFechaAsync(inValue);
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse> ListarTodosTrackingErrorAsync() {
+            GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest();
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarTodosTrackingErrorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarTrackingError(GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest request) {
+            return base.Channel.eliminarTrackingError(request);
+        }
+        
+        public int eliminarTrackingError(int idtrackingerror) {
+            GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest();
+            inValue.idtrackingerror = idtrackingerror;
+            GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarTrackingError(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest request) {
+            return base.Channel.eliminarTrackingErrorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorResponse> eliminarTrackingErrorAsync(int idtrackingerror) {
+            GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarTrackingErrorRequest();
+            inValue.idtrackingerror = idtrackingerror;
+            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarTrackingErrorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2414,100 +2531,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest request) {
-            return base.Channel.modificarDataValorCuota(request);
-        }
-        
-        public int modificarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest();
-            inValue.dataVC = dataVC;
-            inValue.idFondo = idFondo;
-            GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarDataValorCuota(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.modificarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest request) {
-            return base.Channel.modificarDataValorCuotaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaResponse> modificarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.modificarDataValorCuotaRequest();
-            inValue.dataVC = dataVC;
-            inValue.idFondo = idFondo;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).modificarDataValorCuotaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarTodosTrackingError(GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest request) {
-            return base.Channel.ListarTodosTrackingError(request);
-        }
-        
-        public GGNoTeam_V5.TrackingErrorWS.trackingError[] ListarTodosTrackingError() {
-            GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest();
-            GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarTodosTrackingError(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarTodosTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest request) {
-            return base.Channel.ListarTodosTrackingErrorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorResponse> ListarTodosTrackingErrorAsync() {
-            GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarTodosTrackingErrorRequest();
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarTodosTrackingErrorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarTrackingError(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest request) {
-            return base.Channel.ListarTrackingError(request);
-        }
-        
-        public GGNoTeam_V5.TrackingErrorWS.trackingError[] ListarTrackingError(string arg0) {
-            GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest();
-            inValue.arg0 = arg0;
-            GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarTrackingError(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.ListarTrackingErrorAsync(GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest request) {
-            return base.Channel.ListarTrackingErrorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorResponse> ListarTrackingErrorAsync(string arg0) {
-            GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest inValue = new GGNoTeam_V5.TrackingErrorWS.ListarTrackingErrorRequest();
-            inValue.arg0 = arg0;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).ListarTrackingErrorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.insertarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest request) {
-            return base.Channel.insertarDataValorCuota(request);
-        }
-        
-        public int insertarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest();
-            inValue.dataVC = dataVC;
-            inValue.idFondo = idFondo;
-            GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).insertarDataValorCuota(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.insertarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest request) {
-            return base.Channel.insertarDataValorCuotaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaResponse> insertarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.dataValorCuota dataVC, int idFondo) {
-            GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.insertarDataValorCuotaRequest();
-            inValue.dataVC = dataVC;
-            inValue.idFondo = idFondo;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).insertarDataValorCuotaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.insertarTrackingError(GGNoTeam_V5.TrackingErrorWS.insertarTrackingErrorRequest request) {
             return base.Channel.insertarTrackingError(request);
         }
@@ -2530,29 +2553,6 @@ namespace GGNoTeam_V5.TrackingErrorWS {
             inValue.trackingerror = trackingerror;
             inValue.idFondo = idFondo;
             return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).insertarTrackingErrorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarDataValorCuota(GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest request) {
-            return base.Channel.eliminarDataValorCuota(request);
-        }
-        
-        public int eliminarDataValorCuota(int idData) {
-            GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest();
-            inValue.idData = idData;
-            GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse retVal = ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarDataValorCuota(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse> GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS.eliminarDataValorCuotaAsync(GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest request) {
-            return base.Channel.eliminarDataValorCuotaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaResponse> eliminarDataValorCuotaAsync(int idData) {
-            GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest inValue = new GGNoTeam_V5.TrackingErrorWS.eliminarDataValorCuotaRequest();
-            inValue.idData = idData;
-            return ((GGNoTeam_V5.TrackingErrorWS.TrackingErrorWS)(this)).eliminarDataValorCuotaAsync(inValue);
         }
     }
 }

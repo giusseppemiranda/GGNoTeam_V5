@@ -25,7 +25,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Emisor
         {
             InitializeComponent();
             dgvEmisores.AutoGenerateColumns = false;
-            dgvEmisores.DataSource = new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList());
+            dgvEmisores.setDataSource1(new BindingList<GestionInstrumentosOriginadoresWS.emisor>(emisores.ToList()));
             emisoresAux = emisores;
             origAux = frmorig;
         }
