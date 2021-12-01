@@ -75,7 +75,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.DataValorCuota
         {
             if (dgvDataValorCuota.CurrentRow != null)
             {
-                frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(frmTEvsAlpha.DatosPrin[dgvDataValorCuota.CurrentRow.Index], listaAfps, comboFondo.SelectedIndex);
+                frmEditarRegistroDataValorCuota ventanaAgregar = new frmEditarRegistroDataValorCuota(datos[dgvDataValorCuota.CurrentRow.Index], listaAfps, comboFondo.SelectedIndex);
                 ventanaAgregar.ShowDialog();
                 this.btnConsultarRegistros_Click(sender, e);
             }
