@@ -194,9 +194,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.GestionInstrumentosOriginadores.Instrumen
             valido = ValidarTextBox.PuntoFlotante(boxFactorRiesgo, "El factor de riesgo");
             if (valido != 0) return true;
 
-            if(Convert.ToDouble(boxFactorRiesgo)< 0 && Convert.ToDouble(boxFactorRiesgo) > 1)
+            if(Convert.ToDouble(boxFactorRiesgo.Texts)< 0 && Convert.ToDouble(boxFactorRiesgo.Texts) > 1)
             {
                 MessageBox.Show("Factor Riesgo debe encontrarse entre 0 y 1");
+                return true;
+            }
+
+            boxCodigoOriginador.Texts = boxCodigoOriginador.Texts.Trim();
+            if(boxCodigoOriginador.Texts == "")
+            {
+                MessageBox.Show("Codigo originador no debe estar vacío.");
                 return true;
             }
 

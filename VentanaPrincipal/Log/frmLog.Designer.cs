@@ -97,6 +97,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Log
             this.dgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLog.Size = new System.Drawing.Size(958, 447);
             this.dgvLog.TabIndex = 68;
+            this.dgvLog.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLog_CellFormatting);
             // 
             // idObjeto
             // 

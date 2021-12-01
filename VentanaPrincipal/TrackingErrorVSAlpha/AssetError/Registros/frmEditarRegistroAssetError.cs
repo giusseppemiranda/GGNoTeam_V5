@@ -121,6 +121,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
                 if (i == 0)
                 {
                     MessageBox.Show("Se ha realizado correctamente la modificación del Asset Error");
+                    CargarLogModificar(AssetError.idAssetError);
                     this.Dispose();
                 }
                 else
@@ -159,6 +160,16 @@ namespace GGNoTeam_V5.VentanaPrincipal.TrackingErrorVSAlpha.AssetError.Registros
             Program.acccionGlobal.idObjeto = id;
             Program.acccionGlobal.tablaReferenciada = "TrackingError";
             Program.acccionGlobal.tipoAccion = "Insertar";
+            Program._daoAcciones.insertarAccion(Program.acccionGlobal);
+        }
+
+        private void CargarLogModificar(int id)
+        {
+            Program.acccionGlobal.fecha = DateTime.Now.ToString("yyyy-MM-dd");
+            Program.acccionGlobal.hora = DateTime.Now.ToString("HH:mm:ss");
+            Program.acccionGlobal.idObjeto = id;
+            Program.acccionGlobal.tablaReferenciada = "TrackingError";
+            Program.acccionGlobal.tipoAccion = "Modificar";
             Program._daoAcciones.insertarAccion(Program.acccionGlobal);
         }
 
