@@ -1,5 +1,8 @@
-﻿using GGNoTeam_V5.Recursos.UserControls;
+﻿using GGNoTeam_V5.MonitoreoOrdenWS;
+using GGNoTeam_V5.Recursos.UserControls;
 using GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Ejecucion;
+
+using Org.BouncyCastle.Utilities;
 
 using System;
 using System.Collections.Generic;
@@ -19,6 +22,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private TrackingErrorWS.TrackingErrorWSClient _daoTE;
         private MonitoreoOrdenWS.MonitorOrdenWSClient _daoMO;
         private MonitoreoOrdenWS.orden[] listaOrdenes;
+        private MonitoreoOrdenWS.orden[] listaOrdenes2;
         private String[] assets = { "Renta Fija", "Renta Variable" };
         private String[] operaciones = { "Compra", "Venta" };
         private String[] fondos;
@@ -68,8 +72,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.MonitoreoOrdenes.Orden
         private void btnConsultarEjecuciones_Click(object sender, EventArgs e)
         {
             listaOrdenes = _daoMO.ListarOrdenPorFecha(dateInicial.Value.ToString("yyyy-MM-dd"));
-           
-            if (listaOrdenes != null)
+             if (listaOrdenes != null)
             {
                 dgvOrdenes.DataSource = listaOrdenes;
             }

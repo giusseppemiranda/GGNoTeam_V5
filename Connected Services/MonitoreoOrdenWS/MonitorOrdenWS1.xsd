@@ -43,6 +43,7 @@
       <xs:element minOccurs="0" name="comentario" type="xs:string" />
       <xs:element minOccurs="0" name="fecha" type="xs:string" />
       <xs:element name="fidEjecu" type="xs:int" />
+      <xs:element name="fidFondo" type="xs:int" />
       <xs:element name="fidOrden" type="xs:int" />
       <xs:element name="idOperacion" type="xs:int" />
       <xs:element minOccurs="0" name="instrumento" type="xs:string" />
@@ -179,14 +180,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarTodosEjecucion">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarTodosEjecucionResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejecucion" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="ListarOrdenPorFecha">
     <xs:sequence>
       <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
@@ -195,6 +188,14 @@
   <xs:complexType name="ListarOrdenPorFechaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:orden" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjecucion">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjecucionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejecucion" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarOrden">
