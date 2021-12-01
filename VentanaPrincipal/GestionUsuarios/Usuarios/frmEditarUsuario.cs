@@ -75,7 +75,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             comboBoxTipoUsuario.SelectedIndex = persona.tipoUsuario - 1;
 
             //boxContraseña.Texts = persona.contraseña;
-            boxCodigoValidacion.Texts = persona.validacion;            
         }
 
         public void cambiarTema()
@@ -102,8 +101,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             Global.pintarTxtBoxOscuro(ref boxApellidos);
             Global.pintarTxtBoxOscuro(ref boxCorreo);            
             Global.pintarComboBoxOscuro(ref comboBoxTipoUsuario);
-            Global.pintarTxtBoxOscuro(ref boxContraseña);
-            Global.pintarTxtBoxOscuro(ref boxCodigoValidacion);            
+            Global.pintarTxtBoxOscuro(ref boxContraseña);                     
             Global.pintarBtnOscuro(ref btnSiguiente);
         }
 
@@ -119,8 +117,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             Global.pintarTxtBoxClaro(ref boxApellidos);
             Global.pintarTxtBoxClaro(ref boxCorreo);            
             Global.pintarComboBoxClaro(ref comboBoxTipoUsuario);    
-            Global.pintarTxtBoxClaro(ref boxContraseña);
-            Global.pintarTxtBoxClaro(ref boxCodigoValidacion);            
+            Global.pintarTxtBoxClaro(ref boxContraseña);                 
             Global.pintarBtnClaro(ref btnSiguiente);
         }
 
@@ -159,8 +156,6 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             if (valido != 0) return;            
             valido = ValidarTextBox.cadenaGrande(boxContraseña, "La contraseña", 15);
             if (valido != 0) return;            
-            valido = ValidarTextBox.cadenaGrande(boxCodigoValidacion, "El código de validación", 4);
-            if (valido != 0) return;
             
 
             int validez = -1;
@@ -221,7 +216,7 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             persona.apellidos = boxApellidos.Texts;
             persona.contraseña = boxContraseña.Texts;            
             persona.correo = boxCorreo.Texts;
-            persona.validacion = boxCodigoValidacion.Texts.ToString();
+            persona.validacion = "";
             persona.tipoUsuario = comboBoxTipoUsuario.SelectedIndex + 1;            
         }
 
@@ -234,8 +229,8 @@ namespace GGNoTeam_V5.VentanaPrincipal.Usuarios
             persona.apellidos = boxApellidos.Texts;
             persona.contraseña = boxContraseña.Texts;
             persona.itinerario.idItineraio = Int32.Parse(boxItinerario.Texts);  
-            persona.correo = boxCorreo.Texts;           
-            persona.validacion = boxCodigoValidacion.Texts.ToString();
+            persona.correo = boxCorreo.Texts;
+            persona.validacion = "";
             persona.tipoUsuario = comboBoxTipoUsuario.SelectedIndex + 1;            
         }
     }
